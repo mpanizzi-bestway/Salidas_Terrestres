@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BestWay — Programas Terrestres</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #2d3a6b;
+      --navy-dark: #1e2748;
+      --navy-mid: #3d4f8a;
+      --accent: #4a5faa;
+      --gold: #c8a84b;
+      --gold-light: #e8c96a;
+      --white: #ffffff;
+      --off-white: #f8f7f4;
+      --gray-light: #eeedf0;
+      --gray: #9a98a8;
+      --text: #1a1a2e;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--off-white);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--navy-dark);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(74,95,170,0.3) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 10% 80%, rgba(200,168,75,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 36px 40px 32px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-wrap img {
+      height: 72px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .header-divider {
+      width: 1px;
+      height: 60px;
+      background: rgba(255,255,255,0.2);
+    }
+
+    .header-title {
+      color: var(--white);
+    }
+
+    .header-title h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .header-title p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 5px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+
+    /* ── DECORATIVE STRIP ── */
+    .strip {
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+    }
+
+    /* ── HERO LABEL ── */
+    .section-label {
+      max-width: 1100px;
+      margin: 52px auto 0;
+      padding: 0 40px;
+    }
+
+    .section-label h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .section-label p {
+      color: var(--gray);
+      font-size: 0.9rem;
+      margin-top: 6px;
+    }
+
+    /* ── OPERATOR GRID ── */
+    .operators {
+      max-width: 1100px;
+      margin: 32px auto 80px;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .op-card {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(30,39,72,0.08);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border: 1px solid rgba(30,39,72,0.07);
+      cursor: pointer;
+    }
+
+    .op-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(30,39,72,0.14);
+    }
+
+    .op-card-banner {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .op-card-banner.sendas {
+      background: linear-gradient(135deg, #1a3a4a 0%, #0e5a7a 50%, #1a7a5a 100%);
+    }
+    .op-card-banner.placeholder {
+      background: linear-gradient(135deg, #2d3561 0%, #4a4f8a 100%);
+    }
+
+    .op-card-banner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='25' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E") repeat;
+    }
+
+    .op-logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: white;
+      z-index: 1;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .op-card-body {
+      padding: 22px 24px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .op-card-body h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .op-card-body p {
+      font-size: 0.83rem;
+      color: var(--gray);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .op-card-footer {
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .op-badge {
+      background: var(--gray-light);
+      color: var(--navy);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.03em;
+    }
+
+    .op-arrow {
+      width: 32px;
+      height: 32px;
+      background: var(--navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .op-card:hover .op-arrow {
+      background: var(--gold);
+    }
+
+    .op-arrow svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: white;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .coming-soon {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy-dark);
+      padding: 24px 40px;
+      text-align: center;
+    }
+
+    footer p {
+      color: rgba(255,255,255,0.3);
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+    }
+
+    footer span {
+      color: var(--gold);
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 24px 20px; flex-wrap: wrap; }
+      .header-divider { display: none; }
+      .section-label, .operators { padding: 0 20px; }
+      .operators { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <img src="logo_bestway.png" alt="BestWay">
+      </div>
+      <div class="header-divider"></div>
+      <div class="header-title">
+        <h1>Programas Terrestres</h1>
+        <p>Catálogo de operadores &amp; programas</p>
+      </div>
+    </div>
+  </header>
+  <div class="strip"></div>
+
+  <div class="section-label">
+    <h2>Seleccioná un operador</h2>
+    <p>Accedé a los programas de cada operador y sus destinos disponibles</p>
+  </div>
+
+  <div class="operators">
+
+    <!-- SENDAS TURISMO — activo -->
+    <a href="sendas.html" class="op-card">
+      <div class="op-card-banner sendas">
+        <span class="op-logo-text">Sendas</span>
+      </div>
+      <div class="op-card-body">
+        <h3>Sendas Turismo</h3>
+        <p>Operador regional especializado en destinos de Brasil, Argentina y Cataratas del Iguazú.</p>
+        <div class="op-card-footer">
+          <span class="op-badge">27 programas</span>
+          <div class="op-arrow">
+            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- PRÓXIMOS OPERADORES -->
+    <div class="op-card coming-soon">
+      <div class="op-card-banner placeholder">
+        <span class="op-logo-text">Operador 2</span>
+      </div>
+      <div class="op-card-body">
+        <h3>Próximamente</h3>
+        <p>Este operador estará disponible en breve.</p>
+        <div class="op-card-footer">
+          <span class="op-badge">Próximamente</span>
+          <div class="op-arrow">
+            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="op-card coming-soon">
+      <div class="op-card-banner placeholder">
+        <span class="op-logo-text">Operador 3</span>
+      </div>
+      <div class="op-card-body">
+        <h3>Próximamente</h3>
+        <p>Este operador estará disponible en breve.</p>
+        <div class="op-card-footer">
+          <span class="op-badge">Próximamente</span>
+          <div class="op-arrow">
+            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p><span>BestWay</span> · Programas Terrestres · Uso interno</p>
+  </footer>
+
+</body>
+</html>
