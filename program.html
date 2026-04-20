@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Programa — BestWay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --navy:      #2d3a6b;
+      --navy-dark: #1e2748;
+      --accent:    #4a5faa;
+      --gold:      #c8a84b;
+      --gold-lt:   #f0d878;
+      --teal:      #0e7a6a;
+      --teal-bg:   #eaf4f2;
+      --text:      #1a1a2e;
+      --mid:       #4a4860;
+      --light:     #f5f5f0;
+      --border:    #d8d6e0;
+      --white:     #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #dddbd5;
+      color: var(--text);
+      font-size: 9pt;
+      line-height: 1.5;
+    }
+
+    /* ── botón pantalla ── */
+    .print-bar {
+      position: fixed;
+      top: 16px; right: 16px;
+      z-index: 999;
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn {
+      background: var(--navy);
+      color: white;
+      border: none;
+      padding: 9px 20px;
+      border-radius: 7px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.22);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: var(--accent); }
+    .btn.sec { background: #555; }
+    .btn.sec:hover { background: #333; }
+
+    /* ══════════════════════════
+       PÁGINA A4
+    ══════════════════════════ */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 24px auto;
+      background: var(--white);
+      box-shadow: 0 4px 40px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-content {
+      padding: 10mm 13mm 8mm;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 5.5mm;
+    }
+
+    /* ══════════════════════════
+       1. ENCABEZADO
+    ══════════════════════════ */
+    .doc-header {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 5mm;
+      padding-bottom: 4mm;
+      border-bottom: 2.5px solid var(--navy);
+      position: relative;
+    }
+
+    .doc-header::after {
+      content: '';
+      position: absolute;
+      bottom: -4.5px;
+      left: 0; right: 0;
+      height: 1.5px;
+      background: var(--gold);
+    }
+
+    .logo-block img {
+      height: 22mm;
+      width: auto;
+      display: block;
+    }
+
+    /* eslogan centrado en header */
+    .header-center {
+      text-align: center;
+    }
+
+    .header-center .eslogan {
+      font-family: 'Poppins', sans-serif;
+      font-size: 7pt;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid);
+    }
+
+    .contact-block {
+      text-align: right;
+      font-size: 7.5pt;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+
+    .contact-block strong {
+      display: block;
+      font-size: 8pt;
+      color: var(--navy);
+      font-weight: 600;
+      margin-bottom: 0.5mm;
+    }
+
+    /* ══════════════════════════
+       2. TÍTULO DEL PROGRAMA
+    ══════════════════════════ */
+    .prog-title-block {
+      text-align: center;
+      padding: 3mm 0 1mm;
+    }
+
+    .prog-title-block h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 26pt;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+
+    .prog-title-block .duracion-line {
+      font-family: 'Poppins', sans-serif;
+      font-size: 7.5pt;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 1.5mm;
+    }
+
+    /* ══════════════════════════
+       3. BANDA AZUL FECHAS
+    ══════════════════════════ */
+    .fechas-band {
+      background: var(--navy);
+      border-radius: 4px;
+      padding: 3mm 6mm;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3mm;
+    }
+
+    .fecha-item { display: flex; flex-direction: column; gap: 0.5mm; }
+
+    .fecha-item .fl {
+      font-family: 'Poppins', sans-serif;
+      font-size: 6pt;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.45);
+      font-weight: 600;
+    }
+
+    .fecha-item .fv {
+      font-size: 8.5pt;
+      color: white;
+      font-weight: 600;
+    }
+
+    .fecha-item .fv.gold { color: var(--gold-lt); }
+
+    .fecha-sep {
+      width: 1px; height: 8mm;
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* ══════════════════════════
+       SECCIONES GENÉRICAS
+    ══════════════════════════ */
+    .sec { display: flex; flex-direction: column; gap: 2.5mm; }
+
+    .sec-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 6.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--navy);
+      padding-bottom: 1.5mm;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+    }
+
+    .sec-title::before {
+      content: '';
+      display: block;
+      width: 3mm; height: 3mm;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ══════════════════════════
+       4. DESTINO
+    ══════════════════════════ */
+    .destino-grid {
+      display: grid;
+      grid-template-columns: 1fr 50mm;
+      gap: 5mm;
+      align-items: start;
+    }
+
+    .destino-text p {
+      font-size: 8.5pt;
+      color: var(--mid);
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 3mm;
+    }
+
+    .destino-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5mm;
+    }
+
+    .hl-tag {
+      background: var(--light);
+      border: 0.5px solid var(--border);
+      border-radius: 20px;
+      padding: 1mm 2.5mm;
+      font-size: 7pt;
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    .destino-foto {
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--teal-bg);
+      height: 28mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0.5px solid var(--border);
+    }
+
+    .destino-foto img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+
+    .destino-foto .ph {
+      font-size: 7.5pt;
+      color: var(--teal);
+      text-align: center;
+      padding: 4mm;
+      line-height: 1.5;
+    }
+
+    /* ══════════════════════════
+       5. INCLUYE
+    ══════════════════════════ */
+    .incluye-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8mm;
+    }
+
+    .inc-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 2mm;
+      font-size: 8pt;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .inc-dot {
+      width: 3.5mm; height: 3.5mm;
+      background: var(--teal);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 1mm;
+    }
+
+    /* ══════════════════════════
+       6. ITINERARIO
+    ══════════════════════════ */
+    .itinerary-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .itinerary-table tr {
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .itinerary-table tr:last-child { border-bottom: none; }
+
+    .itinerary-table td {
+      padding: 2.5mm 2mm;
+      vertical-align: top;
+      font-size: 8pt;
+    }
+
+    .it-day { width: 13mm; white-space: nowrap; }
+
+    .it-day-pill {
+      background: var(--navy);
+      color: white;
+      border-radius: 3px;
+      padding: 1mm 2mm;
+      font-family: 'Poppins', sans-serif;
+      font-size: 6pt;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      display: inline-block;
+    }
+
+    .it-day-pill.first { background: var(--teal); }
+    .it-day-pill.last  { background: var(--gold); color: var(--navy-dark); }
+
+    .it-lugar {
+      width: 34mm;
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 8pt;
+      padding-left: 2mm;
+    }
+
+    .it-detalle { color: var(--mid); line-height: 1.45; }
+    .it-detalle strong { color: var(--navy); font-weight: 600; }
+
+    .it-nota-orden {
+      font-size: 7pt;
+      color: var(--mid);
+      font-style: italic;
+      padding: 1.5mm 2mm;
+      border-top: 0.5px solid var(--border);
+    }
+
+    /* ══════════════════════════
+       7. PRECIOS
+    ══════════════════════════ */
+    .precios-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+    }
+
+    .precios-table thead tr { background: var(--navy); color: white; }
+
+    .precios-table thead th {
+      padding: 2.5mm 3mm;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 6.5pt;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .precios-table thead th:first-child { text-align: left; }
+
+    .precios-table tbody tr { border-bottom: 0.5px solid var(--border); }
+    .precios-table tbody tr:nth-child(even) { background: var(--light); }
+    .precios-table tbody tr:last-child { border-bottom: none; }
+
+    .precios-table tbody td {
+      padding: 2.5mm 3mm;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .precios-table tbody td:first-child { text-align: left; }
+
+    .hotel-nm  { font-weight: 600; color: var(--navy); font-size: 8pt; }
+    .hotel-url { font-size: 6.5pt; color: var(--mid); }
+    .pval      { font-weight: 700; color: var(--text); }
+    .pna       { color: var(--border); }
+
+    .precios-footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5mm;
+      margin-top: 2.5mm;
+    }
+
+    .pnote {
+      background: var(--light);
+      border-left: 2px solid var(--gold);
+      border-radius: 0 3px 3px 0;
+      padding: 2mm 3mm;
+      font-size: 7pt;
+      color: var(--mid);
+      line-height: 1.5;
+    }
+
+    .pnote strong {
+      font-family: 'Poppins', sans-serif;
+      font-size: 6.5pt;
+      color: var(--navy);
+      display: block;
+      margin-bottom: 0.8mm;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ══════════════════════════
+       8. PIE DE PÁGINA
+    ══════════════════════════ */
+    .doc-footer {
+      background: var(--navy);
+      padding: 0;
+      margin-top: auto;
+    }
+
+    /* fila superior: contacto | pago */
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 0;
+      padding: 4mm 13mm;
+      border-bottom: 0.5px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-contact {
+      font-size: 7.5pt;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+    }
+
+    .footer-contact strong {
+      font-family: 'Poppins', sans-serif;
+      font-size: 8pt;
+      color: white;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5mm;
+    }
+
+    /* PAGO — bloque derecho destacado */
+    .footer-pago {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2.5mm;
+    }
+
+    .pago-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 7pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold-lt);
+      text-align: right;
+    }
+
+    .pago-logo-img {
+      height: 9mm;
+      width: auto;
+      display: block;
+      /* fondo blanco redondeado para que los logos resalten sobre el navy */
+      background: white;
+      border-radius: 5px;
+      padding: 1.5mm 3mm;
+    }
+
+    /* fila legal */
+    .footer-legal {
+      padding: 2.5mm 13mm;
+      font-size: 6pt;
+      color: rgba(255,255,255,0.3);
+      line-height: 1.5;
+    }
+
+    /* ══════════════════════════
+       PRINT
+    ══════════════════════════ */
+    @media print {
+      @page { size: A4; margin: 0; }
+      body { background: none; }
+      .print-bar { display: none !important; }
+      .page { width: 210mm; margin: 0; box-shadow: none; page-break-after: always; }
+      .sec         { page-break-inside: avoid; }
+      .fechas-band { page-break-inside: avoid; }
+      .doc-footer  { page-break-inside: avoid; }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="print-bar">
+  <button class="btn" onclick="window.print()">🖨️ Imprimir / PDF</button>
+  <button class="btn sec" onclick="history.back()">← Volver</button>
+</div>
+
+<div class="page" id="programa-page">
+  <div class="page-content">
+
+    <!-- 1. ENCABEZADO -->
+    <header class="doc-header">
+      <div class="logo-block">
+        <img src="logo_bestway.png" alt="BestWay Viajes">
+      </div>
+      <div class="header-center">
+        <div class="eslogan">Tu Mundo de Oportunidades</div>
+      </div>
+      <div class="contact-block">
+        <strong>BestWay Viajes</strong>
+        Tel. 2902 2116<br>
+        Río Branco 1375, Montevideo<br>
+        info@bestway.com.uy
+      </div>
+    </header>
+
+    <!-- 2. TÍTULO DEL PROGRAMA -->
+    <div class="prog-title-block" id="prog-titulo">
+      <!-- generado por JS -->
+    </div>
+
+    <!-- 3. BANDA FECHAS -->
+    <div class="fechas-band" id="prog-fechas">
+      <!-- generado por JS -->
+    </div>
+
+    <!-- 4. DESTINO -->
+    <div class="sec">
+      <div class="sec-title">El Destino</div>
+      <div class="destino-grid">
+        <div class="destino-text">
+          <p id="prog-descripcion"></p>
+          <div class="destino-highlights" id="prog-highlights"></div>
+        </div>
+        <div class="destino-foto" id="prog-foto">
+          <div class="ph">📷 Agregar foto<br>del destino</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. INCLUYE -->
+    <div class="sec">
+      <div class="sec-title">Incluye</div>
+      <div class="incluye-grid" id="prog-incluye"></div>
+    </div>
+
+    <!-- 6. ITINERARIO -->
+    <div class="sec">
+      <div class="sec-title">Itinerario</div>
+      <table class="itinerary-table">
+        <tbody id="prog-itinerario"></tbody>
+        <tr class="it-nota-orden">
+          <td colspan="3">* El orden de los paseos y excursiones puede variar según las condiciones del operador.</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 7. PRECIOS -->
+    <div class="sec">
+      <div class="sec-title">Hoteles &amp; Tarifas — Precios en U$S por persona</div>
+      <table class="precios-table">
+        <thead>
+          <tr>
+            <th>Hotel</th>
+            <th>Playa</th>
+            <th>Individual</th>
+            <th>Doble</th>
+            <th>Triple</th>
+            <th>Cuádruple</th>
+            <th>Quíntuple</th>
+          </tr>
+        </thead>
+        <tbody id="prog-precios"></tbody>
+      </table>
+      <div class="precios-footer" id="prog-precios-footer"></div>
+    </div>
+
+  </div><!-- /page-content -->
+
+  <!-- 8. PIE DE PÁGINA -->
+  <footer class="doc-footer">
+    <div class="footer-top">
+      <div class="footer-contact">
+        <strong>Martin Panizzi — Ejecutivo de Cuentas</strong>
+        WhatsApp 095 969 909 &nbsp;·&nbsp; mpanizzi@bestway.com.uy<br>
+        www.bestway.com.uy &nbsp;·&nbsp; @bestway.uy &nbsp;·&nbsp; 095 969 909
+      </div>
+      <div class="footer-pago">
+        <div class="pago-label">Hasta 12 pagos sin recargo en U$S</div>
+        <img class="pago-logo-img" src="medios-de-pago.png" alt="Visa · Mastercard · OCA">
+      </div>
+    </div>
+    <div class="footer-legal">
+      Todos los precios están sujetos a disponibilidad y variaciones tarifarias sin previo aviso. Es responsabilidad del cliente la documentación necesaria para su viaje. Algunos países exigen documento con al menos 6 meses de vigencia al momento del viaje. Asesorese sobre exigencias migratorias y sanitarias (visa, vacunas, etc.). Los menores pueden requerir documentación adicional. La empresa no se responsabiliza por cambios o cancelaciones de compañías aéreas, hoteles u operadores. Se recomienda contratar seguro de cancelación y asistencia en viaje.
+    </div>
+  </footer>
+
+</div><!-- /page -->
+
+
+<!-- ════════════════════════════════════════════════════
+     DATOS DE PROGRAMAS — editá aquí para cada programa
+═════════════════════════════════════════════════════ -->
+<script>
+
+const PROGRAMAS = {
+
+  "florianopolis-julio-noviembre": {
+    titulo:    "FLORIANÓPOLIS",
+    subtitulo: "8 DÍAS / 5 NOCHES · BRASIL",
+    duracion:  "8 DÍAS — 5 NOCHES",
+    fechas: [
+      { label: "Temporada",  value: "Julio a Noviembre",              gold: false },
+      { label: "Salidas",    value: "Sábados 11 Jul — 21 Nov",        gold: true  },
+      { label: "Excepción",  value: "Excepto vac. de primavera",      gold: false },
+      { label: "Operador",   value: "Sendas Turismo",                 gold: false },
+    ],
+    descripcion: "Canasvieiras, en Florianópolis, combina el encanto de las playas brasileñas con aguas cálidas y tranquilas, perfectas para disfrutar todo el día. Con su ambiente alegre, su costa sin sargazo y su mezcla de naturaleza y ritmo local, es el lugar ideal para vivir el verdadero verano en Brasil.",
+    highlights: ["🏖️ Playas cristalinas", "⛵ Paseo en Scuna", "🎢 Beto Carrero World", "✝️ Cristo Luz", "🐬 Bahía de los Golfinhos", "🌊 Laguna de la Concepción"],
+    foto: null, // reemplazar con: "floripa.jpg"
+    incluye: [
+      "Bus semi cama",
+      "Guía acompañante · Servicio a bordo",
+      "Cena y desayuno a bordo",
+      "05 noches de alojamiento con desayuno",
+      "06 comidas en restaurante",
+      "Paseo en Scuna — Isla de Anhatomirin y Bahía de los Golfinhos",
+      "Tour de playas: Jureré, Ingleses, Barra da Lagoa, Morro de las Siete Vueltas, Laguna de la Concepción, Playa Joaquina",
+      "Tour a Camboriú con ascenso al Cristo Luz",
+      "Traslado a Beto Carrero World · Seguro Universal Assistance",
+    ],
+    itinerario: [
+      { dia: "DÍA 01", lugar: "Uruguay — Salida",         detalle: "Salida en bus semi cama con servicio a bordo, guía acompañante, cena y desayuno abordo pasando por Porto Alegre.", first: true  },
+      { dia: "DÍA 02", lugar: "Florianópolis — Llegada",  detalle: "Llegada directamente al hotel. Alojamiento. Resto del día libre. Cena." },
+      { dia: "DÍA 03", lugar: "Tour Camboriú con Cristo Luz", detalle: "Excursión de medio día al norte del estado para visitar el balneario de Camboriú. Recorrido por su rambla y tiempo libre en el centro comercial o para realizar opcionalmente el Teleférico al Parque Unipraias y a la playa de Laranjeiras. En la noche ascenso al morro del Cristo Luz para admirar este monumento y obtener una vista increíble desde su cima. Cena con música en vivo y mucha diversión. Posterior regreso a Florianópolis." },
+      { dia: "DÍA 04", lugar: "Paseo en Scuna",           detalle: "Salida en horas de la mañana para realizar un paseo en Scuna por la Bahía Norte y visitar la Isla de Anhatomirin, desembarcando en el fuerte de Santa Cruz y la Bahía de los Golfinhos. Almuerzo." },
+      { dia: "DÍA 05", lugar: "Beto Carrero World",       detalle: "Traslado al balneario de Penha para conocer el mayor Parque de Diversiones de Sudamérica: Beto Carrero World. Ingreso opcional para disfrutar de sus entretenimientos. Regreso a Florianópolis en la noche. Cena." },
+      { dia: "DÍA 06", lugar: "Tour de Playas",           detalle: "Visitando la playa de Jureré, Cruce del Morro de las Siete vueltas, Laguna de la Concepción para vivir el esplendor de las cristalinas aguas de la playa Joaquina. Posteriormente pasando por Praia Mole y Barra da Lagoa, llegaremos a Ingleses con tiempo para baños. Regreso al Hotel. Cena." },
+      { dia: "DÍA 07", lugar: "Florianópolis — Partida",  detalle: "Desayuno. Partida con equipajes en horas de la mañana en viaje de regreso con almuerzo en Parador de ruta. Continuación por Tubarao, Porto Alegre." },
+      { dia: "DÍA 08", lugar: "Uruguay — Llegada",        detalle: "Llegada en horas de la mañana. Fin de nuestros servicios.", last: true },
+    ],
+    hoteles: [
+      { nombre: "San Diego Std",         cat: "sandiegoaparhotel.com.br", playa: "Canas", sgl: 680,  dbl: 545,  tpl: 530,  cpl: 515,  qpl: null },
+      { nombre: "San Diego Lujo",        cat: "sandiegoaparhotel.com.br", playa: "Canas", sgl: null, dbl: null, tpl: 545,  cpl: 530,  qpl: 515  },
+      { nombre: "Tropicanas Std",        cat: "hoteltropicanas.com",      playa: "Canas", sgl: 680,  dbl: 540,  tpl: 540,  cpl: 540,  qpl: null },
+      { nombre: "Tropicanas Superior",   cat: "hoteltropicanas.com",      playa: "Canas", sgl: 690,  dbl: 550,  tpl: 550,  cpl: 550,  qpl: null },
+      { nombre: "Sonho Meu",             cat: "hotelsonhomeu.com.br",     playa: "Canas", sgl: 850,  dbl: 620,  tpl: 595,  cpl: 580,  qpl: null },
+      { nombre: "Posada Golfinhos",      cat: "pousadadosgolfinhos.com",  playa: "Canas", sgl: 850,  dbl: 620,  tpl: 575,  cpl: 545,  qpl: null },
+    ],
+    notas_precios: [
+      { titulo: "Menores", texto: "0 a 3 años: sin cargo (1 por habitación con 2 adultos). · 4 y 5 años: U$S 250 (asiento + servicio + seguro, con 2 adultos)." },
+      { titulo: "Solo bus + hotel", texto: "Descontar U$S 120 por persona. · Precios sujetos a disponibilidad al momento de la reserva." },
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // AGREGAR AQUÍ NUEVOS PROGRAMAS con la misma estructura
+  // ─────────────────────────────────────────────────────────────
+
+  "gramado-julio": {
+    titulo:    "GRAMADO Y CANELA",
+    subtitulo: "7 DÍAS — VACACIONES DE JULIO",
+    duracion:  "7 DÍAS",
+    fechas: [
+      { label: "Temporada",  value: "Vacaciones de Julio",   gold: false },
+      { label: "Salidas",    value: "Consultar fechas",      gold: true  },
+      { label: "Operador",   value: "Sendas Turismo",        gold: false },
+    ],
+    descripcion: "Gramado y Canela son dos joyas del sur de Brasil que combinan arquitectura alemana, gastronomía de primer nivel y paisajes de montaña únicos. En julio, el frío y los colores otoñales hacen de estos destinos una experiencia completamente diferente al Brasil típico.",
+    highlights: ["🌲 Parques naturais", "🍫 Chocolate artesanal", "⛪ Arquitetura européia", "🎭 Gramado pelo Mundo", "🌊 Cascatas", "🎡 Parque Knorr"],
+    foto: null,
+    incluye: [
+      "Bus semi cama",
+      "Guía acompañante · Servicio a bordo",
+      "Cena y desayuno a bordo",
+      "05 noches de alojamiento con desayuno",
+      "Excursiones incluidas según programa",
+      "Seguro Universal Assistance",
+    ],
+    itinerario: [
+      { dia: "DÍA 01", lugar: "Uruguay — Salida",      detalle: "Salida en bus semi cama con servicio a bordo, guía acompañante, cena y desayuno abordo.", first: true },
+      { dia: "DÍA 02", lugar: "Gramado — Llegada",     detalle: "Llegada al hotel. Alojamiento. Tarde libre. Cena." },
+      { dia: "DÍA 03", lugar: "City Tour Gramado",     detalle: "Recorrido por los principales atractivos de la ciudad. Chocolate, arquitectura alemana, Rua Coberta. Cena." },
+      { dia: "DÍA 04", lugar: "Canela",                detalle: "Visita a Canela: Catedral de Pedra, Parque do Caracol, Cascata do Caracol. Almuerzo. Regreso a Gramado. Cena." },
+      { dia: "DÍA 05", lugar: "Día libre",             detalle: "Día libre para compras, degustaciones y actividades opcionales. Cena." },
+      { dia: "DÍA 06", lugar: "Gramado — Partida",     detalle: "Desayuno. Partida con equipajes. Almuerzo en Parador de ruta. Continuación hacia Uruguay." },
+      { dia: "DÍA 07", lugar: "Uruguay — Llegada",     detalle: "Llegada en horas de la mañana. Fin de nuestros servicios.", last: true },
+    ],
+    hoteles: [
+      { nombre: "A confirmar según salida", cat: "", playa: "—", sgl: null, dbl: null, tpl: null, cpl: null, qpl: null },
+    ],
+    notas_precios: [
+      { titulo: "Tarifas", texto: "Consultar precios según fecha de salida y categoría de hotel elegida." },
+      { titulo: "Solo bus + hotel", texto: "Descontar U$S 120 por persona. · Sujeto a disponibilidad." },
+    ],
+  },
+
+};
+
+// ════════════════════════════════════════
+// MOTOR DE RENDER
+// ════════════════════════════════════════
+function getParam(key) {
+  const p = new URLSearchParams(window.location.search);
+  return p.get(key);
+}
+
+function p(v) {
+  return v != null ? `<span class="pval">U$S ${v}</span>` : `<span class="pna">—</span>`;
+}
+
+function renderPrograma(id) {
+  const data = PROGRAMAS[id];
+  if (!data) {
+    document.getElementById('prog-titulo').innerHTML = `<h1 style="color:red">Programa no encontrado: "${id}"</h1>`;
+    return;
+  }
+
+  document.title = `${data.titulo} — BestWay`;
+
+  // TÍTULO
+  document.getElementById('prog-titulo').innerHTML = `
+    <h1>${data.titulo}</h1>
+    <div class="duracion-line">${data.subtitulo || data.duracion}</div>
+  `;
+
+  // FECHAS
+  const items = data.fechas.map((f, i) => {
+    const sep = i < data.fechas.length - 1 ? '<div class="fecha-sep"></div>' : '';
+    return `
+      <div class="fecha-item">
+        <span class="fl">${f.label}</span>
+        <span class="fv${f.gold ? ' gold' : ''}">${f.value}</span>
+      </div>${sep}
+    `;
+  }).join('');
+  document.getElementById('prog-fechas').innerHTML = items;
+
+  // DESCRIPCIÓN
+  document.getElementById('prog-descripcion').textContent = data.descripcion;
+
+  // HIGHLIGHTS
+  document.getElementById('prog-highlights').innerHTML = data.highlights
+    .map(h => `<span class="hl-tag">${h}</span>`).join('');
+
+  // FOTO
+  if (data.foto) {
+    document.getElementById('prog-foto').innerHTML = `<img src="${data.foto}" alt="${data.titulo}">`;
+  }
+
+  // INCLUYE
+  document.getElementById('prog-incluye').innerHTML = data.incluye
+    .map(i => `<div class="inc-row"><div class="inc-dot"></div>${i}</div>`).join('');
+
+  // ITINERARIO
+  document.getElementById('prog-itinerario').innerHTML = data.itinerario.map(d => `
+    <tr>
+      <td class="it-day"><span class="it-day-pill${d.first ? ' first' : d.last ? ' last' : ''}">${d.dia}</span></td>
+      <td class="it-lugar">${d.lugar}</td>
+      <td class="it-detalle">${d.detalle}</td>
+    </tr>
+  `).join('');
+
+  // HOTELES
+  document.getElementById('prog-precios').innerHTML = data.hoteles.map(h => `
+    <tr>
+      <td>
+        <span class="hotel-nm">${h.nombre}</span>
+        ${h.cat ? `<br><span class="hotel-url">${h.cat}</span>` : ''}
+      </td>
+      <td>${h.playa}</td>
+      <td>${p(h.sgl)}</td>
+      <td>${p(h.dbl)}</td>
+      <td>${p(h.tpl)}</td>
+      <td>${p(h.cpl)}</td>
+      <td>${p(h.qpl)}</td>
+    </tr>
+  `).join('');
+
+  // NOTAS PRECIOS
+  document.getElementById('prog-precios-footer').innerHTML = data.notas_precios.map(n => `
+    <div class="pnote">
+      <strong>${n.titulo}</strong>
+      ${n.texto}
+    </div>
+  `).join('');
+}
+
+// INICIO: leer ?p=ID de la URL
+const progId = getParam('p') || 'florianopolis-julio-noviembre';
+renderPrograma(progId);
+
+</script>
+</body>
+</html>
