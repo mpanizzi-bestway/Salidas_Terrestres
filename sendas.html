@@ -38,7 +38,20 @@
     .back-btn:hover { color:var(--gold); }
     .back-btn svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
     .h-div { width:1px; height:36px; background:rgba(255,255,255,.12); }
-    .logo-wrap img { height:40px; width:auto; filter:brightness(0) invert(1); }
+    .logo-wrap img { height:40px; width:auto; display:block; }
+
+    /* Logo Sendas encima del sidebar */
+    .sidebar-logo {
+      background: var(--navy-dark);
+      padding: 16px 18px 12px;
+      display: flex; align-items: center; justify-content: center;
+      border-bottom: 2px solid var(--gold);
+    }
+    .sidebar-logo img {
+      height: 44px; width: auto; max-width: 180px;
+      object-fit: contain;
+      filter: brightness(0) invert(1); /* fuerza blanco sobre fondo oscuro */
+    }
     .header-title {
       font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:600; color:white;
     }
@@ -210,7 +223,7 @@
       Inicio
     </a>
     <div class="h-div"></div>
-    <div class="logo-wrap"><img src="logo_bestway.png" alt="BestWay"></div>
+    <div class="logo-wrap"><img src="images/logo_Bestway_blanco.png" alt="BestWay"></div>
     <div class="header-title">
       Sendas Turismo
       <span>— Programas terrestres</span>
@@ -224,7 +237,7 @@
     &nbsp;·&nbsp; <span id="prog-count">—</span> programas activos
   </div>
   <a id="btn-update"
-     href="https://github.com/TU_USUARIO/TU_REPO/actions/workflows/scrape-sendas.yml"
+     href="https://github.com/mpanizzi-bestway/Salidas_Terrestres/actions/workflows/scrape-sendas.yml"
      target="_blank"
      class="btn-update"
      title="Abre GitHub Actions para forzar re-scraping">
@@ -235,6 +248,14 @@
 <div class="layout">
 
   <aside class="sidebar">
+    <!-- Logo Sendas sobre el árbol -->
+    <div class="sidebar-logo">
+      <img
+        src="images/logo_sendas.png"
+        alt="Sendas Turismo"
+        onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<span style=\'color:white;font-weight:700;font-size:.9rem;\'>Sendas Turismo</span>')"
+      >
+    </div>
     <div class="sidebar-hd">Destinos &amp; Programas</div>
     <div class="tree" id="sidebar-tree">
       <div style="padding:20px 16px;text-align:center;color:var(--gray);font-size:.8rem;">
