@@ -5,1119 +5,406 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sendas Turismo — Programas | BestWay</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #2d3a6b;
-      --navy-dark: #1e2748;
-      --navy-mid: #3d4f8a;
-      --accent: #4a5faa;
-      --gold: #c8a84b;
-      --gold-light: #e8c96a;
-      --white: #ffffff;
-      --off-white: #f8f7f4;
+      --navy:       #2d3a6b;
+      --navy-dark:  #1e2748;
+      --navy-mid:   #3d4f8a;
+      --accent:     #4a5faa;
+      --gold:       #c8a84b;
+      --gold-lt:    #e8c96a;
+      --teal:       #0e7a6a;
+      --white:      #ffffff;
+      --off-white:  #f4f3ef;
       --gray-light: #eeedf0;
-      --gray: #9a98a8;
-      --text: #1a1a2e;
-      --sendas-teal: #0e7a6a;
+      --gray:       #9a98a8;
+      --text:       #1a1a2e;
     }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'DM Sans',sans-serif; background:var(--off-white); color:var(--text); min-height:100vh; }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--off-white);
-      color: var(--text);
-      min-height: 100vh;
-    }
-
-    /* ── HEADER ── */
-    header {
-      background: var(--navy-dark);
-      position: relative;
-      overflow: hidden;
-    }
-
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(74,95,170,0.3) 0%, transparent 70%);
-    }
-
+    /* HEADER */
+    header { background:var(--navy-dark); border-bottom:3px solid var(--gold); }
     .header-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 28px 40px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      position: relative;
-      z-index: 1;
+      max-width:1140px; margin:0 auto; padding:16px 32px;
+      display:flex; align-items:center; gap:20px;
     }
-
     .back-btn {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,0.6);
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 500;
-      transition: color 0.2s;
-      white-space: nowrap;
+      display:flex; align-items:center; gap:6px;
+      color:rgba(255,255,255,.55); text-decoration:none;
+      font-size:.8rem; font-weight:500; transition:color .2s; white-space:nowrap;
+    }
+    .back-btn:hover { color:var(--gold); }
+    .back-btn svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+    .h-div { width:1px; height:36px; background:rgba(255,255,255,.12); }
+    .logo-wrap img { height:40px; width:auto; filter:brightness(0) invert(1); }
+    .header-title {
+      font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:600; color:white;
+    }
+    .header-title span { color:var(--gold-lt); font-weight:400; font-size:.82rem; margin-left:6px; }
+
+    /* UPDATE BAR */
+    .update-bar {
+      background:var(--teal); padding:8px 32px;
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+    }
+    .update-info { font-size:.75rem; color:rgba(255,255,255,.8); display:flex; align-items:center; gap:6px; }
+    .update-info strong { color:white; }
+    .btn-update {
+      background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3);
+      color:white; padding:5px 16px; border-radius:5px;
+      font-family:'DM Sans',sans-serif; font-size:.75rem; font-weight:600;
+      cursor:pointer; display:flex; align-items:center; gap:6px;
+      transition:background .2s; text-decoration:none; white-space:nowrap;
+    }
+    .btn-update:hover { background:rgba(255,255,255,.25); }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .spin { display:inline-block; animation:spin 1s linear infinite; }
+
+    /* LAYOUT */
+    .layout {
+      max-width:1140px; margin:28px auto 64px; padding:0 32px;
+      display:grid; grid-template-columns:240px 1fr; gap:28px; align-items:start;
     }
 
-    .back-btn:hover { color: var(--gold); }
-
-    .back-btn svg {
-      width: 16px; height: 16px;
-      fill: none; stroke: currentColor;
-      stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;
-    }
-
-    .header-divider-v {
-      width: 1px; height: 44px;
-      background: rgba(255,255,255,0.15);
-    }
-
-    .logo-wrap img {
-      height: 52px;
-      width: auto;
-      filter: brightness(0) invert(1);
-    }
-
-    .breadcrumb {
-      color: rgba(255,255,255,0.4);
-      font-size: 0.78rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .breadcrumb span { color: var(--white); font-weight: 500; }
-
-    /* ── STRIP ── */
-    .strip {
-      height: 4px;
-      background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
-    }
-
-    /* ── OPERATOR HERO ── */
-    .op-hero {
-      background: linear-gradient(135deg, #0d3a28 0%, #0e5a7a 40%, #1a3a4a 100%);
-      padding: 44px 40px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .op-hero::before {
-      content: '';
-      position: absolute;
-      right: -60px; top: -60px;
-      width: 320px; height: 320px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.04);
-    }
-
-    .op-hero::after {
-      content: '';
-      position: absolute;
-      right: 80px; bottom: -40px;
-      width: 180px; height: 180px;
-      border-radius: 50%;
-      background: rgba(200,168,75,0.08);
-    }
-
-    .op-hero-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .op-hero-inner h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      color: white;
-      font-weight: 600;
-    }
-
-    .op-hero-inner p {
-      color: rgba(255,255,255,0.55);
-      font-size: 0.88rem;
-      margin-top: 8px;
-    }
-
-    .op-stats {
-      display: flex;
-      gap: 32px;
-      margin-top: 24px;
-    }
-
-    .op-stat {
-      text-align: left;
-    }
-
-    .op-stat strong {
-      display: block;
-      font-size: 1.5rem;
-      color: var(--gold-light);
-      font-family: 'Playfair Display', serif;
-    }
-
-    .op-stat span {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.45);
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-    }
-
-    /* ── MAIN LAYOUT ── */
-    .main {
-      max-width: 1100px;
-      margin: 48px auto 80px;
-      padding: 0 40px;
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    /* ── SIDEBAR TREE ── */
+    /* SIDEBAR */
     .sidebar {
-      background: var(--white);
-      border-radius: 14px;
-      border: 1px solid rgba(30,39,72,0.08);
-      box-shadow: 0 2px 12px rgba(30,39,72,0.06);
-      overflow: hidden;
-      position: sticky;
-      top: 20px;
+      background:var(--white); border-radius:10px;
+      border:1px solid rgba(30,39,72,.09);
+      box-shadow:0 2px 10px rgba(30,39,72,.05);
+      overflow:hidden; position:sticky; top:16px;
     }
-
-    .sidebar-header {
-      background: var(--navy);
-      padding: 16px 20px;
-      color: white;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+    .sidebar-hd {
+      background:var(--navy); padding:13px 18px;
+      color:white; font-size:.72rem; font-weight:600;
+      letter-spacing:.1em; text-transform:uppercase;
     }
-
-    .tree {
-      padding: 12px 0;
-    }
+    .tree { padding:8px 0 4px; }
 
     .tree-country {
-      padding: 10px 20px 6px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gray);
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      padding:10px 18px 5px; font-size:.67rem; font-weight:700;
+      letter-spacing:.12em; text-transform:uppercase; color:var(--gray);
+      display:flex; align-items:center; gap:8px;
+    }
+    .tree-country::after { content:''; flex:1; height:1px; background:var(--gray-light); }
+
+    .tree-dest-hd {
+      padding:6px 18px; font-size:.82rem; font-weight:600; color:var(--navy);
+      cursor:pointer; display:flex; align-items:center; gap:7px;
+      transition:background .12s; user-select:none;
+    }
+    .tree-dest-hd:hover { background:var(--gray-light); }
+    .tree-dest-hd .chev {
+      margin-left:auto; width:13px; height:13px;
+      fill:none; stroke:var(--gray); stroke-width:2;
+      stroke-linecap:round; stroke-linejoin:round; transition:transform .18s;
+    }
+    .tree-dest.open .chev { transform:rotate(90deg); }
+    .tree-links { display:none; padding:0 0 3px 34px; }
+    .tree-dest.open .tree-links { display:block; }
+    .tree-link {
+      display:block; padding:4px 12px 4px 10px;
+      font-size:.75rem; color:var(--accent); text-decoration:none;
+      border-left:2px solid var(--gray-light); margin:1px 0; line-height:1.35;
+      transition:border-color .12s,color .12s;
+    }
+    .tree-link:hover { color:var(--navy); border-color:var(--gold); }
+
+    /* CONTENT */
+    .content { display:flex; flex-direction:column; gap:32px; }
+
+    .country-block { display:flex; flex-direction:column; gap:24px; }
+
+    .country-label {
+      font-family:'Poppins',sans-serif; font-size:1rem; font-weight:700; color:var(--navy);
+      display:flex; align-items:center; gap:10px;
+      padding-bottom:9px; border-bottom:2px solid var(--navy);
+    }
+    .country-label::after {
+      content:''; flex:1; height:1px;
+      background:linear-gradient(90deg,var(--gold) 0%,transparent 80%); margin-top:1px;
     }
 
-    .tree-country::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--gray-light);
+    .dest-block { display:flex; flex-direction:column; gap:7px; }
+
+    .dest-label {
+      display:flex; align-items:center; gap:10px;
+      padding-bottom:8px; border-bottom:1px solid var(--gray-light);
+    }
+    .dest-icon {
+      width:32px; height:32px; background:var(--navy); border-radius:50%;
+      display:flex; align-items:center; justify-content:center; font-size:.95rem; flex-shrink:0;
+    }
+    .dest-label h3 { font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:600; color:var(--navy); }
+    .dest-count {
+      margin-left:auto; font-size:.68rem; color:var(--gray);
+      background:var(--gray-light); padding:2px 9px; border-radius:12px;
     }
 
-    .tree-dest {
-      padding: 0;
-    }
-
-    .tree-dest-header {
-      padding: 7px 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--navy);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: background 0.15s;
-      user-select: none;
-    }
-
-    .tree-dest-header:hover {
-      background: var(--gray-light);
-    }
-
-    .tree-dest-header .chevron {
-      margin-left: auto;
-      width: 14px; height: 14px;
-      fill: none; stroke: var(--gray);
-      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
-      transition: transform 0.2s;
-    }
-
-    .tree-dest.open .chevron {
-      transform: rotate(90deg);
-    }
-
-    .tree-icon {
-      font-size: 1rem;
-    }
-
-    .tree-programs {
-      display: none;
-      padding: 0 0 4px 36px;
-    }
-
-    .tree-dest.open .tree-programs {
-      display: block;
-    }
-
-    .tree-prog-link {
-      display: block;
-      padding: 5px 16px 5px 0;
-      font-size: 0.78rem;
-      color: var(--accent);
-      text-decoration: none;
-      border-left: 2px solid var(--gray-light);
-      padding-left: 10px;
-      margin: 2px 0;
-      line-height: 1.3;
-      transition: border-color 0.15s, color 0.15s;
-    }
-
-    .tree-prog-link:hover {
-      color: var(--navy);
-      border-color: var(--gold);
-    }
-
-    /* ── CONTENT AREA ── */
-    .content h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: var(--navy);
-      margin-bottom: 24px;
-    }
-
-    /* ── DESTINATION SECTION ── */
-    .dest-section {
-      margin-bottom: 48px;
-    }
-
-    .dest-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid var(--gray-light);
-    }
-
-    .dest-icon-circle {
-      width: 40px; height: 40px;
-      background: var(--navy);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-
-    .dest-header h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      color: var(--navy);
-      font-weight: 600;
-    }
-
-    .dest-header .dest-count {
-      margin-left: auto;
-      font-size: 0.72rem;
-      color: var(--gray);
-      font-weight: 500;
-      background: var(--gray-light);
-      padding: 3px 10px;
-      border-radius: 20px;
-    }
-
-    /* ── PROGRAM CARDS ── */
-    .prog-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+    /* CARDS */
+    .prog-list { display:flex; flex-direction:column; gap:6px; }
 
     .prog-card {
-      background: var(--white);
-      border-radius: 10px;
-      border: 1px solid rgba(30,39,72,0.08);
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
-      box-shadow: 0 1px 4px rgba(30,39,72,0.05);
+      background:var(--white); border-radius:8px;
+      border:1px solid rgba(30,39,72,.08); padding:12px 15px;
+      display:flex; align-items:center; gap:14px;
+      text-decoration:none; color:inherit;
+      box-shadow:0 1px 3px rgba(30,39,72,.05);
+      transition:border-color .18s,box-shadow .18s,transform .14s;
     }
-
     .prog-card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 4px 16px rgba(45,58,107,0.12);
-      transform: translateX(4px);
+      border-color:var(--accent); box-shadow:0 3px 14px rgba(45,58,107,.11);
+      transform:translateX(3px);
     }
+    .card-body { flex:1; min-width:0; }
+    .card-name { font-size:.88rem; font-weight:600; color:var(--navy); line-height:1.3; }
+    .card-sub  { font-size:.73rem; color:var(--gray); margin-top:2px; }
+    .card-tags { display:flex; gap:5px; margin-top:5px; flex-wrap:wrap; }
+    .tag { font-size:.67rem; font-weight:500; padding:1px 7px; border-radius:10px; letter-spacing:.02em; }
+    .tag-dur  { background:#e8edf8; color:var(--navy-mid); }
+    .tag-bus  { background:#e8f5f0; color:#0e6a5a; }
+    .tag-seas { background:#fdf5e4; color:#8a6010; }
 
-    .prog-card-left {
-      flex: 1;
-      min-width: 0;
+    .card-arrow {
+      width:27px; height:27px; background:var(--gray-light); border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      flex-shrink:0; transition:background .18s;
     }
-
-    .prog-card-name {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: var(--navy);
-      line-height: 1.3;
+    .prog-card:hover .card-arrow { background:var(--navy); }
+    .card-arrow svg {
+      width:11px; height:11px; fill:none; stroke:var(--navy);
+      stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; transition:stroke .18s;
     }
+    .prog-card:hover .card-arrow svg { stroke:white; }
 
-    .prog-card-sub {
-      font-size: 0.77rem;
-      color: var(--gray);
-      margin-top: 3px;
+    /* STATES */
+    .state-box {
+      text-align:center; padding:48px 20px; color:var(--gray);
+      background:var(--white); border-radius:10px; border:1px solid rgba(30,39,72,.08);
     }
+    .state-box .ico { font-size:1.8rem; display:block; margin-bottom:10px; }
+    .state-box p { font-size:.84rem; line-height:1.7; }
+    .state-box code { background:#eee; padding:1px 6px; border-radius:3px; font-size:.78rem; }
 
-    .prog-tags {
-      display: flex;
-      gap: 6px;
-      margin-top: 7px;
-      flex-wrap: wrap;
-    }
+    /* FOOTER */
+    footer { background:var(--navy-dark); padding:16px 32px; text-align:center; }
+    footer p { color:rgba(255,255,255,.28); font-size:.74rem; }
+    footer span { color:var(--gold); }
 
-    .prog-tag {
-      font-size: 0.7rem;
-      font-weight: 500;
-      padding: 2px 8px;
-      border-radius: 12px;
-      letter-spacing: 0.02em;
-    }
-
-    .tag-dur { background: #e8edf8; color: var(--navy-mid); }
-    .tag-transport { background: #e8f5f0; color: #0e6a5a; }
-    .tag-season { background: #fdf5e4; color: #8a6010; }
-
-    .prog-card-arrow {
-      width: 30px; height: 30px;
-      background: var(--gray-light);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      transition: background 0.2s;
-    }
-
-    .prog-card:hover .prog-card-arrow {
-      background: var(--navy);
-    }
-
-    .prog-card-arrow svg {
-      width: 12px; height: 12px;
-      fill: none; stroke: var(--navy);
-      stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
-      transition: stroke 0.2s;
-    }
-
-    .prog-card:hover .prog-card-arrow svg {
-      stroke: white;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--navy-dark);
-      padding: 24px 40px;
-      text-align: center;
-    }
-
-    footer p {
-      color: rgba(255,255,255,0.3);
-      font-size: 0.78rem;
-      letter-spacing: 0.05em;
-    }
-
-    footer span { color: var(--gold); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 760px) {
-      .main { grid-template-columns: 1fr; padding: 0 20px; }
-      .sidebar { position: static; }
-      .op-hero { padding: 32px 20px; }
-      .header-inner { padding: 20px; gap: 14px; }
-      .op-stats { gap: 20px; }
+    /* RESPONSIVE */
+    @media (max-width:740px) {
+      .layout { grid-template-columns:1fr; padding:0 16px; }
+      .sidebar { position:static; }
+      .header-inner,.update-bar { padding-left:16px; padding-right:16px; }
+      .update-bar { flex-direction:column; align-items:flex-start; gap:8px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="header-inner">
-      <a href="index.html" class="back-btn">
-        <svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg>
-        Inicio
-      </a>
-      <div class="header-divider-v"></div>
-      <div class="logo-wrap">
-        <img src="logo_bestway.png" alt="BestWay">
-      </div>
-      <div class="breadcrumb">
-        / <span>Sendas Turismo</span>
-      </div>
-    </div>
-  </header>
-  <div class="strip"></div>
-
-  <!-- OPERATOR HERO -->
-  <div class="op-hero">
-    <div class="op-hero-inner">
-      <h1>Sendas Turismo</h1>
-      <p>Operador Turístico Nacional e Internacional · Salidas desde Uruguay</p>
-      <div class="op-stats">
-        <div class="op-stat">
-          <strong>27</strong>
-          <span>Programas activos</span>
-        </div>
-        <div class="op-stat">
-          <strong>3</strong>
-          <span>Destinos principales</span>
-        </div>
-        <div class="op-stat">
-          <strong>7–10</strong>
-          <span>Días promedio</span>
-        </div>
-      </div>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="back-btn">
+      <svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg>
+      Inicio
+    </a>
+    <div class="h-div"></div>
+    <div class="logo-wrap"><img src="logo_bestway.png" alt="BestWay"></div>
+    <div class="header-title">
+      Sendas Turismo
+      <span>— Programas terrestres</span>
     </div>
   </div>
+</header>
 
-  <!-- MAIN -->
-  <div class="main">
+<div class="update-bar">
+  <div class="update-info">
+    🔄 Actualizado: <strong id="last-update">—</strong>
+    &nbsp;·&nbsp; <span id="prog-count">—</span> programas activos
+  </div>
+  <a id="btn-update"
+     href="https://github.com/TU_USUARIO/TU_REPO/actions/workflows/scrape-sendas.yml"
+     target="_blank"
+     class="btn-update"
+     title="Abre GitHub Actions para forzar re-scraping">
+    ⚡ Actualizar ahora
+  </a>
+</div>
 
-    <!-- SIDEBAR TREE -->
-    <aside class="sidebar">
-      <div class="sidebar-header">Destinos &amp; Programas</div>
-      <div class="tree">
+<div class="layout">
 
-        <!-- BRASIL -->
-        <div class="tree-country">🇧🇷 Brasil</div>
-
-        <div class="tree-dest open" id="tree-floripa">
-          <div class="tree-dest-header" onclick="toggleDest('tree-floripa')">
-            <span class="tree-icon">🏖️</span> Florianópolis
-            <svg class="chevron" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
-          </div>
-          <div class="tree-programs">
-            <a class="tree-prog-link" href="#floripa-jul-nov">8 días · Jul a Nov</a>
-            <a class="tree-prog-link" href="#floripa-julio">8 días · Vacaciones Julio</a>
-            <a class="tree-prog-link" href="#floripa-abr-jun">8 días · Abr a Jun</a>
-          </div>
-        </div>
-
-        <div class="tree-dest" id="tree-gramado">
-          <div class="tree-dest-header" onclick="toggleDest('tree-gramado')">
-            <span class="tree-icon">🌲</span> Gramado y Canela
-            <svg class="chevron" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
-          </div>
-          <div class="tree-programs">
-            <a class="tree-prog-link" href="#gramado-verano">7 días · Verano</a>
-            <a class="tree-prog-link" href="#gramado-navidad">7 días · Navidad/Fin de Año</a>
-            <a class="tree-prog-link" href="#gramado-natal">7 días · Natal Luz Oct-Dic</a>
-            <a class="tree-prog-link" href="#gramado-ago-oct">7 días · Ago a Oct</a>
-            <a class="tree-prog-link" href="#gramado-julio">7 días · Vacaciones Julio</a>
-            <a class="tree-prog-link" href="#gramado-abr-jun">7 días · Abr a Jun</a>
-          </div>
-        </div>
-
-        <div class="tree-dest" id="tree-ferrugem">
-          <div class="tree-dest-header" onclick="toggleDest('tree-ferrugem')">
-            <span class="tree-icon">🌊</span> Ferrugem
-            <svg class="chevron" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
-          </div>
-          <div class="tree-programs">
-            <a class="tree-prog-link" href="#ferrugem-turismo">8 días · Turismo</a>
-          </div>
-        </div>
-
-        <div class="tree-dest" id="tree-camboriu">
-          <div class="tree-dest-header" onclick="toggleDest('tree-camboriu')">
-            <span class="tree-icon">🎡</span> Camboriú
-            <svg class="chevron" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
-          </div>
-          <div class="tree-programs">
-            <a class="tree-prog-link" href="#camboriu-julio">8 días · Vacaciones Julio</a>
-          </div>
-        </div>
-
-        <div class="tree-dest" id="tree-bombinhas">
-          <div class="tree-dest-header" onclick="toggleDest('tree-bombinhas')">
-            <span class="tree-icon">🐚</span> Bombinhas
-            <svg class="chevron" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
-          </div>
-          <div class="tree-programs">
-            <a class="tree-prog-link" href="#bombinhas-abr-may">8 días · Abr y May</a>
-          </div>
-        </div>
-
-        <!-- ARGENTINA -->
-        <div class="tree-country">🇦🇷 Argentina</div>
-
-        <div class="tree-dest" id="tree-baires">
-          <div class="tree-dest-header" onclick="toggleDest('tree-baires')">
-            <span class="tree-icon">🏙️</span> Buenos Aires
-            <svg class="chevron" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
-          </div>
-          <div class="tree-programs">
-            <a class="tree-prog-link" href="#baires-julio">Temaiken + Mundo Marino · Julio</a>
-          </div>
-        </div>
-
-        <div class="tree-dest" id="tree-mendoza">
-          <div class="tree-dest-header" onclick="toggleDest('tree-mendoza')">
-            <span class="tree-icon">🍷</span> Mendoza
-            <svg class="chevron" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
-          </div>
-          <div class="tree-programs">
-            <a class="tree-prog-link" href="#mendoza-ago-nov">8 días · Ago a Nov</a>
-            <a class="tree-prog-link" href="#mendoza-julio">8 días · Vacaciones Julio</a>
-            <a class="tree-prog-link" href="#mendoza-mar-jun">8 días · Mar a Jun</a>
-          </div>
-        </div>
-
-        <div class="tree-dest" id="tree-norte">
-          <div class="tree-dest-header" onclick="toggleDest('tree-norte')">
-            <span class="tree-icon">🏔️</span> Norte Argentino
-            <svg class="chevron" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
-          </div>
-          <div class="tree-programs">
-            <a class="tree-prog-link" href="#norte-tjs">10 días TJS · 27 Jun</a>
-            <a class="tree-prog-link" href="#norte-tsj">10 días TSJ · 26 Jun</a>
-            <a class="tree-prog-link" href="#norte-tafisaltajujuy">10 días Tafí-Salta-Jujuy</a>
-            <a class="tree-prog-link" href="#norte-tafijujuysalta">10 días Tafí-Jujuy-Salta</a>
-          </div>
-        </div>
-
-        <div class="tree-dest" id="tree-carlospaz">
-          <div class="tree-dest-header" onclick="toggleDest('tree-carlospaz')">
-            <span class="tree-icon">⛰️</span> Carlos Paz
-            <svg class="chevron" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
-          </div>
-          <div class="tree-programs">
-            <a class="tree-prog-link" href="#carlospaz-julio">8 días · Vacaciones Julio</a>
-          </div>
-        </div>
-
-        <div class="tree-dest" id="tree-bariloche">
-          <div class="tree-dest-header" onclick="toggleDest('tree-bariloche')">
-            <span class="tree-icon">🏔️</span> Bariloche
-            <svg class="chevron" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
-          </div>
-          <div class="tree-programs">
-            <a class="tree-prog-link" href="#bariloche-julio">9 días · Vacaciones Julio</a>
-            <a class="tree-prog-link" href="#bariloche-promo">9 días Promocional · 16 May</a>
-          </div>
-        </div>
-
-        <!-- CATARATAS -->
-        <div class="tree-country">💧 Cataratas</div>
-
-        <div class="tree-dest" id="tree-cataratas">
-          <div class="tree-dest-header" onclick="toggleDest('tree-cataratas')">
-            <span class="tree-icon">🌊</span> Cataratas del Iguazú
-            <svg class="chevron" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
-          </div>
-          <div class="tree-programs">
-            <a class="tree-prog-link" href="#cataratas-ago-dic">7 días · Ago a Dic</a>
-            <a class="tree-prog-link" href="#cataratas-4-11-18jul">7 días · 4, 11 y 18 Jul</a>
-            <a class="tree-prog-link" href="#cataratas-julio">7 días · Vacaciones Julio</a>
-            <a class="tree-prog-link" href="#cataratas-abr-jun">7 días · Abr a Jun</a>
-          </div>
-        </div>
-
+  <aside class="sidebar">
+    <div class="sidebar-hd">Destinos &amp; Programas</div>
+    <div class="tree" id="sidebar-tree">
+      <div style="padding:20px 16px;text-align:center;color:var(--gray);font-size:.8rem;">
+        <span class="spin">⏳</span> Cargando...
       </div>
-    </aside>
+    </div>
+  </aside>
 
-    <!-- CONTENT -->
-    <div class="content">
+  <main class="content" id="main-content">
+    <div class="state-box">
+      <span class="ico spin">⏳</span>
+      <p>Cargando programas...</p>
+    </div>
+  </main>
 
-      <!-- ═══ BRASIL ═══ -->
-      <h2>🇧🇷 Brasil</h2>
+</div>
 
-      <!-- FLORIANÓPOLIS -->
-      <div class="dest-section">
-        <div class="dest-header">
-          <div class="dest-icon-circle">🏖️</div>
-          <h3>Florianópolis</h3>
-          <span class="dest-count">3 programas</span>
-        </div>
-        <div class="prog-list">
+<footer>
+  <p><span>BestWay Viajes</span> · Sendas Turismo · Uso interno</p>
+</footer>
 
-          <a class="prog-card" id="floripa-jul-nov" href="programa.html?p=florianopolis-julio-noviembre">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Florianópolis 8 Días — Julio a Noviembre</div>
-              <div class="prog-card-sub">Salidas: sábados del 11 de julio al 21 de noviembre</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">8 días / 5 noches</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Jul–Nov</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow">
-              <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-            </div>
-          </a>
+<script>
+const DATA_URL = './programas-sendas.json';
+const PROG_URL = './programa.html';
 
-          <a class="prog-card" id="floripa-julio" href="programa.html?p=florianopolis-julio">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Florianópolis 8 Días — Vacaciones de Julio</div>
-              <div class="prog-card-sub">Salidas especiales período vacacional</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">8 días / 5 noches</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Julio</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow">
-              <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-            </div>
-          </a>
+const DEST_EMOJI = {
+  florianopolis:'🏖️', gramado:'🌲', ferrugem:'🌊', camboriu:'🎡',
+  bombinhas:'🐚', capao:'🏄', torres:'⛵', laguna:'🦀',
+  praiarosa:'🌹', blumenau:'🌸',
+  buenosaires:'🏙️', mendoza:'🍷', norte:'🏔️', carlospaz:'⛰️', bariloche:'🏔️',
+  cataratas:'🌊', chile:'🇨🇱', mendozasantiago:'🏔️',
+};
+const PAIS_ORDER = ['Brasil','Argentina','Cataratas','Chile','Otros'];
+const PAIS_EMOJI = { Brasil:'🇧🇷', Argentina:'🇦🇷', Cataratas:'💧', Chile:'🇨🇱', Otros:'🌍' };
 
-          <a class="prog-card" id="floripa-abr-jun" href="programa.html?p=florianopolis-julio">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Florianópolis 8 Días — Abril a Junio</div>
-              <div class="prog-card-sub">Temporada baja con mejor precio</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">8 días / 5 noches</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Abr–Jun</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow">
-              <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-            </div>
-          </a>
+function titleCase(s) {
+  return s.toLowerCase().replace(/(?:^|\s|[-\/])\S/g, c => c.toUpperCase());
+}
+function formatDate(iso) {
+  const d = new Date(iso);
+  return isNaN(d) ? iso : d.toLocaleDateString('es-UY',{day:'2-digit',month:'short',year:'numeric'});
+}
 
+function groupData(programas) {
+  const byPais = {};
+  for (const p of programas) {
+    const pais = p.pais || 'Otros', dest = p.destino || 'Otros';
+    if (!byPais[pais]) byPais[pais] = {};
+    if (!byPais[pais][dest]) byPais[pais][dest] = {
+      slug: p.destinoSlug, emoji: DEST_EMOJI[p.destinoSlug] || '📍', progs: []
+    };
+    byPais[pais][dest].progs.push(p);
+  }
+  return byPais;
+}
+
+function sorted(byPais) {
+  return Object.keys(byPais).sort((a,b) => {
+    const ia = PAIS_ORDER.indexOf(a), ib = PAIS_ORDER.indexOf(b);
+    return (ia<0?99:ia) - (ib<0?99:ib);
+  });
+}
+
+function cardHTML(p) {
+  const dias   = p.duracion ? p.duracion.split('—')[0].trim() : '';
+  const salida = p.fechas?.find(f => f.gold)?.value || p.fechas?.[0]?.value || '';
+  const sub    = p.fechas?.find(f => f.label==='Salidas' && !f.gold)?.value || salida;
+  return `
+    <a class="prog-card" href="${PROG_URL}?p=${encodeURIComponent(p.id)}" target="_blank">
+      <div class="card-body">
+        <div class="card-name">${titleCase(p.titulo)}</div>
+        <div class="card-sub">${sub}</div>
+        <div class="card-tags">
+          ${dias ? `<span class="tag tag-dur">${dias}</span>` : ''}
+          <span class="tag tag-bus">Bus semi cama</span>
+          ${salida ? `<span class="tag tag-seas">${salida.substring(0,28)}</span>` : ''}
         </div>
       </div>
-
-      <!-- GRAMADO Y CANELA -->
-      <div class="dest-section">
-        <div class="dest-header">
-          <div class="dest-icon-circle">🌲</div>
-          <h3>Gramado y Canela</h3>
-          <span class="dest-count">6 programas</span>
-        </div>
-        <div class="prog-list">
-
-          <a class="prog-card" id="gramado-verano" href="programa.html?p=gramado-verano">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Gramado y Canela 7 Días — Verano</div>
-              <div class="prog-card-sub">Temporada alta de verano</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">7 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Verano</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-
-          <a class="prog-card" id="gramado-navidad" href="programa.html?p=gramado-navidad">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Canela en Navidad o Fin de Año 7 Días</div>
-              <div class="prog-card-sub">Salidas 21 y 28 de diciembre</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">7 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">21 y 28 Dic</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-
-          <a class="prog-card" id="gramado-natal" href="programa.html?p=gramado-natal">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Gramado y Canela — Natal Luz 7 Días</div>
-              <div class="prog-card-sub">El famoso festival de luces de Gramado · Oct a Dic</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">7 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Oct–Dic</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-
-          <a class="prog-card" id="gramado-ago-oct" href="programa.html?p=gramado-ago-oct">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Gramado y Canela 7 Días — Agosto a Octubre</div>
-              <div class="prog-card-sub">Temporada intermedia</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">7 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Ago–Oct</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-
-          <a class="prog-card" id="gramado-julio" href="programa.html?p=gramado-julio">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Gramado y Canela 7 Días — Vacaciones de Julio</div>
-              <div class="prog-card-sub">Período vacacional de invierno</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">7 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Julio</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-
-          <a class="prog-card" id="gramado-abr-jun" href="programa.html?p=gramado-abr-jun">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Gramado y Canela 7 Días — Abril a Junio</div>
-              <div class="prog-card-sub">Temporada de otoño</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">7 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Abr–Jun</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-
-        </div>
+      <div class="card-arrow">
+        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
       </div>
+    </a>`;
+}
 
-      <!-- FERRUGEM, CAMBORIÚ, BOMBINHAS -->
-      <div class="dest-section">
-        <div class="dest-header">
-          <div class="dest-icon-circle">🌊</div>
-          <h3>Ferrugem</h3>
-          <span class="dest-count">1 programa</span>
-        </div>
-        <div class="prog-list">
-          <a class="prog-card" id="ferrugem-turismo" href="programa.html?p=ferrugem">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Ferrugem 8 Días — Turismo</div>
-              <div class="prog-card-sub">Praia da Ferrugem, Santa Catarina</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">8 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-        </div>
-      </div>
+function renderSidebar(byPais) {
+  let h = '';
+  sorted(byPais).forEach((pais, pi) => {
+    h += `<div class="tree-country">${PAIS_EMOJI[pais]||'🌍'} ${pais}</div>`;
+    Object.entries(byPais[pais]).forEach(([dest, info], di) => {
+      const open = (pi===0 && di===0) ? ' open' : '';
+      const sid = `td-${info.slug}`;
+      h += `
+        <div class="tree-dest${open}" id="${sid}">
+          <div class="tree-dest-hd" onclick="toggleTree('${sid}')">
+            <span>${info.emoji}</span>${dest}
+            <svg class="chev" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
+          </div>
+          <div class="tree-links">
+            ${info.progs.map(p => {
+              const label = titleCase(p.titulo)
+                .replace(new RegExp(`^${dest.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}\\s*[-–]?\\s*`,'i'),'')
+                .trim() || titleCase(p.titulo);
+              return `<a class="tree-link" href="${PROG_URL}?p=${encodeURIComponent(p.id)}" target="_blank">${label}</a>`;
+            }).join('')}
+          </div>
+        </div>`;
+    });
+  });
+  document.getElementById('sidebar-tree').innerHTML = h;
+}
 
-      <div class="dest-section">
-        <div class="dest-header">
-          <div class="dest-icon-circle">🎡</div>
-          <h3>Camboriú</h3>
-          <span class="dest-count">1 programa</span>
-        </div>
-        <div class="prog-list">
-          <a class="prog-card" id="camboriu-julio" href="programa.html?p=camboriu-julio">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Camboriú 8 Días — Vacaciones de Julio</div>
-              <div class="prog-card-sub">Balneário Camboriú y Beto Carrero World</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">8 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Julio</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-        </div>
-      </div>
+function renderContent(byPais) {
+  let h = '';
+  sorted(byPais).forEach(pais => {
+    h += `<div class="country-block">`;
+    h += `<div class="country-label">${PAIS_EMOJI[pais]||'🌍'} ${pais}</div>`;
+    Object.entries(byPais[pais]).forEach(([dest, info]) => {
+      h += `
+        <div class="dest-block" id="dest-${info.slug}">
+          <div class="dest-label">
+            <div class="dest-icon">${info.emoji}</div>
+            <h3>${dest}</h3>
+            <span class="dest-count">${info.progs.length} programa${info.progs.length!==1?'s':''}</span>
+          </div>
+          <div class="prog-list">${info.progs.map(cardHTML).join('')}</div>
+        </div>`;
+    });
+    h += `</div>`;
+  });
+  document.getElementById('main-content').innerHTML = h || `
+    <div class="state-box">
+      <span class="ico">⚠️</span>
+      <p>No se encontraron programas.<br>
+      Verificá que <code>programas-sendas.json</code> existe y tiene contenido.<br>
+      Hacé click en <strong>Actualizar ahora</strong> para regenerarlo.</p>
+    </div>`;
+}
 
-      <div class="dest-section">
-        <div class="dest-header">
-          <div class="dest-icon-circle">🐚</div>
-          <h3>Bombinhas</h3>
-          <span class="dest-count">1 programa</span>
-        </div>
-        <div class="prog-list">
-          <a class="prog-card" id="bombinhas-abr-may" href="programa.html?p=bombinhas-abr-may">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Bombinhas 8 Días — Abril y Mayo</div>
-              <div class="prog-card-sub">Aguas cristalinas de Santa Catarina</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">8 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Abr–May</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-        </div>
-      </div>
+async function init() {
+  try {
+    const r = await fetch(`${DATA_URL}?_=${Date.now()}`);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const data = await r.json();
 
-      <!-- ═══ ARGENTINA ═══ -->
-      <h2 style="margin-top:16px">🇦🇷 Argentina</h2>
+    document.getElementById('last-update').textContent = formatDate(data.updatedAt);
+    document.getElementById('prog-count').textContent  = data.programas.length;
 
-      <div class="dest-section">
-        <div class="dest-header">
-          <div class="dest-icon-circle">🏙️</div>
-          <h3>Buenos Aires</h3>
-          <span class="dest-count">1 programa</span>
-        </div>
-        <div class="prog-list">
-          <a class="prog-card" id="baires-julio" href="programa.html?p=baires-julio">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Temaiken, Buenos Aires, Mundo Marino y Parque de la Costa</div>
-              <div class="prog-card-sub">Vacaciones de Julio · Ideal familias</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Julio</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-        </div>
-      </div>
+    if (!data.programas?.length) throw new Error('Sin programas en el JSON');
 
-      <div class="dest-section">
-        <div class="dest-header">
-          <div class="dest-icon-circle">🍷</div>
-          <h3>Mendoza</h3>
-          <span class="dest-count">3 programas</span>
-        </div>
-        <div class="prog-list">
-          <a class="prog-card" id="mendoza-ago-nov" href="programa.html?p=mendoza-ago-nov">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Mendoza 8 Días — Agosto a Noviembre</div>
-              <div class="prog-card-sub">Viñedos, Aconcagua y Termas</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">8 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Ago–Nov</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-          <a class="prog-card" id="mendoza-julio" href="programa.html?p=mendoza-julio">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Mendoza 8 Días — Vacaciones de Julio</div>
-              <div class="prog-card-sub">Período vacacional de invierno</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">8 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Julio</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-          <a class="prog-card" id="mendoza-mar-jun" href="programa.html?p=mendoza-mar-jun">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Mendoza 8 Días — Marzo a Junio</div>
-              <div class="prog-card-sub">Época de vendimia y otoño</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">8 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Mar–Jun</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-        </div>
-      </div>
+    const byPais = groupData(data.programas);
+    renderSidebar(byPais);
+    renderContent(byPais);
+  } catch(e) {
+    document.getElementById('last-update').textContent = 'error';
+    document.getElementById('sidebar-tree').innerHTML =
+      `<div style="padding:14px 16px;color:#b00;font-size:.76rem;">Error al cargar</div>`;
+    document.getElementById('main-content').innerHTML = `
+      <div class="state-box">
+        <span class="ico">⚠️</span>
+        <p>No se pudo cargar el catálogo.<br>
+        <strong>Error:</strong> ${e.message}<br><br>
+        Verificá que <code>programas-sendas.json</code> existe y ejecutá el scraper
+        desde <strong>Actualizar ahora</strong>.</p>
+      </div>`;
+  }
+}
 
-      <div class="dest-section">
-        <div class="dest-header">
-          <div class="dest-icon-circle">🏔️</div>
-          <h3>Norte Argentino</h3>
-          <span class="dest-count">4 programas</span>
-        </div>
-        <div class="prog-list">
-          <a class="prog-card" id="norte-tjs" href="programa.html?p=norte-tjs">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Norte Argentino 10 Días TJS — Salida 27 de Junio</div>
-              <div class="prog-card-sub">Tucumán · Jujuy · Salta</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">10 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">27 Jun</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-          <a class="prog-card" id="norte-tsj" href="programa.html?p=norte-tsj">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Norte Argentino 10 Días TSJ — Salida 26 de Junio</div>
-              <div class="prog-card-sub">Tucumán · Salta · Jujuy</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">10 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">26 Jun</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-          <a class="prog-card" id="norte-tafisaltajujuy" href="programa.html?p=norte-tafi-salta-jujuy">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Norte Argentino 10 Días — Tafí, Salta, Jujuy</div>
-              <div class="prog-card-sub">Abril a Junio · Quebrada de Humahuaca y Salinas</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">10 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Abr–Jun</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-          <a class="prog-card" id="norte-tafijujuysalta" href="programa.html?p=norte-tafi-jujuy-salta">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Norte Argentino 10 Días — Tafí, Jujuy, Salta</div>
-              <div class="prog-card-sub">Abril a Junio · Orden alternativo de destinos</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">10 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Abr–Jun</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-        </div>
-      </div>
+function toggleTree(id) { document.getElementById(id)?.classList.toggle('open'); }
 
-      <div class="dest-section">
-        <div class="dest-header">
-          <div class="dest-icon-circle">⛰️</div>
-          <h3>Carlos Paz</h3>
-          <span class="dest-count">1 programa</span>
-        </div>
-        <div class="prog-list">
-          <a class="prog-card" id="carlospaz-julio" href="programa.html?p=carlospaz-julio">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Carlos Paz 8 Días — Vacaciones de Julio</div>
-              <div class="prog-card-sub">Córdoba y Sierras · Ideal familias</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">8 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Julio</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-        </div>
-      </div>
-
-      <div class="dest-section">
-        <div class="dest-header">
-          <div class="dest-icon-circle">🏔️</div>
-          <h3>Bariloche</h3>
-          <span class="dest-count">2 programas</span>
-        </div>
-        <div class="prog-list">
-          <a class="prog-card" id="bariloche-julio" href="programa.html?p=bariloche-julio">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Bariloche 9 Días — Vacaciones de Julio</div>
-              <div class="prog-card-sub">Lagos, bosques y nieve patagónica</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">9 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Julio</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-          <a class="prog-card" id="bariloche-promo" href="programa.html?p=bariloche-promo">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Bariloche 9 Días Promocional — 16 de Mayo</div>
-              <div class="prog-card-sub">Salida especial promocional · Mayo</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">9 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">16 May</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-        </div>
-      </div>
-
-      <!-- ═══ CATARATAS ═══ -->
-      <h2 style="margin-top:16px">💧 Cataratas del Iguazú</h2>
-
-      <div class="dest-section">
-        <div class="dest-header">
-          <div class="dest-icon-circle">🌊</div>
-          <h3>Cataratas del Iguazú</h3>
-          <span class="dest-count">4 programas</span>
-        </div>
-        <div class="prog-list">
-          <a class="prog-card" id="cataratas-ago-dic" href="programa.html?p=cataratas-ago-dic">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Cataratas 7 Días — Agosto a Diciembre</div>
-              <div class="prog-card-sub">Temporada extendida · Lado argentino y brasilero</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">7 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Ago–Dic</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-          <a class="prog-card" id="cataratas-4-11-18jul" href="programa.html?p=cataratas-4-11-18jul">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Cataratas 7 Días — 4, 11 y 18 de Julio</div>
-              <div class="prog-card-sub">Salidas fijas en julio</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">7 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">4, 11, 18 Jul</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-          <a class="prog-card" id="cataratas-julio" href="programa.html?p=cataratas-julio">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Cataratas 7 Días — Vacaciones de Julio</div>
-              <div class="prog-card-sub">Período vacacional</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">7 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Julio</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-          <a class="prog-card" id="cataratas-abr-jun" href="programa.html?p=cataratas-abr-jun">
-            <div class="prog-card-left">
-              <div class="prog-card-name">Cataratas 7 Días — Abril a Junio</div>
-              <div class="prog-card-sub">Temporada de menor afluencia · Caudal alto</div>
-              <div class="prog-tags">
-                <span class="prog-tag tag-dur">7 días</span>
-                <span class="prog-tag tag-transport">Bus semi cama</span>
-                <span class="prog-tag tag-season">Abr–Jun</span>
-              </div>
-            </div>
-            <div class="prog-card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-          </a>
-        </div>
-      </div>
-
-    </div><!-- /content -->
-  </div><!-- /main -->
-
-  <footer>
-    <p><span>BestWay</span> · Programas Terrestres · Sendas Turismo · Uso interno</p>
-  </footer>
-
-  <script>
-    function toggleDest(id) {
-      const el = document.getElementById(id);
-      el.classList.toggle('open');
-    }
-  </script>
-
+init();
+</script>
 </body>
 </html>
