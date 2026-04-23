@@ -30,7 +30,7 @@
       min-height: 100vh;
     }
 
-    /* ── HEADER ── */
+    /* HEADER */
     header {
       background: var(--navy-dark);
       padding: 0;
@@ -42,7 +42,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: 
+      background:
         radial-gradient(ellipse 60% 80% at 80% 50%, rgba(74,95,170,0.3) 0%, transparent 70%),
         radial-gradient(ellipse 40% 60% at 10% 80%, rgba(200,168,75,0.1) 0%, transparent 60%);
       pointer-events: none;
@@ -62,7 +62,7 @@
     .logo-wrap img {
       height: 72px;
       width: auto;
-      filter: brightness(0) invert(1);
+      display: block;
     }
 
     .header-divider {
@@ -71,9 +71,7 @@
       background: rgba(255,255,255,0.2);
     }
 
-    .header-title {
-      color: var(--white);
-    }
+    .header-title { color: var(--white); }
 
     .header-title h1 {
       font-family: 'Playfair Display', serif;
@@ -92,13 +90,12 @@
       font-weight: 300;
     }
 
-    /* ── DECORATIVE STRIP ── */
     .strip {
       height: 4px;
       background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
     }
 
-    /* ── HERO LABEL ── */
+    /* SECTION LABEL */
     .section-label {
       max-width: 1100px;
       margin: 52px auto 0;
@@ -118,7 +115,7 @@
       margin-top: 6px;
     }
 
-    /* ── OPERATOR GRID ── */
+    /* OPERATOR GRID */
     .operators {
       max-width: 1100px;
       margin: 32px auto 80px;
@@ -148,7 +145,7 @@
     }
 
     .op-card-banner {
-      height: 120px;
+      height: 140px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -159,6 +156,7 @@
     .op-card-banner.sendas {
       background: linear-gradient(135deg, #1a3a4a 0%, #0e5a7a 50%, #1a7a5a 100%);
     }
+
     .op-card-banner.placeholder {
       background: linear-gradient(135deg, #2d3561 0%, #4a4f8a 100%);
     }
@@ -170,6 +168,19 @@
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='25' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E") repeat;
     }
 
+    /* Logo Sendas en el banner */
+    .op-banner-logo {
+      height: 64px;
+      width: auto;
+      max-width: 200px;
+      object-fit: contain;
+      z-index: 1;
+      position: relative;
+      /* sin filter: el logo_sendas.png ya tiene fondo transparente */
+      drop-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35));
+    }
+
     .op-logo-text {
       font-family: 'Playfair Display', serif;
       font-size: 1.6rem;
@@ -179,6 +190,7 @@
       text-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
 
+    /* CARD BODY */
     .op-card-body {
       padding: 22px 24px 24px;
       flex: 1;
@@ -228,9 +240,7 @@
       transition: background 0.2s;
     }
 
-    .op-card:hover .op-arrow {
-      background: var(--gold);
-    }
+    .op-card:hover .op-arrow { background: var(--gold); }
 
     .op-arrow svg {
       width: 14px;
@@ -247,7 +257,7 @@
       pointer-events: none;
     }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer {
       background: var(--navy-dark);
       padding: 24px 40px;
@@ -260,9 +270,7 @@
       letter-spacing: 0.05em;
     }
 
-    footer span {
-      color: var(--gold);
-    }
+    footer span { color: var(--gold); }
 
     @media (max-width: 600px) {
       .header-inner { padding: 24px 20px; flex-wrap: wrap; }
@@ -277,7 +285,8 @@
   <header>
     <div class="header-inner">
       <div class="logo-wrap">
-        <img src="logo_bestway.png" alt="BestWay">
+        <!-- Logo blanco con fondo transparente desde carpeta images/ -->
+        <img src="images/logo_Bestway_blanco.png" alt="BestWay">
       </div>
       <div class="header-divider"></div>
       <div class="header-title">
@@ -295,16 +304,23 @@
 
   <div class="operators">
 
-    <!-- SENDAS TURISMO — activo -->
+    <!-- SENDAS TURISMO -->
     <a href="sendas.html" class="op-card">
       <div class="op-card-banner sendas">
-        <span class="op-logo-text">Sendas</span>
+        <!-- Logo Sendas desde images/ en lugar del texto -->
+        <img
+          src="images/logo_sendas.png"
+          alt="Sendas Turismo"
+          class="op-banner-logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        >
+        <span class="op-logo-text" style="display:none;">Sendas</span>
       </div>
       <div class="op-card-body">
         <h3>Sendas Turismo</h3>
         <p>Operador regional especializado en destinos de Brasil, Argentina y Cataratas del Iguazú.</p>
         <div class="op-card-footer">
-          <span class="op-badge">27 programas</span>
+          <span class="op-badge" id="sendas-count">27 programas</span>
           <div class="op-arrow">
             <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
           </div>
@@ -350,6 +366,17 @@
   <footer>
     <p><span>BestWay</span> · Programas Terrestres · Uso interno</p>
   </footer>
+
+  <script>
+    // Actualiza el contador de programas leyendo el JSON en tiempo real
+    fetch('programas-sendas.json')
+      .then(r => r.json())
+      .then(d => {
+        const n = d.programas?.length;
+        if (n) document.getElementById('sendas-count').textContent = n + ' programas';
+      })
+      .catch(() => {}); // si falla, queda el valor hardcodeado
+  </script>
 
 </body>
 </html>
