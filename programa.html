@@ -50,13 +50,11 @@
     .btn.sec { background:#555; }
     .btn.sec:hover { background:#333; }
 
-    /* ── LOADING SCREEN ── */
+    /* ── LOADING / ERROR ── */
     #loading-screen {
-      position: fixed; inset: 0;
-      background: var(--navy-dark);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      z-index: 9999; color: white; gap: 16px;
+      position:fixed; inset:0; background:var(--navy-dark);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      z-index:9999; color:white; gap:16px;
     }
     #loading-screen h2 { font-family:'Poppins',sans-serif; font-size:1.1rem; font-weight:600; }
     #loading-screen p  { font-size:.82rem; color:rgba(255,255,255,.5); }
@@ -65,10 +63,8 @@
     @keyframes loadbar { 0%{width:0%} 50%{width:70%} 100%{width:100%} }
     #loading-screen.hidden { display:none; }
 
-    /* ── ERROR SCREEN ── */
     #error-screen {
-      display:none; position:fixed; inset:0;
-      background:var(--navy-dark); color:white;
+      display:none; position:fixed; inset:0; background:var(--navy-dark); color:white;
       flex-direction:column; align-items:center; justify-content:center;
       gap:16px; z-index:9999; text-align:center; padding:40px;
     }
@@ -122,7 +118,7 @@
       letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-top:1.5mm;
     }
 
-    /* 3. BANDA FECHAS */
+    /* 3. BANDA FECHAS — sin referencia al operador */
     .fechas-band {
       background:var(--navy); border-radius:4px; padding:3mm 6mm;
       display:flex; align-items:center; justify-content:space-between; gap:3mm;
@@ -164,7 +160,6 @@
     }
     .destino-foto img { width:100%; height:100%; object-fit:cover; display:block; }
     .destino-foto .ph { font-size:7.5pt; color:var(--teal); text-align:center; padding:4mm; line-height:1.5; }
-    .foto-loading { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:var(--teal-bg); font-size:7pt; color:var(--teal); }
 
     /* 5. INCLUYE */
     .incluye-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.8mm; }
@@ -257,34 +252,35 @@
 </head>
 <body>
 
-<!-- Loading screen -->
 <div id="loading-screen">
   <h2>Cargando programa...</h2>
   <div class="loader-bar"><div class="loader-fill"></div></div>
   <p id="loading-msg">Leyendo datos de Sendas Turismo</p>
 </div>
 
-<!-- Error screen -->
 <div id="error-screen">
   <h2>⚠️ Programa no encontrado</h2>
   <p id="error-msg">No se pudo cargar la información del programa solicitado.</p>
   <a href="sendas.html" style="color:var(--gold);font-size:.9rem;">← Volver a los programas</a>
 </div>
 
-<!-- Print bar -->
 <div class="print-bar">
   <button class="btn" onclick="window.print()">🖨️ Imprimir / PDF</button>
   <a class="btn sec" href="sendas.html">← Volver</a>
 </div>
 
-<!-- Página A4 -->
 <div class="page" id="programa-page" style="visibility:hidden">
   <div class="page-content">
 
-    <!-- 1. ENCABEZADO (estático, igual para todos) -->
+    <!-- 1. ENCABEZADO -->
     <header class="doc-header">
       <div class="logo-block">
-        <img src="logo_bestway.png" alt="BestWay Viajes">
+        <!--
+          CORRECCIÓN 1: ruta relativa a images/ para que funcione
+          tanto en local como en GitHub Pages (Salidas_Terrestres/)
+        -->
+        <img src="images/logo_bestway.png" alt="BestWay Viajes"
+             onerror="this.src='images/logo_Bestway_blanco.png'">
       </div>
       <div class="header-center">
         <div class="eslogan">Tu Mundo de Oportunidades</div>
@@ -311,8 +307,12 @@
           <p id="prog-descripcion"></p>
           <div class="destino-highlights" id="prog-highlights"></div>
         </div>
+        <!--
+          CORRECCIÓN 3: foto del destino — imagen local desde images/destinos/
+          con fallback a Wikimedia Commons (no requiere API key, siempre funciona)
+        -->
         <div class="destino-foto" id="prog-foto">
-          <div class="foto-loading" id="foto-loading">📷 Buscando foto...</div>
+          <div class="ph" id="foto-placeholder">🌎</div>
         </div>
       </div>
     </div>
@@ -356,7 +356,7 @@
 
   </div><!-- /page-content -->
 
-  <!-- 8. PIE (estático, igual para todos) -->
+  <!-- 8. PIE -->
   <footer class="doc-footer">
     <div class="footer-top">
       <div class="footer-contact">
@@ -366,7 +366,13 @@
       </div>
       <div class="footer-pago">
         <div class="pago-label">Hasta 12 pagos sin recargo en U$S</div>
-        <img class="pago-logo-img" src="medios-de-pago.png" alt="Visa · Mastercard · OCA">
+        <!--
+          CORRECCIÓN 6: medios-de-pago ahora desde images/
+        -->
+        <img class="pago-logo-img"
+             src="images/Medios-de-pago.png"
+             alt="Visa · Mastercard · OCA"
+             onerror="this.style.display='none'">
       </div>
     </div>
     <div class="footer-legal">
@@ -378,42 +384,87 @@
 
 
 <script>
-// ════════════════════════════════════════
-//  FOTO AUTOMÁTICA — Unsplash Source API
-//  (sin clave, ancho 800px, alto 400px)
-// ════════════════════════════════════════
-function loadDestinationPhoto(query, containerId) {
-  const container = document.getElementById(containerId);
+// ══════════════════════════════════════════════════════════════
+//  FOTOS DE DESTINO
+//  Estrategia: imagen local images/destinos/{slug}.jpg → fallback Wikimedia
+// ══════════════════════════════════════════════════════════════
+
+// Fotos de Wikimedia Commons — URL directa, sin API key, siempre funciona
+const WIKIMEDIA_FOTOS = {
+  florianopolis: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Praia_de_Canasvieiras%2C_Florian%C3%B3polis.jpg/800px-Praia_de_Canasvieiras%2C_Florian%C3%B3polis.jpg',
+  gramado:       'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Gramado_-_Rio_Grande_do_Sul%2C_Brasil.jpg/800px-Gramado_-_Rio_Grande_do_Sul%2C_Brasil.jpg',
+  ferrugem:      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Praia_da_Ferrugem.jpg/800px-Praia_da_Ferrugem.jpg',
+  camboriu:      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Balne%C3%A1rio_Cambori%C3%BA_vista_a%C3%A9rea.jpg/800px-Balne%C3%A1rio_Cambori%C3%BA_vista_a%C3%A9rea.jpg',
+  bombinhas:     'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Bombinhas_-_SC.jpg/800px-Bombinhas_-_SC.jpg',
+  capao:         'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Cap%C3%A3o_da_Canoa_-_RS.jpg/800px-Cap%C3%A3o_da_Canoa_-_RS.jpg',
+  torres:        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Torres_Rio_Grande_do_Sul.jpg/800px-Torres_Rio_Grande_do_Sul.jpg',
+  laguna:        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Laguna-SC-centro.jpg/800px-Laguna-SC-centro.jpg',
+  praiarosa:     'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Praia_do_Rosa.jpg/800px-Praia_do_Rosa.jpg',
+  blumenau:      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Blumenau_Rua_XV_de_Novembro.jpg/800px-Blumenau_Rua_XV_de_Novembro.jpg',
+  buenosaires:   'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Buenos_Aires_-_Obelisco.jpg/800px-Buenos_Aires_-_Obelisco.jpg',
+  mendoza:       'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Bodega_Zuccardi_Valle_de_Uco.jpg/800px-Bodega_Zuccardi_Valle_de_Uco.jpg',
+  norte:         'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Quebrada_de_Humahuaca.jpg/800px-Quebrada_de_Humahuaca.jpg',
+  carlospaz:     'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Villa_Carlos_Paz%2C_C%C3%B3rdoba.jpg/800px-Villa_Carlos_Paz%2C_C%C3%B3rdoba.jpg',
+  bariloche:     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Bariloche_desde_el_cerro_Otto.jpg/800px-Bariloche_desde_el_cerro_Otto.jpg',
+  cataratas:     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Iguazu_cataratas.jpg/800px-Iguazu_cataratas.jpg',
+  chile:         'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Santiago_de_Chile_Skyline.jpg/800px-Santiago_de_Chile_Skyline.jpg',
+  mendozasantiago:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Bodega_Zuccardi_Valle_de_Uco.jpg/800px-Bodega_Zuccardi_Valle_de_Uco.jpg',
+};
+
+function loadDestinationPhoto(slug, container) {
   if (!container) return;
 
-  // Unsplash Source: URL directa sin API key
-  // Formato: https://source.unsplash.com/800x400/?{query}
-  const encodedQuery = encodeURIComponent(query);
-  const url = `https://source.unsplash.com/800x400/?${encodedQuery}`;
+  const setPhoto = (src) => {
+    const img = document.createElement('img');
+    img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:none;';
+    img.onload = () => {
+      document.getElementById('foto-placeholder')?.remove();
+      img.style.display = 'block';
+    };
+    img.onerror = () => {
+      // Si Wikimedia también falla, intentar el otro fallback
+      if (img._triedWikimedia) {
+        container.innerHTML = '<div class="ph">🌎</div>';
+        return;
+      }
+      img._triedWikimedia = true;
+      const wiki = WIKIMEDIA_FOTOS[slug];
+      if (wiki && img.src !== wiki) { img.src = wiki; }
+      else { container.innerHTML = '<div class="ph">🌎</div>'; }
+    };
+    container.appendChild(img);
 
-  const img = document.createElement('img');
-  img.alt = query;
-  img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:none;';
-
-  img.onload = () => {
-    const loading = document.getElementById('foto-loading');
-    if (loading) loading.remove();
-    img.style.display = 'block';
+    // 1° intento: imagen local (si la tenés en images/destinos/)
+    const localSrc = `images/destinos/${slug}.jpg`;
+    img.src = localSrc;
   };
 
-  img.onerror = () => {
-    const loading = document.getElementById('foto-loading');
-    if (loading) loading.textContent = '📷 ' + query;
-  };
-
-  container.appendChild(img);
-  img.src = url;
+  setPhoto();
 }
 
-// ════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════
+//  FILTROS PARA INCLUYE
+//  Descarta ítems que son ruido del scraping (botones de Joomla)
+// ══════════════════════════════════════════════════════════════
+const INCLUYE_RUIDO = [
+  /^imprimir$/i, /^correo\s*electr[oó]nico$/i, /^email$/i,
+  /^print$/i, /^compartir$/i, /^share$/i, /^facebook$/i,
+  /^twitter$/i, /^whatsapp$/i, /^pdf$/i, /^descargar$/i,
+  /^volver$/i, /^inicio$/i, /^ver\s+m[aá]s$/i,
+];
+
+function limpiarIncluye(items) {
+  return items.filter(item => {
+    const t = item.trim();
+    if (!t || t.length < 4 || t.length > 300) return false;
+    return !INCLUYE_RUIDO.some(rx => rx.test(t));
+  });
+}
+
+// ══════════════════════════════════════════════════════════════
 //  RENDER
-// ════════════════════════════════════════
-function p(v) {
+// ══════════════════════════════════════════════════════════════
+function pv(v) {
   return v != null ? `<span class="pval">U$S ${v}</span>` : `<span class="pna">—</span>`;
 }
 
@@ -426,29 +477,34 @@ function renderPrograma(data) {
     <div class="duracion-line">${data.subtitulo || data.duracion}</div>
   `;
 
-  // 3. FECHAS
-  const fechaItems = (data.fechas || []).map((f, i) => {
-    const sep = i < data.fechas.length - 1 ? '<div class="fecha-sep"></div>' : '';
+  // 3. FECHAS — CORRECCIÓN 2: excluir ítem con label "Operador"
+  const fechasFiltradas = (data.fechas || []).filter(f =>
+    !/^operador$/i.test(f.label.trim())
+  );
+  const fechaItems = fechasFiltradas.map((f, i) => {
+    const sep = i < fechasFiltradas.length - 1 ? '<div class="fecha-sep"></div>' : '';
     return `
       <div class="fecha-item">
         <span class="fl">${f.label}</span>
         <span class="fv${f.gold ? ' gold' : ''}">${f.value}</span>
       </div>${sep}`;
   }).join('');
-  document.getElementById('prog-fechas').innerHTML = fechaItems || '<div class="fecha-item"><span class="fl">Operador</span><span class="fv">Sendas Turismo</span></div>';
+  document.getElementById('prog-fechas').innerHTML = fechaItems ||
+    '<div class="fecha-item"><span class="fl">Temporada</span><span class="fv gold">Consultar</span></div>';
 
   // 4. DESTINO
   document.getElementById('prog-descripcion').textContent = data.descripcion || '';
   document.getElementById('prog-highlights').innerHTML = (data.highlights || [])
     .map(h => `<span class="hl-tag">${h}</span>`).join('');
 
-  // Cargar foto automática
-  const photoQuery = data.photoQuery || data.destino || data.titulo;
-  loadDestinationPhoto(photoQuery, 'prog-foto');
+  // CORRECCIÓN 3: foto por slug con fallback Wikimedia
+  loadDestinationPhoto(data.destinoSlug || '', document.getElementById('prog-foto'));
 
-  // 5. INCLUYE
-  document.getElementById('prog-incluye').innerHTML = (data.incluye || [])
-    .map(i => `<div class="inc-row"><div class="inc-dot"></div>${i}</div>`).join('');
+  // 5. INCLUYE — CORRECCIÓN 4: filtrar ruido del scraping
+  const incluyeLimpio = limpiarIncluye(data.incluye || []);
+  document.getElementById('prog-incluye').innerHTML = incluyeLimpio.length
+    ? incluyeLimpio.map(i => `<div class="inc-row"><div class="inc-dot"></div>${i}</div>`).join('')
+    : '<div class="inc-row"><div class="inc-dot"></div>Consultar detalles en agencia</div>';
 
   // 6. ITINERARIO
   document.getElementById('prog-itinerario').innerHTML = (data.itinerario || []).map(d => `
@@ -460,65 +516,62 @@ function renderPrograma(data) {
   `).join('');
 
   // 7. PRECIOS
-  document.getElementById('prog-precios').innerHTML = (data.hoteles || []).map(h => `
-    <tr>
-      <td>
-        <span class="hotel-nm">${h.nombre}</span>
-        ${h.cat ? `<br><span class="hotel-url">${h.cat.replace(/^https?:\/\/(www\.)?/,'').split('/')[0]}</span>` : ''}
-      </td>
-      <td>${h.playa || '—'}</td>
-      <td>${p(h.sgl)}</td>
-      <td>${p(h.dbl)}</td>
-      <td>${p(h.tpl)}</td>
-      <td>${p(h.cpl)}</td>
-      <td>${p(h.qpl)}</td>
-    </tr>
-  `).join('');
-
-  if ((data.hoteles || []).length === 0) {
-    document.getElementById('prog-precios').innerHTML = `
-      <tr><td colspan="7" style="text-align:center;padding:4mm;color:var(--mid);font-style:italic;">
+  const hoteles = data.hoteles || [];
+  document.getElementById('prog-precios').innerHTML = hoteles.length
+    ? hoteles.map(h => `
+        <tr>
+          <td>
+            <span class="hotel-nm">${h.nombre}</span>
+            ${h.cat ? `<br><span class="hotel-url">${h.cat.replace(/^https?:\/\/(www\.)?/,'').split('/')[0]}</span>` : ''}
+          </td>
+          <td>${h.playa || '—'}</td>
+          <td>${pv(h.sgl)}</td>
+          <td>${pv(h.dbl)}</td>
+          <td>${pv(h.tpl)}</td>
+          <td>${pv(h.cpl)}</td>
+          <td>${pv(h.qpl)}</td>
+        </tr>`).join('')
+    : `<tr><td colspan="7" style="text-align:center;padding:4mm;color:var(--mid);font-style:italic;">
         Consultar precios vigentes al momento de la reserva.
-      </td></tr>`;
-  }
+       </td></tr>`;
 
   // NOTAS PRECIOS
-  document.getElementById('prog-precios-footer').innerHTML = (data.notas_precios || []).map(n => `
-    <div class="pnote"><strong>${n.titulo}</strong>${n.texto}</div>
-  `).join('');
+  document.getElementById('prog-precios-footer').innerHTML = (data.notas_precios || [])
+    .map(n => `<div class="pnote"><strong>${n.titulo}</strong>${n.texto}</div>`).join('');
 }
 
-// ════════════════════════════════════════
-//  INIT — lee ?p=ID del JSON
-// ════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════════════════════════
 async function init() {
-  const params = new URLSearchParams(window.location.search);
-  const progId = params.get('p');
-  const loadingMsg = document.getElementById('loading-msg');
+  const params  = new URLSearchParams(window.location.search);
+  const progId  = params.get('p');
+  const loadMsg = document.getElementById('loading-msg');
 
   if (!progId) {
     showError('No se especificó programa.<br>Usá <code>?p=ID</code> en la URL.', 'URL inválida');
     return;
   }
 
-  loadingMsg.textContent = 'Leyendo catálogo de programas...';
+  loadMsg.textContent = 'Leyendo catálogo de programas...';
 
   let allData;
   try {
     const r = await fetch(`./programas-sendas.json?_=${Date.now()}`);
-    if (!r.ok) throw new Error('No se encontró programas-sendas.json');
+    if (!r.ok) throw new Error(`HTTP ${r.status} — no se encontró programas-sendas.json`);
     allData = await r.json();
   } catch(e) {
     showError(
       `No se pudo cargar el archivo de datos.<br>
-       Verificá que <code>programas-sendas.json</code> existe en el repositorio.<br>
+       Error: <code>${e.message}</code><br><br>
+       Verificá que <code>programas-sendas.json</code> existe.<br>
        Si es la primera vez, ejecutá el scraper desde GitHub Actions.`,
-      e.message
+      'Error de carga'
     );
     return;
   }
 
-  loadingMsg.textContent = 'Buscando programa...';
+  loadMsg.textContent = 'Buscando programa...';
 
   const prog = allData.programas.find(p => p.id === progId);
   if (!prog) {
@@ -531,12 +584,9 @@ async function init() {
     return;
   }
 
-  loadingMsg.textContent = 'Cargando foto del destino...';
-
-  // Render
+  loadMsg.textContent = 'Preparando documento...';
   renderPrograma(prog);
 
-  // Mostrar página
   document.getElementById('loading-screen').classList.add('hidden');
   document.getElementById('programa-page').style.visibility = 'visible';
 }
