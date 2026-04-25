@@ -1,0 +1,41 @@
+name: Scrape Mtur Viajes
+
+on:
+  schedule:
+    # Todos los lunes a las 7am UTC (4am Uruguay) — 1h después de Sendas
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Razón del scraping manual'
+        required: false
+        default: 'Actualización manual de programas Mtur'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install axios cheerio
+
+      - name: Run scraper
+        run: node scraper-mtur.js
+
+      - name: Commit updated data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions — Mtur Scraper"
+          git add programas-mtur.json
+          git diff --staged --quiet || git commit -m "🔄 Auto-update: Mtur Viajes programs [$(date +'%Y-%m-%d')]"
+          git push
