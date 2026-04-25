@@ -115,19 +115,18 @@
     .inc-row { display:flex; align-items:flex-start; gap:2mm; font-size:8pt; color:var(--text); line-height:1.4; }
     .inc-dot { width:3.5mm; height:3.5mm; background:var(--mtur); border-radius:50%; flex-shrink:0; margin-top:1mm; }
 
-    /* 6. HOTELES */
-    .hoteles-lista { display:flex; flex-wrap:wrap; gap:2mm; }
-    .hotel-tag {
-      background:var(--light); border:.5px solid var(--border); border-radius:4px;
-      padding:1.5mm 3mm; font-size:7.5pt; color:var(--navy); font-weight:500;
-      display:flex; align-items:center; gap:1.5mm;
+    /* 6. BLOQUE HOTEL + PRECIOS (multi-hotel) */
+    .hotel-precios-block {
+      border: .5px solid var(--border); border-radius:5px; overflow:hidden; margin-bottom:3mm;
     }
-    .hotel-tag::before { content:'🏨'; font-size:7pt; }
-
-    /* 7. PRECIOS */
-    .precios-grid {
-      display:grid; grid-template-columns:repeat(6,1fr); gap:1.5mm;
+    .hotel-precios-block:last-child { margin-bottom:0; }
+    .hotel-nombre-row {
+      background:var(--navy); color:white; padding:2mm 3mm;
+      display:flex; align-items:center; gap:2mm;
+      font-family:'Poppins',sans-serif; font-size:7pt; font-weight:700; letter-spacing:.04em;
     }
+    .hotel-nombre-row a { color:var(--mtur-lt); text-decoration:none; font-size:6.5pt; margin-left:auto; }
+    .hotel-precios-row { display:grid; grid-template-columns:repeat(6,1fr); }
     .precio-box {
       background:var(--light); border:.5px solid var(--border); border-radius:4px;
       padding:2mm 1.5mm; text-align:center;
@@ -203,7 +202,7 @@
     <!-- 1. ENCABEZADO -->
     <header class="doc-header">
       <div class="logo-block">
-        <img src="images/logo_bestway.png" alt="BestWay Viajes"
+        <img src="images/logo_bestway_azul_fondo_blanco.png" alt="BestWay Viajes"
              onerror="this.onerror=null;this.src='images/logo_Bestway_blanco.png'">
       </div>
       <div class="header-center">
@@ -243,10 +242,11 @@
       <div class="incluye-grid" id="prog-incluye"></div>
     </div>
 
-    <!-- 6. HOTELES -->
+    <!-- 6. HOTELES CON PRECIOS POR HOTEL -->
     <div class="sec" id="sec-hoteles">
-      <div class="sec-title">Opciones de Hoteles</div>
-      <div class="hoteles-lista" id="prog-hoteles"></div>
+      <div class="sec-title">Opciones de Hoteles &amp; Tarifas — Precios en U$S por persona</div>
+      <div id="prog-hoteles-precios"></div>
+      <div class="precios-nota">Precios por persona en base doble. Sujeto a disponibilidad al momento de la reserva.</div>
     </div>
 
     <!-- 7. FECHAS DE SALIDA -->
@@ -255,12 +255,7 @@
       <div class="fechas-salida" id="prog-fechas-salida"></div>
     </div>
 
-    <!-- 8. PRECIOS POR CATEGORÍA -->
-    <div class="sec">
-      <div class="sec-title">Tarifas — Precios en U$S por persona</div>
-      <div class="precios-grid" id="prog-precios"></div>
-      <div class="precios-nota">Precios por persona en base doble. Sujeto a disponibilidad al momento de la reserva.</div>
-    </div>
+    <!-- precios integrados en sec-hoteles -->
 
     <!-- 9. NO INCLUYE -->
     <div class="sec" id="sec-no-incluye">
@@ -348,17 +343,7 @@ function loadPhoto(prog) {
   }
 }
 
-// ── Categorías de precios en orden ──────────────────────────────────────────
-const CATS_LABELS = [
-  { key:'doble',      label:'Doble',      highlight:true  },
-  { key:'triple',     label:'Triple',     highlight:false },
-  { key:'cuadruple',  label:'Cuádruple',  highlight:false },
-  { key:'single',     label:'Individual', highlight:false },
-  { key:'child',      label:'Menor',      highlight:false },
-  { key:'infante',    label:'Infante',    highlight:false },
-];
-
-// ── Descripciones por destino (mismas que Sendas) ───────────────────────────
+// ── Descripciones por destino ────────────────────────────────────────────────
 const DESC = {
   cataratas:    'Las Cataratas del Iguazú son una de las Siete Maravillas Naturales del Mundo. El estruendo del agua, la niebla permanente y la selva que las rodea generan una experiencia que no se olvida jamás.',
   florianopolis:'Florianópolis combina el encanto de las playas brasileñas con aguas cálidas y tranquilas. Con su ambiente alegre y su mezcla de naturaleza y ritmo local, es el destino ideal para el verano en Brasil.',
@@ -405,11 +390,33 @@ function renderPrograma(p) {
     .map(i => `<div class="inc-row"><div class="inc-dot"></div>${i}</div>`).join('')
     || '<div class="inc-row"><div class="inc-dot"></div>Consultar detalles en agencia</div>';
 
-  // 6. Hoteles
+  // 6. Hoteles con precios integrados
   const hoteles = p.hoteles || [];
   if (hoteles.length > 0) {
-    document.getElementById('prog-hoteles').innerHTML = hoteles
-      .map(h => `<span class="hotel-tag">${h.nombre}</span>`).join('');
+    const CATS = [
+      { key:'doble',     label:'Doble',      hi:true  },
+      { key:'triple',    label:'Triple',     hi:false },
+      { key:'cuadruple', label:'Cuádruple',  hi:false },
+      { key:'single',    label:'Individual', hi:false },
+      { key:'child',     label:'Menor',      hi:false },
+      { key:'infante',   label:'Infante',    hi:false },
+    ];
+    document.getElementById('prog-hoteles-precios').innerHTML = hoteles.map(h => `
+      <div class="hotel-precios-block">
+        <div class="hotel-nombre-row">
+          🏨 ${h.nombre}
+          ${h.url && !/javascript/i.test(h.url) ? `<a href="${h.url}" target="_blank">↗ web</a>` : ''}
+        </div>
+        <div class="hotel-precios-row">
+          ${CATS.map(cat => {
+            const val = h.precios?.[cat.key];
+            return `<div class="precio-box${cat.hi ? ' highlight' : ''}">
+              <div class="cat">${cat.label}</div>
+              ${val != null ? `<div class="val">U$S ${val.toLocaleString('es-UY')}</div>` : `<div class="val na">N/A</div>`}
+            </div>`;
+          }).join('')}
+        </div>
+      </div>`).join('');
   } else {
     document.getElementById('sec-hoteles').style.display = 'none';
   }
@@ -423,19 +430,7 @@ function renderPrograma(p) {
     document.getElementById('sec-fechas-salida').style.display = 'none';
   }
 
-  // 8. Precios
-  const precios = p.precios || {};
-  document.getElementById('prog-precios').innerHTML = CATS_LABELS.map(cat => {
-    const val = precios[cat.key];
-    const valHTML = val != null
-      ? `<div class="val">U$S ${val.toLocaleString('es-UY')}</div>`
-      : `<div class="val na">N/A</div>`;
-    return `
-      <div class="precio-box${cat.highlight ? ' highlight' : ''}">
-        <div class="cat">${cat.label}</div>
-        ${valHTML}
-      </div>`;
-  }).join('');
+  // precios ya integrados en el bloque de hoteles
 
   // 9. No incluye
   if (p.noIncluye) {
