@@ -265,14 +265,28 @@ function parseProgram(html, sourceUrl, destInfo) {
       .trim();
     const resto   = dm[3];
 
-    // Capturar el texto hasta el siguiente "Día NN" o hasta tabla
-    // Estimamos el fin buscando el siguiente match de DIA_RX
-    const posActual = dm.index + dm[0].length;
-    const siguienteMatch = rawText.slice(posActual).search(/\bD[ií]a\s+\d{1,2}\b/i);
-    const limite = siguienteMatch > 0 ? posActual + siguienteMatch : posActual + 800;
-    const bloqueTexto = rawText.slice(dm.index + dm[0].length - resto.length, limite);
+    // Capturar el texto hasta el siguiente "Día NN"
+    // o hasta la tabla de precios (HOTEL + SGL)
+    const posActual     = dm.index + dm[0].length;
+    const textoRestante = rawText.slice(posActual);
 
-    const detalle = bloqueTexto
+    const limites = [
+      textoRestante.search(/\bD[ií]a\s+\d{1,2}\b/i),          // siguiente día
+      textoRestante.search(/\bHOTEL(ES)?\b/i),                  // tabla de precios
+    ].filter(p => p > 0);
+
+    const distancia  = limites.length > 0 ? Math.min(...limites) : 800;
+    const limiteReal = posActual + distancia;
+    const bloqueTexto = rawText.slice(dm.index + dm[0].length - resto.length, limiteReal);
+
+    // Cortar siempre en "fin de nuestros servicios" — marcador exacto del último día
+    const FIN_MARKER = /fin\s+de\s+nuestros?\s+servicios/i;
+    const finIdx = bloqueTexto.search(FIN_MARKER);
+    const detalleRaw = finIdx >= 0
+      ? bloqueTexto.slice(0, finIdx) + 'Fin de nuestros servicios.'
+      : bloqueTexto;
+
+    const detalle = detalleRaw
       .replace(/\*/g, '')
       .replace(/\s+/g, ' ')
       .trim()
