@@ -139,186 +139,223 @@ async function getLinksFromIndex(indexUrl, destSlug) {
   return links;
 }
 
-// ─── Parsear un programa individual ────────────────────────────────────────
-// Estructura real del HTML de Sendas Turismo:
+// ═══════════════════════════════════════════════════════════════════════════
+// PARSER PRINCIPAL — basado en análisis real de 3 programas distintos:
+//   Florianópolis, Gramado, Bariloche, Cataratas
 //
-//   **SALIDAS: SABADOS DEL 11 DE JULIO AL 21 DE NOVIEMBRE...**   ← <p><strong>
-//   ***Incluye:***                                                ← <p><strong><em>
-//   -      *Bus semi cama*                                        ← <p> con guión
-//   -      *Guía acompañante...*
-//   ...
-//   -      *Seguro de Asistencia médica de Universal Assistance*  ← ÚLTIMO ITEM
-//   **Día 01 Uruguay**- Salida en bus...                          ← inicio itinerario
-//
+// Variaciones relevadas:
+//   SALIDAS  → a veces al inicio, a veces al final (Gramado), a veces múltiples
+//   INCLUYE  → puede tener sub-sección "Paseos:" (Bariloche), siempre termina con "Seguro..."
+//   ITINERARIO → separadores: "-" / ":" / " -" ; bloques multi-día ("Día 03 al día 07")
+//   TABLA    → columnas variables: PLAYA (Floripa) / CAT (Gramado, Cataratas) / REG (Bariloche)
+// ═══════════════════════════════════════════════════════════════════════════
 function parseProgram(html, sourceUrl, destInfo) {
   const $ = cheerio.load(html);
 
-  // El artículo real está en div.item-page (Joomla)
-  const articleEl = $('div.item-page');
-  const rawText   = articleEl.text();
+  // Contenedor principal Joomla
+  const art     = $('div.item-page');
+  const rawText = art.text();
+  const lines   = rawText.split('\n').map(l => l.trim().replace(/\*/g, '').replace(/\s+/g, ' ')).filter(Boolean);
 
   // ── TÍTULO ────────────────────────────────────────────────────────────────
-  // Joomla pone el título en el primer <h2> dentro de item-page
-  const titleRaw = articleEl.find('h2').first().text().trim()
-    || $('title').text().replace(/sendas turismo.*/i,'').replace(/[|-].*/,'').trim();
-  const title = titleRaw.replace(/\s+/g,' ').toUpperCase().substring(0,80);
+  const titleRaw = art.find('h2').first().text().trim()
+    || $('title').text().replace(/sendas turismo.*/i, '').replace(/[|-].*/, '').trim();
+  const titulo = titleRaw.replace(/\s+/g, ' ').toUpperCase().substring(0, 80);
 
   // ── DÍAS / NOCHES ─────────────────────────────────────────────────────────
   const diasM   = rawText.match(/(\d+)\s*d[ií]as?/i);
   const nochesM = rawText.match(/(\d+)\s*noches?/i);
-  const dias   = diasM   ? diasM[1]   : null;
-  const noches = nochesM ? nochesM[1] : null;
+  const dias    = diasM   ? diasM[1]   : null;
+  const noches  = nochesM ? nochesM[1] : null;
 
   // ── SALIDAS ───────────────────────────────────────────────────────────────
-  // Formato real: **SALIDAS: SABADOS DEL 11 DE JULIO AL 21 DE NOVIEMBRE...**
-  // Puede venir en párrafos <p><strong> o como texto plano
-  let salidas = null;
-  articleEl.find('p, strong').each((_, el) => {
-    const t = $(el).text().trim();
-    // Buscar la línea que empieza con "SALIDAS:"
-    const m = t.match(/^salidas?:\s*(.+)/i);
-    if (m && !salidas) {
-      salidas = m[1].replace(/\*/g,'').trim();
-      // Truncar en el primer punto o paréntesis largo
-      salidas = salidas.split(/\n/)[0].trim().substring(0, 120);
+  // FIX 1: buscar en TODO el texto, no solo al inicio
+  // FIX 2: recolectar TODAS las salidas (Gramado tiene 2)
+  const todasSalidas = [];
+  for (const line of lines) {
+    // Formatos: "SALIDAS: texto", "SALIDA: texto", "SALIDA: 27 DE JUNIO" (al final)
+    const m = line.match(/^salidas?\s*:\s*(.{3,120})/i);
+    if (m) {
+      const val = m[1].replace(/\*/g, '').trim();
+      if (val.length > 2) todasSalidas.push(val);
     }
-  });
-  // Fallback en texto plano
-  if (!salidas) {
-    const m = rawText.match(/salidas?:\s*([^\n]{5,120})/i);
-    if (m) salidas = m[1].replace(/\*/g,'').trim();
   }
+  // Usar la primera salida real (normalmente la más descriptiva)
+  const salidas = todasSalidas.length > 0 ? todasSalidas[0] : null;
 
   // ── INCLUYE ───────────────────────────────────────────────────────────────
-  // Empieza después de "Incluye:" y termina antes de "**Día 01" o tabla de precios.
-  // Los items son párrafos que empiezan con "-" (guión + espacios).
-  // El último ítem siempre contiene "Universal Assistance" o "Seguro".
+  // FIX 3: capturar múltiples bloques ("Incluye:" + "Paseos:" en Bariloche)
+  // FIX 4: fin flexible — "Seguro..." con o sin "Universal Assistance"
   const incluye = [];
 
-  // Obtenemos el texto del artículo línea a línea
-  const lines = rawText.split('\n');
-  let capturingIncluye = false;
-  const STOP_INCLUYE = /^d[ií]a\s+0?1\b/i;       // "Día 01 ..."
-  const MARKER_INCLUYE = /incluye\s*:?\s*$/i;      // línea que termina en "Incluye:"
-  const ITEM_INCLUYE   = /^[\s\-–•]+(.+)$/;        // - texto / – texto / • texto
+  // Marcadores de sección incluye — cualquiera de estas palabras inicia captura
+  const ES_INICIO_INCLUYE = /^(incluye|paseos)\s*:?\s*$/i;
+  // Fin de incluye: llegó el itinerario o la tabla
+  const ES_FIN_INCLUYE    = /^d[ií]a\s+0?1\b/i;
+  const ES_TABLA_HEADER   = /\bhotel(es)?\b.*\b(sgl|dbl)\b/i;
+  // Ítem válido: empieza con guión, asterisco, bullet o está continuando
+  const ES_ITEM           = /^[-–•]\s*(.+)$/;
+  // Fin explícito del bloque incluye
+  const ES_FIN_SEGURO     = /seguro\s+de\s+asistencia/i;
+  // No incluye — línea negativa que no es un ítem de incluye
+  const ES_NO_INCLUYE     = /^no\s+incluye/i;
+
+  let capturando = false;
 
   for (const line of lines) {
-    const l = line.trim().replace(/\*/g,'').replace(/\s+/g,' ');
-    if (!l) continue;
+    if (!line || line.length < 2) continue;
 
-    // Detectar inicio de sección incluye
-    if (MARKER_INCLUYE.test(l)) {
-      capturingIncluye = true;
+    // Iniciar captura al encontrar "Incluye:" o "Paseos:"
+    if (ES_INICIO_INCLUYE.test(line)) {
+      capturando = true;
       continue;
     }
 
-    if (capturingIncluye) {
-      // Parar si llegamos al itinerario
-      if (STOP_INCLUYE.test(l)) break;
-      // Parar si llegamos a la tabla (HOTEL SGL DBL...)
-      if (/\bhotel\b.*\bsgl\b/i.test(l)) break;
+    if (capturando) {
+      // Parar al llegar al itinerario
+      if (ES_FIN_INCLUYE.test(line)) break;
+      // Parar al llegar a la tabla de precios
+      if (ES_TABLA_HEADER.test(line)) break;
+      // Parar si encontramos "ITINERARIO:" como cabecera (Cataratas)
+      if (/^itinerario\s*:?\s*$/i.test(line)) break;
 
-      const m = ITEM_INCLUYE.exec(l);
+      // Línea "NO INCLUYE..." → no es ítem, ignorar pero no parar
+      if (ES_NO_INCLUYE.test(line)) continue;
+
+      const m = ES_ITEM.exec(line);
       if (m) {
         const item = m[1].trim();
-        if (item.length > 3 && item.length < 250) {
-          incluye.push(item);
-          // El último ítem siempre es el seguro — después no hay más incluye
-          if (/universal assistance|seguro.*asistencia/i.test(item)) {
-            break;
+        if (item.length > 3 && item.length < 300) {
+          // Evitar duplicados
+          if (!incluye.includes(item)) incluye.push(item);
+          // Fin explícito: el seguro es siempre el último ítem
+          if (ES_FIN_SEGURO.test(item)) {
+            // No romper aquí: puede haber un "Paseos:" después (Bariloche)
+            // Solo marcamos que terminó este bloque
+            capturando = false;
           }
         }
-      } else if (l.length > 3 && l.length < 250 && !/^[A-ZÁÉÍÓÚÜ\s]{10,}$/.test(l)) {
-        // Texto que no es guión pero sigue siendo parte del incluye (ej: continuación)
-        // Solo si no es un titular en mayúsculas
       }
+      // Si la línea no es ítem y no es vacía, podría ser inicio de sub-sección
+      // "Paseos:" ya es manejado por ES_INICIO_INCLUYE arriba
     }
   }
 
   // ── ITINERARIO ────────────────────────────────────────────────────────────
-  // Formato real: **Día 01 Uruguay**- Salida en bus...
-  //               **Día 02 Florianópolis**- Llegada...
-  //               **Día 03 al día 06 Florianópolis.**
-  //               **Tour a Camboriú con Cristo Luz:** texto...
-  //               **Día 07 Florianópolis**- Desayuno...
+  // FIX 5: separadores variables: "-", ":", " -", " :"
+  // FIX 6: bloques multi-día "Día 03 al día 07"
+  // Estrategia: parsear párrafo a párrafo via cheerio para control exacto
   const itinerario = [];
 
-  // Extraemos bloques de texto entre <p><strong> que contengan "Día NN"
-  // Trabajamos sobre el HTML para tener mejor control
-  const bodyHtml = articleEl.html() || '';
+  // Regex que captura:
+  //   Día 01 Uruguay : texto
+  //   Día 01 Uruguay - texto
+  //   Día 03 al día 07: San Carlos de Bariloche : texto
+  //   Día 03 al día 07 San Carlos de Bariloche. texto
+  const DIA_RX = /\bD[ií]a\s+(\d{1,2}(?:\s+al\s+(?:d[ií]a\s+)?\d{1,2})?)\s*([^:\-\n]{0,55}?)[\:\-]\s*(.{5,})/gi;
 
-  // Regex sobre el texto completo: captura "Día NN [lugar]" + descripción
-  // hasta el siguiente "Día NN" o fin del contenido
-  const DIA_RX = /\bD[ií]a\s+(\d{2}(?:\s+al\s+(?:d[ií]a\s+)?\d{2})?)\s+([^*\n\-]{2,50?}?)\*{0,2}[\-\.\:]\s*([\s\S]*?)(?=\bD[ií]a\s+\d{2}\b|(?:\|\s*\*{0,2}HOTEL)|$)/gi;
-
+  // Trabajar sobre el rawText completo, buscando todos los matches
   let dm;
   while ((dm = DIA_RX.exec(rawText)) !== null) {
-    const diaNum  = dm[1].trim();
-    const lugar   = dm[2].trim().replace(/[\*\.\-\:]+$/,'').trim();
-    let   detalle = dm[3].trim().replace(/\s+/g,' ');
+    const diaRaw  = dm[1].trim();
+    const lugar   = dm[2].trim()
+      .replace(/\*/g, '')
+      .replace(/[\.\:\-]+$/, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+    const resto   = dm[3];
 
-    // Limpiar "Tour a X:" que vienen dentro del bloque multi-día
-    detalle = detalle
-      .replace(/\*{1,2}([^*]+)\*{1,2}/g, '$1')    // quitar asteriscos negrita/itálica
-      .replace(/\s+/g,' ')
+    // Capturar el texto hasta el siguiente "Día NN" o hasta tabla
+    // Estimamos el fin buscando el siguiente match de DIA_RX
+    const posActual = dm.index + dm[0].length;
+    const siguienteMatch = rawText.slice(posActual).search(/\bD[ií]a\s+\d{1,2}\b/i);
+    const limite = siguienteMatch > 0 ? posActual + siguienteMatch : posActual + 800;
+    const bloqueTexto = rawText.slice(dm.index + dm[0].length - resto.length, limite);
+
+    const detalle = bloqueTexto
+      .replace(/\*/g, '')
+      .replace(/\s+/g, ' ')
+      .trim()
       .substring(0, 700);
 
-    if (lugar.length > 1 && detalle.length > 5) {
+    if (lugar.length > 0 && detalle.length > 5) {
       itinerario.push({
-        dia:    `DÍA ${diaNum.toUpperCase()}`,
-        lugar:  lugar.substring(0,60),
+        dia:    `DÍA ${diaRaw.toUpperCase()}`,
+        lugar:  (lugar || destInfo.destino).substring(0, 60),
         detalle,
         first:  itinerario.length === 0,
         last:   false,
       });
     }
   }
-  if (itinerario.length > 0) itinerario[itinerario.length-1].last = true;
+  if (itinerario.length > 0) itinerario[itinerario.length - 1].last = true;
 
   // ── TABLA DE PRECIOS ──────────────────────────────────────────────────────
+  // FIX 7: columnas variables según programa
+  // Estrategia: leer el encabezado de cada tabla para mapear columnas dinámicamente
   const hoteles = [];
-  articleEl.find('table').each((_, tbl) => {
+
+  art.find('table').each((_, tbl) => {
     const rows = $(tbl).find('tr');
     if (rows.length < 2) return;
-    const headerText = $(rows[0]).text().toLowerCase();
-    if (!headerText.includes('hotel') && !headerText.includes('sgl')) return;
+
+    // Leer encabezado para mapear columnas
+    const headerCells = $(rows[0]).find('td, th').map((_, c) => $(c).text().trim().toLowerCase()).get();
+    if (!headerCells.some(h => /hotel/.test(h)) && !headerCells.some(h => /sgl/.test(h))) return;
+
+    // Mapear índice de cada columna conocida
+    const colIdx = {
+      hotel: headerCells.findIndex(h => /hotel/.test(h)),
+      // Segunda columna de texto (PLAYA o CAT)
+      playa: headerCells.findIndex((h, i) => i > 0 && !/sgl|dbl|tpl|cpl|qpl|reg/.test(h) && h.length > 0 && h !== headerCells[0]),
+      sgl:   headerCells.findIndex(h => h === 'sgl'),
+      dbl:   headerCells.findIndex(h => h === 'dbl'),
+      tpl:   headerCells.findIndex(h => h === 'tpl'),
+      cpl:   headerCells.findIndex(h => h === 'cpl'),
+      qpl:   headerCells.findIndex(h => h === 'qpl'),
+    };
+
+    const parseVal = v => {
+      if (!v) return null;
+      const n = parseInt(v.replace(/[^\d]/g, ''));
+      return isNaN(n) || n === 0 ? null : n;
+    };
+
+    const getCell = (cells, idx) => idx >= 0 ? $(cells[idx]).text().trim() : '';
 
     rows.each((ri, row) => {
-      if (ri === 0) return;
+      if (ri === 0) return; // skip header
       const cells = $(row).find('td');
       if (cells.length < 3) return;
 
-      const nombre = $(cells[0]).text().trim().replace(/\s+/g,' ');
-      if (!nombre || /^hotel$/i.test(nombre)) return;
+      const nombre = getCell(cells, Math.max(colIdx.hotel, 0)).replace(/\s+/g, ' ').trim();
+      if (!nombre || /^hotel(es)?$/i.test(nombre)) return;
 
-      const parseVal = v => {
-        const n = parseInt((v||'').replace(/[^\d]/g,''));
-        return isNaN(n) || n === 0 ? null : n;
-      };
+      const playa = colIdx.playa >= 0 ? getCell(cells, colIdx.playa) : '—';
 
-      // Columna 1 = PLAYA (texto), columnas 2-6 = precios
-      const playa = $(cells[1]).text().trim() || '—';
       hoteles.push({
         nombre,
-        playa,
-        sgl: parseVal($(cells[2]).text()),
-        dbl: parseVal($(cells[3]).text()),
-        tpl: parseVal($(cells[4]).text()),
-        cpl: parseVal($(cells[5]).text()),
-        qpl: parseVal($(cells[6]).text()),
-        cat: $(cells[0]).find('a').attr('href') || '',
+        playa: playa || '—',
+        sgl:   parseVal(getCell(cells, colIdx.sgl)),
+        dbl:   parseVal(getCell(cells, colIdx.dbl)),
+        tpl:   parseVal(getCell(cells, colIdx.tpl)),
+        cpl:   parseVal(getCell(cells, colIdx.cpl)),
+        qpl:   parseVal(getCell(cells, colIdx.qpl)),
+        cat:   $(cells[Math.max(colIdx.hotel, 0)]).find('a').attr('href') || '',
       });
     });
   });
 
   // ── NOTAS DE PRECIOS ──────────────────────────────────────────────────────
-  // Están como párrafos <p><strong> después de la tabla
   const notas = [];
-  const notaRx = /(menores[^.:\n]{0,60}|solo bus[^.:\n]{0,60}|no incluye[^.:\n]{0,60})/gi;
-  let nm;
-  while ((nm = notaRx.exec(rawText)) !== null) {
-    const fullLine = rawText.substring(nm.index, nm.index + 200).split('\n')[0].replace(/\*/g,'').trim();
-    if (fullLine.length > 10) notas.push({ titulo: 'Nota', texto: fullLine });
+  const NOTA_RX = /^(menores[^.\n]{5,120}|solo\s+asiento[^.\n]{5,80}|no\s+incluye[^.\n]{5,80}|solo\s+bus[^.\n]{5,80})/i;
+  for (const line of lines) {
+    if (NOTA_RX.test(line) && line.length > 10) {
+      // Evitar duplicados
+      if (!notas.some(n => n.texto === line)) {
+        notas.push({ titulo: 'Nota', texto: line });
+      }
+    }
   }
 
   // ── ID / SLUG ─────────────────────────────────────────────────────────────
@@ -327,21 +364,21 @@ function parseProgram(html, sourceUrl, destInfo) {
   const slug     = joomlaId ? `${destInfo.slug}-${joomlaId}` : `${destInfo.slug}-${Date.now()}`;
 
   return {
-    id:          slug,
+    id:            slug,
     joomlaId,
     sourceUrl,
-    titulo:      title,
-    subtitulo:   buildSubtitulo(dias, noches, destInfo.destino),
-    duracion:    dias ? `${dias} DÍAS${noches ? ` — ${noches} NOCHES` : ''}` : 'Consultar',
-    destino:     destInfo.destino,
-    destinoSlug: destInfo.slug,
-    pais:        destInfo.pais,
-    emoji:       destInfo.emoji,
-    photoQuery:  DEST_PHOTO_QUERY[destInfo.slug] || destInfo.destino,
-    fechas:      buildFechas(salidas, null),
-    descripcion: buildDescripcion(destInfo.slug, destInfo.destino),
-    highlights:  buildHighlights(destInfo.slug, itinerario),
-    incluye:     incluye.length > 0 ? incluye : ['Consultar programa completo en agencia'],
+    titulo,
+    subtitulo:     buildSubtitulo(dias, noches, destInfo.destino),
+    duracion:      dias ? `${dias} DÍAS${noches ? ` — ${noches} NOCHES` : ''}` : 'Consultar',
+    destino:       destInfo.destino,
+    destinoSlug:   destInfo.slug,
+    pais:          destInfo.pais,
+    emoji:         destInfo.emoji,
+    photoQuery:    DEST_PHOTO_QUERY[destInfo.slug] || destInfo.destino,
+    fechas:        buildFechas(salidas, null),
+    descripcion:   buildDescripcion(destInfo.slug, destInfo.destino),
+    highlights:    buildHighlights(destInfo.slug, itinerario),
+    incluye:       incluye.length > 0 ? incluye : ['Consultar programa completo en agencia'],
     itinerario,
     hoteles,
     notas_precios: notas.length > 0 ? notas : [
