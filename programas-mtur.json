@@ -1,6 +1,6 @@
 {
   "operador": "Mtur Viajes",
-  "updatedAt": "2026-04-25T23:43:39.676Z",
+  "updatedAt": "2026-04-25T23:46:24.463Z",
   "programas": [
     {
       "id": "mtur-807",
@@ -37,7 +37,14 @@
       "hoteles": [
         {
           "nombre": "RECANTO MAESTRO",
-          "url": "https://www.mturviajes.com.uy/paquetes/794/2"
+          "url": "https://www.mturviajes.com.uy/paquetes/794/2",
+          "precios": {
+            "doble": 469,
+            "triple": 419,
+            "single": 599,
+            "child": 235,
+            "infante": 90
+          }
         }
       ],
       "fechasSalida": [
@@ -59,7 +66,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/8eq6rdczppru8ldnf2yr6/2025_12_17_12_08_09_terma_romanas_bajat5-2.pdf?rlkey=vf7j6stg2abm820ylcowp8ljf&raw=1",
       "observaciones": "",
-      "updatedAt": "2026-04-25T23:43:46.579Z"
+      "updatedAt": "2026-04-25T23:46:31.612Z"
     },
     {
       "id": "mtur-781",
@@ -98,7 +105,15 @@
       "hoteles": [
         {
           "nombre": "DOM PERDO I",
-          "url": "https://www.hoteldompedro.com.br/es-ar"
+          "url": "https://www.hoteldompedro.com.br/es-ar",
+          "precios": {
+            "doble": 495,
+            "triple": 489,
+            "cuadruple": 485,
+            "single": 595,
+            "child": 250,
+            "infante": 90
+          }
         }
       ],
       "fechasSalida": [
@@ -126,7 +141,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/q8dr7o5qrqi6tvkgrxecl/2026_4_22_14_15_22_cataratas6_baja-1.pdf?rlkey=en6p74vba4zc395dyjv4wdzhv&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Actividades Opcionales:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135Se contratan y abonan al coordinador en viaje.",
-      "updatedAt": "2026-04-25T23:43:49.346Z"
+      "updatedAt": "2026-04-25T23:46:34.624Z"
     },
     {
       "id": "mtur-788",
@@ -163,7 +178,26 @@
       "hoteles": [
         {
           "nombre": "POSADA SALINES",
-          "url": "https://www.mturviajes.com.uy/inicio"
+          "url": "https://www.mturviajes.com.uy/inicio",
+          "precios": {
+            "doble": 559,
+            "triple": 539,
+            "cuadruple": 499,
+            "single": 839,
+            "child": 279,
+            "infante": 90
+          }
+        },
+        {
+          "nombre": "PARAISO PALACE II",
+          "url": "https://paraisopalacehotel.com.br/home-espanol/",
+          "precios": {
+            "doble": 665,
+            "triple": 649,
+            "cuadruple": 649,
+            "single": 1039,
+            "child": 325
+          }
         }
       ],
       "fechasSalida": [
@@ -173,16 +207,16 @@
         "27/02/2027"
       ],
       "precios": {
-        "doble": 665,
-        "triple": 649,
-        "cuadruple": 649,
-        "single": 1039,
-        "child": 325,
+        "doble": 559,
+        "triple": 539,
+        "cuadruple": 499,
+        "single": 839,
+        "child": 279,
         "infante": 90
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/hd2ghyj9i2pf2q8mqcos1/2025_7_25_17_51_10_floripa8_solyplaya_verano.pdf?rlkey=opudxgu8xpmp20swaql53pfse&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-04-25T23:43:51.935Z"
+      "updatedAt": "2026-04-25T23:46:37.281Z"
     },
     {
       "id": "mtur-815",
@@ -220,7 +254,20 @@
       "hoteles": [
         {
           "nombre": "PARAISO PALACE II",
-          "url": "https://paraiso-palace-ii-e-iii.hotelflorianopolis.com/es/"
+          "url": "https://paraiso-palace-ii-e-iii.hotelflorianopolis.com/es/",
+          "precios": {}
+        },
+        {
+          "nombre": "POSADA SALINES",
+          "url": "http://POSADA SALINES",
+          "precios": {
+            "doble": 578,
+            "triple": 559,
+            "cuadruple": 539,
+            "single": 869,
+            "child": 289,
+            "infante": 90
+          }
         }
       ],
       "fechasSalida": [
@@ -230,17 +277,10 @@
         "23/01/2027",
         "30/01/2027"
       ],
-      "precios": {
-        "doble": 578,
-        "triple": 559,
-        "cuadruple": 539,
-        "single": 869,
-        "child": 289,
-        "infante": 90
-      },
+      "precios": {},
       "pdfItinerario": "",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Opcionales:MAP u$s 60Barco pirata u$s 25 Visita Balneario Camboriu u$s 25",
-      "updatedAt": "2026-04-25T23:43:54.497Z"
+      "updatedAt": "2026-04-25T23:46:39.969Z"
     },
     {
       "id": "mtur-816",
@@ -278,7 +318,15 @@
       "hoteles": [
         {
           "nombre": "DOM PEDRO I",
-          "url": "https://www.hoteldompedro.com.br/es-ar"
+          "url": "https://www.hoteldompedro.com.br/es-ar",
+          "precios": {
+            "doble": 525,
+            "triple": 519,
+            "cuadruple": 515,
+            "single": 625,
+            "child": 265,
+            "infante": 90
+          }
         }
       ],
       "fechasSalida": [
@@ -304,7 +352,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/2tm7xmwt90peaerfh40sj/2026_4_22_14_15_12_cataratas6_baja-1.pdf?rlkey=r7c0oaj6xokf3iwm4wvhtusz7&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Actividades Opcionales:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135Se contratan y abonan al coordinador en viaje.",
-      "updatedAt": "2026-04-25T23:43:57.246Z"
+      "updatedAt": "2026-04-25T23:46:43.233Z"
     },
     {
       "id": "mtur-809",
@@ -342,7 +390,15 @@
       "hoteles": [
         {
           "nombre": "GRAMADO PALACE",
-          "url": "https://gramadopalace.com.br/"
+          "url": "https://gramadopalace.com.br/",
+          "precios": {
+            "doble": 545,
+            "triple": 540,
+            "cuadruple": 540,
+            "single": 695,
+            "child": 275,
+            "infante": 90
+          }
         }
       ],
       "fechasSalida": [
@@ -359,7 +415,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/7vfnt2m6234r2c2qvfl68/2026_2_9_19_41_56_gramadoycanela7_vac_julio.pdf?rlkey=eihjm7aqcfbntl61hmyayjpx0&raw=1",
       "observaciones": "Los precios de menores corresponden a un menor compartiendo habitación con dos adultos.",
-      "updatedAt": "2026-04-25T23:43:59.720Z"
+      "updatedAt": "2026-04-25T23:46:46.108Z"
     },
     {
       "id": "mtur-808",
@@ -397,7 +453,15 @@
       "hoteles": [
         {
           "nombre": "GRAMADO PALACE",
-          "url": "https://gramadopalace.com.br/"
+          "url": "https://gramadopalace.com.br/",
+          "precios": {
+            "doble": 545,
+            "triple": 540,
+            "cuadruple": 540,
+            "single": 695,
+            "child": 275,
+            "infante": 90
+          }
         }
       ],
       "fechasSalida": [
@@ -413,7 +477,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/de8epvjrwyth08q20idoe/2026_4_10_19_25_43_gramadoycanela7_vac_setiembre-1.pdf?rlkey=lxs83iojbco8cs455f2xkypq9&raw=1",
       "observaciones": "Los precios de menores corresponden a un menor compartiendo habitación con dos adultos.",
-      "updatedAt": "2026-04-25T23:44:02.119Z"
+      "updatedAt": "2026-04-25T23:46:48.772Z"
     },
     {
       "id": "mtur-756",
@@ -450,7 +514,15 @@
       "hoteles": [
         {
           "nombre": "DOM PEDRO I",
-          "url": "https://www.hoteldompedro.com.br/es-ar"
+          "url": "https://www.hoteldompedro.com.br/es-ar",
+          "precios": {
+            "doble": 575,
+            "triple": 569,
+            "cuadruple": 565,
+            "single": 695,
+            "child": 282,
+            "infante": 90
+          }
         }
       ],
       "fechasSalida": [
@@ -471,7 +543,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/aiibdhkpinyx0pm0xoldc/2026_4_7_12_36_48_2025_7_25_17_27_12_cataratas7_baja.pdf?rlkey=1jjboxtmiscssdkkxoko8cio8&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-04-25T23:44:04.642Z"
+      "updatedAt": "2026-04-25T23:46:51.596Z"
     },
     {
       "id": "mtur-804",
@@ -508,7 +580,15 @@
       "hoteles": [
         {
           "nombre": "HOTEL DOM PEDRO I",
-          "url": "https://www.hoteldompedro.com.br/es-ar"
+          "url": "https://www.hoteldompedro.com.br/es-ar",
+          "precios": {
+            "doble": 595,
+            "triple": 589,
+            "cuadruple": 585,
+            "single": 695,
+            "child": 295,
+            "infante": 90
+          }
         }
       ],
       "fechasSalida": [
@@ -524,7 +604,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/a7sjc3a3dr221xvq8zvms/2026_4_23_12_04_46_cataratas6_nostalgia.pdf?rlkey=pwefhx9i2j1wz8jtnamc9trih&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-04-25T23:44:07.089Z"
+      "updatedAt": "2026-04-25T23:46:54.234Z"
     },
     {
       "id": "mtur-811",
@@ -561,7 +641,15 @@
       "hoteles": [
         {
           "nombre": "DOM PEDRO I",
-          "url": "https://www.hoteldompedro.com.br/es-ar"
+          "url": "https://www.hoteldompedro.com.br/es-ar",
+          "precios": {
+            "doble": 609,
+            "triple": 605,
+            "cuadruple": 605,
+            "single": 695,
+            "child": 305,
+            "infante": 90
+          }
         }
       ],
       "fechasSalida": [
@@ -579,7 +667,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/4e6h26mrlgkfq5em95pqo/2026_2_9_19_38_56_cataratas7_julio.pdf?rlkey=dhaknmtm3hyxcm91w7t2s2w90&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-04-25T23:44:09.530Z"
+      "updatedAt": "2026-04-25T23:46:56.840Z"
     },
     {
       "id": "mtur-810",
@@ -617,7 +705,15 @@
       "hoteles": [
         {
           "nombre": "DOM PEDRO I",
-          "url": "https://www.hoteldompedro.com.br/es-ar"
+          "url": "https://www.hoteldompedro.com.br/es-ar",
+          "precios": {
+            "doble": 609,
+            "triple": 605,
+            "cuadruple": 605,
+            "single": 695,
+            "child": 305,
+            "infante": 90
+          }
         }
       ],
       "fechasSalida": [
@@ -633,7 +729,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/yakg0mf4lovsvmged2tnf/2026_4_22_17_20_21_cataratas7_setiembre.pdf?rlkey=f8jmvxbm6nwt16hkxr760srmn&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-04-25T23:44:11.934Z"
+      "updatedAt": "2026-04-25T23:46:59.442Z"
     },
     {
       "id": "mtur-774",
@@ -670,7 +766,15 @@
       "hoteles": [
         {
           "nombre": "HAMBURGO PALACE",
-          "url": "https://www.hamburgopalace.com.br/es/home"
+          "url": "https://www.hamburgopalace.com.br/es/home",
+          "precios": {
+            "doble": 645,
+            "triple": 635,
+            "cuadruple": 625,
+            "single": 769,
+            "child": 325,
+            "infante": 90
+          }
         }
       ],
       "fechasSalida": [
@@ -686,7 +790,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/tm8d3feip7344jb92cuo5/2025_12_11_18_48_30_camboriu8_magia_setiembre.pdf?rlkey=z0ttb0nepne2jd5xbw7gfhxjg&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-04-25T23:44:14.384Z"
+      "updatedAt": "2026-04-25T23:47:02.072Z"
     },
     {
       "id": "mtur-772",
@@ -723,7 +827,15 @@
       "hoteles": [
         {
           "nombre": "HAMBURGO PALACE",
-          "url": "https://www.hamburgopalace.com.br/es/home"
+          "url": "https://www.hamburgopalace.com.br/es/home",
+          "precios": {
+            "doble": 645,
+            "triple": 635,
+            "cuadruple": 625,
+            "single": 769,
+            "child": 325,
+            "infante": 90
+          }
         }
       ],
       "fechasSalida": [
@@ -739,7 +851,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/gjvvu40290m9ld6qezp2f/2025_12_11_18_48_08_camboriu8_magia_julio.pdf?rlkey=b15tec44oke8ucd4w6no7r3qd&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-04-25T23:44:16.774Z"
+      "updatedAt": "2026-04-25T23:47:04.651Z"
     },
     {
       "id": "mtur-805",
@@ -775,12 +887,15 @@
       "noIncluye": "PROPINAS, BEBIDAS EN LAS CENAS, NADA QUE NO ESTE DETALLADO EN EL PROGRAMA",
       "hoteles": [
         {
-          "nombre": "hotelstanford",
-          "url": "https://hotelstanford.cl/es/"
-        },
-        {
-          "nombre": "urban class",
-          "url": "https://www.urbanaclasshotel.com/"
+          "nombre": "hotelstanford-urban class",
+          "url": "https://hotelstanford.cl/es/",
+          "precios": {
+            "doble": 985,
+            "triple": 975,
+            "single": 1295,
+            "child": 495,
+            "infante": 150
+          }
         }
       ],
       "fechasSalida": [
@@ -795,7 +910,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/67si635n63hyv7qselp5d/2025_11_28_15_06_24_mendoza_santiago_9dias_setiembre.pdf?rlkey=pfa7siskl2t9vefj3njuiyjhh&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-04-25T23:44:19.209Z"
+      "updatedAt": "2026-04-25T23:47:07.314Z"
     },
     {
       "id": "mtur-812",
@@ -833,16 +948,15 @@
       "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
-          "nombre": "COPACABANA MAR",
-          "url": "https://copacabanamar.com.br/language/es/"
-        },
-        {
-          "nombre": "HAMBURGO PALACE",
-          "url": "http://"
-        },
-        {
-          "nombre": "SAN JUAN EXECUTIVE",
-          "url": "https://executive.sjhoteiseresort.com.br/promocao/summer-sale-2026"
+          "nombre": "COPACABANA MAR-Â HAMBURGO PALACE-Â SAN JUAN EXECUTIVE",
+          "url": "https://copacabanamar.com.br/language/es/",
+          "precios": {
+            "doble": 1095,
+            "triple": 1075,
+            "single": 1355,
+            "child": 545,
+            "infante": 250
+          }
         }
       ],
       "fechasSalida": [
@@ -857,7 +971,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/8r8dqlf0qszvv0zv66puc/2026_4_22_17_21_09_rio_10dias_verano2026-1.pdf?rlkey=c35pth6ztvt4yoaopk3hqtkiz&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ASCENSO MORRO PAN DE AZUCAR Y MORRO DA URCATRASLADO Y ACENSO PARQUE NACIONAL TIJUCA - INGRESO AL CRISTO REDENTORTRASLADO EN BUS PRIVADO ZONA ANGRA DOS REIS E ILHA GRANDE CON PASEO EN BARCO (4 PLAYAS) - MUSEO DE SAMBAGUIA COORDINADOR + GUIA LOCALPAQUETE COMPLETO APROX U$S 215PAQUETE SIN PASEO ANGRA DOS REIS APROX U$S 150 - precios aproximados susceptibles a modificaciones.-se contratan y abonan directamente al coordinador en viaje- sujetos a disponibilidad de cupo en destino. Dependen directamente del presador de servicio.",
-      "updatedAt": "2026-04-25T23:44:21.752Z"
+      "updatedAt": "2026-04-25T23:47:09.980Z"
     },
     {
       "id": "mtur-765",
@@ -895,16 +1009,15 @@
       "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
-          "nombre": "SJ EJECUTIVO",
-          "url": "https://executive.sjhoteiseresort.com.br/"
-        },
-        {
-          "nombre": "COPACABANA MAR",
-          "url": "https://copacabanamar.com.br/language/es/"
-        },
-        {
-          "nombre": "HAMBURGO PALACE",
-          "url": "https://www.hamburgopalace.com.br/es/home"
+          "nombre": "SJ EJECUTIVO-Ã‚Â COPACABANA MAR-HAMBURGO PALACE",
+          "url": "https://executive.sjhoteiseresort.com.br/",
+          "precios": {
+            "doble": 1095,
+            "triple": 1075,
+            "single": 1355,
+            "child": 545,
+            "infante": 250
+          }
         }
       ],
       "fechasSalida": [
@@ -919,7 +1032,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/m41lb5qdsm9535i760ell/2026_2_9_19_28_56_rio_10dias_vac_julio2026-1.pdf?rlkey=zb36ee0hybwxi81f2q9cjmkj5&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.____________________________ACTIVIDADES OPCIONALES: ASCENSO MORRO PAN DE AZUCAR Y MORRO DA URCA TRASLADO Y ACENSO EN CAMIONETAS PRIVADAS PARQUE NACIONAL TIJUCA - INGRESO AL CRISTO REDENTOR 1 ALMUERZO BUFFET (SIN BEBIDA) TRASLADO EN BUS PRIVADO ZONA ANGRA DOS REIS E ILHA GRANDE CON PASEO EN BARCO (4 PLAYAS) 1 ALMUERZO BUFFET (SIN BEBIDA) MUSEO DE SAMBA GUIA COORDINADOR + GUIA LOCALPAQUETE COMPLETO APROX U$S 250 PAQUETE SIN PASEO ANGRA DOS REIS APROX U$S 180- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinad",
-      "updatedAt": "2026-04-25T23:44:24.491Z"
+      "updatedAt": "2026-04-25T23:47:12.768Z"
     },
     {
       "id": "mtur-806",
@@ -956,16 +1069,15 @@
       "noIncluye": "BEBIDAS EN LAS COMIDAS, PROPINAS, NI NADA NO ESPECIFICADO EN EL PROGRAMA.",
       "hoteles": [
         {
-          "nombre": "GRAN HOTEL",
-          "url": "https://www.hotelgranpacifico.cl/"
-        },
-        {
-          "nombre": "COTTBUS SAN CARLO",
-          "url": "https://www.mturviajes.com.uy/paquetes/764/2/03"
-        },
-        {
-          "nombre": "HOTEL CAUPOLICAN",
-          "url": "http://www.caupolican.com.ar/"
+          "nombre": "GRAN HOTEL-COTTBUS SAN CARLO-HOTEL CAUPOLICAN",
+          "url": "https://www.hotelgranpacifico.cl/",
+          "precios": {
+            "doble": 1175,
+            "triple": 1165,
+            "single": 1595,
+            "child": 590,
+            "infante": 295
+          }
         }
       ],
       "fechasSalida": [
@@ -980,7 +1092,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/g9cmglxvk3ch0tguu343x/2025_12_12_15_19_07_bariloche_surdechile_julio11dias.pdf?rlkey=9r5xiy1oz18ibsdcoemj4bssp&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-04-25T23:44:26.932Z"
+      "updatedAt": "2026-04-25T23:47:15.192Z"
     },
     {
       "id": "mtur-803",
@@ -1016,20 +1128,15 @@
       "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
-          "nombre": "TUCUMAN (TUCUMAN CENTER)",
-          "url": "https://tucumancenterhotel.com.ar/"
-        },
-        {
-          "nombre": "CAFAYATE (ASTURIAS)",
-          "url": "https://cafayateasturias.com/"
-        },
-        {
-          "nombre": "SALTA (HOTEL PRESIDENTE)",
-          "url": "https://www.granhotelpresidente.com/"
-        },
-        {
-          "nombre": "PARANA (Howard Johnson)",
-          "url": "https://www.hjmayorazgo.com.ar/wp/"
+          "nombre": "TUCUMAN (TUCUMAN CENTER)-CAFAYATE (ASTURIAS)-SALTA (HOTEL PRESIDENTE)PARANA (Howard Johnson)",
+          "url": "https://tucumancenterhotel.com.ar/",
+          "precios": {
+            "doble": 1195,
+            "triple": 1195,
+            "single": 1499,
+            "child": 600,
+            "infante": 300
+          }
         }
       ],
       "fechasSalida": [
@@ -1047,7 +1154,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/gttbakni8mqoth9i19mb8/2026_4_24_15_39_27_norte_argentino11_baja-2.pdf?rlkey=mntyj453dd6aerys5uxo494c0&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO. POLITICA DE MENORES: APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE: CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES. ACTIVIDADES OPCIONALESVISITA AL PUELO DE CACHI U$S 40PASEO SALINAS GRANDE U$S 45TELEFÉRICO U$S 20Valores aproximados a confirmar en el dia.Se contratan y abonan directamente con el coordinador en viaje. Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo y plazas en destino y pueden sufrir modificaciones sin previo aviso.Estas condiciones dependen directamente del prestador del servicio correspondiente (atracciones, parques, trenes, paseos en barco, etc.)",
-      "updatedAt": "2026-04-25T23:44:29.478Z"
+      "updatedAt": "2026-04-25T23:47:17.784Z"
     },
     {
       "id": "mtur-814",
@@ -1087,7 +1194,16 @@
       ],
       "incluye": [],
       "noIncluye": "",
-      "hoteles": [],
+      "hoteles": [
+        {
+          "nombre": "",
+          "url": "",
+          "precios": {
+            "doble": 4395,
+            "single": 5390
+          }
+        }
+      ],
       "fechasSalida": [
         "29/09/2026"
       ],
@@ -1097,7 +1213,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/9bipm5rai5rlch2zdtuf5/2026_2_19_17_31_17_entre_fatimayandalucia14dias-1.pdf?rlkey=sptil88ntc63yvi5jag8a54pb&raw=1",
       "observaciones": "",
-      "updatedAt": "2026-04-25T23:44:31.880Z"
+      "updatedAt": "2026-04-25T23:47:20.230Z"
     }
   ]
 }
