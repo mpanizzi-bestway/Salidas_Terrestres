@@ -1,6 +1,6 @@
 {
   "operador": "Sendas Turismo",
-  "updatedAt": "2026-04-25T05:34:03.498Z",
+  "updatedAt": "2026-04-25T05:46:05.811Z",
   "programas": [
     {
       "id": "florianopolis-1413",
@@ -215,7 +215,7 @@
           "texto": "Solo bus y hotel descontar: U$S 130.-"
         }
       ],
-      "updatedAt": "2026-04-25T05:34:39.703Z"
+      "updatedAt": "2026-04-25T05:46:44.123Z"
     },
     {
       "id": "florianopolis-1400",
@@ -304,7 +304,7 @@
         {
           "dia": "DÍA 07",
           "lugar": "URUGUAY",
-          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- SALIDA: 27 DE JUNIO HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 610 450 425 405 SALIDA: 04 DE JULIO HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 640 465 450 430 Menores de 5 años máx. 1 por habitación: Sin Cargo Solo asiento u$s 200.- NO INCLUYE: INGRESOS A PARQUES NI MUSEOS. 27 DE JUNIO SALIDA DE MONTEVIDEO Y LITORAL (PAYSANDU, SALTO, TACUAREMBO Y RIVERA)",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -349,7 +349,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-04-25T05:34:41.239Z"
+      "updatedAt": "2026-04-25T05:46:45.816Z"
     },
     {
       "id": "florianopolis-1396",
@@ -438,7 +438,7 @@
         {
           "dia": "DÍA 07",
           "lugar": "URUGUAY",
-          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 585 435 420 405 Menores de 5 años máx. 1 por habitación: Sin Cargo Solo asiento u$s 190.- NO INCLUYE: INGRESOS A PARQUES NI MUSEOS.",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -473,7 +473,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-04-25T05:34:42.782Z"
+      "updatedAt": "2026-04-25T05:46:47.483Z"
     },
     {
       "id": "gramado-1417",
@@ -562,7 +562,7 @@
         {
           "dia": "DÍA 07",
           "lugar": "URUGUAY",
-          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 655 470 450 435 Menores de 5 años máx. 1 por habitación: Sin Cargo Solo asiento u$s 190.- NO INCLUYE: INGRESOS A PARQUES NI MUSEOS.",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -597,7 +597,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-04-25T05:34:44.288Z"
+      "updatedAt": "2026-04-25T05:46:49.290Z"
     },
     {
       "id": "gramado-1416",
@@ -686,7 +686,7 @@
         {
           "dia": "DÍA 07",
           "lugar": "URUGUAY",
-          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 1035 655 615 565 Menores de 5 años máx. 1 por habitación: Sin Cargo Solo asiento u$s 190.- NO INCLUYE: INGRESOS A PARQUES NI MUSEOS.",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -721,7 +721,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-04-25T05:34:45.802Z"
+      "updatedAt": "2026-04-25T05:46:51.001Z"
     },
     {
       "id": "gramado-1415",
@@ -811,7 +811,7 @@
         {
           "dia": "DÍA 07",
           "lugar": "Uruguay",
-          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- SALIDA: 24 DE OCTUBRE HOTEL SGL DBL TPL CPL Serra Nevada 655 470 450 435 SALIDAS: 28 DE OCTUBRE 1º DE NOVIEMBRE HOTEL SGL DBL TPL CPL Serra Nevada 720 505 480 455 SALIDAS: 7, 14 Y 21 DE NOVIEMBRE HOTEL SGL DBL TPL CPL Serra Nevada 805 545 510 485 SALIDAS: 28 DE NOVIEMBRE Y 5, 12 Y 16 DE DICIEMBRE HOTEL SGL DBL TPL CPL Serra Nevada 765 540 505 475 Menores de 5 años máx. 1 por habitación compartiendo con 2 adultos: Sin Cargo Solo asiento, servicio abordo: U$S 195.- NO INCLUYE: INGRESOS A LOS PARQUES, MUSEOS y ESPECTACULOS DE NATAL LUZ Espectáculos de Natal Luz dependiendo la fecha de salida Árbol Cantante: Un gran árbol vivo, trayendo ",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -872,7 +872,7 @@
           "texto": "NO INCLUYE: INGRESOS A LOS PARQUES, MUSEOS y ESPECTACULOS DE NATAL LUZ"
         }
       ],
-      "updatedAt": "2026-04-25T05:34:47.331Z"
+      "updatedAt": "2026-04-25T05:46:52.706Z"
     },
     {
       "id": "gramado-1411",
@@ -961,7 +961,7 @@
         {
           "dia": "DÍA 07",
           "lugar": "URUGUAY",
-          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 615 460 440 420 Menores de 5 años máx. 1 por habitación: Sin Cargo Solo asiento u$s 190.- NO INCLUYE: INGRESOS A PARQUES NI MUSEOS.",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -996,7 +996,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-04-25T05:34:48.871Z"
+      "updatedAt": "2026-04-25T05:46:54.549Z"
     },
     {
       "id": "gramado-1400",
@@ -1085,7 +1085,7 @@
         {
           "dia": "DÍA 07",
           "lugar": "URUGUAY",
-          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- SALIDA: 27 DE JUNIO HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 610 450 425 405 SALIDA: 04 DE JULIO HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 640 465 450 430 Menores de 5 años máx. 1 por habitación: Sin Cargo Solo asiento u$s 200.- NO INCLUYE: INGRESOS A PARQUES NI MUSEOS. 27 DE JUNIO SALIDA DE MONTEVIDEO Y LITORAL (PAYSANDU, SALTO, TACUAREMBO Y RIVERA)",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -1130,7 +1130,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-04-25T05:34:50.395Z"
+      "updatedAt": "2026-04-25T05:46:56.221Z"
     },
     {
       "id": "gramado-1396",
@@ -1219,7 +1219,7 @@
         {
           "dia": "DÍA 07",
           "lugar": "URUGUAY",
-          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 585 435 420 405 Menores de 5 años máx. 1 por habitación: Sin Cargo Solo asiento u$s 190.- NO INCLUYE: INGRESOS A PARQUES NI MUSEOS.",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -1254,7 +1254,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-04-25T05:34:51.910Z"
+      "updatedAt": "2026-04-25T05:46:57.852Z"
     },
     {
       "id": "buenosaires-1414",
@@ -1307,7 +1307,7 @@
         {
           "dia": "DÍA 02",
           "lugar": "Temaiken",
-          "detalle": "Llegada. Visita de este importante Parque temático donde podremos ver diferentes tipos de animales en su hábitat natural. Ingreso incluido. Tiempo libre. Continuación en la tarde hacia: Buenos Aires: Llegada directamente al hotel. Tiempo libre. Noche libre para asistir a espectáculos de teatros, etc.",
+          "detalle": "Llegada. Visita de este importante Parque temático donde podremos ver diferentes tipos de animales en su hábitat natural. Ingreso incluido. Tiempo libre. Continuación en la tarde hacia: Buenos Aires: Llegada directamente al",
           "first": false,
           "last": false
         },
@@ -1335,7 +1335,7 @@
         {
           "dia": "DÍA 06",
           "lugar": "Montevideo",
-          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- HOTEL SGL DBL TPL CPL BUE: Duomi / San Clemente: Morales 585 485 485 485 MENORES HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE (UNO POR HABITACION) SALIDAS DE MONTEVIDEO Y LITORAL (PAYSANDU Y SALTO)",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -1358,7 +1358,7 @@
           "texto": "MENORES HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE (UNO POR HABITACION)"
         }
       ],
-      "updatedAt": "2026-04-25T05:34:58.040Z"
+      "updatedAt": "2026-04-25T05:47:04.534Z"
     },
     {
       "id": "mendoza-1412",
@@ -1456,7 +1456,7 @@
         {
           "dia": "DÍA 8",
           "lugar": "Uruguay",
-          "detalle": "Arribo en horas de la mañana. - FIN DE NUESTROS SERVICIOS. HOTEL CAT SGL DBL TPL CPL Carollo 3 770 620 590 - Princess 3 815 645 615 590 Royal Princes 4 995 745 665 - Menores hasta 2 años acompañados de 2 adultos (1 por habitación): free Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-",
+          "detalle": "Arribo en horas de la mañana. - Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -1503,7 +1503,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-04-25T05:34:59.554Z"
+      "updatedAt": "2026-04-25T05:47:06.701Z"
     },
     {
       "id": "mendoza-1407",
@@ -1601,7 +1601,7 @@
         {
           "dia": "DÍA 8",
           "lugar": "Uruguay",
-          "detalle": "Arribo en horas de la mañana. - FIN DE NUESTROS SERVICIOS. HOTEL SGL DBL TPL CPL Carollo 770 620 590 - Princess 815 645 615 590 Urbana Class 770 655 640 - Royal Princes 995 745 665 - Menores hasta 2 años acompañados de 2 adultos (1 por habitación): free Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-",
+          "detalle": "Arribo en horas de la mañana. - Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -1658,7 +1658,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-04-25T05:35:01.058Z"
+      "updatedAt": "2026-04-25T05:47:09.292Z"
     },
     {
       "id": "mendoza-1358",
@@ -1756,7 +1756,7 @@
         {
           "dia": "DÍA 8",
           "lugar": "Uruguay",
-          "detalle": "Arribo en horas de la mañana. - FIN DE NUESTROS SERVICIOS. HOTEL CAT SGL DBL TPL CPL Carollo 3 770 620 590 - Princess 3 815 645 615 590 Royal Princes 4 995 745 665 - Menores hasta 2 años acompañados de 2 adultos (1 por habitación): free Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-",
+          "detalle": "Arribo en horas de la mañana. - Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -1803,7 +1803,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-04-25T05:35:02.593Z"
+      "updatedAt": "2026-04-25T05:47:10.901Z"
     },
     {
       "id": "norte-1406",
@@ -1868,7 +1868,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-04-25T05:35:04.096Z"
+      "updatedAt": "2026-04-25T05:47:12.502Z"
     },
     {
       "id": "norte-1405",
@@ -1967,7 +1967,7 @@
         {
           "dia": "DÍA 10",
           "lugar": "Uruguay",
-          "detalle": "Llegada en horas del mediodía... ¡¡FIN DE NUESTRO SERVICIOS!! HOTELES SGL DBL TPL Tafi: Colonial 3 Salta: Alejandro I 5 Jujuy: H.Johnson 4 1590 1150 1115 MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE OPCIONALES: Tren a las Nubes Salida desde Salta en minibuses hasta llegar al pueblo de San Antonio de los Cobres desde allí en el famoso TREN DE LAS NUBES que a bordo de un tren de alta montaña realiza un recorrido en plena Cordillera de los Andes teniendo como punto final el Viaducto Las Polvorillas de 224 mts. de longitud y 63 mts. de altura localizada a casi 4000 m/s/n/m. La altura de sus vías que llegan a los 4.200 mts. Sobre el nivel del mar, lo convierte en uno de los trenes más a",
+          "detalle": "Llegada en horas del mediodía... ¡¡Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -1990,7 +1990,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-04-25T05:35:05.602Z"
+      "updatedAt": "2026-04-25T05:47:14.104Z"
     },
     {
       "id": "norte-1395",
@@ -2089,7 +2089,7 @@
         {
           "dia": "DÍA 10",
           "lugar": "Uruguay",
-          "detalle": "Llegada en horas del mediodía... ¡¡FIN DE NUESTRO SERVICIOS!! HOTELES SGL DBL TPL Tafi: Colonial 3 Salta: Alejandro I 5 Jujuy: H.Johnson 4 1590 1150 1115 MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE OPCIONALES: Tren a las Nubes Salida desde Salta en minibuses hasta llegar al pueblo de San Antonio de los Cobres desde allí en el famoso TREN DE LAS NUBES que a bordo de un tren de alta montaña realiza un recorrido en plena Cordillera de los Andes teniendo como punto final el Viaducto Las Polvorillas de 224 mts. de longitud y 63 mts. de altura localizada a casi 4000 m/s/n/m. La altura de sus vías que llegan a los 4.200 mts. Sobre el nivel del mar, lo convierte en uno de los trenes más a",
+          "detalle": "Llegada en horas del mediodía... ¡¡Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -2112,7 +2112,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-04-25T05:35:07.151Z"
+      "updatedAt": "2026-04-25T05:47:15.748Z"
     },
     {
       "id": "norte-1394",
@@ -2177,7 +2177,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-04-25T05:35:08.673Z"
+      "updatedAt": "2026-04-25T05:47:17.381Z"
     },
     {
       "id": "carlospaz-1404",
@@ -2247,7 +2247,7 @@
         {
           "dia": "DÍA 08",
           "lugar": "Uruguay",
-          "detalle": "Llegada en la mañana. Fin de nuestros servicios HOTELES SGL DBL TPL CPL Cristal 630 465 455 445 El Condado 650 525 525 525 Coronado 695 550 525 490 Santa Cecilia Std 770 595 595 595 Santa Cecilia Sup 985 740 740 740 Amerian 995 715 680 655 - Las hab. Cuádruples del hotel Coronado es departamento de 2 ambientes, ideales para familias. - Menores hasta 2 años acompañados de 2 adultos: FREE - Solo Asiento y servicio abordo: USD 230.- - Tour Minas Clavero y los Túneles: U$S 50.- NOTA: - Hotel Cristal y El Condado cenan en el hotel menú fijo - Hotel Santa Cecilia las cenas son en el mismo hotel (bufet de entradas, plato principal fijo y postre fijo) - Hotel Coronado y Amerian ME",
+          "detalle": "Llegada en la mañana. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -2320,7 +2320,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-04-25T05:35:10.215Z"
+      "updatedAt": "2026-04-25T05:47:18.963Z"
     },
     {
       "id": "bariloche-1403",
@@ -2389,7 +2389,7 @@
         {
           "dia": "DÍA 09",
           "lugar": "Uruguay",
-          "detalle": "Llegada en las primeras horas de la tarde. Fin de nuestros servicios HOTELES SGL DBL TPL CPL REG Hosteria Sur - 685 645 595 DES Internacional 1095 765 765 765 DES Internacional 1155 825 825 825 MAP Plaza 1260 830 830 830 DES Plaza 1350 920 920 920 MAP Kilton - - - - DES NO INCLUYE TASA DE TURISMO Menores de hasta 2 años acompañados de 2 adultos máximo 1 por habitación: free. Solo asiento, seguro de asistencia y servicio abordo: USD 315.- Sistema de cenas: Hotel Internacional, Las cenas se realizarán en el hotel, buffet de ensaladas, plato principal y postre fijo. MAP opcional para pasajeros hosedados en Hosteria Sur (6 comidas) en restaurant MENU TURISTICO; USD 210.- Elección de entrada, pla",
+          "detalle": "Llegada en las primeras horas de la tarde. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -2470,7 +2470,7 @@
           "texto": "Solo asiento, seguro de asistencia y servicio abordo: USD 315.-"
         }
       ],
-      "updatedAt": "2026-04-25T05:35:11.730Z"
+      "updatedAt": "2026-04-25T05:47:20.556Z"
     },
     {
       "id": "bariloche-1386",
@@ -2533,7 +2533,7 @@
         {
           "dia": "DÍA 09",
           "lugar": "Uruguay",
-          "detalle": "Llegada en horas de la tarde. Fin de nuestros servicios. HOTEL SGL DBL TPL Plaza 795 650 650 M 383 795 650 650 - Menores de 3 años acompañados por 2 adultos. Máximo 1 por habitación FREE - Solo asiento, seguro de asistencia y servicio abordo: USD 320.-",
+          "detalle": "Llegada en horas de la tarde. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -2566,7 +2566,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-04-25T05:35:13.295Z"
+      "updatedAt": "2026-04-25T05:47:22.187Z"
     },
     {
       "id": "cataratas-1410",
@@ -2650,7 +2650,7 @@
         {
           "dia": "DÍA 07",
           "lugar": "Uruguay",
-          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios HOTELES CAT SGL DBL TPL CPL Carima 4 850 675 675 675 Vivaz 4 895 685 685 685 - Menores hasta 2 años sin asiento, máximo 1 por habitación compartiendo con 2 adultos: FREE - Menores de 3 a 5 años pagan asiento, servicio a bordo y seguro médico U$S 250.- compartiendo con 2 adultos, máximo 1 por habitación.",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -2683,7 +2683,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-04-25T05:35:14.831Z"
+      "updatedAt": "2026-04-25T05:47:23.749Z"
     },
     {
       "id": "cataratas-1409",
@@ -2767,7 +2767,7 @@
         {
           "dia": "DÍA 07",
           "lugar": "Uruguay",
-          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios HOTELES CAT SGL DBL TPL CPL Carima 4 840 690 690 690 Vivaz 4 1015 735 735 735 - Menores hasta 2 años sin asiento, máximo 1 por habitación compartiendo con 2 adultos: FREE - Menores de 3 a 5 años pagan asiento, servicio a bordo y seguro médico U$S 250.- compartiendo con 2 adultos, máximo 1 por habitación.",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -2800,7 +2800,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-04-25T05:35:16.330Z"
+      "updatedAt": "2026-04-25T05:47:25.318Z"
     },
     {
       "id": "cataratas-1401",
@@ -2884,7 +2884,7 @@
         {
           "dia": "DÍA 07",
           "lugar": "Uruguay",
-          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios HOTELES CAT SGL DBL TPL CPL Carima 4 790 650 650 650 Vivaz 4 920 685 685 685 - Menores hasta 2 años sin asiento, máximo 1 por habitación compartiendo con 2 adultos: FREE - Menores de 3 a 5 años pagan asiento, servicio a bordo y seguro médico U$S 250.- compartiendo con 2 adultos, máximo 1 por habitación.",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -2917,7 +2917,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-04-25T05:35:17.830Z"
+      "updatedAt": "2026-04-25T05:47:26.905Z"
     },
     {
       "id": "cataratas-1393",
@@ -3001,7 +3001,7 @@
         {
           "dia": "DÍA 07",
           "lugar": "Uruguay",
-          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios HOTELES CAT SGL DBL TPL CPL Carima 4 790 650 650 650 Vivaz 4 895 685 685 685 - Menores hasta 2 años sin asiento, máximo 1 por habitación compartiendo con 2 adultos: FREE - Menores de 3 a 5 años pagan asiento, servicio a bordo y seguro médico U$S 250.- compartiendo con 2 adultos, máximo 1 por habitación.",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.",
           "first": false,
           "last": true
         }
@@ -3034,7 +3034,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-04-25T05:35:19.393Z"
+      "updatedAt": "2026-04-25T05:47:28.468Z"
     }
   ]
 }
