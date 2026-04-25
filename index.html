@@ -157,7 +157,9 @@
       background: linear-gradient(135deg, #1a3a4a 0%, #0e5a7a 50%, #1a7a5a 100%);
     }
 
-    .op-card-banner.placeholder {
+    .op-card-banner.mtur {
+      background: linear-gradient(135deg, #7a1a00 0%, #c84800 50%, #e8630a 100%);
+    }
       background: linear-gradient(135deg, #2d3561 0%, #4a4f8a 100%);
     }
 
@@ -328,7 +330,29 @@
       </div>
     </a>
 
-    <!-- PRÓXIMOS OPERADORES -->
+    <!-- MTUR VIAJES — activo -->
+    <a href="mtur.html" class="op-card">
+      <div class="op-card-banner mtur">
+        <img
+          src="images/logo_mtur.svg"
+          alt="Mtur Viajes"
+          class="op-banner-logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span class="op-logo-text" style="display:none;">Mtur</span>
+      </div>
+      <div class="op-card-body">
+        <h3>Mtur Viajes &amp; Turismo</h3>
+        <p>Operador especializado en destinos terrestres desde Uruguay. Brasil, Argentina, Cataratas y más.</p>
+        <div class="op-card-footer">
+          <span class="op-badge" id="mtur-count">— programas</span>
+          <div class="op-arrow">
+            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- PRÓXIMO OPERADOR -->
     <div class="op-card coming-soon">
       <div class="op-card-banner placeholder">
         <span class="op-logo-text">Operador 2</span>
@@ -368,14 +392,15 @@
   </footer>
 
   <script>
-    // Actualiza el contador de programas leyendo el JSON en tiempo real
-    fetch('programas-sendas.json')
-      .then(r => r.json())
-      .then(d => {
-        const n = d.programas?.length;
-        if (n) document.getElementById('sendas-count').textContent = n + ' programas';
-      })
-      .catch(() => {}); // si falla, queda el valor hardcodeado
+    // Sendas
+    fetch('programas-sendas.json').then(r=>r.json()).then(d=>{
+      const n=d.programas?.length; if(n) document.getElementById('sendas-count').textContent=n+' programas';
+    }).catch(()=>{});
+    // Mtur
+    fetch('programas-mtur.json').then(r=>r.json()).then(d=>{
+      const n=d.programas?.length;
+      document.getElementById('mtur-count').textContent=(n?n:'—')+' programas';
+    }).catch(()=>{});
   </script>
 
 </body>
