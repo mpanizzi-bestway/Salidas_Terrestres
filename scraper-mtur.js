@@ -155,11 +155,13 @@ function parseProgram(html, sourceUrl) {
   }
 
   // ── INCLUYE ───────────────────────────────────────────────────────────────
-  // Sección h5 "Incluye:" → li items hasta "ver seguro" (omitir)
+  // Estructura real confirmada: h5 "Incluye:" seguido de <li> con texto directo
+  // Los guiones son CSS visual de Mtur, NO están en el HTML
+  // Omitir: "ver seguro", "Todos nuestros paquetes..."
   const incluye = [];
   let enIncluye = false;
 
-  $('*').each((_, el) => {
+  $('h5, h4, li').each((_, el) => {
     const tag  = el.tagName?.toLowerCase();
     const text = $(el).text().trim().replace(/\s+/g, ' ');
     if (!tag) return;
@@ -167,15 +169,17 @@ function parseProgram(html, sourceUrl) {
     if ((tag === 'h5' || tag === 'h4') && /^incluye\s*:/i.test(text)) {
       enIncluye = true; return;
     }
-    if (enIncluye) {
-      // Parar al llegar a la siguiente sección
-      if ((tag === 'h5' || tag === 'h4') && !/^incluye/i.test(text)) {
-        enIncluye = false; return;
-      }
-      if (tag === 'li') {
-        if (/ver\s+seguro/i.test(text)) return;          // omitir link seguro
-        if (/todos\s+nuestros\s+paquetes/i.test(text)) return; // omitir texto genérico
-        if (text.length > 3 && text.length < 300) incluye.push(text);
+    // Parar al llegar a la siguiente sección h5/h4
+    if (enIncluye && (tag === 'h5' || tag === 'h4')) {
+      enIncluye = false; return;
+    }
+    if (enIncluye && tag === 'li') {
+      if (/ver\s+seguro/i.test(text))            return; // link seguro
+      if (/todos\s+nuestros\s+paquetes/i.test(text)) return; // texto genérico
+      if (text.length > 3 && text.length < 300) {
+        // Limpiar el guión visual si por algún motivo viene en el texto
+        const clean = text.replace(/^[-–•]\s*/, '').trim();
+        if (clean.length > 3) incluye.push(clean);
       }
     }
   });
@@ -199,66 +203,95 @@ function parseProgram(html, sourceUrl) {
     }
   });
 
-  // ── HOTELES ───────────────────────────────────────────────────────────────
-  // h5 "Opciones de hoteles:" → h3 con uno o más <a> (nombre-ciudad)
+  // ── HOTELES + PRECIOS POR HOTEL ──────────────────────────────────────────
+  // Estructura real: h5 "Opciones de hoteles:" → uno o más bloques:
+  //   h3 [Hotel A] → fechas → h5 Doble → strong USD → h5 Triple → ...
+  //   h3 [Hotel B] → fechas → h5 Doble → strong USD → h5 Triple → ...
+
   const hoteles = [];
+  const CATS_RX = /^(doble|triple|cu[aá]druple|single|child|infante)$/i;
+
   let enHoteles = false;
-  $('*').each((_, el) => {
+  let hotelActual = null;
+  let lastCat = null;
+
+  // Iterar sobre todos los nodos relevantes de una sola vez
+  $('h5, h4, h3, strong, b, p').each((_, el) => {
     const tag  = el.tagName?.toLowerCase();
     const text = $(el).text().trim().replace(/\s+/g, ' ');
     if (!tag) return;
+
+    // Inicio de sección hoteles
     if ((tag === 'h5' || tag === 'h4') && /opciones\s+de\s+hoteles/i.test(text)) {
       enHoteles = true; return;
     }
-    if (enHoteles && tag === 'h3') {
-      $(el).find('a').each((_, a) => {
-        // Nombre viene como "HOTEL CIUDAD-" → limpiar guión final
-        const nombre = $(a).text().trim().replace(/[-–\s]+$/, '').trim();
-        const url    = $(a).attr('href') || '';
-        if (nombre.length > 1 && !/javascript/i.test(url)) {
-          hoteles.push({ nombre, url });
-        }
-      });
-      enHoteles = false;
+
+    // Fin: llegamos a Observaciones
+    if (enHoteles && (tag === 'h5' || tag === 'h4') && /^observaciones/i.test(text)) {
+      if (hotelActual) { hoteles.push(hotelActual); hotelActual = null; }
+      enHoteles = false; return;
     }
-    if (enHoteles && (tag === 'h5' || tag === 'h4') && !/opciones/i.test(text)) {
-      enHoteles = false;
+
+    if (!enHoteles) return;
+
+    // Nuevo hotel → h3
+    if (tag === 'h3') {
+      if (hotelActual) hoteles.push(hotelActual);
+      const nombre = $(el).text().trim().replace(/[-–\s]+$/, '').trim();
+      const url    = $(el).find('a').first().attr('href') || '';
+      hotelActual = {
+        nombre,
+        url: !/javascript/i.test(url) ? url : '',
+        precios: {},
+      };
+      lastCat = null;
+      return;
+    }
+
+    // Stop: texto "Precios por persona en base doble" → reiniciar lastCat
+    if (hotelActual && /precios por persona/i.test(text)) {
+      lastCat = null; return;
+    }
+
+    // Categoría de precio
+    if (hotelActual && (tag === 'h5' || tag === 'h4') && CATS_RX.test(text)) {
+      lastCat = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      return;
+    }
+
+    // Valor: strong/b con "USD XXXX"
+    if (hotelActual && lastCat && (tag === 'strong' || tag === 'b')) {
+      const pm = text.match(/USD\s*([\d.,]+)/i) || text.match(/^([\d.,]+)$/);
+      if (pm) {
+        hotelActual.precios[lastCat] = parseFloat(pm[1].replace(',', '.'));
+        lastCat = null;
+      }
+      return;
+    }
+
+    // Valor: "N/A" como texto plano en <p> o texto del párrafo
+    if (hotelActual && lastCat && /^N\/A$/i.test(text)) {
+      hotelActual.precios[lastCat] = null;
+      lastCat = null;
     }
   });
+  // Push del último hotel si no se guardó (la sección Observaciones pudo no aparecer)
+  if (hotelActual && !hoteles.find(h => h.nombre === hotelActual.nombre)) {
+    hoteles.push(hotelActual);
+  }
+  // Deduplicar por nombre (N/A como texto plano puede haber causado re-disparo)
+  const hotelesUniq = hoteles.filter((h, i, arr) =>
+    arr.findIndex(x => x.nombre === h.nombre) === i
+  );
+  const precios = hotelesUniq.length > 0 ? hotelesUniq[0].precios : {};
 
   // ── FECHAS DE SALIDA ──────────────────────────────────────────────────────
-  // Formato: "09/05/2026\n04/07/2026" — texto plano entre hoteles y precios
   const fechaRx  = /\b(\d{2}\/\d{2}\/\d{4})\b/g;
   const fechasSalida = [];
   let fm;
   while ((fm = fechaRx.exec(bodyText)) !== null) {
     if (!fechasSalida.includes(fm[1])) fechasSalida.push(fm[1]);
   }
-
-  // ── PRECIOS ───────────────────────────────────────────────────────────────
-  // h5 "Doble" → strong "USD 1195" / "N/A"
-  // Categorías en orden: Doble, Triple, Cuádruple, Single, Child, Infante
-  const CATS_RX = /^(doble|triple|cu[aá]druple|single|child|infante)$/i;
-  const precios  = {};
-  let lastCat    = null;
-
-  $('h5, strong, b, span').each((_, el) => {
-    const text = $(el).text().trim().replace(/\s+/g, ' ');
-    if (CATS_RX.test(text)) {
-      lastCat = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-      return;
-    }
-    if (lastCat) {
-      const pm = text.match(/USD\s*([\d.,]+)/i) || text.match(/^([\d.,]+)$/);
-      if (pm) {
-        precios[lastCat] = parseFloat((pm[1]).replace(',','.'));
-        lastCat = null;
-      } else if (/^N\/A$/i.test(text)) {
-        precios[lastCat] = null;
-        lastCat = null;
-      }
-    }
-  });
 
   // ── PDF ITINERARIO ────────────────────────────────────────────────────────
   let pdfItinerario = '';
@@ -332,7 +365,7 @@ function parseProgram(html, sourceUrl) {
     fechas:       fechasPrograma,
     incluye,
     noIncluye,
-    hoteles,
+    hoteles:      hotelesUniq,
     fechasSalida,
     precios,
     pdfItinerario,
