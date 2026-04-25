@@ -1,6 +1,6 @@
 {
   "operador": "Sendas Turismo",
-  "updatedAt": "2026-04-24T01:55:44.186Z",
+  "updatedAt": "2026-04-25T05:34:03.498Z",
   "programas": [
     {
       "id": "florianopolis-1413",
@@ -46,7 +46,29 @@
         "Traslado a Beto Carrero World",
         "Seguro de Asistencia médica de Universal Assistance"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en bus semi cama con servicio a bordo, guía acompañante, cena y desayuno abordo pasando por Porto Alegre, para arribar a:",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Florianópolis",
+          "detalle": "Llegada directamente al hotel. Alojamiento. Resto del día libre. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "Florianópolis",
+          "detalle": "Desayuno. Partida con equipajes en horas de la mañana en viaje de regreso con almuerzo en Parador de ruta. Continuación por Tubarao, Porto Alegre, para arribar a:",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "San Diego Std",
@@ -182,18 +204,18 @@
       "notas_precios": [
         {
           "titulo": "Nota",
-          "texto": "Menores de 0 a 3 años cumplidos uno por habitación sin cargo compartiendo con 2 adultos. Máximo uno por habitación."
+          "texto": "Menores de 0 a 3 años cumplidos uno por habitación sin cargo compartiendo con 2 adultos. Máximo uno por habitación."
         },
         {
           "titulo": "Nota",
-          "texto": "Menores de 4 y 5 años: Asiento, servicio a bordo y seguro médico: U$S 250.- compartiendo habitación con 2 adultos."
+          "texto": "Menores de 4 y 5 años: Asiento, servicio a bordo y seguro médico: U$S 250.- compartiendo habitación con 2 adultos."
         },
         {
           "titulo": "Nota",
           "texto": "Solo bus y hotel descontar: U$S 130.-"
         }
       ],
-      "updatedAt": "2026-04-24T01:56:22.860Z"
+      "updatedAt": "2026-04-25T05:34:39.703Z"
     },
     {
       "id": "florianopolis-1400",
@@ -236,7 +258,57 @@
         "Tour Bento Gonzalvez y Garibaldi",
         "Seguro de Asistencia médica de Universal Assistance"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en horas de la tarde en bus Semi Cama, servicio a bordo, guía acompañante, pasando por Porto Alegre, Canoas, Esteio, Sao Leopoldo, para ascender a las sierras gauchas y a la región de las hortensias: (cena y desayuno abordo)",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Canela",
+          "detalle": "Llegada en horas de la mañana. Alojamiento en el hotel Serra Nevada, categoría 4 estrellas, ubicado en el centro del Canela, con piscina térmica. Resto del día libre para recorrer la ciudad. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar los atractivos más importantes de la ciudad de GRAMADO. Recorrido por el Lago Negro con su floresta negra alemana, Minimundo con recorrido en ciudades antiguas observando réplicas de castillos, ferrovial, casas de estilo europeo, etc, Lago Joaquina Beir, Iglesia Matriz San Pedro, Plaza de las Banderas, Valle del Kilombo con el museo Hollywoood Dream Car, con su colección de motos y autos de lujo antiguos. Almuerzo Resto del dia libre,",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar la ciudad de Canela, Iglesia Matriz o de Piedra, Parque de Caracol con su estupenda Cascada de más de 130 metros de altura, su teleférico y su caminata ecológica, Museo del Automóvil, fábrica de chocolates, artesanatos, centros comerciales, etc. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Salida en horas de la mañana rumbo al oeste para visitar la \"región de la uva y el vino\" pasando por la ciudad de Farroupilha, llegaremos hasta la ciudad de Carlos Barboza dónde tendremos la oportunidad de visitar la fábrica Tramontina, desde allí continuamos hacia la ciudad de Garibaldi (capital regional del champagne) donde veremos el lugar donde año a año se realiza la fiesta nacional del champagne, Almuerzo, y continuación en la tarde hacia la localidad de Bento Gonzalvez, donde tendremos oportunidad de visitar una bodega, viendo el proceso de elaboración del vino y además recorrer una vasta zona de valle de los viñedos. Paseo en forma Opcional en el tren -MARIA FUMACA- entre B",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Mañana libre. Almuerzo de despedida. Partida con equipajes del hotel, para emprender el viaje de retorno descendiendo la sierra, deteniéndonos en IGREGINHA, visitando una fábrica de calzados. Posterior prosecución en viaje de regreso vía Pelotas hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "URUGUAY",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- SALIDA: 27 DE JUNIO HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 610 450 425 405 SALIDA: 04 DE JULIO HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 640 465 450 430 Menores de 5 años máx. 1 por habitación: Sin Cargo Solo asiento u$s 200.- NO INCLUYE: INGRESOS A PARQUES NI MUSEOS. 27 DE JUNIO SALIDA DE MONTEVIDEO Y LITORAL (PAYSANDU, SALTO, TACUAREMBO Y RIVERA)",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Serra Nevada",
@@ -262,7 +334,7 @@
       "notas_precios": [
         {
           "titulo": "Nota",
-          "texto": "NO INCLUYE INGRESOS A PARQUES NI MUSEOS"
+          "texto": "NO INCLUYE INGRESOS A PARQUES NI MUSEOS"
         },
         {
           "titulo": "Nota",
@@ -270,10 +342,14 @@
         },
         {
           "titulo": "Nota",
-          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
+          "texto": "Solo asiento u$s 200.-"
+        },
+        {
+          "titulo": "Nota",
+          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-04-24T01:56:24.455Z"
+      "updatedAt": "2026-04-25T05:34:41.239Z"
     },
     {
       "id": "florianopolis-1396",
@@ -316,7 +392,57 @@
         "Tour Bento Gonzalvez y Garibaldi",
         "Seguro de Asistencia médica de Universal Assistance"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en horas de la tarde en bus Semi Cama, servicio a bordo, guía acompañante, pasando por Porto Alegre, Canoas, Esteio, Sao Leopoldo, para ascender a las sierras gauchas y a la región de las hortensias: (cena y desayuno abordo)",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Canela",
+          "detalle": "Llegada en horas de la mañana. Alojamiento en el hotel Serra Nevada, categoría 4 estrellas, ubicado en el centro del Canela, con piscina térmica. Resto del día libre para recorrer la ciudad. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar los atractivos más importantes de la ciudad de GRAMADO. Recorrido por el Lago Negro con su floresta negra alemana, Minimundo con recorrido en ciudades antiguas observando réplicas de castillos, ferrovial, casas de estilo europeo, etc, Lago Joaquina Beir, Iglesia Matriz San Pedro, Plaza de las Banderas, Valle del Kilombo con el museo Hollywoood Dream Car, con su colección de motos y autos de lujo antiguos. Almuerzo Resto del dia libre,",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar la ciudad de Canela, Iglesia Matriz o de Piedra, Parque de Caracol con su estupenda Cascada de más de 130 metros de altura, su teleférico y su caminata ecológica, Museo del Automóvil, fábrica de chocolates, artesanatos, centros comerciales, etc. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Salida en horas de la mañana rumbo al oeste para visitar la \"región de la uva y el vino\" pasando por la ciudad de Farroupilha, llegaremos hasta la ciudad de Carlos Barboza dónde tendremos la oportunidad de visitar la fábrica Tramontina, desde allí continuamos hacia la ciudad de Garibaldi (capital regional del champagne) donde veremos el lugar donde año a año se realiza la fiesta nacional del champagne, Almuerzo, y continuación en la tarde hacia la localidad de Bento Gonzalvez, donde tendremos oportunidad de visitar una bodega, viendo el proceso de elaboración del vino y además recorrer una vasta zona de valle de los viñedos. Paseo en forma Opcional en el tren -MARIA FUMACA- entre B",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Mañana libre. Almuerzo de despedida. Partida con equipajes del hotel, para emprender el viaje de retorno descendiendo la sierra, deteniéndonos en IGREGINHA, visitando una fábrica de calzados. Posterior prosecución en viaje de regreso vía Pelotas hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "URUGUAY",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 585 435 420 405 Menores de 5 años máx. 1 por habitación: Sin Cargo Solo asiento u$s 190.- NO INCLUYE: INGRESOS A PARQUES NI MUSEOS.",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Serra Nevada",
@@ -332,7 +458,7 @@
       "notas_precios": [
         {
           "titulo": "Nota",
-          "texto": "NO INCLUYE INGRESOS A PARQUES NI MUSEOS"
+          "texto": "NO INCLUYE INGRESOS A PARQUES NI MUSEOS"
         },
         {
           "titulo": "Nota",
@@ -340,10 +466,14 @@
         },
         {
           "titulo": "Nota",
-          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
+          "texto": "Solo asiento u$s 190.-"
+        },
+        {
+          "titulo": "Nota",
+          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-04-24T01:56:26.048Z"
+      "updatedAt": "2026-04-25T05:34:42.782Z"
     },
     {
       "id": "gramado-1417",
@@ -386,7 +516,57 @@
         "Tour Bento Gonzalvez y Garibaldi",
         "Seguro de Asistencia médica de Universal Assistance cobertura especial COVID - 19"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en horas de la tarde en bus Semi Cama, servicio a bordo, guía acompañante, pasando por Porto Alegre, Canoas, Esteio, Sao Leopoldo, para ascender a las sierras gauchas y a la región de las hortensias: (cena y desayuno abordo)",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Canela",
+          "detalle": "Llegada en horas de la mañana. Alojamiento en el hotel Serra Nevada, categoría 4 estrellas, ubicado en el centro del Canela, con piscina térmica. Resto del día libre para recorrer la ciudad. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar los atractivos más importantes de la ciudad de GRAMADO. Recorrido por el Lago Negro con su floresta negra alemana, Minimundo con recorrido en ciudades antiguas observando réplicas de castillos, ferrovial, casas de estilo europeo, etc, Lago Joaquina Beir, Iglesia Matriz San Pedro, Plaza de las Banderas, Valle del Kilombo con el museo Hollywoood Dream Car, con su colección de motos y autos de lujo antiguos. Almuerzo Resto del ida libre,",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar la ciudad de Canela, Iglesia Matriz o de Piedra, Parque de Caracol con su estupenda Cascada de más de 130 metros de altura, su teleférico y su caminata ecológica, Museo del Automóvil, fábrica de chocolates, artesanatos, centros comerciales, etc. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Salida en horas de la mañana rumbo al oeste para visitar la \"región de la uva y el vino\" pasando por la ciudad de Farroupilha, llegaremos hasta la ciudad de Carlos Barboza dónde tendremos la oportunidad de visitar la fábrica Tramontina, desde allí continuamos hacia la ciudad de Garibaldi (capital regional del champagne) donde veremos el lugar donde año a año se realiza la fiesta nacional del champagne, Almuerzo, y continuación en la tarde hacia la localidad de Bento Gonzalvez, donde tendremos oportunidad de visitar una bodega, viendo el proceso de elaboración del vino y además recorrer una vasta zona de valle de los viñedos. Paseo en forma Opcional en el tren -MARIA FUMACA- entre B",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Mañana libre. Almuerzo de despedida. Partida con equipajes del hotel, para emprender el viaje de retorno descendiendo la sierra, deteniéndonos en IGREGINHA, visitando una fábrica de calzados. Posterior prosecución en viaje de regreso vía Pelotas hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "URUGUAY",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 655 470 450 435 Menores de 5 años máx. 1 por habitación: Sin Cargo Solo asiento u$s 190.- NO INCLUYE: INGRESOS A PARQUES NI MUSEOS.",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Serra Nevada",
@@ -402,7 +582,7 @@
       "notas_precios": [
         {
           "titulo": "Nota",
-          "texto": "NO INCLUYE INGRESOS A PARQUES NI MUSEOS"
+          "texto": "NO INCLUYE INGRESOS A PARQUES NI MUSEOS"
         },
         {
           "titulo": "Nota",
@@ -410,10 +590,14 @@
         },
         {
           "titulo": "Nota",
-          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
+          "texto": "Solo asiento u$s 190.-"
+        },
+        {
+          "titulo": "Nota",
+          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-04-24T01:56:27.631Z"
+      "updatedAt": "2026-04-25T05:34:44.288Z"
     },
     {
       "id": "gramado-1416",
@@ -456,7 +640,57 @@
         "Tour Bento Gonzalvez y Garibaldi",
         "Seguro de Asistencia médica de Universal Assistance"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en horas de la tarde en bus Semi Cama, servicio a bordo, guía acompañante, pasando por Porto Alegre, Canoas, Esteio, Sao Leopoldo, para ascender a las sierras gauchas y a la región de las hortensias: (cena y desayuno abordo)",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Canela",
+          "detalle": "Llegada en horas de la mañana. Alojamiento en el hotel Serra Nevada, categoría 4 estrellas, ubicado en el centro del Canela, con piscina térmica. Resto del día libre para recorrer la ciudad. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar los atractivos más importantes de la ciudad de GRAMADO. Recorrido por el Lago Negro con su floresta negra alemana, Minimundo con recorrido en ciudades antiguas observando réplicas de castillos, ferrovial, casas de estilo europeo, etc, Lago Joaquina Beir, Iglesia Matriz San Pedro, Plaza de las Banderas, Valle del Kilombo con el museo Hollywoood Dream Car, con su colección de motos y autos de lujo antiguos. Almuerzo.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar la ciudad de Canela, Iglesia Matriz o de Piedra, Parque de Caracol con su estupenda Cascada de más de 130 metros de altura, su teleférico y su caminata ecológica, Museo del Automóvil, fábrica de chocolates, artesanatos, centros comerciales, etc. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Salida en horas de la mañana rumbo al oeste para visitar la \"región de la uva y el vino\" pasando por la ciudad de Farroupilha, llegaremos hasta la ciudad de Carlos Barboza dónde tendremos la oportunidad de visitar la fábrica Tramontina, desde allí continuamos hacia la ciudad de Garibaldi (capital regional del champagne) donde veremos el lugar donde año a año se realiza la fiesta nacional del champagne, Almuerzo, y continuación en la tarde hacia la localidad de Bento Gonzalvez, donde tendremos oportunidad de visitar una bodega, viendo el proceso de elaboración del vino y además recorrer una vasta zona de valle de los viñedos. Paseo en forma Opcional en el tren -MARIA FUMACA- entre B",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Mañana libre. Almuerzo de despedida. Partida con equipajes del hotel, para emprender el viaje de retorno descendiendo la sierra, deteniéndonos en IGREGINHA, visitando una fábrica de calzados. Posterior prosecución en viaje de regreso vía Pelotas hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "URUGUAY",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 1035 655 615 565 Menores de 5 años máx. 1 por habitación: Sin Cargo Solo asiento u$s 190.- NO INCLUYE: INGRESOS A PARQUES NI MUSEOS.",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Serra Nevada",
@@ -472,7 +706,7 @@
       "notas_precios": [
         {
           "titulo": "Nota",
-          "texto": "NO INCLUYE INGRESOS A PARQUES NI MUSEOS"
+          "texto": "NO INCLUYE INGRESOS A PARQUES NI MUSEOS"
         },
         {
           "titulo": "Nota",
@@ -480,10 +714,14 @@
         },
         {
           "titulo": "Nota",
-          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
+          "texto": "Solo asiento u$s 190.-"
+        },
+        {
+          "titulo": "Nota",
+          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-04-24T01:56:29.284Z"
+      "updatedAt": "2026-04-25T05:34:45.802Z"
     },
     {
       "id": "gramado-1415",
@@ -527,45 +765,95 @@
         "Traslados a los diferentes espectáculos de la Natal Luz (no incluye ingresos)",
         "Seguros de Asistencia médica."
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en horas de la tarde en bus semi cama, servicio a bordo, guía acompañante, pasando por Porto Alegre, Canoas, Esteio, Sao Leopoldo, para ascender a las sierras gauchas y a la región de las hortensias: (cena y desayuno abordo)",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Canela",
+          "detalle": "Llegada en horas de la mañana. Alojamiento en el hotel previsto. Resto del día libre para disfrutar del centro comercial de la ciudad, admirar sus hortensias florecidas, sus casas de estilo europeo y los adornos en sus calles y residencias de la famosa NATAL LUZ. Almuerzo. En la noche traslado incluido para ver los espectáculos designados para esa noche del evento.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar los atractivos más importantes de la ciudad de GRAMADO. Recorrido por el Lago Negro con su floresta negra alemana, Mini mundo con recorrido en ciudades antiguas observando réplicas de castillos, ferrovial, casas de estilo europeo, etc, Lago Joaquina Beir, Iglesia Matriz San Pedro, Plaza de las Banderas, Valle del Quilombo con el museo Hollywood Dream Car, con su colección de motos y autos de lujo antiguos. Museo de Cera, Almuerzo. En la noche traslado incluido para ver los espectáculos designados para esa noche de la Natal Luz.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana visita la ciudad de Canela, Iglesia Matriz o de Piedra, Parque del Caracol con su estupenda Cascada de más de 130 metros de altura, su teleférico y su caminata ecológica, Museo del Automóvil, fábrica de chocolates, artesanatos, centros comerciales, etc. Almuerzo. En la noche traslado incluido para ver los espectáculos designados para esa noche de la Natal Luz.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Salida en horas de la mañana rumbo al oeste para visitar la \"región de la uva y el vino\" pasando por la ciudad de Farroupilha, llegaremos hasta la ciudad de Carlos Barboza dónde tendremos la oportunidad de visitar la fábrica Tramontina, desde allí continuamos hacia la ciudad de Garibaldi (capital regional del champagne) donde veremos el lugar donde año a año se realiza la fiesta nacional del champagne, Almuerzo, y continuación en la tarde hacia la localidad de Bento Gonzalvez, donde tendremos oportunidad de visitar una bodega, viendo el proceso de elaboración del vino y además recorrer una vasta zona de valle de los viñedos. Paseo en forma Opcional en el tren -MARIA FUMACA- entre B",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Mañana libre. Almuerzo de despedida. Partida con equipajes del hotel, para emprender el viaje de retorno descendiendo la sierra, deteniéndonos en IGREGINHA, visitando una fábrica de calzados. Continuación a través de Porto Alegre con destino a:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "Uruguay",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- SALIDA: 24 DE OCTUBRE HOTEL SGL DBL TPL CPL Serra Nevada 655 470 450 435 SALIDAS: 28 DE OCTUBRE 1º DE NOVIEMBRE HOTEL SGL DBL TPL CPL Serra Nevada 720 505 480 455 SALIDAS: 7, 14 Y 21 DE NOVIEMBRE HOTEL SGL DBL TPL CPL Serra Nevada 805 545 510 485 SALIDAS: 28 DE NOVIEMBRE Y 5, 12 Y 16 DE DICIEMBRE HOTEL SGL DBL TPL CPL Serra Nevada 765 540 505 475 Menores de 5 años máx. 1 por habitación compartiendo con 2 adultos: Sin Cargo Solo asiento, servicio abordo: U$S 195.- NO INCLUYE: INGRESOS A LOS PARQUES, MUSEOS y ESPECTACULOS DE NATAL LUZ Espectáculos de Natal Luz dependiendo la fecha de salida Árbol Cantante: Un gran árbol vivo, trayendo ",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Serra Nevada",
-          "playa": "655",
-          "sgl": 470,
-          "dbl": 450,
-          "tpl": 435,
-          "cpl": null,
+          "playa": "—",
+          "sgl": 655,
+          "dbl": 470,
+          "tpl": 450,
+          "cpl": 435,
           "qpl": null,
           "cat": "http://www.hotelserranevada.com.br/"
         },
         {
           "nombre": "Serra Nevada",
-          "playa": "720",
-          "sgl": 505,
-          "dbl": 480,
-          "tpl": 455,
-          "cpl": null,
-          "qpl": null,
-          "cat": "http://www.hotelserranevada.com.br/"
-        },
-        {
-          "nombre": "Serra Nevada",
-          "playa": "805",
-          "sgl": 545,
-          "dbl": 510,
-          "tpl": 485,
-          "cpl": null,
-          "qpl": null,
-          "cat": "http://www.hotelserranevada.com.br/"
-        },
-        {
-          "nombre": "Serra Nevada",
-          "playa": "765",
-          "sgl": 540,
+          "playa": "—",
+          "sgl": 720,
           "dbl": 505,
-          "tpl": 475,
-          "cpl": null,
+          "tpl": 480,
+          "cpl": 455,
+          "qpl": null,
+          "cat": "http://www.hotelserranevada.com.br/"
+        },
+        {
+          "nombre": "Serra Nevada",
+          "playa": "—",
+          "sgl": 805,
+          "dbl": 545,
+          "tpl": 510,
+          "cpl": 485,
+          "qpl": null,
+          "cat": "http://www.hotelserranevada.com.br/"
+        },
+        {
+          "nombre": "Serra Nevada",
+          "playa": "—",
+          "sgl": 765,
+          "dbl": 540,
+          "tpl": 505,
+          "cpl": 475,
           "qpl": null,
           "cat": "http://www.hotelserranevada.com.br/"
         }
@@ -573,22 +861,18 @@
       "notas_precios": [
         {
           "titulo": "Nota",
-          "texto": "no incluye ingresos a parques, museos, etc)"
-        },
-        {
-          "titulo": "Nota",
-          "texto": "no incluye ingresos)"
-        },
-        {
-          "titulo": "Nota",
           "texto": "Menores de 5 años máx. 1 por habitación compartiendo con 2 adultos: Sin Cargo"
+        },
+        {
+          "titulo": "Nota",
+          "texto": "Solo asiento, servicio abordo: U$S 195.-"
         },
         {
           "titulo": "Nota",
           "texto": "NO INCLUYE: INGRESOS A LOS PARQUES, MUSEOS y ESPECTACULOS DE NATAL LUZ"
         }
       ],
-      "updatedAt": "2026-04-24T01:56:30.946Z"
+      "updatedAt": "2026-04-25T05:34:47.331Z"
     },
     {
       "id": "gramado-1411",
@@ -631,7 +915,57 @@
         "Tour Bento Gonzalvez y Garibaldi",
         "Seguro de Asistencia médica de Universal Assistance"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en horas de la tarde en bus Semi Cama, servicio a bordo, guía acompañante, pasando por Porto Alegre, Canoas, Esteio, Sao Leopoldo, para ascender a las sierras gauchas y a la región de las hortensias: (cena y desayuno abordo)",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Canela",
+          "detalle": "Llegada en horas de la mañana. Alojamiento en el hotel Serra Nevada, categoría 4 estrellas, ubicado en el centro del Canela, con piscina térmica. Resto del día libre para recorrer la ciudad. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar los atractivos más importantes de la ciudad de GRAMADO. Recorrido por el Lago Negro con su floresta negra alemana, Minimundo con recorrido en ciudades antiguas observando réplicas de castillos, ferrovial, casas de estilo europeo, etc, Lago Joaquina Beir, Iglesia Matriz San Pedro, Plaza de las Banderas, Valle del Kilombo con el museo Hollywoood Dream Car, con su colección de motos y autos de lujo antiguos. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar la ciudad de Canela, Iglesia Matriz o de Piedra, Parque de Caracol con su estupenda Cascada de más de 130 metros de altura, su teleférico y su caminata ecológica, Museo del Automóvil, fábrica de chocolates, artesanatos, centros comerciales, etc. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Salida en horas de la mañana rumbo al oeste para visitar la \"región de la uva y el vino\" pasando por la ciudad de Farroupilha, llegaremos hasta la ciudad de Carlos Barboza dónde tendremos la oportunidad de visitar la fábrica Tramontina, desde allí continuamos hacia la ciudad de Garibaldi (capital regional del champagne) donde veremos el lugar donde año a año se realiza la fiesta nacional del champagne, Almuerzo, y continuación en la tarde hacia la localidad de Bento Gonzalvez, donde tendremos oportunidad de visitar una bodega, viendo el proceso de elaboración del vino y además recorrer una vasta zona de valle de los viñedos. Paseo en forma Opcional en el tren -MARIA FUMACA- entre B",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Mañana libre. Almuerzo de despedida. Partida con equipajes del hotel, para emprender el viaje de retorno descendiendo la sierra, deteniéndonos en IGREGINHA, visitando una fábrica de calzados. Posterior prosecución en viaje de regreso vía Pelotas hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "URUGUAY",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 615 460 440 420 Menores de 5 años máx. 1 por habitación: Sin Cargo Solo asiento u$s 190.- NO INCLUYE: INGRESOS A PARQUES NI MUSEOS.",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Serra Nevada",
@@ -647,7 +981,7 @@
       "notas_precios": [
         {
           "titulo": "Nota",
-          "texto": "NO INCLUYE INGRESOS A PARQUES NI MUSEOS"
+          "texto": "NO INCLUYE INGRESOS A PARQUES NI MUSEOS"
         },
         {
           "titulo": "Nota",
@@ -655,10 +989,14 @@
         },
         {
           "titulo": "Nota",
-          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
+          "texto": "Solo asiento u$s 190.-"
+        },
+        {
+          "titulo": "Nota",
+          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-04-24T01:56:32.560Z"
+      "updatedAt": "2026-04-25T05:34:48.871Z"
     },
     {
       "id": "gramado-1400",
@@ -701,7 +1039,57 @@
         "Tour Bento Gonzalvez y Garibaldi",
         "Seguro de Asistencia médica de Universal Assistance"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en horas de la tarde en bus Semi Cama, servicio a bordo, guía acompañante, pasando por Porto Alegre, Canoas, Esteio, Sao Leopoldo, para ascender a las sierras gauchas y a la región de las hortensias: (cena y desayuno abordo)",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Canela",
+          "detalle": "Llegada en horas de la mañana. Alojamiento en el hotel Serra Nevada, categoría 4 estrellas, ubicado en el centro del Canela, con piscina térmica. Resto del día libre para recorrer la ciudad. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar los atractivos más importantes de la ciudad de GRAMADO. Recorrido por el Lago Negro con su floresta negra alemana, Minimundo con recorrido en ciudades antiguas observando réplicas de castillos, ferrovial, casas de estilo europeo, etc, Lago Joaquina Beir, Iglesia Matriz San Pedro, Plaza de las Banderas, Valle del Kilombo con el museo Hollywoood Dream Car, con su colección de motos y autos de lujo antiguos. Almuerzo Resto del dia libre,",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar la ciudad de Canela, Iglesia Matriz o de Piedra, Parque de Caracol con su estupenda Cascada de más de 130 metros de altura, su teleférico y su caminata ecológica, Museo del Automóvil, fábrica de chocolates, artesanatos, centros comerciales, etc. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Salida en horas de la mañana rumbo al oeste para visitar la \"región de la uva y el vino\" pasando por la ciudad de Farroupilha, llegaremos hasta la ciudad de Carlos Barboza dónde tendremos la oportunidad de visitar la fábrica Tramontina, desde allí continuamos hacia la ciudad de Garibaldi (capital regional del champagne) donde veremos el lugar donde año a año se realiza la fiesta nacional del champagne, Almuerzo, y continuación en la tarde hacia la localidad de Bento Gonzalvez, donde tendremos oportunidad de visitar una bodega, viendo el proceso de elaboración del vino y además recorrer una vasta zona de valle de los viñedos. Paseo en forma Opcional en el tren -MARIA FUMACA- entre B",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Mañana libre. Almuerzo de despedida. Partida con equipajes del hotel, para emprender el viaje de retorno descendiendo la sierra, deteniéndonos en IGREGINHA, visitando una fábrica de calzados. Posterior prosecución en viaje de regreso vía Pelotas hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "URUGUAY",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- SALIDA: 27 DE JUNIO HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 610 450 425 405 SALIDA: 04 DE JULIO HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 640 465 450 430 Menores de 5 años máx. 1 por habitación: Sin Cargo Solo asiento u$s 200.- NO INCLUYE: INGRESOS A PARQUES NI MUSEOS. 27 DE JUNIO SALIDA DE MONTEVIDEO Y LITORAL (PAYSANDU, SALTO, TACUAREMBO Y RIVERA)",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Serra Nevada",
@@ -727,7 +1115,7 @@
       "notas_precios": [
         {
           "titulo": "Nota",
-          "texto": "NO INCLUYE INGRESOS A PARQUES NI MUSEOS"
+          "texto": "NO INCLUYE INGRESOS A PARQUES NI MUSEOS"
         },
         {
           "titulo": "Nota",
@@ -735,10 +1123,14 @@
         },
         {
           "titulo": "Nota",
-          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
+          "texto": "Solo asiento u$s 200.-"
+        },
+        {
+          "titulo": "Nota",
+          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-04-24T01:56:34.142Z"
+      "updatedAt": "2026-04-25T05:34:50.395Z"
     },
     {
       "id": "gramado-1396",
@@ -781,7 +1173,57 @@
         "Tour Bento Gonzalvez y Garibaldi",
         "Seguro de Asistencia médica de Universal Assistance"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en horas de la tarde en bus Semi Cama, servicio a bordo, guía acompañante, pasando por Porto Alegre, Canoas, Esteio, Sao Leopoldo, para ascender a las sierras gauchas y a la región de las hortensias: (cena y desayuno abordo)",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Canela",
+          "detalle": "Llegada en horas de la mañana. Alojamiento en el hotel Serra Nevada, categoría 4 estrellas, ubicado en el centro del Canela, con piscina térmica. Resto del día libre para recorrer la ciudad. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar los atractivos más importantes de la ciudad de GRAMADO. Recorrido por el Lago Negro con su floresta negra alemana, Minimundo con recorrido en ciudades antiguas observando réplicas de castillos, ferrovial, casas de estilo europeo, etc, Lago Joaquina Beir, Iglesia Matriz San Pedro, Plaza de las Banderas, Valle del Kilombo con el museo Hollywoood Dream Car, con su colección de motos y autos de lujo antiguos. Almuerzo Resto del dia libre,",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Canela",
+          "detalle": "Desayuno. En horas de la mañana salida para visitar la ciudad de Canela, Iglesia Matriz o de Piedra, Parque de Caracol con su estupenda Cascada de más de 130 metros de altura, su teleférico y su caminata ecológica, Museo del Automóvil, fábrica de chocolates, artesanatos, centros comerciales, etc. Almuerzo incluido.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Salida en horas de la mañana rumbo al oeste para visitar la \"región de la uva y el vino\" pasando por la ciudad de Farroupilha, llegaremos hasta la ciudad de Carlos Barboza dónde tendremos la oportunidad de visitar la fábrica Tramontina, desde allí continuamos hacia la ciudad de Garibaldi (capital regional del champagne) donde veremos el lugar donde año a año se realiza la fiesta nacional del champagne, Almuerzo, y continuación en la tarde hacia la localidad de Bento Gonzalvez, donde tendremos oportunidad de visitar una bodega, viendo el proceso de elaboración del vino y además recorrer una vasta zona de valle de los viñedos. Paseo en forma Opcional en el tren -MARIA FUMACA- entre B",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Canela",
+          "detalle": "Desayuno. Mañana libre. Almuerzo de despedida. Partida con equipajes del hotel, para emprender el viaje de retorno descendiendo la sierra, deteniéndonos en IGREGINHA, visitando una fábrica de calzados. Posterior prosecución en viaje de regreso vía Pelotas hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "URUGUAY",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- HOTEL CAT SGL DBL TPL CPL Serra Nevada 4 585 435 420 405 Menores de 5 años máx. 1 por habitación: Sin Cargo Solo asiento u$s 190.- NO INCLUYE: INGRESOS A PARQUES NI MUSEOS.",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Serra Nevada",
@@ -797,7 +1239,7 @@
       "notas_precios": [
         {
           "titulo": "Nota",
-          "texto": "NO INCLUYE INGRESOS A PARQUES NI MUSEOS"
+          "texto": "NO INCLUYE INGRESOS A PARQUES NI MUSEOS"
         },
         {
           "titulo": "Nota",
@@ -805,10 +1247,14 @@
         },
         {
           "titulo": "Nota",
-          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
+          "texto": "Solo asiento u$s 190.-"
+        },
+        {
+          "titulo": "Nota",
+          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-04-24T01:56:35.746Z"
+      "updatedAt": "2026-04-25T05:34:51.910Z"
     },
     {
       "id": "buenosaires-1414",
@@ -850,15 +1296,58 @@
         "Ingresos a: Temaiken, Mundo Marino, Parque de la Costa",
         "Seguro de Universal Asistence Regional incluido"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Montevideo",
+          "detalle": "Salida en horas de la noche, en bus pullman, guía acompañante, servicio a bordo, hacia:",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Temaiken",
+          "detalle": "Llegada. Visita de este importante Parque temático donde podremos ver diferentes tipos de animales en su hábitat natural. Ingreso incluido. Tiempo libre. Continuación en la tarde hacia: Buenos Aires: Llegada directamente al hotel. Tiempo libre. Noche libre para asistir a espectáculos de teatros, etc.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Buenos Aires",
+          "detalle": "Desayuno. Mañana libre para compras. Alojamiento hasta 11 hs. En horas de la tarde, partida a través de la autopista Buenos Aires, La Plata, pasando por Castelli, para desviarnos hacia la costa y arribar a: San Clemente de Tuyu. Llegada en las últimas horas de la tarde. Alojamiento. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "San Clemente de Tuyu",
+          "detalle": "Desayuno. Visita del Parque Temático Mundo Marino con ingreso incluido, para deleitarnos con los geniales shows de delfines, orcas, pingüinos, focas y demás animales marinos. Tiempo libre hasta la tarde para disfrutar de este magnífico lugar. Almuerzo opcional en el Parque. Cena en el hotel.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "San Clemente de Tuyu",
+          "detalle": "Desayuno. Partida con equipajes en horas de la mañana pasando por La Plata, para dirigirnos directamente al: Parque de la Costa. Ingreso con Pasaporte Full incluido para disfrutar de los juegos y espectáculos que allí se ofrecen hasta las últimas horas de la tarde. Continuación en viaje de regreso por Gualeguaychu hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Montevideo",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios.- HOTEL SGL DBL TPL CPL BUE: Duomi / San Clemente: Morales 585 485 485 485 MENORES HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE (UNO POR HABITACION) SALIDAS DE MONTEVIDEO Y LITORAL (PAYSANDU Y SALTO)",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "BUE: Duomi / San Clemente: Morales",
-          "playa": "585",
-          "sgl": 485,
+          "playa": "—",
+          "sgl": 585,
           "dbl": 485,
           "tpl": 485,
-          "cpl": null,
+          "cpl": 485,
           "qpl": null,
           "cat": ""
         }
@@ -869,7 +1358,7 @@
           "texto": "MENORES HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE (UNO POR HABITACION)"
         }
       ],
-      "updatedAt": "2026-04-24T01:56:42.086Z"
+      "updatedAt": "2026-04-25T05:34:58.040Z"
     },
     {
       "id": "mendoza-1412",
@@ -886,7 +1375,7 @@
       "fechas": [
         {
           "label": "Salidas",
-          "value": "8, 15, 22 DE AGOSTO / 12, 26 DE SETIEMBRE / 10, 17, 24 DE OC",
+          "value": "8, 15, 22 DE AGOSTO / 12, 26 DE SETIEMBRE / 11, 17, 24 DE OC",
           "gold": true
         },
         {
@@ -914,7 +1403,64 @@
         "Tour bodegas y viñedos",
         "Seguro de asistencia de Universal Asistance con cobertura especial COVID - 19"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en horas del mediodia en bus semi cama cena y desayuno a bordo, guía acompañante, servicio abordo pasando Villa Mercedes, San Luis, con destino a:",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Mendoza",
+          "detalle": "Llegada en horas de la mañana. Alojamiento en el hotel previsto. En horas de la tarde recorrido por la ciudad conociendo la ciudad antigua con el aérea fundacional, Plaza Pedro del Castillo y Ruinas de San Francisco y la Moderna con su micro centro donde lucen plazas, paseos, avenidas. Continuaremos por el centro cívico con sus edificios inmersos en espacios verdes y a través de la residencial avd. Emilio Civil, ingresaremos al Parque San Martín por los Portones. Allí recorreremos sus bosquecillos, el Rosedal, Lago, Clubes, Regreso por la zona pre cordillerana El Challao donde se encuentra el Santuario de la Virgen de Lourdes y el Estadio Mundialista. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Salida en horas de la mañana pasando por Luján de Cuyo, para iniciar el cruce pre cordillerano a través de Potrerillos, Cacheuta, termas de Cacheuta, Picheuta, hacia el Valle de Uspallata. Ya divisando la cordillera de los Andes pasaremos por Polvaredas, escala en Puente del Inca para recorrer sus puntos más interesantes, Mirador del Aconcagua con la vista del Coloso de América, Las Cuevas. En las últimas horas de la tarde regreso a Mendoza. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Día enteramente libre. Se recomienda paseo opcional a San Rafael y Cañón del Rio Atuel. Salida a través de la ruta 40 y atravesando el Valle de Uco, pasando por la ciudad de Tunuyan, hacia la ciudad de San Rafael. Al llegar a la misma comenzaremos a realizar el tour al increíble Cañón del Rio Atuel. Pasando por Comodoro Venegas, Cuesta de los Terneros, Parque Sierra Pintada, para dirigirnos al el NIHUIL, visitando el Embalse y Dique, Club de pescadores y a su villa de descanso. Tiempo libre para almuerzo. Retomamos el viaje para iniciar el descenso del Cañón del Atuel donde apreciaremos la espectacularidad de la naturaleza descubriendo en cada formación rocosa figuras y formas exót",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Salida en horas de la mañana hacia el sur del Gran Mendoza, ingresando entre viñedos y parrales a la primera zona de productores de vinos finos del país, donde visitaremos bodegas. En ellas podremos además de conocer sus instalaciones comprender los secretos de la elaboración del vino y degustarlo. Regreso al hotel en horas del mediodía. Tarde libre. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Día enteramente libre. Sugerimos realizar excursión opcional de medio día a Villavicencio o bien al Valle de Uco. Esta excusión se interna en el pujante Valle de Uco donde el paisaje parece ser de otro sitio cuando lomadas cultivadas con forrajeras y hortalizas aparecen junto al marco del Cordón del Plata y el Imponente Cerro Tupungato. Visitaremos el Cristo Rey donde nos dará una vista panorámica del Valle. Casi al final del recorrido, junto a la Cordillera y a claros arroyos de deshielo está el Manzano Histórico donde el Gral. San Martin se reunió con el Coronel Olazabal a su regreso de Chile. Se podrá realizar un almuerzo en Bodegas Gimenez Rilli. También está la posibilidad de ",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Partida con equipajes en horas de la mañana, almuerzo a bordo en viaje de regreso pasando por San Luis, Villa Mercedes, hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 8",
+          "lugar": "Uruguay",
+          "detalle": "Arribo en horas de la mañana. - FIN DE NUESTROS SERVICIOS. HOTEL CAT SGL DBL TPL CPL Carollo 3 770 620 590 - Princess 3 815 645 615 590 Royal Princes 4 995 745 665 - Menores hasta 2 años acompañados de 2 adultos (1 por habitación): free Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Carollo",
@@ -951,9 +1497,13 @@
         {
           "titulo": "Nota",
           "texto": "Menores hasta 2 años acompañados de 2 adultos (1 por habitación): free"
+        },
+        {
+          "titulo": "Nota",
+          "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-04-24T01:56:43.759Z"
+      "updatedAt": "2026-04-25T05:34:59.554Z"
     },
     {
       "id": "mendoza-1407",
@@ -998,44 +1548,101 @@
         "Tour bodegas y viñedos",
         "Seguro de asistencia de Universal Asistance con cobertura especial COVID - 19"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en horas del mediodia en bus semi cama cena y desayuno a bordo, guía acompañante, servicio abordo pasando Villa Mercedes, San Luis, con destino a:",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Mendoza",
+          "detalle": "Llegada en horas de la mañana. Alojamiento en el hotel previsto. En horas de la tarde recorrido por la ciudad conociendo la ciudad antigua con el aérea fundacional, Plaza Pedro del Castillo y Ruinas de San Francisco y la Moderna con su micro centro donde lucen plazas, paseos, avenidas. Continuaremos por el centro cívico con sus edificios inmersos en espacios verdes y a través de la residencial avd. Emilio Civil, ingresaremos al Parque San Martín por los Portones. Allí recorreremos sus bosquecillos, el Rosedal, Lago, Clubes, Regreso por la zona pre cordillerana El Challao donde se encuentra el Santuario de la Virgen de Lourdes y el Estadio Mundialista. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Salida en horas de la mañana pasando por Luján de Cuyo, para iniciar el cruce pre cordillerano a través de Potrerillos, Cacheuta, termas de Cacheuta, Picheuta, hacia el Valle de Uspallata. Ya divisando la cordillera de los Andes pasaremos por Polvaredas, escala en Puente del Inca para recorrer sus puntos más interesantes, Mirador del Aconcagua con la vista del Coloso de América, Las Cuevas. En las últimas horas de la tarde regreso a Mendoza. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Día enteramente libre. Se recomienda paseo opcional a San Rafael y Cañón del Rio Atuel. Salida a través de la ruta 40 y atravesando el Valle de Uco, pasando por la ciudad de Tunuyan, hacia la ciudad de San Rafael. Al llegar a la misma comenzaremos a realizar el tour al increíble Cañón del Rio Atuel. Pasando por Comodoro Venegas, Cuesta de los Terneros, Parque Sierra Pintada, para dirigirnos al el NIHUIL, visitando el Embalse y Dique, Club de pescadores y a su villa de descanso. Tiempo libre para almuerzo. Retomamos el viaje para iniciar el descenso del Cañón del Atuel donde apreciaremos la espectacularidad de la naturaleza descubriendo en cada formación rocosa figuras y formas exót",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Salida en horas de la mañana hacia el sur del Gran Mendoza, ingresando entre viñedos y parrales a la primera zona de productores de vinos finos del país, donde visitaremos bodegas. En ellas podremos además de conocer sus instalaciones comprender los secretos de la elaboración del vino y degustarlo. Regreso al hotel en horas del mediodía. Tarde libre. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Día enteramente libre. Sugerimos realizar excursión opcional de medio día a Villavicencio o bien al Valle de Uco. Esta excusión se interna en el pujante Valle de Uco donde el paisaje parece ser de otro sitio cuando lomadas cultivadas con forrajeras y hortalizas aparecen junto al marco del Cordón del Plata y el Imponente Cerro Tupungato. Visitaremos el Cristo Rey donde nos dará una vista panorámica del Valle. Casi al final del recorrido, junto a la Cordillera y a claros arroyos de deshielo está el Manzano Histórico donde el Gral. San Martin se reunió con el Coronel Olazabal a su regreso de Chile. Se podrá realizar un almuerzo en Bodegas Gimenez Rilli. También está la posibilidad de ",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Partida con equipajes en horas de la mañana, almuerzo a bordo en viaje de regreso pasando por San Luis, Villa Mercedes, hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 8",
+          "lugar": "Uruguay",
+          "detalle": "Arribo en horas de la mañana. - FIN DE NUESTROS SERVICIOS. HOTEL SGL DBL TPL CPL Carollo 770 620 590 - Princess 815 645 615 590 Urbana Class 770 655 640 - Royal Princes 995 745 665 - Menores hasta 2 años acompañados de 2 adultos (1 por habitación): free Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Carollo",
-          "playa": "770",
-          "sgl": 620,
-          "dbl": 590,
-          "tpl": null,
-          "cpl": null,
-          "qpl": null,
-          "cat": ""
-        },
-        {
-          "nombre": "Princess",
-          "playa": "815",
-          "sgl": 645,
-          "dbl": 615,
+          "playa": "—",
+          "sgl": 770,
+          "dbl": 620,
           "tpl": 590,
           "cpl": null,
           "qpl": null,
           "cat": ""
         },
         {
+          "nombre": "Princess",
+          "playa": "—",
+          "sgl": 815,
+          "dbl": 645,
+          "tpl": 615,
+          "cpl": 590,
+          "qpl": null,
+          "cat": ""
+        },
+        {
           "nombre": "Urbana Class",
-          "playa": "770",
-          "sgl": 655,
-          "dbl": 640,
-          "tpl": null,
+          "playa": "—",
+          "sgl": 770,
+          "dbl": 655,
+          "tpl": 640,
           "cpl": null,
           "qpl": null,
           "cat": ""
         },
         {
           "nombre": "Royal Princes",
-          "playa": "995",
-          "sgl": 745,
-          "dbl": 665,
-          "tpl": null,
+          "playa": "—",
+          "sgl": 995,
+          "dbl": 745,
+          "tpl": 665,
           "cpl": null,
           "qpl": null,
           "cat": ""
@@ -1045,9 +1652,13 @@
         {
           "titulo": "Nota",
           "texto": "Menores hasta 2 años acompañados de 2 adultos (1 por habitación): free"
+        },
+        {
+          "titulo": "Nota",
+          "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-04-24T01:56:45.361Z"
+      "updatedAt": "2026-04-25T05:35:01.058Z"
     },
     {
       "id": "mendoza-1358",
@@ -1092,7 +1703,64 @@
         "Tour bodegas y viñedos",
         "Seguro de asistencia de Universal Asistance con cobertura especial COVID - 19"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en horas del mediodia en bus semi cama cena y desayuno a bordo, guía acompañante, servicio abordo pasando Villa Mercedes, San Luis, con destino a:",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Mendoza",
+          "detalle": "Llegada en horas de la mañana. Alojamiento en el hotel previsto. En horas de la tarde recorrido por la ciudad conociendo la ciudad antigua con el aérea fundacional, Plaza Pedro del Castillo y Ruinas de San Francisco y la Moderna con su micro centro donde lucen plazas, paseos, avenidas. Continuaremos por el centro cívico con sus edificios inmersos en espacios verdes y a través de la residencial avd. Emilio Civil, ingresaremos al Parque San Martín por los Portones. Allí recorreremos sus bosquecillos, el Rosedal, Lago, Clubes, Regreso por la zona pre cordillerana El Challao donde se encuentra el Santuario de la Virgen de Lourdes y el Estadio Mundialista. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Salida en horas de la mañana pasando por Luján de Cuyo, para iniciar el cruce pre cordillerano a través de Potrerillos, Cacheuta, termas de Cacheuta, Picheuta, hacia el Valle de Uspallata. Ya divisando la cordillera de los Andes pasaremos por Polvaredas, escala en Puente del Inca para recorrer sus puntos más interesantes, Mirador del Aconcagua con la vista del Coloso de América, Las Cuevas. En las últimas horas de la tarde regreso a Mendoza. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Día enteramente libre. Se recomienda paseo opcional a San Rafael y Cañón del Rio Atuel. Salida a través de la ruta 40 y atravesando el Valle de Uco, pasando por la ciudad de Tunuyan, hacia la ciudad de San Rafael. Al llegar a la misma comenzaremos a realizar el tour al increíble Cañón del Rio Atuel. Pasando por Comodoro Venegas, Cuesta de los Terneros, Parque Sierra Pintada, para dirigirnos al el NIHUIL, visitando el Embalse y Dique, Club de pescadores y a su villa de descanso. Tiempo libre para almuerzo. Retomamos el viaje para iniciar el descenso del Cañón del Atuel donde apreciaremos la espectacularidad de la naturaleza descubriendo en cada formación rocosa figuras y formas exót",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Salida en horas de la mañana hacia el sur del Gran Mendoza, ingresando entre viñedos y parrales a la primera zona de productores de vinos finos del país, donde visitaremos bodegas. En ellas podremos además de conocer sus instalaciones comprender los secretos de la elaboración del vino y degustarlo. Regreso al hotel en horas del mediodía. Tarde libre. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Día enteramente libre. Sugerimos realizar excursión opcional de medio día a Villavicencio o bien al Valle de Uco. Esta excusión se interna en el pujante Valle de Uco donde el paisaje parece ser de otro sitio cuando lomadas cultivadas con forrajeras y hortalizas aparecen junto al marco del Cordón del Plata y el Imponente Cerro Tupungato. Visitaremos el Cristo Rey donde nos dará una vista panorámica del Valle. Casi al final del recorrido, junto a la Cordillera y a claros arroyos de deshielo está el Manzano Histórico donde el Gral. San Martin se reunió con el Coronel Olazabal a su regreso de Chile. Se podrá realizar un almuerzo en Bodegas Gimenez Rilli. También está la posibilidad de ",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "Mendoza",
+          "detalle": "Desayuno. Partida con equipajes en horas de la mañana, almuerzo a bordo en viaje de regreso pasando por San Luis, Villa Mercedes, hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 8",
+          "lugar": "Uruguay",
+          "detalle": "Arribo en horas de la mañana. - FIN DE NUESTROS SERVICIOS. HOTEL CAT SGL DBL TPL CPL Carollo 3 770 620 590 - Princess 3 815 645 615 590 Royal Princes 4 995 745 665 - Menores hasta 2 años acompañados de 2 adultos (1 por habitación): free Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Carollo",
@@ -1129,9 +1797,13 @@
         {
           "titulo": "Nota",
           "texto": "Menores hasta 2 años acompañados de 2 adultos (1 por habitación): free"
+        },
+        {
+          "titulo": "Nota",
+          "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-04-24T01:56:46.957Z"
+      "updatedAt": "2026-04-25T05:35:02.593Z"
     },
     {
       "id": "norte-1406",
@@ -1173,6 +1845,7 @@
         "03 noches en Salta con desayuno",
         "07 comidas más 1 cenas show en Peña en Salta",
         "Visita Quebrada de los Sosa, el Indio, Tafi del Valle",
+        "Tour Cafayate por Cuesta del Infiernillo, Ruinas de los indios Quilmes y Abra del Infiernillo, Quebrada del Rio Las Conchas y sus formaciones rocosas, Valle de Lerma Tour Quebrada de Humahuaca, Pumamarca, Maimara, Tilcara, Visita Humahuaca, Serranias del Hornocal.",
         "City tour Jujuy / City tour Salta / Visita del Dique El Cadillar / City tour Tucumán/ Termas de Río Hondo",
         "Seguro de Asistencia médica de Universal Assistance"
       ],
@@ -1180,10 +1853,10 @@
       "hoteles": [
         {
           "nombre": "Tafi: Colonial 3* Jujuy: H.Johnson 4* Salta: Alejandro I 5*",
-          "playa": "1590",
-          "sgl": 1150,
-          "dbl": 1115,
-          "tpl": null,
+          "playa": "—",
+          "sgl": 1590,
+          "dbl": 1150,
+          "tpl": 1115,
           "cpl": null,
           "qpl": null,
           "cat": ""
@@ -1192,14 +1865,10 @@
       "notas_precios": [
         {
           "titulo": "Nota",
-          "texto": "no incluye entrada). Cafayate Llegada a esta localidad famosa por sus viñedos y vinos finos. Visita a una bodega de afamada marca, tiempo libre para almuerzo. Luego continuamos camino hacia salta por"
-        },
-        {
-          "titulo": "Nota",
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-04-24T01:56:48.531Z"
+      "updatedAt": "2026-04-25T05:35:04.096Z"
     },
     {
       "id": "norte-1405",
@@ -1241,17 +1910,75 @@
         "02 noches en Jujuy con desayuno",
         "Régimen de media pensión 07 comidas más 01 Peña en Salta",
         "Visita Quebrada de los Sosa, el Indio, Tafi del Valle",
+        "Tour Cafayate por Cuesta del Infiernillo, Ruinas de los indios Quilmes y Abra del Infiernillo, Quebrada del Rio Las Conchas y sus formaciones rocosas, Valle de Lerma Tour Quebrada de Humahuaca, Pumamarca, Maimara, Tilcara, Visita Humahuaca, Serranias del Hornocal.",
         "City tour Jujuy / City tour Salta / Visita del Dique El Cadillar / City tour Tucumán/ Termas de Río Hondo",
         "Seguro de Asistencia médica de Universal Assistance"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en bus semi cama pasando por Gualeguaychu, Rafaela, Santiago del Estero, La Banda, Termas de Rio Hondo hacia:",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Tafí del Valle",
+          "detalle": "Ingresamos a la Provincia de Tucumán pasando por Famaillá donde tomamos la Ruta Nacional 38, en Acheral desviamos a través de la ruta provincial 307 conocida como la ruta de los Valles Calchaquíes, donde ascendemos por la Reserva Natural Quebrada de los Sosa acompañados por el río homónimo y por una exuberante vegetación subtropical que conforma la selva tucumano-oranense, paramos en el monumento El Indio con un mirador con vista del inmenso paisaje. Tafí del Valle: llegada a esta hermosa villa veraniega, ubicada a más de 2000 msnm y rodeada de cerros, entre ellos el imponente Aconquija. Aquí conviven los restos de una de las más antiguas culturas precolombinas. Alojamiento. Cena",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Tafí del Valle – Salta (320 km)",
+          "detalle": "desayuno y salida por Cuesta del Infiernillo y Abra del Infiernillo, donde la Cadena del Aconquija supera los 3000 msnm. Luego comenzamos a descender por el Valle de Yocavil pasando Ampimpa del Valle, Amaicha del Valle y Ruinas de Quilmes (breve visita, no incluye entrada). Cafayate Llegada a esta localidad famosa por sus viñedos y vinos finos. Visita a una bodega de afamada marca, tiempo libre para almuerzo. Luego continuamos camino hacia salta por Ruta Nacional 68 donde recorremos la majestuosa Quebrada de Cafayate, cuya belleza sorprende por el colorido de sus cerros, como también por las formas caprichosas de las rocas y que despliega toda su hermosura en lugares como Los Colorados, La Y",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Salta",
+          "detalle": "Desayuno y día libre. En este día sugerimos efectuar en forma opcional la excursión: Tren a las Nubes. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Salta",
+          "detalle": "Desayuno. Día libre. En este día sugerimos efectuar en forma opcional la excursión 1-Cachi: Conociendo Quebrada Escoipe, Cuesta del Obispo, Piedra del Molino a 3350 msnm, Recta de Tin Tin y la pintoresca localidad de Cachi. Cena Show en la Peña de Baldrrama donde disfrutaremos del verdadero folklore norteño entre cantos y bailes.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Salta",
+          "detalle": "Desayuno. Visita de la ciudad conociendo: Villa de San Lorenzo, Mercado Artesanal, monumento al 20 de Febrero, Iglesia de San Francisco, Convento de San Bernardo, Monumento a Güemes, Parque San Martín, Catedral del Señor y la virgen del Milagro, Panteón de las Glorias del Norte y Cabildo. Tarde libre para recorrer esta hermosa Ciudad con sus múltiples monumentos, museos iglesias, y el cerro San Bernardo. Por la tarde, salida hacia San Salvador de Jujuy. Llegada y alojamiento. visita a la ciudad: Plaza Belgrano, Casa de Gobierno, con el Salón de la Bandera, donde se guarda la Enseña Nacional más antigua que posee el país, La Catedral. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "Salta – Jujuy",
+          "detalle": "Desayuno y salida hacia Jujuy, resto del día libre, sugerimos realizar en forma opcional excursión a Salinas Grandes, trepando por el maravilloso paisaje que nos regala la cuesta del Lipan, alcanzando los 4170 mts sobre el nivel del mar, luego se arriba al impresionante salar para disfrutar de toda su magnitud, sus llamativas piscinas azules. Cena",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 10",
+          "lugar": "Uruguay",
+          "detalle": "Llegada en horas del mediodía... ¡¡FIN DE NUESTRO SERVICIOS!! HOTELES SGL DBL TPL Tafi: Colonial 3 Salta: Alejandro I 5 Jujuy: H.Johnson 4 1590 1150 1115 MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE OPCIONALES: Tren a las Nubes Salida desde Salta en minibuses hasta llegar al pueblo de San Antonio de los Cobres desde allí en el famoso TREN DE LAS NUBES que a bordo de un tren de alta montaña realiza un recorrido en plena Cordillera de los Andes teniendo como punto final el Viaducto Las Polvorillas de 224 mts. de longitud y 63 mts. de altura localizada a casi 4000 m/s/n/m. La altura de sus vías que llegan a los 4.200 mts. Sobre el nivel del mar, lo convierte en uno de los trenes más a",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Tafi: Colonial 3* Salta: Alejandro I 5* Jujuy: H.Johnson 4*",
-          "playa": "1590",
-          "sgl": 1150,
-          "dbl": 1115,
-          "tpl": null,
+          "playa": "—",
+          "sgl": 1590,
+          "dbl": 1150,
+          "tpl": 1115,
           "cpl": null,
           "qpl": null,
           "cat": ""
@@ -1260,14 +1987,10 @@
       "notas_precios": [
         {
           "titulo": "Nota",
-          "texto": "no incluye entrada). Cafayate Llegada a esta localidad famosa por sus viñedos y vinos finos. Visita a una bodega de afamada marca, tiempo libre para almuerzo. Luego continuamos camino hacia salta por"
-        },
-        {
-          "titulo": "Nota",
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-04-24T01:56:50.140Z"
+      "updatedAt": "2026-04-25T05:35:05.602Z"
     },
     {
       "id": "norte-1395",
@@ -1309,17 +2032,75 @@
         "02 noches en Jujuy con desayuno",
         "Régimen de media pensión 07 comidas más 01 Peña en Salta",
         "Visita Quebrada de los Sosa, el Indio, Tafi del Valle",
+        "Tour Cafayate por Cuesta del Infiernillo, Ruinas de los indios Quilmes y Abra del Infiernillo, Quebrada del Rio Las Conchas y sus formaciones rocosas, Valle de Lerma Tour Quebrada de Humahuaca, Pumamarca, Maimara, Tilcara, Visita Humahuaca, Serranias del Hornocal.",
         "City tour Jujuy / City tour Salta / Visita del Dique El Cadillar / City tour Tucumán/ Termas de Río Hondo",
         "Seguro de Asistencia médica de Universal Assistance"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en bus semi cama pasando por Gualeguaychu, Rafaela, Santiago del Estero, La Banda, Termas de Rio Hondo hacia:",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Tafí del Valle",
+          "detalle": "Ingresamos a la Provincia de Tucumán pasando por Famaillá donde tomamos la Ruta Nacional 38, en Acheral desviamos a través de la ruta provincial 307 conocida como la ruta de los Valles Calchaquíes, donde ascendemos por la Reserva Natural Quebrada de los Sosa acompañados por el río homónimo y por una exuberante vegetación subtropical que conforma la selva tucumano-oranense, paramos en el monumento El Indio con un mirador con vista del inmenso paisaje. Tafí del Valle: llegada a esta hermosa villa veraniega, ubicada a más de 2000 msnm y rodeada de cerros, entre ellos el imponente Aconquija. Aquí conviven los restos de una de las más antiguas culturas precolombinas. Alojamiento. Cena",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Tafí del Valle – Salta (320 km)",
+          "detalle": "desayuno y salida por Cuesta del Infiernillo y Abra del Infiernillo, donde la Cadena del Aconquija supera los 3000 msnm. Luego comenzamos a descender por el Valle de Yocavil pasando Ampimpa del Valle, Amaicha del Valle y Ruinas de Quilmes (breve visita, no incluye entrada). Cafayate Llegada a esta localidad famosa por sus viñedos y vinos finos. Visita a una bodega de afamada marca, tiempo libre para almuerzo. Luego continuamos camino hacia salta por Ruta Nacional 68 donde recorremos la majestuosa Quebrada de Cafayate, cuya belleza sorprende por el colorido de sus cerros, como también por las formas caprichosas de las rocas y que despliega toda su hermosura en lugares como Los Colorados, La Y",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Salta",
+          "detalle": "Desayuno y día libre. En este día sugerimos efectuar en forma opcional la excursión: Tren a las Nubes. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Salta",
+          "detalle": "Desayuno. Día libre. En este día sugerimos efectuar en forma opcional la excursión 1-Cachi: Conociendo Quebrada Escoipe, Cuesta del Obispo, Piedra del Molino a 3350 msnm, Recta de Tin Tin y la pintoresca localidad de Cachi. Cena Show en la Peña de Baldrrama donde disfrutaremos del verdadero folklore norteño entre cantos y bailes.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Salta",
+          "detalle": "Desayuno. Visita de la ciudad conociendo: Villa de San Lorenzo, Mercado Artesanal, monumento al 20 de Febrero, Iglesia de San Francisco, Convento de San Bernardo, Monumento a Güemes, Parque San Martín, Catedral del Señor y la virgen del Milagro, Panteón de las Glorias del Norte y Cabildo. Tarde libre para recorrer esta hermosa Ciudad con sus múltiples monumentos, museos iglesias, y el cerro San Bernardo. Por la tarde, salida hacia San Salvador de Jujuy. Llegada y alojamiento. visita a la ciudad: Plaza Belgrano, Casa de Gobierno, con el Salón de la Bandera, donde se guarda la Enseña Nacional más antigua que posee el país, La Catedral. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "Salta – Jujuy",
+          "detalle": "Desayuno y salida hacia Jujuy, resto del día libre, sugerimos realizar en forma opcional excursión a Salinas Grandes, trepando por el maravilloso paisaje que nos regala la cuesta del Lipan, alcanzando los 4170 mts sobre el nivel del mar, luego se arriba al impresionante salar para disfrutar de toda su magnitud, sus llamativas piscinas azules. Cena",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 10",
+          "lugar": "Uruguay",
+          "detalle": "Llegada en horas del mediodía... ¡¡FIN DE NUESTRO SERVICIOS!! HOTELES SGL DBL TPL Tafi: Colonial 3 Salta: Alejandro I 5 Jujuy: H.Johnson 4 1590 1150 1115 MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE OPCIONALES: Tren a las Nubes Salida desde Salta en minibuses hasta llegar al pueblo de San Antonio de los Cobres desde allí en el famoso TREN DE LAS NUBES que a bordo de un tren de alta montaña realiza un recorrido en plena Cordillera de los Andes teniendo como punto final el Viaducto Las Polvorillas de 224 mts. de longitud y 63 mts. de altura localizada a casi 4000 m/s/n/m. La altura de sus vías que llegan a los 4.200 mts. Sobre el nivel del mar, lo convierte en uno de los trenes más a",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Tafi: Colonial 3* Salta: Alejandro I 5* Jujuy: H.Johnson 4*",
-          "playa": "1590",
-          "sgl": 1150,
-          "dbl": 1115,
-          "tpl": null,
+          "playa": "—",
+          "sgl": 1590,
+          "dbl": 1150,
+          "tpl": 1115,
           "cpl": null,
           "qpl": null,
           "cat": ""
@@ -1328,14 +2109,10 @@
       "notas_precios": [
         {
           "titulo": "Nota",
-          "texto": "no incluye entrada). Cafayate Llegada a esta localidad famosa por sus viñedos y vinos finos. Visita a una bodega de afamada marca, tiempo libre para almuerzo. Luego continuamos camino hacia salta por"
-        },
-        {
-          "titulo": "Nota",
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-04-24T01:56:51.716Z"
+      "updatedAt": "2026-04-25T05:35:07.151Z"
     },
     {
       "id": "norte-1394",
@@ -1377,6 +2154,7 @@
         "03 noches en Salta con desayuno",
         "07 comidas más 1 cenas show en Peña en Salta",
         "Visita Quebrada de los Sosa, el Indio, Tafi del Valle",
+        "Tour Cafayate por Cuesta del Infiernillo, Ruinas de los indios Quilmes y Abra del Infiernillo, Quebrada del Rio Las Conchas y sus formaciones rocosas, Valle de Lerma Tour Quebrada de Humahuaca, Pumamarca, Maimara, Tilcara, Visita Humahuaca, Serranias del Hornocal.",
         "City tour Jujuy / City tour Salta / Visita del Dique El Cadillar / City tour Tucumán/ Termas de Río Hondo",
         "Seguro de Asistencia médica de Universal Assistance"
       ],
@@ -1384,10 +2162,10 @@
       "hoteles": [
         {
           "nombre": "Tafi: Colonial 3* Jujuy: H.Johnson 4* Salta: Alejandro I 5*",
-          "playa": "1590",
-          "sgl": 1150,
-          "dbl": 1115,
-          "tpl": null,
+          "playa": "—",
+          "sgl": 1590,
+          "dbl": 1150,
+          "tpl": 1115,
           "cpl": null,
           "qpl": null,
           "cat": ""
@@ -1396,14 +2174,10 @@
       "notas_precios": [
         {
           "titulo": "Nota",
-          "texto": "no incluye entrada). Cafayate Llegada a esta localidad famosa por sus viñedos y vinos finos. Visita a una bodega de afamada marca, tiempo libre para almuerzo. Luego continuamos camino hacia salta por"
-        },
-        {
-          "titulo": "Nota",
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-04-24T01:56:53.380Z"
+      "updatedAt": "2026-04-25T05:35:08.673Z"
     },
     {
       "id": "carlospaz-1404",
@@ -1441,76 +2215,112 @@
       "incluye": [
         "Consultar programa completo en agencia"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en horas de la tarde en bus semi cama, servicio a bordo, guía acompañante, cena y desayuno abordo hacia:",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Villa Carlos Paz",
+          "detalle": "Llegada en horas de la mañana. Alojamiento. En horas de la tarde, tour balcones panorámicos para recorrer la costanera del lago, el camino de las 100 curvas, la autovía variante costa azul (por el medio de las sierras) paramos en miradores de las sierras y también del lago. Por último se realiza para en el emblema urbano de la villa: El reloj Cu-Cu. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03 AL DÍA 06",
+          "lugar": "En Villa Carlos Paz",
+          "detalle": "con régimen de media pensión: Desayuno y Cenas se realizaran las siguientes excursiones: Tour Villa Gral. Belgrano y La Cumbrecita. Salida en la mañana visitando Alta Gracia con el complejo jesuítico y Museo del Che Guevara. Atravesando las sierras chicas por panorámico y sinuoso camino que pasa por pequeñas localidades turísticas como Anizacate, La Bolsa, La Serranita, La paisanita, Villa Ciudad América. En Lago y Dique los Molinos hacemos parada en el mirador. Luego ascenderemos por camino enripiado hacia La Cumbrecita, pasando por Reartes, Villa Berna. En Cumbrecita tiempo libre para recorridas y para almuerzo opcional. Visita de Villa Gral. Belgrano, ciudad alemana en las sierras de Córd",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "Villa Carlos Paz",
+          "detalle": "Desayuno. Mañana libre. Almuerzo. Partida con equipajes en horas de la tarde hacia la capital de la provincia: Córdoba. Recorrido por el Parque Sarmiento, Monumento a Artigas, Zoológico, ciudad Universitaria, Plaza San Martin, Catedral, calles peatonales, Iglesia de los Capuchinos, etc. Tiempo libre en un shopping center para compras. Continuación en viaje de regreso hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 08",
+          "lugar": "Uruguay",
+          "detalle": "Llegada en la mañana. Fin de nuestros servicios HOTELES SGL DBL TPL CPL Cristal 630 465 455 445 El Condado 650 525 525 525 Coronado 695 550 525 490 Santa Cecilia Std 770 595 595 595 Santa Cecilia Sup 985 740 740 740 Amerian 995 715 680 655 - Las hab. Cuádruples del hotel Coronado es departamento de 2 ambientes, ideales para familias. - Menores hasta 2 años acompañados de 2 adultos: FREE - Solo Asiento y servicio abordo: USD 230.- - Tour Minas Clavero y los Túneles: U$S 50.- NOTA: - Hotel Cristal y El Condado cenan en el hotel menú fijo - Hotel Santa Cecilia las cenas son en el mismo hotel (bufet de entradas, plato principal fijo y postre fijo) - Hotel Coronado y Amerian ME",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Cristal",
-          "playa": "630",
-          "sgl": 465,
-          "dbl": 455,
-          "tpl": 445,
-          "cpl": null,
+          "playa": "—",
+          "sgl": 630,
+          "dbl": 465,
+          "tpl": 455,
+          "cpl": 445,
           "qpl": null,
           "cat": ""
         },
         {
           "nombre": "El Condado",
-          "playa": "650",
-          "sgl": 525,
+          "playa": "—",
+          "sgl": 650,
           "dbl": 525,
           "tpl": 525,
-          "cpl": null,
+          "cpl": 525,
           "qpl": null,
           "cat": "https://hotelelcondado.com.ar/"
         },
         {
           "nombre": "Coronado",
-          "playa": "695",
-          "sgl": 550,
-          "dbl": 525,
-          "tpl": 490,
-          "cpl": null,
+          "playa": "—",
+          "sgl": 695,
+          "dbl": 550,
+          "tpl": 525,
+          "cpl": 490,
           "qpl": null,
           "cat": "http://www.hotelcoronado.com.ar/"
         },
         {
           "nombre": "Santa Cecilia Std",
-          "playa": "770",
-          "sgl": 595,
+          "playa": "—",
+          "sgl": 770,
           "dbl": 595,
           "tpl": 595,
-          "cpl": null,
+          "cpl": 595,
           "qpl": null,
           "cat": ""
         },
         {
           "nombre": "Santa Cecilia Sup",
-          "playa": "985",
-          "sgl": 740,
+          "playa": "—",
+          "sgl": 985,
           "dbl": 740,
           "tpl": 740,
-          "cpl": null,
+          "cpl": 740,
           "qpl": null,
           "cat": ""
         },
         {
           "nombre": "Amerian",
-          "playa": "995",
-          "sgl": 715,
-          "dbl": 680,
-          "tpl": 655,
-          "cpl": null,
+          "playa": "—",
+          "sgl": 995,
+          "dbl": 715,
+          "tpl": 680,
+          "cpl": 655,
           "qpl": null,
           "cat": ""
         }
       ],
       "notas_precios": [
         {
-          "titulo": "Nota",
-          "texto": "Menores hasta 2 años acompañados de 2 adultos: FREE"
+          "titulo": "Precios",
+          "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-04-24T01:56:54.987Z"
+      "updatedAt": "2026-04-25T05:35:10.215Z"
     },
     {
       "id": "bariloche-1403",
@@ -1554,61 +2364,90 @@
         "Villa La Angostura y Cerro Bayo sin ascenso.",
         "Seguro de Asistencia Médica"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en horas de la mañana en bus semi cama, servicio a bordo, guía acompañante, pasando por el Puente Gral. San Martin, Zarate, Chivilcoy, Pehuajo, Trenque Lauquen, Santa Rosa, Gral. Acha, Neuquén, Piedra del Águila, Confluencia, Valle Encantado del Río Limay, para arribar a:",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "San Carlos de Bariloche",
+          "detalle": "Llegada en horas del mediodía. Alojamiento. Resto del día libre para tomar el primer conocimiento de la ciudad, Centro Cívico, catedral, vistas del Lago Nahuel Huapi, centro comercial, etc.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 08",
+          "lugar": "San Carlos de Bariloche",
+          "detalle": "Desayuno. Partida con equipajes en horas de la mañana en viaje de regreso a través del Valle Encantado observando sus hermosas formaciones rocosas, Rio Limay, Confluencia Traful, Piedra del Aguila. Almuerzo en Picun Leufu. Prosecución por Neuquén Cipolleti, Colonia 25 de Mayo, ruta de la Conquista del Desierto, Gral. Acha, Santa Rosa de la Pampa, Chivilcoy, Zarate, hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 09",
+          "lugar": "Uruguay",
+          "detalle": "Llegada en las primeras horas de la tarde. Fin de nuestros servicios HOTELES SGL DBL TPL CPL REG Hosteria Sur - 685 645 595 DES Internacional 1095 765 765 765 DES Internacional 1155 825 825 825 MAP Plaza 1260 830 830 830 DES Plaza 1350 920 920 920 MAP Kilton - - - - DES NO INCLUYE TASA DE TURISMO Menores de hasta 2 años acompañados de 2 adultos máximo 1 por habitación: free. Solo asiento, seguro de asistencia y servicio abordo: USD 315.- Sistema de cenas: Hotel Internacional, Las cenas se realizarán en el hotel, buffet de ensaladas, plato principal y postre fijo. MAP opcional para pasajeros hosedados en Hosteria Sur (6 comidas) en restaurant MENU TURISTICO; USD 210.- Elección de entrada, pla",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Hosteria Sur",
-          "playa": "-",
-          "sgl": 685,
-          "dbl": 645,
-          "tpl": 595,
-          "cpl": null,
+          "playa": "—",
+          "sgl": null,
+          "dbl": 685,
+          "tpl": 645,
+          "cpl": 595,
           "qpl": null,
           "cat": "http://www.hosteriasur.com.ar/"
         },
         {
           "nombre": "Internacional*",
-          "playa": "1095",
-          "sgl": 765,
+          "playa": "—",
+          "sgl": 1095,
           "dbl": 765,
           "tpl": 765,
-          "cpl": null,
+          "cpl": 765,
           "qpl": null,
           "cat": "http://www.internacionalbrc.com/"
         },
         {
           "nombre": "Internacional*",
-          "playa": "1155",
-          "sgl": 825,
+          "playa": "—",
+          "sgl": 1155,
           "dbl": 825,
           "tpl": 825,
-          "cpl": null,
+          "cpl": 825,
           "qpl": null,
           "cat": "http://www.internacionalbrc.com/"
         },
         {
           "nombre": "Plaza",
-          "playa": "1260",
-          "sgl": 830,
+          "playa": "—",
+          "sgl": 1260,
           "dbl": 830,
           "tpl": 830,
-          "cpl": null,
+          "cpl": 830,
           "qpl": null,
           "cat": ""
         },
         {
           "nombre": "Plaza",
-          "playa": "1350",
-          "sgl": 920,
+          "playa": "—",
+          "sgl": 1350,
           "dbl": 920,
           "tpl": 920,
-          "cpl": null,
+          "cpl": 920,
           "qpl": null,
           "cat": ""
         },
         {
           "nombre": "Kilton",
-          "playa": "-",
+          "playa": "—",
           "sgl": null,
           "dbl": null,
           "tpl": null,
@@ -1620,18 +2459,18 @@
       "notas_precios": [
         {
           "titulo": "Nota",
-          "texto": "no incluye ascenso al Campanario)"
-        },
-        {
-          "titulo": "Nota",
           "texto": "NO INCLUYE TASA DE TURISMO"
         },
         {
           "titulo": "Nota",
           "texto": "Menores de hasta 2 años acompañados de 2 adultos máximo 1 por habitación: free."
+        },
+        {
+          "titulo": "Nota",
+          "texto": "Solo asiento, seguro de asistencia y servicio abordo: USD 315.-"
         }
       ],
-      "updatedAt": "2026-04-24T01:56:56.565Z"
+      "updatedAt": "2026-04-25T05:35:11.730Z"
     },
     {
       "id": "bariloche-1386",
@@ -1669,24 +2508,53 @@
       "incluye": [
         "Bus Semi Cama con guía acompañante, servicio a bordo, almuerzo, merienda y desayuno - 06 noches de alojamiento con media pensión, 06 comidas incluidas en BRC, 1 almuerzo en viaje de regreso."
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en horas de la mañana en bus semi cama con guía acompañante a través de la frontera de Fray Bentos, cruce del Puente Gral. San Martin, Zarate, Chivilcoy, Trenque Lauquen, Santa Rosa, Gral. Acha, Neuquén, Piedra del Águila, Confluencia, Valle Encantado del Río Limay, para arribar a:",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "San Carlos de Bariloche",
+          "detalle": "Llegada en horas del mediodía. Alojamiento. Resto del día libre para tomar el primer conocimiento de la ciudad, Centro Cívico, catedral, vistas del Lago Nahuel Huapi, centro comercial, etc.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 08",
+          "lugar": "San Carlos de Bariloche",
+          "detalle": "Desayuno. Partida con equipajes en horas de la mañana en viaje de regreso pasando Valle Encantado del Rio Limay, Confluencia Traful, Piedra del Águila, Neuquén, Gral. Acha. Cena. Continuación por Santa Rosa, Zarate, hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 09",
+          "lugar": "Uruguay",
+          "detalle": "Llegada en horas de la tarde. Fin de nuestros servicios. HOTEL SGL DBL TPL Plaza 795 650 650 M 383 795 650 650 - Menores de 3 años acompañados por 2 adultos. Máximo 1 por habitación FREE - Solo asiento, seguro de asistencia y servicio abordo: USD 320.-",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Plaza",
-          "playa": "795",
-          "sgl": 650,
+          "playa": "—",
+          "sgl": 795,
           "dbl": 650,
-          "tpl": null,
+          "tpl": 650,
           "cpl": null,
           "qpl": null,
           "cat": ""
         },
         {
           "nombre": "M 383",
-          "playa": "795",
-          "sgl": 650,
+          "playa": "—",
+          "sgl": 795,
           "dbl": 650,
-          "tpl": null,
+          "tpl": 650,
           "cpl": null,
           "qpl": null,
           "cat": ""
@@ -1694,11 +2562,11 @@
       ],
       "notas_precios": [
         {
-          "titulo": "Nota",
-          "texto": "Menores de 3 años acompañados por 2 adultos. Máximo 1 por habitación FREE"
+          "titulo": "Precios",
+          "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-04-24T01:56:58.207Z"
+      "updatedAt": "2026-04-25T05:35:13.295Z"
     },
     {
       "id": "cataratas-1410",
@@ -1743,7 +2611,50 @@
         "En Ruta Ruinas de San Ignacio Mini con ingreso incluido, Minas de Wanda y Casa de Horacio Quiroga (ingreso opcional)",
         "Seguro de Asistencia médica de Universal Assistance cobertura especial COVID - 19"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en bus Semi cama con cena y desayuno abordo, guía acompañante, pasando por Chajarí, San Ignacio, Puerto Iguazú, hacia:",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Llegada. Alojamiento. Resto del día libre para disfrutar del hotel y o paseos. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Desayuno. Salida en horas de la mañana cruzando el Puente Internacional de la Amistad a territorio paraguayo y visitar la Represa de Itaipú. Observaremos un audiovisual de la misma para posteriormente visitar la sala de máquinas, Mirador del Vertedero, Lago artificial, presa principal de esta impresionante obra binacional sobre el lecho del Río Paraná, entre Paraguay y Brasil. De regreso visita de Ciudad del Este donde dispondremos de tiempo para compras. Regreso al hotel en la tarde. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Desayuno. Salida en la mañana cruzando el Puente Tancredo Neves a territorio argentino e ingresar al Parque Nacional para visitar las Cataratas Argentinas. Recorrido por los senderos superior, inferior y Garganta del Diablo. Observaremos saltos como el Bossetti, Adán y Eva, los Tres Mosqueteros, San Martín, Rivadavia, Alvar Núñez, (ingreso incluido). Cena",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Desayuno. Partida con equipajes en horas de la mañana hacia territorio argentina a través de la provincia de Misiones, entre medio de la exuberante vegetación, aserraderos, viveros forestales, plantaciones de Yerba mate, te, tabaco, visitando las minas de piedras Semi preciosas de Wanda (ingreso no incluido) hasta llegar a San Ignacio. Visita de las Ruinas Jesuíticas de San Ignacio Mini con ingres o incluido y la Casa del Escritor uruguayo Horacio Quiroga (ingreso no incluido) Almuerzo. Continuación en viaje de regreso por Alvear, Chajarí, hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "Uruguay",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios HOTELES CAT SGL DBL TPL CPL Carima 4 850 675 675 675 Vivaz 4 895 685 685 685 - Menores hasta 2 años sin asiento, máximo 1 por habitación compartiendo con 2 adultos: FREE - Menores de 3 a 5 años pagan asiento, servicio a bordo y seguro médico U$S 250.- compartiendo con 2 adultos, máximo 1 por habitación.",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Carima",
@@ -1768,15 +2679,11 @@
       ],
       "notas_precios": [
         {
-          "titulo": "Nota",
-          "texto": "Menores hasta 2 años sin asiento, máximo 1 por habitación compartiendo con 2 adultos: FREE"
-        },
-        {
-          "titulo": "Nota",
-          "texto": "Menores de 3 a 5 años pagan asiento, servicio a bordo y seguro médico U$S 250.- compartiendo con 2 adultos, máximo 1 por habitación."
+          "titulo": "Precios",
+          "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-04-24T01:56:59.820Z"
+      "updatedAt": "2026-04-25T05:35:14.831Z"
     },
     {
       "id": "cataratas-1409",
@@ -1821,7 +2728,50 @@
         "En Ruta Ruinas de San Ignacio Mini con ingreso incluido, Minas de Wanda y Casa de Horacio Quiroga (ingreso opcional)",
         "Seguro de Asistencia médica de Universal Assistance cobertura especial COVID - 19"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en bus Semi cama con cena y desayuno abordo, guía acompañante, pasando por Chajarí, San Ignacio, Puerto Iguazú, hacia:",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Llegada. Alojamiento. Resto del día libre para disfrutar del hotel y o paseos. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Desayuno. Salida en horas de la mañana cruzando el Puente Internacional de la Amistad a territorio paraguayo y visitar la Represa de Itaipú. Observaremos un audiovisual de la misma para posteriormente visitar la sala de máquinas, Mirador del Vertedero, Lago artificial, presa principal de esta impresionante obra binacional sobre el lecho del Río Paraná, entre Paraguay y Brasil. De regreso visita de Ciudad del Este donde dispondremos de tiempo para compras. Regreso al hotel en la tarde. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Desayuno. Salida en la mañana cruzando el Puente Tancredo Neves a territorio argentino e ingresar al Parque Nacional para visitar las Cataratas Argentinas. Recorrido por los senderos superior, inferior y Garganta del Diablo. Observaremos saltos como el Bossetti, Adán y Eva, los Tres Mosqueteros, San Martín, Rivadavia, Alvar Núñez, (ingreso incluido). Cena",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Desayuno. Partida con equipajes en horas de la mañana hacia territorio argentina a través de la provincia de Misiones, entre medio de la exuberante vegetación, aserraderos, viveros forestales, plantaciones de Yerba mate, te, tabaco, visitando las minas de piedras Semi preciosas de Wanda (ingreso no incluido) hasta llegar a San Ignacio. Visita de las Ruinas Jesuíticas de San Ignacio Mini con ingres o incluido y la Casa del Escritor uruguayo Horacio Quiroga (ingreso no incluido) Almuerzo. Continuación en viaje de regreso por Alvear, Chajarí, hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "Uruguay",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios HOTELES CAT SGL DBL TPL CPL Carima 4 840 690 690 690 Vivaz 4 1015 735 735 735 - Menores hasta 2 años sin asiento, máximo 1 por habitación compartiendo con 2 adultos: FREE - Menores de 3 a 5 años pagan asiento, servicio a bordo y seguro médico U$S 250.- compartiendo con 2 adultos, máximo 1 por habitación.",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Carima",
@@ -1846,15 +2796,11 @@
       ],
       "notas_precios": [
         {
-          "titulo": "Nota",
-          "texto": "Menores hasta 2 años sin asiento, máximo 1 por habitación compartiendo con 2 adultos: FREE"
-        },
-        {
-          "titulo": "Nota",
-          "texto": "Menores de 3 a 5 años pagan asiento, servicio a bordo y seguro médico U$S 250.- compartiendo con 2 adultos, máximo 1 por habitación."
+          "titulo": "Precios",
+          "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-04-24T01:57:01.400Z"
+      "updatedAt": "2026-04-25T05:35:16.330Z"
     },
     {
       "id": "cataratas-1401",
@@ -1899,7 +2845,50 @@
         "En Ruta Ruinas de San Ignacio Mini con ingreso incluido, Minas de Wanda y Casa de Horacio Quiroga (ingreso opcional)",
         "Seguro de Asistencia médica de Universal Assistance cobertura especial COVID - 19"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en bus Semi cama con cena y desayuno abordo, guía acompañante, pasando por Chajarí, San Ignacio, Puerto Iguazú, hacia:",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Llegada. Alojamiento. Resto del día libre para disfrutar del hotel y o paseos. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Desayuno. Salida en horas de la mañana cruzando el Puente Internacional de la Amistad a territorio paraguayo y visitar la Represa de Itaipú. Observaremos un audiovisual de la misma para posteriormente visitar la sala de máquinas, Mirador del Vertedero, Lago artificial, presa principal de esta impresionante obra binacional sobre el lecho del Río Paraná, entre Paraguay y Brasil. De regreso visita de Ciudad del Este donde dispondremos de tiempo para compras. Regreso al hotel en la tarde. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Desayuno. Salida en la mañana cruzando el Puente Tancredo Neves a territorio argentino e ingresar al Parque Nacional para visitar las Cataratas Argentinas. Recorrido por los senderos superior, inferior y Garganta del Diablo. Observaremos saltos como el Bossetti, Adán y Eva, los Tres Mosqueteros, San Martín, Rivadavia, Alvar Núñez, (ingreso incluido). Cena",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Desayuno. Partida con equipajes en horas de la mañana hacia territorio argentina a través de la provincia de Misiones, entre medio de la exuberante vegetación, aserraderos, viveros forestales, plantaciones de Yerba mate, te, tabaco, visitando las minas de piedras Semi preciosas de Wanda (ingreso no incluido) hasta llegar a San Ignacio. Visita de las Ruinas Jesuíticas de San Ignacio Mini con ingres o incluido y la Casa del Escritor uruguayo Horacio Quiroga (ingreso no incluido) Almuerzo. Continuación en viaje de regreso por Alvear, Chajarí, hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "Uruguay",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios HOTELES CAT SGL DBL TPL CPL Carima 4 790 650 650 650 Vivaz 4 920 685 685 685 - Menores hasta 2 años sin asiento, máximo 1 por habitación compartiendo con 2 adultos: FREE - Menores de 3 a 5 años pagan asiento, servicio a bordo y seguro médico U$S 250.- compartiendo con 2 adultos, máximo 1 por habitación.",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Carima",
@@ -1924,15 +2913,11 @@
       ],
       "notas_precios": [
         {
-          "titulo": "Nota",
-          "texto": "Menores hasta 2 años sin asiento, máximo 1 por habitación compartiendo con 2 adultos: FREE"
-        },
-        {
-          "titulo": "Nota",
-          "texto": "Menores de 3 a 5 años pagan asiento, servicio a bordo y seguro médico U$S 250.- compartiendo con 2 adultos, máximo 1 por habitación."
+          "titulo": "Precios",
+          "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-04-24T01:57:03.001Z"
+      "updatedAt": "2026-04-25T05:35:17.830Z"
     },
     {
       "id": "cataratas-1393",
@@ -1977,7 +2962,50 @@
         "En Ruta Ruinas de San Ignacio Mini con ingreso incluido, Minas de Wanda y Casa de Horacio Quiroga (ingreso opcional)",
         "Seguro de Asistencia médica de Universal Assistance cobertura especial COVID - 19"
       ],
-      "itinerario": [],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Uruguay",
+          "detalle": "Salida en bus Semi cama con cena y desayuno abordo, guía acompañante, pasando por Chajarí, San Ignacio, Puerto Iguazú, hacia:",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Llegada. Alojamiento. Resto del día libre para disfrutar del hotel y o paseos. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Desayuno. Salida en horas de la mañana cruzando el Puente Internacional de la Amistad a territorio paraguayo y visitar la Represa de Itaipú. Observaremos un audiovisual de la misma para posteriormente visitar la sala de máquinas, Mirador del Vertedero, Lago artificial, presa principal de esta impresionante obra binacional sobre el lecho del Río Paraná, entre Paraguay y Brasil. De regreso visita de Ciudad del Este donde dispondremos de tiempo para compras. Regreso al hotel en la tarde. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Desayuno. Salida en la mañana cruzando el Puente Tancredo Neves a territorio argentino e ingresar al Parque Nacional para visitar las Cataratas Argentinas. Recorrido por los senderos superior, inferior y Garganta del Diablo. Observaremos saltos como el Bossetti, Adán y Eva, los Tres Mosqueteros, San Martín, Rivadavia, Alvar Núñez, (ingreso incluido). Cena",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Foz de Iguazú",
+          "detalle": "Desayuno. Partida con equipajes en horas de la mañana hacia territorio argentina a través de la provincia de Misiones, entre medio de la exuberante vegetación, aserraderos, viveros forestales, plantaciones de Yerba mate, te, tabaco, visitando las minas de piedras Semi preciosas de Wanda (ingreso no incluido) hasta llegar a San Ignacio. Visita de las Ruinas Jesuíticas de San Ignacio Mini con ingres o incluido y la Casa del Escritor uruguayo Horacio Quiroga (ingreso no incluido) Almuerzo. Continuación en viaje de regreso por Alvear, Chajarí, hacia:",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "Uruguay",
+          "detalle": "Llegada en horas de la mañana. Fin de nuestros servicios HOTELES CAT SGL DBL TPL CPL Carima 4 790 650 650 650 Vivaz 4 895 685 685 685 - Menores hasta 2 años sin asiento, máximo 1 por habitación compartiendo con 2 adultos: FREE - Menores de 3 a 5 años pagan asiento, servicio a bordo y seguro médico U$S 250.- compartiendo con 2 adultos, máximo 1 por habitación.",
+          "first": false,
+          "last": true
+        }
+      ],
       "hoteles": [
         {
           "nombre": "Carima",
@@ -2002,15 +3030,11 @@
       ],
       "notas_precios": [
         {
-          "titulo": "Nota",
-          "texto": "Menores hasta 2 años sin asiento, máximo 1 por habitación compartiendo con 2 adultos: FREE"
-        },
-        {
-          "titulo": "Nota",
-          "texto": "Menores de 3 a 5 años pagan asiento, servicio a bordo y seguro médico U$S 250.- compartiendo con 2 adultos, máximo 1 por habitación."
+          "titulo": "Precios",
+          "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-04-24T01:57:04.586Z"
+      "updatedAt": "2026-04-25T05:35:19.393Z"
     }
   ]
 }
