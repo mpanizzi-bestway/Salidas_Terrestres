@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Programa — BestWay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:      #2d3a6b;
+      --navy-dark: #1e2748;
+      --accent:    #4a5faa;
+      --gold:      #c8a84b;
+      --gold-lt:   #f0d878;
+      --mtur:      #e8630a;
+      --mtur-lt:   #ffa05a;
+      --teal:      #0e7a6a;
+      --teal-bg:   #eaf4f2;
+      --text:      #1a1a2e;
+      --mid:       #4a4860;
+      --light:     #f5f5f0;
+      --border:    #d8d6e0;
+      --white:     #ffffff;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'DM Sans',sans-serif; background:#dddbd5; color:var(--text); font-size:9pt; line-height:1.5; }
+
+    /* PRINT BAR */
+    .print-bar { position:fixed; top:16px; right:16px; z-index:999; display:flex; gap:8px; }
+    .btn {
+      background:var(--navy); color:white; border:none; padding:9px 20px; border-radius:7px;
+      font-family:'DM Sans',sans-serif; font-size:.8rem; font-weight:600; cursor:pointer;
+      box-shadow:0 3px 14px rgba(0,0,0,.22); display:flex; align-items:center; gap:7px;
+      transition:background .2s; text-decoration:none;
+    }
+    .btn:hover { background:var(--accent); }
+    .btn.sec { background:#555; }
+    .btn.sec:hover { background:#333; }
+    .btn.mtur { background:var(--mtur); }
+    .btn.mtur:hover { background:var(--mtur-lt); }
+
+    /* LOADING / ERROR */
+    #loading-screen {
+      position:fixed; inset:0; background:var(--navy-dark);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      z-index:9999; color:white; gap:16px;
+    }
+    #loading-screen h2 { font-family:'Poppins',sans-serif; font-size:1.1rem; font-weight:600; }
+    #loading-screen p  { font-size:.82rem; color:rgba(255,255,255,.5); }
+    .loader-bar { width:200px; height:3px; background:rgba(255,255,255,.15); border-radius:2px; overflow:hidden; }
+    .loader-fill { height:100%; background:var(--mtur); border-radius:2px; animation:loadbar 1.8s ease-in-out infinite; }
+    @keyframes loadbar { 0%{width:0%} 50%{width:70%} 100%{width:100%} }
+    #loading-screen.hidden { display:none; }
+    #error-screen {
+      display:none; position:fixed; inset:0; background:var(--navy-dark); color:white;
+      flex-direction:column; align-items:center; justify-content:center;
+      gap:16px; z-index:9999; text-align:center; padding:40px;
+    }
+    #error-screen.visible { display:flex; }
+    #error-screen h2 { font-family:'Poppins',sans-serif; color:var(--mtur); }
+    #error-screen p  { color:rgba(255,255,255,.6); font-size:.9rem; max-width:400px; line-height:1.6; }
+    #error-screen code { background:rgba(255,255,255,.1); padding:2px 8px; border-radius:4px; font-size:.8rem; }
+
+    /* PÁGINA A4 */
+    .page { width:210mm; min-height:297mm; margin:24px auto; background:var(--white); box-shadow:0 4px 40px rgba(0,0,0,.2); display:flex; flex-direction:column; }
+    .page-content { padding:10mm 13mm 8mm; flex:1; display:flex; flex-direction:column; gap:5.5mm; }
+
+    /* 1. ENCABEZADO */
+    .doc-header {
+      display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:5mm;
+      padding-bottom:4mm; border-bottom:2.5px solid var(--navy); position:relative;
+    }
+    .doc-header::after { content:''; position:absolute; bottom:-4.5px; left:0; right:0; height:1.5px; background:var(--mtur); }
+    .logo-block img { height:22mm; width:auto; display:block; }
+    .header-center { text-align:center; }
+    .header-center .eslogan { font-family:'Poppins',sans-serif; font-size:7pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--mid); }
+    .contact-block { text-align:right; font-size:7.5pt; color:var(--mid); line-height:1.7; }
+    .contact-block strong { display:block; font-size:8pt; color:var(--navy); font-weight:600; margin-bottom:.5mm; }
+
+    /* 2. TÍTULO */
+    .prog-title-block { text-align:center; padding:3mm 0 1mm; }
+    .prog-title-block h1 { font-family:'Poppins',sans-serif; font-size:22pt; font-weight:800; color:var(--navy); line-height:1.05; text-transform:uppercase; }
+    .prog-title-block .duracion-line { font-family:'Poppins',sans-serif; font-size:7.5pt; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--mtur); margin-top:1.5mm; }
+
+    /* 3. BANDA FECHAS */
+    .fechas-band { background:var(--navy); border-radius:4px; padding:3mm 6mm; display:flex; align-items:center; justify-content:space-between; gap:3mm; }
+    .fecha-item { display:flex; flex-direction:column; gap:.5mm; }
+    .fecha-item .fl { font-family:'Poppins',sans-serif; font-size:6pt; text-transform:uppercase; letter-spacing:.12em; color:rgba(255,255,255,.45); font-weight:600; }
+    .fecha-item .fv { font-size:8.5pt; color:white; font-weight:600; }
+    .fecha-item .fv.gold { color:var(--mtur-lt); }
+    .fecha-sep { width:1px; height:8mm; background:rgba(255,255,255,.15); }
+
+    /* SECCIONES */
+    .sec { display:flex; flex-direction:column; gap:2.5mm; }
+    .sec-title {
+      font-family:'Poppins',sans-serif; font-size:6.5pt; font-weight:700;
+      text-transform:uppercase; letter-spacing:.14em; color:var(--navy);
+      padding-bottom:1.5mm; border-bottom:1px solid var(--border);
+      display:flex; align-items:center; gap:2mm;
+    }
+    .sec-title::before { content:''; display:block; width:3mm; height:3mm; background:var(--mtur); border-radius:50%; flex-shrink:0; }
+
+    /* 4. DESTINO */
+    .destino-grid { display:grid; grid-template-columns:1fr 50mm; gap:5mm; align-items:start; }
+    .destino-text p { font-size:8.5pt; color:var(--mid); line-height:1.6; font-style:italic; margin-bottom:3mm; }
+    .destino-highlights { display:flex; flex-wrap:wrap; gap:1.5mm; }
+    .hl-tag { background:var(--light); border:.5px solid var(--border); border-radius:20px; padding:1mm 2.5mm; font-size:7pt; color:var(--navy); font-weight:500; }
+    .destino-foto { border-radius:4px; overflow:hidden; background:var(--teal-bg); height:28mm; display:flex; align-items:center; justify-content:center; border:.5px solid var(--border); position:relative; }
+    .destino-foto img { width:100%; height:100%; object-fit:cover; display:block; }
+    .destino-foto .ph { font-size:7.5pt; color:var(--teal); text-align:center; padding:4mm; line-height:1.5; }
+
+    /* 5. INCLUYE */
+    .incluye-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.8mm; }
+    .inc-row { display:flex; align-items:flex-start; gap:2mm; font-size:8pt; color:var(--text); line-height:1.4; }
+    .inc-dot { width:3.5mm; height:3.5mm; background:var(--mtur); border-radius:50%; flex-shrink:0; margin-top:1mm; }
+
+    /* 6. HOTELES */
+    .hoteles-lista { display:flex; flex-wrap:wrap; gap:2mm; }
+    .hotel-tag {
+      background:var(--light); border:.5px solid var(--border); border-radius:4px;
+      padding:1.5mm 3mm; font-size:7.5pt; color:var(--navy); font-weight:500;
+      display:flex; align-items:center; gap:1.5mm;
+    }
+    .hotel-tag::before { content:'🏨'; font-size:7pt; }
+
+    /* 7. PRECIOS */
+    .precios-grid {
+      display:grid; grid-template-columns:repeat(6,1fr); gap:1.5mm;
+    }
+    .precio-box {
+      background:var(--light); border:.5px solid var(--border); border-radius:4px;
+      padding:2mm 1.5mm; text-align:center;
+    }
+    .precio-box .cat { font-family:'Poppins',sans-serif; font-size:5.5pt; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--mid); margin-bottom:1mm; }
+    .precio-box .val { font-size:9pt; font-weight:700; color:var(--navy); }
+    .precio-box .val.na { color:var(--border); font-size:8pt; }
+    .precio-box.highlight { background:var(--navy); border-color:var(--navy); }
+    .precio-box.highlight .cat { color:rgba(255,255,255,.6); }
+    .precio-box.highlight .val { color:white; font-size:10pt; }
+    .precios-nota { font-size:6.5pt; color:var(--mid); font-style:italic; margin-top:1.5mm; }
+
+    /* 8. FECHAS SALIDA */
+    .fechas-salida { display:flex; flex-wrap:wrap; gap:1.5mm; }
+    .fecha-pill {
+      background:var(--navy); color:white; border-radius:3px; padding:1mm 2.5mm;
+      font-family:'Poppins',sans-serif; font-size:7pt; font-weight:600;
+    }
+
+    /* 9. NO INCLUYE */
+    .no-incluye-box {
+      background:#fff5f2; border-left:2px solid var(--mtur); border-radius:0 3px 3px 0;
+      padding:2mm 3mm; font-size:7.5pt; color:var(--mid); line-height:1.5;
+    }
+    .no-incluye-box strong { color:var(--mtur); font-size:6.5pt; text-transform:uppercase; letter-spacing:.06em; display:block; margin-bottom:.5mm; }
+
+    /* 10. OBSERVACIONES */
+    .obs-box { background:var(--light); border:.5px solid var(--border); border-radius:4px; padding:2.5mm 3mm; font-size:7pt; color:var(--mid); line-height:1.55; white-space:pre-line; }
+
+    /* PIE */
+    .doc-footer { background:var(--navy); padding:0; margin-top:auto; }
+    .footer-top { display:grid; grid-template-columns:1fr auto; align-items:center; padding:4mm 13mm; border-bottom:.5px solid rgba(255,255,255,.1); }
+    .footer-contact { font-size:7.5pt; color:rgba(255,255,255,.65); line-height:1.8; }
+    .footer-contact strong { font-family:'Poppins',sans-serif; font-size:8pt; color:white; font-weight:600; display:block; margin-bottom:.5mm; }
+    .footer-pago { display:flex; flex-direction:column; align-items:flex-end; gap:2.5mm; }
+    .pago-label { font-family:'Poppins',sans-serif; font-size:7pt; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--mtur-lt); text-align:right; }
+    .pago-logo-img { height:9mm; width:auto; display:block; background:white; border-radius:5px; padding:1.5mm 3mm; }
+    .footer-legal { padding:2.5mm 13mm; font-size:6pt; color:rgba(255,255,255,.3); line-height:1.5; }
+
+    @media print {
+      @page { size:A4; margin:0; }
+      body { background:none; }
+      .print-bar { display:none !important; }
+      #loading-screen, #error-screen { display:none !important; }
+      .page { width:210mm; margin:0; box-shadow:none; page-break-after:always; }
+      .sec { page-break-inside:avoid; }
+      .doc-footer { page-break-inside:avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="loading-screen">
+  <h2>Cargando programa...</h2>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+  <p id="loading-msg">Leyendo datos de Mtur Viajes</p>
+</div>
+<div id="error-screen">
+  <h2>⚠️ Programa no encontrado</h2>
+  <p id="error-msg"></p>
+  <a href="mtur.html" style="color:var(--mtur);font-size:.9rem;">← Volver a los programas</a>
+</div>
+
+<div class="print-bar">
+  <button class="btn" onclick="window.print()">🖨️ Imprimir / PDF</button>
+  <a class="btn mtur" id="btn-fuente" href="#" target="_blank">🔗 Ver en Mtur</a>
+  <a class="btn sec" href="mtur.html">← Volver</a>
+</div>
+
+<div class="page" id="programa-page" style="visibility:hidden">
+  <div class="page-content">
+
+    <!-- 1. ENCABEZADO -->
+    <header class="doc-header">
+      <div class="logo-block">
+        <img src="images/logo_bestway.png" alt="BestWay Viajes"
+             onerror="this.onerror=null;this.src='images/logo_Bestway_blanco.png'">
+      </div>
+      <div class="header-center">
+        <div class="eslogan">Tu Mundo de Oportunidades</div>
+      </div>
+      <div class="contact-block">
+        <strong>BestWay Viajes</strong>
+        Tel. 2902 2116<br>
+        Río Branco 1375, Montevideo<br>
+        info@bestway.com.uy
+      </div>
+    </header>
+
+    <!-- 2. TÍTULO -->
+    <div class="prog-title-block" id="prog-titulo"></div>
+
+    <!-- 3. FECHAS -->
+    <div class="fechas-band" id="prog-fechas"></div>
+
+    <!-- 4. DESTINO -->
+    <div class="sec">
+      <div class="sec-title">El Destino</div>
+      <div class="destino-grid">
+        <div class="destino-text">
+          <p id="prog-descripcion"></p>
+          <div class="destino-highlights" id="prog-highlights"></div>
+        </div>
+        <div class="destino-foto" id="prog-foto">
+          <div class="ph" id="foto-ph">🌎</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. INCLUYE -->
+    <div class="sec">
+      <div class="sec-title">Incluye</div>
+      <div class="incluye-grid" id="prog-incluye"></div>
+    </div>
+
+    <!-- 6. HOTELES -->
+    <div class="sec" id="sec-hoteles">
+      <div class="sec-title">Opciones de Hoteles</div>
+      <div class="hoteles-lista" id="prog-hoteles"></div>
+    </div>
+
+    <!-- 7. FECHAS DE SALIDA -->
+    <div class="sec" id="sec-fechas-salida">
+      <div class="sec-title">Fechas de Salida</div>
+      <div class="fechas-salida" id="prog-fechas-salida"></div>
+    </div>
+
+    <!-- 8. PRECIOS POR CATEGORÍA -->
+    <div class="sec">
+      <div class="sec-title">Tarifas — Precios en U$S por persona</div>
+      <div class="precios-grid" id="prog-precios"></div>
+      <div class="precios-nota">Precios por persona en base doble. Sujeto a disponibilidad al momento de la reserva.</div>
+    </div>
+
+    <!-- 9. NO INCLUYE -->
+    <div class="sec" id="sec-no-incluye">
+      <div class="no-incluye-box">
+        <strong>No incluye</strong>
+        <span id="prog-no-incluye"></span>
+      </div>
+    </div>
+
+    <!-- 10. OBSERVACIONES -->
+    <div class="sec" id="sec-obs">
+      <div class="sec-title">Observaciones</div>
+      <div class="obs-box" id="prog-obs"></div>
+    </div>
+
+  </div>
+
+  <!-- PIE -->
+  <footer class="doc-footer">
+    <div class="footer-top">
+      <div class="footer-contact">
+        <strong>Martin Panizzi — Ejecutivo de Cuentas</strong>
+        WhatsApp 095 969 909 &nbsp;·&nbsp; mpanizzi@bestway.com.uy<br>
+        www.bestway.com.uy &nbsp;·&nbsp; @bestway.uy &nbsp;·&nbsp; 095 969 909
+      </div>
+      <div class="footer-pago">
+        <div class="pago-label">Hasta 12 pagos sin recargo en U$S</div>
+        <img class="pago-logo-img" src="images/Medios-de-pago.png" alt="Visa · Mastercard · OCA" onerror="this.style.display='none'">
+      </div>
+    </div>
+    <div class="footer-legal">
+      Todos los precios están sujetos a disponibilidad y variaciones tarifarias sin previo aviso. Es responsabilidad del cliente la documentación necesaria para su viaje. Algunos países exigen documento con al menos 6 meses de vigencia. Asesorese sobre exigencias migratorias y sanitarias. Los menores pueden requerir documentación adicional. Se recomienda contratar seguro de cancelación y asistencia en viaje.
+    </div>
+  </footer>
+</div>
+
+<script>
+// ── Fotos: imagen real del paquete (Dropbox) con fallback Wikimedia ─────────
+const WIKIMEDIA = {
+  cataratas:     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Iguazu_cataratas.jpg/800px-Iguazu_cataratas.jpg',
+  florianopolis: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Praia_de_Canasvieiras%2C_Florian%C3%B3polis.jpg/800px-Praia_de_Canasvieiras%2C_Florian%C3%B3polis.jpg',
+  gramado:       'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Gramado_-_Rio_Grande_do_Sul%2C_Brasil.jpg/800px-Gramado_-_Rio_Grande_do_Sul%2C_Brasil.jpg',
+  rio:           'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cristo_Redentor_-_Foto_de_Rafael_Rabello.jpg/800px-Cristo_Redentor_-_Foto_de_Rafael_Rabello.jpg',
+  bariloche:     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Bariloche_desde_el_cerro_Otto.jpg/800px-Bariloche_desde_el_cerro_Otto.jpg',
+  mendoza:       'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Bodega_Zuccardi_Valle_de_Uco.jpg/800px-Bodega_Zuccardi_Valle_de_Uco.jpg',
+  norte:         'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Quebrada_de_Humahuaca.jpg/800px-Quebrada_de_Humahuaca.jpg',
+  carlospaz:     'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Villa_Carlos_Paz%2C_C%C3%B3rdoba.jpg/800px-Villa_Carlos_Paz%2C_C%C3%B3rdoba.jpg',
+  camboriu:      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Balne%C3%A1rio_Cambori%C3%BA_vista_a%C3%A9rea.jpg/800px-Balne%C3%A1rio_Cambori%C3%BA_vista_a%C3%A9rea.jpg',
+  buenosaires:   'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Buenos_Aires_-_Obelisco.jpg/800px-Buenos_Aires_-_Obelisco.jpg',
+};
+
+function loadPhoto(prog) {
+  const container = document.getElementById('prog-foto');
+  const ph        = document.getElementById('foto-ph');
+  const slug      = prog.destinoSlug || '';
+
+  // Prioridad 1: imagen real del paquete (Dropbox/CDN)
+  // Prioridad 2: imagen local images/destinos/{slug}.jpg
+  // Prioridad 3: Wikimedia
+  const tryLoad = (src, next) => {
+    const img = new Image();
+    img.onload = () => {
+      ph?.remove();
+      const el = document.createElement('img');
+      el.src = src;
+      el.alt = prog.titulo;
+      el.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;';
+      container.appendChild(el);
+    };
+    img.onerror = () => next && next();
+    img.src = src;
+  };
+
+  const wiki  = WIKIMEDIA[slug];
+  const local = `images/destinos/${slug}.jpg`;
+
+  if (prog.imagen) {
+    tryLoad(prog.imagen, () =>
+      tryLoad(local, () =>
+        wiki ? tryLoad(wiki, () => { if(ph) ph.textContent = '🌎'; }) : null
+      )
+    );
+  } else {
+    tryLoad(local, () => wiki ? tryLoad(wiki, () => { if(ph) ph.textContent = '🌎'; }) : null);
+  }
+}
+
+// ── Categorías de precios en orden ──────────────────────────────────────────
+const CATS_LABELS = [
+  { key:'doble',      label:'Doble',      highlight:true  },
+  { key:'triple',     label:'Triple',     highlight:false },
+  { key:'cuadruple',  label:'Cuádruple',  highlight:false },
+  { key:'single',     label:'Individual', highlight:false },
+  { key:'child',      label:'Menor',      highlight:false },
+  { key:'infante',    label:'Infante',    highlight:false },
+];
+
+// ── Descripciones por destino (mismas que Sendas) ───────────────────────────
+const DESC = {
+  cataratas:    'Las Cataratas del Iguazú son una de las Siete Maravillas Naturales del Mundo. El estruendo del agua, la niebla permanente y la selva que las rodea generan una experiencia que no se olvida jamás.',
+  florianopolis:'Florianópolis combina el encanto de las playas brasileñas con aguas cálidas y tranquilas. Con su ambiente alegre y su mezcla de naturaleza y ritmo local, es el destino ideal para el verano en Brasil.',
+  gramado:      'Gramado y Canela son dos joyas del sur de Brasil con arquitectura alemana, gastronomía de primer nivel y paisajes de montaña únicos. Una experiencia completamente diferente al Brasil típico.',
+  rio:          'Río de Janeiro es una de las ciudades más bellas del mundo, con el Cristo Redentor, el Pan de Azúcar y las playas de Copacabana e Ipanema como íconos universales.',
+  bariloche:    'Bariloche es la joya de la Patagonia argentina, con lagos imponentes, bosques y el Cerro Catedral. En invierno es la capital andina del ski; en cualquier época, su chocolate es imperdible.',
+  mendoza:      'Mendoza es la capital del vino argentino, al pie de los Andes. Sus bodegas, el Aconcagua, las termas de Cacheuta y sus paisajes de viñedos la convierten en un destino para todos los sentidos.',
+  norte:        'El Norte Argentino despliega los colores mágicos de la Quebrada de Humahuaca, las Salinas Grandes y los cerros de siete colores. Una región de culturas milenarias y naturaleza imponente.',
+  carlospaz:    'Carlos Paz y las Sierras de Córdoba ofrecen un destino familiar por excelencia: teatro, dique, teleférico y la naturaleza serrana al alcance. Perfecto para vacaciones con toda la familia.',
+  camboriu:     'Balneário Camboriú es la ciudad más visitada de Santa Catarina, con su famosa rambla, teleférico, playas urbanas y la proximidad a Beto Carrero World.',
+  buenosaires:  'Buenos Aires combina la pasión del tango con una escena cultural sin igual. Parques temáticos, gastronomía porteña y la calidez del pueblo bonaerense hacen de esta ciudad una experiencia completa.',
+};
+
+// ── RENDER ───────────────────────────────────────────────────────────────────
+function renderPrograma(p) {
+  document.title = `${p.titulo} — BestWay`;
+
+  // Botón fuente
+  if (p.sourceUrl) document.getElementById('btn-fuente').href = p.sourceUrl;
+
+  // 2. Título
+  document.getElementById('prog-titulo').innerHTML = `
+    <h1>${p.titulo}</h1>
+    <div class="duracion-line">${p.subtitulo || p.duracion}</div>`;
+
+  // 3. Fechas band — solo salidas y temporada (sin "Operador")
+  const fechasFilt = (p.fechas || []).filter(f => !/^operador$/i.test(f.label));
+  document.getElementById('prog-fechas').innerHTML = fechasFilt.map((f, i) => `
+    <div class="fecha-item">
+      <span class="fl">${f.label}</span>
+      <span class="fv${f.gold ? ' gold' : ''}">${f.value}</span>
+    </div>${i < fechasFilt.length-1 ? '<div class="fecha-sep"></div>' : ''}`
+  ).join('') || '<div class="fecha-item"><span class="fl">Temporada</span><span class="fv gold">Consultar</span></div>';
+
+  // 4. Destino
+  const desc = DESC[p.destinoSlug] || `${p.destino} es un destino imperdible que ofrece experiencias únicas saliendo desde Uruguay.`;
+  document.getElementById('prog-descripcion').textContent = desc;
+  document.getElementById('prog-highlights').innerHTML = (p.highlights || [])
+    .map(h => `<span class="hl-tag">${h}</span>`).join('');
+  loadPhoto(p);
+
+  // 5. Incluye
+  document.getElementById('prog-incluye').innerHTML = (p.incluye || [])
+    .map(i => `<div class="inc-row"><div class="inc-dot"></div>${i}</div>`).join('')
+    || '<div class="inc-row"><div class="inc-dot"></div>Consultar detalles en agencia</div>';
+
+  // 6. Hoteles
+  const hoteles = p.hoteles || [];
+  if (hoteles.length > 0) {
+    document.getElementById('prog-hoteles').innerHTML = hoteles
+      .map(h => `<span class="hotel-tag">${h.nombre}</span>`).join('');
+  } else {
+    document.getElementById('sec-hoteles').style.display = 'none';
+  }
+
+  // 7. Fechas de salida
+  const fs = p.fechasSalida || [];
+  if (fs.length > 0) {
+    document.getElementById('prog-fechas-salida').innerHTML = fs
+      .map(f => `<span class="fecha-pill">${f}</span>`).join('');
+  } else {
+    document.getElementById('sec-fechas-salida').style.display = 'none';
+  }
+
+  // 8. Precios
+  const precios = p.precios || {};
+  document.getElementById('prog-precios').innerHTML = CATS_LABELS.map(cat => {
+    const val = precios[cat.key];
+    const valHTML = val != null
+      ? `<div class="val">U$S ${val.toLocaleString('es-UY')}</div>`
+      : `<div class="val na">N/A</div>`;
+    return `
+      <div class="precio-box${cat.highlight ? ' highlight' : ''}">
+        <div class="cat">${cat.label}</div>
+        ${valHTML}
+      </div>`;
+  }).join('');
+
+  // 9. No incluye
+  if (p.noIncluye) {
+    document.getElementById('prog-no-incluye').textContent = p.noIncluye;
+  } else {
+    document.getElementById('sec-no-incluye').style.display = 'none';
+  }
+
+  // 10. Observaciones
+  if (p.observaciones) {
+    document.getElementById('prog-obs').textContent = p.observaciones;
+  } else {
+    document.getElementById('sec-obs').style.display = 'none';
+  }
+}
+
+// ── INIT ─────────────────────────────────────────────────────────────────────
+async function init() {
+  const params  = new URLSearchParams(window.location.search);
+  const progId  = params.get('p');
+  const loadMsg = document.getElementById('loading-msg');
+
+  if (!progId) { showError('No se especificó programa. Usá <code>?p=ID</code>.', 'URL inválida'); return; }
+
+  loadMsg.textContent = 'Leyendo catálogo Mtur Viajes...';
+  let allData;
+  try {
+    const r = await fetch(`./programas-mtur.json?_=${Date.now()}`);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    allData = await r.json();
+  } catch(e) {
+    showError(`No se pudo cargar <code>programas-mtur.json</code>.<br>Ejecutá el scraper desde GitHub Actions.`, e.message);
+    return;
+  }
+
+  const prog = allData.programas.find(p => p.id === progId);
+  if (!prog) {
+    showError(`Programa <code>${progId}</code> no encontrado.<br><a href="mtur.html" style="color:var(--mtur)">← Ver todos</a>`, 'No encontrado');
+    return;
+  }
+
+  renderPrograma(prog);
+  document.getElementById('loading-screen').classList.add('hidden');
+  document.getElementById('programa-page').style.visibility = 'visible';
+}
+
+function showError(msg, title) {
+  document.getElementById('loading-screen').classList.add('hidden');
+  document.getElementById('error-screen').classList.add('visible');
+  document.getElementById('error-msg').innerHTML = msg;
+  if (title) document.querySelector('#error-screen h2').textContent = '⚠️ ' + title;
+}
+
+init();
+</script>
+</body>
+</html>
