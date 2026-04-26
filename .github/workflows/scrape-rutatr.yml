@@ -1,0 +1,40 @@
+name: Scrape Rutatur
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Razon del scraping manual'
+        required: false
+        default: 'Actualizacion manual de programas Rutatur'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install axios cheerio
+
+      - name: Run scraper
+        run: node scraper-rutatur.js
+
+      - name: Commit updated data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions - Rutatur Scraper"
+          git add programas-rutatur.json
+          git diff --staged --quiet || git commit -m "Auto-update: Rutatur programs [$(date +'%Y-%m-%d')]"
+          git push
