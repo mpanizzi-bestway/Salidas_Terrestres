@@ -1,1421 +1,409 @@
-{
-  "operador": "Rutatur",
-  "updatedAt": "2026-04-26T14:03:34.155Z",
-  "programas": [
-    {
-      "id": "rutatur-802",
-      "rutaId": "802",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/shakira-en-rio-de-janeiro-26-abr-26-excursion-802",
-      "titulo": "SHAKIRA EN RIO DE JANEIRO - 26 ABR 26",
-      "subtitulo": "11 DÍAS",
-      "duracion": "11 DÍAS",
-      "destino": "SHAKIRA EN RIO DE JANEIRO - 26 ABR 26",
-      "destinoSlug": "rio",
-      "pais": "Brasil",
-      "emoji": "🏙️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-03-25_40530244.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [],
-      "precios": {
-        "promo": 899,
-        "triple": 949,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "COSTO DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 15 DE ABRIL 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)",
-        "Precio Por Persona hab. Doble o Triple U$S 949 // PROMO U$S 899Single 35 % MAS"
-      ],
-      "updatedAt": "2026-04-26T14:03:35.781Z"
-    },
-    {
-      "id": "rutatur-788",
-      "rutaId": "788",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/camboriu-8-dias5-noches-excursion-788",
-      "titulo": "CAMBORIU 8 Días / 5 Noches",
-      "subtitulo": "8 DÍAS / 5 NOCHES",
-      "duracion": "8 DÍAS / 5 NOCHES",
-      "destino": "CAMBORIU 8 Días / 5 Noches",
-      "destinoSlug": "camboriu",
-      "pais": "Brasil",
-      "emoji": "🎡",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-02-19_24794354.jpg",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "MIRAMAR 4",
-          "url": "www.hotelmiramar.com.br"
-        }
-      ],
-      "precios": {
-        "promo": 599,
-        "triple": 669,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la excursión por persona en basa doble o triple U$S 669 / PROMO PAGO CONTADO O TRANSFERENCIA U$S 599",
-        "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
-        "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
-      ],
-      "updatedAt": "2026-04-26T14:03:36.949Z"
-    },
-    {
-      "id": "rutatur-773",
-      "rutaId": "773",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/termas-romanas-6-dias-excursion-773",
-      "titulo": "TERMAS ROMANAS 6 Días",
-      "subtitulo": "6 DÍAS",
-      "duracion": "6 DÍAS",
-      "destino": "TERMAS ROMANAS 6 Días",
-      "destinoSlug": "termasromanas",
-      "pais": "Argentina",
-      "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-01-26_47173141.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [],
-      "precios": {
-        "promo": 439,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 469 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 439"
-      ],
-      "updatedAt": "2026-04-26T14:03:38.096Z"
-    },
-    {
-      "id": "rutatur-777",
-      "rutaId": "777",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/cataratas-del-iguazu-7-dias4-noches-excursion-777",
-      "titulo": "CATARATAS DEL IGUAZÚ - 7 Días / 4 Noches",
-      "subtitulo": "7 DÍAS / 4 NOCHES",
-      "duracion": "7 DÍAS / 4 NOCHES",
-      "destino": "CATARATAS DEL IGUAZÚ - 7 Días / 4 Noches",
-      "destinoSlug": "cataratas",
-      "pais": "Cataratas",
-      "emoji": "🌊",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-01-26_4012457.jpg",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [],
-      "precios": {
-        "doble": 629,
-        "triple": 629,
-        "singleLabel": "Single: 35% adicional",
-        "butaca": 299,
-        "menorGratis": "Menores hasta 4 años: invitado"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la excursión por persona, para alojamiento en habitaciones doble/triple: U$S 629 // PROMO PAGO CONTADO O TRANSFERENCIA 589",
-        "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:",
-        "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
-        "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
-      ],
-      "updatedAt": "2026-04-26T14:03:39.248Z"
-    },
-    {
-      "id": "rutatur-771",
-      "rutaId": "771",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/termas-de-machadinho-7-dias-excursion-771",
-      "titulo": "TERMAS DE MACHADINHO - 7 Días",
-      "subtitulo": "7 DÍAS",
-      "duracion": "7 DÍAS",
-      "destino": "TERMAS DE MACHADINHO - 7 Días",
-      "destinoSlug": "machadinho",
-      "pais": "Brasil",
-      "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-07_70230495.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "MACHADINHO PARK HOTEL",
-          "url": "www.parkhoteltermasmachadinho.com.br"
-        }
-      ],
-      "precios": {
-        "doble": 789,
-        "promo": 719,
-        "triple": 769,
-        "single": 1029
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "- COSTO POR PERSONA EN BASE DOBLE U$S 789  PROMO PAGO CONTADO U$S 719",
-        "- COSTO POR PERSONA EN BASE TRIPLE U$S 769  PROMO PAGO CONTADO U$S 699",
-        "- COSTO HABITACION SINGLE: U$S 1029  PROMO PAGO CONTADO U$S 959",
-        "- 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO",
-        "-COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)"
-      ],
-      "updatedAt": "2026-04-26T14:03:40.400Z"
-    },
-    {
-      "id": "rutatur-783",
-      "rutaId": "783",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/ita-all-inclusive-grand-family-resort-excursion-783",
-      "titulo": "ITÁ - ALL INCLUSIVE - GRAND FAMILY RESORT",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "ITÁ - ALL INCLUSIVE - GRAND FAMILY RESORT",
-      "destinoSlug": "otro",
-      "pais": "Otros",
-      "emoji": "📍",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-02-07_71205260.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "GRAND SUITES FAMILY RESORT/ALL INCLUSIVE - ITÁ: -",
-          "url": "www.grandsuites.com.br - Con nuestro servicio ALL INCLUSIVE* podrás relajarte, descansar y aprovechar al máximo cada momento de tu estancia. Estamos dedicados a brindar una experiencia verdaderamente innovadora, donde cada detalle se planifica cuidadosamente para su comodidad y satisfacción."
-        }
-      ],
-      "precios": {
-        "triple": 659
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "CONSULTA PROMO PAGO CONTADO",
-        "Alojamiento: La excelencia de nuestras habitaciones es uno de los pilares fundamentales de nuestra hospitalidad. Nuestra prioridad es brindar el máximo confort y bienestar a nuestros huéspedes, y nuestras suites han sido meticulosamente diseñadas para satisfacer sus necesidades. (INCLUIDO)"
-      ],
-      "updatedAt": "2026-04-26T14:03:41.557Z"
-    },
-    {
-      "id": "rutatur-786",
-      "rutaId": "786",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/termas-de-gravatal-8-dias5-noches-excursion-786",
-      "titulo": "TERMAS DE GRAVATAL 8 Días / 5 Noches",
-      "subtitulo": "8 DÍAS / 5 NOCHES",
-      "duracion": "8 DÍAS / 5 NOCHES",
-      "destino": "TERMAS DE GRAVATAL 8 Días / 5 Noches",
-      "destinoSlug": "gravatal",
-      "pais": "Brasil",
-      "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-02-06_96581400.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "INTERNACIONAL TERMAS DE GRAVATALwww.hotelinternacionalgravatal.com.br",
-          "url": ""
-        }
-      ],
-      "precios": {
-        "doble": 859,
-        "promo": 799,
-        "triple": 859,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "Partida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
-        "PRECIO DE PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 28 MARZO DE FEBRERO 2025 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES)",
-        "VALOR DE LA EXCURSIÓN POR PERSONA EN BASE DOBLE // TRIPLE U$S 859 // PROMO U$S 799",
-        "MENORES DE 5 A 12 AÑOS ACOMPAÑADOS MINIMO POR 2 ADULTOS EN LA MISMA HABITACION COSTO U$S 489 // PROMO U$S 429"
-      ],
-      "updatedAt": "2026-04-26T14:03:42.705Z"
-    },
-    {
-      "id": "rutatur-805",
-      "rutaId": "805",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/florianopolis-de-lujo-8-dias-excursion-805",
-      "titulo": "FLORIANOPOLIS DE LUJO - 8 Días",
-      "subtitulo": "8 DÍAS / 5 NOCHES",
-      "duracion": "8 DÍAS / 5 NOCHES",
-      "destino": "FLORIANOPOLIS DE LUJO - 8 Días",
-      "destinoSlug": "florianopolis",
-      "pais": "Brasil",
-      "emoji": "🏖️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-07_7395266.jpg",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "JURERE BEACH VILLAGE 4",
-          "url": "www.jurerebeachvillage.com.br (FLORIANOPOLIS)"
-        }
-      ],
-      "precios": {
-        "promo": 669,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la Excursión por persona, con Media Pensión y paseos, para alojamiento en habitación Doble o Triple Luxo:U$S 699 - PROMO U$S 669Single: 35 % MAS"
-      ],
-      "updatedAt": "2026-04-26T14:03:43.865Z"
-    },
-    {
-      "id": "rutatur-800",
-      "rutaId": "800",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/canela-y-gramado-7-dias4-noches-excursion-800",
-      "titulo": "CANELA Y GRAMADO 7 Días / 4 Noches",
-      "subtitulo": "7 DÍAS / 4 NOCHES",
-      "duracion": "7 DÍAS / 4 NOCHES",
-      "destino": "CANELA Y GRAMADO 7 Días / 4 Noches",
-      "destinoSlug": "gramado",
-      "pais": "Brasil",
-      "emoji": "🌲",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-02-27_04041260.jpg",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "CANELA. SERRA NEVADAwww.hotelserranevada.com.br",
-          "url": ""
-        }
-      ],
-      "precios": {
-        "doble": 549,
-        "promo": 509,
-        "triple": 539,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 10 DE ABRIL 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)",
-        "Valor por persona en Base Doble U$S 549 // Promo U$S 509",
-        "Valor por persona en Base Triple U$S 539 // Promo U$S 499Valor por persona en Base Cuadruple U$S 529 // Promo U$S 489Single 35 % MAS",
-        "- Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
-      ],
-      "updatedAt": "2026-04-26T14:03:45.019Z"
-    },
-    {
-      "id": "rutatur-780",
-      "rutaId": "780",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/camboriufazzenda-park-8-dias-excursion-780",
-      "titulo": "CAMBORIÚ + FAZZENDA PARK - 8 Días",
-      "subtitulo": "8 DÍAS / 3 NOCHES",
-      "duracion": "8 DÍAS / 3 NOCHES",
-      "destino": "CAMBORIÚ + FAZZENDA PARK - 8 Días",
-      "destinoSlug": "camboriu",
-      "pais": "Brasil",
-      "emoji": "🎡",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-01-26_55083139.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "RESORT FAZZENDA PARK 5",
-          "url": "www.fazzenda.com.brMIRAMAR 4****"
-        }
-      ],
-      "precios": {
-        "promo": 899,
-        "triple": 989,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "COSTO DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 30 DE NOVIEMBRE 2025.(CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES)",
-        "Valor por persona en basa doble o triple U$S 989 // PROMO U$S 899"
-      ],
-      "updatedAt": "2026-04-26T14:03:46.164Z"
-    },
-    {
-      "id": "rutatur-757",
-      "rutaId": "757",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/aguas-de-palmas-8-dias5-noches-pension-completa-excursion-757",
-      "titulo": "AGUAS DE PALMAS 8 Días / 5 Noches - PENSIÓN COMPLETA",
-      "subtitulo": "8 DÍAS / 5 NOCHES",
-      "duracion": "8 DÍAS / 5 NOCHES",
-      "destino": "AGUAS DE PALMAS 8 Días / 5 Noches - PENSIÓN COMPLETA",
-      "destinoSlug": "otro",
-      "pais": "Otros",
-      "emoji": "📍",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2025-08-22_90664196.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "www.aguasdepalmas.com.br Habitaciones – CARAVELAS EJECUTIVO",
-          "url": ""
-        }
-      ],
-      "precios": {
-        "doble": 809,
-        "promo": 769,
-        "triple": 749,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "PROMO CONTADO HASTA EL 30 DE OCTUBRE 2025 (Cupos de promo LIMITADOS, NO acumulables con otras promociones)",
-        "VALOR POR PERSONA BASE DOBLE U$S 809 // PROMO U$S 769 - PAGO EN EFECTIVOVALOR POR PERSONA BASE TRIPLE U$S 749 // PROMO U$S 715 - PAGO EN EFECTIVO",
-        "-- Menores hasta 7 años, máximo 1 por habitación acompañado de 2 adultos: VALOR U$S 299",
-        "(INCLUYE servicio a bordo, butaca y seguro de asistencia)"
-      ],
-      "updatedAt": "2026-04-26T14:03:47.349Z"
-    },
-    {
-      "id": "rutatur-808",
-      "rutaId": "808",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/fazzenda-park-7-dias-50-aniversario-excursion-808",
-      "titulo": "FAZZENDA PARK 7 Días - 50º ANIVERSARIO",
-      "subtitulo": "7 DÍAS / 4 NOCHES",
-      "duracion": "7 DÍAS / 4 NOCHES",
-      "destino": "FAZZENDA PARK 7 Días - 50º ANIVERSARIO",
-      "destinoSlug": "fazzenda",
-      "pais": "Brasil",
-      "emoji": "🌿",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-07_78508164.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [],
-      "precios": {
-        "doble": 959,
-        "promo": 899,
-        "triple": 899
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "VALOR POR PERSONA EN BASE DOBLE - U$S 959 // PROMO U$S 899",
-        "VALOR POR PERSONA EN BASE TRIPLE - U$S 899 // PROMO U$S 795",
-        "-Menores hasta 5 años inclusive free (máximo 1 por habitación, acompañado mínimo con 2 adultos pagantes en la misma habitación, no les corresponde butaca, servicio abordo ni seguro de asistencia)-Menores de 6 a 12 años inclusive, Costo U$S 479 // Promo U$S 439 (acompañado mínimo con 2 adultos pagantes por habitación).",
-        "-Costo de la butaca para menores hasta 5 años - PROMO U$S 299, incluye, butaca, servicio abordo y seguro de asistencia."
-      ],
-      "updatedAt": "2026-04-26T14:03:48.526Z"
-    },
-    {
-      "id": "rutatur-799",
-      "rutaId": "799",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/canela-y-gramado-6-dias-50-aniversario-excursion-799",
-      "titulo": "CANELA Y GRAMADO 6 Días - 50 ANIVERSARIO",
-      "subtitulo": "6 DÍAS / 3 NOCHES",
-      "duracion": "6 DÍAS / 3 NOCHES",
-      "destino": "CANELA Y GRAMADO 6 Días - 50 ANIVERSARIO",
-      "destinoSlug": "gramado",
-      "pais": "Brasil",
-      "emoji": "🌲",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-02-27_00594264.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "CANELA. SERRA NEVADAwww.hotelserranevada.com.br",
-          "url": ""
-        }
-      ],
-      "precios": {
-        "doble": 419,
-        "triple": 409,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "-Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
-      ],
-      "updatedAt": "2026-04-26T14:03:49.691Z"
-    },
-    {
-      "id": "rutatur-820",
-      "rutaId": "820",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/aguas-de-palmas-50-aniversario-excursion-820",
-      "titulo": "AGUAS DE PALMAS - 50º ANIVERSARIO",
-      "subtitulo": "8 DÍAS",
-      "duracion": "8 DÍAS",
-      "destino": "AGUAS DE PALMAS - 50º ANIVERSARIO",
-      "destinoSlug": "otro",
-      "pais": "Otros",
-      "emoji": "📍",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-22_8613929.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "www.aguasdepalmas.com.br Habitaciones – CARAVELAS EJECUTIVO",
-          "url": ""
-        }
-      ],
-      "precios": {
-        "doble": 759,
-        "promo": 699,
-        "triple": 749,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "VALOR POR PERSONA BASE DOBLE U$S 759 // PROMO U$S 699 - PAGO EN EFECTIVO O TRANSFERENCIAVALOR POR PERSONA BASE TRIPLE U$S 749 // PROMO U$S 679 - PAGO EN EFECTIVO O TRANSFERENCIA",
-        "-- Menores hasta 7 años, máximo 1 por habitación acompañado de 2 adultos: VALOR U$S 299",
-        "(INCLUYE servicio a bordo, butaca y seguro de asistencia)"
-      ],
-      "updatedAt": "2026-04-26T14:03:50.847Z"
-    },
-    {
-      "id": "rutatur-779",
-      "rutaId": "779",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/cataratas-del-iguazu-50-aniversario-excursion-779",
-      "titulo": "Cataratas del Iguazú - 50 ANIVERSARIO",
-      "subtitulo": "7 DÍAS / 4 NOCHES",
-      "duracion": "7 DÍAS / 4 NOCHES",
-      "destino": "Cataratas del Iguazú - 50 ANIVERSARIO",
-      "destinoSlug": "cataratas",
-      "pais": "Cataratas",
-      "emoji": "🌊",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-01-26_49032275.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [],
-      "precios": {
-        "doble": 579,
-        "promo": 539,
-        "triple": 579,
-        "singleLabel": "Single: 35% adicional",
-        "butaca": 299,
-        "menorGratis": "Menores hasta 4 años: invitado"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la excursión por persona, para alojamiento en habitaciones doble/triple: U$S 579 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 539",
-        "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:",
-        "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
-        "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
-      ],
-      "updatedAt": "2026-04-26T14:03:51.998Z"
-    },
-    {
-      "id": "rutatur-781",
-      "rutaId": "781",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/mendoza-y-carlos-paz-9-dias-50-aniversario-excursion-781",
-      "titulo": "Mendoza y Carlos Paz 9 Días - 50 ANIVERSARIO",
-      "subtitulo": "9 DÍAS / 6 NOCHES",
-      "duracion": "9 DÍAS / 6 NOCHES",
-      "destino": "Mendoza y Carlos Paz 9 Días - 50 ANIVERSARIO",
-      "destinoSlug": "mendoza",
-      "pais": "Argentina",
-      "emoji": "🍷",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-01-27_28590124.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "PROVINCIAL 3",
-          "url": "www.hotelprovincialmza.com.arLOS SAUCES 3***"
-        }
-      ],
-      "precios": {
-        "triple": 629,
-        "singleLabel": "Single: 35% adicional",
-        "butaca": 299,
-        "menorGratis": "Menores hasta 4 años: invitado"
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "- --Menores hasta 4 años, máximo 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio a bordo, butaca ni seguro de asistencia)",
-        "-Solo asiento: U$S 299- Incluye, butaca, servicio abordo y seguro de asistencia."
-      ],
-      "updatedAt": "2026-04-26T14:03:53.147Z"
-    },
-    {
-      "id": "rutatur-787",
-      "rutaId": "787",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/termas-de-gravatal-50-aniversario-excursion-787",
-      "titulo": "TERMAS DE GRAVATAL 50 ANIVERSARIO",
-      "subtitulo": "8 DÍAS",
-      "duracion": "8 DÍAS",
-      "destino": "TERMAS DE GRAVATAL 50 ANIVERSARIO",
-      "destinoSlug": "gravatal",
-      "pais": "Brasil",
-      "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-02-06_97466108.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "INTERNACIONAL TERMAS DE GRAVATALwww.hotelinternacionalgravatal.com.br",
-          "url": ""
-        }
-      ],
-      "precios": {
-        "doble": 809,
-        "promo": 749,
-        "triple": 809,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "Partida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
-        "PRECIO DE PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 28 DE MAYO 2025 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES)",
-        "VALOR DE LA EXCURSIÓN POR PERSONA EN BASE DOBLE // TRIPLE U$S 809 // PROMO U$S 749",
-        "MENORES DE 5 A 12 AÑOS ACOMPAÑADOS MINIMO POR 2 ADULTOS EN LA MISMA HABITACION COSTO U$S 479 // PROMO U$S 419"
-      ],
-      "updatedAt": "2026-04-26T14:03:54.292Z"
-    },
-    {
-      "id": "rutatur-795",
-      "rutaId": "795",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/camboriu-8-dias-50-aniversario-excursion-795",
-      "titulo": "CAMBORIÚ 8 Días - 50 ANIVERSARIO",
-      "subtitulo": "8 DÍAS",
-      "duracion": "8 DÍAS",
-      "destino": "CAMBORIÚ 8 Días - 50 ANIVERSARIO",
-      "destinoSlug": "camboriu",
-      "pais": "Brasil",
-      "emoji": "🎡",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/big/2026-02-26_10707134.webp",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "MIRAMAR 4",
-          "url": "www.hotelmiramar.com.br"
-        }
-      ],
-      "precios": {
-        "promo": 569,
-        "triple": 599,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la excursión por persona en basa doble o triple U$S 599 / PROMO PAGO CONTADO O TRANSFERENCIA U$S 569",
-        "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
-        "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
-      ],
-      "updatedAt": "2026-04-26T14:03:55.444Z"
-    },
-    {
-      "id": "rutatur-806",
-      "rutaId": "806",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/florianopolis-de-lujo-8-dias-excursion-806",
-      "titulo": "FLORIANOPOLIS DE LUJO - 8 Días",
-      "subtitulo": "8 DÍAS / 5 NOCHES",
-      "duracion": "8 DÍAS / 5 NOCHES",
-      "destino": "FLORIANOPOLIS DE LUJO - 8 Días",
-      "destinoSlug": "florianopolis",
-      "pais": "Brasil",
-      "emoji": "🏖️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-07_74343153.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "JURERE BEACH VILLAGE 4",
-          "url": "www.jurerebeachvillage.com.br (FLORIANOPOLIS)"
-        }
-      ],
-      "precios": {
-        "promo": 609,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la Excursión por persona, con Media Pensión y paseos, para alojamiento en habitación Doble o Triple Luxo:U$S 669 - PROMO U$S 609Single: 35 % MAS"
-      ],
-      "updatedAt": "2026-04-26T14:03:56.594Z"
-    },
-    {
-      "id": "rutatur-790",
-      "rutaId": "790",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/porto-seguro-15-dias-50-aniversario-excursion-790",
-      "titulo": "PORTO SEGURO 15 Días - 50 ANIVERSARIO",
-      "subtitulo": "15 DÍAS",
-      "duracion": "15 DÍAS",
-      "destino": "PORTO SEGURO 15 Días - 50 ANIVERSARIO",
-      "destinoSlug": "otro",
-      "pais": "Otros",
-      "emoji": "📍",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-02-11_35737138.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [],
-      "precios": {
-        "doble": 1399,
-        "triple": 1399,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "Partida hacia un viaje inolvidable en modernas unidades DOBLE PISO equipadas con asientos semi cama, Guia acompañante y un completo servicio a bordo más Open Bar ilimitado, durante todo el recorrido por Rocha, Chuy, Pelotas, Porto alegre hasta arribar en…"
-      ],
-      "updatedAt": "2026-04-26T14:03:57.752Z"
-    },
-    {
-      "id": "rutatur-778",
-      "rutaId": "778",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/termas-romanas-50-aniversario-excursion-778",
-      "titulo": "Termas Romanas - 50 ANIVERSARIO",
-      "subtitulo": "6 DÍAS / 4 NOCHES",
-      "duracion": "6 DÍAS / 4 NOCHES",
-      "destino": "Termas Romanas - 50 ANIVERSARIO",
-      "destinoSlug": "termasromanas",
-      "pais": "Argentina",
-      "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-01-26_46240382.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [],
-      "precios": {
-        "promo": 399,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 425 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 399"
-      ],
-      "updatedAt": "2026-04-26T14:03:58.897Z"
-    },
-    {
-      "id": "rutatur-807",
-      "rutaId": "807",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/termas-de-machadinho-7-dias-50-aniversario-excursion-807",
-      "titulo": "TERMAS DE MACHADINHO 7 Días - 50º ANIVERSARIO",
-      "subtitulo": "7 DÍAS",
-      "duracion": "7 DÍAS",
-      "destino": "TERMAS DE MACHADINHO 7 Días - 50º ANIVERSARIO",
-      "destinoSlug": "machadinho",
-      "pais": "Brasil",
-      "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-07_76985225.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "MACHADINHO PARK HOTEL",
-          "url": "www.parkhoteltermasmachadinho.com.br"
-        }
-      ],
-      "precios": {
-        "doble": 719,
-        "promo": 649,
-        "triple": 709,
-        "single": 979
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "- COSTO POR PERSONA EN BASE DOBLE U$S 719  PROMO PAGO CONTADO U$S 649",
-        "- COSTO POR PERSONA EN BASE TRIPLE U$S 709  PROMO PAGO CONTADO U$S 639",
-        "- COSTO HABITACION SINGLE: U$S 979  PROMO PAGO CONTADO U$S 879",
-        "- 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO",
-        "-COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)"
-      ],
-      "updatedAt": "2026-04-26T14:04:00.048Z"
-    },
-    {
-      "id": "rutatur-811",
-      "rutaId": "811",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/camboriufazzenda-park-8-dias-50-aniversario-excursion-811",
-      "titulo": "CAMBORIU + FAZZENDA PARK 8 Días - 50º ANIVERSARIO",
-      "subtitulo": "8 DÍAS / 2 NOCHES",
-      "duracion": "8 DÍAS / 2 NOCHES",
-      "destino": "CAMBORIU + FAZZENDA PARK 8 Días - 50º ANIVERSARIO",
-      "destinoSlug": "camboriu",
-      "pais": "Brasil",
-      "emoji": "🎡",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-09_64813361.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "RESORT FAZZENDA PARK 5",
-          "url": "www.fazzenda.com.brMIRAMAR 4****"
-        }
-      ],
-      "precios": {
-        "promo": 889,
-        "triple": 949,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "COSTO DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 30 DE MAYO 2025. (CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES)",
-        "Valor por persona en basa doble o triple U$S 949 // PROMO U$S 889"
-      ],
-      "updatedAt": "2026-04-26T14:04:01.205Z"
-    },
-    {
-      "id": "rutatur-818",
-      "rutaId": "818",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/san-martin-de-los-andes-y-bariloche-50-aniversario-excursion-818",
-      "titulo": "SAN MARTIN DE LOS ANDES Y BARILOCHE - 50º ANIVERSARIO",
-      "subtitulo": "9 DÍAS / 6 NOCHES",
-      "duracion": "9 DÍAS / 6 NOCHES",
-      "destino": "SAN MARTIN DE LOS ANDES Y BARILOCHE - 50º ANIVERSARIO",
-      "destinoSlug": "bariloche",
-      "pais": "Argentina",
-      "emoji": "🏔️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-21_01151455.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [],
-      "precios": {
-        "triple": 979
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "Valor por persona en habitacion Doble o Triple U$S 979 –  PAGO CONTADO O TRANSFERENCIA U$S 899 .Single + 35%"
-      ],
-      "updatedAt": "2026-04-26T14:04:02.372Z"
-    },
-    {
-      "id": "rutatur-789",
-      "rutaId": "789",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/region-de-los-lagos-13-dias-50-aniversario-excursion-789",
-      "titulo": "REGIÓN DE LOS LAGOS 13 Días - 50 ANIVERSARIO",
-      "subtitulo": "13 DÍAS",
-      "duracion": "13 DÍAS",
-      "destino": "REGIÓN DE LOS LAGOS 13 Días - 50 ANIVERSARIO",
-      "destinoSlug": "otro",
-      "pais": "Otros",
-      "emoji": "📍",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-02-11_33801464.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "GUARATUBA – Spazio Marine –",
-          "url": "www.spaziomarinehotel.com.brCABO FRIO – Malibú –"
-        }
-      ],
-      "precios": {
-        "doble": 1139,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "Valor de la excursion por persona en base doble U$S 1139 PROMO PAGO CONTADO MES ANIVERSARIO U$S 1039SINGLE 35% Más",
-        "Solo Butaca Menores de 5 años – U$S 599 – Incluye servicio a bordo y seguro asistencia medico"
-      ],
-      "updatedAt": "2026-04-26T14:04:03.524Z"
-    },
-    {
-      "id": "rutatur-813",
-      "rutaId": "813",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/ita-all-inclusive-7-dias-50-aniversario-excursion-813",
-      "titulo": "ITÁ - ALL INCLUSIVE 7 Días - 50º ANIVERSARIO",
-      "subtitulo": "7 DÍAS",
-      "duracion": "7 DÍAS",
-      "destino": "ITÁ - ALL INCLUSIVE 7 Días - 50º ANIVERSARIO",
-      "destinoSlug": "otro",
-      "pais": "Otros",
-      "emoji": "📍",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-09_6569210.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "GRAND SUITES FAMILY RESORT/ALL INCLUSIVE - ITÁ: -",
-          "url": "www.grandsuites.com.br - Con nuestro servicio ALL INCLUSIVE* podrás relajarte, descansar y aprovechar al máximo cada momento de tu estancia. Estamos dedicados a brindar una experiencia verdaderamente innovadora, donde cada detalle se planifica cuidadosamente para su comodidad y satisfacción."
-        }
-      ],
-      "precios": {
-        "triple": 639
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor Por Persona hab. Doble o Triple U$S 639 - U$S 589 PROMO PAGO CONTADO",
-        "Alojamiento: La excelencia de nuestras habitaciones es uno de los pilares fundamentales de nuestra hospitalidad. Nuestra prioridad es brindar el máximo confort y bienestar a nuestros huéspedes, y nuestras suites han sido meticulosamente diseñadas para satisfacer sus necesidades. (INCLUIDO)"
-      ],
-      "updatedAt": "2026-04-26T14:04:04.668Z"
-    },
-    {
-      "id": "rutatur-764",
-      "rutaId": "764",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/cataratas-7-dias4-noches-vacaciones-excursion-764",
-      "titulo": "CATARATAS 7 Días / 4 Noches - VACACIONES",
-      "subtitulo": "7 DÍAS / 4 NOCHES",
-      "duracion": "7 DÍAS / 4 NOCHES",
-      "destino": "CATARATAS 7 Días / 4 Noches - VACACIONES",
-      "destinoSlug": "cataratas",
-      "pais": "Cataratas",
-      "emoji": "🌊",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-08_57842227.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [],
-      "precios": {
-        "doble": 629,
-        "promo": 589,
-        "triple": 629,
-        "singleLabel": "Single: 35% adicional",
-        "butaca": 299,
-        "menorGratis": "Menores hasta 4 años: invitado"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la excursión por persona, para alojamiento en habitaciones doble/triple: U$S 629 - PROMO PAGO CONTADO O TRANSFERENCIA U$S 589",
-        "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:",
-        "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
-        "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
-      ],
-      "updatedAt": "2026-04-26T14:04:05.815Z"
-    },
-    {
-      "id": "rutatur-797",
-      "rutaId": "797",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/camboriu-8-dias-vacaciones-excursion-797",
-      "titulo": "CAMBORIÚ 8 Días - VACACIONES",
-      "subtitulo": "8 DÍAS",
-      "duracion": "8 DÍAS",
-      "destino": "CAMBORIÚ 8 Días - VACACIONES",
-      "destinoSlug": "camboriu",
-      "pais": "Brasil",
-      "emoji": "🎡",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-02-27_96684317.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "MIRAMAR 4",
-          "url": "www.hotelmiramar.com.br"
-        }
-      ],
-      "precios": {
-        "promo": 609,
-        "triple": 699,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la excursión por persona en basa doble o triple U$S 699 / PROMO PAGO CONTADO O TRANSFERENCIA U$S 609",
-        "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
-        "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
-      ],
-      "updatedAt": "2026-04-26T14:04:06.957Z"
-    },
-    {
-      "id": "rutatur-798",
-      "rutaId": "798",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/canela-y-gramado-7-dias-vacaciones-excursion-798",
-      "titulo": "CANELA Y GRAMADO 7 Días - VACACIONES",
-      "subtitulo": "7 DÍAS / 4 NOCHES",
-      "duracion": "7 DÍAS / 4 NOCHES",
-      "destino": "CANELA Y GRAMADO 7 Días - VACACIONES",
-      "destinoSlug": "gramado",
-      "pais": "Brasil",
-      "emoji": "🌲",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-02-27_99859138.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "CANELA. SERRA NEVADAwww.hotelserranevada.com.br",
-          "url": ""
-        }
-      ],
-      "precios": {
-        "doble": 569,
-        "triple": 559,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "-Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
-      ],
-      "updatedAt": "2026-04-26T14:04:08.102Z"
-    },
-    {
-      "id": "rutatur-801",
-      "rutaId": "801",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/camboriufazzenda-park-8-dias-vacaciones-excursion-801",
-      "titulo": "CAMBORIU + FAZZENDA PARK 8 Días - VACACIONES",
-      "subtitulo": "8 DÍAS / 3 NOCHES",
-      "duracion": "8 DÍAS / 3 NOCHES",
-      "destino": "CAMBORIU + FAZZENDA PARK 8 Días - VACACIONES",
-      "destinoSlug": "camboriu",
-      "pais": "Brasil",
-      "emoji": "🎡",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-02-27_07457140.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "RESORT FAZZENDA PARK 5",
-          "url": "www.fazzenda.com.brMIRAMAR 4****"
-        }
-      ],
-      "precios": {
-        "promo": 929,
-        "triple": 989,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "COSTO DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 30 DE MAYO 2025. (CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES)",
-        "Valor por persona en basa doble o triple U$S 989 // PROMO U$S 929"
-      ],
-      "updatedAt": "2026-04-26T14:04:09.259Z"
-    },
-    {
-      "id": "rutatur-751",
-      "rutaId": "751",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/costao-do-santinho-all-incluisve-7-dias-excursion-751",
-      "titulo": "COSTAO DO SANTINHO ALL INCLUISVE - 7 Días",
-      "subtitulo": "7 DÍAS",
-      "duracion": "7 DÍAS",
-      "destino": "COSTAO DO SANTINHO ALL INCLUISVE - 7 Días",
-      "destinoSlug": "otro",
-      "pais": "Otros",
-      "emoji": "📍",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2025-07-23_9399184.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "COSTAO DO SANTINHO7 DIAS - ALL INCLUSIVE",
-          "url": "www.costao.com.br"
-        }
-      ],
-      "precios": {
-        "doble": 1049,
-        "promo": 979,
-        "butaca": 299,
-        "menorGratis": "Menores hasta 3 años: invitado"
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "COSTO DE PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 30 DE AGOSTO 2025 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)",
-        "1- VALOR POR PERSONA EN BASE DOBLE HAB. LUXO: U$S 1049 // PROMO U$S 979",
-        "2 - PROMO FAMILIA 2 ADULTOS + 2 MENORES (4 A 11 AÑOS) - U$S 889 // PROMO U$S 799 por persona",
-        "MENORES DE 4 A 11 AÑOS, ACOMPAÑADOS POR 2 ADULTOS EN LA MISMA HABITACION COSTO 679 U$S // PROMO 599 U$S",
-        "Menores hasta 3 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
-        "Solo asiento: U$S 299- Incluye, butaca, servicio abordo y seguro de asistencia"
-      ],
-      "updatedAt": "2026-04-26T14:04:10.405Z"
-    },
-    {
-      "id": "rutatur-810",
-      "rutaId": "810",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/mendozacarlos-paz-9-dias-vacaciones-excursion-810",
-      "titulo": "MENDOZA + CARLOS PAZ - 9 Días - VACACIONES",
-      "subtitulo": "9 DÍAS / 6 NOCHES",
-      "duracion": "9 DÍAS / 6 NOCHES",
-      "destino": "MENDOZA + CARLOS PAZ - 9 Días - VACACIONES",
-      "destinoSlug": "mendoza",
-      "pais": "Argentina",
-      "emoji": "🍷",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-08_56371345.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "PROVINCIAL 3",
-          "url": "www.hotelprovincialmza.com.arLOS SAUCES 3***"
-        }
-      ],
-      "precios": {
-        "singleLabel": "Single: 35% adicional",
-        "butaca": 299,
-        "menorGratis": "Menores hasta 4 años: invitado"
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "- --Menores hasta 4 años, máximo 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio a bordo, butaca ni seguro de asistencia)",
-        "-Solo asiento: U$S 299- Incluye, butaca, servicio abordo y seguro de asistencia."
-      ],
-      "updatedAt": "2026-04-26T14:04:11.552Z"
-    },
-    {
-      "id": "rutatur-812",
-      "rutaId": "812",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/termas-de-machadinho-7-dias4-noches-vacaciones-excursion-812",
-      "titulo": "TERMAS DE MACHADINHO 7 Días / 4 Noches - VACACIONES",
-      "subtitulo": "7 DÍAS / 4 NOCHES",
-      "duracion": "7 DÍAS / 4 NOCHES",
-      "destino": "TERMAS DE MACHADINHO 7 Días / 4 Noches - VACACIONES",
-      "destinoSlug": "machadinho",
-      "pais": "Brasil",
-      "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-09_54719485.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "MACHADINHO PARK HOTEL",
-          "url": "www.parkhoteltermasmachadinho.com.br"
-        }
-      ],
-      "precios": {
-        "doble": 779,
-        "promo": 699,
-        "triple": 759,
-        "single": 1029
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "- COSTO POR PERSONA EN BASE DOBLE U$S 779  PROMO PAGO CONTADO U$S 699",
-        "- COSTO POR PERSONA EN BASE TRIPLE U$S 759  PROMO PAGO CONTADO U$S 679",
-        "- COSTO HABITACION SINGLE: U$S 1029  PROMO PAGO CONTADO U$S 959",
-        "- 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO ABONA SOLO COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)"
-      ],
-      "updatedAt": "2026-04-26T14:04:12.698Z"
-    },
-    {
-      "id": "rutatur-814",
-      "rutaId": "814",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/termas-de-gravatal-8-dias-vacaciones-excursion-814",
-      "titulo": "TERMAS DE GRAVATAL 8 Días - VACACIONES",
-      "subtitulo": "8 DÍAS",
-      "duracion": "8 DÍAS",
-      "destino": "TERMAS DE GRAVATAL 8 Días - VACACIONES",
-      "destinoSlug": "gravatal",
-      "pais": "Brasil",
-      "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-09_66725308.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "INTERNACIONAL TERMAS DE GRAVATALwww.hotelinternacionalgravatal.com.br",
-          "url": ""
-        }
-      ],
-      "precios": {
-        "doble": 809,
-        "promo": 749,
-        "triple": 809,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "Partida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
-        "PRECIO DE PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 28 DE MAYO 2025 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES)",
-        "VALOR DE LA EXCURSIÓN POR PERSONA EN BASE DOBLE // TRIPLE U$S 809 // PROMO U$S 749",
-        "MENORES DE 5 A 12 AÑOS ACOMPAÑADOS MINIMO POR 2 ADULTOS EN LA MISMA HABITACION COSTO U$S 479 // PROMO U$S 419"
-      ],
-      "updatedAt": "2026-04-26T14:04:13.846Z"
-    },
-    {
-      "id": "rutatur-803",
-      "rutaId": "803",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/termas-romanas-6-dias4-noches-excursion-803",
-      "titulo": "TERMAS ROMANAS 6 Días / 4 Noches",
-      "subtitulo": "6 DÍAS / 4 NOCHES",
-      "duracion": "6 DÍAS / 4 NOCHES",
-      "destino": "TERMAS ROMANAS 6 Días / 4 Noches",
-      "destinoSlug": "termasromanas",
-      "pais": "Argentina",
-      "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-03-26_35541148.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [],
-      "precios": {
-        "promo": 439,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 469 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 439"
-      ],
-      "updatedAt": "2026-04-26T14:04:14.992Z"
-    },
-    {
-      "id": "rutatur-815",
-      "rutaId": "815",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/cataratas-del-iguazu-7-dias4-noches-excursion-815",
-      "titulo": "CATARATAS DEL IGUAZÚ 7 Días / 4 Noches",
-      "subtitulo": "7 DÍAS / 4 NOCHES",
-      "duracion": "7 DÍAS / 4 NOCHES",
-      "destino": "CATARATAS DEL IGUAZÚ 7 Días / 4 Noches",
-      "destinoSlug": "cataratas",
-      "pais": "Cataratas",
-      "emoji": "🌊",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-20_08950317.jpg",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [],
-      "precios": {
-        "doble": 599,
-        "promo": 559,
-        "triple": 599,
-        "singleLabel": "Single: 35% adicional",
-        "butaca": 299,
-        "menorGratis": "Menores hasta 4 años: invitado"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la excursión por persona, para alojamiento en habitaciones doble/triple: U$S 599 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 559",
-        "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:",
-        "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
-        "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
-      ],
-      "updatedAt": "2026-04-26T14:04:16.142Z"
-    },
-    {
-      "id": "rutatur-704",
-      "rutaId": "704",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/noche-de-la-nostalgia-en-rio-de-janeiro-excursion-704",
-      "titulo": "NOCHE DE LA NOSTALGIA EN RIO DE JANEIRO",
-      "subtitulo": "11 DÍAS",
-      "duracion": "11 DÍAS",
-      "destino": "NOCHE DE LA NOSTALGIA EN RIO DE JANEIRO",
-      "destinoSlug": "rio",
-      "pais": "Brasil",
-      "emoji": "🏙️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2025-06-11_55736127.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "SPAZIO MARINE-GUARATUBA",
-          "url": "www.spaziomarine.com.br"
+/**
+ * scraper-rutatur.js - BestWay Viajes
+ * Scrapea todos los programas de Rutatur y genera programas-rutatur.json
+ *
+ * Estructura real confirmada del HTML de Rutatur:
+ *   h2                  → título del programa
+ *   img[src*=/usr/data] → imagen del programa
+ *   "desde U$S XXX"     → precio desde (omitir)
+ *   Texto corrido con **Dia 01 - LUGAR** texto... → itinerario
+ *   "Salida XX de MES"  → al final del texto
+ *   "U$S XXXX"          → precios inline
+ *   "HOTEL www...."     → hoteles al final
+ *   Lista *  al pie     → salidas confirmedas
+ */
+
+const axios   = require('axios');
+const cheerio = require('cheerio');
+const fs      = require('fs');
+const path    = require('path');
+
+const BASE     = 'https://www.rutatur.com';
+const INDEX    = `${BASE}/rutatur-excursiones-listado`;
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+const UA_POOL = [
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0',
+];
+let uaIdx = 0;
+
+async function fetchHTML(url, retries = 3) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const res = await axios.get(url, {
+        timeout: 20000,
+        headers: {
+          'User-Agent': UA_POOL[uaIdx++ % UA_POOL.length],
+          'Accept': 'text/html,application/xhtml+xml,*/*;q=0.9',
+          'Accept-Language': 'es-UY,es;q=0.9',
+          'Referer': BASE,
         },
-        {
-          "nombre": "COPACABANA MAR-RIO",
-          "url": "www.copacabanamar.com.brBLUMENAU-CAMBORIU"
-        }
-      ],
-      "precios": {
-        "promo": 999,
-        "triple": 1089,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Precio Por Persona hab. Doble o Triple U$S 1089 - PROMO PAGO CONTADO O TRANSFERENCIA U$S 999"
-      ],
-      "updatedAt": "2026-04-26T14:04:17.285Z"
-    },
-    {
-      "id": "rutatur-821",
-      "rutaId": "821",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/noche-de-la-nostalgia-en-cataratas-6-dias-excursion-821",
-      "titulo": "NOCHE DE LA NOSTALGIA EN CATARATAS - 6 Días",
-      "subtitulo": "6 DÍAS / 3 NOCHES",
-      "duracion": "6 DÍAS / 3 NOCHES",
-      "destino": "NOCHE DE LA NOSTALGIA EN CATARATAS - 6 Días",
-      "destinoSlug": "cataratas",
-      "pais": "Cataratas",
-      "emoji": "🌊",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-22_86809112.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [],
-      "precios": {
-        "doble": 549,
-        "promo": 499,
-        "triple": 549,
-        "singleLabel": "Single: 35% adicional",
-        "butaca": 299,
-        "menorGratis": "Menores hasta 4 años: invitado"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la excursión por persona, para alojamiento en habitaciones doble/triple: U$S 549 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 499",
-        "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:",
-        "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
-        "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
-      ],
-      "updatedAt": "2026-04-26T14:04:18.438Z"
-    },
-    {
-      "id": "rutatur-817",
-      "rutaId": "817",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/termas-romanas-6-dias-excursion-817",
-      "titulo": "TERMAS ROMANAS 6 Días",
-      "subtitulo": "6 DÍAS",
-      "duracion": "6 DÍAS",
-      "destino": "TERMAS ROMANAS 6 Días",
-      "destinoSlug": "termasromanas",
-      "pais": "Argentina",
-      "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-20_11805147.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [],
-      "precios": {
-        "promo": 439,
-        "singleLabel": "Single: 35% adicional"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 469 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 439"
-      ],
-      "updatedAt": "2026-04-26T14:04:19.587Z"
-    },
-    {
-      "id": "rutatur-819",
-      "rutaId": "819",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/mendoza-8-dias-vacaciones-excursion-819",
-      "titulo": "MENDOZA 8 Días - VACACIONES",
-      "subtitulo": "8 DÍAS",
-      "duracion": "8 DÍAS",
-      "destino": "MENDOZA 8 Días - VACACIONES",
-      "destinoSlug": "mendoza",
-      "pais": "Argentina",
-      "emoji": "🍷",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-21_02133336.png",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "E:PROVINCIAL 3",
-          "url": "www.hotelprovincialmza.com.ar"
-        }
-      ],
-      "precios": {
-        "triple": 759,
-        "singleLabel": "Single: 35% adicional",
-        "butaca": 299,
-        "menorGratis": "Menores hasta 4 años: invitado"
-      },
-      "tieneSeguro": false,
-      "notas": [
-        "Valor de la Excursión por persona en habitación Doble // Triple U$S 759 – PAGO CONTADO O TRANSFERENCIA U$S 699SINGLE 35 % MAS",
-        "- --Menores hasta 4 años, máximo 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio a bordo, butaca ni seguro de asistencia)",
-        "-Solo asiento: U$S 299- Incluye, butaca, servicio abordo y seguro de asistencia."
-      ],
-      "updatedAt": "2026-04-26T14:04:20.731Z"
-    },
-    {
-      "id": "rutatur-816",
-      "rutaId": "816",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/cataratas-del-iguazu-6-dias-vacaciones-excursion-816",
-      "titulo": "CATARATAS DEL IGUAZÚ 6 Días - VACACIONES",
-      "subtitulo": "6 DÍAS",
-      "duracion": "6 DÍAS",
-      "destino": "CATARATAS DEL IGUAZÚ 6 Días - VACACIONES",
-      "destinoSlug": "cataratas",
-      "pais": "Cataratas",
-      "emoji": "🌊",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-20_09440401.jpg",
-      "highlights": [],
-      "fechas": [],
-      "salidas": [],
-      "itinerario": [],
-      "hoteles": [],
-      "precios": {
-        "doble": 549,
-        "promo": 499,
-        "triple": 549,
-        "singleLabel": "Single: 35% adicional",
-        "butaca": 299,
-        "menorGratis": "Menores hasta 4 años: invitado"
-      },
-      "tieneSeguro": true,
-      "notas": [
-        "Valor de la excursión por persona, para alojamiento en habitaciones doble/triple: U$S 549 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 499",
-        "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:",
-        "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
-        "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
-      ],
-      "updatedAt": "2026-04-26T14:04:21.875Z"
+        maxRedirects: 5,
+      });
+      return res.data;
+    } catch (e) {
+      if (i === retries - 1) throw e;
+      await sleep(2500 * (i + 1));
     }
-  ]
+  }
 }
+
+// ─── Descubrir URLs desde el listado ──────────────────────────────────────
+async function getPackageUrls() {
+  const html = await fetchHTML(INDEX);
+  const $    = cheerio.load(html);
+  const urls = new Set();
+
+  $('a[href]').each((_, el) => {
+    const href = $(el).attr('href') || '';
+    // Formato: /algo-excursion-NNN o https://www.rutatur.com/algo-excursion-NNN
+    if (/excursion-\d+/.test(href)) {
+      const full = href.startsWith('http') ? href : `${BASE}${href}`;
+      urls.add(full.split('?')[0]);
+    }
+  });
+  return [...urls];
+}
+
+// ─── Inferir destino/país/emoji ────────────────────────────────────────────
+function inferSlug(titulo) {
+  const t = titulo.toLowerCase();
+  if (/cataratas|iguaz[uú]|foz/i.test(t))              return 'cataratas';
+  if (/florianop[oó]lis|floripa/i.test(t))              return 'florianopolis';
+  if (/camboriu|cambori[uú]/i.test(t))                  return 'camboriu';
+  if (/gramado|canela/i.test(t))                        return 'gramado';
+  if (/fazzenda|fazenda/i.test(t))                      return 'fazzenda';
+  if (/rio de janeiro|shakira.*rio|rio.*shakira/i.test(t)) return 'rio';
+  if (/termas.*machadinho|machadinho/i.test(t))         return 'machadinho';
+  if (/termas.*gravatal|gravatal/i.test(t))             return 'gravatal';
+  if (/termas.*romanas|termas romanas/i.test(t))        return 'termasromanas';
+  if (/jurere|jurer[eé]/i.test(t))                      return 'jurere';
+  if (/bariloche/i.test(t))                             return 'bariloche';
+  if (/mendoza/i.test(t))                               return 'mendoza';
+  if (/norte argentino|salta|jujuy/i.test(t))           return 'norte';
+  if (/carlos paz/i.test(t))                            return 'carlospaz';
+  if (/buenos aires/i.test(t))                          return 'buenosaires';
+  if (/chile|santiago/i.test(t))                        return 'chile';
+  return 'otro';
+}
+
+const PAIS_MAP = {
+  cataratas:'Cataratas', florianopolis:'Brasil', camboriu:'Brasil',
+  gramado:'Brasil', fazzenda:'Brasil', rio:'Brasil',
+  machadinho:'Brasil', gravatal:'Brasil', termasromanas:'Argentina',
+  jurere:'Brasil',
+  bariloche:'Argentina', mendoza:'Argentina', norte:'Argentina',
+  carlospaz:'Argentina', buenosaires:'Argentina', chile:'Chile', otro:'Otros',
+};
+const EMOJI_MAP = {
+  cataratas:'🌊', florianopolis:'🏖️', camboriu:'🎡', gramado:'🌲',
+  fazzenda:'🌿', rio:'🏙️', machadinho:'♨️', gravatal:'♨️',
+  termasromanas:'♨️', jurere:'🏖️',
+  bariloche:'🏔️', mendoza:'🍷', norte:'🏔️', carlospaz:'⛰️',
+  buenosaires:'🏙️', chile:'🇨🇱', otro:'📍',
+};
+
+// ─── Parser principal ──────────────────────────────────────────────────────
+function parseProgram(html, sourceUrl) {
+  const $ = cheerio.load(html);
+
+  // ID desde URL: /termas-excursion-771 → "771"
+  const idM    = sourceUrl.match(/excursion-(\d+)/);
+  const rutaId = idM ? idM[1] : String(Date.now());
+
+  // ── TÍTULO ────────────────────────────────────────────────────────────────
+  const tituloRaw = $('h2').first().text().trim().replace(/\s+/g, ' ');
+  if (!tituloRaw || tituloRaw.length < 3) return null;
+  // Limpiar duración del título en cualquier posición
+  const titulo = tituloRaw
+    .replace(/\s*[-–]?\s*\d+\s*d[ií]as?\s*(?:[\/\s]*\d*\s*noches?)?/gi, '')
+    .replace(/\s*[-–]\s*$/g, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+
+  // ── IMAGEN ────────────────────────────────────────────────────────────────
+  let imagen = '';
+  $('img').each((_, el) => {
+    const src = $(el).attr('src') || '';
+    if (!imagen && src.includes('/usr/data/excursiones/')) {
+      imagen = src.startsWith('http') ? src : `${BASE}${src}`;
+    }
+  });
+
+  // ── CONTENIDO PRINCIPAL ───────────────────────────────────────────────────
+  // Rutatur vuelca todo en texto corrido — extraer el bloque principal
+  // Está en el div que contiene el h2 del programa (no el nav)
+  let contenidoEl = null;
+  $('div').each((_, el) => {
+    const text = $(el).text();
+    if (text.includes('Día 01') || text.includes('DIA 01') ||
+        text.includes('Dia 01') || text.includes('SALIDA') ||
+        text.includes('Salida')) {
+      if (!contenidoEl || $(el).text().length > $(contenidoEl).text().length) {
+        contenidoEl = el;
+      }
+    }
+  });
+
+  const rawText = contenidoEl
+    ? $(contenidoEl).text()
+    : $('body').text();
+
+  const lines = rawText.split('\n')
+    .map(l => l.trim().replace(/\s+/g, ' '))
+    .filter(Boolean);
+
+  // ── DÍAS / NOCHES ─────────────────────────────────────────────────────────
+  const diasM   = titulo.match(/(\d+)\s*D[ií]as?/i) || rawText.match(/(\d+)\s*D[ií]as?\b/i);
+  const nochesM = titulo.match(/(\d+)\s*Noches?/i)  || rawText.match(/(\d+)\s*Noches?\b/i);
+  const dias    = diasM   ? diasM[1]   : '';
+  const noches  = nochesM ? nochesM[1] : '';
+
+  // ── ITINERARIO ─────────────────────────────────────────────────────────────
+  // Formato: **Día 01 – LUGAR** texto | **DIA 02 – LUGAR** texto
+  // Marcador de fin: "Salida" / precios / "Plaza Cagancha"
+  const itinerario = [];
+  const DIA_RX = /\*{0,2}D[ií]a\s+(\d{2}(?:\s*(?:y|Y|al|AL)\s*\d{2})?|0?\d)\s*[:\-–]+\s*([^\*\n]{2,60?})\*{0,2}[\s\-–:]+(.{5,})/gi;
+
+  let dm;
+  while ((dm = DIA_RX.exec(rawText)) !== null) {
+    const diaRaw = dm[1].trim();
+    const lugar  = dm[2].trim().replace(/\*+/g, '').replace(/[:\-–]+$/, '').trim();
+    const posActual = dm.index + dm[0].length;
+    const resto     = rawText.slice(posActual);
+
+    // Límite: próximo día, o "Salida", o "Plaza Cagancha", o precios
+    const limites = [
+      resto.search(/\*{0,2}D[ií]a\s+\d{1,2}\b/i),
+      resto.search(/\bSalida\s+\d|\*Salida/i),
+      resto.search(/Plaza\s+Cagancha/i),
+      resto.search(/\bU\$S\s+\d{3,}/),
+    ].filter(p => p > 0);
+
+    const dist    = limites.length > 0 ? Math.min(...limites) : 600;
+    const bloque  = rawText.slice(dm.index + dm[0].length - dm[3].length, dm.index + dm[0].length + dist);
+
+    // Cortar en "Fin de nuestros servicios" o "HASTA LA PROXIMA"
+    const finIdx = bloque.search(/hasta la pr[oó]xima|fin de nuestros/i);
+    const detalle = (finIdx >= 0 ? bloque.slice(0, finIdx) + 'Fin de nuestros servicios.' : bloque)
+      .replace(/\*+/g, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .substring(0, 700);
+
+    if (lugar.length > 0 && detalle.length > 5) {
+      itinerario.push({
+        dia:    `DÍA ${diaRaw.toUpperCase()}`,
+        lugar:  lugar.substring(0, 60),
+        detalle,
+        first:  itinerario.length === 0,
+        last:   false,
+      });
+    }
+  }
+  if (itinerario.length > 0) itinerario[itinerario.length - 1].last = true;
+
+  // ── SALIDAS ───────────────────────────────────────────────────────────────
+  // Aparecen AL FINAL del documento, en formatos variados:
+  // "Salida 09 de MAYO - HORA 14:00hs"
+  // "***Salida 26 DE ABRIL 2026 - Hora de Salida 09:00Hs***"
+  // "* Salida 09 Mayo 2026 - 12:00hs"  ← lista al pie
+  const salidas = [];
+  const SALIDA_RX = /\*{0,3}\s*Salida\s+([^\n\*]{5,80?}(?:hs|Hs|HRS)?)/gi;
+  let sm;
+  while ((sm = SALIDA_RX.exec(rawText)) !== null) {
+    const val = sm[1].trim().replace(/\*+/g, '').replace(/\s+/g, ' ');
+    if (val.length > 3 && !salidas.includes(val)) salidas.push(val);
+  }
+
+  // ── HOTELES ───────────────────────────────────────────────────────────────
+  // Formato al final del texto: "HOTEL NOMBRE www.web.com" o "HOTELES:\nNOMBRE www.web.com"
+  const hoteles = [];
+  // Buscar líneas que parezcan hoteles (nombre en mayúsculas + www.)
+  for (const line of lines) {
+    // Omitir líneas del nav/footer
+    if (/Plaza Cagancha|Pocitos|rutatur\.com$|Montevideo|Uruguay|copyright/i.test(line)) continue;
+    if (/www\./i.test(line) && /[A-Z]{4,}/.test(line)) {
+      // Separar nombre de URL
+      const parts = line.split(/\s+(?=www\.)/);
+      const nombre = parts[0].replace(/\*+/g, '').replace(/^HOTEL(ES)?:?\s*/i, '').trim();
+      const url    = parts[1] || '';
+      if (nombre.length > 2 && nombre.length < 80) {
+        // Evitar duplicados y falsos positivos (RUTATUR, MONTEVIDEO, etc.)
+        if (!/RUTATUR|MONTEVIDEO|URUGUAY|CAGANCHA|POCITOS|BRASIL|ARGENTINA/i.test(nombre)) {
+          hoteles.push({ nombre, url });
+        }
+      }
+    }
+  }
+
+  // ── PRECIOS ───────────────────────────────────────────────────────────────
+  // Formatos: "U$S 629", "PROMO PAGO CONTADO U$S 589", "Single: 35 % MAS"
+  // También: "U$S 789 *** PROMO PAGO CONTADO U$S 719 ***"
+  const precios = {};
+
+  // Doble/Triple
+  const dblM = rawText.match(/(?:doble\/?triple|base\s+doble[^\n]*?)[\s:]*U\$S\s*([\d.,]+)/i);
+  if (dblM) precios.doble = parseFloat(dblM[1].replace(',', '.'));
+
+  // Promo / contado
+  const promoM = rawText.match(/PROMO\s+(?:PAGO\s+)?(?:CONTADO\s+)?(?:O\s+TRANSFERENCIA\s+)?U\$S\s*([\d.,]+)/i);
+  if (promoM) precios.promo = parseFloat(promoM[1].replace(',', '.'));
+
+  // Triple separado
+  const tplM = rawText.match(/BASE\s+TRIPLE[^\n]*?U\$S\s*([\d.,]+)/i)
+            || rawText.match(/TRIPLE[:\s]+U\$S\s*([\d.,]+)/i);
+  if (tplM) precios.triple = parseFloat(tplM[1].replace(',', '.'));
+
+  // Single
+  const sglM = rawText.match(/(?:COSTO\s+)?(?:HABITACION\s+)?SINGLE[:\s]+U\$S\s*([\d.,]+)/i);
+  if (sglM) precios.single = parseFloat(sglM[1].replace(',', '.'));
+
+  // Single "35% mas"
+  if (!precios.single && rawText.match(/single\s*:?\s*35\s*%\s*M[AÁ]S/i)) {
+    precios.singleLabel = 'Single: 35% adicional';
+  }
+
+  // Butaca / solo asiento
+  const butacaM = rawText.match(/(?:COSTO DE LA )?BUTACA[:\s]+U\$S\s*([\d.,]+)|SOLO\s+ASIENTO[:\s]+U\$S\s*([\d.,]+)/i);
+  if (butacaM) precios.butaca = parseFloat((butacaM[1] || butacaM[2]).replace(',', '.'));
+
+  // Menor gratuito
+  const menorGratisM = rawText.match(/MENOR(?:ES)?\s+hasta\s+(\d+)\s+a[ñn]os?[^.]*(?:ES\s+NUESTRO\s+INVITADO|SIN\s+CARGO)/i);
+  if (menorGratisM) precios.menorGratis = `Menores hasta ${menorGratisM[1]} años: invitado`;
+
+  // ── SEGURO ────────────────────────────────────────────────────────────────
+  const tieneSeguro = /SEGURO DE ASISTENCIA\s+INCLUIDO|SEGURO\s+INCLUIDO/i.test(rawText);
+
+  // ── NOTAS / OBSERVACIONES ─────────────────────────────────────────────────
+  // Líneas con info importante: menores, política de cancelación, etc.
+  const notas = [];
+  for (const line of lines) {
+    if (/menor|asiento|butaca|contado|promo|importante|políticas|cancelación|señ/i.test(line) &&
+        line.length > 15 && line.length < 400 &&
+        !/Plaza Cagancha|www\.rutatur|Pocitos|Montevideo/i.test(line)) {
+      const clean = line.replace(/\*+/g, '').trim();
+      if (!notas.includes(clean)) notas.push(clean);
+    }
+  }
+
+  // ── SLUG / IDENTIFICADORES ────────────────────────────────────────────────
+  const destSlug = inferSlug(titulo);
+  const slug     = `rutatur-${rutaId}`;
+  const durStr   = dias ? `${dias} DÍAS${noches ? ` / ${noches} NOCHES` : ''}` : '';
+
+  // ── TEMPORADA ─────────────────────────────────────────────────────────────
+  // Rutatur la incluye en el título o en el texto: "TURISMO 2026", "VERANO", etc.
+  let temporada = '';
+  const tempM = titulo.match(/\b(verano|invierno|oto[ñn]o|primavera|baja\s+temporada|alta\s+temporada|turismo\s+\d{4}|\d{4})\b/i);
+  if (tempM) temporada = tempM[0].trim();
+  // Fallback: buscar en el texto "Salida X de MES AÑO" → extraer mes/año
+  if (!temporada && salidas.length > 0) {
+    const mesM = salidas[0].match(/\b(enero|febrero|marzo|abril|mayo|junio|julio|agosto|setiembre|septiembre|octubre|noviembre|diciembre)\b/i);
+    if (mesM) temporada = mesM[0].charAt(0).toUpperCase() + mesM[0].slice(1).toLowerCase() + (salidas[0].match(/\b(202\d)\b/)?.[0] ? ' ' + salidas[0].match(/\b(202\d)\b/)[0] : '');
+  }
+  const fechasPrograma = [];
+  if (salidas.length > 0) {
+    fechasPrograma.push({
+      label: 'Salida',
+      value: salidas[0].substring(0, 80),
+      gold: true,
+    });
+  }
+  if (salidas.length > 1) {
+    fechasPrograma.push({
+      label: 'Otras salidas',
+      value: salidas.slice(1, 4).join(' · ').substring(0, 80),
+      gold: false,
+    });
+  }
+
+  // ── HIGHLIGHTS desde el itinerario ────────────────────────────────────────
+  const highlights = itinerario
+    .slice(0, 6)
+    .map(d => `📍 ${d.lugar}`)
+    .filter(h => !/montevideo/i.test(h));
+
+  return {
+    id:           slug,
+    rutaId,
+    operador:     'rutatur',
+    sourceUrl,
+    titulo,
+    subtitulo:    durStr || 'Consultar',
+    duracion:     durStr || 'Consultar',
+    destino:      titulo,
+    destinoSlug:  destSlug,
+    pais:         PAIS_MAP[destSlug]  || 'Otros',
+    emoji:        EMOJI_MAP[destSlug] || '📍',
+    imagen,
+    highlights,
+    fechas:       fechasPrograma,
+    salidas,
+    itinerario,
+    hoteles,
+    precios,
+    temporada,
+    notas,
+    updatedAt:    new Date().toISOString(),
+  };
+}
+
+// ─── MAIN ──────────────────────────────────────────────────────────────────
+async function scrapeAll() {
+  console.log('Iniciando scraping de Rutatur...\n');
+
+  const result = {
+    operador:  'Rutatur',
+    updatedAt: new Date().toISOString(),
+    programas: [],
+  };
+
+  console.log('Leyendo listado de excursiones...');
+  let urls = [];
+  try {
+    urls = await getPackageUrls();
+    console.log(`   ${urls.length} excursiones encontradas\n`);
+  } catch (e) {
+    console.error('Error al obtener indice:', e.message);
+    process.exit(1);
+  }
+
+  if (urls.length === 0) {
+    console.error('Sin URLs encontradas.');
+    process.exit(1);
+  }
+
+  for (const url of urls) {
+    await sleep(1100);
+    try {
+      const html = await fetchHTML(url);
+      const prog = parseProgram(html, url);
+      if (prog?.titulo) {
+        result.programas.push(prog);
+        console.log(`OK [${prog.rutaId}] ${prog.titulo}`);
+      } else {
+        console.warn(`Sin datos: ${url}`);
+      }
+    } catch (e) {
+      console.warn(`Error en ${url}: ${e.message}`);
+    }
+  }
+
+  if (result.programas.length === 0) {
+    console.error('Sin programas obtenidos. JSON no sobreescrito.');
+    process.exit(1);
+  }
+
+  const outPath = path.join(__dirname, 'programas-rutatur.json');
+  fs.writeFileSync(outPath, JSON.stringify(result, null, 2), 'utf8');
+  console.log(`\n${result.programas.length} programas guardados en programas-rutatur.json`);
+}
+
+scrapeAll().catch(err => {
+  console.error('Error fatal:', err);
+  process.exit(1);
+});
