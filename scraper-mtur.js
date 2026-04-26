@@ -155,32 +155,37 @@ function parseProgram(html, sourceUrl) {
   }
 
   // ── INCLUYE ───────────────────────────────────────────────────────────────
-  // Estructura real confirmada: h5 "Incluye:" seguido de <li> con texto directo
-  // Los guiones son CSS visual de Mtur, NO están en el HTML
-  // Omitir: "ver seguro", "Todos nuestros paquetes..."
+  // Estructura real del DOM de Mtur:
+  //   h5.btn.btn-default "Incluye:"
+  //   div.col-lg-12
+  //     p.btn.btn-light "- Bus Semicama..."
+  //     p.btn.btn-light "- Coordinador Acompañante"
+  //     ...
+  //     p.btn.btn-light "Todos nuestros paquetes... ver seguro"  ← omitir
   const incluye = [];
   let enIncluye = false;
 
-  $('h5, h4, li').each((_, el) => {
+  $('h5, p').each((_, el) => {
     const tag  = el.tagName?.toLowerCase();
+    const cls  = ($(el).attr('class') || '');
     const text = $(el).text().trim().replace(/\s+/g, ' ');
-    if (!tag) return;
 
-    if ((tag === 'h5' || tag === 'h4') && /^incluye\s*:/i.test(text)) {
+    // Detectar h5 "Incluye:"
+    if (tag === 'h5' && /incluye\s*:/i.test(text)) {
       enIncluye = true; return;
     }
-    // Parar al llegar a la siguiente sección h5/h4
-    if (enIncluye && (tag === 'h5' || tag === 'h4')) {
+    // Parar al llegar al siguiente h5 de sección (No incluye, Opciones, etc.)
+    if (enIncluye && tag === 'h5') {
       enIncluye = false; return;
     }
-    if (enIncluye && tag === 'li') {
-      if (/ver\s+seguro/i.test(text))            return; // link seguro
-      if (/todos\s+nuestros\s+paquetes/i.test(text)) return; // texto genérico
-      if (text.length > 3 && text.length < 300) {
-        // Limpiar el guión visual si por algún motivo viene en el texto
-        const clean = text.replace(/^[-–•]\s*/, '').trim();
-        if (clean.length > 3) incluye.push(clean);
-      }
+
+    // Capturar p.btn.btn-light dentro de la sección incluye
+    if (enIncluye && tag === 'p' && cls.includes('btn-light')) {
+      // Omitir la línea del seguro
+      if (/ver\s+seguro|todos\s+nuestros\s+paquetes/i.test(text)) return;
+      // Limpiar: quitar el "- " inicial que viene como texto tras el ícono
+      const clean = text.replace(/^[-–]\s*/, '').trim();
+      if (clean.length > 3 && clean.length < 300) incluye.push(clean);
     }
   });
 
