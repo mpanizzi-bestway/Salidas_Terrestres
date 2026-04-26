@@ -8,7 +8,7 @@
  *   img[src*=dropbox]     → imagen del paquete
  *   "DuraciónX días / Y noches | TemporadaZ"  → duración + temporada
  *   "Visitando [Ciudad, Ciudad]"               → highlights
- *   h5 "Incluye:" → li items (omitir "ver seguro")
+ *   h5 "Incluye:" → ul/li items (omitir "ver seguro")
  *   h5 "No incluye:" → p siguiente
  *   h5 "Opciones de hoteles:" → h3 con a links
  *   dd/mm/yyyy como texto → fechas de salida
@@ -155,131 +155,136 @@ function parseProgram(html, sourceUrl) {
   }
 
   // ── INCLUYE ───────────────────────────────────────────────────────────────
-  // Estructura real confirmada: h5 "Incluye:" seguido de <li> con texto directo
-  // Los guiones son CSS visual de Mtur, NO están en el HTML
-  // Omitir: "ver seguro", "Todos nuestros paquetes..."
+  // Navegar desde h5 "Incluye:" hacia adelante (next siblings)
+  // buscando ul/ol > li o li directos, hasta llegar a la siguiente sección h5/h4
   const incluye = [];
-  let enIncluye = false;
 
-  $('h5, h4, li').each((_, el) => {
-    const tag  = el.tagName?.toLowerCase();
-    const text = $(el).text().trim().replace(/\s+/g, ' ');
-    if (!tag) return;
+  $('h5, h4').each((_, h) => {
+    if (!/^incluye\s*:/i.test($(h).text().trim())) return;
 
-    if ((tag === 'h5' || tag === 'h4') && /^incluye\s*:/i.test(text)) {
-      enIncluye = true; return;
-    }
-    // Parar al llegar a la siguiente sección h5/h4
-    if (enIncluye && (tag === 'h5' || tag === 'h4')) {
-      enIncluye = false; return;
-    }
-    if (enIncluye && tag === 'li') {
-      if (/ver\s+seguro/i.test(text))            return; // link seguro
-      if (/todos\s+nuestros\s+paquetes/i.test(text)) return; // texto genérico
-      if (text.length > 3 && text.length < 300) {
-        // Limpiar el guión visual si por algún motivo viene en el texto
-        const clean = text.replace(/^[-–•]\s*/, '').trim();
-        if (clean.length > 3) incluye.push(clean);
+    // Recorrer hermanos siguientes hasta el próximo h5/h4
+    let next = $(h).next();
+    while (next.length) {
+      const tag = next[0].tagName?.toLowerCase();
+      if (tag === 'h5' || tag === 'h4') break; // llegamos a la siguiente sección
+
+      if (tag === 'ul' || tag === 'ol') {
+        // Procesar todos los li dentro del ul/ol
+        next.find('li').each((_, li) => {
+          const text = $(li).text().trim().replace(/\s+/g, ' ');
+          if (/ver\s+seguro/i.test(text)) return;
+          if (/todos\s+nuestros\s+paquetes/i.test(text)) return;
+          if (text.length > 3 && text.length < 300) {
+            const clean = text.replace(/^[-–•]\s*/, '').trim();
+            if (clean.length > 3) incluye.push(clean);
+          }
+        });
+      } else if (tag === 'li') {
+        // li suelto sin ul envolvente (menos común pero possible)
+        const text = next.text().trim().replace(/\s+/g, ' ');
+        if (!/ver\s+seguro/i.test(text) && !/todos\s+nuestros/i.test(text) && text.length > 3) {
+          const clean = text.replace(/^[-–•]\s*/, '').trim();
+          if (clean.length > 3) incluye.push(clean);
+        }
       }
+      next = next.next();
     }
   });
 
   // ── NO INCLUYE ────────────────────────────────────────────────────────────
+  // Navegar desde h5 "No incluye:" hacia adelante
   let noIncluye = '';
-  let enNoIncluye = false;
-  $('*').each((_, el) => {
-    const tag  = el.tagName?.toLowerCase();
-    const text = $(el).text().trim().replace(/\s+/g, ' ');
-    if (!tag) return;
-    if ((tag === 'h5' || tag === 'h4') && /^no\s+incluye/i.test(text)) {
-      enNoIncluye = true; return;
-    }
-    if (enNoIncluye) {
-      if ((tag === 'h5' || tag === 'h4')) { enNoIncluye = false; return; }
-      if ((tag === 'p' || tag === 'li') && text.length > 3) {
-        noIncluye = text.substring(0, 300);
-        enNoIncluye = false;
+
+  $('h5, h4').each((_, h) => {
+    if (!/^no\s+incluye/i.test($(h).text().trim())) return;
+
+    let next = $(h).next();
+    while (next.length && noIncluye === '') {
+      const tag = next[0].tagName?.toLowerCase();
+      if (tag === 'h5' || tag === 'h4') break;
+
+      if ((tag === 'p' || tag === 'li' || tag === 'div') && !/(Mtur Reservas|Mercedes|©)/i.test($(next).text())) {
+        const text = $(next).text().trim().replace(/\s+/g, ' ');
+        if (text.length > 3) {
+          noIncluye = text.substring(0, 500);
+          break;
+        }
       }
+      next = next.next();
     }
   });
 
   // ── HOTELES + PRECIOS POR HOTEL ──────────────────────────────────────────
-  // Estructura real: h5 "Opciones de hoteles:" → uno o más bloques:
-  //   h3 [Hotel A] → fechas → h5 Doble → strong USD → h5 Triple → ...
-  //   h3 [Hotel B] → fechas → h5 Doble → strong USD → h5 Triple → ...
-
+  // Navegar desde h5 "Opciones de hoteles:" hasta la siguiente sección h5/h4
   const hoteles = [];
   const CATS_RX = /^(doble|triple|cu[aá]druple|single|child|infante)$/i;
 
-  let enHoteles = false;
-  let hotelActual = null;
-  let lastCat = null;
+  $('h5, h4').each((_, h) => {
+    if (!/opciones\s+de\s+hoteles/i.test($(h).text().trim())) return;
 
-  // Iterar sobre todos los nodos relevantes de una sola vez
-  $('h5, h4, h3, strong, b, p').each((_, el) => {
-    const tag  = el.tagName?.toLowerCase();
-    const text = $(el).text().trim().replace(/\s+/g, ' ');
-    if (!tag) return;
+    let hotelActual = null;
+    let lastCat = null;
+    let next = $(h).next();
 
-    // Inicio de sección hoteles
-    if ((tag === 'h5' || tag === 'h4') && /opciones\s+de\s+hoteles/i.test(text)) {
-      enHoteles = true; return;
-    }
+    while (next.length) {
+      const tag = next[0].tagName?.toLowerCase();
+      const text = $(next).text().trim().replace(/\s+/g, ' ');
 
-    // Fin: llegamos a Observaciones
-    if (enHoteles && (tag === 'h5' || tag === 'h4') && /^observaciones/i.test(text)) {
-      if (hotelActual) { hoteles.push(hotelActual); hotelActual = null; }
-      enHoteles = false; return;
-    }
+      // Parar en la siguiente sección h5/h4
+      if ((tag === 'h5' || tag === 'h4') && !/opciones\s+de\s+hoteles/i.test(text)) {
+        break;
+      }
 
-    if (!enHoteles) return;
-
-    // Nuevo hotel → h3
-    if (tag === 'h3') {
-      if (hotelActual) hoteles.push(hotelActual);
-      const nombre = $(el).text().trim().replace(/[-–\s]+$/, '').trim();
-      const url    = $(el).find('a').first().attr('href') || '';
-      hotelActual = {
-        nombre,
-        url: !/javascript/i.test(url) ? url : '',
-        precios: {},
-      };
-      lastCat = null;
-      return;
-    }
-
-    // Stop: texto "Precios por persona en base doble" → reiniciar lastCat
-    if (hotelActual && /precios por persona/i.test(text)) {
-      lastCat = null; return;
-    }
-
-    // Categoría de precio
-    if (hotelActual && (tag === 'h5' || tag === 'h4') && CATS_RX.test(text)) {
-      lastCat = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-      return;
-    }
-
-    // Valor: strong/b con "USD XXXX"
-    if (hotelActual && lastCat && (tag === 'strong' || tag === 'b')) {
-      const pm = text.match(/USD\s*([\d.,]+)/i) || text.match(/^([\d.,]+)$/);
-      if (pm) {
-        hotelActual.precios[lastCat] = parseFloat(pm[1].replace(',', '.'));
+      // h3 = nuevo hotel
+      if (tag === 'h3') {
+        if (hotelActual && hotelActual.nombre) {
+          hoteles.push(hotelActual);
+        }
+        const nombre = $(next).text().trim().replace(/[-–\s]+$/, '').trim();
+        const url    = $(next).find('a').first().attr('href') || '';
+        hotelActual = {
+          nombre,
+          url: !/javascript/i.test(url) ? url : '',
+          precios: {},
+        };
         lastCat = null;
       }
-      return;
+
+      // "Precios por persona..." → reiniciar categoría
+      if (hotelActual && /precios por persona/i.test(text)) {
+        lastCat = null;
+      }
+
+      // Categoría de precio (h5: Doble, Triple, etc.)
+      if (hotelActual && (tag === 'h5' || tag === 'h4') && CATS_RX.test(text)) {
+        lastCat = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      }
+
+      // Valor numérico en strong/b con "USD XXXX"
+      if (hotelActual && lastCat && (tag === 'strong' || tag === 'b')) {
+        const pm = text.match(/USD\s*([\d.,]+)/i) || text.match(/^([\d.,]+)$/);
+        if (pm) {
+          hotelActual.precios[lastCat] = parseFloat(pm[1].replace(',', '.'));
+          lastCat = null;
+        }
+      }
+
+      // "N/A" como texto plano
+      if (hotelActual && lastCat && /^N\/A$/i.test(text)) {
+        hotelActual.precios[lastCat] = null;
+        lastCat = null;
+      }
+
+      next = next.next();
     }
 
-    // Valor: "N/A" como texto plano en <p> o texto del párrafo
-    if (hotelActual && lastCat && /^N\/A$/i.test(text)) {
-      hotelActual.precios[lastCat] = null;
-      lastCat = null;
+    // Push del último hotel
+    if (hotelActual && hotelActual.nombre) {
+      hoteles.push(hotelActual);
     }
   });
-  // Push del último hotel si no se guardó (la sección Observaciones pudo no aparecer)
-  if (hotelActual && !hoteles.find(h => h.nombre === hotelActual.nombre)) {
-    hoteles.push(hotelActual);
-  }
-  // Deduplicar por nombre (N/A como texto plano puede haber causado re-disparo)
+
+  // Deduplicar por nombre
   const hotelesUniq = hoteles.filter((h, i, arr) =>
     arr.findIndex(x => x.nombre === h.nombre) === i
   );
@@ -304,29 +309,32 @@ function parseProgram(html, sourceUrl) {
   });
 
   // ── OBSERVACIONES ─────────────────────────────────────────────────────────
+  // Navegar desde h5 "Observaciones:" hacia adelante
   let observaciones = '';
-  let enObs = false;
-  $('*').each((_, el) => {
-    const tag  = el.tagName?.toLowerCase();
-    const text = $(el).text().trim().replace(/\s+/g, ' ');
-    if (!tag) return;
-    if ((tag === 'h5' || tag === 'h4') && /^observaciones/i.test(text)) {
-      enObs = true; return;
-    }
-    if (enObs) {
-      // Parar al llegar al footer
-      if (/Mtur Reservas|Mercedes 1499|© 20\d\d|Descargar paquete/i.test(text)) {
-        enObs = false; return;
+
+  $('h5, h4').each((_, h) => {
+    if (!/^observaciones/i.test($(h).text().trim())) return;
+
+    let next = $(h).next();
+    while (next.length) {
+      const tag = next[0].tagName?.toLowerCase();
+      const text = $(next).text().trim().replace(/\s+/g, ' ');
+
+      // Parar en la siguiente sección o footer
+      if ((tag === 'h5' || tag === 'h4') || /Mtur Reservas|Mercedes 1499|© 20\d\d|Descargar paquete/i.test(text)) {
+        break;
       }
-      if ((tag === 'p' || tag === 'strong' || tag === 'div') && text.length > 3) {
-        // Evitar duplicar si el texto ya está incluido
+
+      if ((tag === 'p' || tag === 'strong' || tag === 'div' || tag === 'li') && text.length > 3) {
         if (!observaciones.includes(text.substring(0, 30))) {
           observaciones += (observaciones ? '\n' : '') + text;
         }
       }
+
+      next = next.next();
     }
   });
-  observaciones = observaciones.trim().substring(0, 1000);
+  observaciones = observaciones.trim().substring(0, 1500);
 
   // ── SLUG / IDs ─────────────────────────────────────────────────────────────
   const destSlug = inferSlug(titulo, visitando);
