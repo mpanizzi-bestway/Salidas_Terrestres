@@ -51,20 +51,52 @@ async function fetchHTML(url, retries = 3) {
   }
 }
 
-// ─── Descubrir URLs desde el listado ──────────────────────────────────────
-async function getPackageUrls() {
-  const html = await fetchHTML(INDEX);
-  const $    = cheerio.load(html);
-  const urls = new Set();
+// ─── URLs conocidas de Rutatur (fallback principal — el índice es SPA con hash) ──
+// El listado usa /#/rutatur-excursiones-listado (Angular/Vue SPA)
+// Axios no ejecuta JS, por lo que el índice dinámico no funciona.
+// Mantener esta lista actualizada manualmente cuando se agregan programas.
+const KNOWN_URLS = [
+  // Termas
+  `${BASE}/termas-de-machadinho-7-dias-excursion-771`,
+  `${BASE}/termas-romanas-6-dias-excursion-773`,
+  // Cataratas
+  `${BASE}/cataratas-del-iguazu-7-dias4-noches-excursion-777`,
+  // Rio de Janeiro / Shows
+  `${BASE}/shakira-en-rio-de-janeiro-26-abr-26-excursion-802`,
+  // Otros (agregar según se publiquen)
+];
 
-  $('a[href]').each((_, el) => {
-    const href = $(el).attr('href') || '';
-    // Formato: /algo-excursion-NNN o https://www.rutatur.com/algo-excursion-NNN
-    if (/excursion-\d+/.test(href)) {
-      const full = href.startsWith('http') ? href : `${BASE}${href}`;
-      urls.add(full.split('?')[0]);
-    }
-  });
+// ─── Descubrir URLs dinámicamente (intento — puede fallar en SPA) ─────────
+async function getPackageUrls() {
+  const urls = new Set(KNOWN_URLS);
+
+  // Intentar descubrir desde el HTML base (funciona si hay links estáticos)
+  try {
+    const html = await fetchHTML(BASE);
+    const $    = cheerio.load(html);
+    $('a[href]').each((_, el) => {
+      const href = $(el).attr('href') || '';
+      if (/excursion-\d+/.test(href)) {
+        const full = href.startsWith('http') ? href : `${BASE}${href}`;
+        urls.add(full.split('?')[0]);
+      }
+    });
+
+    // También intentar la página de listado estática
+    const htmlList = await fetchHTML(`${BASE}/rutatur-excursiones-listado`);
+    const $2 = cheerio.load(htmlList);
+    $2('a[href]').each((_, el) => {
+      const href = $2(el).attr('href') || '';
+      if (/excursion-\d+/.test(href)) {
+        const full = href.startsWith('http') ? href : `${BASE}${href}`;
+        urls.add(full.split('?')[0]);
+      }
+    });
+  } catch(e) {
+    console.log(`   Índice dinámico no disponible (SPA): ${e.message}`);
+    console.log(`   Usando ${KNOWN_URLS.length} URLs conocidas`);
+  }
+
   return [...urls];
 }
 
