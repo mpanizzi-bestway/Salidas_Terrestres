@@ -160,6 +160,12 @@
     .op-card-banner.mtur {
       background: linear-gradient(135deg, #7a1a00 0%, #c84800 50%, #e8630a 100%);
     }
+
+    .op-card-banner.rutatur {
+      background: linear-gradient(135deg, #0a3a18 0%, #1a7a3a 55%, #2aaa5a 100%);
+    }
+
+    .op-card-banner.placeholder {
       background: linear-gradient(135deg, #2d3561 0%, #4a4f8a 100%);
     }
 
@@ -352,7 +358,30 @@
       </div>
     </a>
 
-    <!-- PRÓXIMO OPERADOR -->
+    <!-- RUTATUR — activo -->
+    <a href="rutatur.html" class="op-card">
+      <div class="op-card-banner rutatur">
+        <img
+          src="images/rutatur-logo.png"
+          alt="Rutatur"
+          class="op-banner-logo"
+          style="mix-blend-mode:screen;"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span class="op-logo-text" style="display:none;">Rutatur</span>
+      </div>
+      <div class="op-card-body">
+        <h3>Rutatur</h3>
+        <p>Excursiones terrestres con itinerario completo. Brasil, Argentina, Cataratas y mas destinos.</p>
+        <div class="op-card-footer">
+          <span class="op-badge" id="rutatur-count">— programas</span>
+          <div class="op-arrow">
+            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- PROXIMO OPERADOR -->
     <div class="op-card coming-soon">
       <div class="op-card-banner placeholder">
         <span class="op-logo-text">Operador 2</span>
@@ -400,6 +429,11 @@
     fetch('programas-mtur.json').then(r=>r.json()).then(d=>{
       const n=d.programas?.length;
       document.getElementById('mtur-count').textContent=(n?n:'—')+' programas';
+    }).catch(()=>{});
+    // Rutatur
+    fetch('programas-rutatur.json').then(r=>r.json()).then(d=>{
+      const n=d.programas?.length;
+      document.getElementById('rutatur-count').textContent=(n?n:'—')+' programas';
     }).catch(()=>{});
   </script>
 
