@@ -213,17 +213,20 @@ function sorted(byPais) {
 }
 
 function cardHTML(p) {
-  const dias   = p.duracion || '';
-  const salida = p.salidas?.[0] || p.fechas?.[0]?.value || '';
+  const salida   = p.salidas?.[0] || '';
+  const duracion = p.duracion || '';
+  const temp     = p.temporada || p.fechas?.find(f => !f.gold)?.value || '';
+  const tituloLimpio = titleCase(p.titulo);
+
   return `
     <a class="prog-card" href="${PROG_URL}?p=${encodeURIComponent(p.id)}" target="_blank">
       <div class="card-body">
-        <div class="card-name">${titleCase(p.titulo)}</div>
-        <div class="card-sub">${salida.substring(0,60)}</div>
+        <div class="card-name">${tituloLimpio}</div>
+        <div class="card-sub">${salida || 'Consultar salida'}</div>
         <div class="card-tags">
-          ${dias ? `<span class="tag tag-dur">${dias}</span>` : ''}
+          ${duracion ? `<span class="tag tag-dur">${duracion}</span>` : ''}
           <span class="tag tag-bus">Bus semi cama</span>
-          ${p.tieneSeguro ? '<span class="tag tag-seas">Seguro incluido</span>' : ''}
+          ${temp ? `<span class="tag tag-seas">${temp}</span>` : ''}
         </div>
       </div>
       <div class="card-arrow">
