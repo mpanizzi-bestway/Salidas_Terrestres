@@ -115,8 +115,14 @@ function parseProgram(html, sourceUrl) {
   const rutaId = idM ? idM[1] : String(Date.now());
 
   // ── TÍTULO ────────────────────────────────────────────────────────────────
-  const titulo = $('h2').first().text().trim().replace(/\s+/g, ' ');
-  if (!titulo || titulo.length < 3) return null;
+  const tituloRaw = $('h2').first().text().trim().replace(/\s+/g, ' ');
+  if (!tituloRaw || tituloRaw.length < 3) return null;
+  // Limpiar duración del título en cualquier posición
+  const titulo = tituloRaw
+    .replace(/\s*[-–]?\s*\d+\s*d[ií]as?\s*(?:[\/\s]*\d*\s*noches?)?/gi, '')
+    .replace(/\s*[-–]\s*$/g, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
 
   // ── IMAGEN ────────────────────────────────────────────────────────────────
   let imagen = '';
@@ -289,7 +295,16 @@ function parseProgram(html, sourceUrl) {
   const slug     = `rutatur-${rutaId}`;
   const durStr   = dias ? `${dias} DÍAS${noches ? ` / ${noches} NOCHES` : ''}` : '';
 
-  // ── FECHAS PARA PLANTILLA ─────────────────────────────────────────────────
+  // ── TEMPORADA ─────────────────────────────────────────────────────────────
+  // Rutatur la incluye en el título o en el texto: "TURISMO 2026", "VERANO", etc.
+  let temporada = '';
+  const tempM = titulo.match(/\b(verano|invierno|oto[ñn]o|primavera|baja\s+temporada|alta\s+temporada|turismo\s+\d{4}|\d{4})\b/i);
+  if (tempM) temporada = tempM[0].trim();
+  // Fallback: buscar en el texto "Salida X de MES AÑO" → extraer mes/año
+  if (!temporada && salidas.length > 0) {
+    const mesM = salidas[0].match(/\b(enero|febrero|marzo|abril|mayo|junio|julio|agosto|setiembre|septiembre|octubre|noviembre|diciembre)\b/i);
+    if (mesM) temporada = mesM[0].charAt(0).toUpperCase() + mesM[0].slice(1).toLowerCase() + (salidas[0].match(/\b(202\d)\b/)?.[0] ? ' ' + salidas[0].match(/\b(202\d)\b/)[0] : '');
+  }
   const fechasPrograma = [];
   if (salidas.length > 0) {
     fechasPrograma.push({
@@ -331,7 +346,7 @@ function parseProgram(html, sourceUrl) {
     itinerario,
     hoteles,
     precios,
-    tieneSeguro,
+    temporada,
     notas,
     updatedAt:    new Date().toISOString(),
   };
