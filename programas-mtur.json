@@ -1,6 +1,6 @@
 {
   "operador": "Mtur Viajes",
-  "updatedAt": "2026-04-26T00:08:46.217Z",
+  "updatedAt": "2026-04-26T05:12:49.609Z",
   "programas": [
     {
       "id": "mtur-807",
@@ -32,7 +32,19 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semicama Montevideo / Termas Romanas / Montevideo",
+        "Coordinador Acompañante",
+        "Seguro Medico 40 K",
+        "Servicio a Bordo",
+        "3 Noches De Alojamiento Pensión Completa Mas Bebidas",
+        "1 DESAYUNO A BORDO",
+        "3 Desayunos",
+        "3 Almuerzos",
+        "3 Cenas",
+        "1 Almuerzo Buffet en Rivera (al regreso)",
+        "Tiempo Libre Para Compras"
+      ],
       "noIncluye": "nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
@@ -66,7 +78,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/8eq6rdczppru8ldnf2yr6/2025_12_17_12_08_09_terma_romanas_bajat5-2.pdf?rlkey=vf7j6stg2abm820ylcowp8ljf&raw=1",
       "observaciones": "",
-      "updatedAt": "2026-04-26T00:08:52.626Z"
+      "updatedAt": "2026-04-26T05:12:56.731Z"
     },
     {
       "id": "mtur-781",
@@ -100,7 +112,19 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semicama Montevideo - Foz De Iguazú - Montevideo",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "Servicio a Bordo durante el viaje",
+        "3 Noches De Alojamiento (Según Selección)",
+        "3 Desayunos Buffet servido en el hotel",
+        "3 Cenas Buffet servidas en el hotel",
+        "Traslado, Ingreso Y Guía Local Cataratas Brasil",
+        "Traslado, Ingreso Y Guía Local Cataratas Argentina",
+        "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
+        "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
+      ],
       "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
@@ -141,7 +165,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/q8dr7o5qrqi6tvkgrxecl/2026_4_22_14_15_22_cataratas6_baja-1.pdf?rlkey=en6p74vba4zc395dyjv4wdzhv&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Actividades Opcionales:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135Se contratan y abonan al coordinador en viaje.",
-      "updatedAt": "2026-04-26T00:08:55.517Z"
+      "updatedAt": "2026-04-26T05:12:59.417Z"
     },
     {
       "id": "mtur-788",
@@ -173,7 +197,16 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semicama Montevideo - Florianópolis - Montevideo",
+        "Servicio en ruta (Merienda, Cena, Desayuno / Merienda, Cena, Desayuno",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "5 Noches De Alojamiento Con Desayuno Buffet",
+        "Paseo De Playa Daniela",
+        "Paseo De Playa Pantano Do Sul",
+        "Tour Centro Histórico (Guía Local)"
+      ],
       "noIncluye": "Bebidas, Propinas, Comidas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
@@ -216,7 +249,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/hd2ghyj9i2pf2q8mqcos1/2025_7_25_17_51_10_floripa8_solyplaya_verano.pdf?rlkey=opudxgu8xpmp20swaql53pfse&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-04-26T00:08:58.035Z"
+      "updatedAt": "2026-04-26T05:13:02.051Z"
     },
     {
       "id": "mtur-815",
@@ -249,7 +282,16 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semicama Montevideo - Florianopolis - Montevideo",
+        "SERVICIO A BORDO EN RUTA (Merienda, Cena, Desayuno / Merienda, Cena, Desayuno",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "5 Noches De Alojamiento Con Desayuno Buffet",
+        "Paseo De Playa Daniela",
+        "Paseo De Playa Pantano Do Sul",
+        "Tour Centro Historico (Guia Local)"
+      ],
       "noIncluye": "Bebidas, Propinas, Comidas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
@@ -280,7 +322,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Opcionales:MAP u$s 60Barco pirata u$s 25 Visita Balneario Camboriu u$s 25",
-      "updatedAt": "2026-04-26T00:09:00.592Z"
+      "updatedAt": "2026-04-26T05:13:04.615Z"
     },
     {
       "id": "mtur-816",
@@ -313,7 +355,19 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semicama Montevideo - Foz De Iguazú - Montevideo",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "Servicio a Bordo durante el viaje",
+        "3 Noches De Alojamiento (Según Selección)",
+        "3 Desayunos Buffet servido en el hotel",
+        "3 Cenas Buffet servidas en el hotel",
+        "Traslado, Ingreso Y Guía Local Cataratas Brasil",
+        "Traslado, Ingreso Y Guía Local Cataratas Argentina",
+        "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
+        "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
+      ],
       "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
@@ -352,7 +406,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/2tm7xmwt90peaerfh40sj/2026_4_22_14_15_12_cataratas6_baja-1.pdf?rlkey=r7c0oaj6xokf3iwm4wvhtusz7&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Actividades Opcionales:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135Se contratan y abonan al coordinador en viaje.",
-      "updatedAt": "2026-04-26T00:09:04.616Z"
+      "updatedAt": "2026-04-26T05:13:07.372Z"
     },
     {
       "id": "mtur-809",
@@ -385,7 +439,17 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semicama Montevideo / Gramado / Montevideo",
+        "Servicio a Bordo",
+        "Asistencia Medica En Viaje",
+        "Coordinador Acompañante",
+        "4 Noches De Alojamiento",
+        "4 DESAYUNOS BUFFET",
+        "3 ALMUERZOS O CENAS BUFFET",
+        "1 Almuerzo (Cafe Colonial)",
+        "City Tour En Gramado / Canela / Garibaldi"
+      ],
       "noIncluye": "BEBIDAS EN LAS COMIDAS, PROPINAS, INGRESO A PARQUES Y O MUSEOS Y NADA NO ESPECIFICADO EN EL PROGRAMA.",
       "hoteles": [
         {
@@ -415,7 +479,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/7vfnt2m6234r2c2qvfl68/2026_2_9_19_41_56_gramadoycanela7_vac_julio.pdf?rlkey=eihjm7aqcfbntl61hmyayjpx0&raw=1",
       "observaciones": "Los precios de menores corresponden a un menor compartiendo habitación con dos adultos.",
-      "updatedAt": "2026-04-26T00:09:06.997Z"
+      "updatedAt": "2026-04-26T05:13:09.758Z"
     },
     {
       "id": "mtur-808",
@@ -448,7 +512,17 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semicama Montevideo / Gramado / Montevideo",
+        "Servicio a Bordo",
+        "Asistencia Medica En Viaje",
+        "Coordinador Acompañante",
+        "4 Noches De Alojamiento",
+        "4 DESAYUNOS BUFFET",
+        "3 ALMUERZOS O CENAS BUFFET",
+        "1 Almuerzo (Cafe Colonial)",
+        "City Tour En Gramado / Canela / Garibaldi"
+      ],
       "noIncluye": "BEBIDAS EN LAS COMIDAS, PROPINAS, INGRESO A PARQUES Y O MUSEOS Y NADA NO ESPECIFICADO EN EL PROGRAMA.",
       "hoteles": [
         {
@@ -477,7 +551,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/de8epvjrwyth08q20idoe/2026_4_10_19_25_43_gramadoycanela7_vac_setiembre-1.pdf?rlkey=lxs83iojbco8cs455f2xkypq9&raw=1",
       "observaciones": "Los precios de menores corresponden a un menor compartiendo habitación con dos adultos.",
-      "updatedAt": "2026-04-26T00:09:10.765Z"
+      "updatedAt": "2026-04-26T05:13:12.775Z"
     },
     {
       "id": "mtur-756",
@@ -509,7 +583,19 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semicama Montevideo - Foz De Iguazú - Montevideo",
+        "Coordinador Acompañante",
+        "Asistencia Medica En Viaje 40 K",
+        "Servicio a Bordo durante el viaje",
+        "4 Noches De Alojamiento (Según Selección)",
+        "4 Desayunos Buffet servido en el hotel",
+        "4 Cenas Buffet servidas en el hotel",
+        "Traslado, Ingreso Y Guía Local Cataratas Brasil",
+        "Traslado, Ingreso Y Guía Local Cataratas Argentina",
+        "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
+        "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
+      ],
       "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
@@ -543,7 +629,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/aiibdhkpinyx0pm0xoldc/2026_4_7_12_36_48_2025_7_25_17_27_12_cataratas7_baja.pdf?rlkey=1jjboxtmiscssdkkxoko8cio8&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-04-26T00:09:13.185Z"
+      "updatedAt": "2026-04-26T05:13:15.180Z"
     },
     {
       "id": "mtur-804",
@@ -575,7 +661,20 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semicama Montevideo - Foz De Iguazú - Montevideo",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "Servicio a Bordo durante el viaje",
+        "3 Noches De Alojamiento (Según Selección)",
+        "3 Desayunos Buffet servido en el hotel",
+        "2 Cenas Buffet servidas en el hotel",
+        "1 CENA SHOW EN RAFAIN ESPECIAL + POSTERIOR FIESTA DE LA NOSTALGIA",
+        "Traslado, Ingreso Y Guía Local Cataratas Brasil",
+        "Traslado, Ingreso Y Guía Local Cataratas Argentina",
+        "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
+        "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
+      ],
       "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
@@ -604,7 +703,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/a7sjc3a3dr221xvq8zvms/2026_4_23_12_04_46_cataratas6_nostalgia.pdf?rlkey=pwefhx9i2j1wz8jtnamc9trih&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-04-26T00:09:15.587Z"
+      "updatedAt": "2026-04-26T05:13:17.610Z"
     },
     {
       "id": "mtur-811",
@@ -636,7 +735,19 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semicama Montevideo - Foz De Iguazú - Montevideo",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "Servicio a Bordo durante el viaje",
+        "4 Noches De Alojamiento (Según Selección)",
+        "4 Desayunos Buffet servido en el hotel",
+        "4 Cenas Buffet servidas en el hotel",
+        "Traslado, Ingreso Y Guía Local Cataratas Brasil",
+        "Traslado, Ingreso Y Guía Local Cataratas Argentina",
+        "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
+        "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
+      ],
       "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
@@ -667,7 +778,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/4e6h26mrlgkfq5em95pqo/2026_2_9_19_38_56_cataratas7_julio.pdf?rlkey=dhaknmtm3hyxcm91w7t2s2w90&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-04-26T00:09:17.955Z"
+      "updatedAt": "2026-04-26T05:13:20.024Z"
     },
     {
       "id": "mtur-810",
@@ -700,7 +811,19 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semicama Montevideo - Foz De Iguazú - Montevideo",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "Servicio a Bordo durante el viaje",
+        "4 Noches De Alojamiento (Según Selección)",
+        "4 Desayunos Buffet servido en el hotel",
+        "4 Cenas Buffet servidas en el hotel",
+        "Traslado, Ingreso Y Guía Local Cataratas Brasil",
+        "Traslado, Ingreso Y Guía Local Cataratas Argentina",
+        "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
+        "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
+      ],
       "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
@@ -729,7 +852,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/yakg0mf4lovsvmged2tnf/2026_4_22_17_20_21_cataratas7_setiembre.pdf?rlkey=f8jmvxbm6nwt16hkxr760srmn&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-04-26T00:09:20.889Z"
+      "updatedAt": "2026-04-26T05:13:22.422Z"
     },
     {
       "id": "mtur-774",
@@ -761,7 +884,19 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semi Cama",
+        "SERVICIO A BORDO (2 CENAS + 2 DESAYUNOS + 2 MERIENDAS)",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "05 Noches De Alojamiento Hotel A 150 Mts Del Mar",
+        "05 DESAYUNOS BUFFET SERVIDOS EN HOTEL",
+        "05 CENAS BUFFET SERVIDAS EN HOTEL O RESTAURANTE",
+        "Cristo Luz Traslado + Ingreso",
+        "Playa Laranjeiras - Telesférico (Traslado + Ingreso)",
+        "Paseo En Scuna Pirata (Playa Porto Belo)",
+        "Beto Carrero World"
+      ],
       "noIncluye": "BEBIDAS EN LAS COMIDAS, PROPINAS, Y NADA NO ESPECIFICADO EN EL PROGRAMA.",
       "hoteles": [
         {
@@ -790,7 +925,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/tm8d3feip7344jb92cuo5/2025_12_11_18_48_30_camboriu8_magia_setiembre.pdf?rlkey=z0ttb0nepne2jd5xbw7gfhxjg&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-04-26T00:09:24.118Z"
+      "updatedAt": "2026-04-26T05:13:24.801Z"
     },
     {
       "id": "mtur-772",
@@ -822,7 +957,19 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semi Cama",
+        "SERVICIO A BORDO (2 CENAS + 2 DESAYUNOS + 2 MERIENDAS)",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "05 Noches De Alojamiento Hotel A 150 Mts Del Mar",
+        "05 DESAYUNOS BUFFET SERVIDOS EN HOTEL",
+        "05 CENAS BUFFET SERVIDAS EN HOTEL O RESTAURANTE",
+        "Cristo Luz Traslado + Ingreso",
+        "Playa Laranjeiras - Telesférico (Traslado + Ingreso)",
+        "Paseo En Scuna Pirata (Playa Porto Belo)",
+        "Beto Carrero World"
+      ],
       "noIncluye": "BEBIDAS EN LAS COMIDAS, PROPINAS, Y NADA NO ESPECIFICADO EN EL PROGRAMA.",
       "hoteles": [
         {
@@ -851,7 +998,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/gjvvu40290m9ld6qezp2f/2025_12_11_18_48_08_camboriu8_magia_julio.pdf?rlkey=b15tec44oke8ucd4w6no7r3qd&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-04-26T00:09:27.591Z"
+      "updatedAt": "2026-04-26T05:13:27.153Z"
     },
     {
       "id": "mtur-805",
@@ -883,7 +1030,20 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semicama",
+        "SERVICIO A BORDO",
+        "Coordinador Informante",
+        "Seguro Médico En Viaje",
+        "3 Noches De Alojamiento En Santiago Con Desayuno",
+        "3 COMIDAS EN SANTIAGO (TRES PASOS)",
+        "Tour Ciudad (Guia Local)",
+        "Visita X El Dia Viña Del Mar Y Valparaiso",
+        "3 Noches De Alojamiento En Mendoza Con Desayuno",
+        "2 CENAS EN MENDOZA (TRES PASOS)",
+        "Tour Ciudad Mendoza (Guia Local)",
+        "Visita Bodega"
+      ],
       "noIncluye": "PROPINAS, BEBIDAS EN LAS CENAS, NADA QUE NO ESTE DETALLADO EN EL PROGRAMA",
       "hoteles": [
         {
@@ -910,7 +1070,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/67si635n63hyv7qselp5d/2025_11_28_15_06_24_mendoza_santiago_9dias_setiembre.pdf?rlkey=pfa7siskl2t9vefj3njuiyjhh&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-04-26T00:09:30.686Z"
+      "updatedAt": "2026-04-26T05:13:29.511Z"
     },
     {
       "id": "mtur-812",
@@ -944,7 +1104,23 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semicama Montevideo / Curitiba / Rio De Janeiro / Camboriu / Montevideo",
+        "Coordinador Acompañante",
+        "Seguro Médico 40 K",
+        "3 comidas en ruta",
+        "1 Noche De Alojamiento En Curitiba Con Desayuno",
+        "1 Cena Buffet en Barrio Santa Felicidad",
+        "3 Noches De Alojamiento En Rio De Janeiro Con Desayuno (Zona Copacabana)",
+        "4 Comidas Buffet Rio de Janeiro",
+        "1 Noches De Alojamiento En Camboriu Con Desayuno.",
+        "1 Cena en Camboriu",
+        "City Tour Curitiba",
+        "City Tour Rio De Janeiro",
+        "Traslado Al Corcovado",
+        "Traslado Al Pan De Azúcar",
+        "Traslado Y Ascenso A Cristo Luz (Camboriu)"
+      ],
       "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
@@ -971,7 +1147,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/8r8dqlf0qszvv0zv66puc/2026_4_22_17_21_09_rio_10dias_verano2026-1.pdf?rlkey=c35pth6ztvt4yoaopk3hqtkiz&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ASCENSO MORRO PAN DE AZUCAR Y MORRO DA URCATRASLADO Y ACENSO PARQUE NACIONAL TIJUCA - INGRESO AL CRISTO REDENTORTRASLADO EN BUS PRIVADO ZONA ANGRA DOS REIS E ILHA GRANDE CON PASEO EN BARCO (4 PLAYAS) - MUSEO DE SAMBAGUIA COORDINADOR + GUIA LOCALPAQUETE COMPLETO APROX U$S 215PAQUETE SIN PASEO ANGRA DOS REIS APROX U$S 150 - precios aproximados susceptibles a modificaciones.-se contratan y abonan directamente al coordinador en viaje- sujetos a disponibilidad de cupo en destino. Dependen directamente del presador de servicio.",
-      "updatedAt": "2026-04-26T00:09:33.785Z"
+      "updatedAt": "2026-04-26T05:13:32.044Z"
     },
     {
       "id": "mtur-765",
@@ -1005,7 +1181,23 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semicama Montevideo / Curitiba / Rio De Janeiro / Camboriu / Montevideo",
+        "Coordinador Acompañante",
+        "Seguro Médico 40 K",
+        "3 comidas en ruta",
+        "1 Noche De Alojamiento En Curitiba Con Desayuno",
+        "1 Cena Buffet en Barrio Santa Felicidad",
+        "3 Noches De Alojamiento En Rio De Janeiro Con Desayuno (Zona Copacabana)",
+        "4 Comidas Buffet Rio de Janeiro",
+        "1 Noches De Alojamiento En Camboriu Con Desayuno.",
+        "1 Cena en Camboriu",
+        "City Tour Curitiba",
+        "City Tour Rio De Janeiro",
+        "Traslado Al Corcovado",
+        "Traslado Al Pan De Azúcar",
+        "Traslado Y Ascenso A Cristo Luz (Camboriu)"
+      ],
       "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
@@ -1032,7 +1224,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/m41lb5qdsm9535i760ell/2026_2_9_19_28_56_rio_10dias_vac_julio2026-1.pdf?rlkey=zb36ee0hybwxi81f2q9cjmkj5&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.____________________________ACTIVIDADES OPCIONALES: ASCENSO MORRO PAN DE AZUCAR Y MORRO DA URCA TRASLADO Y ACENSO EN CAMIONETAS PRIVADAS PARQUE NACIONAL TIJUCA - INGRESO AL CRISTO REDENTOR 1 ALMUERZO BUFFET (SIN BEBIDA) TRASLADO EN BUS PRIVADO ZONA ANGRA DOS REIS E ILHA GRANDE CON PASEO EN BARCO (4 PLAYAS) 1 ALMUERZO BUFFET (SIN BEBIDA) MUSEO DE SAMBA GUIA COORDINADOR + GUIA LOCALPAQUETE COMPLETO APROX U$S 250 PAQUETE SIN PASEO ANGRA DOS REIS APROX U$S 180- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinad",
-      "updatedAt": "2026-04-26T00:09:36.813Z"
+      "updatedAt": "2026-04-26T05:13:34.770Z"
     },
     {
       "id": "mtur-806",
@@ -1065,7 +1257,21 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Coordinador Acompañante",
+        "Bus Semicama",
+        "SERVICIO A BORDO COMPLETO",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "3 Noches De Alojamientoe En Bariloche Con Desayuno",
+        "3 CENAS EN RESTAURANTE. (TRES PASOS)",
+        "Paseos En Bariloche, Guia Local. (No Incluye Ascensos A Cerros)",
+        "3 Noches De Alojamiento En Puerto Varas Con Desayuno",
+        "3 CENAS EN RESTAURANTE, HOTEL O FUERA DEL HOTEL. (TRES PASO)",
+        "Paseos En Puerto Varas Y Puerto Montt, Guia Local.",
+        "2 Noches De Alojamiento En San Martin De Los Andes Con Desayuno",
+        "2 CENAS EN SAN MARTIN DE LOS ANDES. (TRES PASOS)",
+        "Paseo En San Martin De Los Andes. Guia Local."
+      ],
       "noIncluye": "BEBIDAS EN LAS COMIDAS, PROPINAS, NI NADA NO ESPECIFICADO EN EL PROGRAMA.",
       "hoteles": [
         {
@@ -1092,7 +1298,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/g9cmglxvk3ch0tguu343x/2025_12_12_15_19_07_bariloche_surdechile_julio11dias.pdf?rlkey=9r5xiy1oz18ibsdcoemj4bssp&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-04-26T00:09:39.645Z"
+      "updatedAt": "2026-04-26T05:13:37.197Z"
     },
     {
       "id": "mtur-803",
@@ -1124,7 +1330,23 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Bus Semi Cama Montevideo / Norte Argentino / Montevideo",
+        "Servicio a bordo en ruta de ida y vuelta",
+        "Guia Experto En El Destino - Guias Locales",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "1 Noche En Tucuman",
+        "1 Noche Hotel Cafayate",
+        "5 Noches De Hotel En Salta",
+        "1 Noche De Hotel En Parana",
+        "City Tour Tucuman",
+        "City Tour Salta",
+        "Visita Tafi Del Valle",
+        "Visita Bodega Cafayate",
+        "Paseo Tierras Collas / Humahuaca / Cerro 7 Colores",
+        "2 Peñas Folkloricas",
+        "10 Comidas Incluidas"
+      ],
       "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
@@ -1154,7 +1376,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/gttbakni8mqoth9i19mb8/2026_4_24_15_39_27_norte_argentino11_baja-2.pdf?rlkey=mntyj453dd6aerys5uxo494c0&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO. POLITICA DE MENORES: APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE: CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES. ACTIVIDADES OPCIONALESVISITA AL PUELO DE CACHI U$S 40PASEO SALINAS GRANDE U$S 45TELEFÉRICO U$S 20Valores aproximados a confirmar en el dia.Se contratan y abonan directamente con el coordinador en viaje. Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo y plazas en destino y pueden sufrir modificaciones sin previo aviso.Estas condiciones dependen directamente del prestador del servicio correspondiente (atracciones, parques, trenes, paseos en barco, etc.)",
-      "updatedAt": "2026-04-26T00:09:42.371Z"
+      "updatedAt": "2026-04-26T05:13:39.781Z"
     },
     {
       "id": "mtur-814",
@@ -1192,7 +1414,23 @@
           "gold": false
         }
       ],
-      "incluye": [],
+      "incluye": [
+        "Pasaje Aereos",
+        "Tasas E Impuestos",
+        "Equipaje Despachado En Bodega 1 Maleta 23K",
+        "Coordinador Acompañante Desde Montevideo",
+        "Guia Local Durante Todo El Viaje",
+        "Traslado Llegada En Madrid",
+        "Alojamiento Y Desayuno Bufet Diario",
+        "2 ALMUERZOS Y 3 CENAS",
+        "Autocar De Lujo",
+        "Guia Acompañante",
+        "Visita Con Guia Local En Madrid, Oporto, Lisboa, Sevilla, Granada Y Toledo",
+        "Entrada A La Alhambra En Granada",
+        "Seguro De Viaje Cobertura U$S 80.000",
+        "Visita A Una Bodega Con Degustacion De Vino",
+        "Tasas Municipales En Portugal"
+      ],
       "noIncluye": "",
       "hoteles": [
         {
@@ -1213,7 +1451,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/9bipm5rai5rlch2zdtuf5/2026_2_19_17_31_17_entre_fatimayandalucia14dias-1.pdf?rlkey=sptil88ntc63yvi5jag8a54pb&raw=1",
       "observaciones": "",
-      "updatedAt": "2026-04-26T00:09:45.239Z"
+      "updatedAt": "2026-04-26T05:13:42.204Z"
     }
   ]
 }
