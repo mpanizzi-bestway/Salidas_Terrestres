@@ -187,13 +187,13 @@
 <div id="error-screen">
   <h2>⚠️ Programa no encontrado</h2>
   <p id="error-msg"></p>
-  <a href="mtur.html" style="color:var(--mtur);font-size:.9rem;">← Volver a los programas</a>
+  <a href="./mtur.html" style="color:var(--mtur);font-size:.9rem;">← Volver a los programas</a>
 </div>
 
 <div class="print-bar">
   <button class="btn" onclick="window.print()">🖨️ Imprimir / PDF</button>
   <a class="btn mtur" id="btn-fuente" href="#" target="_blank">🔗 Ver en Mtur</a>
-  <a class="btn sec" href="mtur.html">← Volver</a>
+  <a class="btn sec" href="./mtur.html">← Volver</a>
 </div>
 
 <div class="page" id="programa-page" style="visibility:hidden">
@@ -458,7 +458,7 @@ async function init() {
   loadMsg.textContent = 'Leyendo catálogo Mtur Viajes...';
   let allData;
   try {
-    const r = await fetch(`./programas-mtur.json?_=${Date.now()}`);
+    const r = await fetch(`../../programas-mtur.json?_=${Date.now()}`);
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     allData = await r.json();
   } catch(e) {
@@ -468,7 +468,7 @@ async function init() {
 
   const prog = allData.programas.find(p => p.id === progId);
   if (!prog) {
-    showError(`Programa <code>${progId}</code> no encontrado.<br><a href="mtur.html" style="color:var(--mtur)">← Ver todos</a>`, 'No encontrado');
+    showError(`Programa <code>${progId}</code> no encontrado.<br><a href="./mtur.html" style="color:var(--mtur)">← Ver todos</a>`, 'No encontrado');
     return;
   }
 
