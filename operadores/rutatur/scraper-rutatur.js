@@ -430,7 +430,7 @@ async function scrapeAll() {
     process.exit(1);
   }
 
-  const outPath = path.join(__dirname, 'programas-rutatur.json');
+  const outPath = path.join(__dirname, '..', '..', 'programas-rutatur.json');
   fs.writeFileSync(outPath, JSON.stringify(result, null, 2), 'utf8');
   console.log(`\n${result.programas.length} programas guardados en programas-rutatur.json`);
 }
