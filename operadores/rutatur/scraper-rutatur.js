@@ -1,6 +1,6 @@
 /**
  * scraper-rutatur.js - BestWay Viajes
- * v2.0 — Mayo 2026
+ * v2.1 — Mayo 2026
  *
  * MEJORAS respecto a v1:
  *  ✅ Auto-discovery desde home (elimina KNOWN_URLS hardcodeada)
@@ -8,10 +8,10 @@
  *  ✅ Parser de precios con ambas variantes:
  *       A) "doble o triple U$S 669 / PROMO ... U$S 599"
  *       B) BASE DOBLE / BASE TRIPLE / HABITACION SINGLE en líneas separadas
+ *  ✅ Single: guarda singleLabel con texto completo ("Habitación Single: +35% adicional")
  *  ✅ Itinerario: captura correcta del último día (línea con HASTA LA PROXIMA)
- *  ✅ Hoteles: sin incluir el marcador "HOTEL:" como ítem
+ *  ✅ Hoteles: filtro robusto — excluye SEGURO, líneas de precio y footer
  *  ✅ Salidas: marca "Salidas:" como fuente primaria
- *  ✅ Info general hasta marcador "Plaza de Cagancha"
  *  ✅ Imagen real del paquete
  *  ✅ Reintentos con back-off exponencial
  *
@@ -188,10 +188,24 @@ function parsePrecioBlock(texto) {
     }
   }
 
-  // Single como recargo % (cuando no hay monto fijo)
+  // Single como recargo %: "HABITACION SINGLE 35 % MAS" → guardar texto completo
+  // y también variantes sin monto fijo
   if (!precios.single) {
-    const pctM = texto.match(/SINGLE\s+([\d]+)\s*%\s*M[AÁ]S/i);
-    if (pctM) precios.singleLabel = `Single: +${pctM[1]}%`;
+    // Capturar la línea entera de single para preservar el texto original
+    const singleLineM = texto.match(/(?:HABITACION\s+)?SINGLE[^\n]{0,80}/i);
+    if (singleLineM) {
+      const singleLine = singleLineM[0].trim();
+      // Si tiene porcentaje, usar texto limpio
+      const pctM = singleLine.match(/([\d]+)\s*%\s*M[AÁ]S/i);
+      if (pctM) {
+        precios.singleLabel = `Habitación Single: +${pctM[1]}% adicional`;
+      }
+      // Si tiene U$S pero no se capturo arriba (edge case), capturar
+      else {
+        const usdM = singleLine.match(/U\$S\s*([\d.,]+)/i);
+        if (usdM) precios.single = parseFloat(usdM[1].replace(',', '.'));
+      }
+    }
   }
 
   // Butaca
@@ -364,26 +378,38 @@ function parsePrograma(html, sourceUrl) {
   }
 
   // ── Hoteles ────────────────────────────────────────────────────────────────
+  // Excluir: marcador "HOTEL:", líneas de precio/seguro, footer de Rutatur
+  const HOTEL_EXCLUIR = /^HOTEL:$|SEGURO DE ASISTENCIA|SEGURO INCLUIDO|COSTO POR PERSONA|BASE DOBLE|BASE TRIPLE|HABITACION SINGLE|U\$S\s+\d|BUTACA|MENOR|Plaza Cagancha|Pocitos|rutatur\.com|Montevideo|Uruguay/i;
+
   const hoteles = [];
+
+  // Ruta 1: hay marcador explícito "HOTEL:" en una línea sola
   const hotelIdx = lineas.findIndex(l => /^HOTEL:$/i.test(l.trim()));
   if (hotelIdx !== -1) {
     for (let i = hotelIdx + 1; i < lineas.length; i++) {
       const l = clean(lineas[i]);
       if (!l) continue;
-      if (/Valor de la excursi[oó]n|COSTO\s+POR\s+PERSONA|U\$S\s+\d|^SALIDA\s+\d/i.test(l)) break;
-      hoteles.push({ nombre: l.replace(/\*+/g, '').trim(), url: '' });
+      // Fin del bloque hotel: empieza sección de precios o salida con fecha
+      if (/Valor de la excursi[oó]n|COSTO\s+POR\s+PERSONA|^SALIDA\s+\d/i.test(l)) break;
+      if (HOTEL_EXCLUIR.test(l)) continue;
+      // Separar nombre de URL si la línea tiene "www."
+      const parts  = l.split(/\s+(?=www\.)/);
+      const nombre = parts[0].replace(/\*+/g, '').trim();
+      const url    = parts[1] || '';
+      if (nombre.length > 2 && nombre.length < 100) {
+        hoteles.push({ nombre, url });
+      }
     }
   } else {
-    // Fallback: líneas con nombre en mayúsculas + www. o estrellas
+    // Ruta 2 (fallback): líneas con nombre en mayúsculas + www. o estrellas
     for (const l of lineas) {
-      if (/Plaza Cagancha|Pocitos|rutatur\.com$|Montevideo|Uruguay/i.test(l)) continue;
+      if (HOTEL_EXCLUIR.test(l)) continue;
       if (l.match(/\*{2,}|www\.|\.com\.br/i) && l.match(/[A-Z]{4,}/)) {
         const parts  = l.split(/\s+(?=www\.)/);
         const nombre = parts[0].replace(/\*+/g, '').replace(/^HOTEL(ES)?:?\s*/i, '').trim();
         const url    = parts[1] || '';
         if (
-          nombre.length > 2 && nombre.length < 80 &&
-          !/RUTATUR|MONTEVIDEO|URUGUAY|CAGANCHA|POCITOS|BRASIL|ARGENTINA/i.test(nombre) &&
+          nombre.length > 2 && nombre.length < 100 &&
           !hoteles.some(h => h.nombre === nombre)
         ) hoteles.push({ nombre, url });
       }
