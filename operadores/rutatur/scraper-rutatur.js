@@ -1,117 +1,161 @@
 /**
- * scraper-rutatur.js  –  BestWay Viajes
- * v2.0 — Abril 2026
+ * scraper-rutatur.js - BestWay Viajes
+ * v2.0 — Mayo 2026
  *
  * MEJORAS respecto a v1:
- *  ✅ Auto-discovery: extrae TODAS las excursiones activas desde la home
- *     (elimina KNOWN_URLS hardcodeada — se actualiza solo cada semana)
- *  ✅ Parser robusto para las 2 variantes de precios de Rutatur:
- *       · doble/triple en la misma línea  → precioDobleTriple + precioPromo
- *       · doble, triple y single por línea separada con sus propias PROMs
- *       · single como recargo % o monto fijo
+ *  ✅ Auto-discovery desde home (elimina KNOWN_URLS hardcodeada)
+ *     La home de rutatur.com es SSR — Axios la lee sin problema
+ *  ✅ Parser de precios con ambas variantes:
+ *       A) "doble o triple U$S 669 / PROMO ... U$S 599"
+ *       B) BASE DOBLE / BASE TRIPLE / HABITACION SINGLE en líneas separadas
  *  ✅ Itinerario: captura correcta del último día (línea con HASTA LA PROXIMA)
- *  ✅ Highlights: ciudades del programa (segundo strong con " - ")
  *  ✅ Hoteles: sin incluir el marcador "HOTEL:" como ítem
- *  ✅ Texto de cada día separado del encabezado (sin duplicación)
- *  ✅ Salidas desde etiqueta Salidas: (antes de HOTEL:)
+ *  ✅ Salidas: marca "Salidas:" como fuente primaria
  *  ✅ Info general hasta marcador "Plaza de Cagancha"
- *  ✅ Imagen real del paquete desde rutatur.com
+ *  ✅ Imagen real del paquete
  *  ✅ Reintentos con back-off exponencial
+ *
+ * ESTRUCTURA JSON de salida — 100% compatible con rutatur.html:
+ *  {
+ *    operador: 'Rutatur',
+ *    updatedAt: ISO string,
+ *    programas: [
+ *      {
+ *        id, rutaId, operador, sourceUrl,
+ *        titulo, subtitulo, duracion, destino, destinoSlug, pais, emoji,
+ *        imagen, highlights[], fechas[], salidas[],
+ *        itinerario[{ dia, lugar, detalle, first, last }],
+ *        hoteles[{ nombre, url }],
+ *        precios{ doble?, triple?, promo?, promoDoble?, promoTriple?,
+ *                 single?, promoSingle?, singleLabel?, butaca?, menorGratis? },
+ *        temporada, notas[], updatedAt
+ *      }
+ *    ]
+ *  }
  */
 
 'use strict';
 
 const axios   = require('axios');
 const cheerio = require('cheerio');
-const path    = require('path');
 const fs      = require('fs');
+const path    = require('path');
 
-// ─── Configuración ──────────────────────────────────────────────────────────
+// ─── Config ──────────────────────────────────────────────────────────────────
 
-const BASE_URL  = 'https://www.rutatur.com';
-const OUT_PATH  = path.join(__dirname, '..', '..', 'programas-rutatur.json');
-const DELAY_MS  = 1500;
+const BASE     = 'https://www.rutatur.com';
+const OUT_PATH = path.join(__dirname, '..', '..', 'programas-rutatur.json');
+const DELAY_MS  = 1300;
 const MAX_RETRY = 3;
 
-const HEADERS = {
-  'User-Agent'     : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36',
-  'Accept-Language': 'es-UY,es;q=0.9',
-  'Accept'         : 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'Referer'        : 'https://www.rutatur.com/',
-};
-
-/** Items de "Incluye" fijos para TODOS los programas Rutatur */
-const INCLUYE_FIJO = [
-  'Bus semicama con guía/coordinador durante todo el recorrido.',
-  'Incluye lo mencionado en el itinerario.',
-  'Seguro médico para su viaje.',
+const UA_POOL = [
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0',
 ];
+let uaIdx = 0;
 
-// ─── Helpers ────────────────────────────────────────────────────────────────
+// ─── Helpers ─────────────────────────────────────────────────────────────────
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-async function fetchWithRetry(url, retries = MAX_RETRY) {
+function clean(s = '') {
+  return s.replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+async function fetchHTML(url, retries = MAX_RETRY) {
   for (let i = 0; i < retries; i++) {
     try {
-      const res = await axios.get(url, { headers: HEADERS, timeout: 15000 });
+      const res = await axios.get(url, {
+        timeout: 20000,
+        headers: {
+          'User-Agent'     : UA_POOL[uaIdx++ % UA_POOL.length],
+          'Accept'         : 'text/html,application/xhtml+xml,*/*;q=0.9',
+          'Accept-Language': 'es-UY,es;q=0.9',
+          'Referer'        : BASE,
+        },
+        maxRedirects: 5,
+      });
       return res.data;
-    } catch (err) {
-      const status = err.response?.status;
-      console.warn(`  ⚠ Intento ${i + 1}/${retries} → ${url} [${status || err.message}]`);
-      if (i < retries - 1) await sleep(DELAY_MS * (i + 2));
+    } catch (e) {
+      if (i === retries - 1) throw e;
+      await sleep(2500 * (i + 1));
     }
   }
-  throw new Error(`No se pudo obtener ${url} después de ${retries} intentos`);
 }
 
-function clean(str = '') {
-  return str.replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
+// ─── Mapas de destino ─────────────────────────────────────────────────────────
+
+const DEST_SLUG_MAP = [
+  [/cataratas|iguaz[uú]|foz/i,                                       'cataratas'    ],
+  [/florianop[oó]lis|floripa|costao/i,                                'florianopolis'],
+  [/fazzenda|fazenda/i,                                               'fazzenda'     ],
+  [/camboriu|cambori[uú]/i,                                           'camboriu'     ],
+  [/gramado|canela/i,                                                 'gramado'      ],
+  [/rio de janeiro|noche.*nostalgia.*rio|rio.*nostalgia|shakira.*rio/i,'rio'          ],
+  [/machadinho/i,                                                     'machadinho'   ],
+  [/gravatal/i,                                                       'gravatal'     ],
+  [/termas\s+romanas/i,                                               'termasromanas'],
+  [/\bit[aá]\b/i,                                                     'ita'          ],
+  [/jurere|jurer[eé]/i,                                               'jurere'       ],
+  [/porto\s+seguro/i,                                                 'portoseguro'  ],
+  [/regi[oó]n.*lagos|lagos.*patag/i,                                  'lagos'        ],
+  [/bariloche/i,                                                      'bariloche'    ],
+  [/mendoza/i,                                                        'mendoza'      ],
+  [/norte argentino|salta|jujuy/i,                                    'norte'        ],
+  [/carlos\s*paz/i,                                                   'carlospaz'    ],
+  [/buenos\s*aires/i,                                                 'buenosaires'  ],
+  [/chile|santiago/i,                                                 'chile'        ],
+];
+
+const PAIS_MAP = {
+  cataratas:'Cataratas', florianopolis:'Brasil', fazzenda:'Brasil',
+  camboriu:'Brasil', gramado:'Brasil', rio:'Brasil',
+  machadinho:'Brasil', gravatal:'Brasil', termasromanas:'Argentina',
+  ita:'Brasil', jurere:'Brasil', portoseguro:'Brasil', lagos:'Argentina',
+  bariloche:'Argentina', mendoza:'Argentina', norte:'Argentina',
+  carlospaz:'Argentina', buenosaires:'Argentina', chile:'Chile', otro:'Otros',
+};
+
+const EMOJI_MAP = {
+  cataratas:'🌊', florianopolis:'🏖️', fazzenda:'🌿', camboriu:'🎡',
+  gramado:'🌲', rio:'🏙️', machadinho:'♨️', gravatal:'♨️',
+  termasromanas:'♨️', ita:'♨️', jurere:'🏖️', portoseguro:'🏖️', lagos:'🏔️',
+  bariloche:'🏔️', mendoza:'🍷', norte:'🏔️', carlospaz:'⛰️',
+  buenosaires:'🏙️', chile:'🇨🇱', otro:'📍',
+};
+
+function inferSlug(titulo) {
+  for (const [rx, slug] of DEST_SLUG_MAP) {
+    if (rx.test(titulo)) return slug;
+  }
+  return 'otro';
 }
 
-function extractId(url = '') {
-  const m = url.match(/excursion-(\d+)/i);
-  return m ? m[1] : null;
-}
-
-function extractSlug(url = '') {
-  return url.replace(/^https?:\/\/[^/]+\//, '').replace(/\/$/, '');
-}
-
-// ─── Auto-discovery desde la home ───────────────────────────────────────────
+// ─── Auto-discovery desde la home ────────────────────────────────────────────
+// La home de rutatur.com es SSR — Axios la lee sin necesidad de JS.
+// Lista todos los programas activos con "Ver más >" y sus URLs.
 
 async function discoverUrls() {
-  console.log('🔍 Descubriendo excursiones desde la home de Rutatur…');
-  const html = await fetchWithRetry(BASE_URL + '/');
+  console.log('🔍 Descubriendo excursiones desde la home...');
+  const html = await fetchHTML(BASE + '/');
   const $    = cheerio.load(html);
 
-  const programas = new Map(); // id → { id, url, titulo, precioDesde, salidaCard }
+  const seen = new Map(); // id → url completa
 
   $('a[href]').each((_, el) => {
     const href = $(el).attr('href') || '';
-    if (!href.includes('excursion-')) return;
-
-    const fullUrl = href.startsWith('http') ? href : BASE_URL + '/' + href.replace(/^\//, '');
-    const id = extractId(fullUrl);
-    if (!id || programas.has(id)) return;
-
-    // Subir al contenedor de la card para tomar título y salida
-    const card = $(el).closest('div, article, section').first();
-
-    const titulo     = clean(card.find('h2, h3').first().text());
-    const precioText = clean(card.find('[class*="precio"]').first().text());
-    const precioNum  = precioText.match(/[\d]+/)?.[0] || '';
-    const salidaCard = clean(card.find('li, p').first().text())
-                         .replace(/^Salidas?:\s*/i, '');
-
-    programas.set(id, { id, url: fullUrl, titulo, precioDesde: precioNum, salidaCard });
+    if (!/excursion-\d+/.test(href)) return;
+    const full = href.startsWith('http') ? href : `${BASE}/${href.replace(/^\//, '')}`;
+    const m    = full.match(/excursion-(\d+)/);
+    if (m && !seen.has(m[1])) seen.set(m[1], full.split('?')[0]);
   });
 
-  console.log(`   → ${programas.size} excursiones encontradas`);
-  return [...programas.values()];
+  console.log(`   → ${seen.size} excursiones encontradas`);
+  return [...seen.values()];
 }
 
-// ─── Parser de precios ───────────────────────────────────────────────────────
+// ─── Parser de precios ────────────────────────────────────────────────────────
 
 function parsePrecioBlock(texto) {
   const precios = {};
@@ -119,65 +163,76 @@ function parsePrecioBlock(texto) {
   // Variante A: "doble o triple U$S NNN / PROMO ... U$S MMM"
   const dtMatch = texto.match(/doble\s+o\s+triple\s+U\$S\s*([\d.,]+)/i);
   if (dtMatch) {
-    precios.precioDobleTriple = dtMatch[1];
-    const promoM = texto.match(/(?:PROMO|CONTADO)[^\n]*U\$S\s*([\d.,]+)/i);
-    if (promoM) precios.precioPromo = promoM[1];
+    precios.doble = parseFloat(dtMatch[1].replace(',', '.'));
+    const promoM  = texto.match(/(?:PROMO|CONTADO)[^\n]*U\$S\s*([\d.,]+)/i);
+    if (promoM) precios.promo = parseFloat(promoM[1].replace(',', '.'));
   } else {
-    // Variante B: cada base en su propia línea → extraer los 2 primeros U$S de cada una
+    // Variante B: cada base en línea propia con sus 2 precios (base + promo)
     const lineaDoble = texto.match(/BASE\s+DOBLE[^\n]*/i);
     if (lineaDoble) {
       const nums = [...lineaDoble[0].matchAll(/U\$S\s*([\d.,]+)/gi)];
-      if (nums[0]) precios.precioDoble      = nums[0][1];
-      if (nums[1]) precios.precioPromoDoble = nums[1][1];
+      if (nums[0]) precios.doble      = parseFloat(nums[0][1].replace(',', '.'));
+      if (nums[1]) precios.promoDoble = parseFloat(nums[1][1].replace(',', '.'));
     }
-
     const lineaTriple = texto.match(/BASE\s+TRIPLE[^\n]*/i);
     if (lineaTriple) {
       const nums = [...lineaTriple[0].matchAll(/U\$S\s*([\d.,]+)/gi)];
-      if (nums[0]) precios.precioTriple      = nums[0][1];
-      if (nums[1]) precios.precioPromoTriple = nums[1][1];
+      if (nums[0]) precios.triple      = parseFloat(nums[0][1].replace(',', '.'));
+      if (nums[1]) precios.promoTriple = parseFloat(nums[1][1].replace(',', '.'));
     }
-
     const lineaSingle = texto.match(/(?:HABITACION\s+)?SINGLE[^\n]*/i);
     if (lineaSingle) {
       const nums = [...lineaSingle[0].matchAll(/U\$S\s*([\d.,]+)/gi)];
-      if (nums[0]) precios.precioSingle      = nums[0][1];
-      if (nums[1]) precios.precioPromoSingle = nums[1][1];
+      if (nums[0]) precios.single      = parseFloat(nums[0][1].replace(',', '.'));
+      if (nums[1]) precios.promoSingle = parseFloat(nums[1][1].replace(',', '.'));
     }
   }
 
   // Single como recargo % (cuando no hay monto fijo)
-  if (!precios.precioSingle) {
+  if (!precios.single) {
     const pctM = texto.match(/SINGLE\s+([\d]+)\s*%\s*M[AÁ]S/i);
-    if (pctM) precios.singleRecargo = `+${pctM[1]}%`;
+    if (pctM) precios.singleLabel = `Single: +${pctM[1]}%`;
   }
 
-  // Texto legible de la promo (primera ocurrencia)
-  const promoTextoM = texto.match(/PROMO\s+([^\n*]+)/i);
-  if (promoTextoM) precios.textoPromo = clean(promoTextoM[1]);
+  // Butaca
+  const butacaM = texto.match(/(?:COSTO\s+(?:DE\s+LA\s+)?)?BUTACA[:\s]+(?:U\$S\s*)?([\d.,]+)/i)
+               || texto.match(/SOLO\s+ASIENTO[:\s]+(?:U\$S\s*)?([\d.,]+)/i);
+  if (butacaM) precios.butaca = parseFloat(butacaM[1].replace(',', '.'));
+
+  // Menor gratis
+  const menorM = texto.match(
+    /MENOR(?:ES)?\s+(?:HASTA|hasta)\s+(\d+)\s+[Aa][ÑñNn][Oo][Ss]?[^.]*(?:ES\s+NUESTRO\s+INVITADO|SIN\s+CARGO|GRATIS|FREE)/i
+  );
+  if (menorM) precios.menorGratis = `Menores hasta ${menorM[1]} años: invitado`;
 
   return precios;
 }
 
-// ─── Parser de un programa individual ───────────────────────────────────────
+// ─── Parser principal ────────────────────────────────────────────────────────
 
-function parsePrograma(htmlStr, meta) {
-  const $ = cheerio.load(htmlStr);
+function parsePrograma(html, sourceUrl) {
+  const $ = cheerio.load(html);
   $('nav, header, footer, script, style, noscript').remove();
 
-  // ── Título ──────────────────────────────────────────────────────────────
-  const titulo = clean($('h2').first().text()) || meta.titulo;
+  // ── ID ─────────────────────────────────────────────────────────────────────
+  const idM    = sourceUrl.match(/excursion-(\d+)/);
+  const rutaId = idM ? idM[1] : String(Date.now());
+  const id     = `rutatur-${rutaId}`;
 
-  // ── Imagen ──────────────────────────────────────────────────────────────
+  // ── Título ─────────────────────────────────────────────────────────────────
+  const tituloRaw = clean($('h2').first().text());
+  if (!tituloRaw || tituloRaw.length < 3) return null;
+
+  // ── Imagen ─────────────────────────────────────────────────────────────────
   let imagen = '';
   $('img').each((_, el) => {
     const src = $(el).attr('src') || '';
-    if (src.includes('/excursiones/image/') && !imagen) {
-      imagen = src.startsWith('http') ? src : BASE_URL + src;
+    if (!imagen && src.includes('/usr/data/excursiones/')) {
+      imagen = src.startsWith('http') ? src : `${BASE}${src}`;
     }
   });
 
-  // ── Líneas de texto (solo nodos bloque, sin duplicar hijos) ─────────────
+  // ── Líneas de texto (nodos bloque, sin duplicar hijos) ─────────────────────
   const lineas = [];
   $('body').find('h2, h3, h4, h5, p, li').each((_, el) => {
     const txt = clean($(el).text());
@@ -185,42 +240,49 @@ function parsePrograma(htmlStr, meta) {
   });
   const textoPlano = lineas.join('\n');
 
-  // ── Highlights (ciudades/puntos de interés) ──────────────────────────────
-  // Es el strong/em con " - " que NO es título, NO es día de itinerario,
-  // NO contiene términos de precios/salidas, y aparece ANTES del itinerario
-  let highlights = '';
-  const itinerarioStart = lineas.findIndex(l => /^D[íi]a\s+01[\s\-–]/i.test(l));
-  const buscarHasta = itinerarioStart !== -1 ? itinerarioStart : lineas.length;
+  // ── Duración ───────────────────────────────────────────────────────────────
+  const diasM   = tituloRaw.match(/(\d+)\s*D[ií]as?/i) || textoPlano.match(/(\d+)\s*D[ií]as?\b/i);
+  const nochesM = tituloRaw.match(/(\d+)\s*Noches?/i)  || textoPlano.match(/(\d+)\s*Noches?\b/i);
+  const dias    = diasM   ? diasM[1]   : '';
+  const noches  = nochesM ? nochesM[1] : '';
+  const durStr  = dias ? `${dias} DÍAS${noches ? ` / ${noches} NOCHES` : ''}` : 'Consultar';
 
+  // ── Título limpio (sin días/noches para los cards) ─────────────────────────
+  const titulo = tituloRaw
+    .replace(/\s*[-–]?\s*\d+\s*[Dd][ií][aá]s?\s*(?:[\/\s]*\d*\s*[Nn]oches?)?/g, '')
+    .replace(/\s*[-–]\s*$/g, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim() || tituloRaw;
+
+  // ── Ciudades visitadas (highlights) ────────────────────────────────────────
+  // Es la línea en cursiva con " - " que aparece antes del itinerario
+  let ciudadesLinea = '';
+  const itInicioIdx = lineas.findIndex(l => /^D[íi]a\s+01[\s\-–]/i.test(l));
+  const buscarHasta = itInicioIdx !== -1 ? itInicioIdx : Math.min(12, lineas.length);
   for (let i = 0; i < buscarHasta; i++) {
     const l = lineas[i];
     if (
-      l.includes(' - ') &&
-      l.length > 10 && l.length < 200 &&
-      l !== titulo &&
+      l.includes(' - ') && l.length > 10 && l.length < 200 &&
+      l !== tituloRaw && l !== titulo &&
       !l.match(/D[íi]a\s+\d+/i) &&
       !l.match(/Salida|HOTEL|COSTO|U\$S|SEGURO|BUTACA/i)
-    ) {
-      highlights = l;
-      break;
-    }
+    ) { ciudadesLinea = l; break; }
   }
 
-  // ── Itinerario ───────────────────────────────────────────────────────────
+  // ── Itinerario ─────────────────────────────────────────────────────────────
   const itinerario = [];
   const inicioIdx  = lineas.findIndex(l => /^D[íi]a\s+01[\s\-–]/i.test(l));
   const finIdx     = lineas.findIndex(l => /HASTA LA PR[OÓ]XIMA EXCURSI[OÓ]N/i.test(l));
 
   if (inicioIdx !== -1 && finIdx !== -1) {
-    let diaActual = null;
-    let textosDia = [];
+    let diaActual = null, lugActual = null, textosDia = [];
 
     const parseCabecera = (line) => {
       const m = line.match(/^(?:D[íi]a|DIAS?)\s+([\d\-]+)\s*[–\-]\s*(.+)/i);
-      if (!m) return line;
+      if (!m) return { diaLabel: line, lugar: line };
       const num   = m[1].includes('-') ? m[1] : m[1].padStart(2, '0');
       const lugar = clean(m[2].replace(/HASTA LA PR[OÓ]XIMA.*/i, ''));
-      return `Día ${num} – ${lugar}`;
+      return { diaLabel: `DÍA ${num.toUpperCase()}`, lugar };
     };
 
     for (let i = inicioIdx; i <= finIdx; i++) {
@@ -229,148 +291,244 @@ function parsePrograma(htmlStr, meta) {
       const isFin = /HASTA LA PR[OÓ]XIMA EXCURSI[OÓ]N/i.test(line);
 
       if (isFin) {
-        // La línea final puede ser también el encabezado del último día
-        if (isDia && !diaActual) {
-          // Caso raro: fin en el primer día (programa de 1 día)
-          itinerario.push({ dia: parseCabecera(line), texto: '' });
-        } else if (isDia) {
-          // Guardar día anterior y agregar este último
-          if (diaActual) itinerario.push({ dia: diaActual, texto: textosDia.join(' ').trim() });
-          itinerario.push({ dia: parseCabecera(line), texto: '' });
+        if (isDia) {
+          // La línea es a la vez encabezado del último día y fin
+          if (diaActual) itinerario.push({
+            dia: diaActual, lugar: lugActual,
+            detalle: textosDia.join(' ').trim(), first: false, last: false,
+          });
+          const { diaLabel, lugar } = parseCabecera(line);
+          itinerario.push({ dia: diaLabel, lugar, detalle: '', first: false, last: true });
         } else if (diaActual) {
-          // Texto del último día es parte de la línea fin (ej: "¡Llegada y HASTA LA PROXIMA…")
-          const textoFin = line.replace(/HASTA LA PR[OÓ]XIMA EXCURSI[OÓ]N[!¡]*/i, '').trim();
+          // "HASTA LA PROXIMA" dentro del texto del último día
+          const textoFin = clean(line.replace(/HASTA LA PR[OÓ]XIMA EXCURSI[OÓ]N[!¡]*/i, ''));
           if (textoFin) textosDia.push(textoFin);
-          itinerario.push({ dia: diaActual, texto: textosDia.join(' ').trim() });
+          itinerario.push({
+            dia: diaActual, lugar: lugActual,
+            detalle: textosDia.join(' ').trim(), first: false, last: true,
+          });
         }
         break;
       }
 
       if (isDia) {
-        if (diaActual) itinerario.push({ dia: diaActual, texto: textosDia.join(' ').trim() });
-        diaActual = parseCabecera(line);
-        // El texto del encabezado del día puede estar inline (strong + texto en el mismo <p>)
-        // Lo separamos quitando la parte del encabezado
-        const textoInline = clean(line.replace(/^(?:D[íi]a|DIAS?)\s+[\d\-]+\s*[–\-]\s*[^–\-]+/i, ''));
-        textosDia = textoInline ? [textoInline] : [];
-      } else if (diaActual) {
+        if (diaActual !== null) {
+          itinerario.push({
+            dia: diaActual, lugar: lugActual,
+            detalle: textosDia.join(' ').trim(), first: false, last: false,
+          });
+        }
+        const { diaLabel, lugar } = parseCabecera(line);
+        diaActual = diaLabel;
+        lugActual = lugar;
+        textosDia = [];
+      } else if (diaActual !== null) {
         textosDia.push(line);
+      }
+    }
+
+    // Corregir first/last
+    if (itinerario.length > 0) {
+      for (let i = 0; i < itinerario.length; i++) {
+        itinerario[i].first = i === 0;
+        itinerario[i].last  = i === itinerario.length - 1;
       }
     }
   }
 
-  // ── Salidas ──────────────────────────────────────────────────────────────
-  // Tomar primera ocurrencia de "Salidas:" en el texto
-  let salidas = '';
-  const salidaM = textoPlano.match(/Salidas?:\s*([^\n]+)/i);
-  if (salidaM) salidas = clean(salidaM[1]);
+  // ── Highlights para los cards ──────────────────────────────────────────────
+  const highlights = ciudadesLinea
+    ? ciudadesLinea.split(' - ').map(c => `📍 ${c.trim()}`).slice(0, 6)
+    : itinerario.slice(0, 6)
+        .map(d => `📍 ${d.lugar}`)
+        .filter(h => !/montevideo/i.test(h));
 
-  // ── Hoteles ──────────────────────────────────────────────────────────────
+  // ── Salidas ────────────────────────────────────────────────────────────────
+  const salidas = [];
+
+  // Prioridad 1: "Salidas: TEXTO" (con s)
+  const salidaTagM = textoPlano.match(/Salidas?:\s*([^\n]+)/i);
+  if (salidaTagM) {
+    const val = clean(salidaTagM[1]).replace(/\*+/g, '').trim();
+    if (val.length > 3) salidas.push(val);
+  }
+
+  // Prioridad 2: "Salida DD de MES..." al pie (líneas <li>)
+  const SALIDA_RX = /\*{0,3}\s*Salida\s+([^\n*]{5,80}(?:hs|Hs|HRS)?)/gi;
+  let sm;
+  while ((sm = SALIDA_RX.exec(textoPlano)) !== null) {
+    const val = clean(sm[1]).replace(/\*+/g, '').trim();
+    if (val.length > 3 && !salidas.some(s => s.toLowerCase() === val.toLowerCase())) {
+      salidas.push(val);
+    }
+  }
+
+  // ── Hoteles ────────────────────────────────────────────────────────────────
   const hoteles = [];
   const hotelIdx = lineas.findIndex(l => /^HOTEL:$/i.test(l.trim()));
   if (hotelIdx !== -1) {
     for (let i = hotelIdx + 1; i < lineas.length; i++) {
       const l = clean(lineas[i]);
       if (!l) continue;
-      // El bloque hotel termina cuando empieza precios o salida
       if (/Valor de la excursi[oó]n|COSTO\s+POR\s+PERSONA|U\$S\s+\d|^SALIDA\s+\d/i.test(l)) break;
-      hoteles.push(l);
+      hoteles.push({ nombre: l.replace(/\*+/g, '').trim(), url: '' });
     }
   } else {
-    // Fallback: línea con estrellas/URL y nombre de hotel
+    // Fallback: líneas con nombre en mayúsculas + www. o estrellas
     for (const l of lineas) {
-      if (
-        l.match(/\*{2,}|\.com\.br/i) &&
-        l.match(/HOTEL|RESORT|PARK\s+HOTEL|INN|MIRAMAR|MACHADINHO|COSTAO|FAZZENDA/i) &&
-        !hoteles.includes(l)
-      ) hoteles.push(l);
+      if (/Plaza Cagancha|Pocitos|rutatur\.com$|Montevideo|Uruguay/i.test(l)) continue;
+      if (l.match(/\*{2,}|www\.|\.com\.br/i) && l.match(/[A-Z]{4,}/)) {
+        const parts  = l.split(/\s+(?=www\.)/);
+        const nombre = parts[0].replace(/\*+/g, '').replace(/^HOTEL(ES)?:?\s*/i, '').trim();
+        const url    = parts[1] || '';
+        if (
+          nombre.length > 2 && nombre.length < 80 &&
+          !/RUTATUR|MONTEVIDEO|URUGUAY|CAGANCHA|POCITOS|BRASIL|ARGENTINA/i.test(nombre) &&
+          !hoteles.some(h => h.nombre === nombre)
+        ) hoteles.push({ nombre, url });
+      }
     }
   }
 
-  // ── Bloque de precios ────────────────────────────────────────────────────
+  // ── Precios ────────────────────────────────────────────────────────────────
   const ps = textoPlano.search(/(?:Valor de la excursi[oó]n|COSTO\s+POR\s+PERSONA)/i);
   const pe = textoPlano.search(/Plaza de Cagancha/i);
-  const precioBlock = ps !== -1 ? textoPlano.slice(ps, pe !== -1 ? pe : undefined) : '';
+  const precioBlock = ps !== -1
+    ? textoPlano.slice(ps, pe !== -1 ? pe : undefined)
+    : textoPlano;
   const precios = parsePrecioBlock(precioBlock);
 
-  // ── Info general ─────────────────────────────────────────────────────────
-  let infoGeneral = '';
-  const infoM = textoPlano.match(
-    /(?:-\s*)?(?:MENOR(?:ES)?|Costo de la butaca|BUTACA|MENORES HASTA)[\s\S]+?(?=Plaza de Cagancha)/i
-  );
-  if (infoM) infoGeneral = clean(infoM[0]);
+  // ── Notas ──────────────────────────────────────────────────────────────────
+  const notas = [];
+  for (const line of lineas) {
+    if (
+      /menor|asiento|butaca|contado|promo|importante|políticas|cancelación|señ|free|invitado/i.test(line) &&
+      line.length > 15 && line.length < 400 &&
+      !/Plaza Cagancha|www\.rutatur|Pocitos|Montevideo/i.test(line)
+    ) {
+      const n = line.replace(/\*+/g, '').trim();
+      if (!notas.includes(n)) notas.push(n);
+    }
+  }
+
+  // ── Temporada ──────────────────────────────────────────────────────────────
+  let temporada = '';
+  const tempM = tituloRaw.match(/\b(verano|invierno|oto[ñn]o|primavera|aniversario|vacaciones)\b/i);
+  if (tempM) {
+    temporada = tempM[0].charAt(0).toUpperCase() + tempM[0].slice(1).toLowerCase();
+  } else if (salidas.length > 0) {
+    const mesM = salidas[0].match(
+      /\b(enero|febrero|marzo|abril|mayo|junio|julio|agosto|setiembre|septiembre|octubre|noviembre|diciembre)\b/i
+    );
+    if (mesM) {
+      const anioM = salidas[0].match(/\b(202\d)\b/);
+      temporada = mesM[0].charAt(0).toUpperCase() + mesM[0].slice(1).toLowerCase() +
+                  (anioM ? ` ${anioM[0]}` : '');
+    }
+  }
+
+  // ── Fechas para card ───────────────────────────────────────────────────────
+  const fechas = [];
+  if (salidas.length > 0) {
+    fechas.push({ label: 'Salida', value: salidas[0].substring(0, 80), gold: true });
+  }
+  if (salidas.length > 1) {
+    fechas.push({
+      label: 'Otras salidas',
+      value: salidas.slice(1, 4).join(' · ').substring(0, 80),
+      gold: false,
+    });
+  }
+
+  // ── Destino / país ─────────────────────────────────────────────────────────
+  const destinoSlug = inferSlug(tituloRaw);
 
   return {
-    id          : meta.id,
-    slug        : extractSlug(meta.url),
-    url         : meta.url,
-    titulo,
+    id,
+    rutaId,
+    operador    : 'rutatur',
+    sourceUrl,
+    titulo      : tituloRaw,       // título completo (con días/noches) para la ficha
+    subtitulo   : durStr,
+    duracion    : durStr,
+    destino     : titulo,          // título limpio para los cards
+    destinoSlug,
+    pais        : PAIS_MAP[destinoSlug]  || 'Otros',
+    emoji       : EMOJI_MAP[destinoSlug] || '📍',
     imagen,
     highlights,
-    incluye     : INCLUYE_FIJO,
-    itinerario,
+    fechas,
     salidas,
+    itinerario,
     hoteles,
     precios,
-    infoGeneral,
-    scrapedAt   : new Date().toISOString(),
+    temporada,
+    notas,
+    updatedAt   : new Date().toISOString(),
   };
 }
 
 // ─── Main ────────────────────────────────────────────────────────────────────
 
-(async () => {
+async function scrapeAll() {
   console.log('🚌 Scraper Rutatur v2 – BestWay Viajes\n');
 
-  // 1. Descubrir URLs desde la home
-  let discovered;
-  try {
-    discovered = await discoverUrls();
-  } catch (err) {
-    console.error('❌ Error en auto-discovery:', err.message);
-    process.exit(1);
-  }
+  const result = {
+    operador  : 'Rutatur',
+    updatedAt : new Date().toISOString(),
+    programas : [],
+  };
 
-  if (!discovered.length) {
-    console.error('❌ No se encontraron excursiones en la home.');
+  // 1. Descubrir URLs desde la home
+  let urls = [];
+  try {
+    urls = await discoverUrls();
+    if (!urls.length) throw new Error('0 URLs encontradas en la home');
+  } catch (e) {
+    console.error('❌ Error en auto-discovery:', e.message);
     process.exit(1);
   }
 
   // 2. Scrape de cada programa
-  const programas = [];
   let errores = 0;
-
-  for (const meta of discovered) {
-    console.log(`\n📄 [${meta.id}] ${meta.titulo || meta.url}`);
+  for (const url of urls) {
     await sleep(DELAY_MS);
-
+    const idM = url.match(/excursion-(\d+)/);
+    console.log(`\n📄 [${idM?.[1] || '?'}] ${url}`);
     try {
-      const html = await fetchWithRetry(meta.url);
-      const prog = parsePrograma(html, meta);
-      programas.push(prog);
-
-      const precioLabel = prog.precios.precioDobleTriple
-        ? `doble/triple U$S ${prog.precios.precioDobleTriple}`
-        : prog.precios.precioDoble
-          ? `doble U$S ${prog.precios.precioDoble}`
-          : '?';
-
+      const html = await fetchHTML(url);
+      const prog = parsePrograma(html, url);
+      if (!prog?.titulo) { console.warn('   ⚠ Sin datos'); continue; }
+      result.programas.push(prog);
+      const p = prog.precios;
+      const precioLabel = p.doble
+        ? `U$S ${p.doble}${p.promo ? ` / promo ${p.promo}` : p.promoDoble ? ` / promo ${p.promoDoble}` : ''}`
+        : '—';
       console.log(
-        `   ✅  ${prog.itinerario.length} días | ${prog.hoteles[0]?.substring(0, 40) || '—'} | ${precioLabel}`
+        `   ✅ ${prog.itinerario.length} días | ` +
+        `${prog.hoteles[0]?.nombre?.substring(0, 35) || '—'} | ` +
+        `${precioLabel}`
       );
-    } catch (err) {
-      console.error(`   ❌  ${err.message}`);
+    } catch (e) {
+      console.warn(`   ❌ ${e.message}`);
       errores++;
     }
   }
 
-  // 3. Guardar JSON
-  try {
-    fs.writeFileSync(OUT_PATH, JSON.stringify(programas, null, 2), 'utf8');
-    console.log(`\n✅ ${programas.length} programas guardados → ${OUT_PATH}`);
-    if (errores > 0) console.warn(`⚠  ${errores} programas fallaron`);
-  } catch (err) {
-    console.error('❌ Error escribiendo JSON:', err.message);
+  if (!result.programas.length) {
+    console.error('\n❌ Sin programas obtenidos. JSON no sobreescrito.');
     process.exit(1);
   }
-})();
+
+  result.updatedAt = new Date().toISOString();
+
+  // 3. Guardar JSON
+  fs.writeFileSync(OUT_PATH, JSON.stringify(result, null, 2), 'utf8');
+  console.log(`\n✅ ${result.programas.length} programas → ${OUT_PATH}`);
+  if (errores) console.warn(`⚠  ${errores} programas fallaron`);
+}
+
+scrapeAll().catch(err => {
+  console.error('Error fatal:', err);
+  process.exit(1);
+});
