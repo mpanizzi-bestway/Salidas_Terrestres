@@ -261,12 +261,12 @@
 <div id="error-screen">
   <h2>⚠️ Programa no encontrado</h2>
   <p id="error-msg">No se pudo cargar la información del programa solicitado.</p>
-  <a href="sendas.html" style="color:var(--gold);font-size:.9rem;">← Volver a los programas</a>
+  <a href="./sendas.html" style="color:var(--gold);font-size:.9rem;">← Volver a los programas</a>
 </div>
 
 <div class="print-bar">
   <button class="btn" onclick="window.print()">🖨️ Imprimir / PDF</button>
-  <a class="btn sec" href="sendas.html">← Volver</a>
+  <a class="btn sec" href="./sendas.html">← Volver</a>
 </div>
 
 <div class="page" id="programa-page" style="visibility:hidden">
@@ -279,15 +279,15 @@
           CORRECCIÓN 1: ruta relativa a images/ para que funcione
           tanto en local como en GitHub Pages (Salidas_Terrestres/)
         -->
-        <img src="images/logo_bestway_azul_fondo_blanco.png" alt="BestWay Viajes"
-             onerror="this.src='images/logo_bestway.png'">
+        <img src="images/logo_bestway.png" alt="BestWay Viajes"
+             onerror="this.src='images/logo_Bestway_blanco.png'">
       </div>
       <div class="header-center">
         <div class="eslogan">Tu Mundo de Oportunidades</div>
       </div>
       <div class="contact-block">
         <strong>BestWay Viajes</strong>
-        Tel. 2902 2116 - 095 969 909<br>
+        Tel. 2902 2116<br>
         Río Branco 1375, Montevideo<br>
         info@bestway.com.uy
       </div>
@@ -557,7 +557,7 @@ async function init() {
 
   let allData;
   try {
-    const r = await fetch(`./programas-sendas.json?_=${Date.now()}`);
+    const r = await fetch(`../../programas-sendas.json?_=${Date.now()}`);
     if (!r.ok) throw new Error(`HTTP ${r.status} — no se encontró programas-sendas.json`);
     allData = await r.json();
   } catch(e) {
@@ -578,7 +578,7 @@ async function init() {
     showError(
       `El programa <code>${progId}</code> no existe en el catálogo.<br>
        Puede que haya sido eliminado o el ID cambió.<br>
-       <a href="sendas.html" style="color:var(--gold)">← Ver todos los programas</a>`,
+       <a href="./sendas.html" style="color:var(--gold)">← Ver todos los programas</a>`,
       'Programa no encontrado'
     );
     return;
