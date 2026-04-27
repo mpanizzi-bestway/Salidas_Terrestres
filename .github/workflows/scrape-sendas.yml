@@ -2,14 +2,13 @@ name: Scrape Sendas Turismo
 
 on:
   schedule:
-    # Runs every Monday at 6am UTC (3am Uruguay time)
     - cron: '0 6 * * 1'
   workflow_dispatch:
     inputs:
       reason:
-        description: 'Razón del scraping manual'
+        description: 'Razon del scraping manual'
         required: false
-        default: 'Actualización manual de programas'
+        default: 'Actualizacion manual de programas'
 
 jobs:
   scrape:
@@ -30,12 +29,12 @@ jobs:
         run: npm install axios cheerio
 
       - name: Run scraper
-        run: node scraper.js
+        run: node operadores/sendas/scraper.js
 
       - name: Commit updated data
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Actions — Sendas Scraper"
+          git config --local user.name "GitHub Actions - Sendas Scraper"
           git add programas-sendas.json
-          git diff --staged --quiet || git commit -m "🔄 Auto-update: Sendas Turismo programs [$(date +'%Y-%m-%d')]"
+          git diff --staged --quiet || git commit -m "Auto-update: Sendas Turismo programs [$(date +'%Y-%m-%d')]"
           git push
