@@ -599,7 +599,7 @@ async function scrapeAll() {
     process.exit(1);
   }
 
-  const outPath = path.join(__dirname, 'programas-sendas.json');
+  const outPath = path.join(__dirname, '..', '..', 'programas-sendas.json');
   fs.writeFileSync(outPath, JSON.stringify(result, null, 2), 'utf8');
   console.log(`\n✅ Scraping completado. ${result.programas.length} programas guardados en programas-sendas.json`);
   console.log(`   Dinámico: ${programasAntes} | Fallback: ${fallbackNuevos}`);
