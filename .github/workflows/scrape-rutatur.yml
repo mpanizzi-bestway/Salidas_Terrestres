@@ -29,7 +29,7 @@ jobs:
         run: npm install axios cheerio
 
       - name: Run scraper
-        run: node scraper-rutatur.js
+        run: node operadores/rutatur/scraper-rutatur.js
 
       - name: Commit updated data
         run: |
