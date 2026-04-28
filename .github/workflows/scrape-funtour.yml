@@ -9,6 +9,7 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -18,11 +19,11 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: operadores/funtour/package.json
+          cache-dependency-path: operadores/funtour/package-lock.json
 
       - name: Install dependencies
         working-directory: operadores/funtour
-        run: npm install
+        run: npm ci
 
       - name: Run scraper
         run: node operadores/funtour/scraper-funtour.js
