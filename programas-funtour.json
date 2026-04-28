@@ -1,0 +1,13 @@
+{
+  "name": "scraper-funtour",
+  "version": "1.0.0",
+  "description": "Scraper Funtour — BestWay Viajes",
+  "main": "scraper-funtour.js",
+  "scripts": {
+    "scrape": "node scraper-funtour.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cheerio": "^1.0.0"
+  }
+}
