@@ -153,18 +153,19 @@
       overflow: hidden;
     }
 
+    /* Gradientes por operador */
     .op-card-banner.sendas {
       background: linear-gradient(135deg, #1a3a4a 0%, #0e5a7a 50%, #1a7a5a 100%);
     }
-
+    .op-card-banner.funtour {
+      background: linear-gradient(135deg, #b84d08 0%, #e8630a 55%, #ff8c42 100%);
+    }
     .op-card-banner.mtur {
       background: linear-gradient(135deg, #7a1a00 0%, #c84800 50%, #e8630a 100%);
     }
-
     .op-card-banner.rutatur {
       background: linear-gradient(135deg, #0a3a18 0%, #1a7a3a 55%, #2aaa5a 100%);
     }
-
     .op-card-banner.placeholder {
       background: linear-gradient(135deg, #2d3561 0%, #4a4f8a 100%);
     }
@@ -176,7 +177,6 @@
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='25' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E") repeat;
     }
 
-    /* Logo Sendas en el banner */
     .op-banner-logo {
       height: 64px;
       width: auto;
@@ -184,9 +184,18 @@
       object-fit: contain;
       z-index: 1;
       position: relative;
-      /* sin filter: el logo_sendas.png ya tiene fondo transparente */
-      drop-shadow: 0 2px 8px rgba(0,0,0,0.3);
       filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35));
+    }
+
+    /* Funtour: logo JPG con fondo naranja sólido — usar blend mode para integrar */
+    .op-banner-logo.funtour-logo {
+      height: 90px;
+      max-width: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      filter: drop-shadow(0 2px 12px rgba(0,0,0,0.4));
+      /* mix-blend-mode: multiply integra el fondo naranja del JPG con el banner naranja */
+      mix-blend-mode: multiply;
     }
 
     .op-logo-text {
@@ -293,7 +302,6 @@
   <header>
     <div class="header-inner">
       <div class="logo-wrap">
-        <!-- Logo blanco con fondo transparente desde carpeta images/ -->
         <img src="images/logo_Bestway_blanco.png" alt="BestWay">
       </div>
       <div class="header-divider"></div>
@@ -312,23 +320,21 @@
 
   <div class="operators">
 
-    <!-- SENDAS TURISMO -->
+    <!-- 1. SENDAS TURISMO -->
     <a href="operadores/sendas/sendas.html" class="op-card">
       <div class="op-card-banner sendas">
-        <!-- Logo Sendas desde images/ en lugar del texto -->
         <img
           src="images/logo_sendas.png"
           alt="Sendas Turismo"
           class="op-banner-logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-        >
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
         <span class="op-logo-text" style="display:none;">Sendas</span>
       </div>
       <div class="op-card-body">
         <h3>Sendas Turismo</h3>
         <p>Operador regional especializado en destinos de Brasil, Argentina y Cataratas del Iguazú.</p>
         <div class="op-card-footer">
-          <span class="op-badge" id="sendas-count">27 programas</span>
+          <span class="op-badge" id="sendas-count">— programas</span>
           <div class="op-arrow">
             <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
           </div>
@@ -336,7 +342,29 @@
       </div>
     </a>
 
-    <!-- MTUR VIAJES — activo -->
+    <!-- 2. FUNTOUR — nuevo -->
+    <a href="operadores/funtour/funtour.html" class="op-card">
+      <div class="op-card-banner funtour">
+        <img
+          src="images/logo-funtour.jpg"
+          alt="Funtour Internacional"
+          class="op-banner-logo funtour-logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span class="op-logo-text" style="display:none;">Funtour</span>
+      </div>
+      <div class="op-card-body">
+        <h3>Funtour Internacional</h3>
+        <p>Excursiones terrestres y aéreas. Brasil, Argentina, Chile, Cataratas y más destinos desde Uruguay.</p>
+        <div class="op-card-footer">
+          <span class="op-badge" id="funtour-count">— programas</span>
+          <div class="op-arrow">
+            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- 3. MTUR VIAJES -->
     <a href="operadores/mtur/mtur.html" class="op-card">
       <div class="op-card-banner mtur">
         <img
@@ -358,7 +386,7 @@
       </div>
     </a>
 
-    <!-- RUTATUR — activo -->
+    <!-- 4. RUTATUR -->
     <a href="operadores/rutatur/rutatur.html" class="op-card">
       <div class="op-card-banner rutatur">
         <img
@@ -371,7 +399,7 @@
       </div>
       <div class="op-card-body">
         <h3>Rutatur</h3>
-        <p>Excursiones terrestres con itinerario completo. Brasil, Argentina, Cataratas y mas destinos.</p>
+        <p>Excursiones terrestres con itinerario completo. Brasil, Argentina, Cataratas y más destinos.</p>
         <div class="op-card-footer">
           <span class="op-badge" id="rutatur-count">— programas</span>
           <div class="op-arrow">
@@ -381,26 +409,10 @@
       </div>
     </a>
 
-    <!-- PROXIMO OPERADOR -->
+    <!-- PRÓXIMO OPERADOR -->
     <div class="op-card coming-soon">
       <div class="op-card-banner placeholder">
-        <span class="op-logo-text">Operador 2</span>
-      </div>
-      <div class="op-card-body">
-        <h3>Próximamente</h3>
-        <p>Este operador estará disponible en breve.</p>
-        <div class="op-card-footer">
-          <span class="op-badge">Próximamente</span>
-          <div class="op-arrow">
-            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="op-card coming-soon">
-      <div class="op-card-banner placeholder">
-        <span class="op-logo-text">Operador 3</span>
+        <span class="op-logo-text">Próximamente</span>
       </div>
       <div class="op-card-body">
         <h3>Próximamente</h3>
@@ -421,20 +433,23 @@
   </footer>
 
   <script>
-    // Sendas
-    fetch('programas-sendas.json').then(r=>r.json()).then(d=>{
-      const n=d.programas?.length; if(n) document.getElementById('sendas-count').textContent=n+' programas';
-    }).catch(()=>{});
-    // Mtur
-    fetch('programas-mtur.json').then(r=>r.json()).then(d=>{
-      const n=d.programas?.length;
-      document.getElementById('mtur-count').textContent=(n?n:'—')+' programas';
-    }).catch(()=>{});
-    // Rutatur
-    fetch('programas-rutatur.json').then(r=>r.json()).then(d=>{
-      const n=d.programas?.length;
-      document.getElementById('rutatur-count').textContent=(n?n:'—')+' programas';
-    }).catch(()=>{});
+    // Contadores de programas por operador
+    const feeds = [
+      { file: 'programas-sendas.json',  id: 'sendas-count'  },
+      { file: 'programas-funtour.json', id: 'funtour-count' },
+      { file: 'programas-mtur.json',    id: 'mtur-count'    },
+      { file: 'programas-rutatur.json', id: 'rutatur-count' },
+    ];
+    feeds.forEach(({ file, id }) => {
+      fetch(`${file}?_=${Date.now()}`)
+        .then(r => r.ok ? r.json() : null)
+        .then(d => {
+          const n = d?.programas?.length;
+          const el = document.getElementById(id);
+          if (el) el.textContent = (n ? n : '—') + ' programas';
+        })
+        .catch(() => {});
+    });
   </script>
 
 </body>
