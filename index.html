@@ -619,7 +619,7 @@
       color   : '#0e5a7a',
       file    : 'programas-sendas.json',
       countEl : 'sendas-count',
-      fichaUrl: p => `operadores/sendas/programa.html?id=${encodeURIComponent(p.id || p.slug || '')}`,
+      fichaUrl: p => 'operadores/sendas/programa.html?p=' + encodeURIComponent(p.id || ''),
     },
     {
       id      : 'funtour',
@@ -627,7 +627,7 @@
       color   : '#e8630a',
       file    : 'programas-funtour.json',
       countEl : 'funtour-count',
-      fichaUrl: p => `operadores/funtour/programa-funtour.html?p=${encodeURIComponent(p.id || '')}`,
+      fichaUrl: p => 'operadores/funtour/programa-funtour.html?p=' + encodeURIComponent(p.id || ''),
     },
     {
       id      : 'mtur',
@@ -635,7 +635,7 @@
       color   : '#c84800',
       file    : 'programas-mtur.json',
       countEl : 'mtur-count',
-      fichaUrl: p => `operadores/mtur/programa-mtur.html?id=${encodeURIComponent(p.id || p.slug || '')}`,
+      fichaUrl: p => 'operadores/mtur/programa-mtur.html?p=' + encodeURIComponent(p.id || ''),
     },
     {
       id      : 'rutatur',
@@ -643,7 +643,7 @@
       color   : '#1a7a3a',
       file    : 'programas-rutatur.json',
       countEl : 'rutatur-count',
-      fichaUrl: p => `operadores/rutatur/programa-rutatur.html?p=${encodeURIComponent(p.id || '')}`,
+      fichaUrl: p => 'operadores/rutatur/programa-rutatur.html?p=' + encodeURIComponent(p.id || ''),
     },
   ];
 
