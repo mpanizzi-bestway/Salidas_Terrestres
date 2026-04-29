@@ -122,36 +122,77 @@ function inferSlug(titulo) {
 }
 
 // ─── Discovery desde /tienda/ ─────────────────────────────────────────────────
+// Funtour usa WooCommerce con layout propio:
+// - Títulos en <h4> con <a href="/tienda/slug/">
+// - Precios en texto suelto "Desde: U$S NNN"
+// - Imágenes en <img> dentro del mismo bloque
 
 async function discoverUrls() {
   console.log('🔍 Descubriendo programas desde /tienda/...');
   const html = await fetchHTML(TIENDA);
   const $    = cheerio.load(html);
-  const seen = new Map(); // slug → url
+  const seen = new Map(); // slug → meta
 
-  // WooCommerce: productos listados en .products li a.woocommerce-LoopProduct-link
-  // y también en h2/h3 > a dentro de .products
-  $('ul.products li.product, .products .product').each((_, el) => {
-    // Nombre del producto
-    const titulo = clean($(el).find('h2, h3').first().text());
-    if (!titulo || SKIP_KEYWORDS.test(titulo)) return;
+  // Estrategia: buscar todos los <a href="/tienda/slug/"> que NO sean
+  // navegación, newsletter, cupón, etc.
+  $('a[href]').each((_, el) => {
+    const href  = $(el).attr('href') || '';
+    const txt   = clean($(el).text());
 
-    // URL del producto
-    const href = $(el).find('a').first().attr('href') || '';
-    if (!href || !href.includes('/tienda/')) return;
+    // Solo links de productos individuales de la tienda
+    if (!href.includes('/tienda/')) return;
+    if (href === TIENDA || href === `${BASE}/tienda/`) return;
 
-    // Precio desde
-    const precioTxt = clean($(el).find('.price').text());
-    const precioM   = precioTxt.match(/[\d.,]+/);
-    const precio    = precioM ? precioM[0].replace('.','') : '';
+    // Extraer slug: todo lo que viene después de /tienda/
+    const slug = href.replace(/^https?:\/\/[^/]+\/tienda\//, '').replace(/\/$/, '');
+    if (!slug || slug.includes('/') || seen.has(slug)) return;
 
-    // Imagen thumbnail
-    const img = $(el).find('img').first().attr('src') || '';
+    // Obtener título: puede ser el texto del propio <a>, o el <h4> hermano
+    let titulo = '';
+    // Si el <a> es la imagen, subir al padre y buscar el <h4>
+    const parent  = $(el).parent();
+    const grandpa = parent.parent();
+    titulo = clean(parent.find('h4, h3, h2').first().text())
+          || clean(grandpa.find('h4, h3, h2').first().text())
+          || clean(txt);
 
-    const slug = href.replace(/.*\/tienda\//, '').replace(/\/$/, '');
-    if (slug && !seen.has(slug)) {
-      seen.set(slug, { slug, url: href, titulo, precioDesde: precio, imgThumb: img });
-    }
+    if (!titulo || titulo.length < 3) return;
+    if (SKIP_KEYWORDS.test(titulo)) return;
+
+    // Precio: buscar en el mismo bloque
+    const bloque = grandpa.length ? grandpa : parent;
+    const precioTxt = clean(bloque.text());
+    const precioM   = precioTxt.match(/U\$S\s*([\d.,]+)/i);
+    const precio    = precioM ? precioM[1].replace(/\./g, '').replace(',', '') : '';
+
+    // Imagen thumbnail del bloque
+    const img = bloque.find('img').first().attr('src') || '';
+
+    seen.set(slug, {
+      slug,
+      url       : href.startsWith('http') ? href : `${BASE}${href}`,
+      titulo,
+      precioDesde: precio,
+      imgThumb  : img,
+    });
+  });
+
+  // Fallback: buscar también por h4 > a directamente
+  $('h4 a[href], h3 a[href]').each((_, el) => {
+    const href  = $(el).attr('href') || '';
+    const titulo = clean($(el).text());
+    if (!href.includes('/tienda/')) return;
+    const slug = href.replace(/^https?:\/\/[^/]+\/tienda\//, '').replace(/\/$/, '');
+    if (!slug || slug.includes('/') || seen.has(slug)) return;
+    if (!titulo || titulo.length < 3) return;
+    if (SKIP_KEYWORDS.test(titulo)) return;
+    seen.set(slug, {
+      slug,
+      url: href.startsWith('http') ? href : `${BASE}${href}`,
+      titulo,
+      precioDesde: '',
+      imgThumb: '',
+    });
   });
 
   console.log(`   → ${seen.size} programas encontrados`);
