@@ -1,6 +1,6 @@
 {
   "operador": "Funtour",
-  "updatedAt": "2026-04-29T00:46:11.241Z",
+  "updatedAt": "2026-04-29T00:48:15.343Z",
   "programas": [
     {
       "id": "funtour-cataratas-aereo-vacaciones-de-setiembre-2026",
@@ -103,7 +103,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:06.071Z"
+      "updatedAt": "2026-04-29T00:47:08.169Z"
     },
     {
       "id": "funtour-gramado-y-canela-vacaciones-de-setiembre-2026",
@@ -209,7 +209,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:08.410Z"
+      "updatedAt": "2026-04-29T00:47:10.469Z"
     },
     {
       "id": "funtour-gramado-con-2-parques-vacaciones-de-setiembre-2026",
@@ -317,7 +317,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:10.720Z"
+      "updatedAt": "2026-04-29T00:47:12.782Z"
     },
     {
       "id": "funtour-gramado-y-canela-natal-luz-2026",
@@ -377,7 +377,7 @@
       ],
       "temporada": "Natal",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:13.074Z"
+      "updatedAt": "2026-04-29T00:47:15.111Z"
     },
     {
       "id": "funtour-bariloche-aereo-vacaciones-de-setiembre-2026",
@@ -437,7 +437,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:15.330Z"
+      "updatedAt": "2026-04-29T00:47:17.420Z"
     },
     {
       "id": "funtour-florianopolis-vacaciones-de-setiembre-bus-y-hotel",
@@ -518,7 +518,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:17.562Z"
+      "updatedAt": "2026-04-29T00:47:19.763Z"
     },
     {
       "id": "funtour-florianopolis-vacaciones-de-setiembre-media-pension-y-paseos",
@@ -599,7 +599,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:19.791Z"
+      "updatedAt": "2026-04-29T00:47:22.282Z"
     },
     {
       "id": "funtour-florianopolis-baja-agosto-a-diciembre-2026-media-pension-y-paseos",
@@ -691,7 +691,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:22.287Z"
+      "updatedAt": "2026-04-29T00:47:24.650Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-agosto-2026",
@@ -749,7 +749,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:24.532Z"
+      "updatedAt": "2026-04-29T00:47:26.931Z"
     },
     {
       "id": "funtour-mendoza-santiago-de-chile-turismo-2026",
@@ -792,7 +792,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:26.868Z"
+      "updatedAt": "2026-04-29T00:47:29.208Z"
     },
     {
       "id": "funtour-florianopolis-abril-a-junio-8-dias-media-pension-y-paseos",
@@ -880,7 +880,7 @@
       ],
       "temporada": "Abril",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:29.115Z"
+      "updatedAt": "2026-04-29T00:47:31.522Z"
     },
     {
       "id": "funtour-gramado-y-canela-temporada-baja-2026",
@@ -949,7 +949,7 @@
       ],
       "temporada": "Temporada baja",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:31.406Z"
+      "updatedAt": "2026-04-29T00:47:33.849Z"
     },
     {
       "id": "funtour-bariloche-aereo-vacaciones-de-julio-2026",
@@ -1013,7 +1013,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:33.756Z"
+      "updatedAt": "2026-04-29T00:47:36.285Z"
     },
     {
       "id": "funtour-santiago-de-chile-con-vina-y-valparaiso-vacaciones-de-julio-2026",
@@ -1091,7 +1091,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:36.198Z"
+      "updatedAt": "2026-04-29T00:47:38.593Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-julio-2026",
@@ -1155,7 +1155,7 @@
       ],
       "temporada": "Julio",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:38.442Z"
+      "updatedAt": "2026-04-29T00:47:40.930Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-turismo-2026",
@@ -1213,7 +1213,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:40.847Z"
+      "updatedAt": "2026-04-29T00:47:43.208Z"
     },
     {
       "id": "funtour-wine-tour-chile-2026",
@@ -1309,7 +1309,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:43.129Z"
+      "updatedAt": "2026-04-29T00:47:45.529Z"
     },
     {
       "id": "funtour-cataratas-aereo-vacaciones-de-julio-2026",
@@ -1412,7 +1412,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:45.513Z"
+      "updatedAt": "2026-04-29T00:47:47.794Z"
     },
     {
       "id": "funtour-gramado-y-canela-vacaciones-de-julio-2026-desde-montevideo-y-litoral-norte",
@@ -1475,7 +1475,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:47.764Z"
+      "updatedAt": "2026-04-29T00:47:50.095Z"
     },
     {
       "id": "funtour-gramado-con-2-parques-vacaciones-de-julio-2026-desde-montevideo-y-litoral-norte",
@@ -1540,7 +1540,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:50.043Z"
+      "updatedAt": "2026-04-29T00:47:52.585Z"
     },
     {
       "id": "funtour-floripa-julio-con-beto-carrero-y-compras-8-dias-media-pension-y-paseos",
@@ -1612,7 +1612,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:52.482Z"
+      "updatedAt": "2026-04-29T00:47:54.942Z"
     },
     {
       "id": "funtour-florianopolis-marzo-8-dias-media-pension-y-paseos",
@@ -1703,7 +1703,7 @@
       ],
       "temporada": "Marzo",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:54.778Z"
+      "updatedAt": "2026-04-29T00:47:57.278Z"
     },
     {
       "id": "funtour-santiago-de-chile-con-vina-y-valparaiso-semana-de-turismo-2026",
@@ -1775,7 +1775,7 @@
       ],
       "temporada": "Semana de turismo",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:56.990Z"
+      "updatedAt": "2026-04-29T00:47:59.534Z"
     },
     {
       "id": "funtour-gramado-y-canela-sin-parques-turismo-2026",
@@ -1832,7 +1832,7 @@
       ],
       "temporada": "Semana de turismo",
       "notas": [],
-      "updatedAt": "2026-04-29T00:45:59.249Z"
+      "updatedAt": "2026-04-29T00:48:03.512Z"
     },
     {
       "id": "funtour-gramado-y-canela-con-2-parques-turismo-2026",
@@ -1891,7 +1891,7 @@
       ],
       "temporada": "Semana de turismo",
       "notas": [],
-      "updatedAt": "2026-04-29T00:46:02.017Z"
+      "updatedAt": "2026-04-29T00:48:05.948Z"
     },
     {
       "id": "funtour-florianopolis-turismo-2026-bus-y-hotel-8-dias",
@@ -1974,7 +1974,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-04-29T00:46:04.418Z"
+      "updatedAt": "2026-04-29T00:48:08.294Z"
     },
     {
       "id": "funtour-bombinhas-turismo-2026-9-dias",
@@ -2056,7 +2056,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-04-29T00:46:06.667Z"
+      "updatedAt": "2026-04-29T00:48:10.582Z"
     },
     {
       "id": "funtour-bombinhas-enero-2026-10-dias",
@@ -2146,7 +2146,7 @@
       ],
       "temporada": "Enero",
       "notas": [],
-      "updatedAt": "2026-04-29T00:46:08.917Z"
+      "updatedAt": "2026-04-29T00:48:12.962Z"
     },
     {
       "id": "funtour-ferrugem-verano-2026-8-dias",
@@ -2244,7 +2244,7 @@
       ],
       "temporada": "Verano",
       "notas": [],
-      "updatedAt": "2026-04-29T00:46:11.241Z"
+      "updatedAt": "2026-04-29T00:48:15.343Z"
     }
   ]
 }
