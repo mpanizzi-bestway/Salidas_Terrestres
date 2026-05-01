@@ -3,427 +3,611 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sendas Turismo — Programas | BestWay</title>
+  <title id="page-title">Programa — BestWay</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
+
     :root {
-      --navy:       #2d3a6b;
-      --navy-dark:  #1e2748;
-      --navy-mid:   #3d4f8a;
-      --accent:     #4a5faa;
-      --gold:       #c8a84b;
-      --gold-lt:    #e8c96a;
-      --teal:       #0e7a6a;
-      --white:      #ffffff;
-      --off-white:  #f4f3ef;
-      --gray-light: #eeedf0;
-      --gray:       #9a98a8;
-      --text:       #1a1a2e;
+      --navy:      #2d3a6b;
+      --navy-dark: #1e2748;
+      --accent:    #4a5faa;
+      --gold:      #c8a84b;
+      --gold-lt:   #f0d878;
+      --teal:      #0e7a6a;
+      --teal-bg:   #eaf4f2;
+      --text:      #1a1a2e;
+      --mid:       #4a4860;
+      --light:     #f5f5f0;
+      --border:    #d8d6e0;
+      --white:     #ffffff;
     }
+
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'DM Sans',sans-serif; background:var(--off-white); color:var(--text); min-height:100vh; }
 
-    /* HEADER */
-    header { background:var(--navy-dark); border-bottom:3px solid var(--gold); }
-    .header-inner {
-      max-width:1140px; margin:0 auto; padding:16px 32px;
-      display:flex; align-items:center; gap:20px;
-    }
-    .back-btn {
-      display:flex; align-items:center; gap:6px;
-      color:rgba(255,255,255,.55); text-decoration:none;
-      font-size:.8rem; font-weight:500; transition:color .2s; white-space:nowrap;
-    }
-    .back-btn:hover { color:var(--gold); }
-    .back-btn svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
-    .h-div { width:1px; height:36px; background:rgba(255,255,255,.12); }
-    .logo-wrap img { height:40px; width:auto; display:block; }
-
-    /* Logo Sendas encima del sidebar */
-    .sidebar-logo {
-      background: var(--navy-dark);
-      padding: 16px 18px 12px;
-      display: flex; align-items: center; justify-content: center;
-      border-bottom: 2px solid var(--gold);
-    }
-    .sidebar-logo img {
-      height: 44px; width: auto; max-width: 180px;
-      object-fit: contain;
-      /* Sin filter — el logo_sendas.png tiene sus propios colores */
-    }
-    .header-title {
-      font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:600; color:white;
-    }
-    .header-title span { color:var(--gold-lt); font-weight:400; font-size:.82rem; margin-left:6px; }
-
-    /* UPDATE BAR */
-    .update-bar {
-      background:var(--teal); padding:8px 32px;
-      display:flex; align-items:center; justify-content:space-between; gap:16px;
-    }
-    .update-info { font-size:.75rem; color:rgba(255,255,255,.8); display:flex; align-items:center; gap:6px; }
-    .update-info strong { color:white; }
-    .btn-update {
-      background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3);
-      color:white; padding:5px 16px; border-radius:5px;
-      font-family:'DM Sans',sans-serif; font-size:.75rem; font-weight:600;
-      cursor:pointer; display:flex; align-items:center; gap:6px;
-      transition:background .2s; text-decoration:none; white-space:nowrap;
-    }
-    .btn-update:hover { background:rgba(255,255,255,.25); }
-    @keyframes spin { to { transform:rotate(360deg); } }
-    .spin { display:inline-block; animation:spin 1s linear infinite; }
-
-    /* LAYOUT */
-    .layout {
-      max-width:1140px; margin:28px auto 64px; padding:0 32px;
-      display:grid; grid-template-columns:240px 1fr; gap:28px; align-items:start;
+    body {
+      font-family:'DM Sans',sans-serif;
+      background:#dddbd5;
+      color:var(--text);
+      font-size:9pt;
+      line-height:1.5;
     }
 
-    /* SIDEBAR */
-    .sidebar {
-      background:var(--white); border-radius:10px;
-      border:1px solid rgba(30,39,72,.09);
-      box-shadow:0 2px 10px rgba(30,39,72,.05);
-      overflow:hidden; position:sticky; top:16px;
+    /* ── PRINT BAR ── */
+    .print-bar {
+      position:fixed; top:16px; right:16px; z-index:999;
+      display:flex; gap:8px;
     }
-    .sidebar-hd {
-      background:var(--navy); padding:13px 18px;
-      color:white; font-size:.72rem; font-weight:600;
-      letter-spacing:.1em; text-transform:uppercase;
+    .btn {
+      background:var(--navy); color:white; border:none;
+      padding:9px 20px; border-radius:7px;
+      font-family:'DM Sans',sans-serif; font-size:.8rem; font-weight:600;
+      cursor:pointer; box-shadow:0 3px 14px rgba(0,0,0,.22);
+      display:flex; align-items:center; gap:7px; transition:background .2s;
+      text-decoration:none;
     }
-    .tree { padding:8px 0 4px; }
+    .btn:hover { background:var(--accent); }
+    .btn.sec { background:#555; }
+    .btn.sec:hover { background:#333; }
 
-    .tree-country {
-      padding:10px 18px 5px; font-size:.67rem; font-weight:700;
-      letter-spacing:.12em; text-transform:uppercase; color:var(--gray);
-      display:flex; align-items:center; gap:8px;
+    /* ── LOADING / ERROR ── */
+    #loading-screen {
+      position:fixed; inset:0; background:var(--navy-dark);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      z-index:9999; color:white; gap:16px;
     }
-    .tree-country::after { content:''; flex:1; height:1px; background:var(--gray-light); }
+    #loading-screen h2 { font-family:'Poppins',sans-serif; font-size:1.1rem; font-weight:600; }
+    #loading-screen p  { font-size:.82rem; color:rgba(255,255,255,.5); }
+    .loader-bar { width:200px; height:3px; background:rgba(255,255,255,.15); border-radius:2px; overflow:hidden; }
+    .loader-fill { height:100%; background:var(--gold); border-radius:2px; animation:loadbar 1.8s ease-in-out infinite; }
+    @keyframes loadbar { 0%{width:0%} 50%{width:70%} 100%{width:100%} }
+    #loading-screen.hidden { display:none; }
 
-    .tree-dest-hd {
-      padding:6px 18px; font-size:.82rem; font-weight:600; color:var(--navy);
-      cursor:pointer; display:flex; align-items:center; gap:7px;
-      transition:background .12s; user-select:none;
+    #error-screen {
+      display:none; position:fixed; inset:0; background:var(--navy-dark); color:white;
+      flex-direction:column; align-items:center; justify-content:center;
+      gap:16px; z-index:9999; text-align:center; padding:40px;
     }
-    .tree-dest-hd:hover { background:var(--gray-light); }
-    .tree-dest-hd .chev {
-      margin-left:auto; width:13px; height:13px;
-      fill:none; stroke:var(--gray); stroke-width:2;
-      stroke-linecap:round; stroke-linejoin:round; transition:transform .18s;
-    }
-    .tree-dest.open .chev { transform:rotate(90deg); }
-    .tree-links { display:none; padding:0 0 3px 34px; }
-    .tree-dest.open .tree-links { display:block; }
-    .tree-link {
-      display:block; padding:4px 12px 4px 10px;
-      font-size:.75rem; color:var(--accent); text-decoration:none;
-      border-left:2px solid var(--gray-light); margin:1px 0; line-height:1.35;
-      transition:border-color .12s,color .12s;
-    }
-    .tree-link:hover { color:var(--navy); border-color:var(--gold); }
+    #error-screen.visible { display:flex; }
+    #error-screen h2 { font-family:'Poppins',sans-serif; color:var(--gold); }
+    #error-screen p  { color:rgba(255,255,255,.6); font-size:.9rem; max-width:400px; line-height:1.6; }
+    #error-screen code { background:rgba(255,255,255,.1); padding:2px 8px; border-radius:4px; font-size:.8rem; }
 
-    /* CONTENT */
-    .content { display:flex; flex-direction:column; gap:32px; }
-
-    .country-block { display:flex; flex-direction:column; gap:24px; }
-
-    .country-label {
-      font-family:'Poppins',sans-serif; font-size:1rem; font-weight:700; color:var(--navy);
-      display:flex; align-items:center; gap:10px;
-      padding-bottom:9px; border-bottom:2px solid var(--navy);
-    }
-    .country-label::after {
-      content:''; flex:1; height:1px;
-      background:linear-gradient(90deg,var(--gold) 0%,transparent 80%); margin-top:1px;
+    /* ── PÁGINA A4 ── */
+    .page {
+      width:210mm; min-height:297mm;
+      margin:24px auto;
+      background:var(--white);
+      box-shadow:0 4px 40px rgba(0,0,0,.2);
+      display:flex; flex-direction:column;
     }
 
-    .dest-block { display:flex; flex-direction:column; gap:7px; }
-
-    .dest-label {
-      display:flex; align-items:center; gap:10px;
-      padding-bottom:8px; border-bottom:1px solid var(--gray-light);
-    }
-    .dest-icon {
-      width:32px; height:32px; background:var(--navy); border-radius:50%;
-      display:flex; align-items:center; justify-content:center; font-size:.95rem; flex-shrink:0;
-    }
-    .dest-label h3 { font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:600; color:var(--navy); }
-    .dest-count {
-      margin-left:auto; font-size:.68rem; color:var(--gray);
-      background:var(--gray-light); padding:2px 9px; border-radius:12px;
+    .page-content {
+      padding:10mm 13mm 8mm;
+      flex:1; display:flex; flex-direction:column; gap:5.5mm;
     }
 
-    /* CARDS */
-    .prog-list { display:flex; flex-direction:column; gap:6px; }
-
-    .prog-card {
-      background:var(--white); border-radius:8px;
-      border:1px solid rgba(30,39,72,.08); padding:12px 15px;
-      display:flex; align-items:center; gap:14px;
-      text-decoration:none; color:inherit;
-      box-shadow:0 1px 3px rgba(30,39,72,.05);
-      transition:border-color .18s,box-shadow .18s,transform .14s;
+    /* 1. ENCABEZADO */
+    .doc-header {
+      display:grid; grid-template-columns:auto 1fr auto;
+      align-items:center; gap:5mm;
+      padding-bottom:4mm; border-bottom:2.5px solid var(--navy);
+      position:relative;
     }
-    .prog-card:hover {
-      border-color:var(--accent); box-shadow:0 3px 14px rgba(45,58,107,.11);
-      transform:translateX(3px);
+    .doc-header::after {
+      content:''; position:absolute; bottom:-4.5px; left:0; right:0;
+      height:1.5px; background:var(--gold);
     }
-    .card-body { flex:1; min-width:0; }
-    .card-name { font-size:.88rem; font-weight:600; color:var(--navy); line-height:1.3; }
-    .card-sub  { font-size:.73rem; color:var(--gray); margin-top:2px; }
-    .card-tags { display:flex; gap:5px; margin-top:5px; flex-wrap:wrap; }
-    .tag { font-size:.67rem; font-weight:500; padding:1px 7px; border-radius:10px; letter-spacing:.02em; }
-    .tag-dur  { background:#e8edf8; color:var(--navy-mid); }
-    .tag-bus  { background:#e8f5f0; color:#0e6a5a; }
-    .tag-seas { background:#fdf5e4; color:#8a6010; }
-
-    .card-arrow {
-      width:27px; height:27px; background:var(--gray-light); border-radius:50%;
+    .logo-block { display:flex; align-items:center; }
+    .logo-block img { height:22mm; width:auto; display:block; }
+    /* Fallback si el logo no carga */
+    .logo-block .logo-fallback {
+      height:22mm; width:44mm;
+      background:var(--navy); border-radius:4px;
       display:flex; align-items:center; justify-content:center;
-      flex-shrink:0; transition:background .18s;
+      color:white; font-family:'Poppins',sans-serif; font-size:11pt;
+      font-weight:800; letter-spacing:.04em;
     }
-    .prog-card:hover .card-arrow { background:var(--navy); }
-    .card-arrow svg {
-      width:11px; height:11px; fill:none; stroke:var(--navy);
-      stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; transition:stroke .18s;
-    }
-    .prog-card:hover .card-arrow svg { stroke:white; }
 
-    /* STATES */
-    .state-box {
-      text-align:center; padding:48px 20px; color:var(--gray);
-      background:var(--white); border-radius:10px; border:1px solid rgba(30,39,72,.08);
+    /* CENTRO: eslogan centrado */
+    .header-center {
+      text-align:center;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
     }
-    .state-box .ico { font-size:1.8rem; display:block; margin-bottom:10px; }
-    .state-box p { font-size:.84rem; line-height:1.7; }
-    .state-box code { background:#eee; padding:1px 6px; border-radius:3px; font-size:.78rem; }
-
-    /* FOOTER */
-    footer { background:var(--navy-dark); padding:16px 32px; text-align:center; }
-    footer p { color:rgba(255,255,255,.28); font-size:.74rem; }
-    footer span { color:var(--gold); }
-
-    /* RESPONSIVE */
-    @media (max-width:740px) {
-      .layout { grid-template-columns:1fr; padding:0 16px; }
-      .sidebar { position:static; }
-      .header-inner,.update-bar { padding-left:16px; padding-right:16px; }
-      .update-bar { flex-direction:column; align-items:flex-start; gap:8px; }
+    .header-center .eslogan {
+      font-family:'Poppins',sans-serif; font-size:7pt; font-weight:600;
+      letter-spacing:.18em; text-transform:uppercase; color:var(--mid);
     }
+
+    /* CONTACTO: Martin Panizzi */
+    .contact-block { text-align:right; font-size:7.5pt; color:var(--mid); line-height:1.7; }
+    .contact-block .contact-name {
+      display:block; font-size:9.5pt; color:var(--navy);
+      font-weight:700; font-family:'Poppins',sans-serif;
+      margin-bottom:1mm; letter-spacing:.01em;
+    }
+
+    /* 2. TÍTULO */
+    .prog-title-block { text-align:center; padding:3mm 0 1mm; }
+    .prog-title-block h1 {
+      font-family:'Poppins',sans-serif; font-size:26pt; font-weight:800;
+      color:var(--navy); line-height:1.05; letter-spacing:-.01em; text-transform:uppercase;
+    }
+    .prog-title-block .duracion-line {
+      font-family:'Poppins',sans-serif; font-size:7.5pt; font-weight:600;
+      letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-top:1.5mm;
+    }
+
+    /* 3. BANDA FECHAS */
+    .fechas-band {
+      background:var(--navy); border-radius:4px; padding:3mm 6mm;
+      display:flex; align-items:center; justify-content:space-between; gap:3mm;
+    }
+    .fecha-item { display:flex; flex-direction:column; gap:.5mm; }
+    .fecha-item .fl {
+      font-family:'Poppins',sans-serif; font-size:6pt; text-transform:uppercase;
+      letter-spacing:.12em; color:rgba(255,255,255,.45); font-weight:600;
+    }
+    .fecha-item .fv { font-size:8.5pt; color:white; font-weight:600; }
+    .fecha-item .fv.gold { color:var(--gold-lt); }
+    .fecha-sep { width:1px; height:8mm; background:rgba(255,255,255,.15); }
+
+    /* SECCIONES */
+    .sec { display:flex; flex-direction:column; gap:2.5mm; }
+    .sec-title {
+      font-family:'Poppins',sans-serif; font-size:6.5pt; font-weight:700;
+      text-transform:uppercase; letter-spacing:.14em; color:var(--navy);
+      padding-bottom:1.5mm; border-bottom:1px solid var(--border);
+      display:flex; align-items:center; gap:2mm;
+    }
+    .sec-title::before {
+      content:''; display:block; width:3mm; height:3mm;
+      background:var(--gold); border-radius:50%; flex-shrink:0;
+    }
+
+    /* 4. DESTINO */
+    .destino-grid { display:grid; grid-template-columns:1fr 50mm; gap:5mm; align-items:start; }
+    .destino-text p { font-size:8.5pt; color:var(--mid); line-height:1.6; font-style:italic; margin-bottom:3mm; }
+    .destino-highlights { display:flex; flex-wrap:wrap; gap:1.5mm; }
+    .hl-tag {
+      background:var(--light); border:.5px solid var(--border);
+      border-radius:20px; padding:1mm 2.5mm; font-size:7pt; color:var(--navy); font-weight:500;
+    }
+    .destino-foto {
+      border-radius:4px; overflow:hidden; background:var(--teal-bg);
+      height:28mm; display:flex; align-items:center; justify-content:center;
+      border:.5px solid var(--border); position:relative;
+    }
+    .destino-foto img { width:100%; height:100%; object-fit:cover; display:none; }
+    .destino-foto .ph { font-size:7.5pt; color:var(--teal); text-align:center; padding:4mm; line-height:1.5; }
+
+    /* 5. INCLUYE */
+    .incluye-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.8mm; }
+    .inc-row { display:flex; align-items:flex-start; gap:2mm; font-size:8pt; color:var(--text); line-height:1.4; }
+    .inc-dot { width:3.5mm; height:3.5mm; background:var(--teal); border-radius:50%; flex-shrink:0; margin-top:1mm; }
+
+    /* 6. ITINERARIO */
+    .itinerary-table { width:100%; border-collapse:collapse; }
+    .itinerary-table tr { border-bottom:.5px solid var(--border); }
+    .itinerary-table tr:last-child { border-bottom:none; }
+    .itinerary-table td { padding:2.5mm 2mm; vertical-align:top; font-size:8pt; }
+    .it-day { width:13mm; white-space:nowrap; }
+    .it-day-pill {
+      background:var(--navy); color:white; border-radius:3px; padding:1mm 2mm;
+      font-family:'Poppins',sans-serif; font-size:6pt; font-weight:700;
+      letter-spacing:.04em; display:inline-block;
+    }
+    .it-day-pill.first { background:var(--teal); }
+    .it-day-pill.last  { background:var(--gold); color:var(--navy-dark); }
+    .it-lugar { width:34mm; font-weight:600; color:var(--navy); font-size:8pt; padding-left:2mm; }
+    .it-detalle { color:var(--mid); line-height:1.45; }
+    .it-detalle strong { color:var(--navy); font-weight:600; }
+    .it-nota-orden { font-size:7pt; color:var(--mid); font-style:italic; padding:1.5mm 2mm; border-top:.5px solid var(--border); }
+
+    /* 7. PRECIOS */
+    .precios-table { width:100%; border-collapse:collapse; font-size:8pt; }
+    .precios-table thead tr { background:var(--navy); color:white; }
+    .precios-table thead th {
+      padding:2.5mm 3mm; text-align:center;
+      font-family:'Poppins',sans-serif; font-size:6.5pt; font-weight:600;
+      letter-spacing:.06em; text-transform:uppercase; white-space:nowrap;
+    }
+    .precios-table thead th:first-child { text-align:left; }
+    .precios-table tbody tr { border-bottom:.5px solid var(--border); }
+    .precios-table tbody tr:nth-child(even) { background:var(--light); }
+    .precios-table tbody tr:last-child { border-bottom:none; }
+    .precios-table tbody td { padding:2.5mm 3mm; text-align:center; vertical-align:middle; }
+    .precios-table tbody td:first-child { text-align:left; }
+    .hotel-nm { font-weight:600; color:var(--navy); font-size:8pt; }
+    .hotel-url { font-size:6.5pt; color:var(--mid); }
+    .pval { font-weight:700; color:var(--text); }
+    .pna { color:var(--border); }
+    .precios-footer { display:grid; grid-template-columns:1fr 1fr; gap:2.5mm; margin-top:2.5mm; }
+    .pnote {
+      background:var(--light); border-left:2px solid var(--gold);
+      border-radius:0 3px 3px 0; padding:2mm 3mm;
+      font-size:7pt; color:var(--mid); line-height:1.5;
+    }
+    .pnote strong {
+      font-family:'Poppins',sans-serif; font-size:6.5pt; color:var(--navy);
+      display:block; margin-bottom:.8mm; text-transform:uppercase; letter-spacing:.06em;
+    }
+
+    /* 8. PIE */
+    .doc-footer { background:var(--navy); padding:0; margin-top:auto; }
+    .footer-top {
+      display:grid; grid-template-columns:1fr auto;
+      align-items:center; gap:0; padding:4mm 13mm;
+      border-bottom:.5px solid rgba(255,255,255,.1);
+    }
+    /* Contacto pie: BestWay Viajes */
+    .footer-contact { font-size:7.5pt; color:rgba(255,255,255,.65); line-height:1.8; }
+    .footer-contact .footer-name {
+      font-family:'Poppins',sans-serif; font-size:9pt; color:white;
+      font-weight:700; display:block; margin-bottom:.5mm;
+    }
+    .footer-pago { display:flex; flex-direction:column; align-items:flex-end; gap:2.5mm; }
+    .pago-label {
+      font-family:'Poppins',sans-serif; font-size:7pt; font-weight:600;
+      text-transform:uppercase; letter-spacing:.08em; color:var(--gold-lt);
+      text-align:right; line-height:1.4;
+    }
+    .pago-logo-img {
+      height:9mm; width:auto; display:block;
+      background:white; border-radius:5px; padding:1.5mm 3mm;
+    }
+    .footer-legal { padding:2.5mm 13mm; font-size:6pt; color:rgba(255,255,255,.3); line-height:1.5; }
+
+    /* PRINT */
+    @media print {
+      @page { size:A4; margin:0; }
+      body { background:none; }
+      .print-bar { display:none !important; }
+      #loading-screen, #error-screen { display:none !important; }
+      .page { width:210mm; margin:0; box-shadow:none; page-break-after:always; }
+      .sec { page-break-inside:avoid; }
+      .fechas-band { page-break-inside:avoid; }
+      .doc-footer { page-break-inside:avoid; }
+    }
+
   </style>
 </head>
 <body>
 
-<header>
-  <div class="header-inner">
-    <a href="../../index.html" class="back-btn">
-      <svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg>
-      Inicio
-    </a>
-    <div class="h-div"></div>
-    <div class="logo-wrap"><img src="images/logo_Bestway_blanco.png" alt="BestWay"></div>
-    <div class="header-title">
-      Sendas Turismo
-      <span>— Programas terrestres</span>
-    </div>
-  </div>
-</header>
-
-<div class="update-bar">
-  <div class="update-info">
-    🔄 Actualizado: <strong id="last-update">—</strong>
-    &nbsp;·&nbsp; <span id="prog-count">—</span> programas activos
-  </div>
-  <a id="btn-update"
-     href="https://github.com/mpanizzi-bestway/Salidas_Terrestres/actions/workflows/scrape-sendas.yml"
-     target="_blank"
-     class="btn-update"
-     title="Abre GitHub Actions para forzar re-scraping">
-    ⚡ Actualizar ahora
-  </a>
+<div id="loading-screen">
+  <h2>Cargando programa...</h2>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+  <p id="loading-msg">Leyendo datos de Sendas Turismo</p>
 </div>
 
-<div class="layout">
+<div id="error-screen">
+  <h2>⚠️ Programa no encontrado</h2>
+  <p id="error-msg">No se pudo cargar la información del programa solicitado.</p>
+  <a href="./sendas.html" style="color:var(--gold);font-size:.9rem;">← Volver a los programas</a>
+</div>
 
-  <aside class="sidebar">
-    <!-- Logo Sendas sobre el árbol -->
-    <div class="sidebar-logo">
-      <img
-        src="images/logo_sendas.png"
-        alt="Sendas Turismo"
-        onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<span style=\'color:white;font-weight:700;font-size:.9rem;\'>Sendas Turismo</span>')"
-      >
-    </div>
-    <div class="sidebar-hd">Destinos &amp; Programas</div>
-    <div class="tree" id="sidebar-tree">
-      <div style="padding:20px 16px;text-align:center;color:var(--gray);font-size:.8rem;">
-        <span class="spin">⏳</span> Cargando...
+<div class="print-bar">
+  <button class="btn" onclick="window.print()">🖨️ Imprimir / PDF</button>
+  <a class="btn sec" href="./sendas.html">← Volver</a>
+</div>
+
+<div class="page" id="programa-page" style="visibility:hidden">
+  <div class="page-content">
+
+    <!-- 1. ENCABEZADO -->
+    <header class="doc-header">
+
+      <!-- LOGO — rutas relativas con fallback texto -->
+      <div class="logo-block">
+        <img id="header-logo"
+             src="../../images/logo_bestway_azul_fondo_blanco.png"
+             alt="BestWay Viajes"
+             onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';">
+        <div class="logo-fallback" id="logo-fallback" style="display:none;">BestWay</div>
       </div>
-    </div>
-  </aside>
 
-  <main class="content" id="main-content">
-    <div class="state-box">
-      <span class="ico spin">⏳</span>
-      <p>Cargando programas...</p>
-    </div>
-  </main>
+      <!-- CENTRO: eslogan centrado -->
+      <div class="header-center">
+        <div class="eslogan">Tu Mundo de Oportunidades</div>
+      </div>
 
-</div>
+      <!-- DERECHA: Martin Panizzi -->
+      <div class="contact-block">
+        <span class="contact-name">Martin Panizzi</span>
+        Tel. 2902 2116 int. 122<br>
+        Cel/WhatsApp 095 969 909<br>
+        mpanizzi@bestway.com.uy
+      </div>
 
-<footer>
-  <p><span>BestWay Viajes</span> · Sendas Turismo · Uso interno</p>
-</footer>
+    </header>
 
-<script>
-const DATA_URL = '../../programas-sendas.json';
-const PROG_URL = './programa.html';
+    <!-- 2. TÍTULO -->
+    <div class="prog-title-block" id="prog-titulo"></div>
 
-const DEST_EMOJI = {
-  florianopolis:'🏖️', gramado:'🌲', ferrugem:'🌊', camboriu:'🎡',
-  bombinhas:'🐚', capao:'🏄', torres:'⛵', laguna:'🦀',
-  praiarosa:'🌹', blumenau:'🌸',
-  buenosaires:'🏙️', mendoza:'🍷', norte:'🏔️', carlospaz:'⛰️', bariloche:'🏔️',
-  cataratas:'🌊', chile:'🇨🇱', mendozasantiago:'🏔️',
-};
-const PAIS_ORDER = ['Brasil','Argentina','Cataratas','Chile','Otros'];
-const PAIS_EMOJI = { Brasil:'🇧🇷', Argentina:'🇦🇷', Cataratas:'💧', Chile:'🇨🇱', Otros:'🌍' };
+    <!-- 3. FECHAS -->
+    <div class="fechas-band" id="prog-fechas"></div>
 
-function titleCase(s) {
-  return s.toLowerCase().replace(/(?:^|\s|[-\/])\S/g, c => c.toUpperCase());
-}
-function formatDate(iso) {
-  const d = new Date(iso);
-  return isNaN(d) ? iso : d.toLocaleDateString('es-UY',{day:'2-digit',month:'short',year:'numeric'});
-}
-
-function groupData(programas) {
-  const byPais = {};
-  for (const p of programas) {
-    const pais = p.pais || 'Otros', dest = p.destino || 'Otros';
-    if (!byPais[pais]) byPais[pais] = {};
-    if (!byPais[pais][dest]) byPais[pais][dest] = {
-      slug: p.destinoSlug, emoji: DEST_EMOJI[p.destinoSlug] || '📍', progs: []
-    };
-    byPais[pais][dest].progs.push(p);
-  }
-  return byPais;
-}
-
-function sorted(byPais) {
-  return Object.keys(byPais).sort((a,b) => {
-    const ia = PAIS_ORDER.indexOf(a), ib = PAIS_ORDER.indexOf(b);
-    return (ia<0?99:ia) - (ib<0?99:ib);
-  });
-}
-
-function cardHTML(p) {
-  const dias   = p.duracion ? p.duracion.split('—')[0].trim() : '';
-  const salida = p.fechas?.find(f => f.gold)?.value || p.fechas?.[0]?.value || '';
-  const sub    = p.fechas?.find(f => f.label==='Salidas' && !f.gold)?.value || salida;
-  return `
-    <a class="prog-card" href="${PROG_URL}?p=${encodeURIComponent(p.id)}" target="_blank">
-      <div class="card-body">
-        <div class="card-name">${titleCase(p.titulo)}</div>
-        <div class="card-sub">${sub}</div>
-        <div class="card-tags">
-          ${dias ? `<span class="tag tag-dur">${dias}</span>` : ''}
-          <span class="tag tag-bus">Bus semi cama</span>
-          ${salida ? `<span class="tag tag-seas">${salida.substring(0,28)}</span>` : ''}
+    <!-- 4. DESTINO -->
+    <div class="sec">
+      <div class="sec-title">El Destino</div>
+      <div class="destino-grid">
+        <div class="destino-text">
+          <p id="prog-descripcion"></p>
+          <div class="destino-highlights" id="prog-highlights"></div>
+        </div>
+        <div class="destino-foto" id="prog-foto">
+          <div class="ph" id="foto-placeholder">🌎</div>
         </div>
       </div>
-      <div class="card-arrow">
-        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+    </div>
+
+    <!-- 5. INCLUYE -->
+    <div class="sec">
+      <div class="sec-title">Incluye</div>
+      <div class="incluye-grid" id="prog-incluye"></div>
+    </div>
+
+    <!-- 6. ITINERARIO -->
+    <div class="sec">
+      <div class="sec-title">Itinerario</div>
+      <table class="itinerary-table">
+        <tbody id="prog-itinerario"></tbody>
+        <tr class="it-nota-orden">
+          <td colspan="3">* El orden de los paseos y excursiones puede variar según las condiciones del operador.</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 7. PRECIOS -->
+    <div class="sec">
+      <div class="sec-title">Hoteles &amp; Tarifas — Precios en U$S por persona</div>
+      <table class="precios-table">
+        <thead>
+          <tr>
+            <th>Hotel</th>
+            <th>Playa / Cat.</th>
+            <th>Individual</th>
+            <th>Doble</th>
+            <th>Triple</th>
+            <th>Cuádruple</th>
+            <th>Quíntuple</th>
+          </tr>
+        </thead>
+        <tbody id="prog-precios"></tbody>
+      </table>
+      <div class="precios-footer" id="prog-precios-footer"></div>
+    </div>
+
+  </div><!-- /page-content -->
+
+  <!-- 8. PIE -->
+  <footer class="doc-footer">
+    <div class="footer-top">
+
+      <!-- CONTACTO PIE: BestWay Viajes -->
+      <div class="footer-contact">
+        <span class="footer-name">BestWay Viajes</span>
+        Tel. 2902 2116 &nbsp;·&nbsp; Río Branco 1375, Montevideo<br>
+        info@bestway.com.uy &nbsp;·&nbsp; www.bestway.com.uy
       </div>
-    </a>`;
+
+      <!-- PAGO -->
+      <div class="footer-pago">
+        <div class="pago-label">Financiá tu viaje en Pesos o Dólares<br>con tarjeta de crédito</div>
+        <img class="pago-logo-img"
+             src="images/Medios-de-pago.png"
+             alt="Medios de pago"
+             onerror="this.style.display='none'">
+      </div>
+
+    </div>
+    <div class="footer-legal">
+      Todos los precios están sujetos a disponibilidad y variaciones tarifarias sin previo aviso. Es responsabilidad del cliente la documentación necesaria para su viaje. Algunos países exigen documento con al menos 6 meses de vigencia al momento del viaje. Asesorese sobre exigencias migratorias y sanitarias (visa, vacunas, etc.). Los menores pueden requerir documentación adicional. La empresa no se responsabiliza por cambios o cancelaciones de compañías aéreas, hoteles u operadores. Se recomienda contratar seguro de cancelación y asistencia en viaje.
+    </div>
+  </footer>
+
+</div><!-- /page -->
+
+
+<script>
+// ══════════════════════════════════════════════════════════════
+//  FOTOS DE DESTINO
+// ══════════════════════════════════════════════════════════════
+const WIKIMEDIA_FOTOS = {
+  florianopolis: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Praia_de_Canasvieiras%2C_Florian%C3%B3polis.jpg/800px-Praia_de_Canasvieiras%2C_Florian%C3%B3polis.jpg',
+  gramado:       'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Gramado_-_Rio_Grande_do_Sul%2C_Brasil.jpg/800px-Gramado_-_Rio_Grande_do_Sul%2C_Brasil.jpg',
+  ferrugem:      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Praia_da_Ferrugem.jpg/800px-Praia_da_Ferrugem.jpg',
+  camboriu:      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Balne%C3%A1rio_Cambori%C3%BA_vista_a%C3%A9rea.jpg/800px-Balne%C3%A1rio_Cambori%C3%BA_vista_a%C3%A9rea.jpg',
+  bombinhas:     'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Bombinhas_-_SC.jpg/800px-Bombinhas_-_SC.jpg',
+  capao:         'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Cap%C3%A3o_da_Canoa_-_RS.jpg/800px-Cap%C3%A3o_da_Canoa_-_RS.jpg',
+  torres:        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Torres_Rio_Grande_do_Sul.jpg/800px-Torres_Rio_Grande_do_Sul.jpg',
+  laguna:        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Laguna-SC-centro.jpg/800px-Laguna-SC-centro.jpg',
+  praiarosa:     'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Praia_do_Rosa.jpg/800px-Praia_do_Rosa.jpg',
+  blumenau:      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Blumenau_Rua_XV_de_Novembro.jpg/800px-Blumenau_Rua_XV_de_Novembro.jpg',
+  buenosaires:   'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Buenos_Aires_-_Obelisco.jpg/800px-Buenos_Aires_-_Obelisco.jpg',
+  mendoza:       'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Bodega_Zuccardi_Valle_de_Uco.jpg/800px-Bodega_Zuccardi_Valle_de_Uco.jpg',
+  norte:         'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Quebrada_de_Humahuaca.jpg/800px-Quebrada_de_Humahuaca.jpg',
+  carlospaz:     'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Villa_Carlos_Paz%2C_C%C3%B3rdoba.jpg/800px-Villa_Carlos_Paz%2C_C%C3%B3rdoba.jpg',
+  bariloche:     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Bariloche_desde_el_cerro_Otto.jpg/800px-Bariloche_desde_el_cerro_Otto.jpg',
+  cataratas:     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Iguazu_cataratas.jpg/800px-Iguazu_cataratas.jpg',
+  chile:         'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Santiago_de_Chile_Skyline.jpg/800px-Santiago_de_Chile_Skyline.jpg',
+  mendozasantiago:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Bodega_Zuccardi_Valle_de_Uco.jpg/800px-Bodega_Zuccardi_Valle_de_Uco.jpg',
+};
+
+function loadDestinationPhoto(slug, container) {
+  if (!container) return;
+  const img = document.createElement('img');
+  img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:none;';
+  img.onload = () => {
+    document.getElementById('foto-placeholder')?.remove();
+    img.style.display = 'block';
+  };
+  img.onerror = () => {
+    if (img._triedWikimedia) {
+      container.innerHTML = '<div class="ph">🌎</div>';
+      return;
+    }
+    img._triedWikimedia = true;
+    const wiki = WIKIMEDIA_FOTOS[slug];
+    if (wiki && img.src !== wiki) { img.src = wiki; }
+    else { container.innerHTML = '<div class="ph">🌎</div>'; }
+  };
+  container.appendChild(img);
+  img.src = `images/destinos/${slug}.jpg`;
 }
 
-function renderSidebar(byPais) {
-  let h = '';
-  sorted(byPais).forEach((pais, pi) => {
-    h += `<div class="tree-country">${PAIS_EMOJI[pais]||'🌍'} ${pais}</div>`;
-    Object.entries(byPais[pais]).forEach(([dest, info], di) => {
-      const open = (pi===0 && di===0) ? ' open' : '';
-      const sid = `td-${info.slug}`;
-      h += `
-        <div class="tree-dest${open}" id="${sid}">
-          <div class="tree-dest-hd" onclick="toggleTree('${sid}')">
-            <span>${info.emoji}</span>${dest}
-            <svg class="chev" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
-          </div>
-          <div class="tree-links">
-            ${info.progs.map(p => {
-              const label = titleCase(p.titulo)
-                .replace(new RegExp(`^${dest.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}\\s*[-–]?\\s*`,'i'),'')
-                .trim() || titleCase(p.titulo);
-              return `<a class="tree-link" href="${PROG_URL}?p=${encodeURIComponent(p.id)}" target="_blank">${label}</a>`;
-            }).join('')}
-          </div>
-        </div>`;
-    });
+// ══════════════════════════════════════════════════════════════
+//  FILTROS PARA INCLUYE
+// ══════════════════════════════════════════════════════════════
+const INCLUYE_RUIDO = [
+  /^imprimir$/i, /^correo\s*electr[oó]nico$/i, /^email$/i,
+  /^print$/i, /^compartir$/i, /^share$/i, /^facebook$/i,
+  /^twitter$/i, /^whatsapp$/i, /^pdf$/i, /^descargar$/i,
+  /^volver$/i, /^inicio$/i, /^ver\s+m[aá]s$/i,
+];
+
+function limpiarIncluye(items) {
+  return items.filter(item => {
+    const t = item.trim();
+    if (!t || t.length < 4 || t.length > 300) return false;
+    return !INCLUYE_RUIDO.some(rx => rx.test(t));
   });
-  document.getElementById('sidebar-tree').innerHTML = h;
 }
 
-function renderContent(byPais) {
-  let h = '';
-  sorted(byPais).forEach(pais => {
-    h += `<div class="country-block">`;
-    h += `<div class="country-label">${PAIS_EMOJI[pais]||'🌍'} ${pais}</div>`;
-    Object.entries(byPais[pais]).forEach(([dest, info]) => {
-      h += `
-        <div class="dest-block" id="dest-${info.slug}">
-          <div class="dest-label">
-            <div class="dest-icon">${info.emoji}</div>
-            <h3>${dest}</h3>
-            <span class="dest-count">${info.progs.length} programa${info.progs.length!==1?'s':''}</span>
-          </div>
-          <div class="prog-list">${info.progs.map(cardHTML).join('')}</div>
-        </div>`;
-    });
-    h += `</div>`;
-  });
-  document.getElementById('main-content').innerHTML = h || `
-    <div class="state-box">
-      <span class="ico">⚠️</span>
-      <p>No se encontraron programas.<br>
-      Verificá que <code>programas-sendas.json</code> existe y tiene contenido.<br>
-      Hacé click en <strong>Actualizar ahora</strong> para regenerarlo.</p>
-    </div>`;
+// ══════════════════════════════════════════════════════════════
+//  RENDER
+// ══════════════════════════════════════════════════════════════
+function pv(v) {
+  return v != null ? `<span class="pval">U$S ${v}</span>` : `<span class="pna">—</span>`;
 }
 
+function renderPrograma(data) {
+  document.title = `${data.titulo} — BestWay`;
+
+  // 2. TÍTULO
+  document.getElementById('prog-titulo').innerHTML = `
+    <h1>${data.titulo}</h1>
+    <div class="duracion-line">${data.subtitulo || data.duracion}</div>
+  `;
+
+  // 3. FECHAS
+  const fechasFiltradas = (data.fechas || []).filter(f =>
+    !/^operador$/i.test(f.label.trim())
+  );
+  const fechaItems = fechasFiltradas.map((f, i) => {
+    const sep = i < fechasFiltradas.length - 1 ? '<div class="fecha-sep"></div>' : '';
+    return `
+      <div class="fecha-item">
+        <span class="fl">${f.label}</span>
+        <span class="fv${f.gold ? ' gold' : ''}">${f.value}</span>
+      </div>${sep}`;
+  }).join('');
+  document.getElementById('prog-fechas').innerHTML = fechaItems ||
+    '<div class="fecha-item"><span class="fl">Temporada</span><span class="fv gold">Consultar</span></div>';
+
+  // 4. DESTINO
+  document.getElementById('prog-descripcion').textContent = data.descripcion || '';
+  document.getElementById('prog-highlights').innerHTML = (data.highlights || [])
+    .map(h => `<span class="hl-tag">${h}</span>`).join('');
+  loadDestinationPhoto(data.destinoSlug || '', document.getElementById('prog-foto'));
+
+  // 5. INCLUYE
+  const incluyeLimpio = limpiarIncluye(data.incluye || []);
+  document.getElementById('prog-incluye').innerHTML = incluyeLimpio.length
+    ? incluyeLimpio.map(i => `<div class="inc-row"><div class="inc-dot"></div>${i}</div>`).join('')
+    : '<div class="inc-row"><div class="inc-dot"></div>Consultar detalles en agencia</div>';
+
+  // 6. ITINERARIO
+  document.getElementById('prog-itinerario').innerHTML = (data.itinerario || []).map(d => `
+    <tr>
+      <td class="it-day"><span class="it-day-pill${d.first?' first':d.last?' last':''}">${d.dia}</span></td>
+      <td class="it-lugar">${d.lugar}</td>
+      <td class="it-detalle">${d.detalle}</td>
+    </tr>
+  `).join('');
+
+  // 7. PRECIOS
+  const hoteles = data.hoteles || [];
+  document.getElementById('prog-precios').innerHTML = hoteles.length
+    ? hoteles.map(h => `
+        <tr>
+          <td>
+            <span class="hotel-nm">${h.nombre}</span>
+            ${h.cat ? `<br><span class="hotel-url">${h.cat.replace(/^https?:\/\/(www\.)?/,'').split('/')[0]}</span>` : ''}
+          </td>
+          <td>${h.playa || '—'}</td>
+          <td>${pv(h.sgl)}</td>
+          <td>${pv(h.dbl)}</td>
+          <td>${pv(h.tpl)}</td>
+          <td>${pv(h.cpl)}</td>
+          <td>${pv(h.qpl)}</td>
+        </tr>`).join('')
+    : `<tr><td colspan="7" style="text-align:center;padding:4mm;color:var(--mid);font-style:italic;">
+        Consultar precios vigentes al momento de la reserva.
+       </td></tr>`;
+
+  // NOTAS PRECIOS
+  document.getElementById('prog-precios-footer').innerHTML = (data.notas_precios || [])
+    .map(n => `<div class="pnote"><strong>${n.titulo}</strong>${n.texto}</div>`).join('');
+}
+
+// ══════════════════════════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════════════════════════
 async function init() {
-  try {
-    const r = await fetch(`${DATA_URL}?_=${Date.now()}`);
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    const data = await r.json();
+  const params  = new URLSearchParams(window.location.search);
+  const progId  = params.get('p');
+  const loadMsg = document.getElementById('loading-msg');
 
-    document.getElementById('last-update').textContent = formatDate(data.updatedAt);
-    document.getElementById('prog-count').textContent  = data.programas.length;
-
-    if (!data.programas?.length) throw new Error('Sin programas en el JSON');
-
-    const byPais = groupData(data.programas);
-    renderSidebar(byPais);
-    renderContent(byPais);
-  } catch(e) {
-    document.getElementById('last-update').textContent = 'error';
-    document.getElementById('sidebar-tree').innerHTML =
-      `<div style="padding:14px 16px;color:#b00;font-size:.76rem;">Error al cargar</div>`;
-    document.getElementById('main-content').innerHTML = `
-      <div class="state-box">
-        <span class="ico">⚠️</span>
-        <p>No se pudo cargar el catálogo.<br>
-        <strong>Error:</strong> ${e.message}<br><br>
-        Verificá que <code>programas-sendas.json</code> existe y ejecutá el scraper
-        desde <strong>Actualizar ahora</strong>.</p>
-      </div>`;
+  if (!progId) {
+    showError('No se especificó programa.<br>Usá <code>?p=ID</code> en la URL.', 'URL inválida');
+    return;
   }
+
+  loadMsg.textContent = 'Leyendo catálogo de programas...';
+
+  let allData;
+  try {
+    const r = await fetch(`../../programas-sendas.json?_=${Date.now()}`);
+    if (!r.ok) throw new Error(`HTTP ${r.status} — no se encontró programas-sendas.json`);
+    allData = await r.json();
+  } catch(e) {
+    showError(
+      `No se pudo cargar el archivo de datos.<br>
+       Error: <code>${e.message}</code><br><br>
+       Verificá que <code>programas-sendas.json</code> existe.<br>
+       Si es la primera vez, ejecutá el scraper desde GitHub Actions.`,
+      'Error de carga'
+    );
+    return;
+  }
+
+  loadMsg.textContent = 'Buscando programa...';
+
+  const prog = allData.programas.find(p => p.id === progId);
+  if (!prog) {
+    showError(
+      `El programa <code>${progId}</code> no existe en el catálogo.<br>
+       Puede que haya sido eliminado o el ID cambió.<br>
+       <a href="./sendas.html" style="color:var(--gold)">← Ver todos los programas</a>`,
+      'Programa no encontrado'
+    );
+    return;
+  }
+
+  loadMsg.textContent = 'Preparando documento...';
+  renderPrograma(prog);
+
+  document.getElementById('loading-screen').classList.add('hidden');
+  document.getElementById('programa-page').style.visibility = 'visible';
 }
 
-function toggleTree(id) { document.getElementById(id)?.classList.toggle('open'); }
+function showError(msg, title) {
+  document.getElementById('loading-screen').classList.add('hidden');
+  document.getElementById('error-screen').classList.add('visible');
+  document.getElementById('error-msg').innerHTML = msg;
+  if (title) document.querySelector('#error-screen h2').textContent = '⚠️ ' + title;
+}
 
 init();
 </script>
