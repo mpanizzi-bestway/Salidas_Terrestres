@@ -98,14 +98,34 @@
       content:''; position:absolute; bottom:-4.5px; left:0; right:0;
       height:1.5px; background:var(--gold);
     }
+    .logo-block { display:flex; align-items:center; }
     .logo-block img { height:22mm; width:auto; display:block; }
-    .header-center { text-align:center; }
+    /* Fallback si el logo no carga */
+    .logo-block .logo-fallback {
+      height:22mm; width:44mm;
+      background:var(--navy); border-radius:4px;
+      display:flex; align-items:center; justify-content:center;
+      color:white; font-family:'Poppins',sans-serif; font-size:11pt;
+      font-weight:800; letter-spacing:.04em;
+    }
+
+    /* CENTRO: eslogan centrado */
+    .header-center {
+      text-align:center;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+    }
     .header-center .eslogan {
       font-family:'Poppins',sans-serif; font-size:7pt; font-weight:600;
       letter-spacing:.18em; text-transform:uppercase; color:var(--mid);
     }
+
+    /* CONTACTO: Martin Panizzi */
     .contact-block { text-align:right; font-size:7.5pt; color:var(--mid); line-height:1.7; }
-    .contact-block strong { display:block; font-size:8pt; color:var(--navy); font-weight:600; margin-bottom:.5mm; }
+    .contact-block .contact-name {
+      display:block; font-size:9.5pt; color:var(--navy);
+      font-weight:700; font-family:'Poppins',sans-serif;
+      margin-bottom:1mm; letter-spacing:.01em;
+    }
 
     /* 2. TÍTULO */
     .prog-title-block { text-align:center; padding:3mm 0 1mm; }
@@ -118,7 +138,7 @@
       letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-top:1.5mm;
     }
 
-    /* 3. BANDA FECHAS — sin referencia al operador */
+    /* 3. BANDA FECHAS */
     .fechas-band {
       background:var(--navy); border-radius:4px; padding:3mm 6mm;
       display:flex; align-items:center; justify-content:space-between; gap:3mm;
@@ -158,7 +178,7 @@
       height:28mm; display:flex; align-items:center; justify-content:center;
       border:.5px solid var(--border); position:relative;
     }
-    .destino-foto img { width:100%; height:100%; object-fit:cover; display:block; }
+    .destino-foto img { width:100%; height:100%; object-fit:cover; display:none; }
     .destino-foto .ph { font-size:7.5pt; color:var(--teal); text-align:center; padding:4mm; line-height:1.5; }
 
     /* 5. INCLUYE */
@@ -220,15 +240,17 @@
       align-items:center; gap:0; padding:4mm 13mm;
       border-bottom:.5px solid rgba(255,255,255,.1);
     }
+    /* Contacto pie: BestWay Viajes */
     .footer-contact { font-size:7.5pt; color:rgba(255,255,255,.65); line-height:1.8; }
-    .footer-contact strong {
-      font-family:'Poppins',sans-serif; font-size:8pt; color:white;
-      font-weight:600; display:block; margin-bottom:.5mm;
+    .footer-contact .footer-name {
+      font-family:'Poppins',sans-serif; font-size:9pt; color:white;
+      font-weight:700; display:block; margin-bottom:.5mm;
     }
     .footer-pago { display:flex; flex-direction:column; align-items:flex-end; gap:2.5mm; }
     .pago-label {
-      font-family:'Poppins',sans-serif; font-size:7pt; font-weight:700;
-      text-transform:uppercase; letter-spacing:.1em; color:var(--gold-lt); text-align:right;
+      font-family:'Poppins',sans-serif; font-size:7pt; font-weight:600;
+      text-transform:uppercase; letter-spacing:.08em; color:var(--gold-lt);
+      text-align:right; line-height:1.4;
     }
     .pago-logo-img {
       height:9mm; width:auto; display:block;
@@ -274,23 +296,29 @@
 
     <!-- 1. ENCABEZADO -->
     <header class="doc-header">
+
+      <!-- LOGO — rutas relativas con fallback texto -->
       <div class="logo-block">
-        <!--
-          CORRECCIÓN 1: ruta relativa a images/ para que funcione
-          tanto en local como en GitHub Pages (Salidas_Terrestres/)
-        -->
+        <img id="header-logo"
              src="../../images/logo_bestway_azul_fondo_blanco.png"
-             onerror="this.src='images/logo_Bestway_blanco.png'">
+             alt="BestWay Viajes"
+             onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';">
+        <div class="logo-fallback" id="logo-fallback" style="display:none;">BestWay</div>
       </div>
+
+      <!-- CENTRO: eslogan centrado -->
       <div class="header-center">
         <div class="eslogan">Tu Mundo de Oportunidades</div>
       </div>
+
+      <!-- DERECHA: Martin Panizzi -->
       <div class="contact-block">
-        <strong>BestWay Viajes</strong>
-        Tel. 2902 2116<br>
-        Río Branco 1375, Montevideo<br>
-        info@bestway.com.uy
+        <span class="contact-name">Martin Panizzi</span>
+        Tel. 2902 2116 int. 122<br>
+        Cel/WhatsApp 095 969 909<br>
+        mpanizzi@bestway.com.uy
       </div>
+
     </header>
 
     <!-- 2. TÍTULO -->
@@ -307,10 +335,6 @@
           <p id="prog-descripcion"></p>
           <div class="destino-highlights" id="prog-highlights"></div>
         </div>
-        <!--
-          CORRECCIÓN 3: foto del destino — imagen local desde images/destinos/
-          con fallback a Wikimedia Commons (no requiere API key, siempre funciona)
-        -->
         <div class="destino-foto" id="prog-foto">
           <div class="ph" id="foto-placeholder">🌎</div>
         </div>
@@ -359,21 +383,23 @@
   <!-- 8. PIE -->
   <footer class="doc-footer">
     <div class="footer-top">
+
+      <!-- CONTACTO PIE: BestWay Viajes -->
       <div class="footer-contact">
-        <strong>Martin Panizzi — Ejecutivo de Cuentas</strong>
-        WhatsApp 095 969 909 &nbsp;·&nbsp; mpanizzi@bestway.com.uy<br>
-        www.bestway.com.uy &nbsp;·&nbsp; @bestway.uy &nbsp;·&nbsp; 095 969 909
+        <span class="footer-name">BestWay Viajes</span>
+        Tel. 2902 2116 &nbsp;·&nbsp; Río Branco 1375, Montevideo<br>
+        info@bestway.com.uy &nbsp;·&nbsp; www.bestway.com.uy
       </div>
+
+      <!-- PAGO -->
       <div class="footer-pago">
-        <div class="pago-label">Hasta 12 pagos sin recargo en U$S</div>
-        <!--
-          CORRECCIÓN 6: medios-de-pago ahora desde images/
-        -->
+        <div class="pago-label">Financiá tu viaje en Pesos o Dólares<br>con tarjeta de crédito</div>
         <img class="pago-logo-img"
              src="images/Medios-de-pago.png"
-             alt="Visa · Mastercard · OCA"
+             alt="Medios de pago"
              onerror="this.style.display='none'">
       </div>
+
     </div>
     <div class="footer-legal">
       Todos los precios están sujetos a disponibilidad y variaciones tarifarias sin previo aviso. Es responsabilidad del cliente la documentación necesaria para su viaje. Algunos países exigen documento con al menos 6 meses de vigencia al momento del viaje. Asesorese sobre exigencias migratorias y sanitarias (visa, vacunas, etc.). Los menores pueden requerir documentación adicional. La empresa no se responsabiliza por cambios o cancelaciones de compañías aéreas, hoteles u operadores. Se recomienda contratar seguro de cancelación y asistencia en viaje.
@@ -386,10 +412,7 @@
 <script>
 // ══════════════════════════════════════════════════════════════
 //  FOTOS DE DESTINO
-//  Estrategia: imagen local images/destinos/{slug}.jpg → fallback Wikimedia
 // ══════════════════════════════════════════════════════════════
-
-// Fotos de Wikimedia Commons — URL directa, sin API key, siempre funciona
 const WIKIMEDIA_FOTOS = {
   florianopolis: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Praia_de_Canasvieiras%2C_Florian%C3%B3polis.jpg/800px-Praia_de_Canasvieiras%2C_Florian%C3%B3polis.jpg',
   gramado:       'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Gramado_-_Rio_Grande_do_Sul%2C_Brasil.jpg/800px-Gramado_-_Rio_Grande_do_Sul%2C_Brasil.jpg',
@@ -413,38 +436,28 @@ const WIKIMEDIA_FOTOS = {
 
 function loadDestinationPhoto(slug, container) {
   if (!container) return;
-
-  const setPhoto = (src) => {
-    const img = document.createElement('img');
-    img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:none;';
-    img.onload = () => {
-      document.getElementById('foto-placeholder')?.remove();
-      img.style.display = 'block';
-    };
-    img.onerror = () => {
-      // Si Wikimedia también falla, intentar el otro fallback
-      if (img._triedWikimedia) {
-        container.innerHTML = '<div class="ph">🌎</div>';
-        return;
-      }
-      img._triedWikimedia = true;
-      const wiki = WIKIMEDIA_FOTOS[slug];
-      if (wiki && img.src !== wiki) { img.src = wiki; }
-      else { container.innerHTML = '<div class="ph">🌎</div>'; }
-    };
-    container.appendChild(img);
-
-    // 1° intento: imagen local (si la tenés en images/destinos/)
-    const localSrc = `images/destinos/${slug}.jpg`;
-    img.src = localSrc;
+  const img = document.createElement('img');
+  img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:none;';
+  img.onload = () => {
+    document.getElementById('foto-placeholder')?.remove();
+    img.style.display = 'block';
   };
-
-  setPhoto();
+  img.onerror = () => {
+    if (img._triedWikimedia) {
+      container.innerHTML = '<div class="ph">🌎</div>';
+      return;
+    }
+    img._triedWikimedia = true;
+    const wiki = WIKIMEDIA_FOTOS[slug];
+    if (wiki && img.src !== wiki) { img.src = wiki; }
+    else { container.innerHTML = '<div class="ph">🌎</div>'; }
+  };
+  container.appendChild(img);
+  img.src = `images/destinos/${slug}.jpg`;
 }
 
 // ══════════════════════════════════════════════════════════════
 //  FILTROS PARA INCLUYE
-//  Descarta ítems que son ruido del scraping (botones de Joomla)
 // ══════════════════════════════════════════════════════════════
 const INCLUYE_RUIDO = [
   /^imprimir$/i, /^correo\s*electr[oó]nico$/i, /^email$/i,
@@ -477,7 +490,7 @@ function renderPrograma(data) {
     <div class="duracion-line">${data.subtitulo || data.duracion}</div>
   `;
 
-  // 3. FECHAS — CORRECCIÓN 2: excluir ítem con label "Operador"
+  // 3. FECHAS
   const fechasFiltradas = (data.fechas || []).filter(f =>
     !/^operador$/i.test(f.label.trim())
   );
@@ -496,11 +509,9 @@ function renderPrograma(data) {
   document.getElementById('prog-descripcion').textContent = data.descripcion || '';
   document.getElementById('prog-highlights').innerHTML = (data.highlights || [])
     .map(h => `<span class="hl-tag">${h}</span>`).join('');
-
-  // CORRECCIÓN 3: foto por slug con fallback Wikimedia
   loadDestinationPhoto(data.destinoSlug || '', document.getElementById('prog-foto'));
 
-  // 5. INCLUYE — CORRECCIÓN 4: filtrar ruido del scraping
+  // 5. INCLUYE
   const incluyeLimpio = limpiarIncluye(data.incluye || []);
   document.getElementById('prog-incluye').innerHTML = incluyeLimpio.length
     ? incluyeLimpio.map(i => `<div class="inc-row"><div class="inc-dot"></div>${i}</div>`).join('')
