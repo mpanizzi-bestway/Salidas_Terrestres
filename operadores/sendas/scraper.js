@@ -189,48 +189,112 @@ function parseProgram(html, sourceUrl, destInfo) {
   });
 
   // ── INCLUYE ───────────────────────────────────────────────────────────────
-  // Inicio: <p> que contenga <em>Incluye:</em>
-  // Ítems:  <p> cuyo texto (tras limpiar &nbsp;) empieza con "-"
-  // Fin:    primer <p> que NO empiece con "-"  O  que empiece con "Día"
+  // El sitio de Sendas usa tres variantes para los ítems del incluye:
+  //
+  //   VARIANTE A — <p> separados, cada uno empieza con "-"  (Florianópolis)
+  //     <p>- Bus semi cama</p>
+  //     <p>- 05 noches...</p>
+  //
+  //   VARIANTE B — un solo <p> con varios ítems separados por <br/>  (Bariloche)
+  //     <p>  -  Bus Semi Cama...<br/>
+  //            -  06 noches...</p>
+  //
+  //   VARIANTE C — <ul><li> estándar  (Carlos Paz)
+  //     <ul><li>Bus semi cama</li><li>05 noches...</li></ul>
+  //
+  // Estrategia:
+  //   1. Buscar el nodo marcador de inicio: <p> que contenga "Incluye:"
+  //   2. A partir de ahí recorrer nodos hermanos en orden hasta llegar a
+  //      un <p> que empiece con "Día NN" o a la primera <table>
+  //   3. Para cada nodo hermano:
+  //      - Si es <ul> → extraer cada <li> como ítem
+  //      - Si es <p>  → dividir por <br> y tratar cada fragmento como ítem
+  //        si contiene "-"; si empieza con "Día NN" → parar
+
   const incluye = [];
-  let capturandoIncluye = false;
 
-  art.find('[itemprop="articleBody"] p').each((_, el) => {
-    const $el   = $(el);
-    const texto = $el.text().replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
+  // Helper: limpiar y extraer texto de un fragmento HTML (puede tener <em>, <strong>, etc.)
+  const limpiarItem = txt =>
+    txt.replace(/\u00a0/g, ' ')
+       .replace(/\s+/g, ' ')
+       .replace(/^[\s\-–•]+/, '')   // quitar guión y espacios al inicio
+       .trim();
 
-    // Detectar marcador de inicio: contiene "Incluye:" (con o sin em)
-    if (!capturandoIncluye) {
-      if (/incluye\s*:/i.test(texto)) {
-        capturandoIncluye = true;
-      }
-      return; // la línea "Incluye:" misma no es un ítem
-    }
+  // Helper: ¿el texto comienza con "Día NN"?
+  const esDia = txt => /^d[ií]a\s+\d/i.test(txt.trim());
 
-    // Dentro del bloque incluye:
-    // Fin si empieza con "Día" en cualquier capitalización
-    if (/^d[ií]a\s+\d/i.test(texto)) {
-      capturandoIncluye = false;
-      return;
-    }
-
-    // Ítem válido: empieza con "-" (tras quitar espacios y nbsp)
-    const textoLimpio = texto.replace(/^[-\s\u00a0]+/, '').trim();
-    if (texto.startsWith('-') || texto.replace(/^\u00a0+/, '').startsWith('-')) {
-      // Extraer el texto real quitando guión y espacios iniciales
-      const item = $el.text()
-        .replace(/\u00a0/g, ' ')
-        .replace(/\s+/g, ' ')
-        .replace(/^[-\s]+/, '')
-        .trim();
-      if (item.length > 3 && item.length < 400) {
-        if (!incluye.includes(item)) incluye.push(item);
-      }
-    } else if (textoLimpio.length > 0) {
-      // Línea sin guión → fin del bloque incluye
-      capturandoIncluye = false;
+  // Encontrar el nodo <p> marcador de inicio (contiene "Incluye:")
+  let nodoMarcador = null;
+  art.find('[itemprop="articleBody"]').children().each((_, node) => {
+    if (nodoMarcador) return;
+    if (node.name === 'p') {
+      const t = $(node).text().replace(/\u00a0/g, ' ').trim();
+      if (/incluye\s*:/i.test(t)) nodoMarcador = node;
     }
   });
+
+  if (nodoMarcador) {
+    // Recorrer nodos hermanos SIGUIENTES al marcador
+    let nodo = nodoMarcador.next;
+    while (nodo) {
+      if (!nodo.name) { nodo = nodo.next; continue; } // nodos de texto, ignorar
+
+      // Parar al llegar a la tabla de precios
+      if (nodo.name === 'table') break;
+
+      // VARIANTE C — <ul>: extraer <li>
+      if (nodo.name === 'ul') {
+        $(nodo).find('li').each((_, li) => {
+          const item = limpiarItem($(li).text());
+          if (item.length > 3 && item.length < 400 && !incluye.includes(item)) {
+            incluye.push(item);
+          }
+        });
+        nodo = nodo.next;
+        continue;
+      }
+
+      // VARIANTE A y B — <p>
+      if (nodo.name === 'p') {
+        const textoCompleto = $(nodo).text().replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
+
+        // Parar si el párrafo empieza con "Día NN" (inicio del itinerario)
+        if (esDia(textoCompleto)) break;
+
+        // Obtener el HTML interno del <p> para dividir por <br>
+        const innerHtml = $(nodo).html() || '';
+
+        // Dividir por <br> (con o sin /)
+        const fragmentos = innerHtml
+          .split(/<br\s*\/?>/i)
+          .map(f => {
+            // Convertir el fragmento HTML a texto plano via cheerio
+            return cheerio.load(f).text()
+              .replace(/\u00a0/g, ' ')
+              .replace(/\s+/g, ' ')
+              .trim();
+          })
+          .filter(f => f.length > 0);
+
+        for (const frag of fragmentos) {
+          // Cada fragmento debe contener "-" para ser considerado ítem
+          // (descarta líneas de título como "Paseos:" que no tienen guión)
+          if (frag.includes('-')) {
+            const item = limpiarItem(frag);
+            if (item.length > 3 && item.length < 400 && !incluye.includes(item)) {
+              incluye.push(item);
+            }
+          }
+          // Si el fragmento empieza con "Día NN" → parar todo
+          if (esDia(frag)) { nodo = null; break; }
+        }
+
+        if (!nodo) break; // parada interna
+      }
+
+      nodo = nodo ? nodo.next : null;
+    }
+  }
 
   // ── ITINERARIO ────────────────────────────────────────────────────────────
   // Estrategia: recorrer todos los <p> del articleBody.
