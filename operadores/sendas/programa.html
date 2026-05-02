@@ -100,7 +100,6 @@
     }
     .logo-block { display:flex; align-items:center; }
     .logo-block img { height:22mm; width:auto; display:block; }
-    /* Fallback si el logo no carga */
     .logo-block .logo-fallback {
       height:22mm; width:44mm;
       background:var(--navy); border-radius:4px;
@@ -108,8 +107,6 @@
       color:white; font-family:'Poppins',sans-serif; font-size:11pt;
       font-weight:800; letter-spacing:.04em;
     }
-
-    /* CENTRO: eslogan centrado */
     .header-center {
       text-align:center;
       display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -118,8 +115,6 @@
       font-family:'Poppins',sans-serif; font-size:7pt; font-weight:600;
       letter-spacing:.18em; text-transform:uppercase; color:var(--mid);
     }
-
-    /* CONTACTO: Martin Panizzi */
     .contact-block { text-align:right; font-size:7.5pt; color:var(--mid); line-height:1.7; }
     .contact-block .contact-name {
       display:block; font-size:9.5pt; color:var(--navy);
@@ -186,23 +181,36 @@
     .inc-row { display:flex; align-items:flex-start; gap:2mm; font-size:8pt; color:var(--text); line-height:1.4; }
     .inc-dot { width:3.5mm; height:3.5mm; background:var(--teal); border-radius:50%; flex-shrink:0; margin-top:1mm; }
 
-    /* 6. ITINERARIO */
+    /* 6. ITINERARIO — tabla simple 2 columnas */
     .itinerary-table { width:100%; border-collapse:collapse; }
     .itinerary-table tr { border-bottom:.5px solid var(--border); }
     .itinerary-table tr:last-child { border-bottom:none; }
-    .itinerary-table td { padding:2.5mm 2mm; vertical-align:top; font-size:8pt; }
-    .it-day { width:13mm; white-space:nowrap; }
-    .it-day-pill {
-      background:var(--navy); color:white; border-radius:3px; padding:1mm 2mm;
-      font-family:'Poppins',sans-serif; font-size:6pt; font-weight:700;
-      letter-spacing:.04em; display:inline-block;
+    .itinerary-table td { padding:2mm 2mm; vertical-align:top; font-size:7.8pt; }
+
+    /* Columna día */
+    .it-dia {
+      width:14mm;
+      white-space:nowrap;
+      font-family:'Poppins',sans-serif;
+      font-size:6.5pt;
+      font-weight:700;
+      color:var(--navy);
+      padding-top:2.5mm;
     }
-    .it-day-pill.first { background:var(--teal); }
-    .it-day-pill.last  { background:var(--gold); color:var(--navy-dark); }
-    .it-lugar { width:34mm; font-weight:600; color:var(--navy); font-size:8pt; padding-left:2mm; }
-    .it-detalle { color:var(--mid); line-height:1.45; }
-    .it-detalle strong { color:var(--navy); font-weight:600; }
-    .it-nota-orden { font-size:7pt; color:var(--mid); font-style:italic; padding:1.5mm 2mm; border-top:.5px solid var(--border); }
+
+    /* Columna texto */
+    .it-texto {
+      color:var(--mid);
+      line-height:1.45;
+      padding-left:2mm;
+    }
+
+    /* Nota al pie del itinerario */
+    .it-nota {
+      font-size:7pt; color:var(--mid); font-style:italic;
+      padding:1.5mm 2mm;
+      border-top:.5px solid var(--border);
+    }
 
     /* 7. PRECIOS */
     .precios-table { width:100%; border-collapse:collapse; font-size:8pt; }
@@ -221,7 +229,7 @@
     .hotel-nm { font-weight:600; color:var(--navy); font-size:8pt; }
     .hotel-url { font-size:6.5pt; color:var(--mid); }
     .pval { font-weight:700; color:var(--text); }
-    .pna { color:var(--border); }
+    .pna  { color:var(--border); }
     .precios-footer { display:grid; grid-template-columns:1fr 1fr; gap:2.5mm; margin-top:2.5mm; }
     .pnote {
       background:var(--light); border-left:2px solid var(--gold);
@@ -240,7 +248,6 @@
       align-items:center; gap:0; padding:4mm 13mm;
       border-bottom:.5px solid rgba(255,255,255,.1);
     }
-    /* Contacto pie: BestWay Viajes */
     .footer-contact { font-size:7.5pt; color:rgba(255,255,255,.65); line-height:1.8; }
     .footer-contact .footer-name {
       font-family:'Poppins',sans-serif; font-size:9pt; color:white;
@@ -296,8 +303,6 @@
 
     <!-- 1. ENCABEZADO -->
     <header class="doc-header">
-
-      <!-- LOGO — rutas relativas con fallback texto -->
       <div class="logo-block">
         <img id="header-logo"
              src="../../images/logo_bestway_azul_fondo_blanco.png"
@@ -305,20 +310,15 @@
              onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';">
         <div class="logo-fallback" id="logo-fallback" style="display:none;">BestWay</div>
       </div>
-
-      <!-- CENTRO: eslogan centrado -->
       <div class="header-center">
         <div class="eslogan">Tu Mundo de Oportunidades</div>
       </div>
-
-      <!-- DERECHA: Martin Panizzi -->
       <div class="contact-block">
         <span class="contact-name">Martin Panizzi</span>
         Tel. 2902 2116 int. 122<br>
         Cel/WhatsApp 095 969 909<br>
         mpanizzi@bestway.com.uy
       </div>
-
     </header>
 
     <!-- 2. TÍTULO -->
@@ -352,10 +352,8 @@
       <div class="sec-title">Itinerario</div>
       <table class="itinerary-table">
         <tbody id="prog-itinerario"></tbody>
-        <tr class="it-nota-orden">
-          <td colspan="3">* El orden de los paseos y excursiones puede variar según las condiciones del operador.</td>
-        </tr>
       </table>
+      <div class="it-nota">* El orden de los paseos y excursiones puede variar según las condiciones del operador.</div>
     </div>
 
     <!-- 7. PRECIOS -->
@@ -383,15 +381,11 @@
   <!-- 8. PIE -->
   <footer class="doc-footer">
     <div class="footer-top">
-
-      <!-- CONTACTO PIE: BestWay Viajes -->
       <div class="footer-contact">
         <span class="footer-name">BestWay Viajes</span>
         Tel. 2902 2116 &nbsp;·&nbsp; Río Branco 1375, Montevideo<br>
         info@bestway.com.uy &nbsp;·&nbsp; www.bestway.com.uy
       </div>
-
-      <!-- PAGO -->
       <div class="footer-pago">
         <div class="pago-label">Financiá tu viaje en Pesos o Dólares<br>con tarjeta de crédito</div>
         <img class="pago-logo-img"
@@ -399,7 +393,6 @@
              alt="Medios de pago"
              onerror="this.style.display='none'">
       </div>
-
     </div>
     <div class="footer-legal">
       Todos los precios están sujetos a disponibilidad y variaciones tarifarias sin previo aviso. Es responsabilidad del cliente la documentación necesaria para su viaje. Algunos países exigen documento con al menos 6 meses de vigencia al momento del viaje. Asesorese sobre exigencias migratorias y sanitarias (visa, vacunas, etc.). Los menores pueden requerir documentación adicional. La empresa no se responsabiliza por cambios o cancelaciones de compañías aéreas, hoteles u operadores. Se recomienda contratar seguro de cancelación y asistencia en viaje.
@@ -412,38 +405,32 @@
 <script>
 // ══════════════════════════════════════════════════════════════
 //  FOTOS DE DESTINO
-//  Detecta el destino a partir del TÍTULO del programa y busca
-//  ../../images/destinos/{nombre}.jpg  o  .png
-//  Si no coincide o no carga → muestra el logo BestWay
 // ══════════════════════════════════════════════════════════════
-
 const BASE_FOTOS    = '../../images/';
 const LOGO_FALLBACK = '../../images/logo_bestway_azul_fondo_blanco.png';
 
-// Mapa: palabras clave en el título → nombre de archivo (sin extensión)
 const DESTINO_MAP = [
-  { keys: ['florianopolis','florianopolis','floripa'],       file: 'florianopolis' },
-  { keys: ['praia do rosa','praia rosa'],                    file: 'praiarosa'     },
-  { keys: ['ferrugem'],                                      file: 'ferrugem'      },
-  { keys: ['camboriu','balneario camboriu'],                 file: 'camboriu'      },
-  { keys: ['bombinhas'],                                     file: 'bombinhas'     },
-  { keys: ['capao da canoa'],                                file: 'capao'         },
-  { keys: ['torres'],                                        file: 'torres'        },
-  { keys: ['laguna'],                                        file: 'laguna'        },
-  { keys: ['blumenau'],                                      file: 'blumenau'      },
-  { keys: ['gramado','canela'],                              file: 'gramado'       },
-  { keys: ['cataratas','iguazu','iguassu','iguacu'],         file: 'cataratas'     },
-  { keys: ['bariloche'],                                     file: 'bariloche'     },
-  { keys: ['carlos paz','villa carlos'],                     file: 'carlospaz'     },
-  { keys: ['cordoba'],                                       file: 'carlospaz'     },
-  { keys: ['humahuaca','jujuy','salta','tilcara','norte'],   file: 'norte'         },
-  { keys: ['mendoza'],                                       file: 'mendoza'       },
-  { keys: ['buenos aires'],                                  file: 'buenosaires'   },
-  { keys: ['santiago','chile'],                              file: 'santiago'      },
-  { keys: ['brasil','brazil'],                               file: 'florianopolis' },
+  { keys: ['florianopolis','floripa'],                         file: 'florianopolis' },
+  { keys: ['praia do rosa','praia rosa'],                      file: 'praiarosa'     },
+  { keys: ['ferrugem'],                                        file: 'ferrugem'      },
+  { keys: ['camboriu','balneario camboriu'],                   file: 'camboriu'      },
+  { keys: ['bombinhas'],                                       file: 'bombinhas'     },
+  { keys: ['capao da canoa'],                                  file: 'capao'         },
+  { keys: ['torres'],                                         file: 'torres'        },
+  { keys: ['laguna'],                                          file: 'laguna'        },
+  { keys: ['blumenau'],                                        file: 'blumenau'      },
+  { keys: ['gramado','canela'],                                file: 'gramado'       },
+  { keys: ['cataratas','iguazu','iguassu','iguacu'],           file: 'cataratas'     },
+  { keys: ['bariloche'],                                       file: 'bariloche'     },
+  { keys: ['carlos paz','villa carlos'],                       file: 'carlospaz'     },
+  { keys: ['cordoba'],                                         file: 'carlospaz'     },
+  { keys: ['humahuaca','jujuy','salta','tilcara','norte'],     file: 'norte'         },
+  { keys: ['mendoza'],                                         file: 'mendoza'       },
+  { keys: ['buenos aires'],                                    file: 'buenosaires'   },
+  { keys: ['santiago','chile'],                                file: 'santiago'      },
+  { keys: ['brasil','brazil'],                                 file: 'florianopolis' },
 ];
 
-// Normaliza: minúsculas, sin tildes, sin puntuación extra
 function normalizar(str) {
   return (str || '').toLowerCase()
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
@@ -451,7 +438,6 @@ function normalizar(str) {
     .replace(/\s+/g, ' ').trim();
 }
 
-// Devuelve el nombre de archivo que mejor coincide con el título, o null
 function detectarDestino(titulo) {
   const t = normalizar(titulo);
   for (const entry of DESTINO_MAP) {
@@ -462,11 +448,9 @@ function detectarDestino(titulo) {
   return null;
 }
 
-// Carga imagen: .jpg → .png → logo BestWay
 function loadDestinationPhoto(titulo, container) {
   if (!container) return;
   const ph = document.getElementById('foto-placeholder');
-
   const mountImg = (src, isLogo) => {
     const img = document.createElement('img');
     img.style.cssText = `width:100%;height:100%;object-fit:${isLogo?'contain':'cover'};display:none;padding:${isLogo?'5mm':'0'};`;
@@ -475,14 +459,9 @@ function loadDestinationPhoto(titulo, container) {
     container.appendChild(img);
     img.src = src;
   };
-
   const archivo = detectarDestino(titulo);
-  console.log('[foto] título:', titulo, '→ archivo detectado:', archivo);
   if (!archivo) { mountImg(LOGO_FALLBACK, true); return; }
-
-  // Prueba extensiones en orden: .jpg → .jpeg → .png → .webp → logo
   const EXTENSIONES = ['jpg', 'jpeg', 'png', 'webp'];
-
   function tryExtension(idx) {
     if (idx >= EXTENSIONES.length) { mountImg(LOGO_FALLBACK, true); return; }
     const img = document.createElement('img');
@@ -492,26 +471,7 @@ function loadDestinationPhoto(titulo, container) {
     container.appendChild(img);
     img.src = `${BASE_FOTOS}${archivo}.${EXTENSIONES[idx]}`;
   }
-
   tryExtension(0);
-}
-
-// ══════════════════════════════════════════════════════════════
-//  FILTROS PARA INCLUYE
-// ══════════════════════════════════════════════════════════════
-const INCLUYE_RUIDO = [
-  /^imprimir$/i, /^correo\s*electr[oó]nico$/i, /^email$/i,
-  /^print$/i, /^compartir$/i, /^share$/i, /^facebook$/i,
-  /^twitter$/i, /^whatsapp$/i, /^pdf$/i, /^descargar$/i,
-  /^volver$/i, /^inicio$/i, /^ver\s+m[aá]s$/i,
-];
-
-function limpiarIncluye(items) {
-  return items.filter(item => {
-    const t = item.trim();
-    if (!t || t.length < 4 || t.length > 300) return false;
-    return !INCLUYE_RUIDO.some(rx => rx.test(t));
-  });
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -532,18 +492,16 @@ function renderPrograma(data) {
 
   // 3. FECHAS
   const fechasFiltradas = (data.fechas || []).filter(f =>
-    !/^operador$/i.test(f.label.trim())
+    !/^operador$/i.test((f.label || '').trim())
   );
-  const fechaItems = fechasFiltradas.map((f, i) => {
+  document.getElementById('prog-fechas').innerHTML = fechasFiltradas.map((f, i) => {
     const sep = i < fechasFiltradas.length - 1 ? '<div class="fecha-sep"></div>' : '';
     return `
       <div class="fecha-item">
         <span class="fl">${f.label}</span>
         <span class="fv${f.gold ? ' gold' : ''}">${f.value}</span>
       </div>${sep}`;
-  }).join('');
-  document.getElementById('prog-fechas').innerHTML = fechaItems ||
-    '<div class="fecha-item"><span class="fl">Temporada</span><span class="fv gold">Consultar</span></div>';
+  }).join('') || '<div class="fecha-item"><span class="fl">Temporada</span><span class="fv gold">Consultar</span></div>';
 
   // 4. DESTINO
   document.getElementById('prog-descripcion').textContent = data.descripcion || '';
@@ -552,24 +510,38 @@ function renderPrograma(data) {
   loadDestinationPhoto(data.titulo || '', document.getElementById('prog-foto'));
 
   // 5. INCLUYE
-  const incluyeLimpio = limpiarIncluye(data.incluye || []);
-  document.getElementById('prog-incluye').innerHTML = incluyeLimpio.length
-    ? incluyeLimpio.map(i => `<div class="inc-row"><div class="inc-dot"></div>${i}</div>`).join('')
+  document.getElementById('prog-incluye').innerHTML = (data.incluye || []).length
+    ? data.incluye.map(i => `<div class="inc-row"><div class="inc-dot"></div>${i}</div>`).join('')
     : '<div class="inc-row"><div class="inc-dot"></div>Consultar detalles en agencia</div>';
 
-  // 6. ITINERARIO
-  document.getElementById('prog-itinerario').innerHTML = (data.itinerario || []).map(d => `
-    <tr>
-      <td class="it-day"><span class="it-day-pill${d.first?' first':d.last?' last':''}">${d.dia}</span></td>
-      <td class="it-lugar">${d.lugar}</td>
-      <td class="it-detalle">${d.detalle}</td>
-    </tr>
-  `).join('');
+  // 6. ITINERARIO — tabla simple: Día | Texto
+  // Soporta tanto el formato nuevo { dia, texto }
+  // como el formato viejo { dia, lugar, detalle } para compatibilidad
+  const itinerario = data.itinerario || [];
+  document.getElementById('prog-itinerario').innerHTML = itinerario.length
+    ? itinerario.map(row => {
+        // Formato nuevo
+        const diaLabel  = row.dia   || '';
+        const textoBody = row.texto || '';
+        // Formato viejo (compatibilidad)
+        const detalleViejo = row.detalle
+          ? (row.lugar ? `<strong>${row.lugar}</strong> — ${row.detalle}` : row.detalle)
+          : '';
+        const celdaDia    = diaLabel   || (row.dia    ? row.dia    : '');
+        const celdaTexto  = textoBody  || detalleViejo;
+
+        return `<tr>
+          <td class="it-dia">${celdaDia}</td>
+          <td class="it-texto">${celdaTexto}</td>
+        </tr>`;
+      }).join('')
+    : `<tr><td class="it-dia"></td><td class="it-texto" style="color:var(--mid);font-style:italic;">
+        Consultar itinerario completo en agencia.
+       </td></tr>`;
 
   // 7. PRECIOS
-  const hoteles = data.hoteles || [];
-  document.getElementById('prog-precios').innerHTML = hoteles.length
-    ? hoteles.map(h => `
+  document.getElementById('prog-precios').innerHTML = (data.hoteles || []).length
+    ? data.hoteles.map(h => `
         <tr>
           <td>
             <span class="hotel-nm">${h.nombre}</span>
@@ -609,14 +581,13 @@ async function init() {
   let allData;
   try {
     const r = await fetch(`../../programas-sendas.json?_=${Date.now()}`);
-    if (!r.ok) throw new Error(`HTTP ${r.status} — no se encontró programas-sendas.json`);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
     allData = await r.json();
   } catch(e) {
     showError(
       `No se pudo cargar el archivo de datos.<br>
        Error: <code>${e.message}</code><br><br>
-       Verificá que <code>programas-sendas.json</code> existe.<br>
-       Si es la primera vez, ejecutá el scraper desde GitHub Actions.`,
+       Verificá que <code>programas-sendas.json</code> existe.`,
       'Error de carga'
     );
     return;
@@ -628,7 +599,6 @@ async function init() {
   if (!prog) {
     showError(
       `El programa <code>${progId}</code> no existe en el catálogo.<br>
-       Puede que haya sido eliminado o el ID cambió.<br>
        <a href="./sendas.html" style="color:var(--gold)">← Ver todos los programas</a>`,
       'Programa no encontrado'
     );
