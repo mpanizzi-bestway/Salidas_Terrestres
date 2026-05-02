@@ -477,23 +477,23 @@ function loadDestinationPhoto(titulo, container) {
   };
 
   const archivo = detectarDestino(titulo);
+  console.log('[foto] título:', titulo, '→ archivo detectado:', archivo);
   if (!archivo) { mountImg(LOGO_FALLBACK, true); return; }
 
-  // .jpg → .png → logo
-  const imgJpg = document.createElement('img');
-  imgJpg.style.cssText = 'width:100%;height:100%;object-fit:cover;display:none;';
-  imgJpg.onload  = () => { ph?.remove(); imgJpg.style.display = 'block'; };
-  imgJpg.onerror = () => {
-    imgJpg.remove();
-    const imgPng = document.createElement('img');
-    imgPng.style.cssText = 'width:100%;height:100%;object-fit:cover;display:none;';
-    imgPng.onload  = () => { ph?.remove(); imgPng.style.display = 'block'; };
-    imgPng.onerror = () => { imgPng.remove(); mountImg(LOGO_FALLBACK, true); };
-    container.appendChild(imgPng);
-    imgPng.src = `${BASE_FOTOS}${archivo}.png`;
-  };
-  container.appendChild(imgJpg);
-  imgJpg.src = `${BASE_FOTOS}${archivo}.jpg`;
+  // Prueba extensiones en orden: .jpg → .jpeg → .png → .webp → logo
+  const EXTENSIONES = ['jpg', 'jpeg', 'png', 'webp'];
+
+  function tryExtension(idx) {
+    if (idx >= EXTENSIONES.length) { mountImg(LOGO_FALLBACK, true); return; }
+    const img = document.createElement('img');
+    img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:none;';
+    img.onload  = () => { ph?.remove(); img.style.display = 'block'; };
+    img.onerror = () => { img.remove(); tryExtension(idx + 1); };
+    container.appendChild(img);
+    img.src = `${BASE_FOTOS}${archivo}.${EXTENSIONES[idx]}`;
+  }
+
+  tryExtension(0);
 }
 
 // ══════════════════════════════════════════════════════════════
