@@ -90,6 +90,45 @@
       font-weight: 300;
     }
 
+    /* ── SELECTOR DE AGENTE ── */
+    .agent-selector-wrap {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+    .agent-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      font-weight: 500;
+    }
+    .agent-select {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 7px 32px 7px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.5)' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      transition: border-color 0.2s, background-color 0.2s;
+      outline: none;
+      min-width: 140px;
+    }
+    .agent-select:hover { border-color: rgba(255,255,255,0.4); }
+    .agent-select:focus { border-color: var(--gold); }
+    .agent-select option { background: var(--navy-dark); color: white; }
+
     .strip {
       height: 4px;
       background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
@@ -153,7 +192,6 @@
       overflow: hidden;
     }
 
-    /* Gradientes por operador */
     .op-card-banner.sendas {
       background: linear-gradient(135deg, #1a3a4a 0%, #0e5a7a 50%, #1a7a5a 100%);
     }
@@ -187,14 +225,12 @@
       filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35));
     }
 
-    /* Funtour: logo JPG con fondo naranja sólido — usar blend mode para integrar */
     .op-banner-logo.funtour-logo {
       height: 90px;
       max-width: 220px;
       object-fit: cover;
       border-radius: 8px;
       filter: drop-shadow(0 2px 12px rgba(0,0,0,0.4));
-      /* mix-blend-mode: multiply integra el fondo naranja del JPG con el banner naranja */
       mix-blend-mode: multiply;
     }
 
@@ -289,14 +325,7 @@
 
     footer span { color: var(--gold); }
 
-    @media (max-width: 600px) {
-      .header-inner { padding: 24px 20px; flex-wrap: wrap; }
-      .header-divider { display: none; }
-      .section-label, .operators { padding: 0 20px; }
-      .operators { grid-template-columns: 1fr; }
-    }
-
-    /* ── BUSCADOR ─────────────────────────────────────────────── */
+    /* ── BUSCADOR ── */
     .search-wrap {
       max-width: 1100px;
       margin: 36px auto 0;
@@ -441,7 +470,14 @@
       border-radius: 10px; border: 1px dashed var(--gray-light);
     }
     .no-results strong { color: var(--navy); }
+
     @media (max-width: 600px) {
+      .header-inner { padding: 24px 20px; flex-wrap: wrap; gap: 16px; }
+      .header-divider { display: none; }
+      .agent-selector-wrap { margin-left: 0; align-items: flex-start; width: 100%; }
+      .agent-select { min-width: 160px; }
+      .section-label, .operators { padding: 0 20px; }
+      .operators { grid-template-columns: 1fr; }
       .search-wrap, .search-results { padding: 0 20px; }
       .results-grid { grid-template-columns: 1fr; }
     }
@@ -459,6 +495,16 @@
         <h1>Programas Terrestres</h1>
         <p>Catálogo de operadores &amp; programas</p>
       </div>
+
+      <!-- ── SELECTOR DE AGENTE ── -->
+      <div class="agent-selector-wrap">
+        <label class="agent-label" for="agent-select">Agente</label>
+        <select id="agent-select" class="agent-select">
+          <option value="martin">Martin</option>
+          <option value="martin2">Martin2</option>
+        </select>
+      </div>
+
     </div>
   </header>
   <div class="strip"></div>
@@ -466,7 +512,7 @@
 
   <!-- BUSCADOR GLOBAL -->
   <div class="search-wrap">
-    <div class="search-label">Buscar programa<span>en todos los operadores</span></div>
+    <div class="search-label">Buscar programa<span> en todos los operadores</span></div>
     <div class="search-box">
       <div class="search-row">
         <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -518,7 +564,7 @@
       </div>
     </a>
 
-    <!-- 2. FUNTOUR — nuevo -->
+    <!-- 2. FUNTOUR -->
     <a href="operadores/funtour/funtour.html" class="op-card">
       <div class="op-card-banner funtour">
         <img
@@ -609,9 +655,7 @@
   </footer>
 
   <script>
-  // ─── Configuracion operadores ───────────────────────────────────────────────
-  // Cada operador define el archivo JSON, color, label y cómo construir la URL
-  // de la ficha de programa (cada operador usa un parámetro distinto).
+  // ─── Configuracion operadores ────────────────────────────────────────────────
   const OPERADORES = [
     {
       id      : 'sendas',
@@ -647,8 +691,8 @@
     },
   ];
 
-  // ─── Pool global de programas ───────────────────────────────────────────────
-  let allProgramas = [];  // [{ prog, op }]
+  // ─── Pool global de programas ────────────────────────────────────────────────
+  let allProgramas = [];
 
   async function loadAll() {
     const hint = document.getElementById('search-hint');
@@ -669,13 +713,13 @@
     hint.textContent = allProgramas.length + ' programas en ' + OPERADORES.length + ' operadores';
   }
 
-  // ─── Highlight ──────────────────────────────────────────────────────────────
+  // ─── Highlight ───────────────────────────────────────────────────────────────
   function hl(text, q) {
     if (!q || !text) return text || '';
     return text.replace(new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'), '<mark>$1</mark>');
   }
 
-  // ─── Buscar ─────────────────────────────────────────────────────────────────
+  // ─── Buscar ──────────────────────────────────────────────────────────────────
   function search(query) {
     const q          = query.trim().toLowerCase();
     const resultsDiv = document.getElementById('search-results');
@@ -739,7 +783,7 @@
     resultsDiv.classList.add('visible');
   }
 
-  // ─── Eventos ────────────────────────────────────────────────────────────────
+  // ─── Eventos buscador ────────────────────────────────────────────────────────
   var input    = document.getElementById('search-input');
   var clearBtn = document.getElementById('search-clear');
   var debTimer;
@@ -761,6 +805,16 @@
     if (e.key === 'Escape') clearBtn.click();
   });
 
+  // ─── Selector de agente ──────────────────────────────────────────────────────
+  var agentSelect = document.getElementById('agent-select');
+  var savedAgent  = localStorage.getItem('bw_agent') || 'martin';
+  agentSelect.value = savedAgent;
+
+  agentSelect.addEventListener('change', function () {
+    localStorage.setItem('bw_agent', this.value);
+  });
+
+  // ─── Init ────────────────────────────────────────────────────────────────────
   loadAll();
 </script>
 
