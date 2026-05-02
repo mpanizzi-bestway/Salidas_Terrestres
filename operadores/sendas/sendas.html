@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -40,7 +40,6 @@
     .h-div { width:1px; height:36px; background:rgba(255,255,255,.12); }
     .logo-wrap img { height:40px; width:auto; display:block; }
 
-    /* Logo Sendas encima del sidebar */
     .sidebar-logo {
       background: var(--navy-dark);
       padding: 16px 18px 12px;
@@ -50,7 +49,6 @@
     .sidebar-logo img {
       height: 44px; width: auto; max-width: 180px;
       object-fit: contain;
-      /* Sin filter — el logo_sendas.png tiene sus propios colores */
     }
     .header-title {
       font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:600; color:white;
@@ -60,18 +58,11 @@
     /* UPDATE BAR */
     .update-bar {
       background:var(--teal); padding:8px 32px;
-      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      display:flex; align-items:center; gap:16px;
     }
     .update-info { font-size:.75rem; color:rgba(255,255,255,.8); display:flex; align-items:center; gap:6px; }
     .update-info strong { color:white; }
-    .btn-update {
-      background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3);
-      color:white; padding:5px 16px; border-radius:5px;
-      font-family:'DM Sans',sans-serif; font-size:.75rem; font-weight:600;
-      cursor:pointer; display:flex; align-items:center; gap:6px;
-      transition:background .2s; text-decoration:none; white-space:nowrap;
-    }
-    .btn-update:hover { background:rgba(255,255,255,.25); }
+
     @keyframes spin { to { transform:rotate(360deg); } }
     .spin { display:inline-block; animation:spin 1s linear infinite; }
 
@@ -87,13 +78,30 @@
       border:1px solid rgba(30,39,72,.09);
       box-shadow:0 2px 10px rgba(30,39,72,.05);
       overflow:hidden; position:sticky; top:16px;
+      display:flex; flex-direction:column;
     }
     .sidebar-hd {
       background:var(--navy); padding:13px 18px;
       color:white; font-size:.72rem; font-weight:600;
       letter-spacing:.1em; text-transform:uppercase;
     }
-    .tree { padding:8px 0 4px; }
+    .tree { padding:8px 0 4px; flex:1; }
+
+    /* Botón actualizar en footer del sidebar */
+    .sidebar-footer {
+      border-top:1px solid var(--gray-light);
+      padding:10px 14px;
+      display:flex; align-items:center; justify-content:flex-end;
+    }
+    .btn-update-icon {
+      width:32px; height:32px;
+      background:var(--teal); border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      font-size:.95rem; text-decoration:none;
+      transition:background .2s, transform .2s;
+      box-shadow:0 2px 6px rgba(14,122,106,.25);
+    }
+    .btn-update-icon:hover { background:#0a5f53; transform:scale(1.1); }
 
     .tree-country {
       padding:10px 18px 5px; font-size:.67rem; font-weight:700;
@@ -172,7 +180,12 @@
     }
     .card-body { flex:1; min-width:0; }
     .card-name { font-size:.88rem; font-weight:600; color:var(--navy); line-height:1.3; }
-    .card-sub  { font-size:.73rem; color:var(--gray); margin-top:2px; }
+    .card-sub  {
+      font-size:.73rem; color:var(--gray); margin-top:2px;
+      display:flex; align-items:center; gap:5px; flex-wrap:wrap;
+    }
+    .card-sub-sep { color:var(--gray-light); font-size:.9rem; line-height:1; }
+    .card-price { color:var(--teal); font-weight:600; }
     .card-tags { display:flex; gap:5px; margin-top:5px; flex-wrap:wrap; }
     .tag { font-size:.67rem; font-weight:500; padding:1px 7px; border-radius:10px; letter-spacing:.02em; }
     .tag-dur  { background:#e8edf8; color:var(--navy-mid); }
@@ -210,7 +223,6 @@
       .layout { grid-template-columns:1fr; padding:0 16px; }
       .sidebar { position:static; }
       .header-inner,.update-bar { padding-left:16px; padding-right:16px; }
-      .update-bar { flex-direction:column; align-items:flex-start; gap:8px; }
     }
   </style>
 </head>
@@ -223,7 +235,10 @@
       Inicio
     </a>
     <div class="h-div"></div>
-    <div class="logo-wrap"><img src="images/logo_Bestway_blanco.png" alt="BestWay"></div>
+    <div class="logo-wrap">
+      <!-- CORRECCIÓN: ruta corregida — el logo está en /images/ en la raíz del repo, no en /operadores/sendas/images/ -->
+      <img src="../../images/logo_Bestway_blanco.png" alt="BestWay">
+    </div>
     <div class="header-title">
       Sendas Turismo
       <span>— Programas terrestres</span>
@@ -231,24 +246,17 @@
   </div>
 </header>
 
+<!-- Barra de estado simplificada: sin botón (movido al sidebar) -->
 <div class="update-bar">
   <div class="update-info">
     🔄 Actualizado: <strong id="last-update">—</strong>
     &nbsp;·&nbsp; <span id="prog-count">—</span> programas activos
   </div>
-  <a id="btn-update"
-     href="https://github.com/mpanizzi-bestway/Salidas_Terrestres/actions/workflows/scrape-sendas.yml"
-     target="_blank"
-     class="btn-update"
-     title="Abre GitHub Actions para forzar re-scraping">
-    ⚡ Actualizar ahora
-  </a>
 </div>
 
 <div class="layout">
 
   <aside class="sidebar">
-    <!-- Logo Sendas sobre el árbol -->
     <div class="sidebar-logo">
       <img
         src="images/logo_sendas.png"
@@ -261,6 +269,14 @@
       <div style="padding:20px 16px;text-align:center;color:var(--gray);font-size:.8rem;">
         <span class="spin">⏳</span> Cargando...
       </div>
+    </div>
+
+    <!-- Botón actualizar: solo ícono ⚡, al pie del sidebar -->
+    <div class="sidebar-footer">
+      <a href="https://github.com/mpanizzi-bestway/Salidas_Terrestres/actions/workflows/scrape-sendas.yml"
+         target="_blank"
+         class="btn-update-icon"
+         title="Actualizar ahora">⚡</a>
     </div>
   </aside>
 
@@ -299,6 +315,62 @@ function formatDate(iso) {
   return isNaN(d) ? iso : d.toLocaleDateString('es-UY',{day:'2-digit',month:'short',year:'numeric'});
 }
 
+/**
+ * Extrae el precio mínimo de la columna "doble" de un programa.
+ * Soporta: p.tarifas[] con clave que contenga "doble",
+ *           p.precios[] / p.precios{}, y campos directos.
+ */
+function getPrecioDesde(p) {
+  // Array de tarifas con campo "doble"
+  if (Array.isArray(p.tarifas) && p.tarifas.length) {
+    const dobles = p.tarifas
+      .map(t => {
+        const key = Object.keys(t).find(k => /doble/i.test(k));
+        if (!key) return null;
+        const raw = String(t[key]).replace(/[^\d]/g, '');
+        return raw ? parseInt(raw, 10) : null;
+      })
+      .filter(v => v && v > 0);
+    if (dobles.length) return Math.min(...dobles);
+  }
+
+  // Objeto/array "precios"
+  if (p.precios) {
+    if (Array.isArray(p.precios)) {
+      const vals = p.precios
+        .map(pr => {
+          const key = Object.keys(pr).find(k => /doble/i.test(k));
+          if (!key) return null;
+          const raw = String(pr[key]).replace(/[^\d]/g, '');
+          return raw ? parseInt(raw, 10) : null;
+        })
+        .filter(v => v && v > 0);
+      if (vals.length) return Math.min(...vals);
+    }
+    if (typeof p.precios === 'object') {
+      const key = Object.keys(p.precios).find(k => /doble/i.test(k));
+      if (key) {
+        const raw = String(p.precios[key]).replace(/[^\d]/g, '');
+        if (raw) return parseInt(raw, 10);
+      }
+    }
+  }
+
+  // Fallback: campos directos
+  const directKey = ['precioDesde','precio_desde','precio','price'].find(k => p[k]);
+  if (directKey) {
+    const raw = String(p[directKey]).replace(/[^\d]/g, '');
+    if (raw) return parseInt(raw, 10);
+  }
+
+  return null;
+}
+
+function formatPrecio(n) {
+  if (!n) return null;
+  return 'USD\u00a0' + n.toLocaleString('es-UY');
+}
+
 function groupData(programas) {
   const byPais = {};
   for (const p of programas) {
@@ -323,11 +395,21 @@ function cardHTML(p) {
   const dias   = p.duracion ? p.duracion.split('—')[0].trim() : '';
   const salida = p.fechas?.find(f => f.gold)?.value || p.fechas?.[0]?.value || '';
   const sub    = p.fechas?.find(f => f.label==='Salidas' && !f.gold)?.value || salida;
+  const precio = formatPrecio(getPrecioDesde(p));
+
+  // Segunda línea: [fecha] [| desde precio]
+  let subHtml = '';
+  if (sub) subHtml += `<span>${sub}</span>`;
+  if (precio) {
+    if (sub) subHtml += `<span class="card-sub-sep">|</span>`;
+    subHtml += `<span class="card-price">desde ${precio}</span>`;
+  }
+
   return `
     <a class="prog-card" href="${PROG_URL}?p=${encodeURIComponent(p.id)}" target="_blank">
       <div class="card-body">
         <div class="card-name">${titleCase(p.titulo)}</div>
-        <div class="card-sub">${sub}</div>
+        <div class="card-sub">${subHtml}</div>
         <div class="card-tags">
           ${dias ? `<span class="tag tag-dur">${dias}</span>` : ''}
           <span class="tag tag-bus">Bus semi cama</span>
@@ -390,7 +472,7 @@ function renderContent(byPais) {
       <span class="ico">⚠️</span>
       <p>No se encontraron programas.<br>
       Verificá que <code>programas-sendas.json</code> existe y tiene contenido.<br>
-      Hacé click en <strong>Actualizar ahora</strong> para regenerarlo.</p>
+      Hacé click en <strong>⚡</strong> (pie del sidebar) para regenerarlo.</p>
     </div>`;
 }
 
@@ -418,7 +500,7 @@ async function init() {
         <p>No se pudo cargar el catálogo.<br>
         <strong>Error:</strong> ${e.message}<br><br>
         Verificá que <code>programas-sendas.json</code> existe y ejecutá el scraper
-        desde <strong>Actualizar ahora</strong>.</p>
+        desde el botón <strong>⚡</strong> en el pie del sidebar.</p>
       </div>`;
   }
 }
