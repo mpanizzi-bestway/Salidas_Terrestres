@@ -121,6 +121,13 @@
       font-weight:700; font-family:'Poppins',sans-serif;
       margin-bottom:1mm; letter-spacing:.01em;
     }
+    .contact-block .contact-cargo {
+      display:block; font-size:7pt; color:var(--mid);
+      font-weight:400; font-family:'DM Sans',sans-serif;
+      margin-top:-1mm; margin-bottom:1.5mm;
+    }
+    .contact-block a { color:inherit; text-decoration:none; }
+    .contact-block a:hover { text-decoration:underline; }
 
     /* 2. TÍTULO */
     .prog-title-block { text-align:center; padding:3mm 0 1mm; }
@@ -181,35 +188,20 @@
     .inc-row { display:flex; align-items:flex-start; gap:2mm; font-size:8pt; color:var(--text); line-height:1.4; }
     .inc-dot { width:3.5mm; height:3.5mm; background:var(--teal); border-radius:50%; flex-shrink:0; margin-top:1mm; }
 
-    /* 6. ITINERARIO — tabla simple 2 columnas */
+    /* 6. ITINERARIO */
     .itinerary-table { width:100%; border-collapse:collapse; }
     .itinerary-table tr { border-bottom:.5px solid var(--border); }
     .itinerary-table tr:last-child { border-bottom:none; }
     .itinerary-table td { padding:2mm 2mm; vertical-align:top; font-size:7.8pt; }
-
-    /* Columna día */
     .it-dia {
-      width:14mm;
-      white-space:nowrap;
-      font-family:'Poppins',sans-serif;
-      font-size:6.5pt;
-      font-weight:700;
-      color:var(--navy);
-      padding-top:2.5mm;
+      width:14mm; white-space:nowrap;
+      font-family:'Poppins',sans-serif; font-size:6.5pt; font-weight:700;
+      color:var(--navy); padding-top:2.5mm;
     }
-
-    /* Columna texto */
-    .it-texto {
-      color:var(--mid);
-      line-height:1.45;
-      padding-left:2mm;
-    }
-
-    /* Nota al pie del itinerario */
+    .it-texto { color:var(--mid); line-height:1.45; padding-left:2mm; }
     .it-nota {
       font-size:7pt; color:var(--mid); font-style:italic;
-      padding:1.5mm 2mm;
-      border-top:.5px solid var(--border);
+      padding:1.5mm 2mm; border-top:.5px solid var(--border);
     }
 
     /* 7. PRECIOS */
@@ -313,12 +305,8 @@
       <div class="header-center">
         <div class="eslogan">Tu Mundo de Oportunidades</div>
       </div>
-      <div class="contact-block">
-        <span class="contact-name">Martin Panizzi</span>
-        Tel. 2902 2116 int. 122<br>
-        Cel/WhatsApp 095 969 909<br>
-        mpanizzi@bestway.com.uy
-      </div>
+      <!-- Bloque de contacto: se renderiza dinámicamente según el agente seleccionado -->
+      <div class="contact-block" id="contact-block"></div>
     </header>
 
     <!-- 2. TÍTULO -->
@@ -404,6 +392,42 @@
 
 <script>
 // ══════════════════════════════════════════════════════════════
+//  DATOS DE AGENTES
+//  Para agregar un agente: agregar entrada aquí + <option> en index.html
+// ══════════════════════════════════════════════════════════════
+const AGENTES = {
+  martin: {
+    nombre : 'Martin Panizzi',
+    cargo  : '',                          // sin cargo → no se muestra
+    tel    : 'Tel. 2902 2116 int. 122',
+    cel    : 'Cel/WhatsApp 095 969 909',
+    email  : 'mpanizzi@bestway.com.uy',
+  },
+  martin2: {
+    nombre : 'Martin Panizzi',
+    cargo  : 'Ejecutivo de Cuentas',
+    tel    : 'Tel. 2902 2116 int. 122',
+    cel    : 'Cel/WhatsApp 095 969 909',
+    email  : 'mpanizzi@bestway.com.uy',
+  },
+};
+
+function renderContactBlock() {
+  const key    = localStorage.getItem('bw_agent') || 'martin';
+  const agente = AGENTES[key] || AGENTES.martin;
+  const cargoHtml = agente.cargo
+    ? `<span class="contact-cargo">${agente.cargo}</span>`
+    : '';
+
+  document.getElementById('contact-block').innerHTML =
+    `<span class="contact-name">${agente.nombre}</span>` +
+    cargoHtml +
+    `${agente.tel}<br>` +
+    `${agente.cel}<br>` +
+    `<a href="mailto:${agente.email}">${agente.email}</a>`;
+}
+
+// ══════════════════════════════════════════════════════════════
 //  FOTOS DE DESTINO
 // ══════════════════════════════════════════════════════════════
 const BASE_FOTOS    = '../../images/destinos/';
@@ -416,7 +440,7 @@ const DESTINO_MAP = [
   { keys: ['camboriu','balneario camboriu'],                   file: 'camboriu'      },
   { keys: ['bombinhas'],                                       file: 'bombinhas'     },
   { keys: ['capao da canoa'],                                  file: 'capao'         },
-  { keys: ['torres'],                                         file: 'torres'        },
+  { keys: ['torres'],                                          file: 'torres'        },
   { keys: ['laguna'],                                          file: 'laguna'        },
   { keys: ['blumenau'],                                        file: 'blumenau'      },
   { keys: ['gramado','canela'],                                file: 'gramado'       },
@@ -514,24 +538,18 @@ function renderPrograma(data) {
     ? data.incluye.map(i => `<div class="inc-row"><div class="inc-dot"></div>${i}</div>`).join('')
     : '<div class="inc-row"><div class="inc-dot"></div>Consultar detalles en agencia</div>';
 
-  // 6. ITINERARIO — tabla simple: Día | Texto
-  // Soporta tanto el formato nuevo { dia, texto }
-  // como el formato viejo { dia, lugar, detalle } para compatibilidad
+  // 6. ITINERARIO
   const itinerario = data.itinerario || [];
   document.getElementById('prog-itinerario').innerHTML = itinerario.length
     ? itinerario.map(row => {
-        // Formato nuevo
         const diaLabel  = row.dia   || '';
         const textoBody = row.texto || '';
-        // Formato viejo (compatibilidad)
         const detalleViejo = row.detalle
           ? (row.lugar ? `<strong>${row.lugar}</strong> — ${row.detalle}` : row.detalle)
           : '';
-        const celdaDia    = diaLabel   || (row.dia    ? row.dia    : '');
-        const celdaTexto  = textoBody  || detalleViejo;
-
+        const celdaTexto = textoBody || detalleViejo;
         return `<tr>
-          <td class="it-dia">${celdaDia}</td>
+          <td class="it-dia">${diaLabel}</td>
           <td class="it-texto">${celdaTexto}</td>
         </tr>`;
       }).join('')
@@ -570,6 +588,9 @@ async function init() {
   const params  = new URLSearchParams(window.location.search);
   const progId  = params.get('p');
   const loadMsg = document.getElementById('loading-msg');
+
+  // Renderizar bloque de contacto según agente guardado
+  renderContactBlock();
 
   if (!progId) {
     showError('No se especificó programa.<br>Usá <code>?p=ID</code> en la URL.', 'URL inválida');
