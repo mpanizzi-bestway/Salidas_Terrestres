@@ -412,48 +412,88 @@
 <script>
 // ══════════════════════════════════════════════════════════════
 //  FOTOS DE DESTINO
+//  Detecta el destino a partir del TÍTULO del programa y busca
+//  ../../images/destinos/{nombre}.jpg  o  .png
+//  Si no coincide o no carga → muestra el logo BestWay
 // ══════════════════════════════════════════════════════════════
-const WIKIMEDIA_FOTOS = {
-  florianopolis: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Praia_de_Canasvieiras%2C_Florian%C3%B3polis.jpg/800px-Praia_de_Canasvieiras%2C_Florian%C3%B3polis.jpg',
-  gramado:       'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Gramado_-_Rio_Grande_do_Sul%2C_Brasil.jpg/800px-Gramado_-_Rio_Grande_do_Sul%2C_Brasil.jpg',
-  ferrugem:      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Praia_da_Ferrugem.jpg/800px-Praia_da_Ferrugem.jpg',
-  camboriu:      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Balne%C3%A1rio_Cambori%C3%BA_vista_a%C3%A9rea.jpg/800px-Balne%C3%A1rio_Cambori%C3%BA_vista_a%C3%A9rea.jpg',
-  bombinhas:     'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Bombinhas_-_SC.jpg/800px-Bombinhas_-_SC.jpg',
-  capao:         'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Cap%C3%A3o_da_Canoa_-_RS.jpg/800px-Cap%C3%A3o_da_Canoa_-_RS.jpg',
-  torres:        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Torres_Rio_Grande_do_Sul.jpg/800px-Torres_Rio_Grande_do_Sul.jpg',
-  laguna:        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Laguna-SC-centro.jpg/800px-Laguna-SC-centro.jpg',
-  praiarosa:     'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Praia_do_Rosa.jpg/800px-Praia_do_Rosa.jpg',
-  blumenau:      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Blumenau_Rua_XV_de_Novembro.jpg/800px-Blumenau_Rua_XV_de_Novembro.jpg',
-  buenosaires:   'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Buenos_Aires_-_Obelisco.jpg/800px-Buenos_Aires_-_Obelisco.jpg',
-  mendoza:       'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Bodega_Zuccardi_Valle_de_Uco.jpg/800px-Bodega_Zuccardi_Valle_de_Uco.jpg',
-  norte:         'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Quebrada_de_Humahuaca.jpg/800px-Quebrada_de_Humahuaca.jpg',
-  carlospaz:     'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Villa_Carlos_Paz%2C_C%C3%B3rdoba.jpg/800px-Villa_Carlos_Paz%2C_C%C3%B3rdoba.jpg',
-  bariloche:     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Bariloche_desde_el_cerro_Otto.jpg/800px-Bariloche_desde_el_cerro_Otto.jpg',
-  cataratas:     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Iguazu_cataratas.jpg/800px-Iguazu_cataratas.jpg',
-  chile:         'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Santiago_de_Chile_Skyline.jpg/800px-Santiago_de_Chile_Skyline.jpg',
-  mendozasantiago:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Bodega_Zuccardi_Valle_de_Uco.jpg/800px-Bodega_Zuccardi_Valle_de_Uco.jpg',
-};
 
-function loadDestinationPhoto(slug, container) {
-  if (!container) return;
-  const img = document.createElement('img');
-  img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:none;';
-  img.onload = () => {
-    document.getElementById('foto-placeholder')?.remove();
-    img.style.display = 'block';
-  };
-  img.onerror = () => {
-    if (img._triedWikimedia) {
-      container.innerHTML = '<div class="ph">🌎</div>';
-      return;
+const BASE_FOTOS    = '../../images/destinos/';
+const LOGO_FALLBACK = '../../images/logo_bestway_azul_fondo_blanco.png';
+
+// Mapa: palabras clave en el título → nombre de archivo (sin extensión)
+const DESTINO_MAP = [
+  { keys: ['florianopolis','florianopolis','floripa'],       file: 'florianopolis' },
+  { keys: ['praia do rosa','praia rosa'],                    file: 'praiarosa'     },
+  { keys: ['ferrugem'],                                      file: 'ferrugem'      },
+  { keys: ['camboriu','balneario camboriu'],                 file: 'camboriu'      },
+  { keys: ['bombinhas'],                                     file: 'bombinhas'     },
+  { keys: ['capao da canoa'],                                file: 'capao'         },
+  { keys: ['torres'],                                        file: 'torres'        },
+  { keys: ['laguna'],                                        file: 'laguna'        },
+  { keys: ['blumenau'],                                      file: 'blumenau'      },
+  { keys: ['gramado','canela'],                              file: 'gramado'       },
+  { keys: ['cataratas','iguazu','iguassu','iguacu'],         file: 'cataratas'     },
+  { keys: ['bariloche'],                                     file: 'bariloche'     },
+  { keys: ['carlos paz','villa carlos'],                     file: 'carlospaz'     },
+  { keys: ['cordoba'],                                       file: 'carlospaz'     },
+  { keys: ['humahuaca','jujuy','salta','tilcara','norte'],   file: 'norte'         },
+  { keys: ['mendoza'],                                       file: 'mendoza'       },
+  { keys: ['buenos aires'],                                  file: 'buenosaires'   },
+  { keys: ['santiago','chile'],                              file: 'santiago'      },
+  { keys: ['brasil','brazil'],                               file: 'florianopolis' },
+];
+
+// Normaliza: minúsculas, sin tildes, sin puntuación extra
+function normalizar(str) {
+  return (str || '').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9 ]/g, ' ')
+    .replace(/\s+/g, ' ').trim();
+}
+
+// Devuelve el nombre de archivo que mejor coincide con el título, o null
+function detectarDestino(titulo) {
+  const t = normalizar(titulo);
+  for (const entry of DESTINO_MAP) {
+    for (const key of entry.keys) {
+      if (t.includes(normalizar(key))) return entry.file;
     }
-    img._triedWikimedia = true;
-    const wiki = WIKIMEDIA_FOTOS[slug];
-    if (wiki && img.src !== wiki) { img.src = wiki; }
-    else { container.innerHTML = '<div class="ph">🌎</div>'; }
+  }
+  return null;
+}
+
+// Carga imagen: .jpg → .png → logo BestWay
+function loadDestinationPhoto(titulo, container) {
+  if (!container) return;
+  const ph = document.getElementById('foto-placeholder');
+
+  const mountImg = (src, isLogo) => {
+    const img = document.createElement('img');
+    img.style.cssText = `width:100%;height:100%;object-fit:${isLogo?'contain':'cover'};display:none;padding:${isLogo?'5mm':'0'};`;
+    img.onload  = () => { ph?.remove(); img.style.display = 'block'; };
+    img.onerror = () => { img.remove(); if (!isLogo) mountImg(LOGO_FALLBACK, true); };
+    container.appendChild(img);
+    img.src = src;
   };
-  container.appendChild(img);
-  img.src = `images/destinos/${slug}.jpg`;
+
+  const archivo = detectarDestino(titulo);
+  if (!archivo) { mountImg(LOGO_FALLBACK, true); return; }
+
+  // .jpg → .png → logo
+  const imgJpg = document.createElement('img');
+  imgJpg.style.cssText = 'width:100%;height:100%;object-fit:cover;display:none;';
+  imgJpg.onload  = () => { ph?.remove(); imgJpg.style.display = 'block'; };
+  imgJpg.onerror = () => {
+    imgJpg.remove();
+    const imgPng = document.createElement('img');
+    imgPng.style.cssText = 'width:100%;height:100%;object-fit:cover;display:none;';
+    imgPng.onload  = () => { ph?.remove(); imgPng.style.display = 'block'; };
+    imgPng.onerror = () => { imgPng.remove(); mountImg(LOGO_FALLBACK, true); };
+    container.appendChild(imgPng);
+    imgPng.src = `${BASE_FOTOS}${archivo}.png`;
+  };
+  container.appendChild(imgJpg);
+  imgJpg.src = `${BASE_FOTOS}${archivo}.jpg`;
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -509,7 +549,7 @@ function renderPrograma(data) {
   document.getElementById('prog-descripcion').textContent = data.descripcion || '';
   document.getElementById('prog-highlights').innerHTML = (data.highlights || [])
     .map(h => `<span class="hl-tag">${h}</span>`).join('');
-  loadDestinationPhoto(data.destinoSlug || '', document.getElementById('prog-foto'));
+  loadDestinationPhoto(data.titulo || '', document.getElementById('prog-foto'));
 
   // 5. INCLUYE
   const incluyeLimpio = limpiarIncluye(data.incluye || []);
