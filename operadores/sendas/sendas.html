@@ -323,31 +323,14 @@ function getPrecioDesde(p) {
 function formatPrecio(n) {
   if (!n) return null;
   return 'USD\u00a0' + n.toLocaleString('es-UY');
-// Mapa de corrección: si el título contiene alguna de estas palabras clave,
-// forzar el destino al valor correcto independientemente del JSON.
-const TITULO_DEST_OVERRIDE = [
-  { match: /gramado|canela/i, destino: 'Gramado y Canela', slug: 'gramado', pais: 'Brasil' },
-  { match: /florianopolis|florianópolis/i, destino: 'Florianópolis', slug: 'florianopolis', pais: 'Brasil' },
-  // Agregá más reglas acá si aparecen otros casos similares
-];
-
-function resolveDestino(p) {
-  const titulo = p.titulo || '';
-  for (const rule of TITULO_DEST_OVERRIDE) {
-    if (rule.match.test(titulo)) {
-      return { dest: rule.destino, slug: rule.slug, pais: rule.pais };
-    }
-  }
-  return { dest: p.destino || 'Otros', slug: p.destinoSlug, pais: p.pais || 'Otros' };
-}
 
 function groupData(programas) {
   const byPais = {};
   for (const p of programas) {
-    const { dest, slug, pais } = resolveDestino(p);
+    const pais = p.pais || 'Otros', dest = p.destino || 'Otros';
     if (!byPais[pais]) byPais[pais] = {};
     if (!byPais[pais][dest]) byPais[pais][dest] = {
-      slug: slug, emoji: DEST_EMOJI[slug] || '📍', progs: []
+      slug: p.destinoSlug, emoji: DEST_EMOJI[p.destinoSlug] || '📍', progs: []
     };
     byPais[pais][dest].progs.push(p);
   }
