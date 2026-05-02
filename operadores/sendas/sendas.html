@@ -230,7 +230,6 @@
     </a>
     <div class="h-div"></div>
     <div class="logo-wrap">
-      <!-- Ruta corregida: logo en /images/ raíz del repo -->
       <img src="../../images/logo_Bestway_blanco.png" alt="BestWay">
     </div>
     <div class="header-title">
@@ -298,169 +297,207 @@ const DEST_EMOJI = {
 const PAIS_ORDER = ['Brasil','Argentina','Cataratas','Chile','Otros'];
 const PAIS_EMOJI = { Brasil:'🇧🇷', Argentina:'🇦🇷', Cataratas:'💧', Chile:'🇨🇱', Otros:'🌍' };
 
+// ─── Reglas de corrección de destino por título ────────────────────────────
+// Resuelve el destino correcto usando el título del programa (más confiable
+// que el destinoSlug del JSON, que puede venir mal del scraper cuando Sendas
+// publica programas de Gramado bajo la URL de Florianópolis y viceversa).
+// El orden importa: reglas más específicas primero.
+const TITULO_DEST_RULES = [
+  { match: /gramado|canela/i,                                    slug: 'gramado',         destino: 'Gramado y Canela'     },
+  { match: /florianopolis|florianópolis|canasvieiras/i,          slug: 'florianopolis',   destino: 'Florianópolis'        },
+  { match: /ferrugem/i,                                          slug: 'ferrugem',        destino: 'Ferrugem'             },
+  { match: /camboriu|camboriú/i,                                 slug: 'camboriu',        destino: 'Camboriú'             },
+  { match: /bombinhas/i,                                         slug: 'bombinhas',       destino: 'Bombinhas'            },
+  { match: /capao|capão/i,                                       slug: 'capao',           destino: 'Capão da Canoa'       },
+  { match: /\btorres\b/i,                                        slug: 'torres',          destino: 'Torres'               },
+  { match: /laguna/i,                                            slug: 'laguna',          destino: 'Laguna'               },
+  { match: /praia\s+d[ao]\s+rosa/i,                              slug: 'praiarosa',       destino: 'Praia da Rosa'        },
+  { match: /blumenau/i,                                          slug: 'blumenau',        destino: 'Blumenau'             },
+  { match: /cataratas|iguazu|iguazú/i,                           slug: 'cataratas',       destino: 'Cataratas del Iguazú' },
+  { match: /bariloche/i,                                         slug: 'bariloche',       destino: 'Bariloche'            },
+  { match: /carlos\s+paz/i,                                      slug: 'carlospaz',       destino: 'Carlos Paz'           },
+  { match: /mendoza\s+y\s+santiago|mendoza.*santiago/i,          slug: 'mendozasantiago', destino: 'Mendoza y Santiago'   },
+  { match: /\bchile\b|\bsantiago\b/i,                            slug: 'chile',           destino: 'Chile'                },
+  { match: /norte\s+argentino|jujuy|salta|humahuaca/i,           slug: 'norte',           destino: 'Norte Argentino'      },
+  { match: /\bmendoza\b/i,                                       slug: 'mendoza',         destino: 'Mendoza'              },
+  { match: /buenos\s+aires|temaiken|mundo\s+marino/i,            slug: 'buenosaires',     destino: 'Buenos Aires'         },
+];
+
+// Dado un programa p, retorna { slug, destino, pais } corregidos por título.
+// Si ninguna regla aplica, devuelve los valores originales del JSON.
+function resolveDestino(p) {
+  var titulo = (p.titulo || '').toUpperCase();
+  for (var i = 0; i < TITULO_DEST_RULES.length; i++) {
+    var rule = TITULO_DEST_RULES[i];
+    if (rule.match.test(titulo)) {
+      return {
+        slug:    rule.slug,
+        destino: rule.destino,
+        pais:    p.pais || 'Otros',
+      };
+    }
+  }
+  return {
+    slug:    p.destinoSlug || 'otros',
+    destino: p.destino     || 'Otros',
+    pais:    p.pais        || 'Otros',
+  };
+}
+
 function titleCase(s) {
-  return s.toLowerCase().replace(/(?:^|\s|[-\/])\S/g, c => c.toUpperCase());
+  return s.toLowerCase().replace(/(?:^|\s|[-\/])\S/g, function(c) { return c.toUpperCase(); });
 }
 function formatDate(iso) {
-  const d = new Date(iso);
+  var d = new Date(iso);
   return isNaN(d) ? iso : d.toLocaleDateString('es-UY',{day:'2-digit',month:'short',year:'numeric'});
 }
 
-/**
- * Extrae el precio mínimo de la columna "dbl" de p.hoteles[].
- * El JSON tiene: hoteles: [{ nombre, playa, sgl, dbl, tpl, cpl, qpl, cat }]
- * El campo dbl es un número (o null). Se toma el mínimo entre todos los hoteles.
- */
 function getPrecioDesde(p) {
   if (!Array.isArray(p.hoteles) || p.hoteles.length === 0) return null;
-  const valores = p.hoteles
-    .map(h => h.dbl)
-    .filter(v => typeof v === 'number' && v > 0);
+  var valores = p.hoteles
+    .map(function(h) { return h.dbl; })
+    .filter(function(v) { return typeof v === 'number' && v > 0; });
   if (valores.length === 0) return null;
-  return Math.min(...valores);
+  return Math.min.apply(null, valores);
 }
 
 function formatPrecio(n) {
   if (!n) return null;
   return 'USD\u00a0' + n.toLocaleString('es-UY');
+}
 
 function groupData(programas) {
-  const byPais = {};
-  for (const p of programas) {
-    const pais = p.pais || 'Otros', dest = p.destino || 'Otros';
+  var byPais = {};
+  for (var i = 0; i < programas.length; i++) {
+    var p = programas[i];
+    var resolved = resolveDestino(p);
+    var pais  = resolved.pais;
+    var dest  = resolved.destino;
+    var slug  = resolved.slug;
+
     if (!byPais[pais]) byPais[pais] = {};
-    if (!byPais[pais][dest]) byPais[pais][dest] = {
-      slug: p.destinoSlug, emoji: DEST_EMOJI[p.destinoSlug] || '📍', progs: []
-    };
+    if (!byPais[pais][dest]) {
+      byPais[pais][dest] = {
+        slug:  slug,
+        emoji: DEST_EMOJI[slug] || '📍',
+        progs: [],
+      };
+    }
     byPais[pais][dest].progs.push(p);
   }
   return byPais;
 }
-  
+
 function sorted(byPais) {
-  return Object.keys(byPais).sort((a,b) => {
-    const ia = PAIS_ORDER.indexOf(a), ib = PAIS_ORDER.indexOf(b);
-    return (ia<0?99:ia) - (ib<0?99:ib);
+  return Object.keys(byPais).sort(function(a, b) {
+    var ia = PAIS_ORDER.indexOf(a), ib = PAIS_ORDER.indexOf(b);
+    return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
   });
 }
 
 function cardHTML(p) {
-  const dias   = p.duracion ? p.duracion.split('—')[0].trim() : '';
-  const salida = p.fechas?.find(f => f.gold)?.value || p.fechas?.[0]?.value || '';
-  const sub    = p.fechas?.find(f => f.label==='Salidas' && !f.gold)?.value || salida;
+  var dias   = p.duracion ? p.duracion.split('—')[0].trim() : '';
+  var salida = (p.fechas && p.fechas.find(function(f) { return f.gold; })) ? p.fechas.find(function(f) { return f.gold; }).value : (p.fechas && p.fechas[0] ? p.fechas[0].value : '');
+  var sub    = (p.fechas && p.fechas.find(function(f) { return f.label === 'Salidas' && !f.gold; })) ? p.fechas.find(function(f) { return f.label === 'Salidas' && !f.gold; }).value : salida;
 
-  // Precio mínimo doble
-  const precioNum = getPrecioDesde(p);
-  const precio    = formatPrecio(precioNum);
+  var precioNum = getPrecioDesde(p);
+  var precio    = formatPrecio(precioNum);
 
-  // Segunda línea: fecha | desde USD xxx
-  let subHtml = '';
-  if (sub)    subHtml += `<span>${sub}</span>`;
+  var subHtml = '';
+  if (sub)    subHtml += '<span>' + sub + '</span>';
   if (precio) {
-    if (sub)  subHtml += `<span class="card-sub-sep">|</span>`;
-    subHtml += `<span class="card-price">desde ${precio}</span>`;
+    if (sub)  subHtml += '<span class="card-sub-sep">|</span>';
+    subHtml += '<span class="card-price">desde ' + precio + '</span>';
   }
 
-  return `
-    <a class="prog-card" href="${PROG_URL}?p=${encodeURIComponent(p.id)}" target="_blank">
-      <div class="card-body">
-        <div class="card-name">${titleCase(p.titulo)}</div>
-        <div class="card-sub">${subHtml}</div>
-        <div class="card-tags">
-          ${dias ? `<span class="tag tag-dur">${dias}</span>` : ''}
-          <span class="tag tag-bus">Bus semi cama</span>
-          ${salida ? `<span class="tag tag-seas">${salida.substring(0,28)}</span>` : ''}
-        </div>
-      </div>
-      <div class="card-arrow">
-        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-      </div>
-    </a>`;
+  return '<a class="prog-card" href="' + PROG_URL + '?p=' + encodeURIComponent(p.id) + '" target="_blank">' +
+    '<div class="card-body">' +
+      '<div class="card-name">' + titleCase(p.titulo) + '</div>' +
+      '<div class="card-sub">' + subHtml + '</div>' +
+      '<div class="card-tags">' +
+        (dias ? '<span class="tag tag-dur">' + dias + '</span>' : '') +
+        '<span class="tag tag-bus">Bus semi cama</span>' +
+        (salida ? '<span class="tag tag-seas">' + salida.substring(0,28) + '</span>' : '') +
+      '</div>' +
+    '</div>' +
+    '<div class="card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>' +
+  '</a>';
 }
 
 function renderSidebar(byPais) {
-  let h = '';
-  sorted(byPais).forEach((pais, pi) => {
-    h += `<div class="tree-country">${PAIS_EMOJI[pais]||'🌍'} ${pais}</div>`;
-    Object.entries(byPais[pais]).forEach(([dest, info], di) => {
-      const open = (pi===0 && di===0) ? ' open' : '';
-      const sid = `td-${info.slug}`;
-      h += `
-        <div class="tree-dest${open}" id="${sid}">
-          <div class="tree-dest-hd" onclick="toggleTree('${sid}')">
-            <span>${info.emoji}</span>${dest}
-            <svg class="chev" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
-          </div>
-          <div class="tree-links">
-            ${info.progs.map(p => {
-              const label = titleCase(p.titulo)
-                .replace(new RegExp(`^${dest.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}\\s*[-–]?\\s*`,'i'),'')
-                .trim() || titleCase(p.titulo);
-              return `<a class="tree-link" href="${PROG_URL}?p=${encodeURIComponent(p.id)}" target="_blank">${label}</a>`;
-            }).join('')}
-          </div>
-        </div>`;
+  var h = '';
+  sorted(byPais).forEach(function(pais, pi) {
+    h += '<div class="tree-country">' + (PAIS_EMOJI[pais] || '🌍') + ' ' + pais + '</div>';
+    Object.entries(byPais[pais]).forEach(function(entry, di) {
+      var dest = entry[0], info = entry[1];
+      var open = (pi === 0 && di === 0) ? ' open' : '';
+      var sid  = 'td-' + info.slug;
+      var links = info.progs.map(function(p) {
+        var label = titleCase(p.titulo)
+          .replace(new RegExp('^' + dest.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + '\\s*[-–]?\\s*', 'i'), '')
+          .trim() || titleCase(p.titulo);
+        return '<a class="tree-link" href="' + PROG_URL + '?p=' + encodeURIComponent(p.id) + '" target="_blank">' + label + '</a>';
+      }).join('');
+      h += '<div class="tree-dest' + open + '" id="' + sid + '">' +
+        '<div class="tree-dest-hd" onclick="toggleTree(\'' + sid + '\')">' +
+          '<span>' + info.emoji + '</span>' + dest +
+          '<svg class="chev" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>' +
+        '</div>' +
+        '<div class="tree-links">' + links + '</div>' +
+      '</div>';
     });
   });
   document.getElementById('sidebar-tree').innerHTML = h;
 }
 
 function renderContent(byPais) {
-  let h = '';
-  sorted(byPais).forEach(pais => {
-    h += `<div class="country-block">`;
-    h += `<div class="country-label">${PAIS_EMOJI[pais]||'🌍'} ${pais}</div>`;
-    Object.entries(byPais[pais]).forEach(([dest, info]) => {
-      h += `
-        <div class="dest-block" id="dest-${info.slug}">
-          <div class="dest-label">
-            <div class="dest-icon">${info.emoji}</div>
-            <h3>${dest}</h3>
-            <span class="dest-count">${info.progs.length} programa${info.progs.length!==1?'s':''}</span>
-          </div>
-          <div class="prog-list">${info.progs.map(cardHTML).join('')}</div>
-        </div>`;
+  var h = '';
+  sorted(byPais).forEach(function(pais) {
+    h += '<div class="country-block">';
+    h += '<div class="country-label">' + (PAIS_EMOJI[pais] || '🌍') + ' ' + pais + '</div>';
+    Object.entries(byPais[pais]).forEach(function(entry) {
+      var dest = entry[0], info = entry[1];
+      h += '<div class="dest-block" id="dest-' + info.slug + '">' +
+        '<div class="dest-label">' +
+          '<div class="dest-icon">' + info.emoji + '</div>' +
+          '<h3>' + dest + '</h3>' +
+          '<span class="dest-count">' + info.progs.length + ' programa' + (info.progs.length !== 1 ? 's' : '') + '</span>' +
+        '</div>' +
+        '<div class="prog-list">' + info.progs.map(cardHTML).join('') + '</div>' +
+      '</div>';
     });
-    h += `</div>`;
+    h += '</div>';
   });
-  document.getElementById('main-content').innerHTML = h || `
-    <div class="state-box">
-      <span class="ico">⚠️</span>
-      <p>No se encontraron programas.<br>
-      Verificá que <code>programas-sendas.json</code> existe y tiene contenido.</p>
-    </div>`;
+  document.getElementById('main-content').innerHTML = h || '<div class="state-box"><span class="ico">⚠️</span><p>No se encontraron programas.<br>Verificá que <code>programas-sendas.json</code> existe y tiene contenido.</p></div>';
 }
 
 async function init() {
   try {
-    const r = await fetch(`${DATA_URL}?_=${Date.now()}`);
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    const data = await r.json();
+    var r = await fetch(DATA_URL + '?_=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    var data = await r.json();
 
     document.getElementById('last-update').textContent = formatDate(data.updatedAt);
     document.getElementById('prog-count').textContent  = data.programas.length;
 
-    if (!data.programas?.length) throw new Error('Sin programas en el JSON');
+    if (!data.programas || !data.programas.length) throw new Error('Sin programas en el JSON');
 
-    const byPais = groupData(data.programas);
+    var byPais = groupData(data.programas);
     renderSidebar(byPais);
     renderContent(byPais);
   } catch(e) {
     document.getElementById('last-update').textContent = 'error';
     document.getElementById('sidebar-tree').innerHTML =
-      `<div style="padding:14px 16px;color:#b00;font-size:.76rem;">Error al cargar</div>`;
-    document.getElementById('main-content').innerHTML = `
-      <div class="state-box">
-        <span class="ico">⚠️</span>
-        <p>No se pudo cargar el catálogo.<br>
-        <strong>Error:</strong> ${e.message}<br><br>
-        Verificá que <code>programas-sendas.json</code> existe y ejecutá el scraper
-        desde el botón <strong>⚡</strong> en el pie del sidebar.</p>
-      </div>`;
+      '<div style="padding:14px 16px;color:#b00;font-size:.76rem;">Error al cargar</div>';
+    document.getElementById('main-content').innerHTML =
+      '<div class="state-box"><span class="ico">⚠️</span><p>No se pudo cargar el catálogo.<br><strong>Error:</strong> ' + e.message + '<br><br>Verificá que <code>programas-sendas.json</code> existe y ejecutá el scraper desde el botón <strong>⚡</strong> en el pie del sidebar.</p></div>';
   }
 }
 
-function toggleTree(id) { document.getElementById(id)?.classList.toggle('open'); }
+function toggleTree(id) {
+  var el = document.getElementById(id);
+  if (el) el.classList.toggle('open');
+}
 
 init();
 </script>
