@@ -136,6 +136,62 @@ async function getLinksFromIndex(indexUrl) {
   return links;
 }
 
+// ─── Corrección de destino basada en título scrapeado ──────────────────────
+// Algunos programas son indexados por Sendas bajo una URL de otro destino
+// (ej: Gramado aparece bajo /floripa1/ con el mismo ID). Esta función corrige
+// el destInfo usando el título real del programa, que es siempre confiable.
+//
+// IMPORTANTE: el orden de las reglas importa — las más específicas primero.
+// Por ejemplo "mendoza y santiago" debe ir antes que "mendoza" solo.
+const TITULO_DEST_RULES = [
+  { match: /gramado|canela/i,                                                                    slug: 'gramado',         destino: 'Gramado y Canela',     pais: 'Brasil',    emoji: '🇧🇷' },
+  { match: /florianopolis|florianópolis|canasvieiras/i,                                          slug: 'florianopolis',   destino: 'Florianópolis',        pais: 'Brasil',    emoji: '🇧🇷' },
+  { match: /ferrugem/i,                                                                          slug: 'ferrugem',        destino: 'Ferrugem',             pais: 'Brasil',    emoji: '🇧🇷' },
+  { match: /camboriu|camboriú/i,                                                                 slug: 'camboriu',        destino: 'Camboriú',             pais: 'Brasil',    emoji: '🇧🇷' },
+  { match: /bombinhas/i,                                                                         slug: 'bombinhas',       destino: 'Bombinhas',            pais: 'Brasil',    emoji: '🇧🇷' },
+  { match: /capao|capão/i,                                                                       slug: 'capao',           destino: 'Capão da Canoa',       pais: 'Brasil',    emoji: '🇧🇷' },
+  { match: /\btorres\b/i,                                                                        slug: 'torres',          destino: 'Torres',               pais: 'Brasil',    emoji: '🇧🇷' },
+  { match: /laguna/i,                                                                            slug: 'laguna',          destino: 'Laguna',               pais: 'Brasil',    emoji: '🇧🇷' },
+  { match: /praia\s+da\s+rosa|praia\s+do\s+rosa/i,                                              slug: 'praiarosa',       destino: 'Praia da Rosa',        pais: 'Brasil',    emoji: '🇧🇷' },
+  { match: /blumenau/i,                                                                          slug: 'blumenau',        destino: 'Blumenau',             pais: 'Brasil',    emoji: '🇧🇷' },
+  { match: /cataratas|iguazu|iguazú/i,                                                           slug: 'cataratas',       destino: 'Cataratas del Iguazú', pais: 'Cataratas', emoji: '💧'  },
+  { match: /bariloche/i,                                                                         slug: 'bariloche',       destino: 'Bariloche',            pais: 'Argentina', emoji: '🇦🇷' },
+  { match: /carlos\s+paz/i,                                                                      slug: 'carlospaz',       destino: 'Carlos Paz',           pais: 'Argentina', emoji: '🇦🇷' },
+  { match: /mendoza\s+y\s+santiago|mendoza.*santiago/i,                                          slug: 'mendozasantiago', destino: 'Mendoza y Santiago',   pais: 'Chile',     emoji: '🇨🇱' },
+  { match: /\bchile\b|\bsantiago\b/i,                                                            slug: 'chile',           destino: 'Chile',                pais: 'Chile',     emoji: '🇨🇱' },
+  { match: /norte\s+argentino|jujuy|salta|humahuaca/i,                                           slug: 'norte',           destino: 'Norte Argentino',      pais: 'Argentina', emoji: '🇦🇷' },
+  { match: /\bmendoza\b/i,                                                                       slug: 'mendoza',         destino: 'Mendoza',              pais: 'Argentina', emoji: '🇦🇷' },
+  { match: /buenos\s+aires|temaiken|mundo\s+marino|parque\s+de\s+la\s+costa/i,                   slug: 'buenosaires',     destino: 'Buenos Aires',         pais: 'Argentina', emoji: '🇦🇷' },
+];
+
+/**
+ * Dada la info de destino original (del índice) y el título real scrapeado,
+ * retorna los campos de destino corregidos. Si el título no coincide con
+ * ninguna regla, devuelve los valores del destInfo original sin modificar.
+ */
+function resolveDestinoPorTitulo(titulo, destInfoOriginal) {
+  for (const rule of TITULO_DEST_RULES) {
+    if (rule.match.test(titulo)) {
+      if (rule.slug !== destInfoOriginal.slug) {
+        console.log(`   🔀 Corrección: "${titulo.substring(0, 50)}" → ${rule.destino} (era ${destInfoOriginal.destino})`);
+      }
+      return {
+        destino:     rule.destino,
+        destinoSlug: rule.slug,
+        pais:        rule.pais,
+        emoji:       rule.emoji,
+      };
+    }
+  }
+  // Sin coincidencia → usar destInfo original tal cual
+  return {
+    destino:     destInfoOriginal.destino,
+    destinoSlug: destInfoOriginal.slug,
+    pais:        destInfoOriginal.pais,
+    emoji:       destInfoOriginal.emoji,
+  };
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 //  PARSER PRINCIPAL
 //  Marcadores basados en HTML real de Sendas (Joomla / protostar)
@@ -145,8 +201,6 @@ function parseProgram(html, sourceUrl, destInfo) {
   const art = $('div.item-page');
 
   // ── TÍTULO ────────────────────────────────────────────────────────────────
-  // Primer <strong> dentro del articleBody (ej: "FLORIANOPOLIS - PROGRAMA COMPLETO")
-  // Fallback: h2 del page-header
   let titulo = '';
   const primerStrong = art.find('[itemprop="articleBody"] strong').first().text().trim();
   if (primerStrong && primerStrong.length > 3) {
@@ -157,7 +211,6 @@ function parseProgram(html, sourceUrl, destInfo) {
   titulo = titulo.replace(/\s+/g, ' ').replace(/\u00a0/g, ' ').toUpperCase().substring(0, 100);
 
   // ── DÍAS / NOCHES ─────────────────────────────────────────────────────────
-  // Segundo <strong> del articleBody (ej: "8 DIAS / 5 NOCHES")
   let dias = null, noches = null;
   const segundoStrong = art.find('[itemprop="articleBody"] strong').eq(1).text().trim();
   if (segundoStrong) {
@@ -166,7 +219,6 @@ function parseProgram(html, sourceUrl, destInfo) {
     if (diasM)   dias   = diasM[1];
     if (nochesM) noches = nochesM[1];
   }
-  // Fallback si el segundo strong no tiene días: buscar en todo el texto
   if (!dias) {
     const rawText = art.text();
     const diasM   = rawText.match(/(\d+)\s*d[ií]as?/i);
@@ -176,10 +228,9 @@ function parseProgram(html, sourceUrl, destInfo) {
   }
 
   // ── SALIDAS ───────────────────────────────────────────────────────────────
-  // Busca "SALIDA:" o "SALIDAS:" (con o sin dos puntos) en cada párrafo <p>
   let salidas = null;
   art.find('[itemprop="articleBody"] p').each((_, el) => {
-    if (salidas) return; // ya encontrado
+    if (salidas) return;
     const texto = $(el).text().replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
     const m = texto.match(/^salidas?\s*:?\s*(.{3,120})/i);
     if (m) {
@@ -189,41 +240,16 @@ function parseProgram(html, sourceUrl, destInfo) {
   });
 
   // ── INCLUYE ───────────────────────────────────────────────────────────────
-  // El sitio de Sendas usa tres variantes para los ítems del incluye:
-  //
-  //   VARIANTE A — <p> separados, cada uno empieza con "-"  (Florianópolis)
-  //     <p>- Bus semi cama</p>
-  //     <p>- 05 noches...</p>
-  //
-  //   VARIANTE B — un solo <p> con varios ítems separados por <br/>  (Bariloche)
-  //     <p>  -  Bus Semi Cama...<br/>
-  //            -  06 noches...</p>
-  //
-  //   VARIANTE C — <ul><li> estándar  (Carlos Paz)
-  //     <ul><li>Bus semi cama</li><li>05 noches...</li></ul>
-  //
-  // Estrategia:
-  //   1. Buscar el nodo marcador de inicio: <p> que contenga "Incluye:"
-  //   2. A partir de ahí recorrer nodos hermanos en orden hasta llegar a
-  //      un <p> que empiece con "Día NN" o a la primera <table>
-  //   3. Para cada nodo hermano:
-  //      - Si es <ul> → extraer cada <li> como ítem
-  //      - Si es <p>  → dividir por <br> y tratar cada fragmento como ítem
-  //        si contiene "-"; si empieza con "Día NN" → parar
-
   const incluye = [];
 
-  // Helper: limpiar y extraer texto de un fragmento HTML (puede tener <em>, <strong>, etc.)
   const limpiarItem = txt =>
     txt.replace(/\u00a0/g, ' ')
        .replace(/\s+/g, ' ')
-       .replace(/^[\s\-–•]+/, '')   // quitar guión y espacios al inicio
+       .replace(/^[\s\-–•]+/, '')
        .trim();
 
-  // Helper: ¿el texto comienza con "Día NN"?
   const esDia = txt => /^d[ií]a\s+\d/i.test(txt.trim());
 
-  // Encontrar el nodo <p> marcador de inicio (contiene "Incluye:")
   let nodoMarcador = null;
   art.find('[itemprop="articleBody"]').children().each((_, node) => {
     if (nodoMarcador) return;
@@ -234,15 +260,12 @@ function parseProgram(html, sourceUrl, destInfo) {
   });
 
   if (nodoMarcador) {
-    // Recorrer nodos hermanos SIGUIENTES al marcador
     let nodo = nodoMarcador.next;
     while (nodo) {
-      if (!nodo.name) { nodo = nodo.next; continue; } // nodos de texto, ignorar
+      if (!nodo.name) { nodo = nodo.next; continue; }
 
-      // Parar al llegar a la tabla de precios
       if (nodo.name === 'table') break;
 
-      // VARIANTE C — <ul>: extraer <li>
       if (nodo.name === 'ul') {
         $(nodo).find('li').each((_, li) => {
           const item = limpiarItem($(li).text());
@@ -254,21 +277,16 @@ function parseProgram(html, sourceUrl, destInfo) {
         continue;
       }
 
-      // VARIANTE A y B — <p>
       if (nodo.name === 'p') {
         const textoCompleto = $(nodo).text().replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
 
-        // Parar si el párrafo empieza con "Día NN" (inicio del itinerario)
         if (esDia(textoCompleto)) break;
 
-        // Obtener el HTML interno del <p> para dividir por <br>
         const innerHtml = $(nodo).html() || '';
 
-        // Dividir por <br> (con o sin /)
         const fragmentos = innerHtml
           .split(/<br\s*\/?>/i)
           .map(f => {
-            // Convertir el fragmento HTML a texto plano via cheerio
             return cheerio.load(f).text()
               .replace(/\u00a0/g, ' ')
               .replace(/\s+/g, ' ')
@@ -277,19 +295,16 @@ function parseProgram(html, sourceUrl, destInfo) {
           .filter(f => f.length > 0);
 
         for (const frag of fragmentos) {
-          // Cada fragmento debe contener "-" para ser considerado ítem
-          // (descarta líneas de título como "Paseos:" que no tienen guión)
           if (frag.includes('-')) {
             const item = limpiarItem(frag);
             if (item.length > 3 && item.length < 400 && !incluye.includes(item)) {
               incluye.push(item);
             }
           }
-          // Si el fragmento empieza con "Día NN" → parar todo
           if (esDia(frag)) { nodo = null; break; }
         }
 
-        if (!nodo) break; // parada interna
+        if (!nodo) break;
       }
 
       nodo = nodo ? nodo.next : null;
@@ -297,33 +312,17 @@ function parseProgram(html, sourceUrl, destInfo) {
   }
 
   // ── ITINERARIO ────────────────────────────────────────────────────────────
-  // Estrategia: recorrer todos los <p> del articleBody.
-  // Buscar el primero que empiece con "Día 01" (cualquier capitalización/acento).
-  // Desde ahí, capturar cada <p> hasta encontrar "Fin de nuestros servicios"
-  // o hasta llegar a la primera <table>.
-  //
-  // Cada párrafo se convierte en { dia: "Día 01" | "", texto: "..." }
-  //   - Si empieza con "Día NN..." → dia = "Día NN", texto = resto de la línea
-  //   - Si no → dia = "", texto = párrafo completo
-  //
-  // En el JSON el itinerario es un array plano de estos objetos.
-
   const itinerario = [];
   let capturandoItinerario = false;
 
-  // Regex para detectar inicio de día: Día/Dia/DÍA/DIA + número
   const DIA_INICIO_RX = /^(d[ií]a\s+\d{1,2}(?:\s+al\s+(?:d[ií]a\s+)?\d{1,2})?)\s*/i;
   const FIN_ITINERARIO_RX = /fin\s+de\s+nuestros?\s+servicios/i;
 
-  // Necesitamos saber la posición de la primera tabla para cortar
-  // Usamos un flag que se activa cuando cheerio encuentra la tabla
   let tablaEncontrada = false;
 
-  // Recorremos todos los nodos hijos directos del articleBody en orden
   art.find('[itemprop="articleBody"]').children().each((_, node) => {
     if (tablaEncontrada) return;
 
-    // Si el nodo es una tabla → cortar itinerario
     if (node.name === 'table') {
       tablaEncontrada = true;
       capturandoItinerario = false;
@@ -336,19 +335,15 @@ function parseProgram(html, sourceUrl, destInfo) {
     const texto = $p.text().replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
     if (!texto) return;
 
-    // Detectar inicio del itinerario: primer párrafo que empiece con Día 01 / Dia 1 etc.
     if (!capturandoItinerario) {
       if (/^d[ií]a\s+0?1\b/i.test(texto)) {
         capturandoItinerario = true;
-        // Procesar este párrafo también (caemos al bloque de abajo)
       } else {
         return;
       }
     }
 
-    // Dentro del itinerario: verificar fin
     if (FIN_ITINERARIO_RX.test(texto)) {
-      // Incluir esta línea y cerrar
       const m = DIA_INICIO_RX.exec(texto);
       if (m) {
         itinerario.push({
@@ -362,7 +357,6 @@ function parseProgram(html, sourceUrl, destInfo) {
       return;
     }
 
-    // Parsear párrafo
     const m = DIA_INICIO_RX.exec(texto);
     if (m) {
       itinerario.push({
@@ -370,13 +364,11 @@ function parseProgram(html, sourceUrl, destInfo) {
         texto: texto.slice(m[0].length).replace(/^[-:\s]+/, '').trim(),
       });
     } else {
-      // Párrafo sin marcador de día (ej: descripción de excursión en bloque "Día 03 al 06")
       itinerario.push({ dia: '', texto });
     }
   });
 
   // ── TABLA DE PRECIOS ──────────────────────────────────────────────────────
-  // Sin cambios respecto al scraper anterior
   const hoteles = [];
 
   art.find('table').each((_, tbl) => {
@@ -431,8 +423,6 @@ function parseProgram(html, sourceUrl, destInfo) {
   });
 
   // ── NOTAS DE PRECIOS ──────────────────────────────────────────────────────
-  // <p> que aparecen DESPUÉS de la primera <table> en el articleBody
-  // Patrones: Menores, Solo asiento, No incluye, Solo bus
   const notas = [];
   const NOTA_RX = /^(menores[^.\n]{5,150}|solo\s+asiento[^.\n]{5,100}|no\s+incluye[^.\n]{5,100}|solo\s+bus[^.\n]{5,100})/i;
   let pasadaTabla = false;
@@ -459,21 +449,28 @@ function parseProgram(html, sourceUrl, destInfo) {
   const joomlaId = idMatch ? idMatch[1] : null;
   const slug     = joomlaId ? `${destInfo.slug}-${joomlaId}` : `${destInfo.slug}-${Date.now()}`;
 
+  // ── CORRECCIÓN DE DESTINO POR TÍTULO ─────────────────────────────────────
+  // El título scrapeado es más confiable que la URL del índice. Algunos
+  // programas de Gramado comparten ID con programas de Florianópolis y
+  // aparecen bajo /floripa1/ en el sitio de Sendas, causando duplicados.
+  // resolveDestinoPorTitulo detecta esta discrepancia y la corrige.
+  const destResuelto = resolveDestinoPorTitulo(titulo, destInfo);
+
   return {
     id:            slug,
     joomlaId,
     sourceUrl,
     titulo,
-    subtitulo:     buildSubtitulo(dias, noches, destInfo.destino),
+    subtitulo:     buildSubtitulo(dias, noches, destResuelto.destino),
     duracion:      dias ? `${dias} DÍAS${noches ? ` — ${noches} NOCHES` : ''}` : 'Consultar',
-    destino:       destInfo.destino,
-    destinoSlug:   destInfo.slug,
-    pais:          destInfo.pais,
-    emoji:         destInfo.emoji,
-    photoQuery:    DEST_PHOTO_QUERY[destInfo.slug] || destInfo.destino,
+    destino:       destResuelto.destino,
+    destinoSlug:   destResuelto.destinoSlug,
+    pais:          destResuelto.pais,
+    emoji:         destResuelto.emoji,
+    photoQuery:    DEST_PHOTO_QUERY[destResuelto.destinoSlug] || destResuelto.destino,
     fechas:        buildFechas(salidas),
-    descripcion:   buildDescripcion(destInfo.slug, destInfo.destino),
-    highlights:    buildHighlights(destInfo.slug),
+    descripcion:   buildDescripcion(destResuelto.destinoSlug, destResuelto.destino),
+    highlights:    buildHighlights(destResuelto.destinoSlug),
     incluye:       incluye.length > 0 ? incluye : ['Consultar programa completo en agencia'],
     itinerario,
     hoteles,
@@ -485,14 +482,13 @@ function parseProgram(html, sourceUrl, destInfo) {
 }
 
 // ─── Helper: normalizar etiqueta de día ────────────────────────────────────
-// Recibe "dia 01", "DÍA 03 al día 06", etc. → "Día 01", "Día 03 al Día 06"
 function formatDia(raw) {
   return raw
     .trim()
     .replace(/d[ií]a/gi, 'Día')
     .replace(/\s+/g, ' ')
     .toUpperCase()
-    .replace(/DÍA/g, 'Día'); // dejar solo primera mayúscula
+    .replace(/DÍA/g, 'Día');
 }
 
 // ─── Helpers ───────────────────────────────────────────────────────────────
@@ -621,7 +617,7 @@ async function scrapeAll() {
       if (seenUrls.has(url)) continue;
       seenUrls.add(url);
 
-      // Filtrar por keywords en índices mixtos
+      // Filtrar por keywords en índices mixtos (Argentina/Cataratas)
       if (destInfo.pais === 'Argentina' || destInfo.pais === 'Cataratas') {
         const keywords  = DEST_KEYWORDS[destInfo.slug] || [];
         const textLower = link.text.toLowerCase();
