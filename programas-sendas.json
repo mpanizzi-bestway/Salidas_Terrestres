@@ -1,6 +1,6 @@
 {
   "operador": "Sendas Turismo",
-  "updatedAt": "2026-05-02T13:10:46.996Z",
+  "updatedAt": "2026-05-02T13:12:36.571Z",
   "programas": [
     {
       "id": "florianopolis-1413",
@@ -222,20 +222,20 @@
           "texto": "Solo bus y hotel descontar: U$S 130.-"
         }
       ],
-      "updatedAt": "2026-05-02T13:11:19.737Z"
+      "updatedAt": "2026-05-02T13:13:05.954Z"
     },
     {
       "id": "florianopolis-1400",
       "joomlaId": "1400",
       "sourceUrl": "https://www.sendasturismo.com/as/index.php/brasil/floripa1/1400-florianopolis-8-dias-vacaciones-de-julio",
       "titulo": "GRAMADO Y CANELA - 07 DIAS",
-      "subtitulo": "7 DÍAS / 04 NOCHES · GRAMADO Y CANELA",
+      "subtitulo": "7 DÍAS / 04 NOCHES · FLORIANÓPOLIS",
       "duracion": "7 DÍAS — 04 NOCHES",
-      "destino": "Gramado y Canela",
-      "destinoSlug": "gramado",
+      "destino": "Florianópolis",
+      "destinoSlug": "florianopolis",
       "pais": "Brasil",
       "emoji": "🇧🇷",
-      "photoQuery": "Gramado Rio Grande do Sul",
+      "photoQuery": "Florianopolis beach Brazil",
       "fechas": [
         {
           "label": "Salidas",
@@ -248,14 +248,14 @@
           "gold": false
         }
       ],
-      "descripcion": "Gramado y Canela son dos joyas del sur de Brasil que combinan arquitectura alemana, gastronomía de primer nivel y paisajes de montaña únicos. Una experiencia completamente diferente al Brasil típico, llena de historia, chocolate artesanal y naturaleza exuberante.",
+      "descripcion": "Canasvieiras, en Florianópolis, combina el encanto de las playas brasileñas con aguas cálidas y tranquilas, perfectas para disfrutar todo el día. Con su ambiente alegre, su costa sin sargazo y su mezcla de naturaleza y ritmo local, es el destino ideal para vivir el verdadero verano en Brasil.",
       "highlights": [
-        "🌲 Parques naturales",
-        "🍫 Chocolate artesanal",
-        "⛪ Arquitectura europea",
-        "🎭 Gramado",
-        "🌊 Cascatas",
-        "🚂 Maria Fumaça"
+        "🏖️ Playas cristalinas",
+        "⛵ Paseo en Scuna",
+        "🎢 Beto Carrero World",
+        "✝️ Cristo Luz",
+        "🐬 Golfinhos",
+        "🌊 Laguna Concepción"
       ],
       "incluye": [
         "Bus semi cama, guía acompañante, servicio abordo (cena y desayuno abordo)",
@@ -331,20 +331,20 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-05-02T13:11:21.041Z"
+      "updatedAt": "2026-05-02T13:13:07.168Z"
     },
     {
       "id": "florianopolis-1396",
       "joomlaId": "1396",
       "sourceUrl": "https://www.sendasturismo.com/as/index.php/brasil/floripa1/1396-florianopolis-8-dias-abril-a-junio",
       "titulo": "GRAMADO Y CANELA - 07 DIAS",
-      "subtitulo": "7 DÍAS / 04 NOCHES · GRAMADO Y CANELA",
+      "subtitulo": "7 DÍAS / 04 NOCHES · FLORIANÓPOLIS",
       "duracion": "7 DÍAS — 04 NOCHES",
-      "destino": "Gramado y Canela",
-      "destinoSlug": "gramado",
+      "destino": "Florianópolis",
+      "destinoSlug": "florianopolis",
       "pais": "Brasil",
       "emoji": "🇧🇷",
-      "photoQuery": "Gramado Rio Grande do Sul",
+      "photoQuery": "Florianopolis beach Brazil",
       "fechas": [
         {
           "label": "Salidas",
@@ -357,14 +357,14 @@
           "gold": false
         }
       ],
-      "descripcion": "Gramado y Canela son dos joyas del sur de Brasil que combinan arquitectura alemana, gastronomía de primer nivel y paisajes de montaña únicos. Una experiencia completamente diferente al Brasil típico, llena de historia, chocolate artesanal y naturaleza exuberante.",
+      "descripcion": "Canasvieiras, en Florianópolis, combina el encanto de las playas brasileñas con aguas cálidas y tranquilas, perfectas para disfrutar todo el día. Con su ambiente alegre, su costa sin sargazo y su mezcla de naturaleza y ritmo local, es el destino ideal para vivir el verdadero verano en Brasil.",
       "highlights": [
-        "🌲 Parques naturales",
-        "🍫 Chocolate artesanal",
-        "⛪ Arquitectura europea",
-        "🎭 Gramado",
-        "🌊 Cascatas",
-        "🚂 Maria Fumaça"
+        "🏖️ Playas cristalinas",
+        "⛵ Paseo en Scuna",
+        "🎢 Beto Carrero World",
+        "✝️ Cristo Luz",
+        "🐬 Golfinhos",
+        "🌊 Laguna Concepción"
       ],
       "incluye": [
         "Bus semi cama, guía acompañante, servicio abordo (cena y desayuno abordo)",
@@ -430,7 +430,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-05-02T13:11:22.932Z"
+      "updatedAt": "2026-05-02T13:13:08.405Z"
     },
     {
       "id": "gramado-1417",
@@ -529,7 +529,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-05-02T13:11:24.218Z"
+      "updatedAt": "2026-05-02T13:13:09.612Z"
     },
     {
       "id": "gramado-1416",
@@ -628,7 +628,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-05-02T13:11:25.487Z"
+      "updatedAt": "2026-05-02T13:13:10.847Z"
     },
     {
       "id": "gramado-1415",
@@ -762,7 +762,7 @@
           "texto": "NO INCLUYE: INGRESOS A LOS PARQUES, MUSEOS y ESPECTACULOS DE NATAL LUZ"
         }
       ],
-      "updatedAt": "2026-05-02T13:11:26.781Z"
+      "updatedAt": "2026-05-02T13:13:12.057Z"
     },
     {
       "id": "gramado-1411",
@@ -861,7 +861,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-05-02T13:11:28.541Z"
+      "updatedAt": "2026-05-02T13:13:13.273Z"
     },
     {
       "id": "gramado-1400",
@@ -970,7 +970,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-05-02T13:11:29.751Z"
+      "updatedAt": "2026-05-02T13:13:14.473Z"
     },
     {
       "id": "gramado-1396",
@@ -1069,7 +1069,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-05-02T13:11:30.999Z"
+      "updatedAt": "2026-05-02T13:13:15.664Z"
     },
     {
       "id": "buenosaires-1414",
@@ -1187,7 +1187,7 @@
           "texto": "MENORES HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE (UNO POR HABITACION)"
         }
       ],
-      "updatedAt": "2026-05-02T13:11:32.193Z"
+      "updatedAt": "2026-05-02T13:13:16.870Z"
     },
     {
       "id": "mendoza-1412",
@@ -1308,7 +1308,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-05-02T13:11:33.394Z"
+      "updatedAt": "2026-05-02T13:13:18.060Z"
     },
     {
       "id": "mendoza-1407",
@@ -1439,7 +1439,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-05-02T13:11:34.574Z"
+      "updatedAt": "2026-05-02T13:13:19.266Z"
     },
     {
       "id": "mendoza-1358",
@@ -1560,7 +1560,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-05-02T13:11:35.779Z"
+      "updatedAt": "2026-05-02T13:13:20.467Z"
     },
     {
       "id": "norte-1406",
@@ -1666,7 +1666,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-05-02T13:11:36.972Z"
+      "updatedAt": "2026-05-02T13:13:21.680Z"
     },
     {
       "id": "norte-1405",
@@ -1772,7 +1772,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-05-02T13:11:38.216Z"
+      "updatedAt": "2026-05-02T13:13:22.889Z"
     },
     {
       "id": "norte-1395",
@@ -1878,7 +1878,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-05-02T13:11:39.408Z"
+      "updatedAt": "2026-05-02T13:13:24.141Z"
     },
     {
       "id": "norte-1394",
@@ -1984,7 +1984,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-05-02T13:11:40.633Z"
+      "updatedAt": "2026-05-02T13:13:25.426Z"
     },
     {
       "id": "carlospaz-1404",
@@ -2135,7 +2135,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-05-02T13:11:41.888Z"
+      "updatedAt": "2026-05-02T13:13:26.728Z"
     },
     {
       "id": "bariloche-1403",
@@ -2293,7 +2293,7 @@
           "texto": "Solo asiento, seguro de asistencia y servicio abordo: USD 315.-"
         }
       ],
-      "updatedAt": "2026-05-02T13:11:43.252Z"
+      "updatedAt": "2026-05-02T13:13:27.929Z"
     },
     {
       "id": "bariloche-1386",
@@ -2402,7 +2402,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-05-02T13:11:44.496Z"
+      "updatedAt": "2026-05-02T13:13:29.132Z"
     },
     {
       "id": "cataratas-1410",
@@ -2505,7 +2505,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-05-02T13:11:45.729Z"
+      "updatedAt": "2026-05-02T13:13:30.329Z"
     },
     {
       "id": "cataratas-1409",
@@ -2608,7 +2608,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-05-02T13:11:46.975Z"
+      "updatedAt": "2026-05-02T13:13:31.515Z"
     },
     {
       "id": "cataratas-1401",
@@ -2711,7 +2711,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-05-02T13:11:48.352Z"
+      "updatedAt": "2026-05-02T13:13:32.696Z"
     },
     {
       "id": "cataratas-1393",
@@ -2814,7 +2814,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-05-02T13:11:49.642Z"
+      "updatedAt": "2026-05-02T13:13:33.890Z"
     }
   ]
 }
