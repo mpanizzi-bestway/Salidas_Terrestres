@@ -1,7 +1,366 @@
 {
   "operador": "Funtour",
-  "updatedAt": "2026-04-29T00:48:15.343Z",
+  "updatedAt": "2026-05-03T01:12:44.902Z",
   "programas": [
+    {
+      "id": "funtour-villa-carlos-paz-setiembre-2026",
+      "slug": "villa-carlos-paz-setiembre-2026",
+      "operador": "funtour",
+      "sourceUrl": "https://www.funtour.com.uy/tienda/villa-carlos-paz-setiembre-2026/",
+      "titulo": "VILLA CARLOS PAZ SETIEMBRE 2026",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "VILLA CARLOS PAZ SETIEMBRE 2026",
+      "destinoSlug": "carlospaz",
+      "pais": "Argentina",
+      "emoji": "⛰️",
+      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2026/04/68b0d7bf-abde-4687-b060-2a02bed2810b-1024x1024.jpg",
+      "highlights": [],
+      "incluye": [
+        "BUS CON SERVICIO A BORDO",
+        "GUÍA COORDINADOR DURATE TODO EL RECORRIDO",
+        "04 NOCHES DE ALOJAMIENTO",
+        "MEDIA PENSIÓN (DESAYUNO Y CENA)",
+        "CITY TOUR VILLA CARLOS PAZ",
+        "CITY TOUR CORDOBA CAPITAL CON TIEMPO LIBRE PARA COMPRAS",
+        "SEGURO DE ASISTENCIA MÉDICA 40 k"
+      ],
+      "noIncluye": [],
+      "hoteles": [
+        {
+          "nombre": "*HOTEL EL CONDADO",
+          "url": "https://hotelelcondado.com.ar/"
+        },
+        {
+          "nombre": "Hotel Nuevo Centro",
+          "url": ""
+        }
+      ],
+      "itinerario": [],
+      "salidas": [
+        "20 de septiembre"
+      ],
+      "bases": [
+        "Single",
+        "Doble",
+        "Triple",
+        "Cuádruple"
+      ],
+      "precioDesde": "479",
+      "variantesCompletas": [
+        {
+          "variationId": 35865,
+          "salida": "20 de septiembre",
+          "alojamiento": "Hotel Nuevo Centro",
+          "base": "Single",
+          "precio": "649",
+          "disponible": true,
+          "sku": "PKG--20-DE-SEPTIEMBRE-HOTEL-NUEVO-CENTRO-SINGLE-T5579"
+        },
+        {
+          "variationId": 35866,
+          "salida": "20 de septiembre",
+          "alojamiento": "Hotel Nuevo Centro",
+          "base": "Doble",
+          "precio": "479",
+          "disponible": true,
+          "sku": "PKG--20-DE-SEPTIEMBRE-HOTEL-NUEVO-CENTRO-DOBLE-T5579"
+        },
+        {
+          "variationId": 35867,
+          "salida": "20 de septiembre",
+          "alojamiento": "Hotel Nuevo Centro",
+          "base": "Triple",
+          "precio": "479",
+          "disponible": true,
+          "sku": "PKG--20-DE-SEPTIEMBRE-HOTEL-NUEVO-CENTRO-TRIPLE-T5579"
+        },
+        {
+          "variationId": 35868,
+          "salida": "20 de septiembre",
+          "alojamiento": "Hotel Nuevo Centro",
+          "base": "Cuádruple",
+          "precio": "479",
+          "disponible": true,
+          "sku": "PKG--20-DE-SEPTIEMBRE-HOTEL-NUEVO-CENTRO-CUáDRUPLE-T5579"
+        }
+      ],
+      "matrizPrecios": {
+        "20 de septiembre": {
+          "Hotel Nuevo Centro": {
+            "Single": 649,
+            "Doble": 479,
+            "Triple": 479,
+            "Cuádruple": 479
+          }
+        }
+      },
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "20 de septiembre",
+          "gold": true
+        },
+        {
+          "label": "Habitación",
+          "value": "Single / Doble / Triple / Cuádruple",
+          "gold": false
+        }
+      ],
+      "temporada": "Setiembre",
+      "notas": [],
+      "updatedAt": "2026-05-03T01:11:35.641Z"
+    },
+    {
+      "id": "funtour-norte-argentino-aereo",
+      "slug": "norte-argentino-aereo",
+      "operador": "funtour",
+      "sourceUrl": "https://www.funtour.com.uy/tienda/norte-argentino-aereo/",
+      "titulo": "NORTE ARGENTINO AEREO",
+      "subtitulo": "7 DÍAS",
+      "duracion": "7 DÍAS",
+      "destino": "NORTE ARGENTINO AEREO",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2026/04/597c998a-7770-446c-886e-9b8b62778e1a-1-1024x1024.jpg",
+      "highlights": [
+        "📍 Tucuman:",
+        "📍 Tucuman",
+        "📍 Salta",
+        "📍 Salta:",
+        "📍 Salta"
+      ],
+      "incluye": [
+        "Montevideo – Colonia + Cruce en barco.",
+        "Guía acompañante durante todo el viaje.",
+        "Traslado Puerto de Buenos Aires – Aeroparque.",
+        "Aéreo JetSMART Bs As – Tucuman // Salta – Bs As con tasas y una maleta incluida de 20 kg.",
+        "06 noches de alojamiento.",
+        "06 cenas (una de ellas en Peña Balderrama).",
+        "Asistencia médica cobertura 60k.",
+        "Tour Tafí del Valle, Abra del Infiernillo, Amaicha del Valle, Cafayate, Quebrada de las conchas, Anfiteatro de Cafayate, City Tour en Salta, Jujuy, Quebrada de Humahuaca, Purmamarca, Tilcara, Humahuaca."
+      ],
+      "noIncluye": [
+        "Eco tasa hotelera ( por cuenta del pasajero).",
+        "Todo lo que no figure en Incluye."
+      ],
+      "hoteles": [
+        {
+          "nombre": "HOTEL BICENTENARIO / HOTEL ROOMIE / HOTEL OHASIS",
+          "url": ""
+        }
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "Tucuman:",
+          "detalle": "Llegada al aeropuerto de Tucuman . Alojamiento. Cena",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "Tucuman – Salta",
+          "detalle": "(320 km): desayuno y salida Salida hacia Tafi del Valle pasando por Famaillá donde tomamos la Ruta Nacional 38, en Acheral desviamos a través de la ruta provincial 307 conocida como la ruta de los Valles Calchaquíes, donde ascendemos por la Reserva Natural Quebrada de los Sosa acompañados por el río homónimo y por una exuberante vegetación subtropical que conforma la selva tucumano-oranense, paramos en el monumento El Indio con un mirador con vista del inmenso paisaje. Tafí del Valle: llegada a esta hermosa villa veraniega, ubicada a más de 2000 msnm y rodeada de cerros, entre ellos el imponente Aconquija. Aquí conviven los restos de una de las más antiguas culturas precolombinas, continuamos ascendiendo por Cuesta del Infiernillo y Abra del Infiernillo, donde la Cadena del Aconquija super",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "Salta",
+          "detalle": ": Desayuno y día libre. En este día sugerimos efectuar en forma opcional la excursión: Tren a las Nubes. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "Salta:",
+          "detalle": "Desayuno. Día libre. En este día sugerimos efectuar en forma opcional la excursión a Cachi: Conociendo Quebrada Escoipe, Cuesta del Obispo, Piedra del Molino a 3350 msnm, Recta de Tin Tin y la pintoresca localidad de Cachi. Cena Show en la Peña de Balderrama donde disfrutaremos del verdadero folklore norteño entre cantos y bailes.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "Salta – Jujuy",
+          "detalle": "(125 km) Salta: Desayuno y city tour : Villa de San Lorenzo, Mercado Artesanal, monumento al 20 de Febrero, Iglesia de San Francisco, Convento de San Bernardo, Monumento a Güemes, Parque San Martín, Catedral del Señor y la virgen del Milagro, Panteón de las Glorias del Norte y Cabildo. Tarde libre para recorrer esta hermosa Ciudad con sus múltiples monumentos, museos iglesias, y el cerro San Bernardo. Por la tarde, salida hacia San Salvador de Jujuy. Llegada y alojamiento. visita a la ciudad: Plaza Belgrano, Casa de Gobierno, con el Salón de la Bandera, donde se guarda la Enseña Nacional más antigua que posee el país, La Catedral. Cena.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "Jujuy – Hornocal",
+          "detalle": "(320 Km): Salida por Yala, Reyes donde ingresamos a la imponente Quebrada de Humahuaca, Patrimonio de la Humanidad, pasamos por las localidades de Volcán y Tumbaya. Luego ingresamos a la pequeña quebrada de Purmamarca, donde se encuentra ubicada la localidad que lleva el mismo nombre rodeada por una cadena montañosa de cerros multicolores con su cerro de 7 colores. Continuamos pasando por Maimará y Huacalera. Llegada a Humahuaca, visita a la Plaza Principal Cabildo, mirador del Gral. Belgrano y monumento a la independencia. Por la tarde Sugerimos realizar de forma opcional la excursion al cerro de los 14 colores, conocido como Serranías del Hornocal: Aqui nos disponemos a vivir uno de los días más espectaculares de nuestro circuito. Nos dirigimos hacia el este por la ruta provincial 73, qu",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "Jujuy:",
+          "detalle": "Desayuno y salida hacia el aeropuerto de Salta para embarcar en vuelo de regreso. Fin de nuestros servicios De 0 a 3 años USD 399 compartiendo con 2 adultos ,máximo uno por habitación, de 4 en adelante pagan como adultos",
+          "first": false,
+          "last": true
+        }
+      ],
+      "salidas": [
+        "10 de octubre"
+      ],
+      "bases": [
+        "Single",
+        "Doble"
+      ],
+      "precioDesde": "1249",
+      "variantesCompletas": [
+        {
+          "variationId": 35856,
+          "salida": "10 de octubre",
+          "alojamiento": "HOTEL BICENTENARIO / HOTEL ROOMIE / HOTEL OHASIS",
+          "base": "Single",
+          "precio": "1799",
+          "disponible": true,
+          "sku": "PKG--10-DE-OCTUBRE-HOTEL-BICENTENARIO-/-HOTEL-ROOMIE-/-HOTEL-OHASIS-SINGLE-T5576"
+        },
+        {
+          "variationId": 35857,
+          "salida": "10 de octubre",
+          "alojamiento": "HOTEL BICENTENARIO / HOTEL ROOMIE / HOTEL OHASIS",
+          "base": "Doble",
+          "precio": "1249",
+          "disponible": true,
+          "sku": "PKG--10-DE-OCTUBRE-HOTEL-BICENTENARIO-/-HOTEL-ROOMIE-/-HOTEL-OHASIS-DOBLE-T5576"
+        },
+        {
+          "variationId": 35875,
+          "salida": "10 de octubre",
+          "alojamiento": "HOTEL BICENTENARIO / HOTEL ROOMIE / HOTEL OHASIS",
+          "base": "Single",
+          "precio": "1799",
+          "disponible": true,
+          "sku": "PKG-105-10-DE-OCTUBRE-HOTEL-BICENTENARIO-/-HOTEL-ROOMIE-/-HOTEL-OHASIS-SINGLE-T5576"
+        },
+        {
+          "variationId": 35876,
+          "salida": "10 de octubre",
+          "alojamiento": "HOTEL BICENTENARIO / HOTEL ROOMIE / HOTEL OHASIS",
+          "base": "Doble",
+          "precio": "1249",
+          "disponible": true,
+          "sku": "PKG-105-10-DE-OCTUBRE-HOTEL-BICENTENARIO-/-HOTEL-ROOMIE-/-HOTEL-OHASIS-DOBLE-T5576"
+        }
+      ],
+      "matrizPrecios": {
+        "10 de octubre": {
+          "HOTEL BICENTENARIO / HOTEL ROOMIE / HOTEL OHASIS": {
+            "Single": 1799,
+            "Doble": 1249
+          }
+        }
+      },
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "10 de octubre",
+          "gold": true
+        },
+        {
+          "label": "Habitación",
+          "value": "Single / Doble",
+          "gold": false
+        }
+      ],
+      "temporada": "",
+      "notas": [],
+      "updatedAt": "2026-05-03T01:11:37.982Z"
+    },
+    {
+      "id": "funtour-mendoza-aereo-vacaciones-de-setiembre-2026",
+      "slug": "mendoza-aereo-vacaciones-de-setiembre-2026",
+      "operador": "funtour",
+      "sourceUrl": "https://www.funtour.com.uy/tienda/mendoza-aereo-vacaciones-de-setiembre-2026/",
+      "titulo": "Mendoza Aereo Vacaciones de Setiembre 2026",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "Mendoza Aereo Vacaciones de Setiembre 2026",
+      "destinoSlug": "mendoza",
+      "pais": "Argentina",
+      "emoji": "🍷",
+      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2026/04/4644d5a6eb16a8ef1faa-1-1024x1024.jpg",
+      "highlights": [],
+      "incluye": [],
+      "noIncluye": [
+        "No incluye: Tasa Ecohotelera/Todo lo que no especificado anteriormente",
+        "** Horarios de vuelos sujetos a cambios por parte de la aerolínea**"
+      ],
+      "hoteles": [
+        {
+          "nombre": "Hotel Nuevo Centro",
+          "url": ""
+        }
+      ],
+      "itinerario": [],
+      "salidas": [
+        "20 de septiembre"
+      ],
+      "bases": [
+        "Single",
+        "Doble",
+        "Triple"
+      ],
+      "precioDesde": "759",
+      "variantesCompletas": [
+        {
+          "variationId": 35884,
+          "salida": "20 de septiembre",
+          "alojamiento": "Hotel Nuevo Centro",
+          "base": "Single",
+          "precio": "959",
+          "disponible": true,
+          "sku": "PKG-104-20-DE-SEPTIEMBRE-HOTEL-NUEVO-CENTRO-SINGLE-T5578"
+        },
+        {
+          "variationId": 35885,
+          "salida": "20 de septiembre",
+          "alojamiento": "Hotel Nuevo Centro",
+          "base": "Doble",
+          "precio": "759",
+          "disponible": true,
+          "sku": "PKG-104-20-DE-SEPTIEMBRE-HOTEL-NUEVO-CENTRO-DOBLE-T5578"
+        },
+        {
+          "variationId": 35886,
+          "salida": "20 de septiembre",
+          "alojamiento": "Hotel Nuevo Centro",
+          "base": "Triple",
+          "precio": "759",
+          "disponible": true,
+          "sku": "PKG-104-20-DE-SEPTIEMBRE-HOTEL-NUEVO-CENTRO-TRIPLE-T5578"
+        }
+      ],
+      "matrizPrecios": {
+        "20 de septiembre": {
+          "Hotel Nuevo Centro": {
+            "Single": 959,
+            "Doble": 759,
+            "Triple": 759
+          }
+        }
+      },
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "20 de septiembre",
+          "gold": true
+        },
+        {
+          "label": "Habitación",
+          "value": "Single / Doble / Triple",
+          "gold": false
+        }
+      ],
+      "temporada": "Vacaciones de setiembre",
+      "notas": [],
+      "updatedAt": "2026-05-03T01:11:40.236Z"
+    },
     {
       "id": "funtour-cataratas-aereo-vacaciones-de-setiembre-2026",
       "slug": "cataratas-aereo-vacaciones-de-setiembre-2026",
@@ -22,7 +381,7 @@
       ],
       "incluye": [
         "GUÍA COORDINADOR",
-        "04 NOCHES DE ALOJAMIENTO CON MEDIA PENSIÓN",
+        "04 NOCHES DE ALOJAMIENTO EN HOTEL REAL CON MEDIA PENSIÓN",
         "VISITA REPRESA DE ITAIPÚ",
         "GUÍAS LOCALES",
         "INGRESO A CATARATAS ARGENTINAS",
@@ -75,7 +434,7 @@
         {
           "dia": "DÍA 05",
           "lugar": "FOZ DO IGUAZÚ-BSAS-URUGUAY",
-          "detalle": "Desayuno y partida en horas de la mañana en transfer rumbo al aeropuerto, vuelo de regreso. A la llegada a Aeroparque, transfer a Puerto Madero para volver a Colonia vía barco en horas de la tarde noche. En Colonia bus directo a Tres Cruces, fin de nuestros servicios. Por la noche cena. ITINERARIO DE VUELOS 20 de Setiembre Vuelo: JA 3148 AEP – 17:45 / 19:33 – IGR 24 de Setiembre Vuelo: JA 3141 IGR – 07:33 / 09:29 – AEP",
+          "detalle": "Desayuno y partida en horas de la mañana en transfer rumbo al aeropuerto, vuelo de regreso. A la llegada a Aeroparque, transfer a Puerto Madero para volver a Colonia vía barco en horas de la tarde noche. En Colonia bus directo a Tres Cruces, fin de nuestros servicios. Por la noche cena. ITINERARIO DE VUELOS 20 de Setiembre Vuelo: JA 3148 AEP – 17:45 / 19:33 – IGR 24 de Setiembre Vuelo: JA 3141 IGR – 07:33 / 09:29 – AEP LINK DEL HOTEL HOTEL REAL",
           "first": false,
           "last": true
         }
@@ -89,6 +448,44 @@
         "Triple"
       ],
       "precioDesde": "849",
+      "variantesCompletas": [
+        {
+          "variationId": 35807,
+          "salida": "20 de septiembre",
+          "alojamiento": "HOTEL REAL",
+          "base": "Single",
+          "precio": "1059",
+          "disponible": true,
+          "sku": "PKG--20-DE-SEPTIEMBRE-HOTEL-REAL-SINGLE-T5573"
+        },
+        {
+          "variationId": 35808,
+          "salida": "20 de septiembre",
+          "alojamiento": "HOTEL REAL",
+          "base": "Doble",
+          "precio": "849",
+          "disponible": true,
+          "sku": "PKG--20-DE-SEPTIEMBRE-HOTEL-REAL-DOBLE-T5573"
+        },
+        {
+          "variationId": 35809,
+          "salida": "20 de septiembre",
+          "alojamiento": "HOTEL REAL",
+          "base": "Triple",
+          "precio": "849",
+          "disponible": true,
+          "sku": "PKG--20-DE-SEPTIEMBRE-HOTEL-REAL-TRIPLE-T5573"
+        }
+      ],
+      "matrizPrecios": {
+        "20 de septiembre": {
+          "HOTEL REAL": {
+            "Single": 1059,
+            "Doble": 849,
+            "Triple": 849
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -103,7 +500,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:08.169Z"
+      "updatedAt": "2026-05-03T01:11:42.471Z"
     },
     {
       "id": "funtour-gramado-y-canela-vacaciones-de-setiembre-2026",
@@ -195,6 +592,86 @@
         "Cuádruple"
       ],
       "precioDesde": "349",
+      "variantesCompletas": [
+        {
+          "variationId": 35694,
+          "salida": "20 de septiembre",
+          "alojamiento": "Laghetto Toscana",
+          "base": "Single",
+          "precio": "639",
+          "disponible": true,
+          "sku": "PKG-99-20-DE-SEPTIEMBRE-LAGHETTO-TOSCANA-SINGLE-T5532"
+        },
+        {
+          "variationId": 35695,
+          "salida": "20 de septiembre",
+          "alojamiento": "Laghetto Toscana",
+          "base": "Doble",
+          "precio": "479",
+          "disponible": true,
+          "sku": "PKG-99-20-DE-SEPTIEMBRE-LAGHETTO-TOSCANA-DOBLE-T5532"
+        },
+        {
+          "variationId": 35696,
+          "salida": "20 de septiembre",
+          "alojamiento": "Laghetto Toscana",
+          "base": "Triple",
+          "precio": "479",
+          "disponible": true,
+          "sku": "PKG-99-20-DE-SEPTIEMBRE-LAGHETTO-TOSCANA-TRIPLE-T5532"
+        },
+        {
+          "variationId": 35697,
+          "salida": "20 de septiembre",
+          "alojamiento": "Sky Ville Canela",
+          "base": "Single",
+          "precio": "429",
+          "disponible": true,
+          "sku": "PKG-99-20-DE-SEPTIEMBRE-SKY-VILLE-CANELA-SINGLE-T5545"
+        },
+        {
+          "variationId": 35698,
+          "salida": "20 de septiembre",
+          "alojamiento": "Sky Ville Canela",
+          "base": "Doble",
+          "precio": "349",
+          "disponible": true,
+          "sku": "PKG-99-20-DE-SEPTIEMBRE-SKY-VILLE-CANELA-DOBLE-T5545"
+        },
+        {
+          "variationId": 35699,
+          "salida": "20 de septiembre",
+          "alojamiento": "Sky Ville Canela",
+          "base": "Triple",
+          "precio": "349",
+          "disponible": true,
+          "sku": "PKG-99-20-DE-SEPTIEMBRE-SKY-VILLE-CANELA-TRIPLE-T5545"
+        },
+        {
+          "variationId": 35700,
+          "salida": "20 de septiembre",
+          "alojamiento": "Sky Ville Canela",
+          "base": "Cuádruple",
+          "precio": "349",
+          "disponible": true,
+          "sku": "PKG-99-20-DE-SEPTIEMBRE-SKY-VILLE-CANELA-CUáDRUPLE-T5545"
+        }
+      ],
+      "matrizPrecios": {
+        "20 de septiembre": {
+          "Laghetto Toscana": {
+            "Single": 639,
+            "Doble": 479,
+            "Triple": 479
+          },
+          "Sky Ville Canela": {
+            "Single": 429,
+            "Doble": 349,
+            "Triple": 349,
+            "Cuádruple": 349
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -209,7 +686,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:10.469Z"
+      "updatedAt": "2026-05-03T01:11:44.691Z"
     },
     {
       "id": "funtour-gramado-con-2-parques-vacaciones-de-setiembre-2026",
@@ -303,6 +780,76 @@
         "Cuadruple"
       ],
       "precioDesde": "449",
+      "variantesCompletas": [
+        {
+          "variationId": 35647,
+          "salida": "20 de septiembre",
+          "alojamiento": "Laghetto Toscana",
+          "base": "Single",
+          "precio": "739",
+          "disponible": true,
+          "sku": "PKG--20-DE-SEPTIEMBRE-LAGHETTO-TOSCANA-SINGLE-T5533"
+        },
+        {
+          "variationId": 35648,
+          "salida": "20 de septiembre",
+          "alojamiento": "Laghetto Toscana",
+          "base": "Doble",
+          "precio": "579",
+          "disponible": true,
+          "sku": "PKG--20-DE-SEPTIEMBRE-LAGHETTO-TOSCANA-DOBLE-T5533"
+        },
+        {
+          "variationId": 35680,
+          "salida": "20 de septiembre",
+          "alojamiento": "Sky Ville Canela",
+          "base": "Single",
+          "precio": "529",
+          "disponible": true,
+          "sku": "PKG-100"
+        },
+        {
+          "variationId": 35681,
+          "salida": "20 de septiembre",
+          "alojamiento": "Sky Ville Canela",
+          "base": "Doble",
+          "precio": "449",
+          "disponible": true,
+          "sku": "PKG-100"
+        },
+        {
+          "variationId": 35682,
+          "salida": "20 de septiembre",
+          "alojamiento": "Sky Ville Canela",
+          "base": "Triple",
+          "precio": "449",
+          "disponible": true,
+          "sku": "PKG-100"
+        },
+        {
+          "variationId": 35683,
+          "salida": "20 de septiembre",
+          "alojamiento": "Sky Ville Canela",
+          "base": "Cuadruple",
+          "precio": "449",
+          "disponible": true,
+          "sku": "PKG-100"
+        }
+      ],
+      "matrizPrecios": {
+        "20 de septiembre": {
+          "Laghetto Toscana": {
+            "Single": 739,
+            "Doble": 579
+          },
+          "Sky Ville Canela": {
+            "Single": 529,
+            "Doble": 449,
+            "Triple": 449,
+            "Cuadruple": 449
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -317,7 +864,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:12.782Z"
+      "updatedAt": "2026-05-03T01:11:46.895Z"
     },
     {
       "id": "funtour-gramado-y-canela-natal-luz-2026",
@@ -358,6 +905,106 @@
         "Triple"
       ],
       "precioDesde": "469",
+      "variantesCompletas": [
+        {
+          "variationId": 35626,
+          "salida": "24 de Octubre",
+          "alojamiento": "",
+          "base": "",
+          "precio": "589",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35627,
+          "salida": "24 de Octubre",
+          "alojamiento": "",
+          "base": "",
+          "precio": "469",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35628,
+          "salida": "24 de Octubre",
+          "alojamiento": "",
+          "base": "",
+          "precio": "469",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35629,
+          "salida": "07 de Noviembre",
+          "alojamiento": "",
+          "base": "",
+          "precio": "739",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35630,
+          "salida": "07 de Noviembre",
+          "alojamiento": "",
+          "base": "",
+          "precio": "549",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35631,
+          "salida": "07 de Noviembre",
+          "alojamiento": "",
+          "base": "",
+          "precio": "549",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35632,
+          "salida": "21 de Noviembre",
+          "alojamiento": "",
+          "base": "",
+          "precio": "719",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35633,
+          "salida": "21 de Noviembre",
+          "alojamiento": "",
+          "base": "",
+          "precio": "539",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35634,
+          "salida": "21 de Noviembre",
+          "alojamiento": "",
+          "base": "",
+          "precio": "539",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "24 de Octubre": {
+          "": {
+            "": 469
+          }
+        },
+        "07 de Noviembre": {
+          "": {
+            "": 549
+          }
+        },
+        "21 de Noviembre": {
+          "": {
+            "": 539
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -377,7 +1024,7 @@
       ],
       "temporada": "Natal",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:15.111Z"
+      "updatedAt": "2026-05-03T01:11:49.125Z"
     },
     {
       "id": "funtour-bariloche-aereo-vacaciones-de-setiembre-2026",
@@ -423,6 +1070,54 @@
         "Cuádruple"
       ],
       "precioDesde": "789",
+      "variantesCompletas": [
+        {
+          "variationId": 35606,
+          "salida": "20 de septiembre",
+          "alojamiento": "HOTELSOFT",
+          "base": "Single",
+          "precio": "1069",
+          "disponible": true,
+          "sku": "PKG--20-DE-SEPTIEMBRE-HOTELSOFT-SINGLE-T5529"
+        },
+        {
+          "variationId": 35607,
+          "salida": "20 de septiembre",
+          "alojamiento": "HOTELSOFT",
+          "base": "Doble",
+          "precio": "789",
+          "disponible": true,
+          "sku": "PKG--20-DE-SEPTIEMBRE-HOTELSOFT-DOBLE-T5529"
+        },
+        {
+          "variationId": 35608,
+          "salida": "20 de septiembre",
+          "alojamiento": "HOTELSOFT",
+          "base": "Triple",
+          "precio": "789",
+          "disponible": true,
+          "sku": "PKG--20-DE-SEPTIEMBRE-HOTELSOFT-TRIPLE-T5529"
+        },
+        {
+          "variationId": 35609,
+          "salida": "20 de septiembre",
+          "alojamiento": "HOTELSOFT",
+          "base": "Cuádruple",
+          "precio": "789",
+          "disponible": true,
+          "sku": "PKG--20-DE-SEPTIEMBRE-HOTELSOFT-CUáDRUPLE-T5529"
+        }
+      ],
+      "matrizPrecios": {
+        "20 de septiembre": {
+          "HOTELSOFT": {
+            "Single": 1069,
+            "Doble": 789,
+            "Triple": 789,
+            "Cuádruple": 789
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -437,7 +1132,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:17.420Z"
+      "updatedAt": "2026-05-03T01:11:51.319Z"
     },
     {
       "id": "funtour-florianopolis-vacaciones-de-setiembre-bus-y-hotel",
@@ -504,6 +1199,96 @@
         "Cuadruple"
       ],
       "precioDesde": "449",
+      "variantesCompletas": [
+        {
+          "variationId": 35218,
+          "salida": "19 de septiembre",
+          "alojamiento": "Pousada Barbroch",
+          "base": "Single",
+          "precio": "669",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-COPY-260212180120-20-DE-SEPTIEMBRE-POUSADA-BARBROCH-SINGLE-T5473"
+        },
+        {
+          "variationId": 35219,
+          "salida": "19 de septiembre",
+          "alojamiento": "Pousada Barbroch",
+          "base": "Doble",
+          "precio": "489",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-COPY-260212180120-20-DE-SEPTIEMBRE-POUSADA-BARBROCH-DOBLE-T5473"
+        },
+        {
+          "variationId": 35220,
+          "salida": "19 de septiembre",
+          "alojamiento": "Pousada Barbroch",
+          "base": "Triple",
+          "precio": "489",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-COPY-260212180120-20-DE-SEPTIEMBRE-POUSADA-BARBROCH-TRIPLE-T5473"
+        },
+        {
+          "variationId": 35221,
+          "salida": "19 de septiembre",
+          "alojamiento": "Pousada Barbroch",
+          "base": "Cuadruple",
+          "precio": "489",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-COPY-260212180120-20-DE-SEPTIEMBRE-POUSADA-BARBROCH-CUADRUPLE-T5473"
+        },
+        {
+          "variationId": 35226,
+          "salida": "19 de septiembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Single",
+          "precio": "589",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-COPY-260212180120-20-DE-SEPTIEMBRE-HOTEL-DOM-FISH-SINGLE-T5463"
+        },
+        {
+          "variationId": 35227,
+          "salida": "19 de septiembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Doble",
+          "precio": "449",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-COPY-260212180120-20-DE-SEPTIEMBRE-HOTEL-DOM-FISH-DOBLE-T5463"
+        },
+        {
+          "variationId": 35228,
+          "salida": "19 de septiembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Triple",
+          "precio": "449",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-COPY-260212180120-20-DE-SEPTIEMBRE-HOTEL-DOM-FISH-TRIPLE-T5463"
+        },
+        {
+          "variationId": 35229,
+          "salida": "19 de septiembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Cuadruple",
+          "precio": "449",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-COPY-260212180120-20-DE-SEPTIEMBRE-HOTEL-DOM-FISH-CUADRUPLE-T5463"
+        }
+      ],
+      "matrizPrecios": {
+        "19 de septiembre": {
+          "Pousada Barbroch": {
+            "Single": 669,
+            "Doble": 489,
+            "Triple": 489,
+            "Cuadruple": 489
+          },
+          "Hotel Dom Fish": {
+            "Single": 589,
+            "Doble": 449,
+            "Triple": 449,
+            "Cuadruple": 449
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -518,7 +1303,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:19.763Z"
+      "updatedAt": "2026-05-03T01:11:53.513Z"
     },
     {
       "id": "funtour-florianopolis-vacaciones-de-setiembre-media-pension-y-paseos",
@@ -585,6 +1370,96 @@
         "Cuadruple"
       ],
       "precioDesde": "539",
+      "variantesCompletas": [
+        {
+          "variationId": 35201,
+          "salida": "19 de septiembre",
+          "alojamiento": "Pousada Barbroch",
+          "base": "Single",
+          "precio": "759",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-20-DE-SEPTIEMBRE-POUSADA-BARBROCH-SINGLE-T5475"
+        },
+        {
+          "variationId": 35202,
+          "salida": "19 de septiembre",
+          "alojamiento": "Pousada Barbroch",
+          "base": "Doble",
+          "precio": "579",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-20-DE-SEPTIEMBRE-POUSADA-BARBROCH-DOBLE-T5475"
+        },
+        {
+          "variationId": 35203,
+          "salida": "19 de septiembre",
+          "alojamiento": "Pousada Barbroch",
+          "base": "Triple",
+          "precio": "579",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-20-DE-SEPTIEMBRE-POUSADA-BARBROCH-TRIPLE-T5475"
+        },
+        {
+          "variationId": 35204,
+          "salida": "19 de septiembre",
+          "alojamiento": "Pousada Barbroch",
+          "base": "Cuadruple",
+          "precio": "579",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-20-DE-SEPTIEMBRE-POUSADA-BARBROCH-CUADRUPLE-T5475"
+        },
+        {
+          "variationId": 35209,
+          "salida": "19 de septiembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Single",
+          "precio": "689",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-20-DE-SEPTIEMBRE-HOTEL-DOM-FISH-SINGLE-T5466"
+        },
+        {
+          "variationId": 35210,
+          "salida": "19 de septiembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Doble",
+          "precio": "539",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-20-DE-SEPTIEMBRE-HOTEL-DOM-FISH-DOBLE-T5466"
+        },
+        {
+          "variationId": 35211,
+          "salida": "19 de septiembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Triple",
+          "precio": "539",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-20-DE-SEPTIEMBRE-HOTEL-DOM-FISH-TRIPLE-T5466"
+        },
+        {
+          "variationId": 35212,
+          "salida": "19 de septiembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Cuadruple",
+          "precio": "539",
+          "disponible": true,
+          "sku": "PKG-85-COPY-260212171216-20-DE-SEPTIEMBRE-HOTEL-DOM-FISH-CUADRUPLE-T5466"
+        }
+      ],
+      "matrizPrecios": {
+        "19 de septiembre": {
+          "Pousada Barbroch": {
+            "Single": 759,
+            "Doble": 579,
+            "Triple": 579,
+            "Cuadruple": 579
+          },
+          "Hotel Dom Fish": {
+            "Single": 689,
+            "Doble": 539,
+            "Triple": 539,
+            "Cuadruple": 539
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -599,7 +1474,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:22.282Z"
+      "updatedAt": "2026-05-03T01:11:55.736Z"
     },
     {
       "id": "funtour-florianopolis-baja-agosto-a-diciembre-2026-media-pension-y-paseos",
@@ -668,10 +1543,11 @@
         "Single",
         "Doble",
         "Triple",
-        "Cuadruple",
         "Cuádruple"
       ],
-      "precioDesde": "469",
+      "precioDesde": "",
+      "variantesCompletas": [],
+      "matrizPrecios": {},
       "fechas": [
         {
           "label": "Salida",
@@ -685,13 +1561,13 @@
         },
         {
           "label": "Habitación",
-          "value": "Single / Doble / Triple / Cuadruple / Cuádruple",
+          "value": "Single / Doble / Triple / Cuádruple",
           "gold": false
         }
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:24.650Z"
+      "updatedAt": "2026-05-03T01:11:58.083Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-agosto-2026",
@@ -735,6 +1611,51 @@
         "Cuádruple"
       ],
       "precioDesde": "399",
+      "variantesCompletas": [
+        {
+          "variationId": 35161,
+          "salida": "21 de Agosto",
+          "alojamiento": "",
+          "base": "",
+          "precio": "419",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35162,
+          "salida": "21 de Agosto",
+          "alojamiento": "",
+          "base": "",
+          "precio": "399",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35163,
+          "salida": "21 de Agosto",
+          "alojamiento": "",
+          "base": "",
+          "precio": "399",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35164,
+          "salida": "21 de Agosto",
+          "alojamiento": "",
+          "base": "",
+          "precio": "399",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "21 de Agosto": {
+          "": {
+            "": 399
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -749,50 +1670,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:26.931Z"
-    },
-    {
-      "id": "funtour-mendoza-santiago-de-chile-turismo-2026",
-      "slug": "mendoza-santiago-de-chile-turismo-2026",
-      "operador": "funtour",
-      "sourceUrl": "https://www.funtour.com.uy/tienda/mendoza-santiago-de-chile-turismo-2026/",
-      "titulo": "MENDOZA + SANTIAGO DE CHILE TURISMO 2026",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "MENDOZA + SANTIAGO DE CHILE TURISMO 2026",
-      "destinoSlug": "mendoza",
-      "pais": "Argentina",
-      "emoji": "🍷",
-      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2024/05/santiago-de-chile-3-ciudad-1024x1024.jpg",
-      "highlights": [],
-      "incluye": [],
-      "noIncluye": [],
-      "hoteles": [],
-      "itinerario": [],
-      "salidas": [
-        "28 de Marzo"
-      ],
-      "bases": [
-        "Single",
-        "Doble",
-        "Triple"
-      ],
-      "precioDesde": "979",
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "28 de Marzo",
-          "gold": true
-        },
-        {
-          "label": "Habitación",
-          "value": "Single / Doble / Triple",
-          "gold": false
-        }
-      ],
-      "temporada": "",
-      "notas": [],
-      "updatedAt": "2026-04-29T00:47:29.208Z"
+      "updatedAt": "2026-05-03T01:12:00.631Z"
     },
     {
       "id": "funtour-florianopolis-abril-a-junio-8-dias-media-pension-y-paseos",
@@ -860,7 +1738,9 @@
         "Triple",
         "Cuadruple"
       ],
-      "precioDesde": "429",
+      "precioDesde": "",
+      "variantesCompletas": [],
+      "matrizPrecios": {},
       "fechas": [
         {
           "label": "Salida",
@@ -880,7 +1760,7 @@
       ],
       "temporada": "Abril",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:31.522Z"
+      "updatedAt": "2026-05-03T01:12:03.910Z"
     },
     {
       "id": "funtour-gramado-y-canela-temporada-baja-2026",
@@ -930,6 +1810,123 @@
         "Triple"
       ],
       "precioDesde": "379",
+      "variantesCompletas": [
+        {
+          "variationId": 35060,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "379",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35061,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "519",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35056,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "379",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35057,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "379",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35058,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "519",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35063,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "379",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35064,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "519",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35065,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "379",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35066,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "519",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35053,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "519",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35054,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "379",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35055,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "379",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "": {
+          "": {
+            "": 379
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -949,7 +1946,7 @@
       ],
       "temporada": "Temporada baja",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:33.849Z"
+      "updatedAt": "2026-05-03T01:12:06.255Z"
     },
     {
       "id": "funtour-bariloche-aereo-vacaciones-de-julio-2026",
@@ -994,6 +1991,215 @@
         "Cuadruple"
       ],
       "precioDesde": "869",
+      "variantesCompletas": [
+        {
+          "variationId": 35776,
+          "salida": "30 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "949",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35777,
+          "salida": "30 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "949",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35778,
+          "salida": "30 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "949",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35779,
+          "salida": "30 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "1390",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34971,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "1099",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34972,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "869",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34973,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "869",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35003,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "869",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34983,
+          "salida": "28 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "1139",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34984,
+          "salida": "28 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "879",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34985,
+          "salida": "28 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "879",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34986,
+          "salida": "28 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "879",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34987,
+          "salida": "02 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "1179",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34988,
+          "salida": "02 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "949",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34989,
+          "salida": "02 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "949",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34990,
+          "salida": "02 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "949",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34995,
+          "salida": "07 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "1299",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34996,
+          "salida": "07 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "999",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34997,
+          "salida": "07 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "999",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34998,
+          "salida": "07 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "999",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "30 de Junio": {
+          "": {
+            "": 1390
+          }
+        },
+        "27 de Junio": {
+          "": {
+            "": 869
+          }
+        },
+        "28 de Junio": {
+          "": {
+            "": 879
+          }
+        },
+        "02 de Julio": {
+          "": {
+            "": 949
+          }
+        },
+        "07 de Julio": {
+          "": {
+            "": 999
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -1013,7 +2219,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:36.285Z"
+      "updatedAt": "2026-05-03T01:12:08.595Z"
     },
     {
       "id": "funtour-santiago-de-chile-con-vina-y-valparaiso-vacaciones-de-julio-2026",
@@ -1072,6 +2278,78 @@
         "Triple"
       ],
       "precioDesde": "759",
+      "variantesCompletas": [
+        {
+          "variationId": 35005,
+          "salida": "27 de Junio",
+          "alojamiento": "Hotel Presidente",
+          "base": "Single",
+          "precio": "929",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35006,
+          "salida": "27 de Junio",
+          "alojamiento": "Hotel Presidente",
+          "base": "Doble",
+          "precio": "779",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35007,
+          "salida": "27 de Junio",
+          "alojamiento": "Hotel Presidente",
+          "base": "Triple",
+          "precio": "759",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35008,
+          "salida": "05 de Julio",
+          "alojamiento": "Hotel Presidente",
+          "base": "Single",
+          "precio": "929",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35009,
+          "salida": "05 de Julio",
+          "alojamiento": "Hotel Presidente",
+          "base": "Doble",
+          "precio": "779",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35010,
+          "salida": "05 de Julio",
+          "alojamiento": "Hotel Presidente",
+          "base": "Triple",
+          "precio": "759",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "27 de Junio": {
+          "Hotel Presidente": {
+            "Single": 929,
+            "Doble": 779,
+            "Triple": 759
+          }
+        },
+        "05 de Julio": {
+          "Hotel Presidente": {
+            "Single": 929,
+            "Doble": 779,
+            "Triple": 759
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -1091,7 +2369,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:38.593Z"
+      "updatedAt": "2026-05-03T01:12:10.909Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-julio-2026",
@@ -1136,6 +2414,92 @@
         "Cuádruple"
       ],
       "precioDesde": "415",
+      "variantesCompletas": [
+        {
+          "variationId": 34952,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "529",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34953,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "415",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34954,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "415",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34955,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "415",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34944,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "529",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34945,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "415",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34946,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "415",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34947,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "415",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "04 de Julio": {
+          "": {
+            "": 415
+          }
+        },
+        "27 de Junio": {
+          "": {
+            "": 415
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -1155,7 +2519,7 @@
       ],
       "temporada": "Julio",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:40.930Z"
+      "updatedAt": "2026-05-03T01:12:13.257Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-turismo-2026",
@@ -1199,6 +2563,51 @@
         "Cuádruple"
       ],
       "precioDesde": "415",
+      "variantesCompletas": [
+        {
+          "variationId": 28154,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "529",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 28155,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "415",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 28156,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "415",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 28157,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "415",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "28 de Marzo": {
+          "": {
+            "": 415
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -1213,7 +2622,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:43.208Z"
+      "updatedAt": "2026-05-03T01:12:15.512Z"
     },
     {
       "id": "funtour-wine-tour-chile-2026",
@@ -1295,6 +2704,8 @@
         "Doble"
       ],
       "precioDesde": "",
+      "variantesCompletas": [],
+      "matrizPrecios": {},
       "fechas": [
         {
           "label": "Salida",
@@ -1309,7 +2720,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:45.529Z"
+      "updatedAt": "2026-05-03T01:12:17.679Z"
     },
     {
       "id": "funtour-cataratas-aereo-vacaciones-de-julio-2026",
@@ -1398,6 +2809,42 @@
         "Triple"
       ],
       "precioDesde": "769",
+      "variantesCompletas": [
+        {
+          "variationId": 34254,
+          "salida": "27 de Junio",
+          "alojamiento": "Hotel Real",
+          "base": "",
+          "precio": "989",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34255,
+          "salida": "27 de Junio",
+          "alojamiento": "Hotel Real",
+          "base": "",
+          "precio": "769",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34256,
+          "salida": "27 de Junio",
+          "alojamiento": "Hotel Real",
+          "base": "",
+          "precio": "769",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "27 de Junio": {
+          "Hotel Real": {
+            "": 769
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -1412,7 +2859,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:47.794Z"
+      "updatedAt": "2026-05-03T01:12:19.830Z"
     },
     {
       "id": "funtour-gramado-y-canela-vacaciones-de-julio-2026-desde-montevideo-y-litoral-norte",
@@ -1456,6 +2903,119 @@
         "Cuadruple"
       ],
       "precioDesde": "389",
+      "variantesCompletas": [
+        {
+          "variationId": 35654,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "389",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35015,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "559",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35016,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "389",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35017,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "389",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35018,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "719",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35019,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "469",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35020,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "469",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34237,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "725",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34238,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "499",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34240,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "725",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34241,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "499",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "27 de Junio": {
+          "": {
+            "": 499
+          }
+        },
+        "04 de Julio": {
+          "": {
+            "": 499
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -1475,7 +3035,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:50.095Z"
+      "updatedAt": "2026-05-03T01:12:22.033Z"
     },
     {
       "id": "funtour-gramado-con-2-parques-vacaciones-de-julio-2026-desde-montevideo-y-litoral-norte",
@@ -1521,6 +3081,128 @@
         "Cuadruple"
       ],
       "precioDesde": "499",
+      "variantesCompletas": [
+        {
+          "variationId": 35655,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "579",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35656,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "499",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35021,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "669",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35022,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "499",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35023,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "499",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35024,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "829",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35025,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "579",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35026,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "579",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34223,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "829",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34224,
+          "salida": "27 de Junio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "609",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34226,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "829",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34227,
+          "salida": "04 de Julio",
+          "alojamiento": "",
+          "base": "",
+          "precio": "609",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "04 de Julio": {
+          "": {
+            "": 609
+          }
+        },
+        "27 de Junio": {
+          "": {
+            "": 609
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -1540,7 +3222,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:52.585Z"
+      "updatedAt": "2026-05-03T01:12:24.241Z"
     },
     {
       "id": "funtour-floripa-julio-con-beto-carrero-y-compras-8-dias-media-pension-y-paseos",
@@ -1593,6 +3275,159 @@
         "Cuadruple"
       ],
       "precioDesde": "580",
+      "variantesCompletas": [
+        {
+          "variationId": 34198,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "909",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34199,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "645",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34200,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "645",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34201,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "645",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34202,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "729",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34203,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "580",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34204,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "580",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34205,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "580",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34206,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "909",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34207,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "645",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34208,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "645",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34209,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "645",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34210,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "729",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34211,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "580",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34212,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "580",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34213,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "580",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "": {
+          "": {
+            "": 580
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -1612,7 +3447,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:54.942Z"
+      "updatedAt": "2026-05-03T01:12:26.445Z"
     },
     {
       "id": "funtour-florianopolis-marzo-8-dias-media-pension-y-paseos",
@@ -1684,6 +3519,159 @@
         "Cuadruple"
       ],
       "precioDesde": "499",
+      "variantesCompletas": [
+        {
+          "variationId": 35072,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "839",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35073,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "519",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35074,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "519",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35075,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "519",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34857,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "769",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34858,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "529",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34859,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "529",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34860,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "529",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34165,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "849",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34166,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "579",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34167,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "579",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34168,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "579",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34161,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "745",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34162,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "499",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34163,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "499",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34164,
+          "salida": "",
+          "alojamiento": "",
+          "base": "",
+          "precio": "499",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "": {
+          "": {
+            "": 499
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -1703,7 +3691,7 @@
       ],
       "temporada": "Marzo",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:57.278Z"
+      "updatedAt": "2026-05-03T01:12:28.672Z"
     },
     {
       "id": "funtour-santiago-de-chile-con-vina-y-valparaiso-semana-de-turismo-2026",
@@ -1761,6 +3749,44 @@
         "Triple"
       ],
       "precioDesde": "659",
+      "variantesCompletas": [
+        {
+          "variationId": 33902,
+          "salida": "25 de Marzo",
+          "alojamiento": "Hotel Presidente",
+          "base": "Single",
+          "precio": "899",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33903,
+          "salida": "25 de Marzo",
+          "alojamiento": "Hotel Presidente",
+          "base": "Doble",
+          "precio": "679",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33904,
+          "salida": "25 de Marzo",
+          "alojamiento": "Hotel Presidente",
+          "base": "Triple",
+          "precio": "659",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "25 de Marzo": {
+          "Hotel Presidente": {
+            "Single": 899,
+            "Doble": 679,
+            "Triple": 659
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -1775,7 +3801,7 @@
       ],
       "temporada": "Semana de turismo",
       "notas": [],
-      "updatedAt": "2026-04-29T00:47:59.534Z"
+      "updatedAt": "2026-05-03T01:12:30.979Z"
     },
     {
       "id": "funtour-gramado-y-canela-sin-parques-turismo-2026",
@@ -1818,6 +3844,78 @@
         "Cuadruple"
       ],
       "precioDesde": "339",
+      "variantesCompletas": [
+        {
+          "variationId": 33150,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "579",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33151,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "429",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33152,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "409",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33153,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "449",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33154,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "339",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33155,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "339",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35302,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "339",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "28 de Marzo": {
+          "": {
+            "": 339
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -1832,7 +3930,7 @@
       ],
       "temporada": "Semana de turismo",
       "notas": [],
-      "updatedAt": "2026-04-29T00:48:03.512Z"
+      "updatedAt": "2026-05-03T01:12:33.452Z"
     },
     {
       "id": "funtour-gramado-y-canela-con-2-parques-turismo-2026",
@@ -1877,6 +3975,78 @@
         "Cuadruple"
       ],
       "precioDesde": "439",
+      "variantesCompletas": [
+        {
+          "variationId": 33136,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "679",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33137,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "529",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33138,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "499",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33139,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "549",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33140,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "439",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33141,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "439",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 35305,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "439",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "28 de Marzo": {
+          "": {
+            "": 439
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -1891,7 +4061,7 @@
       ],
       "temporada": "Semana de turismo",
       "notas": [],
-      "updatedAt": "2026-04-29T00:48:05.948Z"
+      "updatedAt": "2026-05-03T01:12:35.704Z"
     },
     {
       "id": "funtour-florianopolis-turismo-2026-bus-y-hotel-8-dias",
@@ -1960,6 +4130,177 @@
         "Child ( 4 a 12 años)"
       ],
       "precioDesde": "459",
+      "variantesCompletas": [
+        {
+          "variationId": 34929,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "479",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34930,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "479",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34907,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "529",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34908,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "529",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34909,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "529",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34910,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "739",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 32287,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "859",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 32288,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "579",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 32289,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "499",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 32241,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "829",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 32242,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "559",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 32243,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "489",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 32244,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "479",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 32246,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "879",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 32247,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "609",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 32248,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "589",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 32249,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "579",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 32250,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "459",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "28 de Marzo": {
+          "": {
+            "": 459
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -1974,7 +4315,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-04-29T00:48:08.294Z"
+      "updatedAt": "2026-05-03T01:12:38.060Z"
     },
     {
       "id": "funtour-bombinhas-turismo-2026-9-dias",
@@ -2042,6 +4383,87 @@
         "Triple"
       ],
       "precioDesde": "629",
+      "variantesCompletas": [
+        {
+          "variationId": 33401,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "1019",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33402,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "679",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33403,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "629",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33346,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "719",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33347,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "629",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33112,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "1109",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33113,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "709",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33114,
+          "salida": "28 de Marzo",
+          "alojamiento": "",
+          "base": "",
+          "precio": "629",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "28 de Marzo": {
+          "": {
+            "": 629
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -2056,7 +4478,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-04-29T00:48:10.582Z"
+      "updatedAt": "2026-05-03T01:12:40.307Z"
     },
     {
       "id": "funtour-bombinhas-enero-2026-10-dias",
@@ -2126,7 +4548,9 @@
         "Doble",
         "Triple"
       ],
-      "precioDesde": "789",
+      "precioDesde": "",
+      "variantesCompletas": [],
+      "matrizPrecios": {},
       "fechas": [
         {
           "label": "Salida",
@@ -2146,7 +4570,7 @@
       ],
       "temporada": "Enero",
       "notas": [],
-      "updatedAt": "2026-04-29T00:48:12.962Z"
+      "updatedAt": "2026-05-03T01:12:42.678Z"
     },
     {
       "id": "funtour-ferrugem-verano-2026-8-dias",
@@ -2225,6 +4649,215 @@
         "Quíntuple"
       ],
       "precioDesde": "469",
+      "variantesCompletas": [
+        {
+          "variationId": 33192,
+          "salida": "11 de Enero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "509",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33193,
+          "salida": "11 de Enero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "509",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33194,
+          "salida": "11 de Enero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "479",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33195,
+          "salida": "11 de Enero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "479",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33196,
+          "salida": "18 de Enero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "509",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33197,
+          "salida": "18 de Enero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "509",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33198,
+          "salida": "18 de Enero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "479",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33199,
+          "salida": "18 de Enero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "479",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33200,
+          "salida": "25 de Enero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "509",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33201,
+          "salida": "25 de Enero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "509",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33202,
+          "salida": "25 de Enero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "479",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33203,
+          "salida": "25 de Enero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "479",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33204,
+          "salida": "01 de Febrero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "499",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33205,
+          "salida": "01 de Febrero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "499",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33206,
+          "salida": "01 de Febrero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "469",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33207,
+          "salida": "01 de Febrero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "469",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33208,
+          "salida": "08 de Febrero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "499",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33209,
+          "salida": "08 de Febrero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "499",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33210,
+          "salida": "08 de Febrero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "469",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 33211,
+          "salida": "08 de Febrero",
+          "alojamiento": "Posada Baleia Franca",
+          "base": "",
+          "precio": "469",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "11 de Enero": {
+          "Posada Baleia Franca": {
+            "": 479
+          }
+        },
+        "18 de Enero": {
+          "Posada Baleia Franca": {
+            "": 479
+          }
+        },
+        "25 de Enero": {
+          "Posada Baleia Franca": {
+            "": 479
+          }
+        },
+        "01 de Febrero": {
+          "Posada Baleia Franca": {
+            "": 469
+          }
+        },
+        "08 de Febrero": {
+          "Posada Baleia Franca": {
+            "": 469
+          }
+        }
+      },
       "fechas": [
         {
           "label": "Salida",
@@ -2244,7 +4877,7 @@
       ],
       "temporada": "Verano",
       "notas": [],
-      "updatedAt": "2026-04-29T00:48:15.343Z"
+      "updatedAt": "2026-05-03T01:12:44.902Z"
     }
   ]
 }
