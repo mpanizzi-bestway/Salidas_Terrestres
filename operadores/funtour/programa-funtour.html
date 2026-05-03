@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
+
     :root {
       --navy:      #2d3a6b;
       --navy-dark: #1e2748;
@@ -25,207 +26,325 @@
       --border:    #d8d6e0;
       --white:     #ffffff;
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'DM Sans',sans-serif; background:#dddbd5; color:var(--text); font-size:9pt; line-height:1.5; }
 
-    /* PRINT BAR */
-    .print-bar { position:fixed; top:16px; right:16px; z-index:999; display:flex; gap:8px; }
-    .btn { background:var(--navy); color:white; border:none; padding:9px 20px; border-radius:7px; font-family:'DM Sans',sans-serif; font-size:.8rem; font-weight:600; cursor:pointer; box-shadow:0 3px 14px rgba(0,0,0,.22); display:flex; align-items:center; gap:7px; transition:background .2s; text-decoration:none; }
-    .btn:hover { background:var(--fun); }
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family:'DM Sans',sans-serif;
+      background:#dddbd5;
+      color:var(--text);
+      font-size:9pt;
+      line-height:1.5;
+    }
+
+    /* ── PRINT BAR ── */
+    .print-bar {
+      position:fixed; top:16px; right:16px; z-index:999;
+      display:flex; gap:8px;
+    }
+    .btn {
+      background:var(--navy); color:white; border:none;
+      padding:9px 20px; border-radius:7px;
+      font-family:'DM Sans',sans-serif; font-size:.8rem; font-weight:600;
+      cursor:pointer; box-shadow:0 3px 14px rgba(0,0,0,.22);
+      display:flex; align-items:center; gap:7px; transition:background .2s;
+      text-decoration:none;
+    }
+    .btn:hover { background:var(--accent); }
     .btn.sec { background:#555; }
     .btn.sec:hover { background:#333; }
 
-    /* LOADING / ERROR */
-    #loading-screen { position:fixed; inset:0; background:var(--navy-dark); display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:9999; color:white; gap:16px; }
+    /* ── LOADING / ERROR ── */
+    #loading-screen {
+      position:fixed; inset:0; background:var(--navy-dark);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      z-index:9999; color:white; gap:16px;
+    }
     #loading-screen h2 { font-family:'Poppins',sans-serif; font-size:1.1rem; font-weight:600; }
     #loading-screen p  { font-size:.82rem; color:rgba(255,255,255,.5); }
     .loader-bar { width:200px; height:3px; background:rgba(255,255,255,.15); border-radius:2px; overflow:hidden; }
-    .loader-fill { height:100%; background:var(--fun); border-radius:2px; animation:loadbar 1.8s ease-in-out infinite; }
+    .loader-fill { height:100%; background:var(--gold); border-radius:2px; animation:loadbar 1.8s ease-in-out infinite; }
     @keyframes loadbar { 0%{width:0%} 50%{width:70%} 100%{width:100%} }
     #loading-screen.hidden { display:none; }
-    #error-screen { display:none; position:fixed; inset:0; background:var(--navy-dark); color:white; flex-direction:column; align-items:center; justify-content:center; gap:16px; z-index:9999; text-align:center; padding:40px; }
+
+    #error-screen {
+      display:none; position:fixed; inset:0; background:var(--navy-dark); color:white;
+      flex-direction:column; align-items:center; justify-content:center;
+      gap:16px; z-index:9999; text-align:center; padding:40px;
+    }
     #error-screen.visible { display:flex; }
-    #error-screen h2 { font-family:'Poppins',sans-serif; color:var(--fun-lt); }
+    #error-screen h2 { font-family:'Poppins',sans-serif; color:var(--gold); }
     #error-screen p  { color:rgba(255,255,255,.6); font-size:.9rem; max-width:400px; line-height:1.6; }
+    #error-screen code { background:rgba(255,255,255,.1); padding:2px 8px; border-radius:4px; font-size:.8rem; }
 
-    /* PÁGINA A4 */
-    .page { width:210mm; min-height:297mm; margin:24px auto; background:var(--white); box-shadow:0 4px 40px rgba(0,0,0,.2); display:flex; flex-direction:column; }
-    .page-content { padding:10mm 13mm 8mm; flex:1; display:flex; flex-direction:column; gap:5.5mm; }
+    /* ── PÁGINA A4 ── */
+    .page {
+      width:210mm; min-height:297mm;
+      margin:24px auto;
+      background:var(--white);
+      box-shadow:0 4px 40px rgba(0,0,0,.2);
+      display:flex; flex-direction:column;
+    }
+    .page-content {
+      padding:10mm 13mm 8mm;
+      flex:1; display:flex; flex-direction:column; gap:5.5mm;
+    }
 
-    /* 1. ENCABEZADO */
-    .doc-header { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:5mm; padding-bottom:4mm; border-bottom:2.5px solid var(--navy); position:relative; }
-    .doc-header::after { content:''; position:absolute; bottom:-4.5px; left:0; right:0; height:1.5px; background:var(--fun); }
-    .logo-block { height:22mm; display:flex; align-items:center; }
+    /* ── 1. ENCABEZADO ── */
+    .doc-header {
+      display:grid; grid-template-columns:auto 1fr auto;
+      align-items:center; gap:5mm;
+      padding-bottom:4mm; border-bottom:2.5px solid var(--navy);
+      position:relative;
+    }
+    .doc-header::after {
+      content:''; position:absolute; bottom:-4.5px; left:0; right:0;
+      height:1.5px; background:var(--gold);
+    }
+    .logo-block { display:flex; align-items:center; }
     .logo-block img { height:22mm; width:auto; display:block; max-width:55mm; object-fit:contain; }
-    .logo-block .logo-fallback { font-family:'Poppins',sans-serif; font-size:14pt; font-weight:800; color:var(--navy); }
-    .header-center { text-align:center; }
-    .header-center .eslogan { font-family:'Poppins',sans-serif; font-size:7pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--mid); }
+    .logo-block .logo-fallback {
+      height:22mm; width:44mm;
+      background:var(--navy); border-radius:4px;
+      display:none; align-items:center; justify-content:center;
+      color:white; font-family:'Poppins',sans-serif; font-size:11pt;
+      font-weight:800; letter-spacing:.04em;
+    }
+    .header-center {
+      text-align:center;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+    }
+    .header-center .eslogan {
+      font-family:'Poppins',sans-serif; font-size:7pt; font-weight:600;
+      letter-spacing:.18em; text-transform:uppercase; color:var(--mid);
+    }
+    /* Bloque de contacto: igual a programa.html */
     .contact-block { text-align:right; font-size:7.5pt; color:var(--mid); line-height:1.7; }
-    .contact-block strong { display:block; font-size:8pt; color:var(--navy); font-weight:600; margin-bottom:.5mm; }
+    .contact-block .contact-name {
+      display:block; font-size:9.5pt; color:var(--navy);
+      font-weight:700; font-family:'Poppins',sans-serif;
+      margin-bottom:1mm; letter-spacing:.01em;
+    }
+    .contact-block .contact-cargo {
+      display:block; font-size:7pt; color:var(--mid);
+      font-weight:400; margin-top:-1mm; margin-bottom:1.5mm;
+    }
+    .contact-block a { color:inherit; text-decoration:none; }
+    .contact-block a:hover { text-decoration:underline; }
 
-    /* 2. TÍTULO */
+    /* ── 2. TÍTULO ── */
     .prog-title-block { text-align:center; padding:3mm 0 1mm; }
-    .prog-title-block h1 { font-family:'Poppins',sans-serif; font-size:20pt; font-weight:800; color:var(--navy); line-height:1.1; text-transform:uppercase; }
-    .prog-title-block .duracion-line { font-family:'Poppins',sans-serif; font-size:7.5pt; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--fun); margin-top:1.5mm; }
+    .prog-title-block h1 {
+      font-family:'Poppins',sans-serif; font-size:26pt; font-weight:800;
+      color:var(--navy); line-height:1.05; letter-spacing:-.01em; text-transform:uppercase;
+    }
+    .prog-title-block .duracion-line {
+      font-family:'Poppins',sans-serif; font-size:7.5pt; font-weight:600;
+      letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-top:1.5mm;
+    }
 
-    /* 3. BANDA FECHAS */
-    .fechas-band { background:var(--navy); border-radius:4px; padding:3mm 6mm; display:flex; align-items:center; justify-content:space-between; gap:3mm; flex-wrap:wrap; }
+    /* ── 3. BANDA FECHAS ── */
+    .fechas-band {
+      background:var(--navy); border-radius:4px; padding:3mm 6mm;
+      display:flex; align-items:center; justify-content:space-between; gap:3mm;
+    }
     .fecha-item { display:flex; flex-direction:column; gap:.5mm; }
-    .fecha-item .fl { font-family:'Poppins',sans-serif; font-size:6pt; text-transform:uppercase; letter-spacing:.12em; color:rgba(255,255,255,.45); font-weight:600; }
+    .fecha-item .fl {
+      font-family:'Poppins',sans-serif; font-size:6pt; text-transform:uppercase;
+      letter-spacing:.12em; color:rgba(255,255,255,.45); font-weight:600;
+    }
     .fecha-item .fv { font-size:8.5pt; color:white; font-weight:600; }
     .fecha-item .fv.gold { color:var(--gold-lt); }
-    .fecha-item .fv.fun  { color:var(--fun-lt); }
     .fecha-sep { width:1px; height:8mm; background:rgba(255,255,255,.15); }
 
-    /* SECCIONES */
+    /* ── SECCIONES ── */
     .sec { display:flex; flex-direction:column; gap:2.5mm; }
-    .sec-title { font-family:'Poppins',sans-serif; font-size:6.5pt; font-weight:700; text-transform:uppercase; letter-spacing:.14em; color:var(--navy); padding-bottom:1.5mm; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:2mm; }
-    .sec-title::before { content:''; display:block; width:3mm; height:3mm; background:var(--fun); border-radius:50%; flex-shrink:0; }
+    .sec-title {
+      font-family:'Poppins',sans-serif; font-size:6.5pt; font-weight:700;
+      text-transform:uppercase; letter-spacing:.14em; color:var(--navy);
+      padding-bottom:1.5mm; border-bottom:1px solid var(--border);
+      display:flex; align-items:center; gap:2mm;
+    }
+    .sec-title::before {
+      content:''; display:block; width:3mm; height:3mm;
+      background:var(--gold); border-radius:50%; flex-shrink:0;
+    }
 
-    /* 4. DESTINO */
+    /* ── 4. DESTINO ── */
     .destino-grid { display:grid; grid-template-columns:1fr 50mm; gap:5mm; align-items:start; }
     .destino-text p { font-size:8.5pt; color:var(--mid); line-height:1.6; font-style:italic; margin-bottom:3mm; }
     .destino-highlights { display:flex; flex-wrap:wrap; gap:1.5mm; }
-    .hl-tag { background:var(--light); border:.5px solid var(--border); border-radius:20px; padding:1mm 2.5mm; font-size:7pt; color:var(--navy); font-weight:500; }
-    .destino-foto { border-radius:4px; overflow:hidden; background:var(--teal-bg); height:28mm; display:flex; align-items:center; justify-content:center; border:.5px solid var(--border); }
-    .destino-foto img { width:100%; height:100%; object-fit:cover; display:block; }
+    .hl-tag {
+      background:var(--light); border:.5px solid var(--border);
+      border-radius:20px; padding:1mm 2.5mm; font-size:7pt; color:var(--navy); font-weight:500;
+    }
+    .destino-foto {
+      border-radius:4px; overflow:hidden; background:var(--teal-bg);
+      height:28mm; display:flex; align-items:center; justify-content:center;
+      border:.5px solid var(--border); position:relative;
+    }
+    .destino-foto img { width:100%; height:100%; object-fit:cover; display:none; }
     .destino-foto .ph { font-size:7.5pt; color:var(--teal); text-align:center; padding:4mm; line-height:1.5; }
 
-    /* 5. INCLUYE / NO INCLUYE */
+    /* ── 5. INCLUYE / NO INCLUYE ── */
     .incluye-grid { display:grid; grid-template-columns:1fr 1fr; gap:4mm; }
-    .incluye-col h4 { font-family:'Poppins',sans-serif; font-size:6pt; font-weight:700; text-transform:uppercase; letter-spacing:.1em; margin-bottom:2mm; }
-    .incluye-col.si  h4 { color:var(--fun); }
-    .incluye-col.no  h4 { color:var(--mid); }
-    .incluye-lista { display:flex; flex-direction:column; gap:1mm; }
-    .incluye-item { font-size:7.5pt; color:var(--mid); line-height:1.4; display:flex; align-items:baseline; gap:1.5mm; }
-    .incluye-item::before { content:'✓'; font-size:7pt; color:var(--fun); font-weight:700; flex-shrink:0; }
-    .no-incluye-item::before { content:'–'; color:var(--mid); }
+    .incluye-col h4 {
+      font-family:'Poppins',sans-serif; font-size:6pt; font-weight:700;
+      text-transform:uppercase; letter-spacing:.1em; margin-bottom:2mm;
+    }
+    .incluye-col.si h4 { color:var(--teal); }
+    .incluye-col.no h4 { color:var(--mid); }
+    .incluye-lista { display:flex; flex-direction:column; gap:1.2mm; }
 
-    /* 6. ITINERARIO */
-    .itinerary-table { width:100%; border-collapse:collapse; table-layout:fixed; }
+    /* inc-row: estilo unificado con programa.html */
+    .inc-row {
+      display:flex; align-items:flex-start; gap:2mm;
+      font-size:8pt; color:var(--text); line-height:1.4;
+    }
+    .inc-dot {
+      width:3.5mm; height:3.5mm; min-width:3.5mm;
+      background:var(--teal); border-radius:50%;
+      flex-shrink:0; margin-top:1mm;
+    }
+    .inc-dot.no { background:var(--mid); opacity:.5; }
+
+    /* Badge de transporte inline */
+    .transport-badge {
+      display:inline-flex; align-items:center; gap:1.5mm;
+      border-radius:3px; padding:1mm 2.5mm;
+      font-size:6.5pt; font-weight:700; font-family:'Poppins',sans-serif;
+      white-space:nowrap; margin-left:2mm; vertical-align:middle;
+      letter-spacing:.02em; flex-shrink:0;
+    }
+    .transport-badge.aereo {
+      background:#1a4f8a; color:white;
+    }
+    .transport-badge.ferry {
+      background:var(--teal); color:white;
+    }
+
+    /* ── 6. ITINERARIO ── */
+    .itinerary-table { width:100%; border-collapse:collapse; }
     .itinerary-table tr { border-bottom:.5px solid var(--border); }
     .itinerary-table tr:last-child { border-bottom:none; }
-    .itinerary-table td { padding:2.5mm 2mm; vertical-align:top; font-size:8pt; }
-    .it-day { width:16mm; }
-    .it-day-pill { background:var(--navy); color:white; border-radius:3px; padding:1mm 2mm; font-family:'Poppins',sans-serif; font-size:6pt; font-weight:700; letter-spacing:.04em; display:inline-block; white-space:nowrap; }
-    .it-day-pill.first { background:var(--fun); }
-    .it-day-pill.last  { background:var(--gold); color:var(--navy-dark); }
-    .it-lugar-inline { font-weight:600; color:var(--navy); font-size:8pt; display:block; margin-bottom:1mm; }
-    .it-detalle { color:var(--mid); line-height:1.45; font-size:7.5pt; }
-    .it-nota-orden td { font-size:7pt; color:var(--mid); font-style:italic; padding:1.5mm 2mm; border-top:.5px solid var(--border); }
+    .itinerary-table td { padding:2mm 2mm; vertical-align:top; font-size:7.8pt; }
+    .it-dia {
+      width:14mm; white-space:nowrap;
+      padding-top:2.5mm;
+    }
+    .it-dia-pill {
+      background:var(--navy); color:white; border-radius:3px;
+      padding:1mm 2mm; font-family:'Poppins',sans-serif; font-size:6pt;
+      font-weight:700; letter-spacing:.04em; display:inline-block; white-space:nowrap;
+    }
+    .it-dia-pill.first { background:var(--fun); }
+    .it-dia-pill.last  { background:var(--gold); color:var(--navy-dark); }
+    .it-texto { color:var(--mid); line-height:1.45; padding-left:2mm; }
+    .it-lugar { font-weight:600; color:var(--navy); display:block; margin-bottom:.5mm; font-size:8pt; }
+    .it-nota {
+      font-size:7pt; color:var(--mid); font-style:italic;
+      padding:1.5mm 2mm; border-top:.5px solid var(--border);
+    }
 
-    /* 7. HOTELES */
+    /* ── 7. HOTELES ── */
     .hoteles-lista { display:flex; flex-wrap:wrap; gap:2mm; }
-    .hotel-tag { background:var(--light); border:.5px solid var(--border); border-radius:4px; padding:1.5mm 3mm; font-size:7.5pt; color:var(--navy); font-weight:500; display:flex; align-items:center; gap:1.5mm; }
+    .hotel-tag {
+      background:var(--light); border:.5px solid var(--border);
+      border-radius:4px; padding:1.5mm 3mm; font-size:7.5pt;
+      color:var(--navy); font-weight:500; display:flex; align-items:center; gap:1.5mm;
+    }
     .hotel-tag::before { content:'🏨'; font-size:7pt; }
     .hotel-url { font-size:6.5pt; color:var(--mid); }
 
     /* ══════════════════════════════════════════════════════
-       8. TABLA DE PRECIOS (nuevo bloque principal)
+       8. TABLA DE PRECIOS
+       Fuente base: 9.5pt (original 7.5pt + 2pt)
     ══════════════════════════════════════════════════════ */
-
-    /* Selector de salida */
     .salida-tabs { display:flex; gap:1.5mm; flex-wrap:wrap; margin-bottom:2.5mm; }
     .salida-tab {
       font-family:'Poppins',sans-serif; font-size:6.5pt; font-weight:700;
       text-transform:uppercase; letter-spacing:.08em;
       padding:1.5mm 3.5mm; border-radius:3px;
-      border:1px solid var(--border);
-      background:var(--light); color:var(--mid);
+      border:1px solid var(--border); background:var(--light); color:var(--mid);
       cursor:pointer; transition:all .15s;
     }
-    .salida-tab.active {
-      background:var(--navy); color:white; border-color:var(--navy);
-    }
+    .salida-tab.active { background:var(--navy); color:white; border-color:var(--navy); }
     .salida-tab:hover:not(.active) { border-color:var(--accent); color:var(--navy); }
 
-    /* Contenedor de tablas — cada salida tiene su propia tabla, se muestran/ocultan */
     .precio-tabla-wrap { display:none; }
     .precio-tabla-wrap.visible { display:block; }
 
-    /* La tabla en sí */
-    .precio-tabla {
-      width:100%; border-collapse:collapse; font-size:7.5pt;
-    }
-    .precio-tabla thead tr {
-      background:var(--navy);
-    }
+    /* tabla: font-size 9.5pt (+2 sobre 7.5pt) */
+    .precio-tabla { width:100%; border-collapse:collapse; font-size:9.5pt; }
+
+    .precio-tabla thead tr { background:var(--navy); }
     .precio-tabla thead th {
-      color:white; font-family:'Poppins',sans-serif; font-size:6pt;
-      font-weight:700; text-transform:uppercase; letter-spacing:.1em;
-      padding:2mm 3mm; text-align:center;
+      color:white; font-family:'Poppins',sans-serif;
+      font-size:7.5pt;   /* +2pt sobre el 5.5pt del diseño anterior */
+      font-weight:700; text-transform:uppercase; letter-spacing:.08em;
+      padding:2.5mm 3mm; text-align:center; white-space:nowrap;
     }
     .precio-tabla thead th:first-child { text-align:left; padding-left:3.5mm; }
 
-    /* Filas alternadas */
-    .precio-tabla tbody tr:nth-child(even) { background:#f8f7f4; }
-    .precio-tabla tbody tr:hover { background:#fff0e8; }
+    .precio-tabla tbody tr { border-bottom:.5px solid var(--border); }
+    .precio-tabla tbody tr:nth-child(even) { background:var(--light); }
+    .precio-tabla tbody tr:last-child { border-bottom:none; }
+    .precio-tabla tbody tr:hover { background:#fff5ed; }
+    .precio-tabla tbody td { padding:2.5mm 3mm; vertical-align:middle; }
+    .precio-tabla tbody td:not(:first-child) { text-align:center; }
 
-    .precio-tabla tbody td {
-      padding:2.5mm 3mm; border-bottom:.5px solid var(--border); vertical-align:middle;
-    }
-    /* Columna hotel */
-    .precio-tabla .col-hotel {
-      font-weight:600; color:var(--navy); font-size:7.5pt;
-      max-width:55mm; white-space:normal; line-height:1.3;
-    }
-    /* Celdas de precio */
-    .precio-tabla .col-precio {
-      text-align:center; font-variant-numeric:tabular-nums;
-    }
-    .precio-celda {
-      display:inline-flex; flex-direction:column; align-items:center; gap:.3mm;
-    }
-    .precio-usd {
-      font-family:'Poppins',sans-serif; font-size:8pt; font-weight:700;
-      color:var(--fun-dark);
-    }
-    .precio-usd-sym {
-      font-size:6pt; font-weight:600; color:var(--mid); margin-right:.5mm;
-    }
-    /* Precio más barato de esa fila se destaca */
-    .precio-usd.min { color:var(--fun); }
-    .precio-usd.min::after { content:' ★'; font-size:5.5pt; color:var(--gold); }
+    .col-hotel { font-weight:600; color:var(--navy); font-size:9pt; max-width:55mm; line-height:1.3; }
 
-    /* Celda vacía / no disponible */
-    .precio-nd { color:var(--border); font-size:7pt; text-align:center; }
+    .pval {
+      font-family:'Poppins',sans-serif; font-weight:700;
+      color:var(--navy-dark); font-size:9.5pt;
+    }
+    .pval.min { color:var(--fun); }
+    .pval.min::after { content:' ★'; font-size:7pt; color:var(--gold); }
+    .pval .sym { font-size:7.5pt; font-weight:600; color:var(--mid); margin-right:.3mm; }
+    .pna { color:var(--border); font-size:8.5pt; }
 
-    /* Header de base (Single, Doble…) con ícono */
-    .base-icon { display:block; font-size:7pt; margin-bottom:.5mm; opacity:.7; }
-
-    /* Leyenda bajo la tabla */
+    /* Leyenda */
     .precio-leyenda {
-      margin-top:2mm; font-size:6.5pt; color:var(--mid);
+      margin-top:2mm; font-size:7pt; color:var(--mid);
       display:flex; gap:4mm; flex-wrap:wrap; align-items:center;
     }
-    .leyenda-item { display:flex; align-items:center; gap:1mm; }
-    .leyenda-dot { width:2mm; height:2mm; border-radius:50%; background:var(--fun); flex-shrink:0; }
-    .leyenda-dot.gold { background:var(--gold); }
+    .leyenda-item { display:flex; align-items:center; gap:1.5mm; }
+    .leyenda-dot { width:2.5mm; height:2.5mm; border-radius:50%; background:var(--fun); flex-shrink:0; }
 
-    /* Banda de precio desde */
-    .precio-desde-band { background:var(--fun-bg); border:1px solid var(--fun); border-radius:4px; padding:3mm 5mm; display:flex; align-items:center; justify-content:space-between; }
-    .precio-desde-label { font-family:'Poppins',sans-serif; font-size:6.5pt; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--fun-dark); }
-    .precio-desde-val { font-family:'Poppins',sans-serif; font-size:14pt; font-weight:800; color:var(--fun-dark); }
-    .precio-desde-nota { font-size:6.5pt; color:var(--mid); font-style:italic; }
-    .precio-bases { display:flex; gap:3mm; margin-top:1.5mm; flex-wrap:wrap; }
-    .base-tag { background:var(--white); border:.5px solid var(--fun); border-radius:3px; padding:.5mm 2.5mm; font-size:6.5pt; color:var(--fun-dark); font-weight:600; }
-
-    /* 9. NOTAS */
+    /* ── 9. NOTAS ── */
     .notas-lista { display:flex; flex-direction:column; gap:1.5mm; }
-    .nota-row { background:var(--light); border-left:2px solid var(--fun); border-radius:0 3px 3px 0; padding:1.5mm 3mm; font-size:7pt; color:var(--mid); line-height:1.5; }
+    .nota-row {
+      background:var(--light); border-left:2px solid var(--gold);
+      border-radius:0 3px 3px 0; padding:1.5mm 3mm;
+      font-size:7pt; color:var(--mid); line-height:1.5;
+    }
 
-    /* PIE */
+    /* ── PIE ── */
     .doc-footer { background:var(--navy); padding:0; margin-top:auto; }
-    .footer-top { display:grid; grid-template-columns:1fr auto; align-items:center; padding:4mm 13mm; border-bottom:.5px solid rgba(255,255,255,.1); }
+    .footer-top {
+      display:grid; grid-template-columns:1fr auto;
+      align-items:center; padding:4mm 13mm;
+      border-bottom:.5px solid rgba(255,255,255,.1);
+    }
     .footer-contact { font-size:7.5pt; color:rgba(255,255,255,.65); line-height:1.8; }
-    .footer-contact strong { font-family:'Poppins',sans-serif; font-size:8pt; color:white; font-weight:600; display:block; margin-bottom:.5mm; }
+    .footer-contact .footer-name {
+      font-family:'Poppins',sans-serif; font-size:9pt; color:white;
+      font-weight:700; display:block; margin-bottom:.5mm;
+    }
     .footer-pago { display:flex; flex-direction:column; align-items:flex-end; gap:2.5mm; }
-    .pago-label { font-family:'Poppins',sans-serif; font-size:7pt; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--gold-lt); text-align:right; }
-    .pago-logo-wrap { background:white; border-radius:5px; padding:2mm 3mm; display:inline-flex; align-items:center; justify-content:center; min-width:50mm; min-height:10mm; }
-    .pago-logo-img { height:8mm; width:auto; display:block; max-width:55mm; }
-    .pago-logo-text { font-family:'Poppins',sans-serif; font-size:7pt; font-weight:700; color:var(--navy); }
+    .pago-label {
+      font-family:'Poppins',sans-serif; font-size:7pt; font-weight:600;
+      text-transform:uppercase; letter-spacing:.08em; color:var(--gold-lt);
+      text-align:right; line-height:1.4;
+    }
+    .pago-logo-img {
+      height:9mm; width:auto; display:block;
+      background:white; border-radius:5px; padding:1.5mm 3mm;
+    }
     .footer-legal { padding:2.5mm 13mm; font-size:6pt; color:rgba(255,255,255,.3); line-height:1.5; }
 
+    /* ── PRINT ── */
     @media print {
       @page { size:A4; margin:0; }
       body { background:none; }
@@ -233,8 +352,8 @@
       #loading-screen, #error-screen { display:none !important; }
       .page { width:210mm; margin:0; box-shadow:none; page-break-after:always; }
       .sec { page-break-inside:avoid; }
+      .fechas-band { page-break-inside:avoid; }
       .doc-footer { page-break-inside:avoid; }
-      /* Al imprimir, mostrar todas las tablas de salida (sin tabs) */
       .salida-tabs { display:none !important; }
       .precio-tabla-wrap { display:block !important; margin-bottom:3mm; }
       .precio-tabla-wrap::before {
@@ -245,6 +364,7 @@
         margin-bottom:1.5mm;
       }
     }
+
   </style>
 </head>
 <body>
@@ -252,16 +372,17 @@
 <div id="loading-screen">
   <h2>Cargando programa...</h2>
   <div class="loader-bar"><div class="loader-fill"></div></div>
-  <p id="loading-msg">Leyendo datos</p>
+  <p id="loading-msg">Leyendo datos de Funtour</p>
 </div>
+
 <div id="error-screen">
-  <h2>Programa no encontrado</h2>
-  <p id="error-msg"></p>
-  <a href="./funtour.html" style="color:var(--fun-lt);font-size:.9rem;">Volver a los programas</a>
+  <h2>⚠️ Programa no encontrado</h2>
+  <p id="error-msg">No se pudo cargar la información del programa solicitado.</p>
+  <a href="./funtour.html" style="color:var(--gold);font-size:.9rem;">← Volver a los programas</a>
 </div>
 
 <div class="print-bar">
-  <button class="btn" onclick="window.print()">🖨 Imprimir / PDF</button>
+  <button class="btn" onclick="window.print()">🖨️ Imprimir / PDF</button>
   <a class="btn sec" href="./funtour.html">← Volver</a>
 </div>
 
@@ -271,27 +392,22 @@
     <!-- 1. ENCABEZADO -->
     <header class="doc-header">
       <div class="logo-block">
-        <img id="logo-img"
+        <img id="header-logo"
              src="../../images/logo_bestway_azul_fondo_blanco.png"
              alt="BestWay Viajes"
-             onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='block'">
-        <span class="logo-fallback" id="logo-fallback" style="display:none">BestWay</span>
+             onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';">
+        <div class="logo-fallback" id="logo-fallback">BestWay</div>
       </div>
       <div class="header-center">
         <div class="eslogan">Tu Mundo de Oportunidades</div>
       </div>
-      <div class="contact-block">
-        <strong>BestWay Viajes</strong>
-        Tel. 2902 2116<br>
-        Rio Branco 1375, Montevideo<br>
-        info@bestway.com.uy
-      </div>
+      <div class="contact-block" id="contact-block"></div>
     </header>
 
     <!-- 2. TÍTULO -->
     <div class="prog-title-block" id="prog-titulo"></div>
 
-    <!-- 3. FECHAS / SALIDAS -->
+    <!-- 3. FECHAS -->
     <div class="fechas-band" id="prog-fechas"></div>
 
     <!-- 4. DESTINO -->
@@ -328,10 +444,8 @@
       <div class="sec-title">Itinerario</div>
       <table class="itinerary-table">
         <tbody id="prog-itinerario"></tbody>
-        <tr class="it-nota-orden">
-          <td colspan="2">* El orden de los paseos puede variar segun las condiciones del operador.</td>
-        </tr>
       </table>
+      <div class="it-nota">* El orden de los paseos y excursiones puede variar según las condiciones del operador.</div>
     </div>
 
     <!-- 7. HOTELES -->
@@ -340,23 +454,19 @@
       <div class="hoteles-lista" id="prog-hoteles"></div>
     </div>
 
-    <!-- ══════════════════════════════════════════════════════
-         8. TABLA DE PRECIOS — nuevo bloque
-    ══════════════════════════════════════════════════════ -->
+    <!-- 8. TABLA DE PRECIOS -->
     <div class="sec" id="sec-precios">
-      <div class="sec-title">Tarifas por persona</div>
-
-      <!-- Tabs de salida (interactivas, ocultas al imprimir) -->
+      <div class="sec-title">Hoteles &amp; Tarifas — Precios en U$S por persona</div>
       <div class="salida-tabs" id="salida-tabs"></div>
-
-      <!-- Una tabla por salida -->
       <div id="precio-tablas"></div>
-
-      <!-- Leyenda -->
       <div class="precio-leyenda">
-        <div class="leyenda-item"><div class="leyenda-dot"></div> Precio más económico de la salida</div>
-        <div class="leyenda-item"><div class="leyenda-dot gold"></div> — sin disponibilidad / consultar</div>
-        <div class="leyenda-item" style="margin-left:auto; font-style:italic;">Precios en U$S por persona. Sujeto a disponibilidad.</div>
+        <div class="leyenda-item">
+          <div class="leyenda-dot"></div>
+          Precio más económico de la salida
+        </div>
+        <div class="leyenda-item" style="margin-left:auto; font-style:italic;">
+          Sujeto a disponibilidad · Consultar vigencia tarifaria
+        </div>
       </div>
     </div>
 
@@ -366,35 +476,68 @@
       <div class="notas-lista" id="prog-notas"></div>
     </div>
 
-  </div>
+  </div><!-- /page-content -->
 
   <!-- PIE -->
   <footer class="doc-footer">
     <div class="footer-top">
       <div class="footer-contact">
-        <strong>Martin Panizzi — Ejecutivo de Cuentas</strong>
-        WhatsApp 095 969 909 &nbsp;·&nbsp; mpanizzi@bestway.com.uy<br>
-        www.bestway.com.uy &nbsp;·&nbsp; @bestway.uy &nbsp;·&nbsp; 095 969 909
+        <span class="footer-name">BestWay Viajes</span>
+        Tel. 2902 2116 &nbsp;·&nbsp; Río Branco 1375, Montevideo<br>
+        info@bestway.com.uy &nbsp;·&nbsp; www.bestway.com.uy
       </div>
       <div class="footer-pago">
         <div class="pago-label">Hasta 12 pagos sin recargo en U$S</div>
-        <div class="pago-logo-wrap">
-          <img class="pago-logo-img"
-               src="../../images/Medios-de-pago.png"
-               alt="Medios de pago"
-               onerror="this.style.display='none';document.getElementById('pago-text').style.display='block'">
-          <span class="pago-logo-text" id="pago-text" style="display:none">Visa · MasterCard · OCA</span>
-        </div>
+        <img class="pago-logo-img"
+             src="../../images/Medios-de-pago.png"
+             alt="Medios de pago"
+             onerror="this.style.display='none'">
       </div>
     </div>
     <div class="footer-legal">
-      Todos los precios estan sujetos a disponibilidad y variaciones tarifarias sin previo aviso. Es responsabilidad del cliente la documentacion necesaria para su viaje. Algunos paises exigen documento con al menos 6 meses de vigencia. Asesorese sobre exigencias migratorias y sanitarias. Los menores pueden requerir documentacion adicional. Se recomienda contratar seguro de cancelacion y asistencia en viaje.
+      Todos los precios están sujetos a disponibilidad y variaciones tarifarias sin previo aviso. Es responsabilidad del cliente la documentación necesaria para su viaje. Algunos países exigen documento con al menos 6 meses de vigencia al momento del viaje. Asesorese sobre exigencias migratorias y sanitarias (visa, vacunas, etc.). Los menores pueden requerir documentación adicional. La empresa no se responsabiliza por cambios o cancelaciones de compañías aéreas, hoteles u operadores. Se recomienda contratar seguro de cancelación y asistencia en viaje.
     </div>
   </footer>
-</div>
+
+</div><!-- /page -->
+
 
 <script>
-// ── Fotos ─────────────────────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════════
+//  AGENTES
+// ══════════════════════════════════════════════════════════════
+const AGENTES = {
+  martin: {
+    nombre : 'Martin Panizzi',
+    cargo  : '',
+    tel    : 'Tel. 2902 2116 int. 122',
+    cel    : 'Cel/WhatsApp 095 969 909',
+    email  : 'mpanizzi@bestway.com.uy',
+  },
+  martin2: {
+    nombre : 'Martin Panizzi',
+    cargo  : 'Ejecutivo de Cuentas',
+    tel    : 'Tel. 2902 2116 int. 122',
+    cel    : 'Cel/WhatsApp 095 969 909',
+    email  : 'mpanizzi@bestway.com.uy',
+  },
+};
+
+function renderContactBlock() {
+  const key    = localStorage.getItem('bw_agent') || 'martin';
+  const agente = AGENTES[key] || AGENTES.martin;
+  const cargoHtml = agente.cargo
+    ? `<span class="contact-cargo">${agente.cargo}</span>` : '';
+  document.getElementById('contact-block').innerHTML =
+    `<span class="contact-name">${agente.nombre}</span>` +
+    cargoHtml +
+    `${agente.tel}<br>${agente.cel}<br>` +
+    `<a href="mailto:${agente.email}">${agente.email}</a>`;
+}
+
+// ══════════════════════════════════════════════════════════════
+//  FOTOS DE DESTINO
+// ══════════════════════════════════════════════════════════════
 const WIKIMEDIA = {
   cataratas:    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Iguazu_cataratas.jpg/800px-Iguazu_cataratas.jpg',
   florianopolis:'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Praia_de_Canasvieiras%2C_Florian%C3%B3polis.jpg/800px-Praia_de_Canasvieiras%2C_Florian%C3%B3polis.jpg',
@@ -423,63 +566,89 @@ const DESC = {
   machadinho:   'Termas de Machadinho combina las propiedades terapéuticas de sus aguas termales con la tranquilidad del interior gaucho. Ideal para el descanso y la recuperación.',
 };
 
-// Ícono por tipo de habitación
-const BASE_ICONS = {
-  'single':     '🛏️',
-  'doble':      '🛏️🛏️',
-  'triple':     '🛏️×3',
-  'cuadruple':  '🛏️×4',
-  'cuádruple':  '🛏️×4',
-};
-
-function baseIcon(base) {
-  const key = base.toLowerCase().replace(/[áàâä]/g,'a').replace(/[éèêë]/g,'e');
-  for (const k of Object.keys(BASE_ICONS)) {
-    if (key.includes(k)) return BASE_ICONS[k];
-  }
-  return '🛏️';
+// ══════════════════════════════════════════════════════════════
+//  DETECCIÓN DE TRANSPORTE en items de "Incluye"
+//  → "AEREO BS AS" / "AÉREO BS.AS" / "AERO BUE"  →  badge ✈️ azul
+//  → "MVD-COLONIA-MVD" / "MVD COLONIA"            →  badge 🚌⛴️ teal
+// ══════════════════════════════════════════════════════════════
+function detectarTransporte(texto) {
+  const t = texto.toUpperCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, ''); // quitar acentos para comparar
+  if (/A[EE]REO/.test(t) && /BS\.?\s*AS|BUE\b|BUENOS\s*AIRES/.test(t)) return 'aereo';
+  if (/MVD.{0,6}COLON|COLON.{0,6}MVD/.test(t)) return 'ferry';
+  return null;
 }
 
-// ── Foto ──────────────────────────────────────────────────────────────────────
+const BADGE = {
+  aereo: `<span class="transport-badge aereo">✈️&nbsp;Aéreo Bs.As.</span>`,
+  ferry: `<span class="transport-badge ferry">🚌&nbsp;⛴️&nbsp;MVD – Colonia – MVD</span>`,
+};
+
+function buildIncRow(texto, isNo) {
+  const dotCls    = isNo ? 'inc-dot no' : 'inc-dot';
+  const transporte = isNo ? null : detectarTransporte(texto);
+  const badgeHtml  = transporte ? BADGE[transporte] : '';
+  return `<div class="inc-row">
+    <div class="${dotCls}"></div>
+    <span>${texto}${badgeHtml}</span>
+  </div>`;
+}
+
+// ══════════════════════════════════════════════════════════════
+//  FOTO
+// ══════════════════════════════════════════════════════════════
 function loadPhoto(prog) {
   const container = document.getElementById('prog-foto');
   const ph        = document.getElementById('foto-ph');
   const slug      = prog.destinoSlug || '';
 
-  const tryLoad = (src, next) => {
-    if (!src) { next?.(); return; }
-    const img = new Image();
-    img.onload = () => {
-      ph?.remove();
-      const el = document.createElement('img');
-      el.src = src; el.alt = prog.titulo;
-      el.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;';
-      container.appendChild(el);
-    };
-    img.onerror = () => next?.();
+  const mountImg = (src, cover) => {
+    const img = document.createElement('img');
+    img.style.cssText = `width:100%;height:100%;object-fit:${cover?'cover':'contain'};display:none;${cover?'':'padding:5mm;'}`;
+    img.onload  = () => { ph?.remove(); img.style.display = 'block'; };
+    img.onerror = () => img.remove();
+    container.appendChild(img);
     img.src = src;
   };
 
+  const tryLoad = (src, next) => {
+    if (!src) { next?.(); return; }
+    const t = new Image();
+    t.onload  = () => mountImg(src, true);
+    t.onerror = () => next?.();
+    t.src = src;
+  };
+
   if (prog.imagen) {
-    tryLoad(prog.imagen, () => tryLoad(WIKIMEDIA[slug], () => { if(ph) ph.textContent='🌎'; }));
+    tryLoad(prog.imagen, () => tryLoad(WIKIMEDIA[slug], () => { if(ph) ph.textContent = '🌎'; }));
   } else {
-    tryLoad(WIKIMEDIA[slug], () => { if(ph) ph.textContent='🌎'; });
+    tryLoad(WIKIMEDIA[slug], () => { if(ph) ph.textContent = '🌎'; });
   }
 }
 
-// ── TABLA DE PRECIOS ──────────────────────────────────────────────────────────
-/**
- * Construye las tabs de salida y las tablas de precios desde p.matrizPrecios.
- * Fallback: si matrizPrecios está vacío pero hay variantesCompletas, las reconstruye.
- */
+// ══════════════════════════════════════════════════════════════
+//  TABLA DE PRECIOS
+// ══════════════════════════════════════════════════════════════
+const BASE_ORDER = ['single','doble','triple','cuadruple','cuadruple','quintuple','quintuple'];
+
+function sortBases(bases) {
+  return [...bases].sort((a, b) => {
+    const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    const ai = BASE_ORDER.findIndex(o => norm(a).includes(o));
+    const bi = BASE_ORDER.findIndex(o => norm(b).includes(o));
+    if (ai === -1 && bi === -1) return a.localeCompare(b);
+    if (ai === -1) return 1;
+    if (bi === -1) return -1;
+    return ai - bi;
+  });
+}
+
 function renderTablaPrecios(p) {
   const sec = document.getElementById('sec-precios');
 
-  // Intentar obtener la matriz; reconstruir desde variantesCompletas si hace falta
+  // Obtener / reconstruir matriz desde variantesCompletas
   let matriz = p.matrizPrecios || {};
-
-  if (Object.keys(matriz).length === 0 && p.variantesCompletas?.length) {
-    // Reconstruir
+  if (!Object.keys(matriz).length && p.variantesCompletas?.length) {
     for (const v of p.variantesCompletas) {
       const precio = parseInt(v.precio);
       if (!v.salida || !v.alojamiento || !v.base || !precio) continue;
@@ -492,37 +661,23 @@ function renderTablaPrecios(p) {
   const salidas = Object.keys(matriz);
   if (!salidas.length) { sec.style.display = 'none'; return; }
 
-  // Recopilar todas las bases únicas para las columnas, en orden natural
+  // Bases únicas ordenadas
   const basesSet = new Set();
-  for (const salida of salidas) {
-    for (const hotel of Object.keys(matriz[salida])) {
-      for (const base of Object.keys(matriz[salida][hotel])) {
-        basesSet.add(base);
-      }
-    }
-  }
-  // Ordenar bases: Single → Doble → Triple → Cuádruple → resto
-  const ORDER = ['single','doble','triple','cuadruple','cuádruple'];
-  const bases = [...basesSet].sort((a, b) => {
-    const ai = ORDER.findIndex(o => a.toLowerCase().includes(o));
-    const bi = ORDER.findIndex(o => b.toLowerCase().includes(o));
-    if (ai === -1 && bi === -1) return a.localeCompare(b);
-    if (ai === -1) return 1;
-    if (bi === -1) return -1;
-    return ai - bi;
-  });
+  for (const s of salidas)
+    for (const h of Object.keys(matriz[s]))
+      for (const b of Object.keys(matriz[s][h])) basesSet.add(b);
+  const bases = sortBases([...basesSet]);
 
   const tabsEl   = document.getElementById('salida-tabs');
   const tablasEl = document.getElementById('precio-tablas');
-  tabsEl.innerHTML   = '';
-  tablasEl.innerHTML = '';
+  tabsEl.innerHTML = tablasEl.innerHTML = '';
 
   salidas.forEach((salida, idx) => {
-    // ── Tab ──
+
+    // Tab
     const tab = document.createElement('button');
-    tab.className = 'salida-tab' + (idx === 0 ? ' active' : '');
+    tab.className   = 'salida-tab' + (idx === 0 ? ' active' : '');
     tab.textContent = salida || 'Salida';
-    tab.dataset.salida = salida;
     tab.addEventListener('click', () => {
       document.querySelectorAll('.salida-tab').forEach(t => t.classList.remove('active'));
       document.querySelectorAll('.precio-tabla-wrap').forEach(w => w.classList.remove('visible'));
@@ -531,107 +686,87 @@ function renderTablaPrecios(p) {
     });
     tabsEl.appendChild(tab);
 
-    // ── Tabla ──
+    // Precio mínimo de esta salida
     const hoteles = Object.keys(matriz[salida]);
-
-    // Calcular precio mínimo global de esta salida (para marcar ★)
     let globalMin = Infinity;
-    for (const hotel of hoteles) {
-      for (const base of bases) {
-        const v = matriz[salida][hotel][base];
+    for (const h of hoteles)
+      for (const b of bases) {
+        const v = matriz[salida][h][b];
         if (v && v < globalMin) globalMin = v;
       }
-    }
 
-    // Encabezado de columnas
-    const thBases = bases.map(b => `
-      <th class="col-precio">
-        <span class="base-icon">${baseIcon(b)}</span>
-        ${b}
-      </th>`).join('');
+    // Encabezado columnas
+    const thBases = bases.map(b => `<th>${b}</th>`).join('');
 
-    // Filas de hoteles
+    // Filas
     const filas = hoteles.map(hotel => {
       const celdas = bases.map(base => {
         const precio = matriz[salida][hotel][base];
-        if (!precio) {
-          return `<td class="col-precio"><span class="precio-nd">—</span></td>`;
-        }
+        if (!precio) return `<td><span class="pna">—</span></td>`;
         const isMin = precio === globalMin;
-        return `
-          <td class="col-precio">
-            <div class="precio-celda">
-              <span class="precio-usd${isMin ? ' min' : ''}">
-                <span class="precio-usd-sym">U$S</span>${precio.toLocaleString('es-UY')}
-              </span>
-            </div>
-          </td>`;
+        return `<td>
+          <span class="pval${isMin ? ' min' : ''}">
+            <span class="sym">U$S </span>${precio.toLocaleString('es-UY')}
+          </span>
+        </td>`;
       }).join('');
-
-      return `
-        <tr>
-          <td class="col-hotel">${hotel}</td>
-          ${celdas}
-        </tr>`;
+      return `<tr><td class="col-hotel">${hotel}</td>${celdas}</tr>`;
     }).join('');
 
+    // Wrap
     const wrap = document.createElement('div');
-    wrap.className = 'precio-tabla-wrap' + (idx === 0 ? ' visible' : '');
-    wrap.id = `tabla-${salida}`;
-    wrap.dataset.salidaLabel = `Salida: ${salida}`;  // para @print::before
+    wrap.className          = 'precio-tabla-wrap' + (idx === 0 ? ' visible' : '');
+    wrap.id                 = `tabla-${salida}`;
+    wrap.dataset.salidaLabel = `Salida: ${salida}`;
     wrap.innerHTML = `
       <table class="precio-tabla">
-        <thead>
-          <tr>
-            <th>Hotel / Alojamiento</th>
-            ${thBases}
-          </tr>
-        </thead>
-        <tbody>
-          ${filas}
-        </tbody>
+        <thead><tr><th>Hotel / Alojamiento</th>${thBases}</tr></thead>
+        <tbody>${filas}</tbody>
       </table>`;
     tablasEl.appendChild(wrap);
   });
 }
 
-// ── RENDER PRINCIPAL ──────────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════════
+//  RENDER PRINCIPAL
+// ══════════════════════════════════════════════════════════════
 function renderPrograma(p) {
   document.title = `${p.titulo} — BestWay`;
 
   // 2. Título
-  document.getElementById('prog-titulo').innerHTML = `
-    <h1>${p.titulo}</h1>
-    <div class="duracion-line">${p.subtitulo || p.duracion || ''}</div>`;
+  document.getElementById('prog-titulo').innerHTML =
+    `<h1>${p.titulo}</h1>
+     <div class="duracion-line">${p.subtitulo || p.duracion || ''}</div>`;
 
   // 3. Fechas
-  const fechas = p.fechas || [];
+  const fechas = (p.fechas || []).filter(f => !/^operador$/i.test((f.label||'').trim()));
   document.getElementById('prog-fechas').innerHTML = fechas.length
-    ? fechas.map((f,i) => `
+    ? fechas.map((f, i) => `
         <div class="fecha-item">
           <span class="fl">${f.label}</span>
-          <span class="fv${f.gold?' gold':f.fun?' fun':''}">${f.value}</span>
-        </div>${i < fechas.length-1 ? '<div class="fecha-sep"></div>' : ''}`
+          <span class="fv${f.gold ? ' gold' : ''}">${f.value}</span>
+        </div>${i < fechas.length - 1 ? '<div class="fecha-sep"></div>' : ''}`
       ).join('')
     : '<div class="fecha-item"><span class="fl">Salida</span><span class="fv gold">Consultar disponibilidad</span></div>';
 
   // 4. Destino
   const desc = DESC[p.destinoSlug] || `${p.destino || p.titulo} es un destino imperdible saliendo desde Montevideo.`;
   document.getElementById('prog-descripcion').textContent = desc;
-  document.getElementById('prog-highlights').innerHTML = (p.highlights||[])
-    .map(h=>`<span class="hl-tag">${h}</span>`).join('');
+  document.getElementById('prog-highlights').innerHTML =
+    (p.highlights || []).map(h => `<span class="hl-tag">${h}</span>`).join('');
   loadPhoto(p);
 
   // 5. Incluye / No incluye
   const incluye   = p.incluye   || [];
   const noIncluye = p.noIncluye || [];
-  if (incluye.length > 0) {
-    document.getElementById('prog-incluye').innerHTML = incluye
-      .map(i=>`<div class="incluye-item">${i}</div>`).join('');
+
+  if (incluye.length) {
+    document.getElementById('prog-incluye').innerHTML =
+      incluye.map(i => buildIncRow(i, false)).join('');
   }
-  if (noIncluye.length > 0) {
-    document.getElementById('prog-no-incluye').innerHTML = noIncluye
-      .map(i=>`<div class="incluye-item no-incluye-item">${i}</div>`).join('');
+  if (noIncluye.length) {
+    document.getElementById('prog-no-incluye').innerHTML =
+      noIncluye.map(i => buildIncRow(i, true)).join('');
   } else {
     document.getElementById('col-no-incluye').style.display = 'none';
   }
@@ -641,15 +776,15 @@ function renderPrograma(p) {
 
   // 6. Itinerario
   const itin = p.itinerario || [];
-  if (itin.length > 0) {
+  if (itin.length) {
     document.getElementById('prog-itinerario').innerHTML = itin.map(d => `
       <tr>
-        <td class="it-day">
-          <span class="it-day-pill${d.first?' first':d.last?' last':''}">${d.dia}</span>
+        <td class="it-dia">
+          <span class="it-dia-pill${d.first ? ' first' : d.last ? ' last' : ''}">${d.dia}</span>
         </td>
-        <td class="it-body">
-          <span class="it-lugar-inline">${d.lugar}</span>
-          <span class="it-detalle">${d.detalle||''}</span>
+        <td class="it-texto">
+          ${d.lugar ? `<span class="it-lugar">${d.lugar}</span>` : ''}
+          ${d.detalle || ''}
         </td>
       </tr>`).join('');
   } else {
@@ -657,9 +792,9 @@ function renderPrograma(p) {
   }
 
   // 7. Hoteles
-  const hoteles = (p.hoteles||[]).filter(h=>h.nombre && h.nombre.length>2);
-  if (hoteles.length > 0) {
-    document.getElementById('prog-hoteles').innerHTML = hoteles.map(h=>`
+  const hoteles = (p.hoteles || []).filter(h => h.nombre && h.nombre.length > 2);
+  if (hoteles.length) {
+    document.getElementById('prog-hoteles').innerHTML = hoteles.map(h => `
       <div class="hotel-tag">
         ${h.nombre}
         ${h.url ? `<span class="hotel-url">&nbsp;·&nbsp;${h.url.replace(/^https?:\/\/(www\.)?/,'')}</span>` : ''}
@@ -668,27 +803,34 @@ function renderPrograma(p) {
     document.getElementById('sec-hoteles').style.display = 'none';
   }
 
-  // 8. TABLA DE PRECIOS ✨
+  // 8. Tabla de precios
   renderTablaPrecios(p);
 
   // 9. Notas
-  const notas = (p.notas||[]);
-  if (notas.length > 0) {
+  const notas = p.notas || [];
+  if (notas.length) {
     document.getElementById('prog-notas').innerHTML =
-      notas.map(n=>`<div class="nota-row">${n}</div>`).join('');
+      notas.map(n => `<div class="nota-row">${n}</div>`).join('');
     document.getElementById('sec-notas').style.display = 'flex';
   }
 }
 
-// ── INIT ──────────────────────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════════════════════════
 async function init() {
   const params  = new URLSearchParams(window.location.search);
   const progId  = params.get('p');
   const loadMsg = document.getElementById('loading-msg');
 
-  if (!progId) { showError('No se especificó programa.', 'URL inválida'); return; }
+  renderContactBlock();
 
-  loadMsg.textContent = 'Leyendo catálogo...';
+  if (!progId) {
+    showError('No se especificó programa.<br>Usá <code>?p=ID</code> en la URL.', 'URL inválida');
+    return;
+  }
+
+  loadMsg.textContent = 'Leyendo catálogo de programas...';
   let allData;
   try {
     const r = await fetch(`../../programas-funtour.json?_=${Date.now()}`);
@@ -696,22 +838,26 @@ async function init() {
     allData = await r.json();
   } catch(e) {
     showError(
-      `No se pudo cargar <code>programas-funtour.json</code>.<br>Ejecutá el scraper desde GitHub Actions.`,
-      e.message
+      `No se pudo cargar <code>programas-funtour.json</code>.<br>
+       Ejecutá el scraper desde GitHub Actions.<br>
+       Error: <code>${e.message}</code>`,
+      'Error de carga'
     );
     return;
   }
 
-  const prog = (allData.programas||[]).find(p => p.id === progId);
+  loadMsg.textContent = 'Buscando programa...';
+  const prog = (allData.programas || []).find(p => p.id === progId);
   if (!prog) {
     showError(
-      `Programa <code>${progId}</code> no encontrado en el catálogo.<br>
-       <a href="./funtour.html" style="color:var(--fun-lt)">Volver a todos los programas</a>`,
-      'No encontrado'
+      `El programa <code>${progId}</code> no existe en el catálogo.<br>
+       <a href="./funtour.html" style="color:var(--gold)">← Ver todos los programas</a>`,
+      'Programa no encontrado'
     );
     return;
   }
 
+  loadMsg.textContent = 'Preparando documento...';
   renderPrograma(prog);
   document.getElementById('loading-screen').classList.add('hidden');
   document.getElementById('programa-page').style.visibility = 'visible';
@@ -719,10 +865,9 @@ async function init() {
 
 function showError(msg, title) {
   document.getElementById('loading-screen').classList.add('hidden');
-  const es = document.getElementById('error-screen');
-  es.classList.add('visible');
+  document.getElementById('error-screen').classList.add('visible');
   document.getElementById('error-msg').innerHTML = msg;
-  if (title) document.querySelector('#error-screen h2').textContent = title;
+  if (title) document.querySelector('#error-screen h2').textContent = '⚠️ ' + title;
 }
 
 init();
