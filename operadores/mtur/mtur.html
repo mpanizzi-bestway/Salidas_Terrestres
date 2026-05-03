@@ -14,9 +14,11 @@
       --accent:     #4a5faa;
       --gold:       #c8a84b;
       --gold-lt:    #e8c96a;
-      /* Mtur usa naranja como color de marca */
-      --mtur:       #e8630a;
-      --mtur-dark:  #b84d06;
+      /* Mtur — naranja corporativo */
+      --brand:      #e8630a;
+      --brand-dark: #b84d06;
+      --brand-lt:   #ff8c42;
+      --brand-bg:   #fff4ee;
       --white:      #ffffff;
       --off-white:  #f4f3ef;
       --gray-light: #eeedf0;
@@ -27,7 +29,7 @@
     body { font-family:'DM Sans',sans-serif; background:var(--off-white); color:var(--text); min-height:100vh; }
 
     /* HEADER */
-    header { background:var(--navy-dark); border-bottom:3px solid var(--mtur); }
+    header { background:var(--navy-dark); border-bottom:3px solid var(--brand); }
     .header-inner {
       max-width:1140px; margin:0 auto; padding:16px 32px;
       display:flex; align-items:center; gap:20px;
@@ -37,31 +39,32 @@
       color:rgba(255,255,255,.55); text-decoration:none;
       font-size:.8rem; font-weight:500; transition:color .2s; white-space:nowrap;
     }
-    .back-btn:hover { color:var(--mtur); }
+    .back-btn:hover { color:var(--brand-lt); }
     .back-btn svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
     .h-div { width:1px; height:36px; background:rgba(255,255,255,.12); }
-    .logo-wrap { display:flex; align-items:center; }
-    .logo-wrap img { height:36px; width:auto; display:block; }
+    .logo-wrap img { height:40px; width:auto; display:block; }
+
+    .sidebar-logo {
+      background: var(--navy-dark);
+      padding: 16px 18px 12px;
+      display: flex; align-items: center; justify-content: center;
+      border-bottom: 2px solid var(--brand);
+    }
+    .sidebar-logo img { height: 44px; width: auto; max-width: 180px; object-fit: contain; }
+
     .header-title {
       font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:600; color:white;
     }
-    .header-title span { color:var(--mtur); font-weight:400; font-size:.82rem; margin-left:6px; opacity:.85; }
+    .header-title span { color:var(--brand-lt); font-weight:400; font-size:.82rem; margin-left:6px; }
 
     /* UPDATE BAR */
     .update-bar {
-      background:var(--mtur-dark); padding:8px 32px;
-      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      background:var(--brand-dark); padding:8px 32px;
+      display:flex; align-items:center; gap:16px;
     }
-    .update-info { font-size:.75rem; color:rgba(255,255,255,.85); display:flex; align-items:center; gap:6px; }
+    .update-info { font-size:.75rem; color:rgba(255,255,255,.8); display:flex; align-items:center; gap:6px; }
     .update-info strong { color:white; }
-    .btn-update {
-      background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3);
-      color:white; padding:5px 16px; border-radius:5px;
-      font-family:'DM Sans',sans-serif; font-size:.75rem; font-weight:600;
-      cursor:pointer; display:flex; align-items:center; gap:6px;
-      transition:background .2s; text-decoration:none; white-space:nowrap;
-    }
-    .btn-update:hover { background:rgba(255,255,255,.25); }
+
     @keyframes spin { to { transform:rotate(360deg); } }
     .spin { display:inline-block; animation:spin 1s linear infinite; }
 
@@ -77,28 +80,37 @@
       border:1px solid rgba(30,39,72,.09);
       box-shadow:0 2px 10px rgba(30,39,72,.05);
       overflow:hidden; position:sticky; top:16px;
-    }
-    /* Logo Mtur sobre el árbol */
-    .sidebar-logo {
-      background:var(--navy-dark); padding:14px 18px 10px;
-      display:flex; align-items:center; justify-content:center;
-      border-bottom:2px solid var(--mtur);
-    }
-    .sidebar-logo img {
-      height:32px; width:auto; max-width:160px; object-fit:contain;
+      display:flex; flex-direction:column;
     }
     .sidebar-hd {
-      background:var(--navy); padding:11px 18px;
+      background:var(--navy); padding:13px 18px;
       color:white; font-size:.72rem; font-weight:600;
       letter-spacing:.1em; text-transform:uppercase;
     }
-    .tree { padding:8px 0 4px; }
+    .tree { padding:8px 0 4px; flex:1; }
+
+    .sidebar-footer {
+      border-top:1px solid var(--gray-light);
+      padding:10px 14px;
+      display:flex; align-items:center; justify-content:flex-end;
+    }
+    .btn-update-icon {
+      width:32px; height:32px;
+      background:var(--brand); border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      font-size:.95rem; text-decoration:none;
+      transition:background .2s, transform .2s;
+      box-shadow:0 2px 6px rgba(232,99,10,.35);
+    }
+    .btn-update-icon:hover { background:var(--brand-dark); transform:scale(1.1); }
+
     .tree-country {
       padding:10px 18px 5px; font-size:.67rem; font-weight:700;
       letter-spacing:.12em; text-transform:uppercase; color:var(--gray);
       display:flex; align-items:center; gap:8px;
     }
     .tree-country::after { content:''; flex:1; height:1px; background:var(--gray-light); }
+
     .tree-dest-hd {
       padding:6px 18px; font-size:.82rem; font-weight:600; color:var(--navy);
       cursor:pointer; display:flex; align-items:center; gap:7px;
@@ -106,22 +118,25 @@
     }
     .tree-dest-hd:hover { background:var(--gray-light); }
     .tree-dest-hd .chev {
-      margin-left:auto; width:13px; height:13px; fill:none; stroke:var(--gray);
-      stroke-width:2; stroke-linecap:round; stroke-linejoin:round; transition:transform .18s;
+      margin-left:auto; width:13px; height:13px;
+      fill:none; stroke:var(--gray); stroke-width:2;
+      stroke-linecap:round; stroke-linejoin:round; transition:transform .18s;
     }
     .tree-dest.open .chev { transform:rotate(90deg); }
     .tree-links { display:none; padding:0 0 3px 34px; }
     .tree-dest.open .tree-links { display:block; }
     .tree-link {
-      display:block; padding:4px 12px 4px 10px; font-size:.75rem; color:var(--accent);
-      text-decoration:none; border-left:2px solid var(--gray-light); margin:1px 0;
-      line-height:1.35; transition:border-color .12s,color .12s;
+      display:block; padding:4px 12px 4px 10px;
+      font-size:.75rem; color:var(--accent); text-decoration:none;
+      border-left:2px solid var(--gray-light); margin:1px 0; line-height:1.35;
+      transition:border-color .12s,color .12s;
     }
-    .tree-link:hover { color:var(--navy); border-color:var(--mtur); }
+    .tree-link:hover { color:var(--navy); border-color:var(--brand); }
 
     /* CONTENT */
     .content { display:flex; flex-direction:column; gap:32px; }
     .country-block { display:flex; flex-direction:column; gap:24px; }
+
     .country-label {
       font-family:'Poppins',sans-serif; font-size:1rem; font-weight:700; color:var(--navy);
       display:flex; align-items:center; gap:10px;
@@ -129,8 +144,9 @@
     }
     .country-label::after {
       content:''; flex:1; height:1px;
-      background:linear-gradient(90deg,var(--mtur) 0%,transparent 80%); margin-top:1px;
+      background:linear-gradient(90deg,var(--brand) 0%,transparent 80%); margin-top:1px;
     }
+
     .dest-block { display:flex; flex-direction:column; gap:7px; }
     .dest-label {
       display:flex; align-items:center; gap:10px;
@@ -148,6 +164,7 @@
 
     /* CARDS */
     .prog-list { display:flex; flex-direction:column; gap:6px; }
+
     .prog-card {
       background:var(--white); border-radius:8px;
       border:1px solid rgba(30,39,72,.08); padding:12px 15px;
@@ -157,23 +174,29 @@
       transition:border-color .18s,box-shadow .18s,transform .14s;
     }
     .prog-card:hover {
-      border-color:var(--mtur); box-shadow:0 3px 14px rgba(232,99,10,.12);
+      border-color:var(--brand); box-shadow:0 3px 14px rgba(232,99,10,.12);
       transform:translateX(3px);
     }
     .card-body { flex:1; min-width:0; }
     .card-name { font-size:.88rem; font-weight:600; color:var(--navy); line-height:1.3; }
-    .card-sub  { font-size:.73rem; color:var(--gray); margin-top:2px; }
+    .card-sub {
+      font-size:.73rem; color:var(--gray); margin-top:2px;
+      display:flex; align-items:center; gap:5px; flex-wrap:wrap;
+    }
+    .card-sub-sep { color:var(--gray-light); font-size:.9rem; line-height:1; }
+    .card-price { color:var(--brand); font-weight:600; }
     .card-tags { display:flex; gap:5px; margin-top:5px; flex-wrap:wrap; }
-    .tag { font-size:.67rem; font-weight:500; padding:1px 7px; border-radius:10px; }
+    .tag { font-size:.67rem; font-weight:500; padding:1px 7px; border-radius:10px; letter-spacing:.02em; }
     .tag-dur  { background:#e8edf8; color:var(--navy-mid); }
-    .tag-bus  { background:#fef0e8; color:#9a3d06; }
+    .tag-bus  { background:var(--brand-bg); color:var(--brand-dark); }
     .tag-seas { background:#fdf5e4; color:#8a6010; }
+
     .card-arrow {
       width:27px; height:27px; background:var(--gray-light); border-radius:50%;
       display:flex; align-items:center; justify-content:center;
       flex-shrink:0; transition:background .18s;
     }
-    .prog-card:hover .card-arrow { background:var(--mtur); }
+    .prog-card:hover .card-arrow { background:var(--brand); }
     .card-arrow svg {
       width:11px; height:11px; fill:none; stroke:var(--navy);
       stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; transition:stroke .18s;
@@ -189,15 +212,15 @@
     .state-box p { font-size:.84rem; line-height:1.7; }
     .state-box code { background:#eee; padding:1px 6px; border-radius:3px; font-size:.78rem; }
 
+    /* FOOTER */
     footer { background:var(--navy-dark); padding:16px 32px; text-align:center; }
     footer p { color:rgba(255,255,255,.28); font-size:.74rem; }
-    footer span { color:var(--mtur); }
+    footer span { color:var(--brand-lt); }
 
-    @media(max-width:740px) {
+    @media (max-width:740px) {
       .layout { grid-template-columns:1fr; padding:0 16px; }
       .sidebar { position:static; }
       .header-inner,.update-bar { padding-left:16px; padding-right:16px; }
-      .update-bar { flex-direction:column; align-items:flex-start; gap:8px; }
     }
   </style>
 </head>
@@ -210,7 +233,7 @@
       Inicio
     </a>
     <div class="h-div"></div>
-    <div class="logo-wrap">      
+    <div class="logo-wrap">
       <img src="../../images/logo_Bestway_blanco.png" alt="BestWay">
     </div>
     <div class="header-title">
@@ -225,19 +248,17 @@
     🔄 Actualizado: <strong id="last-update">—</strong>
     &nbsp;·&nbsp; <span id="prog-count">—</span> programas activos
   </div>
-  <a href="https://github.com/mpanizzi-bestway/Salidas_Terrestres/actions/workflows/scrape-mtur.yml"
-     target="_blank" class="btn-update"
-     title="Abre GitHub Actions para forzar re-scraping">
-    ⚡ Actualizar ahora
-  </a>
 </div>
 
 <div class="layout">
 
   <aside class="sidebar">
     <div class="sidebar-logo">
-      <img src="images/logo_mtur.svg" alt="Mtur Viajes"
-           onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span style=\'color:white;font-weight:700;font-size:.9rem;\'>Mtur Viajes</span>')">
+      <img
+        src="images/logo_mtur.svg"
+        alt="Mtur Viajes"
+        onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<span style=\'color:white;font-weight:700;font-size:.9rem;\'>Mtur Viajes</span>')"
+      >
     </div>
     <div class="sidebar-hd">Destinos &amp; Programas</div>
     <div class="tree" id="sidebar-tree">
@@ -245,12 +266,18 @@
         <span class="spin">⏳</span> Cargando...
       </div>
     </div>
+    <div class="sidebar-footer">
+      <a href="https://github.com/mpanizzi-bestway/Salidas_Terrestres/actions/workflows/scrape-mtur.yml"
+         target="_blank"
+         class="btn-update-icon"
+         title="Actualizar ahora">⚡</a>
+    </div>
   </aside>
 
   <main class="content" id="main-content">
     <div class="state-box">
       <span class="ico spin">⏳</span>
-      <p>Cargando programas de Mtur Viajes...</p>
+      <p>Cargando programas...</p>
     </div>
   </main>
 
@@ -266,138 +293,201 @@ const PROG_URL = './programa-mtur.html';
 
 const DEST_EMOJI = {
   florianopolis:'🏖️', gramado:'🌲', ferrugem:'🌊', camboriu:'🎡',
-  rio:'🏙️', termas:'♨️',
+  bombinhas:'🐚', capao:'🏄', torres:'⛵', laguna:'🦀',
+  rio:'🏙️', termas:'♨️', praiarosa:'🌹', blumenau:'🌸',
   buenosaires:'🏙️', mendoza:'🍷', norte:'🏔️', carlospaz:'⛰️', bariloche:'🏔️',
-  cataratas:'🌊', chile:'🇨🇱', europa:'🌍', caribe:'🌴', otro:'📍',
+  cataratas:'🌊', chile:'🇨🇱', mendozasantiago:'🏔️',
+  europa:'🌍', caribe:'🌴', otro:'📍',
 };
 const PAIS_ORDER = ['Brasil','Argentina','Cataratas','Chile','Europa','Caribe','Otros'];
 const PAIS_EMOJI = { Brasil:'🇧🇷', Argentina:'🇦🇷', Cataratas:'💧', Chile:'🇨🇱', Europa:'🌍', Caribe:'🌴', Otros:'🌐' };
 
+// ─── Corrección de destino por título ─────────────────────────────────────
+const TITULO_DEST_RULES = [
+  { match: /gramado|canela/i,                                    slug: 'gramado',         destino: 'Gramado y Canela'     },
+  { match: /florianopolis|florianópolis|canasvieiras/i,          slug: 'florianopolis',   destino: 'Florianópolis'        },
+  { match: /ferrugem/i,                                          slug: 'ferrugem',        destino: 'Ferrugem'             },
+  { match: /camboriu|camboriú/i,                                 slug: 'camboriu',        destino: 'Camboriú'             },
+  { match: /bombinhas/i,                                         slug: 'bombinhas',       destino: 'Bombinhas'            },
+  { match: /capao|capão/i,                                       slug: 'capao',           destino: 'Capão da Canoa'       },
+  { match: /\btorres\b/i,                                        slug: 'torres',          destino: 'Torres'               },
+  { match: /laguna/i,                                            slug: 'laguna',          destino: 'Laguna'               },
+  { match: /praia\s+d[ao]\s+rosa/i,                              slug: 'praiarosa',       destino: 'Praia da Rosa'        },
+  { match: /blumenau/i,                                          slug: 'blumenau',        destino: 'Blumenau'             },
+  { match: /\brio\b|río\s+de\s+janeiro/i,                        slug: 'rio',             destino: 'Río de Janeiro'       },
+  { match: /termas/i,                                            slug: 'termas',          destino: 'Termas'               },
+  { match: /cataratas|iguazu|iguazú/i,                           slug: 'cataratas',       destino: 'Cataratas del Iguazú' },
+  { match: /bariloche/i,                                         slug: 'bariloche',       destino: 'Bariloche'            },
+  { match: /carlos\s+paz/i,                                      slug: 'carlospaz',       destino: 'Carlos Paz'           },
+  { match: /mendoza\s+y\s+santiago|mendoza.*santiago/i,          slug: 'mendozasantiago', destino: 'Mendoza y Santiago'   },
+  { match: /\bchile\b|\bsantiago\b/i,                            slug: 'chile',           destino: 'Chile'                },
+  { match: /norte\s+argentino|jujuy|salta|humahuaca/i,           slug: 'norte',           destino: 'Norte Argentino'      },
+  { match: /\bmendoza\b/i,                                       slug: 'mendoza',         destino: 'Mendoza'              },
+  { match: /buenos\s+aires|temaiken|mundo\s+marino/i,            slug: 'buenosaires',     destino: 'Buenos Aires'         },
+  { match: /europa|paris|roma|madrid|barcelona/i,                slug: 'europa',          destino: 'Europa'               },
+  { match: /caribe|cancun|cancún|cuba|punta\s+cana/i,            slug: 'caribe',          destino: 'Caribe'               },
+];
+
+function resolveDestino(p) {
+  var titulo = (p.titulo || '');
+  for (var i = 0; i < TITULO_DEST_RULES.length; i++) {
+    var rule = TITULO_DEST_RULES[i];
+    if (rule.match.test(titulo)) {
+      return { slug: rule.slug, destino: rule.destino, pais: p.pais || 'Otros' };
+    }
+  }
+  return { slug: p.destinoSlug || 'otro', destino: p.destino || 'Otros', pais: p.pais || 'Otros' };
+}
+
 function titleCase(s) {
-  return s.toLowerCase().replace(/(?:^|\s|[-\/])\S/g, c => c.toUpperCase());
+  return s.toLowerCase().replace(/(?:^|\s|[-\/])\S/g, function(c) { return c.toUpperCase(); });
 }
 function formatDate(iso) {
-  const d = new Date(iso);
+  var d = new Date(iso);
   return isNaN(d) ? iso : d.toLocaleDateString('es-UY',{day:'2-digit',month:'short',year:'numeric'});
 }
+
+function getPrecioDesde(p) {
+  if (!Array.isArray(p.hoteles) || p.hoteles.length === 0) return null;
+  var valores = p.hoteles
+    .map(function(h) { return h.dbl; })
+    .filter(function(v) { return typeof v === 'number' && v > 0; });
+  if (valores.length === 0) return null;
+  return Math.min.apply(null, valores);
+}
+function formatPrecio(n) {
+  if (!n) return null;
+  return 'USD\u00a0' + n.toLocaleString('es-UY');
+}
+
 function groupData(programas) {
-  const byPais = {};
-  for (const p of programas) {
-    const pais = p.pais || 'Otros', dest = p.destinoSlug || 'otro';
+  var byPais = {};
+  for (var i = 0; i < programas.length; i++) {
+    var p = programas[i];
+    var resolved = resolveDestino(p);
+    var pais = resolved.pais, dest = resolved.destino, slug = resolved.slug;
     if (!byPais[pais]) byPais[pais] = {};
-    if (!byPais[pais][dest]) byPais[pais][dest] = {
-      slug: dest, emoji: DEST_EMOJI[dest] || '📍',
-      label: p.destino?.split(',')[0]?.trim() || dest, progs: []
-    };
+    if (!byPais[pais][dest]) {
+      byPais[pais][dest] = { slug: slug, emoji: DEST_EMOJI[slug] || '📍', progs: [] };
+    }
     byPais[pais][dest].progs.push(p);
   }
   return byPais;
 }
+
 function sorted(byPais) {
-  return Object.keys(byPais).sort((a,b) => {
-    const ia = PAIS_ORDER.indexOf(a), ib = PAIS_ORDER.indexOf(b);
+  return Object.keys(byPais).sort(function(a,b) {
+    var ia = PAIS_ORDER.indexOf(a), ib = PAIS_ORDER.indexOf(b);
     return (ia<0?99:ia)-(ib<0?99:ib);
   });
 }
 
 function cardHTML(p) {
-  const dias   = p.duracion || '';
-  const salida = p.fechas?.find(f => f.gold)?.value || '';
-  const temp   = p.temporada || '';
-  const sub    = p.fechasSalida?.slice(0,3).join(' · ') || temp;
-  return `
-    <a class="prog-card" href="${PROG_URL}?p=${encodeURIComponent(p.id)}" target="_blank">
-      <div class="card-body">
-        <div class="card-name">${titleCase(p.titulo)}</div>
-        <div class="card-sub">${sub}</div>
-        <div class="card-tags">
-          ${dias ? `<span class="tag tag-dur">${dias}</span>` : ''}
-          <span class="tag tag-bus">Bus semi cama</span>
-          ${temp ? `<span class="tag tag-seas">${temp.substring(0,28)}</span>` : ''}
-        </div>
-      </div>
-      <div class="card-arrow">
-        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-      </div>
-    </a>`;
+  var dias = p.duracion || '';
+  // Próximas salidas: usar fechasSalida[] si existe, sino temporada
+  var salidas = Array.isArray(p.fechasSalida) && p.fechasSalida.length
+    ? p.fechasSalida.slice(0,3).join(' · ')
+    : (p.temporada || '');
+  // Tag de temporada para la pill
+  var temp = p.temporada || '';
+
+  var precioNum = getPrecioDesde(p);
+  var precio    = formatPrecio(precioNum);
+
+  var subHtml = '';
+  if (salidas) subHtml += '<span>' + salidas + '</span>';
+  if (precio) {
+    if (salidas) subHtml += '<span class="card-sub-sep">|</span>';
+    subHtml += '<span class="card-price">desde ' + precio + '</span>';
+  }
+  if (!subHtml) subHtml = '<span>Consultar salida</span>';
+
+  return '<a class="prog-card" href="' + PROG_URL + '?p=' + encodeURIComponent(p.id) + '" target="_blank">' +
+    '<div class="card-body">' +
+      '<div class="card-name">' + titleCase(p.titulo) + '</div>' +
+      '<div class="card-sub">' + subHtml + '</div>' +
+      '<div class="card-tags">' +
+        (dias ? '<span class="tag tag-dur">' + dias + '</span>' : '') +
+        '<span class="tag tag-bus">🚌 Bus semi cama</span>' +
+        (temp ? '<span class="tag tag-seas">' + temp.substring(0,28) + '</span>' : '') +
+      '</div>' +
+    '</div>' +
+    '<div class="card-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>' +
+  '</a>';
 }
 
 function renderSidebar(byPais) {
-  let h = '';
-  sorted(byPais).forEach((pais, pi) => {
-    h += `<div class="tree-country">${PAIS_EMOJI[pais]||'🌍'} ${pais}</div>`;
-    Object.entries(byPais[pais]).forEach(([slug, info], di) => {
-      const open = (pi===0 && di===0) ? ' open' : '';
-      const sid  = `td-${slug}`;
-      h += `
-        <div class="tree-dest${open}" id="${sid}">
-          <div class="tree-dest-hd" onclick="toggleTree('${sid}')">
-            <span>${info.emoji}</span>${titleCase(info.label)}
-            <svg class="chev" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>
-          </div>
-          <div class="tree-links">
-            ${info.progs.map(p =>
-              `<a class="tree-link" href="${PROG_URL}?p=${encodeURIComponent(p.id)}" target="_blank">${titleCase(p.titulo)}</a>`
-            ).join('')}
-          </div>
-        </div>`;
+  var h = '';
+  sorted(byPais).forEach(function(pais, pi) {
+    h += '<div class="tree-country">' + (PAIS_EMOJI[pais]||'🌍') + ' ' + pais + '</div>';
+    Object.entries(byPais[pais]).forEach(function(entry, di) {
+      var dest = entry[0], info = entry[1];
+      var open = (pi===0 && di===0) ? ' open' : '';
+      var sid  = 'td-' + info.slug;
+      var links = info.progs.map(function(p) {
+        var label = titleCase(p.titulo)
+          .replace(new RegExp('^' + dest.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + '\\s*[-–]?\\s*','i'),'')
+          .trim() || titleCase(p.titulo);
+        return '<a class="tree-link" href="' + PROG_URL + '?p=' + encodeURIComponent(p.id) + '" target="_blank">' + label + '</a>';
+      }).join('');
+      h += '<div class="tree-dest' + open + '" id="' + sid + '">' +
+        '<div class="tree-dest-hd" onclick="toggleTree(\'' + sid + '\')">' +
+          '<span>' + info.emoji + '</span>' + dest +
+          '<svg class="chev" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4"/></svg>' +
+        '</div>' +
+        '<div class="tree-links">' + links + '</div>' +
+      '</div>';
     });
   });
   document.getElementById('sidebar-tree').innerHTML = h;
 }
 
 function renderContent(byPais) {
-  let h = '';
-  sorted(byPais).forEach(pais => {
-    h += `<div class="country-block"><div class="country-label">${PAIS_EMOJI[pais]||'🌍'} ${pais}</div>`;
-    Object.entries(byPais[pais]).forEach(([slug, info]) => {
-      h += `
-        <div class="dest-block" id="dest-${slug}">
-          <div class="dest-label">
-            <div class="dest-icon">${info.emoji}</div>
-            <h3>${titleCase(info.label)}</h3>
-            <span class="dest-count">${info.progs.length} programa${info.progs.length!==1?'s':''}</span>
-          </div>
-          <div class="prog-list">${info.progs.map(cardHTML).join('')}</div>
-        </div>`;
+  var h = '';
+  sorted(byPais).forEach(function(pais) {
+    h += '<div class="country-block">';
+    h += '<div class="country-label">' + (PAIS_EMOJI[pais]||'🌍') + ' ' + pais + '</div>';
+    Object.entries(byPais[pais]).forEach(function(entry) {
+      var dest = entry[0], info = entry[1];
+      h += '<div class="dest-block" id="dest-' + info.slug + '">' +
+        '<div class="dest-label">' +
+          '<div class="dest-icon">' + info.emoji + '</div>' +
+          '<h3>' + dest + '</h3>' +
+          '<span class="dest-count">' + info.progs.length + ' programa' + (info.progs.length!==1?'s':'') + '</span>' +
+        '</div>' +
+        '<div class="prog-list">' + info.progs.map(cardHTML).join('') + '</div>' +
+      '</div>';
     });
-    h += `</div>`;
+    h += '</div>';
   });
-  document.getElementById('main-content').innerHTML = h || `
-    <div class="state-box">
-      <span class="ico">⚠️</span>
-      <p>No se encontraron programas.<br>
-      Verificá que <code>programas-mtur.json</code> existe.<br>
-      Hacé click en <strong>Actualizar ahora</strong> para generarlo.</p>
-    </div>`;
+  document.getElementById('main-content').innerHTML = h || '<div class="state-box"><span class="ico">⚠️</span><p>No se encontraron programas.<br>Verificá que <code>programas-mtur.json</code> existe.<br>Ejecutá el scraper con el botón <strong>⚡</strong>.</p></div>';
 }
 
 async function init() {
   try {
-    const r = await fetch(`${DATA_URL}?_=${Date.now()}`);
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    const data = await r.json();
+    var r = await fetch(DATA_URL + '?_=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    var data = await r.json();
     document.getElementById('last-update').textContent = formatDate(data.updatedAt);
     document.getElementById('prog-count').textContent  = data.programas.length;
-    if (!data.programas?.length) throw new Error('Sin programas');
-    const byPais = groupData(data.programas);
+    if (!data.programas || !data.programas.length) throw new Error('Sin programas en el JSON');
+    var byPais = groupData(data.programas);
     renderSidebar(byPais);
     renderContent(byPais);
   } catch(e) {
     document.getElementById('last-update').textContent = 'error';
     document.getElementById('sidebar-tree').innerHTML =
-      `<div style="padding:14px 16px;color:#b00;font-size:.76rem;">Error al cargar</div>`;
-    document.getElementById('main-content').innerHTML = `
-      <div class="state-box">
-        <span class="ico">⚠️</span>
-        <p>No se pudo cargar el catálogo.<br>
-        <strong>Error:</strong> ${e.message}<br><br>
-        Ejecutá el scraper desde <strong>Actualizar ahora</strong>.</p>
-      </div>`;
+      '<div style="padding:14px 16px;color:#b00;font-size:.76rem;">Error al cargar</div>';
+    document.getElementById('main-content').innerHTML =
+      '<div class="state-box"><span class="ico">⚠️</span><p>No se pudo cargar el catálogo.<br><strong>Error:</strong> ' + e.message + '<br><br>Ejecutá el scraper desde el botón <strong>⚡</strong> en el sidebar.</p></div>';
   }
 }
 
-function toggleTree(id) { document.getElementById(id)?.classList.toggle('open'); }
+function toggleTree(id) {
+  var el = document.getElementById(id);
+  if (el) el.classList.toggle('open');
+}
+
 init();
 </script>
 </body>
