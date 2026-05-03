@@ -91,7 +91,7 @@
     .destino-foto img { width:100%; height:100%; object-fit:cover; display:block; }
     .destino-foto .ph { font-size:7.5pt; color:var(--teal); text-align:center; padding:4mm; line-height:1.5; }
 
-    /* 5. INCLUYE / NO INCLUYE — dos columnas */
+    /* 5. INCLUYE / NO INCLUYE */
     .incluye-grid { display:grid; grid-template-columns:1fr 1fr; gap:4mm; }
     .incluye-col h4 { font-family:'Poppins',sans-serif; font-size:6pt; font-weight:700; text-transform:uppercase; letter-spacing:.1em; margin-bottom:2mm; }
     .incluye-col.si  h4 { color:var(--fun); }
@@ -110,7 +110,6 @@
     .it-day-pill { background:var(--navy); color:white; border-radius:3px; padding:1mm 2mm; font-family:'Poppins',sans-serif; font-size:6pt; font-weight:700; letter-spacing:.04em; display:inline-block; white-space:nowrap; }
     .it-day-pill.first { background:var(--fun); }
     .it-day-pill.last  { background:var(--gold); color:var(--navy-dark); }
-    .it-body { }
     .it-lugar-inline { font-weight:600; color:var(--navy); font-size:8pt; display:block; margin-bottom:1mm; }
     .it-detalle { color:var(--mid); line-height:1.45; font-size:7.5pt; }
     .it-nota-orden td { font-size:7pt; color:var(--mid); font-style:italic; padding:1.5mm 2mm; border-top:.5px solid var(--border); }
@@ -121,7 +120,89 @@
     .hotel-tag::before { content:'🏨'; font-size:7pt; }
     .hotel-url { font-size:6.5pt; color:var(--mid); }
 
-    /* 8. PRECIO DESDE */
+    /* ══════════════════════════════════════════════════════
+       8. TABLA DE PRECIOS (nuevo bloque principal)
+    ══════════════════════════════════════════════════════ */
+
+    /* Selector de salida */
+    .salida-tabs { display:flex; gap:1.5mm; flex-wrap:wrap; margin-bottom:2.5mm; }
+    .salida-tab {
+      font-family:'Poppins',sans-serif; font-size:6.5pt; font-weight:700;
+      text-transform:uppercase; letter-spacing:.08em;
+      padding:1.5mm 3.5mm; border-radius:3px;
+      border:1px solid var(--border);
+      background:var(--light); color:var(--mid);
+      cursor:pointer; transition:all .15s;
+    }
+    .salida-tab.active {
+      background:var(--navy); color:white; border-color:var(--navy);
+    }
+    .salida-tab:hover:not(.active) { border-color:var(--accent); color:var(--navy); }
+
+    /* Contenedor de tablas — cada salida tiene su propia tabla, se muestran/ocultan */
+    .precio-tabla-wrap { display:none; }
+    .precio-tabla-wrap.visible { display:block; }
+
+    /* La tabla en sí */
+    .precio-tabla {
+      width:100%; border-collapse:collapse; font-size:7.5pt;
+    }
+    .precio-tabla thead tr {
+      background:var(--navy);
+    }
+    .precio-tabla thead th {
+      color:white; font-family:'Poppins',sans-serif; font-size:6pt;
+      font-weight:700; text-transform:uppercase; letter-spacing:.1em;
+      padding:2mm 3mm; text-align:center;
+    }
+    .precio-tabla thead th:first-child { text-align:left; padding-left:3.5mm; }
+
+    /* Filas alternadas */
+    .precio-tabla tbody tr:nth-child(even) { background:#f8f7f4; }
+    .precio-tabla tbody tr:hover { background:#fff0e8; }
+
+    .precio-tabla tbody td {
+      padding:2.5mm 3mm; border-bottom:.5px solid var(--border); vertical-align:middle;
+    }
+    /* Columna hotel */
+    .precio-tabla .col-hotel {
+      font-weight:600; color:var(--navy); font-size:7.5pt;
+      max-width:55mm; white-space:normal; line-height:1.3;
+    }
+    /* Celdas de precio */
+    .precio-tabla .col-precio {
+      text-align:center; font-variant-numeric:tabular-nums;
+    }
+    .precio-celda {
+      display:inline-flex; flex-direction:column; align-items:center; gap:.3mm;
+    }
+    .precio-usd {
+      font-family:'Poppins',sans-serif; font-size:8pt; font-weight:700;
+      color:var(--fun-dark);
+    }
+    .precio-usd-sym {
+      font-size:6pt; font-weight:600; color:var(--mid); margin-right:.5mm;
+    }
+    /* Precio más barato de esa fila se destaca */
+    .precio-usd.min { color:var(--fun); }
+    .precio-usd.min::after { content:' ★'; font-size:5.5pt; color:var(--gold); }
+
+    /* Celda vacía / no disponible */
+    .precio-nd { color:var(--border); font-size:7pt; text-align:center; }
+
+    /* Header de base (Single, Doble…) con ícono */
+    .base-icon { display:block; font-size:7pt; margin-bottom:.5mm; opacity:.7; }
+
+    /* Leyenda bajo la tabla */
+    .precio-leyenda {
+      margin-top:2mm; font-size:6.5pt; color:var(--mid);
+      display:flex; gap:4mm; flex-wrap:wrap; align-items:center;
+    }
+    .leyenda-item { display:flex; align-items:center; gap:1mm; }
+    .leyenda-dot { width:2mm; height:2mm; border-radius:50%; background:var(--fun); flex-shrink:0; }
+    .leyenda-dot.gold { background:var(--gold); }
+
+    /* Banda de precio desde */
     .precio-desde-band { background:var(--fun-bg); border:1px solid var(--fun); border-radius:4px; padding:3mm 5mm; display:flex; align-items:center; justify-content:space-between; }
     .precio-desde-label { font-family:'Poppins',sans-serif; font-size:6.5pt; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--fun-dark); }
     .precio-desde-val { font-family:'Poppins',sans-serif; font-size:14pt; font-weight:800; color:var(--fun-dark); }
@@ -153,6 +234,16 @@
       .page { width:210mm; margin:0; box-shadow:none; page-break-after:always; }
       .sec { page-break-inside:avoid; }
       .doc-footer { page-break-inside:avoid; }
+      /* Al imprimir, mostrar todas las tablas de salida (sin tabs) */
+      .salida-tabs { display:none !important; }
+      .precio-tabla-wrap { display:block !important; margin-bottom:3mm; }
+      .precio-tabla-wrap::before {
+        content: attr(data-salida-label);
+        display:block;
+        font-family:'Poppins',sans-serif; font-size:6.5pt; font-weight:700;
+        text-transform:uppercase; letter-spacing:.1em; color:var(--navy);
+        margin-bottom:1.5mm;
+      }
     }
   </style>
 </head>
@@ -249,19 +340,23 @@
       <div class="hoteles-lista" id="prog-hoteles"></div>
     </div>
 
-    <!-- 8. PRECIO DESDE -->
-    <div class="sec" id="sec-precio">
-      <div class="sec-title">Tarifa</div>
-      <div class="precio-desde-band">
-        <div>
-          <div class="precio-desde-label">Precio por persona desde</div>
-          <div class="precio-desde-val" id="precio-val">—</div>
-          <div class="precio-bases" id="precio-bases"></div>
-        </div>
-        <div class="precio-desde-nota" id="precio-nota">
-          Precio sujeto a disponibilidad.<br>
-          Consultá por tu fecha y categoría.
-        </div>
+    <!-- ══════════════════════════════════════════════════════
+         8. TABLA DE PRECIOS — nuevo bloque
+    ══════════════════════════════════════════════════════ -->
+    <div class="sec" id="sec-precios">
+      <div class="sec-title">Tarifas por persona</div>
+
+      <!-- Tabs de salida (interactivas, ocultas al imprimir) -->
+      <div class="salida-tabs" id="salida-tabs"></div>
+
+      <!-- Una tabla por salida -->
+      <div id="precio-tablas"></div>
+
+      <!-- Leyenda -->
+      <div class="precio-leyenda">
+        <div class="leyenda-item"><div class="leyenda-dot"></div> Precio más económico de la salida</div>
+        <div class="leyenda-item"><div class="leyenda-dot gold"></div> — sin disponibilidad / consultar</div>
+        <div class="leyenda-item" style="margin-left:auto; font-style:italic;">Precios en U$S por persona. Sujeto a disponibilidad.</div>
       </div>
     </div>
 
@@ -328,6 +423,24 @@ const DESC = {
   machadinho:   'Termas de Machadinho combina las propiedades terapéuticas de sus aguas termales con la tranquilidad del interior gaucho. Ideal para el descanso y la recuperación.',
 };
 
+// Ícono por tipo de habitación
+const BASE_ICONS = {
+  'single':     '🛏️',
+  'doble':      '🛏️🛏️',
+  'triple':     '🛏️×3',
+  'cuadruple':  '🛏️×4',
+  'cuádruple':  '🛏️×4',
+};
+
+function baseIcon(base) {
+  const key = base.toLowerCase().replace(/[áàâä]/g,'a').replace(/[éèêë]/g,'e');
+  for (const k of Object.keys(BASE_ICONS)) {
+    if (key.includes(k)) return BASE_ICONS[k];
+  }
+  return '🛏️';
+}
+
+// ── Foto ──────────────────────────────────────────────────────────────────────
 function loadPhoto(prog) {
   const container = document.getElementById('prog-foto');
   const ph        = document.getElementById('foto-ph');
@@ -347,7 +460,6 @@ function loadPhoto(prog) {
     img.src = src;
   };
 
-  // Prioridad: imagen real del programa → Wikimedia
   if (prog.imagen) {
     tryLoad(prog.imagen, () => tryLoad(WIKIMEDIA[slug], () => { if(ph) ph.textContent='🌎'; }));
   } else {
@@ -355,7 +467,135 @@ function loadPhoto(prog) {
   }
 }
 
-// ── RENDER ────────────────────────────────────────────────────────────────────
+// ── TABLA DE PRECIOS ──────────────────────────────────────────────────────────
+/**
+ * Construye las tabs de salida y las tablas de precios desde p.matrizPrecios.
+ * Fallback: si matrizPrecios está vacío pero hay variantesCompletas, las reconstruye.
+ */
+function renderTablaPrecios(p) {
+  const sec = document.getElementById('sec-precios');
+
+  // Intentar obtener la matriz; reconstruir desde variantesCompletas si hace falta
+  let matriz = p.matrizPrecios || {};
+
+  if (Object.keys(matriz).length === 0 && p.variantesCompletas?.length) {
+    // Reconstruir
+    for (const v of p.variantesCompletas) {
+      const precio = parseInt(v.precio);
+      if (!v.salida || !v.alojamiento || !v.base || !precio) continue;
+      if (!matriz[v.salida]) matriz[v.salida] = {};
+      if (!matriz[v.salida][v.alojamiento]) matriz[v.salida][v.alojamiento] = {};
+      matriz[v.salida][v.alojamiento][v.base] = precio;
+    }
+  }
+
+  const salidas = Object.keys(matriz);
+  if (!salidas.length) { sec.style.display = 'none'; return; }
+
+  // Recopilar todas las bases únicas para las columnas, en orden natural
+  const basesSet = new Set();
+  for (const salida of salidas) {
+    for (const hotel of Object.keys(matriz[salida])) {
+      for (const base of Object.keys(matriz[salida][hotel])) {
+        basesSet.add(base);
+      }
+    }
+  }
+  // Ordenar bases: Single → Doble → Triple → Cuádruple → resto
+  const ORDER = ['single','doble','triple','cuadruple','cuádruple'];
+  const bases = [...basesSet].sort((a, b) => {
+    const ai = ORDER.findIndex(o => a.toLowerCase().includes(o));
+    const bi = ORDER.findIndex(o => b.toLowerCase().includes(o));
+    if (ai === -1 && bi === -1) return a.localeCompare(b);
+    if (ai === -1) return 1;
+    if (bi === -1) return -1;
+    return ai - bi;
+  });
+
+  const tabsEl   = document.getElementById('salida-tabs');
+  const tablasEl = document.getElementById('precio-tablas');
+  tabsEl.innerHTML   = '';
+  tablasEl.innerHTML = '';
+
+  salidas.forEach((salida, idx) => {
+    // ── Tab ──
+    const tab = document.createElement('button');
+    tab.className = 'salida-tab' + (idx === 0 ? ' active' : '');
+    tab.textContent = salida || 'Salida';
+    tab.dataset.salida = salida;
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.salida-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.precio-tabla-wrap').forEach(w => w.classList.remove('visible'));
+      tab.classList.add('active');
+      document.getElementById(`tabla-${CSS.escape(salida)}`).classList.add('visible');
+    });
+    tabsEl.appendChild(tab);
+
+    // ── Tabla ──
+    const hoteles = Object.keys(matriz[salida]);
+
+    // Calcular precio mínimo global de esta salida (para marcar ★)
+    let globalMin = Infinity;
+    for (const hotel of hoteles) {
+      for (const base of bases) {
+        const v = matriz[salida][hotel][base];
+        if (v && v < globalMin) globalMin = v;
+      }
+    }
+
+    // Encabezado de columnas
+    const thBases = bases.map(b => `
+      <th class="col-precio">
+        <span class="base-icon">${baseIcon(b)}</span>
+        ${b}
+      </th>`).join('');
+
+    // Filas de hoteles
+    const filas = hoteles.map(hotel => {
+      const celdas = bases.map(base => {
+        const precio = matriz[salida][hotel][base];
+        if (!precio) {
+          return `<td class="col-precio"><span class="precio-nd">—</span></td>`;
+        }
+        const isMin = precio === globalMin;
+        return `
+          <td class="col-precio">
+            <div class="precio-celda">
+              <span class="precio-usd${isMin ? ' min' : ''}">
+                <span class="precio-usd-sym">U$S</span>${precio.toLocaleString('es-UY')}
+              </span>
+            </div>
+          </td>`;
+      }).join('');
+
+      return `
+        <tr>
+          <td class="col-hotel">${hotel}</td>
+          ${celdas}
+        </tr>`;
+    }).join('');
+
+    const wrap = document.createElement('div');
+    wrap.className = 'precio-tabla-wrap' + (idx === 0 ? ' visible' : '');
+    wrap.id = `tabla-${salida}`;
+    wrap.dataset.salidaLabel = `Salida: ${salida}`;  // para @print::before
+    wrap.innerHTML = `
+      <table class="precio-tabla">
+        <thead>
+          <tr>
+            <th>Hotel / Alojamiento</th>
+            ${thBases}
+          </tr>
+        </thead>
+        <tbody>
+          ${filas}
+        </tbody>
+      </table>`;
+    tablasEl.appendChild(wrap);
+  });
+}
+
+// ── RENDER PRINCIPAL ──────────────────────────────────────────────────────────
 function renderPrograma(p) {
   document.title = `${p.titulo} — BestWay`;
 
@@ -385,7 +625,6 @@ function renderPrograma(p) {
   // 5. Incluye / No incluye
   const incluye   = p.incluye   || [];
   const noIncluye = p.noIncluye || [];
-
   if (incluye.length > 0) {
     document.getElementById('prog-incluye').innerHTML = incluye
       .map(i=>`<div class="incluye-item">${i}</div>`).join('');
@@ -429,17 +668,8 @@ function renderPrograma(p) {
     document.getElementById('sec-hoteles').style.display = 'none';
   }
 
-  // 8. Precio desde
-  if (p.precioDesde) {
-    document.getElementById('precio-val').textContent = `U$S ${p.precioDesde}`;
-  } else {
-    document.getElementById('sec-precio').style.display = 'none';
-  }
-  const bases = p.bases || [];
-  if (bases.length > 0) {
-    document.getElementById('precio-bases').innerHTML =
-      bases.map(b=>`<span class="base-tag">${b}</span>`).join('');
-  }
+  // 8. TABLA DE PRECIOS ✨
+  renderTablaPrecios(p);
 
   // 9. Notas
   const notas = (p.notas||[]);
