@@ -1,10 +1,15 @@
 /**
  * scraper-funtour.js — BestWay Viajes
- * v1.0 — Mayo 2026
+ * v2.0 — Mayo 2026
  *
  * Scrapea todos los programas de Funtour desde funtour.com.uy/tienda/
  * El sitio es WooCommerce con SSR — Axios lo lee sin necesidad de JS.
  *
+ * ✨ NOVEDAD v2.0:
+ * - Extrae TODAS las variaciones de precio desde data-product_variations
+ * - Estructura para tabla cliente-friendly
+ * - Matriz de precios: Salida × Hotel × Base
+ * 
  * ESTRUCTURA JSON de salida:
  * {
  *   operador: 'Funtour',
@@ -18,15 +23,24 @@
  *     itinerario[{ dia, lugar, detalle }],
  *     salidas[], bases[],
  *     precioDesde,
+ *     
+ *     // ✨ NUEVO: Variaciones completas para tabla cliente
+ *     variantesCompletas: [{
+ *       variationId, salida, alojamiento, base, precio, disponible, sku
+ *     }],
+ *     
+ *     // ✨ NUEVO: Matriz para mostrar precios organizados
+ *     matrizPrecios: {
+ *       salida1: {
+ *         "Hotel A": { Single: 759, Doble: 579, Triple: 579, Cuadruple: 579 },
+ *         "Hotel B": { Single: 689, Doble: 539, Triple: 539, Cuadruple: 539 }
+ *       }
+ *     },
+ *     
  *     fechas[{ label, value, gold }],
  *     temporada, notas[], updatedAt
  *   }]
  * }
- *
- * NOTA sobre precios por variante:
- * Funtour usa WooCommerce con variaciones (Salida × Base × Pasajeros).
- * El precio exacto por persona requiere interacción JS no disponible con Axios.
- * Se captura "precioDesde" de la etiqueta visible y "bases" (Single/Doble/Triple).
  */
 
 'use strict';
@@ -45,7 +59,6 @@ const DELAY_MS  = 1400;
 const MAX_RETRY = 3;
 
 // Programas que NO son viajes terrestres/aéreos grupales
-// (Disney, Surf Camp, cursos, etc.)
 const SKIP_KEYWORDS = /disney|surf.?camp|springbreak|canguro|idance|broadway|teens|ski.?week|punta.?cana|wine.?tour/i;
 
 const UA_POOL = [
@@ -121,35 +134,120 @@ function inferSlug(titulo) {
   return 'otro';
 }
 
+// ─── FUNCIÓN NUEVA: Extraer variaciones desde data-product_variations ────────
+
+function extraerVariaciones(html) {
+  const $ = cheerio.load(html);
+  const variationsJSON = $('form.variations_form').attr('data-product_variations');
+  
+  if (!variationsJSON) {
+    return {
+      precioDesde: '',
+      variantesCompletas: [],
+      matrizPrecios: {},
+    };
+  }
+
+  try {
+    // Cheerio decodifica automáticamente &quot; a "
+    const variaciones = JSON.parse(variationsJSON);
+    
+    if (!Array.isArray(variaciones) || variaciones.length === 0) {
+      return {
+        precioDesde: '',
+        variantesCompletas: [],
+        matrizPrecios: {},
+      };
+    }
+
+    const variantesCompletas = [];
+    let precioMin = null;
+    
+    // Mapas para la matriz
+    const salidasSet = new Set();
+    const hotelesSet = new Set();
+    const basesSet = new Set();
+    const matrizPrecios = {};
+
+    // Procesar cada variación
+    variaciones.forEach(v => {
+      const attributes = v.attributes || {};
+      const salida = clean(attributes.attribute_salida || '');
+      const alojamiento = clean(attributes.attribute_alojamiento || '');
+      const base = clean(attributes.attribute_bases || '');
+      const displayPrice = parseInt(v.display_price) || 0;
+      const variationId = v.variation_id || '';
+      const isInStock = v.is_in_stock !== false;
+      const sku = v.sku || '';
+
+      // Registrar variante completa
+      variantesCompletas.push({
+        variationId,
+        salida,
+        alojamiento,
+        base,
+        precio: String(displayPrice),
+        disponible: isInStock,
+        sku,
+      });
+
+      // Actualizar precio mínimo
+      if (displayPrice > 0) {
+        if (precioMin === null || displayPrice < precioMin) {
+          precioMin = displayPrice;
+        }
+        salidasSet.add(salida);
+        hotelesSet.add(alojamiento);
+        basesSet.add(base);
+      }
+
+      // Construir matriz: salida → hotel → base → precio
+      if (!matrizPrecios[salida]) {
+        matrizPrecios[salida] = {};
+      }
+      if (!matrizPrecios[salida][alojamiento]) {
+        matrizPrecios[salida][alojamiento] = {};
+      }
+      if (displayPrice > 0) {
+        matrizPrecios[salida][alojamiento][base] = displayPrice;
+      }
+    });
+
+    return {
+      precioDesde: precioMin ? String(precioMin) : '',
+      variantesCompletas,
+      matrizPrecios,
+    };
+
+  } catch (err) {
+    console.warn('   ⚠ Error parseando variaciones:', err.message);
+    return {
+      precioDesde: '',
+      variantesCompletas: [],
+      matrizPrecios: {},
+    };
+  }
+}
+
 // ─── Discovery desde /tienda/ ─────────────────────────────────────────────────
-// Funtour usa WooCommerce con layout propio:
-// - Títulos en <h4> con <a href="/tienda/slug/">
-// - Precios en texto suelto "Desde: U$S NNN"
-// - Imágenes en <img> dentro del mismo bloque
 
 async function discoverUrls() {
   console.log('🔍 Descubriendo programas desde /tienda/...');
   const html = await fetchHTML(TIENDA);
   const $    = cheerio.load(html);
-  const seen = new Map(); // slug → meta
+  const seen = new Map();
 
-  // Estrategia: buscar todos los <a href="/tienda/slug/"> que NO sean
-  // navegación, newsletter, cupón, etc.
   $('a[href]').each((_, el) => {
     const href  = $(el).attr('href') || '';
     const txt   = clean($(el).text());
 
-    // Solo links de productos individuales de la tienda
     if (!href.includes('/tienda/')) return;
     if (href === TIENDA || href === `${BASE}/tienda/`) return;
 
-    // Extraer slug: todo lo que viene después de /tienda/
     const slug = href.replace(/^https?:\/\/[^/]+\/tienda\//, '').replace(/\/$/, '');
     if (!slug || slug.includes('/') || seen.has(slug)) return;
 
-    // Obtener título: puede ser el texto del propio <a>, o el <h4> hermano
     let titulo = '';
-    // Si el <a> es la imagen, subir al padre y buscar el <h4>
     const parent  = $(el).parent();
     const grandpa = parent.parent();
     titulo = clean(parent.find('h4, h3, h2').first().text())
@@ -159,13 +257,11 @@ async function discoverUrls() {
     if (!titulo || titulo.length < 3) return;
     if (SKIP_KEYWORDS.test(titulo)) return;
 
-    // Precio: buscar en el mismo bloque
     const bloque = grandpa.length ? grandpa : parent;
     const precioTxt = clean(bloque.text());
     const precioM   = precioTxt.match(/U\$S\s*([\d.,]+)/i);
     const precio    = precioM ? precioM[1].replace(/\./g, '').replace(',', '') : '';
 
-    // Imagen thumbnail del bloque
     const img = bloque.find('img').first().attr('src') || '';
 
     seen.set(slug, {
@@ -177,7 +273,6 @@ async function discoverUrls() {
     });
   });
 
-  // Fallback: buscar también por h4 > a directamente
   $('h4 a[href], h3 a[href]').each((_, el) => {
     const href  = $(el).attr('href') || '';
     const titulo = clean($(el).text());
@@ -209,12 +304,10 @@ function parsePrograma(html, meta) {
     $('h1.product_title, h1.entry-title, h1.elementor-heading-title').first().text()
   ) || meta.titulo;
 
-  // Quitar referencias a "Funtour" del título para la ficha BestWay
   const titulo = tituloRaw.replace(/\bfuntour\b/gi, '').replace(/\s{2,}/g, ' ').trim();
 
   // ── Imagen principal ──────────────────────────────────────────────────────
   let imagen = '';
-  // WooCommerce: imagen principal en .woocommerce-product-gallery img
   $('div.woocommerce-product-gallery img, .product img').each((_, el) => {
     const src = $(el).attr('data-large_image') || $(el).attr('src') || '';
     if (!imagen && src && !src.includes('-150x150') && !src.includes('-300x300')) {
@@ -239,7 +332,6 @@ function parsePrograma(html, meta) {
       if (/^incluye/i.test(txt))      { enNoIncluye = false; return; }
     }
     if (tag === 'li') {
-      // Filtrar líneas de exoneración de responsabilidad
       if (/eximiendo de responsabilidad|factores externos/i.test(txt)) return;
       if (enNoIncluye) noIncluye.push(txt);
       else             incluye.push(txt);
@@ -256,31 +348,26 @@ function parsePrograma(html, meta) {
     }
   });
 
-  // ── Precio desde ──────────────────────────────────────────────────────────
-  const precioTxt = clean($('p.price, .price').first().text());
-  const precioM   = precioTxt.match(/[\d.,]+/);
-  const precioDesde = precioM
-    ? precioM[0].replace('.', '')
-    : meta.precioDesde || '';
+  // ── VARIACIONES DE PRECIO ✨ ────────────────────────────────────────────
+  const variacionesData = extraerVariaciones(html);
+  const precioDesde = variacionesData.precioDesde;
+  const variantesCompletas = variacionesData.variantesCompletas;
+  const matrizPrecios = variacionesData.matrizPrecios;
 
   // ── Itinerario ────────────────────────────────────────────────────────────
-  // WooCommerce: tab "Descripción" en #tab-description
   const itinerario = [];
   const tabDesc    = $('#tab-description');
 
   tabDesc.find('p').each((_, el) => {
-    const html_p = $(el).html() || '';
     const txt    = clean($(el).text());
     if (!txt || txt.length < 5) return;
 
-    // Detectar encabezado de día: bold al inicio "Día N – LUGAR –"
     const strongTxt = clean($(el).find('strong').first().text());
     const diaM = strongTxt.match(/^D[ií]a\s+(\d+(?:-\d+)?)\s*[–\-]\s*(.+)/i);
 
     if (diaM) {
       const num    = diaM[1];
       const lugar  = clean(diaM[2].replace(/[–\-]+$/, '').replace(/\bFuntour\b/gi, '')).trim();
-      // Detalle: texto del párrafo menos el strong del encabezado
       const detalle = clean(txt.replace(strongTxt, '').replace(/\bFuntour\s+Viajes\b/gi, '').trim());
       itinerario.push({
         dia    : `DÍA ${num.padStart(2, '0')}`,
@@ -290,8 +377,6 @@ function parsePrograma(html, meta) {
         last   : false,
       });
     } else if (itinerario.length > 0) {
-      // Párrafo adicional dentro del último día (vuelos, importante, etc.)
-      // Solo añadir si no es el último día ya cerrado
       const last = itinerario[itinerario.length - 1];
       if (!last.last) {
         const txtClean = clean(txt.replace(/\bFuntour\s+Viajes?\b/gi, ''));
@@ -317,7 +402,6 @@ function parsePrograma(html, meta) {
     if (!value || value === 'Elige una opción') return;
 
     if (/salida/.test(label)) {
-      // Puede tener múltiples opciones separadas por newline
       value.split(/\n|,/).map(s => s.trim()).filter(Boolean).forEach(s => {
         if (!salidas.includes(s)) salidas.push(s);
       });
@@ -330,7 +414,6 @@ function parsePrograma(html, meta) {
     }
   });
 
-  // Si hay hotel en atributos y no está en hoteles, agregarlo
   if (hotelAttr && !hoteles.some(h => h.nombre.toLowerCase().includes(hotelAttr.toLowerCase()))) {
     hoteles.push({ nombre: hotelAttr, url: '' });
   }
@@ -403,6 +486,8 @@ function parsePrograma(html, meta) {
     salidas,
     bases,
     precioDesde,
+    variantesCompletas,      // ✨ NUEVO
+    matrizPrecios,           // ✨ NUEVO
     fechas,
     temporada,
     notas       : [],
@@ -413,7 +498,7 @@ function parsePrograma(html, meta) {
 // ─── Main ──────────────────────────────────────────────────────────────────────
 
 async function scrapeAll() {
-  console.log('✈️  Scraper Funtour v1 — BestWay Viajes\n');
+  console.log('✈️  Scraper Funtour v2 — BestWay Viajes\n');
 
   const result = {
     operador  : 'Funtour',
@@ -421,7 +506,6 @@ async function scrapeAll() {
     programas : [],
   };
 
-  // 1. Descubrir URLs
   let items = [];
   try {
     items = await discoverUrls();
@@ -431,7 +515,6 @@ async function scrapeAll() {
     process.exit(1);
   }
 
-  // 2. Scrape de cada programa
   let errores = 0;
   for (const meta of items) {
     await sleep(DELAY_MS);
@@ -443,7 +526,7 @@ async function scrapeAll() {
       result.programas.push(prog);
       console.log(
         `   ✅ ${prog.itinerario.length} días | ` +
-        `${prog.hoteles[0]?.nombre?.substring(0, 30) || '—'} | ` +
+        `${prog.variantesCompletas.length} variaciones | ` +
         `Desde U$S ${prog.precioDesde || '?'}`
       );
     } catch (e) {
