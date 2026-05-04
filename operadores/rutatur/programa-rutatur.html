@@ -87,18 +87,35 @@
     .destino-foto img { width:100%; height:100%; object-fit:cover; display:block; }
     .destino-foto .ph { font-size:7.5pt; color:var(--teal); text-align:center; padding:4mm; line-height:1.5; }
 
-    /* 5. ITINERARIO */
-    .itinerary-table { width:100%; border-collapse:collapse; }
-    .itinerary-table tr { border-bottom:.5px solid var(--border); }
-    .itinerary-table tr:last-child { border-bottom:none; }
-    .itinerary-table td { padding:2.5mm 2mm; vertical-align:top; font-size:8pt; }
-    .it-day { width:13mm; white-space:nowrap; }
-    .it-day-pill { background:var(--navy); color:white; border-radius:3px; padding:1mm 2mm; font-family:'Poppins',sans-serif; font-size:6pt; font-weight:700; letter-spacing:.04em; display:inline-block; }
+    /* 5. ITINERARIO — layout 2 columnas: pill | texto corrido */
+    .itin-list { display:flex; flex-direction:column; gap:0; }
+    .itin-row {
+      display:grid;
+      grid-template-columns: 15mm 1fr;
+      gap:0 3mm;
+      padding:3mm 2mm;
+      border-bottom:.5px solid var(--border);
+      align-items:baseline;
+    }
+    .itin-row:last-of-type { border-bottom:none; }
+    .it-day-pill {
+      background:var(--navy); color:white; border-radius:3px;
+      padding:1mm 2mm; font-family:'Poppins',sans-serif;
+      font-size:6pt; font-weight:700; letter-spacing:.04em;
+      display:inline-block; white-space:nowrap; text-align:center;
+      margin-top:.5mm;
+    }
     .it-day-pill.first { background:var(--ruta); }
     .it-day-pill.last  { background:var(--gold); color:var(--navy-dark); }
-    .it-lugar { width:34mm; font-weight:600; color:var(--navy); font-size:8pt; padding-left:2mm; }
-    .it-detalle { color:var(--mid); line-height:1.45; }
-    .it-nota-orden td { font-size:7pt; color:var(--mid); font-style:italic; padding:1.5mm 2mm; border-top:.5px solid var(--border); }
+    .itin-text { font-size:8.5pt; color:var(--mid); line-height:1.55; }
+    .itin-text .itin-lugar {
+      font-weight:700; color:var(--navy);
+      display:inline; margin-right:1.5mm;
+    }
+    .itin-nota {
+      font-size:7pt; color:var(--mid); font-style:italic;
+      padding:2mm 2mm 1mm; border-top:.5px solid var(--border);
+    }
 
     /* 6. HOTELES */
     .hoteles-lista { display:flex; flex-wrap:wrap; gap:2mm; }
@@ -244,12 +261,8 @@
     <!-- 5. ITINERARIO -->
     <div class="sec" id="sec-itinerario">
       <div class="sec-title">Itinerario</div>
-      <table class="itinerary-table">
-        <tbody id="prog-itinerario"></tbody>
-        <tr class="it-nota-orden">
-          <td colspan="3">* El orden de los paseos puede variar segun las condiciones del operador.</td>
-        </tr>
-      </table>
+      <div class="itin-list" id="prog-itinerario"></div>
+      <div class="itin-nota">* El orden de los paseos puede variar segun las condiciones del operador.</div>
     </div>
 
     <!-- 6. HOTELES -->
@@ -452,11 +465,14 @@ function renderPrograma(p) {
   if (itin.length > 0) {
     document.getElementById('prog-itinerario').innerHTML = itin.map(function(d) {
       var pillClass = d.first ? ' first' : (d.last ? ' last' : '');
-      return '<tr>' +
-        '<td class="it-day"><span class="it-day-pill' + pillClass + '">' + esc(d.dia) + '</span></td>' +
-        '<td class="it-lugar">' + esc(d.lugar) + '</td>' +
-        '<td class="it-detalle">' + esc(d.detalle) + '</td>' +
-        '</tr>';
+      // Lugar en negrita integrado al texto; si no hay detalle, solo el lugar
+      var cuerpo = d.detalle
+        ? '<span class="itin-lugar">' + esc(d.lugar) + ':</span>' + esc(d.detalle)
+        : '<span class="itin-lugar">' + esc(d.lugar) + '</span>';
+      return '<div class="itin-row">' +
+        '<span class="it-day-pill' + pillClass + '">' + esc(d.dia) + '</span>' +
+        '<div class="itin-text">' + cuerpo + '</div>' +
+        '</div>';
     }).join('');
   } else {
     document.getElementById('sec-itinerario').style.display = 'none';
