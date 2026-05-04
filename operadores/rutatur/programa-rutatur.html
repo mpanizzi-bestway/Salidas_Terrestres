@@ -89,52 +89,76 @@
     .destino-foto img { width:100%; height:100%; object-fit:cover; display:block; }
     .destino-foto .ph { font-size:7.5pt; color:var(--teal); text-align:center; padding:4mm; line-height:1.5; }
 
-    /* 5. ITINERARIO
-       Layout: 3 columnas — pill día (fija) | lugar en negrita + detalle (flex, todo el ancho restante)
-       El lugar va en la misma celda que el detalle para que no comprima el texto.
-    */
+    /* 5. ITINERARIO */
     .itinerary-table { width:100%; border-collapse:collapse; table-layout:fixed; }
     .itinerary-table tr { border-bottom:.5px solid var(--border); }
     .itinerary-table tr:last-child { border-bottom:none; }
     .itinerary-table td { padding:2.5mm 2mm; vertical-align:top; font-size:8pt; }
-
-    /* Columna 1: pill del día — ancho fijo pequeño */
     .it-day { width:16mm; }
     .it-day-pill { background:var(--navy); color:white; border-radius:3px; padding:1mm 2mm; font-family:'Poppins',sans-serif; font-size:6pt; font-weight:700; letter-spacing:.04em; display:inline-block; white-space:nowrap; }
     .it-day-pill.first { background:var(--ruta); }
     .it-day-pill.last  { background:var(--gold); color:var(--navy-dark); }
-
-    /* Columna 2: lugar + detalle — ocupa TODO el ancho restante */
     .it-body { }
     .it-lugar-inline { font-weight:600; color:var(--navy); font-size:8pt; display:block; margin-bottom:1mm; }
     .it-detalle { color:var(--mid); line-height:1.45; font-size:7.5pt; }
-
     .it-nota-orden td { font-size:7pt; color:var(--mid); font-style:italic; padding:1.5mm 2mm; border-top:.5px solid var(--border); }
 
     /* 6. HOTELES */
     .hoteles-lista { display:flex; flex-wrap:wrap; gap:2mm; }
-    .hotel-tag { background:var(--light); border:.5px solid var(--border); border-radius:4px; padding:1.5mm 3mm; font-size:7.5pt; color:var(--navy); font-weight:500; display:flex; align-items:center; gap:1.5mm; }
-    .hotel-tag::before { content:'🏨'; font-size:7pt; }
-    .hotel-url { font-size:6.5pt; color:var(--mid); display:block; }
+    .hotel-tag {
+      background:var(--light); border:.5px solid var(--border); border-radius:4px;
+      padding:1.5mm 3mm; font-size:7.5pt; color:var(--navy); font-weight:500;
+      display:flex; flex-direction:column; gap:.5mm;
+    }
+    .hotel-tag-header { display:flex; align-items:center; gap:1.5mm; }
+    .hotel-tag-header::before { content:'🏨'; font-size:7pt; }
+    .hotel-nombre { font-weight:600; }
+    .hotel-ciudad { font-size:6.5pt; color:var(--mid); font-weight:400; }
+    .hotel-estrellas { font-size:6pt; color:var(--gold); letter-spacing:.05em; }
+    .hotel-url { font-size:6.5pt; color:var(--accent); display:block; margin-top:.5mm; }
 
-    /* 7. PRECIOS
-       Mostrar: Doble, Triple (si distinto), Promo contado (si existe), Butaca.
-       Single/Menores van SOLO a notas, no como precio-box.
-    */
+    /* 7. PRECIOS */
     .precios-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(38mm, 1fr)); gap:2mm; }
-    .precio-box { background:var(--light); border:.5px solid var(--border); border-radius:4px; padding:2.5mm 2mm; text-align:center; }
+
+    /* Precio box normal */
+    .precio-box {
+      background:var(--light); border:.5px solid var(--border); border-radius:4px;
+      padding:2.5mm 2mm; text-align:center;
+    }
     .precio-box.highlight { background:var(--navy); border-color:var(--navy); }
-    .precio-box.promo-box  { background:#e8f5ec; border-color:var(--ruta); }
     .precio-box .cat { font-family:'Poppins',sans-serif; font-size:5.5pt; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--mid); margin-bottom:1mm; }
     .precio-box.highlight .cat { color:rgba(255,255,255,.6); }
-    .precio-box.promo-box  .cat { color:var(--ruta); }
     .precio-box .val { font-size:9.5pt; font-weight:700; color:var(--navy); }
     .precio-box.highlight .val { color:white; font-size:11pt; }
-    .precio-box.promo-box  .val { color:var(--ruta); font-size:10pt; }
-    .precio-box .val.na { color:var(--border); }
+
+    /* PROMO — <details> desplegable */
+    details.promo-details {
+      background:#e8f5ec; border:.5px solid var(--ruta); border-radius:4px;
+      padding:2.5mm 2mm; text-align:center; cursor:pointer;
+    }
+    details.promo-details summary {
+      list-style:none; display:block; cursor:pointer;
+    }
+    details.promo-details summary::-webkit-details-marker { display:none; }
+    details.promo-details .cat {
+      font-family:'Poppins',sans-serif; font-size:5.5pt; font-weight:700;
+      text-transform:uppercase; letter-spacing:.06em; color:var(--ruta);
+      margin-bottom:1mm;
+    }
+    details.promo-details .val { font-size:10pt; font-weight:700; color:var(--ruta); }
+    details.promo-details .promo-toggle {
+      font-size:6pt; color:var(--ruta); margin-top:1mm; opacity:.7;
+    }
+    details.promo-details .promo-condicion {
+      font-size:6.5pt; color:var(--mid); margin-top:2mm;
+      padding-top:1.5mm; border-top:.5px solid var(--ruta);
+      font-style:italic; line-height:1.4;
+    }
+
+    /* Nota Single bajo la grilla */
     .precios-nota { font-size:6.5pt; color:var(--mid); font-style:italic; margin-top:1.5mm; }
 
-    /* 8. NOTAS */
+    /* 8. INFORMACION ADICIONAL (notas) */
     .notas-lista { display:flex; flex-direction:column; gap:1.5mm; }
     .nota-row { background:var(--light); border-left:2px solid var(--ruta); border-radius:0 3px 3px 0; padding:1.5mm 3mm; font-size:7pt; color:var(--mid); line-height:1.5; }
 
@@ -145,14 +169,12 @@
     .footer-contact strong { font-family:'Poppins',sans-serif; font-size:8pt; color:white; font-weight:600; display:block; margin-bottom:.5mm; }
     .footer-pago { display:flex; flex-direction:column; align-items:flex-end; gap:2.5mm; }
     .pago-label { font-family:'Poppins',sans-serif; font-size:7pt; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--gold-lt); text-align:right; }
-
-    /* ── MEDIOS DE PAGO: imagen con fondo blanco redondeado ── */
     .pago-logo-wrap { background:white; border-radius:5px; padding:2mm 3mm; display:inline-flex; align-items:center; justify-content:center; min-width:50mm; min-height:10mm; }
     .pago-logo-img { height:8mm; width:auto; display:block; max-width:55mm; }
     .pago-logo-text { font-family:'Poppins',sans-serif; font-size:7pt; font-weight:700; color:var(--navy); letter-spacing:.04em; }
-
     .footer-legal { padding:2.5mm 13mm; font-size:6pt; color:rgba(255,255,255,.3); line-height:1.5; }
 
+    /* ── IMPRESIÓN ──────────────────────────────────────────────────────────── */
     @media print {
       @page { size:A4; margin:0; }
       body { background:none; }
@@ -161,6 +183,10 @@
       .page { width:210mm; margin:0; box-shadow:none; page-break-after:always; }
       .sec { page-break-inside:avoid; }
       .doc-footer { page-break-inside:avoid; }
+
+      /* PROMO: solo imprime si está abierto */
+      details.promo-details:not([open]) { display:none !important; }
+      details.promo-details[open] .promo-toggle { display:none; }
     }
   </style>
 </head>
@@ -249,7 +275,7 @@
       <div class="precios-nota" id="precios-nota"></div>
     </div>
 
-    <!-- 8. NOTAS -->
+    <!-- 8. INFORMACION ADICIONAL -->
     <div class="sec" id="sec-notas">
       <div class="sec-title">Informacion adicional</div>
       <div class="notas-lista" id="prog-notas"></div>
@@ -351,9 +377,9 @@ function renderPrograma(p) {
   document.title = `${p.titulo} — BestWay`;
 
   // 2. Titulo
-  document.getElementById('prog-titulo').innerHTML = `
-    <h1>${p.titulo}</h1>
-    <div class="duracion-line">${p.subtitulo || p.duracion || ''}</div>`;
+  document.getElementById('prog-titulo').innerHTML =
+    `<h1>${p.titulo}</h1>
+     <div class="duracion-line">${p.subtitulo || p.duracion || ''}</div>`;
 
   // 3. Fechas
   const fechas = p.fechas || [];
@@ -362,18 +388,19 @@ function renderPrograma(p) {
         <div class="fecha-item">
           <span class="fl">${f.label}</span>
           <span class="fv${f.gold ? ' gold' : ''}">${f.value}</span>
-        </div>${i < fechas.length - 1 ? '<div class="fecha-sep"></div>' : ''}`
-      ).join('')
+        </div>${i < fechas.length - 1 ? '<div class="fecha-sep"></div>' : ''}`)
+      .join('')
     : '<div class="fecha-item"><span class="fl">Salida</span><span class="fv gold">Consultar disponibilidad</span></div>';
 
   // 4. Destino
-  const desc = DESC[p.destinoSlug] || `${p.destino || p.titulo} es un destino imperdible saliendo desde Montevideo.`;
+  const desc = DESC[p.destinoSlug] ||
+    `${p.destino || p.titulo} es un destino imperdible saliendo desde Montevideo.`;
   document.getElementById('prog-descripcion').textContent = desc;
-  document.getElementById('prog-highlights').innerHTML = (p.highlights || [])
-    .map(h => `<span class="hl-tag">${h}</span>`).join('');
+  document.getElementById('prog-highlights').innerHTML =
+    (p.highlights || []).map(h => `<span class="hl-tag">${h}</span>`).join('');
   loadPhoto(p);
 
-  // 5. Itinerario — 2 columnas: pill | lugar+detalle
+  // 5. Itinerario
   const itin = p.itinerario || [];
   if (itin.length > 0) {
     document.getElementById('prog-itinerario').innerHTML = itin.map(d => `
@@ -390,95 +417,106 @@ function renderPrograma(p) {
     document.getElementById('sec-itinerario').style.display = 'none';
   }
 
-  // 6. Hoteles — filtrar "SEGURO DE ASISTENCIA" y entradas de precios
-  const HOTELES_EXCLUIR = /SEGURO DE ASISTENCIA|SEGURO INCLUIDO|COSTO POR PERSONA|HABITACION|U\$S\s+\d|BASE DOBLE|BASE TRIPLE/i;
+  // 6. Hoteles
+  // Filtro de seguridad adicional en el render (el scraper ya filtra, pero por si acaso)
+  const HOTELES_EXCLUIR = /SEGURO DE ASISTENCIA|SEGURO INCLUIDO|COSTO POR PERSONA|PRECIO POR PERSONA|HABITACION|U\$S\s+\d|BASE DOBLE|BASE TRIPLE/i;
   const hoteles = (p.hoteles || []).filter(h =>
-    h.nombre && h.nombre.length > 2 && !HOTELES_EXCLUIR.test(h.nombre)
+    (h.nombre || h.url) && !HOTELES_EXCLUIR.test(h.nombre)
   );
+
   if (hoteles.length > 0) {
-    document.getElementById('prog-hoteles').innerHTML = hoteles.map(h => `
-      <div class="hotel-tag">
-        ${h.nombre}
-        ${h.url ? `<span class="hotel-url">${h.url.replace(/^https?:\/\/(www\.)?/, '')}</span>` : ''}
-      </div>`).join('');
+    document.getElementById('prog-hoteles').innerHTML = hoteles.map(h => {
+      // Construir línea de encabezado: nombre + estrellas
+      const nombreStr    = h.nombre || '';
+      const estrellasStr = h.estrellas ? `<span class="hotel-estrellas">${h.estrellas}</span>` : '';
+      const ciudadStr    = h.ciudad   ? `<span class="hotel-ciudad">📍 ${h.ciudad}</span>` : '';
+      const urlClean     = h.url ? h.url.replace(/^https?:\/\/(www\.)?/, 'www.') : '';
+      const urlStr       = urlClean
+        ? `<span class="hotel-url">🔗 ${urlClean}</span>`
+        : '';
+      return `
+        <div class="hotel-tag">
+          <div class="hotel-tag-header">
+            <span class="hotel-nombre">${nombreStr}</span>
+            ${estrellasStr}
+            ${ciudadStr}
+          </div>
+          ${urlStr}
+        </div>`;
+    }).join('');
   } else {
     document.getElementById('sec-hoteles').style.display = 'none';
   }
 
   // 7. Precios
-  // Mostramos como boxes: Doble (o Doble/Triple si son iguales), Triple (si distinto),
-  // Promo contado (si existe), Butaca (si existe).
-  // Single/Menores van SOLO a notas.
   const pr = p.precios || {};
   const precioBoxes = [];
 
-  // Doble — siempre como "Doble / Triple" si no hay triple separado distinto
+  // Precio principal (doble / doble+triple)
   if (pr.doble != null) {
-    const tieneTripleDistinto = pr.triple != null && pr.triple !== pr.doble;
     precioBoxes.push({
-      cat: tieneTripleDistinto ? 'Base Doble' : 'Base Doble / Triple',
+      cat: 'Base Doble / Triple',
       val: `U$S ${pr.doble.toLocaleString('es-UY')}`,
-      hi: true,
+      hi:  true,
     });
   }
 
-  // Triple — solo si es distinto al doble
-  if (pr.triple != null && pr.triple !== pr.doble) {
-    precioBoxes.push({ cat: 'Base Triple', val: `U$S ${pr.triple.toLocaleString('es-UY')}`, hi: false });
-  }
-
-  // Promo contado — doble (o promo global)
-  const promoVal = pr.promo ?? pr.promoDoble;
-  if (promoVal != null) {
+  // PROMO — se agrega como objeto especial para renderizar como <details>
+  if (pr.promo?.monto != null) {
     precioBoxes.push({
-      cat: 'Promo Pago Contado',
-      val: `U$S ${promoVal.toLocaleString('es-UY')}`,
-      hi: false,
-      isPromo: true,
+      cat:       pr.promo.condicion || 'Promo Contado',
+      val:       `U$S ${pr.promo.monto.toLocaleString('es-UY')}`,
+      isPromo:   true,
+      condicion: pr.promo.condicion || '',
     });
-  }
-
-  // Promo triple — solo si existe y difiere de promo doble
-  if (pr.promoTriple != null && pr.promoTriple !== promoVal) {
-    precioBoxes.push({
-      cat: 'Promo Contado Triple',
-      val: `U$S ${pr.promoTriple.toLocaleString('es-UY')}`,
-      hi: false,
-      isPromo: true,
-    });
-  }
-
-  // Butaca / solo asiento
-  if (pr.butaca != null) {
-    precioBoxes.push({ cat: 'Solo Asiento', val: `U$S ${pr.butaca.toLocaleString('es-UY')}`, hi: false });
   }
 
   if (precioBoxes.length > 0) {
-    document.getElementById('prog-precios').innerHTML = precioBoxes.map(b => `
-      <div class="precio-box${b.hi ? ' highlight' : b.isPromo ? ' promo-box' : ''}">
-        <div class="cat">${b.cat}</div>
-        <div class="val">${b.val}</div>
-      </div>`).join('');
+    document.getElementById('prog-precios').innerHTML = precioBoxes.map(b => {
+      if (b.isPromo) {
+        // Desplegable: solo se imprime si está abierto
+        return `
+          <details class="promo-details">
+            <summary>
+              <div class="cat">🏷️ ${b.cat}</div>
+              <div class="val">${b.val}</div>
+              <div class="promo-toggle">▼ ver condiciones</div>
+            </summary>
+            ${b.condicion
+              ? `<p class="promo-condicion">${b.condicion}</p>`
+              : ''}
+          </details>`;
+      }
+      return `
+        <div class="precio-box${b.hi ? ' highlight' : ''}">
+          <div class="cat">${b.cat}</div>
+          <div class="val">${b.val}</div>
+        </div>`;
+    }).join('');
   } else {
     document.getElementById('sec-precios').style.display = 'none';
   }
 
-  // Nota extra de precios: Single como texto bajo la grilla
+  // Nota Single bajo la grilla de precios (NO va en notas[])
   const notaPrecios = [];
   if (pr.singleLabel) notaPrecios.push(pr.singleLabel);
-  else if (pr.single != null) notaPrecios.push(`Habitación individual (Single): U$S ${pr.single.toLocaleString('es-UY')}`);
-  if (pr.menorGratis) notaPrecios.push(pr.menorGratis);
+  else if (pr.single != null) {
+    notaPrecios.push(`Habitación individual (Single): U$S ${pr.single.toLocaleString('es-UY')}`);
+  }
   document.getElementById('precios-nota').innerHTML =
     notaPrecios.length
-      ? notaPrecios.join(' &nbsp;·&nbsp; ') + '<br>Precios sujetos a disponibilidad al momento de la reserva.'
+      ? notaPrecios.join(' &nbsp;·&nbsp; ') +
+        '<br>Precios sujetos a disponibilidad al momento de la reserva.'
       : 'Precios sujetos a disponibilidad al momento de la reserva.';
 
-  // 8. Notas — filtrar datos de Rutatur y duplicados de precios
+  // 8. Informacion adicional (notas)
+  // Butaca y Menores ya vienen en notas[] desde el scraper v2.2
   const NOTAS_EXCLUIR = /Plaza Cagancha|Pocitos|Av\. Brasil|2902|2709|098|097|rutatur\.com|www\.rutatur|COSTO POR PERSONA EN BASE/i;
-  const notas = (p.notas || []).filter(n => !NOTAS_EXCLUIR.test(n));
+  const notas = (p.notas || []).filter(n => n && !NOTAS_EXCLUIR.test(n));
+
   if (notas.length > 0) {
-    document.getElementById('prog-notas').innerHTML = notas
-      .map(n => `<div class="nota-row">${n}</div>`).join('');
+    document.getElementById('prog-notas').innerHTML =
+      notas.map(n => `<div class="nota-row">${n}</div>`).join('');
   } else {
     document.getElementById('sec-notas').style.display = 'none';
   }
@@ -499,7 +537,10 @@ async function init() {
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     allData = await r.json();
   } catch(e) {
-    showError(`No se pudo cargar <code>programas-rutatur.json</code>.<br>Ejecuta el scraper desde GitHub Actions.`, e.message);
+    showError(
+      `No se pudo cargar <code>programas-rutatur.json</code>.<br>Ejecuta el scraper desde GitHub Actions.`,
+      e.message
+    );
     return;
   }
 
