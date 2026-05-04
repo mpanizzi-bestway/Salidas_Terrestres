@@ -1,37 +1,20 @@
 /**
  * scraper-rutatur.js - BestWay Viajes
- * v2.1 — Mayo 2026
+ * v2.2 — Mayo 2026
  *
- * MEJORAS respecto a v1:
- *  ✅ Auto-discovery desde home (elimina KNOWN_URLS hardcodeada)
- *     La home de rutatur.com es SSR — Axios la lee sin problema
- *  ✅ Parser de precios con ambas variantes:
- *       A) "doble o triple U$S 669 / PROMO ... U$S 599"
- *       B) BASE DOBLE / BASE TRIPLE / HABITACION SINGLE en líneas separadas
- *  ✅ Single: guarda singleLabel con texto completo ("Habitación Single: +35% adicional")
- *  ✅ Itinerario: captura correcta del último día (línea con HASTA LA PROXIMA)
- *  ✅ Hoteles: filtro robusto — excluye SEGURO, líneas de precio y footer
- *  ✅ Salidas: marca "Salidas:" como fuente primaria
- *  ✅ Imagen real del paquete
- *  ✅ Reintentos con back-off exponencial
- *
- * ESTRUCTURA JSON de salida — 100% compatible con rutatur.html:
- *  {
- *    operador: 'Rutatur',
- *    updatedAt: ISO string,
- *    programas: [
- *      {
- *        id, rutaId, operador, sourceUrl,
- *        titulo, subtitulo, duracion, destino, destinoSlug, pais, emoji,
- *        imagen, highlights[], fechas[], salidas[],
- *        itinerario[{ dia, lugar, detalle, first, last }],
- *        hoteles[{ nombre, url }],
- *        precios{ doble?, triple?, promo?, promoDoble?, promoTriple?,
- *                 single?, promoSingle?, singleLabel?, butaca?, menorGratis? },
- *        temporada, notas[], updatedAt
- *      }
- *    ]
- *  }
+ * CAMBIOS respecto a v2.1:
+ *  ✅ HIGHLIGHTS: fuente = itinerario[].lugar (no texto libre)
+ *     Dedup por más corto (si uno contiene al otro, queda el más corto)
+ *     Excluye MONTEVIDEO y variantes
+ *  ✅ HOTELES: parser unificado con 5 patrones HTML reales
+ *     Objeto { ciudad, nombre, estrellas, url } por hotel
+ *  ✅ PRECIOS: agrega /PRECIO\s+POR\s+PERSONA/i como inicio de bloque
+ *     Precio principal = primer U$S del bloque (precios.doble)
+ *     BUTACA / SOLO ASIENTO → notas[] (ya no en precios)
+ *     MENOR HASTA → notas[] (ya no en precios)
+ *     PROMO/CONTADO/TRANSFERENCIA → precios.promo { monto, condicion }
+ *     singleLabel (%) permanece en precios, se renderiza bajo la grilla
+ *  ✅ SALIDAS: captura adicional desde <div class="descr">
  */
 
 'use strict';
@@ -92,7 +75,7 @@ const DEST_SLUG_MAP = [
   [/fazzenda|fazenda/i,                                               'fazzenda'     ],
   [/camboriu|cambori[uú]/i,                                           'camboriu'     ],
   [/gramado|canela/i,                                                 'gramado'      ],
-  [/rio de janeiro|noche.*nostalgia.*rio|rio.*nostalgia|shakira.*rio/i,'rio'          ],
+  [/rio de janeiro|noche.*nostalgia.*rio|rio.*nostalgia/i,            'rio'          ],
   [/machadinho/i,                                                     'machadinho'   ],
   [/gravatal/i,                                                       'gravatal'     ],
   [/termas\s+romanas/i,                                               'termasromanas'],
@@ -133,15 +116,13 @@ function inferSlug(titulo) {
 }
 
 // ─── Auto-discovery desde la home ────────────────────────────────────────────
-// La home de rutatur.com es SSR — Axios la lee sin necesidad de JS.
-// Lista todos los programas activos con "Ver más >" y sus URLs.
 
 async function discoverUrls() {
   console.log('🔍 Descubriendo excursiones desde la home...');
   const html = await fetchHTML(BASE + '/');
   const $    = cheerio.load(html);
 
-  const seen = new Map(); // id → url completa
+  const seen = new Map();
 
   $('a[href]').each((_, el) => {
     const href = $(el).attr('href') || '';
@@ -155,69 +136,221 @@ async function discoverUrls() {
   return [...seen.values()];
 }
 
+// ─── Highlights: dedup por más corto ─────────────────────────────────────────
+
+/**
+ * Dado un array de strings, elimina duplicados por contenido parcial:
+ * si uno contiene al otro, queda el MÁS CORTO (nombre base sin hotel).
+ * El primero que aparece tiene prioridad salvo que llegue uno más corto.
+ */
+function deduplicarHighlights(lugares) {
+  const result = [];
+  for (const lugar of lugares) {
+    // ¿Hay un existente que ya contenga al nuevo (nuevo es más corto)?
+    const idxMasLargo = result.findIndex(r => r.includes(lugar));
+    if (idxMasLargo !== -1) {
+      result[idxMasLargo] = lugar; // reemplazar por el más corto
+      continue;
+    }
+    // ¿El nuevo contiene a algún existente (el existente ya es más corto)?
+    if (result.some(r => lugar.includes(r))) continue;
+    // Sin solapamiento → agregar
+    result.push(lugar);
+  }
+  return result;
+}
+
+// ─── Parser de hoteles ────────────────────────────────────────────────────────
+
+const HOTEL_EXCLUIR = /^HOTEL(?:ES)?:$|SEGURO DE ASISTENCIA|SEGURO INCLUIDO|COSTO POR PERSONA|PRECIO POR PERSONA|BASE DOBLE|BASE TRIPLE|HABITACION SINGLE|U\$S\s+\d|BUTACA|MENOR|Plaza Cagancha|Pocitos|rutatur\.com|Montevideo|Uruguay/i;
+
+/**
+ * Parsea una línea suelta de hotel y retorna { ciudad, nombre, estrellas, url }
+ * Soporta los 5 patrones reales del HTML de Rutatur.
+ */
+function parseHotelLinea(lineaRaw) {
+  let linea = clean(lineaRaw);
+
+  // Descartar líneas de encabezado o excluidas
+  if (!linea || HOTEL_EXCLUIR.test(linea)) return null;
+
+  let ciudad = '', nombre = '', estrellas = '', url = '';
+
+  // 1. Extraer URL (www.xxx)
+  const urlM = linea.match(/www\.\S+/i);
+  if (urlM) {
+    url   = urlM[0].replace(/[,;.]+$/, '');
+    linea = linea.replace(urlM[0], '').trim();
+  }
+
+  // 2. Extraer estrellas: "****" o "3***" o "4*"
+  const estreM = linea.match(/\d?\*{1,5}/);
+  if (estreM) {
+    estrellas = estreM[0];
+    linea     = linea.replace(estreM[0], '').trim();
+  }
+
+  // 3. Limpiar separadores sueltos al final
+  linea = linea.replace(/[-:.\s]+$/, '').trim();
+  // Limpiar prefijo "HOTEL:" o "HOTELES:"
+  linea = linea.replace(/^HOTEL(?:ES)?:?\s*/i, '').trim();
+
+  if (!linea && !url) return null;
+  if (!linea) { nombre = url; return { ciudad, nombre, estrellas, url }; }
+
+  // 4. Separar ciudad de nombre
+  // Prioridad 1: "CIUDAD: NOMBRE" (dos puntos explícitos)
+  const dosPuntosM = linea.match(/^([^:]{2,30}):\s*(.+)$/);
+  if (dosPuntosM) {
+    ciudad = dosPuntosM[1].trim();
+    nombre = dosPuntosM[2].trim();
+  }
+  // Prioridad 2: "TEXTO - TEXTO" (guión como separador ciudad/nombre)
+  else if (linea.includes('-')) {
+    const partes = linea.split('-').map(p => p.trim()).filter(Boolean);
+    if (partes.length >= 2) {
+      // Heurística: la parte más corta suele ser la ciudad
+      if (partes[0].length <= partes[partes.length - 1].length) {
+        ciudad = partes[0];
+        nombre = partes.slice(1).join('-').trim();
+      } else {
+        nombre = partes[0];
+        ciudad = partes.slice(1).join('-').trim();
+      }
+    } else {
+      nombre = linea;
+    }
+  }
+  // Prioridad 3: "CIUDAD. NOMBRE" (punto como separador)
+  else if (linea.includes('.') && !/^www/i.test(linea)) {
+    const dotIdx = linea.indexOf('.');
+    ciudad = linea.slice(0, dotIdx).trim();
+    nombre = linea.slice(dotIdx + 1).trim();
+  }
+  // Sin separador → todo es nombre
+  else {
+    nombre = linea;
+  }
+
+  // 5. Limpiar asteriscos residuales
+  nombre = nombre.replace(/\*+/g, '').trim();
+  ciudad = ciudad.replace(/\*+/g, '').trim();
+
+  // Descartar si el nombre resultante es demasiado largo (basura) o vacío
+  if (!nombre && !url) return null;
+  if (nombre.length > 120) return null;
+
+  return { ciudad, nombre, estrellas, url };
+}
+
+/**
+ * Extrae todos los hoteles del HTML parseado.
+ * Detecta el bloque por /^HOTEL(?:ES)?:/i y lo delimita con marcadores de precio.
+ * Fallback: busca líneas con ★★ o www. + mayúsculas.
+ */
+function extraerHoteles($, lineas) {
+  const hoteles  = [];
+  const FIN_BLOQUE = /Valor de la excursi[oó]n|COSTO\s+POR\s+PERSONA|PRECIO\s+POR\s+PERSONA|^SALIDA\s+\d/i;
+
+  // ── Ruta 1: marcador explícito "HOTEL:" o "HOTELES:" ─────────────────────
+  const hotelIdx = lineas.findIndex(l => /^HOTEL(?:ES)?:\s*$/i.test(l.trim()));
+
+  if (hotelIdx !== -1) {
+    for (let i = hotelIdx + 1; i < lineas.length; i++) {
+      const l = clean(lineas[i]);
+      if (!l) continue;
+      if (FIN_BLOQUE.test(l)) break;
+      const h = parseHotelLinea(l);
+      if (h && !hoteles.some(x => x.nombre === h.nombre && x.url === h.url)) {
+        hoteles.push(h);
+      }
+    }
+    if (hoteles.length > 0) return hoteles;
+  }
+
+  // ── Ruta 1b: "HOTELES: lista en la misma línea" (Patrón A)
+  // Ej: "HOTELES:\nGUARATUBA: SPAZIO MARINE www.xxx\n..."
+  // Cheerio: recorre <p> que empiezan con HOTEL
+  $('p, div').each((_, el) => {
+    const txt = $(el).text();
+    if (!/^HOTEL(?:ES)?:/i.test(clean(txt))) return;
+    // Dividir por <br> internos
+    $(el).find('br').replaceWith('\n');
+    const subLineas = $(el).text().split('\n');
+    for (const sub of subLineas) {
+      const h = parseHotelLinea(sub);
+      if (h && !hoteles.some(x => x.nombre === h.nombre && x.url === h.url)) {
+        hoteles.push(h);
+      }
+    }
+  });
+  if (hoteles.length > 0) return hoteles;
+
+  // ── Ruta 2: fallback heurístico ─────────────────────────────────────────
+  for (const l of lineas) {
+    if (HOTEL_EXCLUIR.test(l)) continue;
+    if (l.match(/\*{2,}|www\.|\.com\.br|\.com\.ar/i) && l.match(/[A-Z]{4,}/)) {
+      const h = parseHotelLinea(l);
+      if (h && !hoteles.some(x => x.nombre === h.nombre && x.url === h.url)) {
+        hoteles.push(h);
+      }
+    }
+  }
+
+  return hoteles;
+}
+
 // ─── Parser de precios ────────────────────────────────────────────────────────
 
-function parsePrecioBlock(texto) {
+function parsePrecioBlock(texto, notas) {
   const precios = {};
 
-  // Variante A: "doble o triple U$S NNN / PROMO ... U$S MMM"
-  const dtMatch = texto.match(/doble\s+o\s+triple\s+U\$S\s*([\d.,]+)/i);
-  if (dtMatch) {
-    precios.doble = parseFloat(dtMatch[1].replace(',', '.'));
-    const promoM  = texto.match(/(?:PROMO|CONTADO)[^\n]*U\$S\s*([\d.,]+)/i);
-    if (promoM) precios.promo = parseFloat(promoM[1].replace(',', '.'));
-  } else {
-    // Variante B: cada base en línea propia con sus 2 precios (base + promo)
-    const lineaDoble = texto.match(/BASE\s+DOBLE[^\n]*/i);
-    if (lineaDoble) {
-      const nums = [...lineaDoble[0].matchAll(/U\$S\s*([\d.,]+)/gi)];
-      if (nums[0]) precios.doble      = parseFloat(nums[0][1].replace(',', '.'));
-      if (nums[1]) precios.promoDoble = parseFloat(nums[1][1].replace(',', '.'));
-    }
-    const lineaTriple = texto.match(/BASE\s+TRIPLE[^\n]*/i);
-    if (lineaTriple) {
-      const nums = [...lineaTriple[0].matchAll(/U\$S\s*([\d.,]+)/gi)];
-      if (nums[0]) precios.triple      = parseFloat(nums[0][1].replace(',', '.'));
-      if (nums[1]) precios.promoTriple = parseFloat(nums[1][1].replace(',', '.'));
-    }
-    const lineaSingle = texto.match(/(?:HABITACION\s+)?SINGLE[^\n]*/i);
-    if (lineaSingle) {
-      const nums = [...lineaSingle[0].matchAll(/U\$S\s*([\d.,]+)/gi)];
-      if (nums[0]) precios.single      = parseFloat(nums[0][1].replace(',', '.'));
-      if (nums[1]) precios.promoSingle = parseFloat(nums[1][1].replace(',', '.'));
-    }
+  // ── Precio principal: PRIMER U$S del bloque ────────────────────────────────
+  const primerM = texto.match(/U\$S\s*([\d.,]{1,6})/i);
+  if (primerM) {
+    precios.doble = parseFloat(
+      primerM[1].replace(/[.,](?=\d{3})/g, '').replace(',', '.')
+    );
   }
 
-  // Single como recargo %: "HABITACION SINGLE 35 % MAS" → guardar texto completo
-  // y también variantes sin monto fijo
-  if (!precios.single) {
-    // Capturar la línea entera de single para preservar el texto original
-    const singleLineM = texto.match(/(?:HABITACION\s+)?SINGLE[^\n]{0,80}/i);
-    if (singleLineM) {
-      const singleLine = singleLineM[0].trim();
-      // Si tiene porcentaje, usar texto limpio
-      const pctM = singleLine.match(/([\d]+)\s*%\s*M[AÁ]S/i);
-      if (pctM) {
-        precios.singleLabel = `Habitación Single: +${pctM[1]}% adicional`;
-      }
-      // Si tiene U$S pero no se capturo arriba (edge case), capturar
-      else {
-        const usdM = singleLine.match(/U\$S\s*([\d.,]+)/i);
-        if (usdM) precios.single = parseFloat(usdM[1].replace(',', '.'));
-      }
-    }
+  // ── PROMO / CONTADO / TRANSFERENCIA → precios.promo ──────────────────────
+  // Disparador: cualquiera de PROMO, CONTADO, TRANSFERENCIA
+  // Formato esperado: "... - PROMO PAGO CONTADO U$S 999" o similar
+  const promoM = texto.match(
+    /[-–]\s*((PROMO|CONTADO|TRANSFERENCIA)[^\n]*?U\$S\s*([\d.,]{1,6})[\*]*)/i
+  );
+  if (promoM) {
+    const montoStr   = promoM[3];
+    const condicion  = promoM[1]
+      .replace(/U\$S[\s\d.,]+[\*]*/i, '')
+      .replace(/\*/g, '')
+      .trim();
+    precios.promo = {
+      monto    : parseFloat(montoStr.replace(/[.,](?=\d{3})/g, '').replace(',', '.')),
+      condicion: condicion,
+    };
   }
 
-  // Butaca
-  const butacaM = texto.match(/(?:COSTO\s+(?:DE\s+LA\s+)?)?BUTACA[:\s]+(?:U\$S\s*)?([\d.,]+)/i)
-               || texto.match(/SOLO\s+ASIENTO[:\s]+(?:U\$S\s*)?([\d.,]+)/i);
-  if (butacaM) precios.butaca = parseFloat(butacaM[1].replace(',', '.'));
+  // ── Single con porcentaje → precios.singleLabel (va bajo la grilla) ───────
+  const pctM = texto.match(/SINGLE[^%\n]{0,30}([\d]+)\s*%/i);
+  if (pctM) precios.singleLabel = `Single: +${pctM[1]}% adicional`;
 
-  // Menor gratis
+  // ── Butaca / Solo asiento → NOTAS (ya no en precios) ─────────────────────
+  const butacaM =
+    texto.match(/(?:COSTO\s+(?:DE\s+LA\s+)?)?BUTACA[:\s]+(?:U\$S\s*)?([\d.,]+)/i) ||
+    texto.match(/SOLO\s+ASIENTO[:\s]+(?:U\$S\s*)?([\d.,]+)/i);
+  if (butacaM) {
+    const monto = parseFloat(butacaM[1].replace(',', '.'));
+    notas.push(`Butaca / Solo asiento: U$S ${monto.toLocaleString('es-UY')}`);
+  }
+
+  // ── Menor gratis → NOTAS (ya no en precios) ───────────────────────────────
   const menorM = texto.match(
     /MENOR(?:ES)?\s+(?:HASTA|hasta)\s+(\d+)\s+[Aa][ÑñNn][Oo][Ss]?[^.]*(?:ES\s+NUESTRO\s+INVITADO|SIN\s+CARGO|GRATIS|FREE)/i
   );
-  if (menorM) precios.menorGratis = `Menores hasta ${menorM[1]} años: invitado`;
+  if (menorM) {
+    notas.push(`Menores hasta ${menorM[1]} años: invitado`);
+  }
 
   return precios;
 }
@@ -246,9 +379,9 @@ function parsePrograma(html, sourceUrl) {
     }
   });
 
-  // ── Líneas de texto (nodos bloque, sin duplicar hijos) ─────────────────────
+  // ── Líneas de texto ────────────────────────────────────────────────────────
   const lineas = [];
-  $('body').find('h2, h3, h4, h5, p, li').each((_, el) => {
+  $('body').find('h2, h3, h4, h5, p, li, strong').each((_, el) => {
     const txt = clean($(el).text());
     if (txt) lineas.push(txt);
   });
@@ -261,27 +394,12 @@ function parsePrograma(html, sourceUrl) {
   const noches  = nochesM ? nochesM[1] : '';
   const durStr  = dias ? `${dias} DÍAS${noches ? ` / ${noches} NOCHES` : ''}` : 'Consultar';
 
-  // ── Título limpio (sin días/noches para los cards) ─────────────────────────
+  // ── Título limpio ──────────────────────────────────────────────────────────
   const titulo = tituloRaw
     .replace(/\s*[-–]?\s*\d+\s*[Dd][ií][aá]s?\s*(?:[\/\s]*\d*\s*[Nn]oches?)?/g, '')
     .replace(/\s*[-–]\s*$/g, '')
     .replace(/\s{2,}/g, ' ')
     .trim() || tituloRaw;
-
-  // ── Ciudades visitadas (highlights) ────────────────────────────────────────
-  // Es la línea en cursiva con " - " que aparece antes del itinerario
-  let ciudadesLinea = '';
-  const itInicioIdx = lineas.findIndex(l => /^D[íi]a\s+01[\s\-–]/i.test(l));
-  const buscarHasta = itInicioIdx !== -1 ? itInicioIdx : Math.min(12, lineas.length);
-  for (let i = 0; i < buscarHasta; i++) {
-    const l = lineas[i];
-    if (
-      l.includes(' - ') && l.length > 10 && l.length < 200 &&
-      l !== tituloRaw && l !== titulo &&
-      !l.match(/D[íi]a\s+\d+/i) &&
-      !l.match(/Salida|HOTEL|COSTO|U\$S|SEGURO|BUTACA/i)
-    ) { ciudadesLinea = l; break; }
-  }
 
   // ── Itinerario ─────────────────────────────────────────────────────────────
   const itinerario = [];
@@ -306,7 +424,6 @@ function parsePrograma(html, sourceUrl) {
 
       if (isFin) {
         if (isDia) {
-          // La línea es a la vez encabezado del último día y fin
           if (diaActual) itinerario.push({
             dia: diaActual, lugar: lugActual,
             detalle: textosDia.join(' ').trim(), first: false, last: false,
@@ -314,7 +431,6 @@ function parsePrograma(html, sourceUrl) {
           const { diaLabel, lugar } = parseCabecera(line);
           itinerario.push({ dia: diaLabel, lugar, detalle: '', first: false, last: true });
         } else if (diaActual) {
-          // "HASTA LA PROXIMA" dentro del texto del último día
           const textoFin = clean(line.replace(/HASTA LA PR[OÓ]XIMA EXCURSI[OÓ]N[!¡]*/i, ''));
           if (textoFin) textosDia.push(textoFin);
           itinerario.push({
@@ -341,7 +457,6 @@ function parsePrograma(html, sourceUrl) {
       }
     }
 
-    // Corregir first/last
     if (itinerario.length > 0) {
       for (let i = 0; i < itinerario.length; i++) {
         itinerario[i].first = i === 0;
@@ -350,24 +465,42 @@ function parsePrograma(html, sourceUrl) {
     }
   }
 
-  // ── Highlights para los cards ──────────────────────────────────────────────
-  const highlights = ciudadesLinea
-    ? ciudadesLinea.split(' - ').map(c => `📍 ${c.trim()}`).slice(0, 6)
-    : itinerario.slice(0, 6)
-        .map(d => `📍 ${d.lugar}`)
-        .filter(h => !/montevideo/i.test(h));
+  // ── Highlights: desde itinerario (NO desde texto libre) ───────────────────
+  // Fuente: campo .lugar de cada entrada del itinerario ya parseado
+  // Excluir MONTEVIDEO y variantes cercanas
+  // Dedup: si uno contiene al otro, queda el más corto
+  const lugaresRaw = itinerario
+    .map(d => d.lugar.trim())
+    .filter(l => l && !/\bMONTEVIDEO\b/i.test(l));
+
+  const highlights = deduplicarHighlights(lugaresRaw)
+    .slice(0, 6)
+    .map(l => `📍 ${l}`);
 
   // ── Salidas ────────────────────────────────────────────────────────────────
   const salidas = [];
 
-  // Prioridad 1: "Salidas: TEXTO" (con s)
+  // Fuente 0: <div class="descr"> (nueva, mayor prioridad)
+  $('div.descr').each((_, el) => {
+    const txt = clean($(el).text());
+    if (/^salida\s+/i.test(txt) && txt.length > 8) {
+      const val = txt.replace(/\*+/g, '').trim();
+      if (!salidas.some(s => s.toLowerCase() === val.toLowerCase())) {
+        salidas.push(val);
+      }
+    }
+  });
+
+  // Fuente 1: etiqueta "Salidas?: valor"
   const salidaTagM = textoPlano.match(/Salidas?:\s*([^\n]+)/i);
   if (salidaTagM) {
     const val = clean(salidaTagM[1]).replace(/\*+/g, '').trim();
-    if (val.length > 3) salidas.push(val);
+    if (val.length > 3 && !salidas.some(s => s.toLowerCase() === val.toLowerCase())) {
+      salidas.push(val);
+    }
   }
 
-  // Prioridad 2: "Salida DD de MES..." al pie (líneas <li>)
+  // Fuente 2: regex global "Salida DD de MES..."
   const SALIDA_RX = /\*{0,3}\s*Salida\s+([^\n*]{5,80}(?:hs|Hs|HRS)?)/gi;
   let sm;
   while ((sm = SALIDA_RX.exec(textoPlano)) !== null) {
@@ -378,54 +511,12 @@ function parsePrograma(html, sourceUrl) {
   }
 
   // ── Hoteles ────────────────────────────────────────────────────────────────
-  // Excluir: marcador "HOTEL:", líneas de precio/seguro, footer de Rutatur
-  const HOTEL_EXCLUIR = /^HOTEL:$|SEGURO DE ASISTENCIA|SEGURO INCLUIDO|COSTO POR PERSONA|BASE DOBLE|BASE TRIPLE|HABITACION SINGLE|U\$S\s+\d|BUTACA|MENOR|Plaza Cagancha|Pocitos|rutatur\.com|Montevideo|Uruguay/i;
+  const hoteles = extraerHoteles($, lineas);
 
-  const hoteles = [];
-
-  // Ruta 1: hay marcador explícito "HOTEL:" en una línea sola
-  const hotelIdx = lineas.findIndex(l => /^HOTEL:$/i.test(l.trim()));
-  if (hotelIdx !== -1) {
-    for (let i = hotelIdx + 1; i < lineas.length; i++) {
-      const l = clean(lineas[i]);
-      if (!l) continue;
-      // Fin del bloque hotel: empieza sección de precios o salida con fecha
-      if (/Valor de la excursi[oó]n|COSTO\s+POR\s+PERSONA|^SALIDA\s+\d/i.test(l)) break;
-      if (HOTEL_EXCLUIR.test(l)) continue;
-      // Separar nombre de URL si la línea tiene "www."
-      const parts  = l.split(/\s+(?=www\.)/);
-      const nombre = parts[0].replace(/\*+/g, '').trim();
-      const url    = parts[1] || '';
-      if (nombre.length > 2 && nombre.length < 100) {
-        hoteles.push({ nombre, url });
-      }
-    }
-  } else {
-    // Ruta 2 (fallback): líneas con nombre en mayúsculas + www. o estrellas
-    for (const l of lineas) {
-      if (HOTEL_EXCLUIR.test(l)) continue;
-      if (l.match(/\*{2,}|www\.|\.com\.br/i) && l.match(/[A-Z]{4,}/)) {
-        const parts  = l.split(/\s+(?=www\.)/);
-        const nombre = parts[0].replace(/\*+/g, '').replace(/^HOTEL(ES)?:?\s*/i, '').trim();
-        const url    = parts[1] || '';
-        if (
-          nombre.length > 2 && nombre.length < 100 &&
-          !hoteles.some(h => h.nombre === nombre)
-        ) hoteles.push({ nombre, url });
-      }
-    }
-  }
-
-  // ── Precios ────────────────────────────────────────────────────────────────
-  const ps = textoPlano.search(/(?:Valor de la excursi[oó]n|COSTO\s+POR\s+PERSONA)/i);
-  const pe = textoPlano.search(/Plaza de Cagancha/i);
-  const precioBlock = ps !== -1
-    ? textoPlano.slice(ps, pe !== -1 ? pe : undefined)
-    : textoPlano;
-  const precios = parsePrecioBlock(precioBlock);
-
-  // ── Notas ──────────────────────────────────────────────────────────────────
+  // ── Notas (se pasa array mutable a parsePrecioBlock) ──────────────────────
   const notas = [];
+
+  // Recolectar notas por palabras clave ANTES de parsear precios
   for (const line of lineas) {
     if (
       /menor|asiento|butaca|contado|promo|importante|políticas|cancelación|señ|free|invitado/i.test(line) &&
@@ -436,6 +527,20 @@ function parsePrograma(html, sourceUrl) {
       if (!notas.includes(n)) notas.push(n);
     }
   }
+
+  // ── Precios ────────────────────────────────────────────────────────────────
+  // Bloque delimitado por inicio y fin
+  const INICIO_PRECIOS = /Valor de la excursi[oó]n|COSTO\s+POR\s+PERSONA|PRECIO\s+POR\s+PERSONA/i;
+  const FIN_PRECIOS    = /Plaza de Cagancha/i;
+
+  const ps = textoPlano.search(INICIO_PRECIOS);
+  const pe = textoPlano.search(FIN_PRECIOS);
+  const precioBlock = ps !== -1
+    ? textoPlano.slice(ps, pe !== -1 ? pe : undefined)
+    : textoPlano;
+
+  // parsePrecioBlock puede agregar a notas[] (butaca, menor)
+  const precios = parsePrecioBlock(precioBlock, notas);
 
   // ── Temporada ──────────────────────────────────────────────────────────────
   let temporada = '';
@@ -474,10 +579,10 @@ function parsePrograma(html, sourceUrl) {
     rutaId,
     operador    : 'rutatur',
     sourceUrl,
-    titulo      : tituloRaw,       // título completo (con días/noches) para la ficha
+    titulo      : tituloRaw,
     subtitulo   : durStr,
     duracion    : durStr,
-    destino     : titulo,          // título limpio para los cards
+    destino     : titulo,
     destinoSlug,
     pais        : PAIS_MAP[destinoSlug]  || 'Otros',
     emoji       : EMOJI_MAP[destinoSlug] || '📍',
@@ -497,7 +602,7 @@ function parsePrograma(html, sourceUrl) {
 // ─── Main ────────────────────────────────────────────────────────────────────
 
 async function scrapeAll() {
-  console.log('🚌 Scraper Rutatur v2 – BestWay Viajes\n');
+  console.log('🚌 Scraper Rutatur v2.2 – BestWay Viajes\n');
 
   const result = {
     operador  : 'Rutatur',
@@ -505,7 +610,6 @@ async function scrapeAll() {
     programas : [],
   };
 
-  // 1. Descubrir URLs desde la home
   let urls = [];
   try {
     urls = await discoverUrls();
@@ -515,7 +619,6 @@ async function scrapeAll() {
     process.exit(1);
   }
 
-  // 2. Scrape de cada programa
   let errores = 0;
   for (const url of urls) {
     await sleep(DELAY_MS);
@@ -526,13 +629,15 @@ async function scrapeAll() {
       const prog = parsePrograma(html, url);
       if (!prog?.titulo) { console.warn('   ⚠ Sin datos'); continue; }
       result.programas.push(prog);
+
       const p = prog.precios;
       const precioLabel = p.doble
-        ? `U$S ${p.doble}${p.promo ? ` / promo ${p.promo}` : p.promoDoble ? ` / promo ${p.promoDoble}` : ''}`
+        ? `U$S ${p.doble}${p.promo ? ` / promo ${p.promo.monto}` : ''}`
         : '—';
       console.log(
         `   ✅ ${prog.itinerario.length} días | ` +
-        `${prog.hoteles[0]?.nombre?.substring(0, 35) || '—'} | ` +
+        `HL: [${prog.highlights.map(h => h.replace('📍 ','')).join(', ')}] | ` +
+        `Hoteles: ${prog.hoteles.length} | ` +
         `${precioLabel}`
       );
     } catch (e) {
@@ -547,8 +652,6 @@ async function scrapeAll() {
   }
 
   result.updatedAt = new Date().toISOString();
-
-  // 3. Guardar JSON
   fs.writeFileSync(OUT_PATH, JSON.stringify(result, null, 2), 'utf8');
   console.log(`\n✅ ${result.programas.length} programas → ${OUT_PATH}`);
   if (errores) console.warn(`⚠  ${errores} programas fallaron`);
