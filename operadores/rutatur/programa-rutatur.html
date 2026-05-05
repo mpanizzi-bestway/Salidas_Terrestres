@@ -498,17 +498,20 @@ function renderPrograma(p) {
   var pr = p.precios || {};
   var boxes = [];
 
-  // Caja principal: Doble (con o sin promo consolidada)
+  // Caja principal: Doble (label depende de si hay triple separado)
+  var hayTripleSeparado = pr.triple != null && pr.triple !== pr.doble;
   if (pr.doble != null) {
     var promoLabel = null;
-    if (pr.promo != null)      promoLabel = 'Promo contado: ' + fmtUSD(pr.promo);
+    if (pr.promo != null)           promoLabel = 'Promo contado: ' + fmtUSD(pr.promo);
     else if (pr.promoDoble != null) promoLabel = 'Promo contado: ' + fmtUSD(pr.promoDoble);
-    boxes.push({ cat:'Doble / Triple', val: fmtUSD(pr.doble), promo: promoLabel, hi: true });
+    // Si hay triple con precio distinto, la caja doble dice solo "Doble"
+    var catDoble = hayTripleSeparado ? 'Doble' : 'Doble / Triple';
+    boxes.push({ cat: catDoble, val: fmtUSD(pr.doble), promo: promoLabel, hi: true });
   }
 
-  // Caja Triple separada (solo si tiene precio distinto al doble)
-  if (pr.triple != null && pr.triple !== pr.doble) {
-    var promoTripleLabel = pr.promoTriple ? 'Promo: ' + fmtUSD(pr.promoTriple) : null;
+  // Caja Triple separada solo si tiene precio DISTINTO al doble
+  if (hayTripleSeparado) {
+    var promoTripleLabel = pr.promoTriple ? 'Promo contado: ' + fmtUSD(pr.promoTriple) : null;
     boxes.push({ cat:'Triple', val: fmtUSD(pr.triple), promo: promoTripleLabel, hi: false });
   }
 
