@@ -1,6 +1,6 @@
 {
   "operador": "Rutatur",
-  "updatedAt": "2026-05-04T19:33:25.932Z",
+  "updatedAt": "2026-05-05T00:28:34.686Z",
   "programas": [
     {
       "id": "rutatur-771",
@@ -86,21 +86,17 @@
         "triple": 769,
         "promoTriple": 699,
         "single": 1029,
-        "promoSingle": 959,
-        "butaca": 299,
         "promoTexto": "PROMO PAGO CONTADO U$S 719 *** - COSTO POR PERSONA EN BASE TRIPLE U$S 769 *** PROMO PAGO CONTADO U$S 699 *** - COSTO HABITACION SINGLE: U$S 1029 *** PROMO PAGO CONTADO U$S 959 *** - 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO*** -COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia) ¡A disfrutar!"
       },
       "temporada": "Mayo",
       "notas": [
-        "COSTO DE LA BUTACA: 299",
+        "COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)",
         "Dia 01 – MONTEVIDEO Partida en modernas unidades de última generación equipadas con asientos “Semi Cama”, servicio a bordo, Merienda, Cena y Desayuno, Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
-        "- COSTO POR PERSONA EN BASE DOBLE U$S 789  PROMO PAGO CONTADO U$S 719",
-        "- COSTO POR PERSONA EN BASE TRIPLE U$S 769  PROMO PAGO CONTADO U$S 699",
         "- COSTO HABITACION SINGLE: U$S 1029  PROMO PAGO CONTADO U$S 959",
         "- 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO",
         "-COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)"
       ],
-      "updatedAt": "2026-05-04T19:32:26.003Z"
+      "updatedAt": "2026-05-05T00:27:34.904Z"
     },
     {
       "id": "rutatur-800",
@@ -127,14 +123,13 @@
         },
         {
           "label": "Otras salidas",
-          "value": "PROGRAMADA SABADO 16 de Mayo 2026 - HORA DE SALIDA: 17:30 · 16 Mayo 2026 - Hora ",
+          "value": "PROGRAMADA SABADO 16 de Mayo 2026 - HORA DE SALIDA: 17:30",
           "gold": false
         }
       ],
       "salidas": [
         "17:30",
-        "PROGRAMADA SABADO 16 de Mayo 2026 - HORA DE SALIDA: 17:30",
-        "16 Mayo 2026 - Hora 17:30"
+        "PROGRAMADA SABADO 16 de Mayo 2026 - HORA DE SALIDA: 17:30"
       ],
       "itinerario": [
         {
@@ -203,12 +198,10 @@
       },
       "temporada": "",
       "notas": [
-        "PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 10 DE ABRIL 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)",
-        "Valor por persona en Base Doble U$S 549 // Promo U$S 509",
-        "Valor por persona en Base Triple U$S 539 // Promo U$S 499Valor por persona en Base Cuadruple U$S 529 // Promo U$S 489Single 35 % MAS",
+        "butaca, servicio abordo y seguro de asistencia.",
         "- Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-05-04T19:32:27.418Z"
+      "updatedAt": "2026-05-05T00:27:36.311Z"
     },
     {
       "id": "rutatur-773",
@@ -286,7 +279,7 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 469 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 439"
       ],
-      "updatedAt": "2026-05-04T19:32:28.811Z"
+      "updatedAt": "2026-05-05T00:27:37.701Z"
     },
     {
       "id": "rutatur-788",
@@ -382,20 +375,19 @@
         "doble": 669,
         "promo": 599,
         "singleLabel": "Habitación Single: +35% adicional",
-        "butaca": 299,
         "menorGratis": "Menores hasta 5 años: invitado",
         "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 599 *** HABITACION SINGLE 35 % MAS -MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro) -Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       },
       "temporada": "Mayo",
       "notas": [
-        "Costo de la butaca 299",
+        "butaca, servicio abordo, ni seguro)",
         "MENORES HASTA 5 AÑOS FREE",
         "Día 01-MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y",
         "Valor de la excursión por persona en basa doble o triple U$S 669 / PROMO PAGO CONTADO O TRANSFERENCIA U$S 599",
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-05-04T19:32:30.201Z"
+      "updatedAt": "2026-05-05T00:27:39.090Z"
     },
     {
       "id": "rutatur-786",
@@ -416,17 +408,11 @@
       "fechas": [
         {
           "label": "Salida",
-          "value": "23 MAYO 2026 - HORA 13:30hs",
-          "gold": true
-        },
-        {
-          "label": "Otras salidas",
           "value": "23 Mayo 2026 - 13:30hs",
-          "gold": false
+          "gold": true
         }
       ],
       "salidas": [
-        "23 MAYO 2026 - HORA 13:30hs",
         "23 Mayo 2026 - 13:30hs"
       ],
       "itinerario": [
@@ -481,10 +467,9 @@
       "notas": [
         "Partida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
         "PRECIO DE PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 28 MARZO DE FEBRERO 2025 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES)",
-        "VALOR DE LA EXCURSIÓN POR PERSONA EN BASE DOBLE // TRIPLE U$S 859 // PROMO U$S 799",
         "MENORES DE 5 A 12 AÑOS ACOMPAÑADOS MINIMO POR 2 ADULTOS EN LA MISMA HABITACION COSTO U$S 489 // PROMO U$S 429"
       ],
-      "updatedAt": "2026-05-04T19:32:31.599Z"
+      "updatedAt": "2026-05-05T00:27:40.479Z"
     },
     {
       "id": "rutatur-808",
@@ -560,19 +545,18 @@
         "promoDoble": 899,
         "triple": 899,
         "promoTriple": 795,
+        "butaca": 479,
         "menorGratis": "Menores hasta 5 años: invitado",
         "promoTexto": "PROMO U$S 899 VALOR POR PERSONA EN BASE TRIPLE - U$S 899 // PROMO U$S 795 SINGLE + 35% **** SEGURO DE ASISTENCIA ****INCLUIDO -Menores hasta 5 años inclusive free (máximo 1 por habitación, acompañado mínimo con 2 adultos pagantes en la misma habitación, no les corresponde butaca, servicio abordo ni seguro de asistencia)-Menores de 6 a 12 años inclusive, Costo U$S 479 // Promo U$S 439 (acompañado mínimo con 2 adultos pagantes por habitación). -Costo de la butaca para menores hasta 5 años - PROMO U$S 299, incluye, butaca, servicio abordo y seguro de asistencia. El programa incluye:1 - PASAJE IDA/VUELTA2 - SERVICIO ABORDO Y ACOMPAÑANTE DE GRUPO3 - SEGURO DE ASISTENCIA MEDICA4 - PASEO DE COMPRAS A BRUSQUE5 - 4 NOCHES DE ALOJAMIENTO CON PENSION COMPLETA EN RESORT FAZZENDA PARK 5***** Salida SABADO 20 DE JUNIO - 13:30Hs BRASIL Nuestros Servicios Contacto"
       },
       "temporada": "Aniversario",
       "notas": [
+        "butaca, servicio abordo ni seguro de asistencia)-Menores de 6 a 12 años inclusive, Costo U$S 479 // Promo U$S 439 (acompañado",
         "Menores hasta 5 años inclusive free",
         "Día 01 – MONTEVIDEO Partida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
-        "VALOR POR PERSONA EN BASE DOBLE - U$S 959 // PROMO U$S 899",
-        "VALOR POR PERSONA EN BASE TRIPLE - U$S 899 // PROMO U$S 795",
-        "-Menores hasta 5 años inclusive free (máximo 1 por habitación, acompañado mínimo con 2 adultos pagantes en la misma habitación, no les corresponde butaca, servicio abordo ni seguro de asistencia)-Menores de 6 a 12 años inclusive, Costo U$S 479 // Promo U$S 439 (acompañado mínimo con 2 adultos pagantes por habitación).",
         "-Costo de la butaca para menores hasta 5 años - PROMO U$S 299, incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-05-04T19:32:32.994Z"
+      "updatedAt": "2026-05-05T00:27:41.870Z"
     },
     {
       "id": "rutatur-799",
@@ -666,9 +650,10 @@
       },
       "temporada": "Aniversario",
       "notas": [
+        "butaca, servicio abordo y seguro de asistencia.",
         "-Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-05-04T19:32:34.381Z"
+      "updatedAt": "2026-05-05T00:27:43.254Z"
     },
     {
       "id": "rutatur-820",
@@ -742,12 +727,12 @@
       },
       "temporada": "Aniversario",
       "notas": [
+        "butaca y seguro de asistencia)",
         "Día 01 – MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con servicio abordo Merienda, Cena y Desayuno. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
-        "VALOR POR PERSONA BASE DOBLE U$S 759 // PROMO U$S 699 - PAGO EN EFECTIVO O TRANSFERENCIAVALOR POR PERSONA BASE TRIPLE U$S 749 // PROMO U$S 679 - PAGO EN EFECTIVO O TRANSFERENCIA",
         "-- Menores hasta 7 años, máximo 1 por habitación acompañado de 2 adultos: VALOR U$S 299",
         "(INCLUYE servicio a bordo, butaca y seguro de asistencia)"
       ],
-      "updatedAt": "2026-05-04T19:32:35.772Z"
+      "updatedAt": "2026-05-05T00:27:44.642Z"
     },
     {
       "id": "rutatur-779",
@@ -788,15 +773,13 @@
       ],
       "precios": {
         "doble": 579,
-        "promo": 299,
         "singleLabel": "Habitación Single: +35% adicional",
-        "butaca": 299,
         "menorGratis": "Menores hasta 4 años: invitado",
         "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 539*** Single: 35 % MAS ****Hotel: Foz Plaza: www.fozplaza.com.br ***Seguro de Asistencia incluido.*** * Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia) * Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia RUTATUR INTERNACIONAL:"
       },
       "temporada": "Aniversario",
       "notas": [
-        "Solo asiento: U$S 299,",
+        "butaca ni seguro de asistencia)",
         "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:\nSIN CARGO",
         "Día 01: MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con servicio a bordo, Merienda, Cena. Servicio de Open-Bar y guía acompañante durante todo el recorrido. Ingreso a territorio argentino y continuación hacia...",
         "Valor de la excursión por persona, para alojamiento en habitaciones doble/triple: U$S 579 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 539",
@@ -804,7 +787,7 @@
         "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
         "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-05-04T19:32:37.176Z"
+      "updatedAt": "2026-05-05T00:27:46.035Z"
     },
     {
       "id": "rutatur-781",
@@ -922,17 +905,16 @@
         "doble": 629,
         "promo": 299,
         "singleLabel": "Habitación Single: +35% adicional",
-        "butaca": 299,
         "menorGratis": "Menores hasta 4 años: invitado"
       },
       "temporada": "Aniversario",
       "notas": [
-        "Solo asiento: U$S 299",
+        "butaca ni seguro de asistencia)",
         "Menores hasta 4 años, máximo 1 por habitación acompañado de 2 adultos: SIN CARGO",
         "- --Menores hasta 4 años, máximo 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio a bordo, butaca ni seguro de asistencia)",
         "-Solo asiento: U$S 299- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-05-04T19:32:38.599Z"
+      "updatedAt": "2026-05-05T00:27:47.454Z"
     },
     {
       "id": "rutatur-787",
@@ -1018,10 +1000,9 @@
       "notas": [
         "Partida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
         "PRECIO DE PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 28 DE MAYO 2025 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES)",
-        "VALOR DE LA EXCURSIÓN POR PERSONA EN BASE DOBLE // TRIPLE U$S 809 // PROMO U$S 749",
         "MENORES DE 5 A 12 AÑOS ACOMPAÑADOS MINIMO POR 2 ADULTOS EN LA MISMA HABITACION COSTO U$S 479 // PROMO U$S 419"
       ],
-      "updatedAt": "2026-05-04T19:32:40.013Z"
+      "updatedAt": "2026-05-05T00:27:48.862Z"
     },
     {
       "id": "rutatur-795",
@@ -1117,20 +1098,19 @@
         "doble": 599,
         "promo": 569,
         "singleLabel": "Habitación Single: +35% adicional",
-        "butaca": 299,
         "menorGratis": "Menores hasta 5 años: invitado",
         "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 569*** HABITACION SINGLE 35 % MAS -MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro) -Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       },
       "temporada": "Aniversario",
       "notas": [
-        "Costo de la butaca 299",
+        "butaca, servicio abordo, ni seguro)",
         "MENORES HASTA 5 AÑOS FREE",
         "Día 01-MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y",
         "Valor de la excursión por persona en basa doble o triple U$S 599 / PROMO PAGO CONTADO O TRANSFERENCIA U$S 569",
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-05-04T19:32:41.415Z"
+      "updatedAt": "2026-05-05T00:27:50.270Z"
     },
     {
       "id": "rutatur-806",
@@ -1174,16 +1154,14 @@
       ],
       "precios": {
         "doble": 669,
-        "promo": 579,
         "singleLabel": "Habitación Single: +35% adicional",
         "promoTexto": "PROMO U$S 609***Single: 35 % MAS *Seguro de Asistencia incluido* * Valor por persona, con Media Pensión y SIN PASEOS, para alojamiento en habitación Doble o Triple Luxo: U$S 579***Single: 35 % MAS RUTATUR INTERNACIONAL: *"
       },
       "temporada": "",
       "notas": [
-        "Día 01: MONTEVIDEO Partida en modernas unidades equipadas con asientos “Semi Cama”, Merienda, Cena y Desayuno a bordo.Servicio de Open Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
-        "Valor de la Excursión por persona, con Media Pensión y paseos, para alojamiento en habitación Doble o Triple Luxo:U$S 669 - PROMO U$S 609Single: 35 % MAS"
+        "Día 01: MONTEVIDEO Partida en modernas unidades equipadas con asientos “Semi Cama”, Merienda, Cena y Desayuno a bordo.Servicio de Open Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y..."
       ],
-      "updatedAt": "2026-05-04T19:32:42.817Z"
+      "updatedAt": "2026-05-05T00:27:51.662Z"
     },
     {
       "id": "rutatur-790",
@@ -1365,7 +1343,7 @@
       "notas": [
         "Partida hacia un viaje inolvidable en modernas unidades DOBLE PISO equipadas con asientos semi cama, Guia acompañante y un completo servicio a bordo más Open Bar ilimitado, durante todo el recorrido por Rocha, Chuy, Pelotas, Porto alegre hasta arribar en…"
       ],
-      "updatedAt": "2026-05-04T19:32:44.213Z"
+      "updatedAt": "2026-05-05T00:27:53.067Z"
     },
     {
       "id": "rutatur-778",
@@ -1441,7 +1419,7 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 425 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 399"
       ],
-      "updatedAt": "2026-05-04T19:32:45.598Z"
+      "updatedAt": "2026-05-05T00:27:54.460Z"
     },
     {
       "id": "rutatur-807",
@@ -1527,21 +1505,17 @@
         "triple": 709,
         "promoTriple": 639,
         "single": 979,
-        "promoSingle": 879,
-        "butaca": 299,
         "promoTexto": "PROMO PAGO CONTADO U$S 649 *** - COSTO POR PERSONA EN BASE TRIPLE U$S 709 *** PROMO PAGO CONTADO U$S 639 *** - COSTO HABITACION SINGLE: U$S 979 *** PROMO PAGO CONTADO U$S 879 *** - 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO*** -COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia) ¡A disfrutar!"
       },
       "temporada": "Aniversario",
       "notas": [
-        "COSTO DE LA BUTACA: 299",
+        "COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)",
         "Dia 01 – MONTEVIDEO Partida en modernas unidades de última generación equipadas con asientos “Semi Cama”, servicio a bordo, Merienda, Cena y Desayuno, Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
-        "- COSTO POR PERSONA EN BASE DOBLE U$S 719  PROMO PAGO CONTADO U$S 649",
-        "- COSTO POR PERSONA EN BASE TRIPLE U$S 709  PROMO PAGO CONTADO U$S 639",
         "- COSTO HABITACION SINGLE: U$S 979  PROMO PAGO CONTADO U$S 879",
         "- 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO",
         "-COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)"
       ],
-      "updatedAt": "2026-05-04T19:32:46.991Z"
+      "updatedAt": "2026-05-05T00:27:55.852Z"
     },
     {
       "id": "rutatur-811",
@@ -1636,17 +1610,18 @@
         "doble": 949,
         "promo": 639,
         "singleLabel": "Habitación Single: +35% adicional",
+        "butaca": 699,
         "menorGratis": "Menores hasta 5 años: invitado",
         "promoTexto": "PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 30 DE MAYO 2025. (CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES) Valor por persona en basa doble o triple U$S 949 // PROMO U$S 889 HABITACION SINGLE 35 % MAS HOTELES: RESORT FAZZENDA PARK 5***** www.fazzenda.com.brMIRAMAR 4**** www.hotelmiramar.com.br -Menores hasta 5 años inclusive free (máximo 1 por habitación, acompañado mínimo con 2 adultos pagantes en la misma habitación, no les corresponde butaca, servicio abordo ni seguro de asistencia)-Menores de 6 a 12 años inclusive, Costo U$S 699 // Promo U$S 639 (acompañado mínimo con 2 adultos pagantes por habitación).-Costo de la butaca para menores hasta 5 años 345 U$S//PROMO 299 U$S, incluye, butaca, servicio abordo y seguro de asistencia. RUTATUR:"
       },
       "temporada": "Aniversario",
       "notas": [
+        "butaca, servicio abordo ni seguro de asistencia)-Menores de 6 a 12 años inclusive, Costo U$S 699 // Promo U$S 639 (acompañado",
         "Menores hasta 5 años inclusive free",
         "Día 01-MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y",
-        "COSTO DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 30 DE MAYO 2025. (CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES)",
-        "Valor por persona en basa doble o triple U$S 949 // PROMO U$S 889"
+        "COSTO DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 30 DE MAYO 2025. (CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES)"
       ],
-      "updatedAt": "2026-05-04T19:32:48.395Z"
+      "updatedAt": "2026-05-05T00:27:57.254Z"
     },
     {
       "id": "rutatur-818",
@@ -1762,11 +1737,8 @@
         "promo": 899
       },
       "temporada": "Aniversario",
-      "notas": [
-        "Día 01 – MONTEVIDEOPartida en horas de la mañana en modernas unidades equipadas con asientos semi cama, con servicio a bordo, DESAYUNO, MERIENDA, CENA Y DESAYUNO, Servicio de Open – Bar. Guía acompañante durante todo el recorrido. Ingresamos a territorio argentino, continuamos por Pehuajo, Santa Rosa de la Pampa, Nehuquen, Junín de los Andes para arribar a…",
-        "Valor por persona en habitacion Doble o Triple U$S 979 –  PAGO CONTADO O TRANSFERENCIA U$S 899 .Single + 35%"
-      ],
-      "updatedAt": "2026-05-04T19:32:49.802Z"
+      "notas": [],
+      "updatedAt": "2026-05-05T00:27:58.646Z"
     },
     {
       "id": "rutatur-789",
@@ -1918,15 +1890,16 @@
         "doble": 1139,
         "promoDoble": 1039,
         "singleLabel": "Habitación Single: +35% adicional",
+        "butaca": 599,
         "promoTexto": "PROMO PAGO CONTADO MES ANIVERSARIO U$S 1039***SINGLE 35% Más *** Solo Butaca Menores de 5 años – U$S 599 – Incluye servicio a bordo y seguro asistencia medico*** www."
       },
       "temporada": "Aniversario",
       "notas": [
+        "Butaca Menores de 5 años – U$S 599 – Incluye servicio a bordo y seguro asistencia medico",
         "Día 01 – MONTEVIDEO Partida hacia un viaje inolvidable en modernas unidades DOBLE PISO equipadas con asientos semi cama, Guia acompañante y un completo servicio a bordo más Open Bar ilimitado, durante todo el recorrido por Rocha, Chuy, Pelotas, Porto alegre hasta arribar en…",
-        "Valor de la excursion por persona en base doble U$S 1139 PROMO PAGO CONTADO MES ANIVERSARIO U$S 1039SINGLE 35% Más",
         "Solo Butaca Menores de 5 años – U$S 599 – Incluye servicio a bordo y seguro asistencia medico"
       ],
-      "updatedAt": "2026-05-04T19:32:51.197Z"
+      "updatedAt": "2026-05-05T00:28:00.032Z"
     },
     {
       "id": "rutatur-813",
@@ -2022,11 +1995,8 @@
         "promoTexto": "PROMO PAGO CONTADO** ****SEGURO DE ASISTENCIA INCLUIDO**** HOTEL: GRAND SUITES FAMILY RESORT/ALL INCLUSIVE* - ITÁ: - www.grandsuites.com.br - Con nuestro servicio ALL INCLUSIVE* podrás relajarte, descansar y aprovechar al máximo cada momento de tu estancia. Estamos dedicados a brindar una experiencia verdaderamente innovadora, donde cada detalle se planifica cuidadosamente para su comodidad y satisfacción. El sistema All Inclusive* del Grand Suites Family Resort ITÁ, incluye los siguientes servicios y ventajas: Alojamiento: La excelencia de nuestras habitaciones es uno de los pilares fundamentales de nuestra hospitalidad. Nuestra prioridad es brindar el máximo confort y bienestar a nuestros huéspedes, y nuestras suites han sido meticulosamente diseñadas para satisfacer sus necesidades. (INCLUIDO) Comidas :Incluye desayuno brasileño tipo buffet, copetín en la piscina, almuerzo, café colonial y cena. (INCLUIDAS) Bebidas no alcohólicas: (INCLUIDAS)Agua con/sin gas;Tés;Coca-Cola, Fanta y Sprite;Café;Capuchino;Jugos de piña, maracuyá, naranja y limón;Cerveza sin alcohol. Bebidas alcohólicas: (INCLUIDAS)Cerveza de barril pilsen premium;Cerveza Stella, Budweiser y Malzebier. Bebidas con/sin alcohol: (INCLUIDAS)Caipirinha con vodka, cachaça o steinhaeger;Vino tinto (servido por copa);Vino blanco (servido por copa). Actividades: (INCLUIDAS) Piscinas climatizadas en un ambiente relajante para que te relajes al atardecer. 5 piscinas climatizadas, una cubierta, piscina para niños y un bar adentro de la piscina, para el máximo descanso de tus familiares y amigos. Sala de juegos y games:¡Para que nadie pueda quedarse quieto!Salas de juegos para todas las edades. ¡Piscina, gripe, ping-pong, cartas y bolos! Kids Club Grand Suites: (INCLUIDO)¡Diversión todo el tiempo para los niños!El Grand Suites Family Resort cuenta con un equipo de recreación preparado para divertir y deleitar a tus hijos. Recreación: (INCLUIDO)Grand Suites cuentan con recreación especializada por grupos de edades a partir de 3 años, de 9 a 23 horas.Contamos con espacios y actividades para que los niños aprendan y se diviertan al mismo tiempo, y los adultos se relajen y disfruten de su estadía en nuestro resort.La recreación está especializada por grupos de edades, dividida en las siguientes categorías: 03 a 06 años, 07 a 12 años, 13 a 17 años y adultos. De esta forma las actividades son apropiadas para las edades de cada grupo. ¡A disfrutar!"
       },
       "temporada": "Aniversario",
-      "notas": [
-        "Valor Por Persona hab. Doble o Triple U$S 639 - U$S 589 PROMO PAGO CONTADO",
-        "Alojamiento: La excelencia de nuestras habitaciones es uno de los pilares fundamentales de nuestra hospitalidad. Nuestra prioridad es brindar el máximo confort y bienestar a nuestros huéspedes, y nuestras suites han sido meticulosamente diseñadas para satisfacer sus necesidades. (INCLUIDO)"
-      ],
-      "updatedAt": "2026-05-04T19:32:52.587Z"
+      "notas": [],
+      "updatedAt": "2026-05-05T00:28:01.436Z"
     },
     {
       "id": "rutatur-764",
@@ -2070,15 +2040,13 @@
       ],
       "precios": {
         "doble": 629,
-        "promo": 299,
         "singleLabel": "Habitación Single: +35% adicional",
-        "butaca": 299,
         "menorGratis": "Menores hasta 4 años: invitado",
         "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 589*** Single: 35 % MAS Hotel 4 ****: Foz Plaza: www.fozplaza.com.br ***Seguro de Asistencia incluido.*** * Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia) * Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia RUTATUR INTERNACIONAL:"
       },
       "temporada": "Vacaciones",
       "notas": [
-        "Solo asiento: U$S 299,",
+        "butaca ni seguro de asistencia)",
         "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:\nSIN CARGO",
         "Día 01: MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con servicio a bordo, Merienda, Cena. Servicio de Open-Bar y guía acompañante durante todo el recorrido. Ingreso a territorio argentino y continuación hacia...",
         "Valor de la excursión por persona, para alojamiento en habitaciones doble/triple: U$S 629 - PROMO PAGO CONTADO O TRANSFERENCIA U$S 589",
@@ -2086,7 +2054,7 @@
         "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
         "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-05-04T19:32:53.980Z"
+      "updatedAt": "2026-05-05T00:28:02.823Z"
     },
     {
       "id": "rutatur-797",
@@ -2188,13 +2156,12 @@
         "doble": 699,
         "promo": 599,
         "singleLabel": "Habitación Single: +35% adicional",
-        "butaca": 299,
         "menorGratis": "Menores hasta 5 años: invitado",
         "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 629*** OPCION SIN BETO CARRERO - Valor de la excursión por persona en basa doble o triple U$S 679 / PROMO PAGO CONTADO O TRANSFERENCIA U$S 599*** HABITACION SINGLE 35 % MAS -MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro) -Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       },
       "temporada": "Vacaciones",
       "notas": [
-        "Costo de la butaca 299",
+        "butaca, servicio abordo, ni seguro)",
         "MENORES HASTA 5 AÑOS FREE",
         "Día 01-MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y",
         "Valor de la excursión por persona en basa doble o triple U$S 699 / PROMO PAGO CONTADO O TRANSFERENCIA U$S 629",
@@ -2202,7 +2169,7 @@
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-05-04T19:32:55.370Z"
+      "updatedAt": "2026-05-05T00:28:04.213Z"
     },
     {
       "id": "rutatur-798",
@@ -2303,9 +2270,10 @@
       },
       "temporada": "Vacaciones",
       "notas": [
+        "butaca, servicio abordo y seguro de asistencia.",
         "-Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-05-04T19:32:56.755Z"
+      "updatedAt": "2026-05-05T00:28:05.595Z"
     },
     {
       "id": "rutatur-801",
@@ -2407,17 +2375,18 @@
         "doble": 989,
         "promo": 639,
         "singleLabel": "Habitación Single: +35% adicional",
+        "butaca": 699,
         "menorGratis": "Menores hasta 5 años: invitado",
         "promoTexto": "PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 30 DE MAYO 2025. (CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES) Valor por persona en basa doble o triple U$S 989 // PROMO U$S 929 HABITACION SINGLE 35 % MAS HOTELES: RESORT FAZZENDA PARK 5***** www.fazzenda.com.brMIRAMAR 4**** www.hotelmiramar.com.br -Menores hasta 5 años inclusive free (máximo 1 por habitación, acompañado mínimo con 2 adultos pagantes en la misma habitación, no les corresponde butaca, servicio abordo ni seguro de asistencia)-Menores de 6 a 12 años inclusive, Costo U$S 699 // Promo U$S 639 (acompañado mínimo con 2 adultos pagantes por habitación).-Costo de la butaca para menores hasta 5 años 345 U$S//PROMO 299 U$S, incluye, butaca, servicio abordo y seguro de asistencia. RUTATUR:"
       },
       "temporada": "Vacaciones",
       "notas": [
+        "butaca, servicio abordo ni seguro de asistencia)-Menores de 6 a 12 años inclusive, Costo U$S 699 // Promo U$S 639 (acompañado",
         "Menores hasta 5 años inclusive free",
         "Día 01-MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y",
-        "COSTO DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 30 DE MAYO 2025. (CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES)",
-        "Valor por persona en basa doble o triple U$S 989 // PROMO U$S 929"
+        "COSTO DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 30 DE MAYO 2025. (CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES)"
       ],
-      "updatedAt": "2026-05-04T19:32:58.143Z"
+      "updatedAt": "2026-05-05T00:28:06.983Z"
     },
     {
       "id": "rutatur-751",
@@ -2438,17 +2407,11 @@
       "fechas": [
         {
           "label": "Salida",
-          "value": "27 JUNIO 2026 - HORA 15:00 hs",
-          "gold": true
-        },
-        {
-          "label": "Otras salidas",
           "value": "27 JUNIO 2026 - 15:00 hs - VACACIONES",
-          "gold": false
+          "gold": true
         }
       ],
       "salidas": [
-        "27 JUNIO 2026 - HORA 15:00 hs",
         "27 JUNIO 2026 - 15:00 hs - VACACIONES"
       ],
       "itinerario": [
@@ -2491,23 +2454,21 @@
       "precios": {
         "doble": 1049,
         "promoDoble": 979,
-        "butaca": 299,
         "menorGratis": "Menores hasta 3 años: invitado",
         "promoTexto": "PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 30 DE AGOSTO 2025 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES) ALOJAMIENTO EN LAS VILAS: 1- VALOR POR PERSONA EN BASE DOBLE HAB. LUXO: U$S 1049 // PROMO U$S 979 2 - PROMO FAMILIA 2 ADULTOS + 2 MENORES (4 A 11 AÑOS) - U$S 889 // PROMO U$S 799 por persona MENORES DE 4 A 11 AÑOS, ACOMPAÑADOS POR 2 ADULTOS EN LA MISMA HABITACION COSTO 679 U$S // PROMO 599 U$S Menores hasta 3 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia) Solo asiento: U$S 299- Incluye, butaca, servicio abordo y seguro de asistencia Plaza de Cagancha 1327 –2902 4142 - 098 486 487 Av. Brasil 3129 - 2709 8345 - 097 000 063 Montevideo - Uruguay www."
       },
       "temporada": "Junio 2026",
       "notas": [
-        "Solo asiento: U$S 299",
+        "butaca ni seguro de asistencia)",
         "Menores hasta 3 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO",
         "Día 01 – MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y",
         "COSTO DE PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 30 DE AGOSTO 2025 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)",
-        "1- VALOR POR PERSONA EN BASE DOBLE HAB. LUXO: U$S 1049 // PROMO U$S 979",
         "2 - PROMO FAMILIA 2 ADULTOS + 2 MENORES (4 A 11 AÑOS) - U$S 889 // PROMO U$S 799 por persona",
         "MENORES DE 4 A 11 AÑOS, ACOMPAÑADOS POR 2 ADULTOS EN LA MISMA HABITACION COSTO 679 U$S // PROMO 599 U$S",
         "Menores hasta 3 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
         "Solo asiento: U$S 299- Incluye, butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-05-04T19:32:59.529Z"
+      "updatedAt": "2026-05-05T00:28:08.365Z"
     },
     {
       "id": "rutatur-810",
@@ -2625,17 +2586,16 @@
         "doble": 689,
         "promo": 299,
         "singleLabel": "Habitación Single: +35% adicional",
-        "butaca": 299,
         "menorGratis": "Menores hasta 4 años: invitado"
       },
       "temporada": "Vacaciones",
       "notas": [
-        "Solo asiento: U$S 299",
+        "butaca ni seguro de asistencia)",
         "Menores hasta 4 años, máximo 1 por habitación acompañado de 2 adultos: SIN CARGO",
         "- --Menores hasta 4 años, máximo 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio a bordo, butaca ni seguro de asistencia)",
         "-Solo asiento: U$S 299- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-05-04T19:33:00.916Z"
+      "updatedAt": "2026-05-05T00:28:09.752Z"
     },
     {
       "id": "rutatur-812",
@@ -2718,20 +2678,16 @@
         "triple": 759,
         "promoTriple": 679,
         "single": 1029,
-        "promoSingle": 959,
-        "butaca": 299,
         "promoTexto": "PROMO PAGO CONTADO U$S 699 *** - COSTO POR PERSONA EN BASE TRIPLE U$S 759 *** PROMO PAGO CONTADO U$S 679 *** - COSTO HABITACION SINGLE: U$S 1029 *** PROMO PAGO CONTADO U$S 959 *** - 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO*** ABONA SOLO COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia) ¡A disfrutar!"
       },
       "temporada": "Vacaciones",
       "notas": [
-        "COSTO DE LA BUTACA: 299",
+        "COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)",
         "Dia 01 – MONTEVIDEO Partida en modernas unidades de última generación equipadas con asientos “Semi Cama”, servicio a bordo, Merienda, Cena y Desayuno, Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
-        "- COSTO POR PERSONA EN BASE DOBLE U$S 779  PROMO PAGO CONTADO U$S 699",
-        "- COSTO POR PERSONA EN BASE TRIPLE U$S 759  PROMO PAGO CONTADO U$S 679",
         "- COSTO HABITACION SINGLE: U$S 1029  PROMO PAGO CONTADO U$S 959",
         "- 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO ABONA SOLO COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)"
       ],
-      "updatedAt": "2026-05-04T19:33:02.318Z"
+      "updatedAt": "2026-05-05T00:28:11.136Z"
     },
     {
       "id": "rutatur-814",
@@ -2752,17 +2708,11 @@
       "fechas": [
         {
           "label": "Salida",
-          "value": "27 Junio 2026 - HORA 13:30hs",
-          "gold": true
-        },
-        {
-          "label": "Otras salidas",
           "value": "27 de JUNIO - 13:30Hs",
-          "gold": false
+          "gold": true
         }
       ],
       "salidas": [
-        "27 Junio 2026 - HORA 13:30hs",
         "27 de JUNIO - 13:30Hs"
       ],
       "itinerario": [
@@ -2817,10 +2767,9 @@
       "notas": [
         "Partida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
         "PRECIO DE PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 28 DE MAYO 2025 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES)",
-        "VALOR DE LA EXCURSIÓN POR PERSONA EN BASE DOBLE // TRIPLE U$S 809 // PROMO U$S 749",
         "MENORES DE 5 A 12 AÑOS ACOMPAÑADOS MINIMO POR 2 ADULTOS EN LA MISMA HABITACION COSTO U$S 479 // PROMO U$S 419"
       ],
-      "updatedAt": "2026-05-04T19:33:03.710Z"
+      "updatedAt": "2026-05-05T00:28:12.527Z"
     },
     {
       "id": "rutatur-825",
@@ -2927,20 +2876,19 @@
         "doble": 669,
         "promo": 599,
         "singleLabel": "Habitación Single: +35% adicional",
-        "butaca": 299,
         "menorGratis": "Menores hasta 5 años: invitado",
         "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 599 *** HABITACION SINGLE 35 % MAS -MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro) -Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       },
       "temporada": "Julio",
       "notas": [
-        "Costo de la butaca 299",
+        "butaca, servicio abordo, ni seguro)",
         "MENORES HASTA 5 AÑOS FREE",
         "Día 01-MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y",
         "Valor de la excursión por persona en basa doble o triple U$S 669 / PROMO PAGO CONTADO O TRANSFERENCIA U$S 599",
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-05-04T19:33:05.101Z"
+      "updatedAt": "2026-05-05T00:28:13.911Z"
     },
     {
       "id": "rutatur-803",
@@ -3016,7 +2964,7 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 469 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 439"
       ],
-      "updatedAt": "2026-05-04T19:33:06.486Z"
+      "updatedAt": "2026-05-05T00:28:15.299Z"
     },
     {
       "id": "rutatur-472",
@@ -3296,10 +3244,9 @@
       },
       "temporada": "Agosto 2026",
       "notas": [
-        "Día 01 – MONTEVIDEO Partida en modernas unidades equipadas con asientos “Semi Cama”, con Desayuno, Almuerzo, Merienda y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre, Florianópolis, Camboriu…",
-        "Dia 11 – FORTALEZA Desayuno Buffet. Paseo De día entero a la Playa de Cumbuco localizada proxima a Fortaleza en el municipio de Icaraia. Dunas para pasear en Buggy (no incluidas), lagunas junto a las dunas y playas paradisíacas. Al retornar visita a la Casa de la Cultura, el mas importante centro de artesanías cearense. Cena Buffet."
+        "Día 01 – MONTEVIDEO Partida en modernas unidades equipadas con asientos “Semi Cama”, con Desayuno, Almuerzo, Merienda y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre, Florianópolis, Camboriu…"
       ],
-      "updatedAt": "2026-05-04T19:33:07.882Z"
+      "updatedAt": "2026-05-05T00:28:16.698Z"
     },
     {
       "id": "rutatur-815",
@@ -3342,15 +3289,13 @@
       ],
       "precios": {
         "doble": 579,
-        "promo": 299,
         "singleLabel": "Habitación Single: +35% adicional",
-        "butaca": 299,
         "menorGratis": "Menores hasta 4 años: invitado",
         "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 539*** Single: 35 % MAS ****Hotel: Foz Plaza: www.fozplaza.com.br ***Seguro de Asistencia incluido.*** * Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia) * Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia RUTATUR INTERNACIONAL:"
       },
       "temporada": "Agosto 2026",
       "notas": [
-        "Solo asiento: U$S 299,",
+        "butaca ni seguro de asistencia)",
         "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:\nSIN CARGO",
         "Día 01: MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con servicio a bordo, Merienda, Cena. Servicio de Open-Bar y guía acompañante durante todo el recorrido. Ingreso a territorio argentino y continuación hacia...",
         "Valor de la excursión por persona, para alojamiento en habitaciones doble/triple: U$S 579 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 539",
@@ -3358,7 +3303,7 @@
         "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
         "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-05-04T19:33:09.269Z"
+      "updatedAt": "2026-05-05T00:28:18.085Z"
     },
     {
       "id": "rutatur-704",
@@ -3485,7 +3430,7 @@
         "Día 01 – MONTEVIDEO Partida en modernas unidades equipadas con asientos “Semi Cama”, con Desayuno, Merienda, Almuerzo y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre, Florianópolis y...",
         "Precio Por Persona hab. Doble o Triple U$S 1089 - PROMO PAGO CONTADO O TRANSFERENCIA U$S 999"
       ],
-      "updatedAt": "2026-05-04T19:33:10.657Z"
+      "updatedAt": "2026-05-05T00:28:19.465Z"
     },
     {
       "id": "rutatur-821",
@@ -3511,14 +3456,13 @@
         },
         {
           "label": "Otras salidas",
-          "value": "22 de AGOSTO 2026 - Hora de salida: 09:00Hs · 22 de Agosto 2026 - 09:00hs",
+          "value": "22 de AGOSTO 2026 - Hora de salida: 09:00Hs",
           "gold": false
         }
       ],
       "salidas": [
         "09:00Hs",
-        "22 de AGOSTO 2026 - Hora de salida: 09:00Hs",
-        "22 de Agosto 2026 - 09:00hs"
+        "22 de AGOSTO 2026 - Hora de salida: 09:00Hs"
       ],
       "itinerario": [],
       "hoteles": [
@@ -3529,15 +3473,13 @@
       ],
       "precios": {
         "doble": 549,
-        "promo": 299,
         "singleLabel": "Habitación Single: +35% adicional",
-        "butaca": 299,
         "menorGratis": "Menores hasta 4 años: invitado",
         "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 499*** Single: 35 % MAS ****Hotel: Foz Plaza: www.fozplaza.com.br ***Seguro de Asistencia incluido.*** * Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia) * Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia RUTATUR INTERNACIONAL:"
       },
       "temporada": "",
       "notas": [
-        "Solo asiento: U$S 299,",
+        "butaca ni seguro de asistencia)",
         "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:\nSIN CARGO",
         "Día 01: MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con servicio a bordo, Merienda, Cena. Servicio de Open-Bar y guía acompañante durante todo el recorrido. Ingreso a territorio argentino y continuación hacia...",
         "Valor de la excursión por persona, para alojamiento en habitaciones doble/triple: U$S 549 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 499",
@@ -3545,7 +3487,7 @@
         "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
         "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-05-04T19:33:12.048Z"
+      "updatedAt": "2026-05-05T00:28:20.850Z"
     },
     {
       "id": "rutatur-817",
@@ -3621,7 +3563,7 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 469 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 439"
       ],
-      "updatedAt": "2026-05-04T19:33:13.444Z"
+      "updatedAt": "2026-05-05T00:28:22.230Z"
     },
     {
       "id": "rutatur-709",
@@ -3763,10 +3705,9 @@
       "temporada": "",
       "notas": [
         "Día 01 – MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con Desayuno, Merienda, Almuerzo y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre, Florianópolis y...",
-        "COSTO DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 10 DE AGOSTO 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)",
-        "Precio Por Persona hab. Doble o Triple 1199 U$S//PROMO U$S 1099"
+        "COSTO DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 10 DE AGOSTO 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)"
       ],
-      "updatedAt": "2026-05-04T19:33:14.829Z"
+      "updatedAt": "2026-05-05T00:28:23.617Z"
     },
     {
       "id": "rutatur-695",
@@ -3855,21 +3796,18 @@
         "doble": 989,
         "promo": 889,
         "singleLabel": "Habitación Single: +35% adicional",
-        "butaca": 299,
         "menorGratis": "Menores hasta 5 años: invitado",
         "promoTexto": "PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 31 DE JULIO 2026.(CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES) Valor por persona en basa doble o triple U$S 989 // PROMO U$S 889 HABITACION SINGLE 35 % MAS HOTELES: RESORT FAZZENDA PARK 5***** www.fazzenda.com.brMIRAMAR 4**** www.hotelmiramar.com.br - MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro) - Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo) RUTATUR:"
       },
       "temporada": "Vacaciones",
       "notas": [
-        "Costo de la butaca 299",
+        "butaca, servicio abordo, ni seguro)",
         "MENORES HASTA 5 AÑOS FREE",
         "Día 01-MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y",
-        "PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 31 DE JULIO 2026.(CUPOS DE PROMO LIMITADOS, NO ACUMULABLE CON OTRAS PROMOCIONES)",
-        "Valor por persona en basa doble o triple U$S 989 // PROMO U$S 889",
         "- MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "- Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-05-04T19:33:16.218Z"
+      "updatedAt": "2026-05-05T00:28:25.000Z"
     },
     {
       "id": "rutatur-694",
@@ -3895,13 +3833,12 @@
         },
         {
           "label": "Otras salidas",
-          "value": "19 SETIEMBRE 2026 - HORA DE SALIDA: 17:30hs · SABADO 19 de SETIEMBRE - HORA 17.3",
+          "value": "SABADO 19 de SETIEMBRE - HORA 17.30",
           "gold": false
         }
       ],
       "salidas": [
         "17:30hs",
-        "19 SETIEMBRE 2026 - HORA DE SALIDA: 17:30hs",
         "SABADO 19 de SETIEMBRE - HORA 17.30"
       ],
       "itinerario": [
@@ -3968,9 +3905,10 @@
       },
       "temporada": "",
       "notas": [
+        "butaca, servicio abordo y seguro de asistencia.",
         "-Solo asiento, (menores hasta 4 años): U$S 199- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-05-04T19:33:17.604Z"
+      "updatedAt": "2026-05-05T00:28:26.391Z"
     },
     {
       "id": "rutatur-819",
@@ -4071,20 +4009,18 @@
       ],
       "precios": {
         "doble": 759,
-        "promo": 299,
         "singleLabel": "Habitación Single: +35% adicional",
-        "butaca": 299,
         "menorGratis": "Menores hasta 4 años: invitado"
       },
       "temporada": "Vacaciones",
       "notas": [
-        "Solo asiento: U$S 299",
+        "butaca ni seguro de asistencia)",
         "Menores hasta 4 años, máximo 1 por habitación acompañado de 2 adultos: SIN CARGO",
         "Valor de la Excursión por persona en habitación Doble // Triple U$S 759 – PAGO CONTADO O TRANSFERENCIA U$S 699SINGLE 35 % MAS",
         "- --Menores hasta 4 años, máximo 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio a bordo, butaca ni seguro de asistencia)",
         "-Solo asiento: U$S 299- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-05-04T19:33:18.987Z"
+      "updatedAt": "2026-05-05T00:28:27.774Z"
     },
     {
       "id": "rutatur-816",
@@ -4110,13 +4046,12 @@
         },
         {
           "label": "Otras salidas",
-          "value": "19 SETIEMBRE 2026 - Hora de salida: 09:00Hs · 19 SETIEMBRE 2026 - 09:00hs",
+          "value": "19 SETIEMBRE 2026 - 09:00hs",
           "gold": false
         }
       ],
       "salidas": [
         "09:00Hs",
-        "19 SETIEMBRE 2026 - Hora de salida: 09:00Hs",
         "19 SETIEMBRE 2026 - 09:00hs"
       ],
       "itinerario": [],
@@ -4128,15 +4063,13 @@
       ],
       "precios": {
         "doble": 549,
-        "promo": 299,
         "singleLabel": "Habitación Single: +35% adicional",
-        "butaca": 299,
         "menorGratis": "Menores hasta 4 años: invitado",
         "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 499*** Single: 35 % MAS ****Hotel: Foz Plaza: www.fozplaza.com.br ***Seguro de Asistencia incluido.*** * Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia) * Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia RUTATUR INTERNACIONAL:"
       },
       "temporada": "Vacaciones",
       "notas": [
-        "Solo asiento: U$S 299,",
+        "butaca ni seguro de asistencia)",
         "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:\nSIN CARGO",
         "Día 01: MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con servicio a bordo, Merienda, Cena. Servicio de Open-Bar y guía acompañante durante todo el recorrido. Ingreso a territorio argentino y continuación hacia...",
         "Valor de la excursión por persona, para alojamiento en habitaciones doble/triple: U$S 549 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 499",
@@ -4144,7 +4077,7 @@
         "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
         "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-05-04T19:33:20.370Z"
+      "updatedAt": "2026-05-05T00:28:29.156Z"
     },
     {
       "id": "rutatur-822",
@@ -4220,7 +4153,7 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 469 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 439"
       ],
-      "updatedAt": "2026-05-04T19:33:21.756Z"
+      "updatedAt": "2026-05-05T00:28:30.536Z"
     },
     {
       "id": "rutatur-823",
@@ -4296,7 +4229,7 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 469 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 439"
       ],
-      "updatedAt": "2026-05-04T19:33:23.151Z"
+      "updatedAt": "2026-05-05T00:28:31.919Z"
     },
     {
       "id": "rutatur-699",
@@ -4391,13 +4324,11 @@
       },
       "temporada": "",
       "notas": [
+        "butaca, servicio abordo y seguro de asistencia.",
         "COSTO DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 20 DE SETIEMBRE 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)",
-        "Valor por persona en Base Doble U$S 559 // Promo U$S 499",
-        "Valor por persona en Base Triple U$S 539 // Promo U$S 479",
-        "Valor por persona en Base Cuadruple U$S 599 // Promo U$S 459",
         "-Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-05-04T19:33:24.545Z"
+      "updatedAt": "2026-05-05T00:28:33.303Z"
     },
     {
       "id": "rutatur-824",
@@ -4473,7 +4404,7 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 469 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 439"
       ],
-      "updatedAt": "2026-05-04T19:33:25.932Z"
+      "updatedAt": "2026-05-05T00:28:34.686Z"
     }
   ]
 }
