@@ -112,6 +112,11 @@
       font-weight:700; color:var(--navy);
       display:inline; margin-right:1.5mm;
     }
+    .itin-fin {
+      display:block; margin-top:2mm;
+      font-family:'Poppins',sans-serif; font-size:7pt; font-weight:700;
+      color:var(--ruta); letter-spacing:.04em; text-transform:uppercase;
+    }
     .itin-nota {
       font-size:7pt; color:var(--mid); font-style:italic;
       padding:2mm 2mm 1mm; border-top:.5px solid var(--border);
@@ -150,11 +155,12 @@
     /* Desplegable PROMO */
     .promo-toggle-wrap { margin-top:2mm; }
     .promo-toggle-btn {
-      display:inline-flex; align-items:center; gap:5px;
+      display:inline-flex; align-items:center; gap:3px;
       background:var(--ruta); color:white; border:none;
-      padding:2mm 4mm; border-radius:4px;
-      font-family:'DM Sans',sans-serif; font-size:7pt; font-weight:600;
+      padding:2mm 3mm; border-radius:4px;
+      font-family:'DM Sans',sans-serif; font-size:8pt; font-weight:600;
       cursor:pointer; transition:background .15s;
+      min-width:0;
     }
     .promo-toggle-btn:hover { background:var(--ruta-lt); }
     .promo-toggle-btn .chev { transition:transform .2s; display:inline-block; }
@@ -162,9 +168,13 @@
     .promo-block {
       display:none; margin-top:2mm;
       background:#edf7f2; border:.5px solid var(--ruta);
-      border-radius:4px; padding:3mm 4mm;
+      border-radius:4px; padding:2.5mm 4mm;
       font-size:7.5pt; color:var(--mid); line-height:1.6;
     }
+    .promo-line { display:flex; align-items:center; justify-content:space-between; gap:4mm; padding:1mm 0; border-bottom:.5px solid rgba(26,122,74,.15); }
+    .promo-line:last-child { border-bottom:none; }
+    .promo-cat { font-size:6.5pt; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--mid); }
+    .promo-val { font-weight:700; color:var(--ruta); font-size:8pt; }
     .promo-block.visible { display:block; }
     .precios-nota { font-size:6.5pt; color:var(--mid); font-style:italic; margin-top:1.5mm; }
 
@@ -279,8 +289,8 @@
       <div id="prog-single-label"></div>
       <!-- Desplegable PROMO -->
       <div class="promo-toggle-wrap" id="prog-promo-wrap" style="display:none">
-        <button class="promo-toggle-btn" id="promo-btn" onclick="togglePromo()">
-          🏷 Ver precios PROMO / Contado <span class="chev">▶</span>
+        <button class="promo-toggle-btn" id="promo-btn" onclick="togglePromo()" title="Ver precios PROMO / Contado">
+          🏷 <span class="chev">▶</span>
         </button>
         <div class="promo-block" id="promo-block"></div>
       </div>
@@ -467,8 +477,13 @@ function renderPrograma(p) {
       var pillClass = d.first ? ' first' : (d.last ? ' last' : '');
       // Lugar en negrita integrado al texto; si no hay detalle, solo el lugar
       var cuerpo = d.detalle
-        ? '<span class="itin-lugar">' + esc(d.lugar) + ':</span>' + esc(d.detalle)
+        ? '<span class="itin-lugar">' + esc(d.lugar) + ':</span> ' + esc(d.detalle)
         : '<span class="itin-lugar">' + esc(d.lugar) + '</span>';
+      // Agregar "Fin de nuestros servicios!" al último día
+      if (d.last) {
+        var cierreTag = '<span class="itin-fin">Fin de nuestros servicios!</span>';
+        cuerpo = cuerpo + ' ' + cierreTag;
+      }
       return '<div class="itin-row">' +
         '<span class="it-day-pill' + pillClass + '">' + esc(d.dia) + '</span>' +
         '<div class="itin-text">' + cuerpo + '</div>' +
@@ -506,19 +521,19 @@ function renderPrograma(p) {
     else if (pr.promoDoble != null) promoLabel = 'Promo contado: ' + fmtUSD(pr.promoDoble);
     // Si hay triple con precio distinto, la caja doble dice solo "Doble"
     var catDoble = hayTripleSeparado ? 'Doble' : 'Doble / Triple';
-    boxes.push({ cat: catDoble, val: fmtUSD(pr.doble), promo: promoLabel, hi: true });
+    boxes.push({ cat: catDoble, val: fmtUSD(pr.doble), hi: true });
   }
 
   // Caja Triple separada solo si tiene precio DISTINTO al doble
   if (hayTripleSeparado) {
     var promoTripleLabel = pr.promoTriple ? 'Promo contado: ' + fmtUSD(pr.promoTriple) : null;
-    boxes.push({ cat:'Triple', val: fmtUSD(pr.triple), promo: promoTripleLabel, hi: false });
+    boxes.push({ cat:'Triple', val: fmtUSD(pr.triple), hi: false });
   }
 
   // Caja Single con precio fijo
   if (pr.single != null) {
     var promoSingleLabel = pr.promoSingle ? 'Promo: ' + fmtUSD(pr.promoSingle) : null;
-    boxes.push({ cat:'Individual', val: fmtUSD(pr.single), promo: promoSingleLabel, hi: false });
+    boxes.push({ cat:'Individual', val: fmtUSD(pr.single), hi: false });
   }
 
   if (boxes.length > 0) {
@@ -526,7 +541,7 @@ function renderPrograma(p) {
       return '<div class="precio-box' + (b.hi ? ' highlight' : '') + '">' +
         '<div class="cat">' + esc(b.cat) + '</div>' +
         '<div class="val">' + esc(b.val) + '</div>' +
-        (b.promo ? '<div class="val" style="font-size:7pt;color:' + (b.hi ? 'var(--gold-lt)' : 'var(--ruta)') + ';font-weight:600;display:block;margin-top:1mm;">' + esc(b.promo) + '</div>' : '') +
+        /* promo eliminada de la caja — va en desplegable */
         '</div>';
     }).join('');
   } else {
@@ -539,12 +554,29 @@ function renderPrograma(p) {
       '<div class="single-label-row">' + esc(pr.singleLabel) + '</div>';
   }
 
-  // Desplegable PROMO
-  if (pr.promoTexto) {
+  // Desplegable PROMO — contenido limpio construido desde los datos de precios
+  var promoLines = [];
+  // Precio doble promo
+  if (pr.promo != null)           promoLines.push({ cat:'Doble / Triple', val: pr.promo });
+  else if (pr.promoDoble != null) promoLines.push({ cat:'Doble', val: pr.promoDoble });
+  if (pr.promoTriple != null)     promoLines.push({ cat:'Triple', val: pr.promoTriple });
+  if (pr.promoSingle != null)     promoLines.push({ cat:'Individual', val: pr.promoSingle });
+
+  if (promoLines.length > 0 || pr.promoTexto) {
     var wrap  = document.getElementById('prog-promo-wrap');
     var block = document.getElementById('promo-block');
-    wrap.style.display  = 'block';
-    block.textContent   = pr.promoTexto;
+    wrap.style.display = 'block';
+    if (promoLines.length > 0) {
+      block.innerHTML = promoLines.map(function(l) {
+        return '<div class="promo-line">' +
+          '<span class="promo-cat">' + esc(l.cat) + '</span>' +
+          '<span class="promo-val">PROMO / CONTADO ' + fmtUSD(l.val) + '</span>' +
+          '</div>';
+      }).join('');
+    } else {
+      // Fallback: mostrar promoTexto si no hay datos estructurados
+      block.textContent = pr.promoTexto;
+    }
   }
 
   // 8. Seguro (detectar en notas si no viene explícito)
@@ -554,19 +586,9 @@ function renderPrograma(p) {
     document.getElementById('sec-seguro').style.display = 'flex';
   }
 
-  // 9. Notas
-  // Filtros: datos de Rutatur (dirección, tel, web) y contenido ya mostrado en precios
-  var NOTAS_EXCL = /Plaza Cagancha|Pocitos|Av\. Brasil|2902|2709|098|097|rutatur\.com|www\.rutatur/i;
-  // BUTACA/BUTACA y MENOR vienen ya en notas desde el scraper (via _butacaNota/_menorNota)
-  var notas = (p.notas || []).filter(function(n) {
-    return n && n.length > 5 && !NOTAS_EXCL.test(n);
-  });
-  if (notas.length > 0) {
-    document.getElementById('prog-notas').innerHTML = notas
-      .map(function(n) { return '<div class="nota-row">' + esc(n) + '</div>'; }).join('');
-  } else {
-    document.getElementById('sec-notas').style.display = 'none';
-  }
+  // 9. Notas — sección siempre oculta en el render
+  // El contenido relevante (butaca, menor) va en el desplegable PROMO
+  document.getElementById('sec-notas').style.display = 'none';
 }
 
 // ── INIT ──────────────────────────────────────────────────────────────────
