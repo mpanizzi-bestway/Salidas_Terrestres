@@ -1,6 +1,6 @@
 /**
  * scraper-rutatur.js - BestWay Viajes
- * v2.2 — Mayo 2026
+ * v2.3 — Mayo 2026
  *
  * CAMBIOS respecto a v2.1:
  *  ✅ HIGHLIGHTS: extraídos del itinerario (etiquetas <strong>DÍA XX – LUGAR</strong>),
@@ -370,18 +370,25 @@ function parsePrecioBlock(texto, htmlBloque) {
       if (nums[1]) precios.promoTriple = parseFloat(nums[1][1].replace(',', '.'));
     }
 
-    // Single con precio fijo
-    const lineaSingle = bloque.match(/(?:HABITACION\s+)?SINGLE[^\n]*/i);
+    // Single con precio fijo: SOLO buscar ANTES del bloque PROMO
+    // (evita que "Solo asiento, menores...: U$S 259" se confunda con habitacion single)
+    const promoStartIdx = bloque.search(/\bPROMO\b/i);
+    const bloquePrePromo = promoStartIdx > 0 ? bloque.slice(0, promoStartIdx) : bloque;
+    const lineaSingle = bloquePrePromo.match(/(?:HABITACION\s+)?SINGLE[^\n]*/i);
     if (lineaSingle) {
       const nums = [...lineaSingle[0].matchAll(/U\$S\s*([\d.,]+)/gi)];
       if (nums[0]) precios.single      = parseFloat(nums[0][1].replace(',', '.'));
       if (nums[1]) precios.promoSingle = parseFloat(nums[1][1].replace(',', '.'));
     }
 
-    // Si no hay precio base detectado, intentar con el primer U$S del bloque
+    // Fallback: si no se detectó precio base, usar primer U$S del bloque
+    // NO asignar promo desde fallback (evita confundir precio asiento con promo)
     if (!precios.doble && !precios.triple && todosPrecios.length > 0) {
       precios.doble = todosPrecios[0];
-      if (todosPrecios.length > 1) precios.promo = todosPrecios[todosPrecios.length - 1];
+      // Solo promo si hay exactamente 2 precios y el 2do es menor (descuento real)
+      if (todosPrecios.length === 2 && todosPrecios[1] < todosPrecios[0]) {
+        precios.promo = todosPrecios[1];
+      }
     }
   }
 
@@ -401,12 +408,14 @@ function parsePrecioBlock(texto, htmlBloque) {
     }
   }
 
-  // ── Butaca → notas (se devuelve separado para agregarlo a notas) ───────────
-  const butacaM = bloque.match(/(?:COSTO\s+(?:DE\s+LA\s+)?)?BUTACA[:\s]+(?:U\$S\s*)?([\d.,]+)/i)
-               || bloque.match(/SOLO\s+ASIENTO[:\s]+(?:U\$S\s*)?([\d.,]+)/i);
+  // ── Butaca/Solo asiento → notas ──────────────────────────────────────────────
+  // Captura la línea completa (incluyendo variante "- Solo asiento, (menores...): U$S 259")
+  const butacaM = bloque.match(/(?:[-\u2013*]\s*)?(?:COSTO\s+(?:DE\s+LA\s+)?)?BUTACA[^\n]{0,120}/i)
+               || bloque.match(/(?:[-\u2013*]\s*)?SOLO\s+ASIENTO[^\n]{0,120}/i);
   if (butacaM) {
-    precios.butaca      = parseFloat(butacaM[1].replace(',', '.'));
-    precios._butacaNota = butacaM[0].trim();  // para agregar a notas
+    const usdM = butacaM[0].match(/U\$S\s*([\d.,]+)/i);
+    if (usdM) precios.butaca = parseFloat(usdM[1].replace(',', '.'));
+    precios._butacaNota = butacaM[0].replace(/^[-\u2013*\s]+/, '').trim();
   }
 
   // ── Menor gratis → notas ───────────────────────────────────────────────────
@@ -592,14 +601,26 @@ function parsePrograma(html, sourceUrl) {
     }
   }
 
-  // Fuente 3: "Salida DD de MES..." en <li>
+  // Fuente 3: "Salida DD de MES..." en texto plano
+  // Normalizar para evitar duplicados con variantes como "PROGRAMADA SABADO 16 de Mayo..."
+  // vs "16 Mayo 2026 - Hora 17:30" (misma salida, distinto texto)
+  function normalizeSalida(s) {
+    return s.toUpperCase()
+      .replace(/PROGRAMADA\s*/g, '')
+      .replace(/HORA\s+DE\s+SALIDA:\s*/g, '')
+      .replace(/[-\u2013]\s*HORA\s+/g, ' ')
+      .replace(/\s+/g, ' ').trim();
+  }
   const SALIDA_RX = /\*{0,3}\s*Salida\s+([^\n*]{5,80}(?:hs|Hs|HRS)?)/gi;
   let sm;
   while ((sm = SALIDA_RX.exec(textoPlano)) !== null) {
     const val = clean(sm[1]).replace(/\*+/g, '').trim();
-    if (val.length > 3 && !salidas.some(s => s.toLowerCase() === val.toLowerCase())) {
-      salidas.push(val);
-    }
+    if (val.length < 4) continue;
+    const normVal = normalizeSalida(val);
+    if (salidas.some(s => normalizeSalida(s) === normVal)) continue;
+    // Evitar líneas que sean solo "DD Mes YYYY - Hora HH:MM" (ya en div.descr)
+    if (/^\d{1,2}\s+\w+\s+\d{4}\s*[-\u2013]\s*hora/i.test(val)) continue;
+    salidas.push(val);
   }
 
   // ── Notas ──────────────────────────────────────────────────────────────────
@@ -618,9 +639,15 @@ function parsePrograma(html, sourceUrl) {
 
   for (const line of lineas) {
     if (
-      /menor|asiento|butaca|contado|promo|importante|políticas|cancelación|señ|free|invitado/i.test(line) &&
-      line.length > 15 && line.length < 400 &&
-      !FOOTER_EXCL.test(line)
+      /menor|asiento|butaca|contado|importante|políticas|cancelación|free|invitado/i.test(line) &&
+      line.length > 15 && line.length < 300 &&
+      !FOOTER_EXCL.test(line) &&
+      // Excluir líneas de bloque de precios
+      !/BASE\s+(?:DOBLE|TRIPLE|CUADRUPLE)/i.test(line) &&
+      // Excluir encabezado del bloque PROMO (ya va en promoTexto)
+      !/^PROMO\s+VALIDO/i.test(line) &&
+      // Excluir líneas "Valor por persona en..."
+      !/^Valor\s+por\s+persona/i.test(line)
     ) {
       const n = line.replace(/\*+/g, '').trim();
       if (!notas.includes(n)) notas.push(n);
@@ -687,7 +714,7 @@ function parsePrograma(html, sourceUrl) {
 // ─── Main ────────────────────────────────────────────────────────────────────
 
 async function scrapeAll() {
-  console.log('🚌 Scraper Rutatur v2.2 – BestWay Viajes\n');
+  console.log('🚌 Scraper Rutatur v2.3 – BestWay Viajes\n');
 
   const result = {
     operador  : 'Rutatur',
