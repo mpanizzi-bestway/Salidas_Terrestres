@@ -1,16 +1,16 @@
 {
   "operador": "Funtour",
-  "updatedAt": "2026-05-04T16:17:16.139Z",
+  "updatedAt": "2026-05-11T17:32:51.005Z",
   "programas": [
     {
       "id": "funtour-villa-carlos-paz-setiembre-2026",
       "slug": "villa-carlos-paz-setiembre-2026",
       "operador": "funtour",
       "sourceUrl": "https://www.funtour.com.uy/tienda/villa-carlos-paz-setiembre-2026/",
-      "titulo": "VILLA CARLOS PAZ SETIEMBRE 2026",
+      "titulo": "Villa Carlos Paz Setiembre 2026",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
-      "destino": "VILLA CARLOS PAZ SETIEMBRE 2026",
+      "destino": "Villa Carlos Paz Setiembre 2026",
       "destinoSlug": "carlospaz",
       "pais": "Argentina",
       "emoji": "⛰️",
@@ -109,17 +109,17 @@
       ],
       "temporada": "Setiembre",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:09.603Z"
+      "updatedAt": "2026-05-11T17:32:04.014Z"
     },
     {
       "id": "funtour-norte-argentino-aereo",
       "slug": "norte-argentino-aereo",
       "operador": "funtour",
       "sourceUrl": "https://www.funtour.com.uy/tienda/norte-argentino-aereo/",
-      "titulo": "NORTE ARGENTINO AEREO",
+      "titulo": "Norte Argentino Aereo",
       "subtitulo": "7 DÍAS",
       "duracion": "7 DÍAS",
-      "destino": "NORTE ARGENTINO AEREO",
+      "destino": "Norte Argentino Aereo",
       "destinoSlug": "otro",
       "pais": "Otros",
       "emoji": "📍",
@@ -270,7 +270,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:11.760Z"
+      "updatedAt": "2026-05-11T17:32:06.619Z"
     },
     {
       "id": "funtour-mendoza-aereo-vacaciones-de-setiembre-2026",
@@ -359,7 +359,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:13.907Z"
+      "updatedAt": "2026-05-11T17:32:08.720Z"
     },
     {
       "id": "funtour-cataratas-aereo-vacaciones-de-setiembre-2026",
@@ -500,7 +500,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:16.040Z"
+      "updatedAt": "2026-05-11T17:32:10.786Z"
     },
     {
       "id": "funtour-gramado-y-canela-vacaciones-de-setiembre-2026",
@@ -686,7 +686,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:18.306Z"
+      "updatedAt": "2026-05-11T17:32:12.960Z"
     },
     {
       "id": "funtour-gramado-con-2-parques-vacaciones-de-setiembre-2026",
@@ -864,7 +864,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:20.542Z"
+      "updatedAt": "2026-05-11T17:32:15.090Z"
     },
     {
       "id": "funtour-gramado-y-canela-natal-luz-2026",
@@ -1024,7 +1024,7 @@
       ],
       "temporada": "Natal",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:22.773Z"
+      "updatedAt": "2026-05-11T17:32:17.190Z"
     },
     {
       "id": "funtour-bariloche-aereo-vacaciones-de-setiembre-2026",
@@ -1055,7 +1055,7 @@
       ],
       "hoteles": [
         {
-          "nombre": "HOTELSOFT",
+          "nombre": "HOTELSOFT, HOTELSOFT SUPERIOR",
           "url": ""
         }
       ],
@@ -1106,6 +1106,69 @@
           "precio": "789",
           "disponible": true,
           "sku": "PKG--20-DE-SEPTIEMBRE-HOTELSOFT-CUáDRUPLE-T5529"
+        },
+        {
+          "variationId": 35903,
+          "salida": "20 de septiembre",
+          "alojamiento": "HOTELSOFT",
+          "base": "Single",
+          "precio": "1069",
+          "disponible": true,
+          "sku": "PKG-97-20-DE-SEPTIEMBRE-HOTELSOFT-SINGLE-T5529"
+        },
+        {
+          "variationId": 35904,
+          "salida": "20 de septiembre",
+          "alojamiento": "HOTELSOFT",
+          "base": "Doble",
+          "precio": "789",
+          "disponible": true,
+          "sku": "PKG-97-20-DE-SEPTIEMBRE-HOTELSOFT-DOBLE-T5529"
+        },
+        {
+          "variationId": 35905,
+          "salida": "20 de septiembre",
+          "alojamiento": "HOTELSOFT",
+          "base": "Triple",
+          "precio": "789",
+          "disponible": true,
+          "sku": "PKG-97-20-DE-SEPTIEMBRE-HOTELSOFT-TRIPLE-T5529"
+        },
+        {
+          "variationId": 35906,
+          "salida": "20 de septiembre",
+          "alojamiento": "HOTELSOFT",
+          "base": "Cuádruple",
+          "precio": "789",
+          "disponible": true,
+          "sku": "PKG-97-20-DE-SEPTIEMBRE-HOTELSOFT-CUáDRUPLE-T5529"
+        },
+        {
+          "variationId": 35907,
+          "salida": "20 de septiembre",
+          "alojamiento": "HOTELSOFT SUPERIOR",
+          "base": "Doble",
+          "precio": "949",
+          "disponible": true,
+          "sku": "PKG-97-20-DE-SEPTIEMBRE-HOTELSOFT-SUPERIOR--DOBLE-T5529"
+        },
+        {
+          "variationId": 35908,
+          "salida": "20 de septiembre",
+          "alojamiento": "HOTELSOFT SUPERIOR",
+          "base": "Triple",
+          "precio": "949",
+          "disponible": true,
+          "sku": "PKG-97-20-DE-SEPTIEMBRE-HOTELSOFT-SUPERIOR--TRIPLE-T5529"
+        },
+        {
+          "variationId": 35909,
+          "salida": "20 de septiembre",
+          "alojamiento": "HOTELSOFT SUPERIOR",
+          "base": "Cuádruple",
+          "precio": "949",
+          "disponible": true,
+          "sku": "PKG-97-20-DE-SEPTIEMBRE-HOTELSOFT-SUPERIOR--CUáDRUPLE-T5529"
         }
       ],
       "matrizPrecios": {
@@ -1115,6 +1178,11 @@
             "Doble": 789,
             "Triple": 789,
             "Cuádruple": 789
+          },
+          "HOTELSOFT SUPERIOR": {
+            "Doble": 949,
+            "Triple": 949,
+            "Cuádruple": 949
           }
         }
       },
@@ -1132,7 +1200,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:24.881Z"
+      "updatedAt": "2026-05-11T17:32:19.322Z"
     },
     {
       "id": "funtour-florianopolis-vacaciones-de-setiembre-bus-y-hotel",
@@ -1303,7 +1371,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:27.212Z"
+      "updatedAt": "2026-05-11T17:32:21.399Z"
     },
     {
       "id": "funtour-florianopolis-vacaciones-de-setiembre-media-pension-y-paseos",
@@ -1474,7 +1542,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:29.379Z"
+      "updatedAt": "2026-05-11T17:32:23.485Z"
     },
     {
       "id": "funtour-florianopolis-baja-agosto-a-diciembre-2026-media-pension-y-paseos",
@@ -1567,7 +1635,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:31.590Z"
+      "updatedAt": "2026-05-11T17:32:25.619Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-agosto-2026",
@@ -1670,7 +1738,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:33.764Z"
+      "updatedAt": "2026-05-11T17:32:27.982Z"
     },
     {
       "id": "funtour-florianopolis-abril-a-junio-8-dias-media-pension-y-paseos",
@@ -1760,7 +1828,7 @@
       ],
       "temporada": "Abril",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:35.918Z"
+      "updatedAt": "2026-05-11T17:32:30.109Z"
     },
     {
       "id": "funtour-gramado-y-canela-temporada-baja-2026",
@@ -1946,7 +2014,7 @@
       ],
       "temporada": "Temporada baja",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:38.090Z"
+      "updatedAt": "2026-05-11T17:32:32.222Z"
     },
     {
       "id": "funtour-bariloche-aereo-vacaciones-de-julio-2026",
@@ -2219,7 +2287,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:40.332Z"
+      "updatedAt": "2026-05-11T17:32:34.320Z"
     },
     {
       "id": "funtour-santiago-de-chile-con-vina-y-valparaiso-vacaciones-de-julio-2026",
@@ -2369,7 +2437,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:42.574Z"
+      "updatedAt": "2026-05-11T17:32:36.385Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-julio-2026",
@@ -2519,7 +2587,7 @@
       ],
       "temporada": "Julio",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:44.700Z"
+      "updatedAt": "2026-05-11T17:32:38.448Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-turismo-2026",
@@ -2622,7 +2690,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:46.845Z"
+      "updatedAt": "2026-05-11T17:32:40.578Z"
     },
     {
       "id": "funtour-wine-tour-chile-2026",
@@ -2720,7 +2788,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:48.970Z"
+      "updatedAt": "2026-05-11T17:32:42.707Z"
     },
     {
       "id": "funtour-cataratas-aereo-vacaciones-de-julio-2026",
@@ -2859,7 +2927,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:51.094Z"
+      "updatedAt": "2026-05-11T17:32:44.758Z"
     },
     {
       "id": "funtour-gramado-y-canela-vacaciones-de-julio-2026-desde-montevideo-y-litoral-norte",
@@ -3035,7 +3103,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:53.306Z"
+      "updatedAt": "2026-05-11T17:32:46.825Z"
     },
     {
       "id": "funtour-gramado-con-2-parques-vacaciones-de-julio-2026-desde-montevideo-y-litoral-norte",
@@ -3222,7 +3290,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:55.447Z"
+      "updatedAt": "2026-05-11T17:32:48.930Z"
     },
     {
       "id": "funtour-floripa-julio-con-beto-carrero-y-compras-8-dias-media-pension-y-paseos",
@@ -3447,1437 +3515,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-05-04T16:16:57.689Z"
-    },
-    {
-      "id": "funtour-florianopolis-marzo-8-dias-media-pension-y-paseos",
-      "slug": "florianopolis-marzo-8-dias-media-pension-y-paseos",
-      "operador": "funtour",
-      "sourceUrl": "https://www.funtour.com.uy/tienda/florianopolis-marzo-8-dias-media-pension-y-paseos/",
-      "titulo": "Florianópolis Marzo 8 días Media Pensión y Paseos",
-      "subtitulo": "8 DÍAS",
-      "duracion": "8 DÍAS",
-      "destino": "Florianópolis Marzo 8 días Media Pensión y Paseos",
-      "destinoSlug": "otro",
-      "pais": "Otros",
-      "emoji": "📍",
-      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2023/06/Floripa2-1024x1024.jpg",
-      "highlights": [
-        "📍 CANASVIEIRAS",
-        "📍 CANASVIEIRAS"
-      ],
-      "incluye": [],
-      "noIncluye": [],
-      "hoteles": [
-        {
-          "nombre": "POSADA BARBROCH STANDARD",
-          "url": "https://www.pousadabarbroch.com.br/"
-        },
-        {
-          "nombre": "Pousada Barbroch Std, Pousada Barbroch Sup, Hotel Tropicanas, Mar de Canasvieiras",
-          "url": ""
-        }
-      ],
-      "itinerario": [
-        {
-          "dia": "DÍA 01",
-          "lugar": "URUGUAY",
-          "detalle": "En horas pasadas el mediodía partiremos hacia nuestro destino, recorriendo rutas nacionales, realizamos trámites migratorios y continuaremos rumbo a nuestro destino. Contamos con servicio a bordo acompañado de un guía coordinador de viajes.",
-          "first": true,
-          "last": false
-        },
-        {
-          "dia": "DÍA 02",
-          "lugar": "CANASVIEIRAS",
-          "detalle": "Desayuno a bordo por la mañana. Sobre el medio día estaremos llegando a Florianópolis, nos dirigimos a la playa de Canasvieiras donde nos alojaremos durante 5 noches. Tiempo libre hasta la cena. DIAS 3 y 4 SE RELIZARAN LOS SIGUIENTES PASEOS: BARCO PIRATA + BALNEARIO CAMBORIU – En la mañana salida con destino a Porto Belo, donde disfrutaremos del paseo en Barco Pirata que ya es característico de las costas Brasileras. Es un paseo de 2 horas en un Barco temático donde disfrutaremos de una fiesta sobre el mar con mucha musica y baile, además de una parada técnica donde podrán tirarse al agua para refrescarse. Al finalizar el paseo tendremos un tiempo para hacer playa o almorzar en el parador del Porto dos Piratas, para luego seguir viaje a Balneario Camboriú donde contaremos con tiempo libre ",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 07",
-          "lugar": "CANASVIEIRAS",
-          "detalle": "En horas de la mañana luego del desayuno nos despediremos de esta hermosa isla partiendo hacia Uruguay, pasando por las ciudades de Sombrío, Torres, Porto Alegre.",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 08",
-          "lugar": "URUGUAY",
-          "detalle": "A primeras horas de la mañana llegaremos a Uruguay, Fin de nuestros servicios. POLITICA DE MENORES *De 0 a 3 años no paga y ocupa asiento, se acomoda con los adultos en la habitación ( no cuenta con servicio) siempre acompañado de 2 adultos, max 1 por reserva CHECK IN *Pasadas las 14 hs",
-          "first": false,
-          "last": true
-        }
-      ],
-      "salidas": [
-        "01 de Marzo",
-        "15 de Marzo"
-      ],
-      "bases": [
-        "Single",
-        "Doble",
-        "Triple",
-        "Cuadruple"
-      ],
-      "precioDesde": "499",
-      "variantesCompletas": [
-        {
-          "variationId": 35072,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "839",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 35073,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "519",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 35074,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "519",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 35075,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "519",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34857,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "769",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34858,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "529",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34859,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "529",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34860,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "529",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34165,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "849",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34166,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "579",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34167,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "579",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34168,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "579",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34161,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "745",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34162,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "499",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34163,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "499",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34164,
-          "salida": "",
-          "alojamiento": "",
-          "base": "",
-          "precio": "499",
-          "disponible": true,
-          "sku": ""
-        }
-      ],
-      "matrizPrecios": {
-        "": {
-          "": {
-            "": 499
-          }
-        }
-      },
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "01 de Marzo",
-          "gold": true
-        },
-        {
-          "label": "Otras salidas",
-          "value": "15 de Marzo",
-          "gold": false
-        },
-        {
-          "label": "Habitación",
-          "value": "Single / Doble / Triple / Cuadruple",
-          "gold": false
-        }
-      ],
-      "temporada": "Marzo",
-      "notas": [],
-      "updatedAt": "2026-05-04T16:16:59.831Z"
-    },
-    {
-      "id": "funtour-santiago-de-chile-con-vina-y-valparaiso-semana-de-turismo-2026",
-      "slug": "santiago-de-chile-con-vina-y-valparaiso-semana-de-turismo-2026",
-      "operador": "funtour",
-      "sourceUrl": "https://www.funtour.com.uy/tienda/santiago-de-chile-con-vina-y-valparaiso-semana-de-turismo-2026/",
-      "titulo": "Santiago de Chile con Viña y Valparaíso Semana de Turismo 2026",
-      "subtitulo": "2 DÍAS",
-      "duracion": "2 DÍAS",
-      "destino": "Santiago de Chile con Viña y Valparaíso Semana de Turismo 2026",
-      "destinoSlug": "chile",
-      "pais": "Chile",
-      "emoji": "🇨🇱",
-      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2024/05/santiago-de-chile-1-ciudad-1024x1024.jpg",
-      "highlights": [],
-      "incluye": [
-        "GUIA ACOMPAÑANTE.",
-        "VUELO DIRECTO MVD-SCL-MVD SKY AIRLINE.",
-        "MOCHILA DE ARTICULOS PERSONALES HASTA 8 KG",
-        "TRASLADO AEROPUERTO-HOTEL-AEROPUERTO.",
-        "4 NOCHES DE HOTEL CON DESAYUNO.",
-        "CITY SANTIAGO.",
-        "CITY VALPARAISO – VIÑA.",
-        "SEGURO DE ASISTENCIA 60K."
-      ],
-      "noIncluye": [],
-      "hoteles": [
-        {
-          "nombre": "*HOTEL PRESIDENTE SANTIAGO",
-          "url": "https://www.hotelespresidente.com/"
-        }
-      ],
-      "itinerario": [
-        {
-          "dia": "DÍA 01",
-          "lugar": "URUGUAY",
-          "detalle": "– Salida en horas de la tarde noche desde Aeropuerto de Carrasco rumbo a nuestro destino. Después de un vuelo de 2 horas y media aproximadamente llegamos a Santiago de Chile, transfer local hacia nuestro hotel. nos alojamos. DIAS 2 Y 3 SE REALIZARÁN LOS SIGUIENTE PASEOS SANTIAGO – Por la mañana desayuno, luego nos vamos a realizar un City por la bella Santiago, durante este recorrido visitarás el centro histórico de la ciudad explorando lo mejor que la ciudad tiene para ofrecer en su historia en los lugares más clásicos y muchas recomendaciones de lugares donde disfrutar de una rica experiencia en restaurantes de comida típica y los mejores bares locales con las mejores cervezas y vinos artesanales, luego retorno al hotel y resto del día libre. SANTIAGO -VIÑA DEL MAR-VALPARAÍSO – Por la ma",
-          "first": true,
-          "last": false
-        },
-        {
-          "dia": "DÍA 05",
-          "lugar": "SANTIAGO -MONTEVIDEO",
-          "detalle": "– A primeras horas de la madrugada transfer al Aeropuerto de Santiago, con vuelo de regreso a Montevideo, llegada en la mañana al Aeropuerto de Carrasco. Fin de los servicios y hasta nuestro próximo viaje! ITINERARIOS DE VUELO SALIDA 25 de Marzo HORA 19:10 hs – MVD / SCL LLEGADA 21:55 hs vuelo H2 1811 REGRESO 29 de Marzo HORA 07:50 hs – SCL / MVD LLEGADA 10:10 hs vuelo H2 1810 **Vuelos sujetos a modificaciones por parte de la aerolínea** Foto de Ximena Nahmias en Unsplash",
-          "first": false,
-          "last": true
-        }
-      ],
-      "salidas": [
-        "25 de Marzo"
-      ],
-      "bases": [
-        "Single",
-        "Doble",
-        "Triple"
-      ],
-      "precioDesde": "659",
-      "variantesCompletas": [
-        {
-          "variationId": 33902,
-          "salida": "25 de Marzo",
-          "alojamiento": "Hotel Presidente",
-          "base": "Single",
-          "precio": "899",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33903,
-          "salida": "25 de Marzo",
-          "alojamiento": "Hotel Presidente",
-          "base": "Doble",
-          "precio": "679",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33904,
-          "salida": "25 de Marzo",
-          "alojamiento": "Hotel Presidente",
-          "base": "Triple",
-          "precio": "659",
-          "disponible": true,
-          "sku": ""
-        }
-      ],
-      "matrizPrecios": {
-        "25 de Marzo": {
-          "Hotel Presidente": {
-            "Single": 899,
-            "Doble": 679,
-            "Triple": 659
-          }
-        }
-      },
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "25 de Marzo",
-          "gold": true
-        },
-        {
-          "label": "Habitación",
-          "value": "Single / Doble / Triple",
-          "gold": false
-        }
-      ],
-      "temporada": "Semana de turismo",
-      "notas": [],
-      "updatedAt": "2026-05-04T16:17:02.939Z"
-    },
-    {
-      "id": "funtour-gramado-y-canela-sin-parques-turismo-2026",
-      "slug": "gramado-y-canela-sin-parques-turismo-2026",
-      "operador": "funtour",
-      "sourceUrl": "https://www.funtour.com.uy/tienda/gramado-y-canela-sin-parques-turismo-2026/",
-      "titulo": "Gramado y Canela Semana de Turismo 2026 Desde Montevideo y Litoral Norte",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "Gramado y Canela Semana de Turismo 2026 Desde Montevideo y Litoral Norte",
-      "destinoSlug": "gramado",
-      "pais": "Brasil",
-      "emoji": "🌲",
-      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2023/06/Gramado8-1024x1024.jpg",
-      "highlights": [],
-      "incluye": [
-        "BUS CON SERVICIO A BORDO",
-        "GUÍA COORDINADOR DURANTE TODO EL RECORRIDO",
-        "04 NOCHES DE ALOJAMIENTO CON DESAYUNO",
-        "🛣️TOUR GRAMADO",
-        "🛣️TOUR CANELA",
-        "TARJETA DE ASISTENCIA MÉDICA 40 k",
-        "No incluye: Todo lo que no especificado anteriormente, Tax de sustentabilidad (hotel) de R$ 3.13 por pax por día"
-      ],
-      "noIncluye": [],
-      "hoteles": [
-        {
-          "nombre": "*LAGHETTO TOSCANA",
-          "url": "https://www.laghettohoteis.com.br/hoteis/toscana"
-        }
-      ],
-      "itinerario": [],
-      "salidas": [
-        "28 de Marzo"
-      ],
-      "bases": [
-        "Single",
-        "Doble",
-        "Triple",
-        "Cuadruple"
-      ],
-      "precioDesde": "339",
-      "variantesCompletas": [
-        {
-          "variationId": 33150,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "579",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33151,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "429",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33152,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "409",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33153,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "449",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33154,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "339",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33155,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "339",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 35302,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "339",
-          "disponible": true,
-          "sku": ""
-        }
-      ],
-      "matrizPrecios": {
-        "28 de Marzo": {
-          "": {
-            "": 339
-          }
-        }
-      },
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "28 de Marzo",
-          "gold": true
-        },
-        {
-          "label": "Habitación",
-          "value": "Single / Doble / Triple / Cuadruple",
-          "gold": false
-        }
-      ],
-      "temporada": "Semana de turismo",
-      "notas": [],
-      "updatedAt": "2026-05-04T16:17:05.148Z"
-    },
-    {
-      "id": "funtour-gramado-y-canela-con-2-parques-turismo-2026",
-      "slug": "gramado-y-canela-con-2-parques-turismo-2026",
-      "operador": "funtour",
-      "sourceUrl": "https://www.funtour.com.uy/tienda/gramado-y-canela-con-2-parques-turismo-2026/",
-      "titulo": "Gramado y Canela con 2 Parques Semana de Turismo 2026 Desde Montevideo y litoral Norte",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "Gramado y Canela con 2 Parques Semana de Turismo 2026 Desde Montevideo y litoral Norte",
-      "destinoSlug": "gramado",
-      "pais": "Brasil",
-      "emoji": "🌲",
-      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2023/06/Gramado-1-1024x1024.jpg",
-      "highlights": [],
-      "incluye": [
-        "BUS CON SERVICIO A BORDO",
-        "GUÍA COORDINADOR DURANTE TODO EL RECORRIDO",
-        "04 NOCHES DE ALOJAMIENTO CON DESAYUNO",
-        "🛣️TOUR GRAMADO",
-        "🛣️TOUR CANELA",
-        "☃️PARQUE SNOWLAND: INGRESO, EQUIPAMIENTO DE NIEVE Y ACCESO A LA MONTAÑA (NO INCLUYE DEPORTES)",
-        "🎫PARQUE ACUAMOTION: INGRESO",
-        "TARJETA DE ASISTENCIA MÉDICA 40 k",
-        "No incluye: Todo lo que no especificado anteriormente, Tax de sustentabilidad (hotel) de R$ 3.13 por pax por día"
-      ],
-      "noIncluye": [],
-      "hoteles": [
-        {
-          "nombre": "*LAGHETTO TOSCANA",
-          "url": "https://www.laghettohoteis.com.br/hoteis/toscana"
-        }
-      ],
-      "itinerario": [],
-      "salidas": [
-        "28 de Marzo"
-      ],
-      "bases": [
-        "Single",
-        "Doble",
-        "Triple",
-        "Cuadruple"
-      ],
-      "precioDesde": "439",
-      "variantesCompletas": [
-        {
-          "variationId": 33136,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "679",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33137,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "529",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33138,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "499",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33139,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "549",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33140,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "439",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33141,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "439",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 35305,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "439",
-          "disponible": true,
-          "sku": ""
-        }
-      ],
-      "matrizPrecios": {
-        "28 de Marzo": {
-          "": {
-            "": 439
-          }
-        }
-      },
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "28 de Marzo",
-          "gold": true
-        },
-        {
-          "label": "Habitación",
-          "value": "Single / Doble / Triple / Cuadruple",
-          "gold": false
-        }
-      ],
-      "temporada": "Semana de turismo",
-      "notas": [],
-      "updatedAt": "2026-05-04T16:17:07.331Z"
-    },
-    {
-      "id": "funtour-florianopolis-turismo-2026-bus-y-hotel-8-dias",
-      "slug": "florianopolis-turismo-2026-bus-y-hotel-8-dias",
-      "operador": "funtour",
-      "sourceUrl": "https://www.funtour.com.uy/tienda/florianopolis-turismo-2026-bus-y-hotel-8-dias/",
-      "titulo": "Florianópolis Turismo 2026 Bus y Hotel 8 Dias",
-      "subtitulo": "8 DÍAS",
-      "duracion": "8 DÍAS",
-      "destino": "Florianópolis Turismo 2026 Bus y Hotel 8 Dias",
-      "destinoSlug": "otro",
-      "pais": "Otros",
-      "emoji": "📍",
-      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2023/05/Floripa-Funtour24-1024x768.jpg",
-      "highlights": [
-        "📍 CANASVIEIRAS",
-        "📍 CANASVIEIRAS"
-      ],
-      "incluye": [
-        "BUS CON SERVICIO A BORDO",
-        "GUÍA COORDINADOR DURANTE TODO EL RECORRIDO",
-        "5 NOCHES DE ALOJAMIENTO CON DESAYUNO",
-        "TARJETA DE ASISTENCIA MÉDICA 40K",
-        "No incluye: Todo lo que no está especificado en Incluye"
-      ],
-      "noIncluye": [],
-      "hoteles": [],
-      "itinerario": [
-        {
-          "dia": "DÍA 01",
-          "lugar": "MONTEVIDEO",
-          "detalle": "En horas pasadas el mediodía partiremos hacia nuestro destino, recorriendo rutas nacionales, realizamos trámites migratorios y continuaremos rumbo a nuestro destino. Contamos con servicio a bordo acompañado de un guía coordinador de viajes.",
-          "first": true,
-          "last": false
-        },
-        {
-          "dia": "DÍA 02",
-          "lugar": "CANASVIEIRAS",
-          "detalle": "Desayuno a bordo por la mañana. Sobre el medio día estaremos llegando a Florianópolis, nos dirigimos a la playa de Canasvieiras donde nos alojaremos durante 5 noches. Tiempo libre hasta la noche. DIA 3 A 6 SE REALIZARÁN PASEOS OPCIONALES NO INCLUIDOS EN EL PAQUETE CON COSTO ADICIONAL,ENTRE ELLOS: BALNEARIO CAMBORIU: En la mañana salida con destino al principal balneario de Santa Catarina, Balneario Camboriu. Llegaremos al centro de la ciudad y quien desee de manera opcional podrá ir al complejo Unipraias para abordar los teleféricos (ingreso opcional) para llegar a la cima del Morro da Aguada, apreciar una de las vistas más hermosas de Balneario Camboriu con posterior descenso a la playa de Laranjeiras. En horario definido, nos reuniremos para realizar la cena en un restaurante de Camboriu",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 07",
-          "lugar": "CANASVIEIRAS",
-          "detalle": ": En horas de la mañana luego del desayuno nos despediremos de esta hermosa isla partiendo hacia Uruguay, pasando por las ciudades de Sombrío, Torres, Porto Alegre.",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 08",
-          "lugar": "URUGUAY",
-          "detalle": ": A primeras horas de la mañana llegaremos a Uruguay, Fin de nuestros servicios. POLITICA DE MENORES *De 0 a 3 años no paga y ocupa asiento, se acomoda con los adultos en la habitación ( no cuenta con servicio) siempre acompañado de 2 adultos, max 1 por reserva .*De 4 en adelante pagan como adultos ( Mar de Canasvieiras cuenta con política de menores con tarifa diferencial de 4 a 12 años 1 por reserva acompañado de dos adultos ) CHECK IN *Pasadas las 14 hs POLITICA DE MENORES *De 0 a 3 años no paga y ocupa asiento, se acomoda con los adultos en la habitación ( no cuenta con servicio) siempre acompañado de 2 adultos, max 1 por reserva .*De 4 en adelante pagan como adultos ( Mar de Canasvieiras cuenta con política de menores con tarifa diferencial de 4 a 12 años acompañado de dos adultos ) C",
-          "first": false,
-          "last": true
-        }
-      ],
-      "salidas": [
-        "28 de Marzo"
-      ],
-      "bases": [
-        "Single",
-        "Doble",
-        "Triple",
-        "Cuadruple",
-        "Child ( 4 a 12 años)"
-      ],
-      "precioDesde": "459",
-      "variantesCompletas": [
-        {
-          "variationId": 34929,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "479",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34930,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "479",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34907,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "529",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34908,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "529",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34909,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "529",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34910,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "739",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 32287,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "859",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 32288,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "579",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 32289,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "499",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 32241,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "829",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 32242,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "559",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 32243,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "489",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 32244,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "479",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 32246,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "879",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 32247,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "609",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 32248,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "589",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 32249,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "579",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 32250,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "459",
-          "disponible": true,
-          "sku": ""
-        }
-      ],
-      "matrizPrecios": {
-        "28 de Marzo": {
-          "": {
-            "": 459
-          }
-        }
-      },
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "28 de Marzo",
-          "gold": true
-        },
-        {
-          "label": "Habitación",
-          "value": "Single / Doble / Triple / Cuadruple / Child ( 4 a 12 años)",
-          "gold": false
-        }
-      ],
-      "temporada": "",
-      "notas": [],
-      "updatedAt": "2026-05-04T16:17:09.554Z"
-    },
-    {
-      "id": "funtour-bombinhas-turismo-2026-9-dias",
-      "slug": "bombinhas-turismo-2026-9-dias",
-      "operador": "funtour",
-      "sourceUrl": "https://www.funtour.com.uy/tienda/bombinhas-turismo-2026-9-dias/",
-      "titulo": "Bombinhas Turismo 2026 9 Días Desde Montevideo y Litoral Norte",
-      "subtitulo": "9 DÍAS",
-      "duracion": "9 DÍAS",
-      "destino": "Bombinhas Turismo 2026 9 Días Desde Montevideo y Litoral Norte",
-      "destinoSlug": "florianopolis",
-      "pais": "Brasil",
-      "emoji": "🏖️",
-      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2024/05/bombinhas-playa--1024x1024.jpg",
-      "highlights": [
-        "📍 BOMBINHAS",
-        "📍 BOMBINHAS"
-      ],
-      "incluye": [
-        "BUS CON SERVICIO A BORDO IDA",
-        "GUÍA COORDINADOR DURANTE TODO EL RECORRIDO EN BUS.",
-        "TRASLADO DE INGRESO A BOMBINHAS",
-        "6 NOCHES DE ALOJAMIENTO CON DESAYUNO",
-        "1 COMIDA EN PARADOR DE REGRESO",
-        "TARJETA DE ASISTENCIA MÉDICA 40K"
-      ],
-      "noIncluye": [],
-      "hoteles": [],
-      "itinerario": [
-        {
-          "dia": "DÍA 01",
-          "lugar": "MONTEVIDEO",
-          "detalle": "En horas pasadas el mediodía partiremos hacia nuestro destino, recorriendo rutas nacionales, realizamos trámites migratorios y continuaremos rumbo a nuestro destino. Contamos con servicio a bordo acompañado de un coordinador durante el recorrido de ida y vuelta.",
-          "first": true,
-          "last": false
-        },
-        {
-          "dia": "DÍA 02",
-          "lugar": "BOMBINHAS",
-          "detalle": "Desayuno a bordo por la mañana. Sobre el medio día estaremos llegando al estado de Santa Catarina, en la Br-101 traslado rumbo a tu posada en Bombinhas pasadas las 15 hs. DIA 3 AL DIA 7 BOMBINHAS :Días enteramente libres para disfrutar de las playas de este fantástico balneario y tu posada, como también de las múltiples actividades que nos brinda esta playa de Santa Catarina.",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 08",
-          "lugar": "BOMBINHAS",
-          "detalle": ": En horas de la mañana luego del desayuno partida con equipajes en traslado rumbo a BR-101 para luego abordar nuestro bus con destino a.",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 09",
-          "lugar": "URUGUAY",
-          "detalle": ": A primeras horas de la mañana llegaremos a Uruguay, Fin de nuestros servicios. Pousada Morada da Praia ( A partir de 13.01) *Ubicada aprox a 400 metros de playa central Bombinhas y el centro, cuenta con piscinas para adultos y niños cercadas, parque infantil, parrillas para barbacoa, sala de juegos, bicicletas, biblioteca Brisa do Mar *Ubicada en el centro de Bombinhas a 60 mtrs de la playa,sirve desayuno Buffet Vila do Centro se encuentra en Bombinhas, a 8 min a pie de Praia de Bombinhas ( 500 metros) y a 1,3 km de Praia de Quatro Ilhas,cuenta con un rooftop con piscina adultos e infantil, espacio kids playground y un restaurante que sirve almuerzo y cena ( no incluidos en ningún paquete) +CHECK IN PASADAS LAS 15 HS*",
-          "first": false,
-          "last": true
-        }
-      ],
-      "salidas": [
-        "28 de Marzo"
-      ],
-      "bases": [
-        "Single",
-        "Doble",
-        "Triple"
-      ],
-      "precioDesde": "629",
-      "variantesCompletas": [
-        {
-          "variationId": 33401,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "1019",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33402,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "679",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33403,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "629",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33346,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "719",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33347,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "629",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33112,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "1109",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33113,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "709",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33114,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "629",
-          "disponible": true,
-          "sku": ""
-        }
-      ],
-      "matrizPrecios": {
-        "28 de Marzo": {
-          "": {
-            "": 629
-          }
-        }
-      },
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "28 de Marzo",
-          "gold": true
-        },
-        {
-          "label": "Habitación",
-          "value": "Single / Doble / Triple",
-          "gold": false
-        }
-      ],
-      "temporada": "",
-      "notas": [],
-      "updatedAt": "2026-05-04T16:17:11.733Z"
-    },
-    {
-      "id": "funtour-bombinhas-enero-2026-10-dias",
-      "slug": "bombinhas-enero-2026-10-dias",
-      "operador": "funtour",
-      "sourceUrl": "https://www.funtour.com.uy/tienda/bombinhas-enero-2026-10-dias/",
-      "titulo": "Bombinhas Enero 2026 10 Días",
-      "subtitulo": "10 DÍAS",
-      "duracion": "10 DÍAS",
-      "destino": "Bombinhas Enero 2026 10 Días",
-      "destinoSlug": "florianopolis",
-      "pais": "Brasil",
-      "emoji": "🏖️",
-      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2023/08/BombinhasFuntour10-1-1024x1024.jpg",
-      "highlights": [
-        "📍 BOMBINHAS",
-        "📍 BOMBINHAS"
-      ],
-      "incluye": [
-        "BUS CON SERVICIO A BORDO IDA",
-        "GUÍA COORDINADOR DURANTE TODO EL RECORRIDO EN BUS.",
-        "TRASLADO DE INGRESO A BOMBINHAS",
-        "7 NOCHES DE ALOJAMIENTO CON DESAYUNO",
-        "1 COMIDA EN PARADOR DE REGRESO",
-        "TARJETA DE ASISTENCIA MÉDICA 40K"
-      ],
-      "noIncluye": [],
-      "hoteles": [],
-      "itinerario": [
-        {
-          "dia": "DÍA 01",
-          "lugar": "MONTEVIDEO",
-          "detalle": "En horas pasadas el mediodía partiremos hacia nuestro destino, recorriendo rutas nacionales, realizamos trámites migratorios y continuaremos rumbo a nuestro destino. Contamos con servicio a bordo acompañado de un coordinador durante el recorrido de ida y vuelta.",
-          "first": true,
-          "last": false
-        },
-        {
-          "dia": "DÍA 02",
-          "lugar": "BOMBINHAS",
-          "detalle": "Desayuno a bordo por la mañana. Sobre el medio día estaremos llegando al estado de Santa Catarina, en la Br-101 traslado rumbo a tu posada en Bombinhas pasadas las 15 hs. DIA 3 AL DIA 8 BOMBINHAS :Días enteramente libres para disfrutar de las playas de este fantástico balneario y tu posada, como también de las múltiples actividades que nos brinda esta playa de Santa catarina.",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 09",
-          "lugar": "BOMBINHAS",
-          "detalle": ": En horas de la mañana luego del desayuno partida con equipajes en traslado rumbo a BR-101 para luego abordar nuestro bus con destino a.",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 10",
-          "lugar": "URUGUAY",
-          "detalle": ": A primeras horas de la mañana llegaremos a Uruguay, Fin de nuestros servicios. Pousada Morada da Praia ( A partir de 13.01) *Ubicada aprox a 400 metros de playa central Bombinhas y el centro, cuenta con piscinas para adultos y niños cercadas, parque infantil, parrillas para barbacoa, sala de juegos, bicicletas, biblioteca Brisa do Mar *Ubicada en el centro de Bombinhas a 60 mtrs de la playa,sirve desayuno Buffet Vila do Centro se encuentra en Bombinhas, a 8 min a pie de Praia de Bombinhas ( 500 metros) y a 1,3 km de Praia de Quatro Ilhas,cuenta con un rooftop con piscina adultos e infantil, espacio kids playground y un restaurante que sirve almuerzo y cena ( no incluidos en ningún paquete) +CHECK IN PASADAS LAS 15 HS*",
-          "first": false,
-          "last": true
-        }
-      ],
-      "salidas": [
-        "04 de Enero",
-        "11 de Enero",
-        "18 de Enero",
-        "25 de Enero"
-      ],
-      "bases": [
-        "Single",
-        "Doble",
-        "Triple"
-      ],
-      "precioDesde": "",
-      "variantesCompletas": [],
-      "matrizPrecios": {},
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "04 de Enero",
-          "gold": true
-        },
-        {
-          "label": "Otras salidas",
-          "value": "11 de Enero · 18 de Enero · 25 de Enero",
-          "gold": false
-        },
-        {
-          "label": "Habitación",
-          "value": "Single / Doble / Triple",
-          "gold": false
-        }
-      ],
-      "temporada": "Enero",
-      "notas": [],
-      "updatedAt": "2026-05-04T16:17:13.918Z"
-    },
-    {
-      "id": "funtour-ferrugem-verano-2026-8-dias",
-      "slug": "ferrugem-verano-2026-8-dias",
-      "operador": "funtour",
-      "sourceUrl": "https://www.funtour.com.uy/tienda/ferrugem-verano-2026-8-dias/",
-      "titulo": "Ferrugem Verano 2026 8 Días",
-      "subtitulo": "8 DÍAS",
-      "duracion": "8 DÍAS",
-      "destino": "Ferrugem Verano 2026 8 Días",
-      "destinoSlug": "florianopolis",
-      "pais": "Brasil",
-      "emoji": "🏖️",
-      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2025/05/ferru-1024x675.webp",
-      "highlights": [
-        "📍 FERRUGEM",
-        "📍 FERRUGEM"
-      ],
-      "incluye": [
-        "Bus con servicio de a bordo.",
-        "Cena parador de regreso.",
-        "Tarjeta de asistencia 40k.",
-        "Guía acompañante durante el recorrido en bus.",
-        "5 noches de hospedaje con desayunos buffet.",
-        "Paseo de Trekkinn 3 praias + Praia do Rosa.",
-        "Paseo atardecer en Morro do Indio."
-      ],
-      "noIncluye": [],
-      "hoteles": [
-        {
-          "nombre": "Posada Baleia Franca",
-          "url": ""
-        }
-      ],
-      "itinerario": [
-        {
-          "dia": "DÍA 01",
-          "lugar": "URUGUAY",
-          "detalle": "Salida desde Uruguay, realizaremos el circuito en bus semi cama, tv, música, guía y servicio a bordo (merienda, aperitivo, cena y desayuno). Realizamos trámites migratorios y seguimos rumbo a nuestro destino.",
-          "first": true,
-          "last": false
-        },
-        {
-          "dia": "DÍA 02",
-          "lugar": "FERRUGEM",
-          "detalle": "En la mañana tendremos un desayuno a bordo, Transfer in out BR 101 – Posada, llegamos en horas próximas al mediodía, donde realizamos el check-in y nos alojaremos en la Posada designada. DEL DÍA 3 AL 6 FERRUGEM – Desayunos y paseos incluidos, Trekkinn 3 Praias + Praia da Rosa, atardecer en Morro do Indio, o paseos opcionales como Tour a Guarda do Embaú (no incluidos en el paquete).",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 07",
-          "lugar": "FERRUGEM",
-          "detalle": "Luego de desayunar tendremos el check-out, traslado hasta parador para luego tomar nuestro bus y emprenderemos el retorno a…",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 08",
-          "lugar": "URUGUAY",
-          "detalle": "– A primeras horas de la mañana estaremos arribando a Tres Cruces. Fin de nuestros servicios y ¡¡hasta el próximo viaje!! *HOTELERÍA FERRUGEM* POSADA BALEIA FRANCA POSADA DO BOTTO",
-          "first": false,
-          "last": true
-        }
-      ],
-      "salidas": [
-        "11 de Enero",
-        "18 de Enero",
-        "25 de Enero",
-        "01 de Febrero",
-        "08 de Febrero"
-      ],
-      "bases": [
-        "Doble",
-        "Triple",
-        "Cuádruple",
-        "Quíntuple"
-      ],
-      "precioDesde": "469",
-      "variantesCompletas": [
-        {
-          "variationId": 33192,
-          "salida": "11 de Enero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "509",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33193,
-          "salida": "11 de Enero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "509",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33194,
-          "salida": "11 de Enero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "479",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33195,
-          "salida": "11 de Enero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "479",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33196,
-          "salida": "18 de Enero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "509",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33197,
-          "salida": "18 de Enero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "509",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33198,
-          "salida": "18 de Enero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "479",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33199,
-          "salida": "18 de Enero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "479",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33200,
-          "salida": "25 de Enero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "509",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33201,
-          "salida": "25 de Enero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "509",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33202,
-          "salida": "25 de Enero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "479",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33203,
-          "salida": "25 de Enero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "479",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33204,
-          "salida": "01 de Febrero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "499",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33205,
-          "salida": "01 de Febrero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "499",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33206,
-          "salida": "01 de Febrero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "469",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33207,
-          "salida": "01 de Febrero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "469",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33208,
-          "salida": "08 de Febrero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "499",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33209,
-          "salida": "08 de Febrero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "499",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33210,
-          "salida": "08 de Febrero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "469",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 33211,
-          "salida": "08 de Febrero",
-          "alojamiento": "Posada Baleia Franca",
-          "base": "",
-          "precio": "469",
-          "disponible": true,
-          "sku": ""
-        }
-      ],
-      "matrizPrecios": {
-        "11 de Enero": {
-          "Posada Baleia Franca": {
-            "": 479
-          }
-        },
-        "18 de Enero": {
-          "Posada Baleia Franca": {
-            "": 479
-          }
-        },
-        "25 de Enero": {
-          "Posada Baleia Franca": {
-            "": 479
-          }
-        },
-        "01 de Febrero": {
-          "Posada Baleia Franca": {
-            "": 469
-          }
-        },
-        "08 de Febrero": {
-          "Posada Baleia Franca": {
-            "": 469
-          }
-        }
-      },
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "11 de Enero",
-          "gold": true
-        },
-        {
-          "label": "Otras salidas",
-          "value": "18 de Enero · 25 de Enero · 01 de Febrero · 08 de Febrero",
-          "gold": false
-        },
-        {
-          "label": "Habitación",
-          "value": "Doble / Triple / Cuádruple / Quíntuple",
-          "gold": false
-        }
-      ],
-      "temporada": "Verano",
-      "notas": [],
-      "updatedAt": "2026-05-04T16:17:16.139Z"
+      "updatedAt": "2026-05-11T17:32:51.004Z"
     }
   ]
 }
