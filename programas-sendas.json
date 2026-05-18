@@ -1,6 +1,6 @@
 {
   "operador": "Sendas Turismo",
-  "updatedAt": "2026-05-11T16:16:53.917Z",
+  "updatedAt": "2026-05-18T16:45:04.075Z",
   "programas": [
     {
       "id": "florianopolis-1413",
@@ -118,7 +118,7 @@
           "cat": "http://www.hoteltropicanas.com/"
         },
         {
-          "nombre": "Sonho Meu",
+          "nombre": "Sonho Meu***",
           "playa": "Canas",
           "sgl": 850,
           "dbl": 620,
@@ -222,7 +222,7 @@
           "texto": "Solo bus y hotel descontar: U$S 130.-"
         }
       ],
-      "updatedAt": "2026-05-11T16:17:26.593Z"
+      "updatedAt": "2026-05-18T16:45:35.627Z"
     },
     {
       "id": "florianopolis-1400",
@@ -331,7 +331,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-05-11T16:17:27.967Z"
+      "updatedAt": "2026-05-18T16:45:37.037Z"
     },
     {
       "id": "florianopolis-1396",
@@ -430,7 +430,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-05-11T16:17:29.303Z"
+      "updatedAt": "2026-05-18T16:45:38.424Z"
     },
     {
       "id": "gramado-1417",
@@ -529,7 +529,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-05-11T16:17:30.648Z"
+      "updatedAt": "2026-05-18T16:45:39.786Z"
     },
     {
       "id": "gramado-1416",
@@ -628,7 +628,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-05-11T16:17:31.969Z"
+      "updatedAt": "2026-05-18T16:45:41.036Z"
     },
     {
       "id": "gramado-1415",
@@ -762,7 +762,7 @@
           "texto": "NO INCLUYE: INGRESOS A LOS PARQUES, MUSEOS y ESPECTACULOS DE NATAL LUZ"
         }
       ],
-      "updatedAt": "2026-05-11T16:17:33.326Z"
+      "updatedAt": "2026-05-18T16:45:42.296Z"
     },
     {
       "id": "gramado-1411",
@@ -861,7 +861,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-05-11T16:17:34.685Z"
+      "updatedAt": "2026-05-18T16:45:43.549Z"
     },
     {
       "id": "gramado-1400",
@@ -970,7 +970,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-05-11T16:17:37.621Z"
+      "updatedAt": "2026-05-18T16:45:44.781Z"
     },
     {
       "id": "gramado-1396",
@@ -1069,7 +1069,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-05-11T16:17:38.889Z"
+      "updatedAt": "2026-05-18T16:45:46.009Z"
     },
     {
       "id": "buenosaires-1414",
@@ -1187,7 +1187,7 @@
           "texto": "MENORES HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE (UNO POR HABITACION)"
         }
       ],
-      "updatedAt": "2026-05-11T16:17:40.121Z"
+      "updatedAt": "2026-05-18T16:45:47.264Z"
     },
     {
       "id": "mendoza-1412",
@@ -1308,7 +1308,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-05-11T16:17:41.428Z"
+      "updatedAt": "2026-05-18T16:45:48.519Z"
     },
     {
       "id": "mendoza-1407",
@@ -1439,7 +1439,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-05-11T16:17:42.871Z"
+      "updatedAt": "2026-05-18T16:45:49.713Z"
     },
     {
       "id": "mendoza-1358",
@@ -1560,7 +1560,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-05-11T16:17:44.266Z"
+      "updatedAt": "2026-05-18T16:45:50.955Z"
     },
     {
       "id": "norte-1406",
@@ -1666,7 +1666,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-05-11T16:17:45.564Z"
+      "updatedAt": "2026-05-18T16:45:52.333Z"
     },
     {
       "id": "norte-1405",
@@ -1772,7 +1772,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-05-11T16:17:46.916Z"
+      "updatedAt": "2026-05-18T16:45:53.672Z"
     },
     {
       "id": "norte-1395",
@@ -1878,7 +1878,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-05-11T16:17:48.511Z"
+      "updatedAt": "2026-05-18T16:45:54.870Z"
     },
     {
       "id": "norte-1394",
@@ -1984,7 +1984,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-05-11T16:17:49.817Z"
+      "updatedAt": "2026-05-18T16:45:56.126Z"
     },
     {
       "id": "carlospaz-1404",
@@ -2135,7 +2135,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-05-11T16:17:51.140Z"
+      "updatedAt": "2026-05-18T16:45:57.312Z"
     },
     {
       "id": "bariloche-1403",
@@ -2293,116 +2293,7 @@
           "texto": "Solo asiento, seguro de asistencia y servicio abordo: USD 315.-"
         }
       ],
-      "updatedAt": "2026-05-11T16:17:52.605Z"
-    },
-    {
-      "id": "bariloche-1386",
-      "joomlaId": "1386",
-      "sourceUrl": "https://www.sendasturismo.com/as/index.php/argentina/1386-bariloche-9-dias-promocional-16-de-mayo",
-      "titulo": "BARILOCHE 09 DIAS PROMOCIONAL",
-      "subtitulo": "9 DÍAS / 06 NOCHES · BARILOCHE",
-      "duracion": "9 DÍAS — 06 NOCHES",
-      "destino": "Bariloche",
-      "destinoSlug": "bariloche",
-      "pais": "Argentina",
-      "emoji": "🇦🇷",
-      "photoQuery": "Bariloche Patagonia Argentina",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "16 DE MAYO",
-          "gold": true
-        },
-        {
-          "label": "Operador",
-          "value": "Sendas Turismo",
-          "gold": false
-        }
-      ],
-      "descripcion": "Bariloche es la joya de la Patagonia argentina. En invierno, el Cerro Catedral y sus pistas de ski la convierten en la capital andina del sur. En cualquier época, los Lagos, los bosques y el chocolate artesanal son imperdibles.",
-      "highlights": [
-        "⛷️ Ski",
-        "🍫 Chocolate",
-        "🏔️ Cerro Catedral",
-        "🦆 Lagos patagónicos",
-        "🌲 Bosques",
-        "🚡 Teleférico"
-      ],
-      "incluye": [
-        "Bus Semi Cama con guía acompañante, servicio a bordo, almuerzo, merienda y desayuno",
-        "06 noches de alojamiento con media pensión, 06 comidas incluidas en BRC, 1 almuerzo en viaje de regreso.",
-        "Circuito Chico, Cerro Campanario (sin ascenso) y Punto Panorámico",
-        "Cerro Catedral (sin ascensos)",
-        "Villa La Angostura, Ruta de los 7 lagos y San Martin de los Andes",
-        "Seguro de Asistencia médica de Universal Assistance"
-      ],
-      "itinerario": [
-        {
-          "dia": "Día 01",
-          "texto": "Uruguay- Salida en horas de la mañana en bus semi cama con guía acompañante a través de la frontera de Fray Bentos, cruce del Puente Gral. San Martin, Zarate, Chivilcoy, Trenque Lauquen, Santa Rosa, Gral. Acha, Neuquén, Piedra del Águila, Confluencia, Valle Encantado del Río Limay, para arribar a:"
-        },
-        {
-          "dia": "Día 02",
-          "texto": "San Carlos de Bariloche- Llegada en horas del mediodía. Alojamiento. Resto del día libre para tomar el primer conocimiento de la ciudad, Centro Cívico, catedral, vistas del Lago Nahuel Huapi, centro comercial, etc."
-        },
-        {
-          "dia": "Día 03 AL Día 07",
-          "texto": "San Carlos de Bariloche- Durante la estadía con régimen de desayuno o media pensión a elección se realizarán las siguientes excursiones:"
-        },
-        {
-          "dia": "",
-          "texto": "Circuito Chico, Cerro Campanario y Punto Panorámico. Salida por el barrio Melipal, Playa Bonita, Laguna el Trébol, Centro Atómico, Brazo Campanario, Cerro Campanario. Ascenso opcional en sus aerosillas donde desde su cima obtendremos una vista espectacular, Capilla San Eduardo, Llao Llao, Puerto Pañuelo, Bahía López, Lago Escondido, Punto Panorámico."
-        },
-        {
-          "dia": "",
-          "texto": "Tour Cerro Catedral. Traslado a la Villa Catedral. Ascenso opcional en sus medios de elevación al Cerro Catedral, uno de los principales centros de ski de Argentina, para disfrutar de una vista inolvidable."
-        },
-        {
-          "dia": "",
-          "texto": "Tour de día entero a San Martin de los Andes y ruta de los 7 lagos. Salida en horas de la mañana bordeando el lago Nahuel Huapi pasando por Villa La Angostura, observando la increíble vista de los lagos CORRENTOSO y ESPEJO. Iniciaremos el trayecto de 7 LAGOS, pasando por los lagos Escondido, Baley Willis, Villarino, Falkner, Machonico, para arribar al Lago Lacar donde bordeando el mismo se encuentra enclavada la hermosa ciudad de la provincia de Neuquén: SAN MARTIN DE LOS ANDES. Visita de la misma. Tiempo libre para almuerzo opcional. En horas de la tarde regreso a Bariloche a través de Paso Córdoba o Confluencia."
-        },
-        {
-          "dia": "",
-          "texto": "Sugerimos excursiones opcionales lacustres a: Isla Victoria y Bosque de Arrayanes o Puerto Blest y Cascada de los Cántaros o terrestre al Cerro tronador y Glaciar Negro, o El Bolsón y Lago Puelo."
-        },
-        {
-          "dia": "Día 08",
-          "texto": "San Carlos de Bariloche - Desayuno. Partida con equipajes en horas de la mañana en viaje de regreso pasando Valle Encantado del Rio Limay, Confluencia Traful, Piedra del Águila, Neuquén, Gral. Acha. Cena. Continuación por Santa Rosa, Zarate, hacia:"
-        },
-        {
-          "dia": "Día 09",
-          "texto": "Uruguay - Llegada en horas de la tarde. Fin de nuestros servicios."
-        }
-      ],
-      "hoteles": [
-        {
-          "nombre": "Plaza",
-          "playa": "—",
-          "sgl": 795,
-          "dbl": 650,
-          "tpl": 650,
-          "cpl": null,
-          "qpl": null,
-          "cat": ""
-        },
-        {
-          "nombre": "M 383",
-          "playa": "—",
-          "sgl": 795,
-          "dbl": 650,
-          "tpl": 650,
-          "cpl": null,
-          "qpl": null,
-          "cat": ""
-        }
-      ],
-      "notas_precios": [
-        {
-          "titulo": "Precios",
-          "texto": "Consultar tarifas vigentes al momento de la reserva."
-        }
-      ],
-      "updatedAt": "2026-05-11T16:17:53.971Z"
+      "updatedAt": "2026-05-18T16:45:58.532Z"
     },
     {
       "id": "cataratas-1410",
@@ -2443,7 +2334,7 @@
         "Tour Cataratas Argentinas con ingreso incluido.",
         "Tour Cataratas Brasileñas con ingreso incluido",
         "Visita de la Represa de Itaipú / Visita con tiempo libre en Ciudad del Este para compras",
-        "Visita al Centro de Foz, Marco de las Tres Fronteras",
+        "Marco de las Tres Fronteras",
         "En Ruta Ruinas de San Ignacio Mini con ingreso incluido, Minas de Wanda y Casa de Horacio Quiroga (ingreso opcional)",
         "Seguro de Asistencia médica de Universal Assistance cobertura especial COVID - 19"
       ],
@@ -2458,7 +2349,7 @@
         },
         {
           "dia": "Día 03",
-          "texto": "Foz de Iguazú. Desayuno. Salida en horas de la mañana para visitar Cataratas Brasileñas. Ingreso al Parque Nacional y llegada hasta el Punto Panorámico, frente al hotel Das Cataratas y desde allí dar comienzo a una caminata por pasarelas observando gran parte de los 275 saltos de agua y viendo el gran espectáculo que nos ofrece esta maravilla de la naturaleza. Al finalizar la mismo llegaremos a un mirador contemplando los saltos brasileños de Benjamín Constant, Deodoro, Floriano y Unión, este último ya perteneciente al salto Garganta del Diablo. (Ingreso incluido). Posibilidad de realizar opcionalmente el Safari Macuco donde nos internaremos en vehículos especiales en zona interna del parque y posteriormente en gomones realizar el trayecto por el río hasta enfrentarnos con los saltos en un espectáculo realmente indescriptible. Tiempo libre también para realizar opcional la visita al Parque de las Aves. Visita opcional al primer Museo de Cera de Latinoamérica, donde podrán ver a las más grandes estrellas de Hollywood, las Maravillas del Mundo o el Parque de los Dinosaurios. Posterior visita al centro de Foz con tiempo para compras. Cena."
+          "texto": "Foz de Iguazú. Desayuno. Salida en horas de la mañana para visitar Cataratas Brasileñas. Ingreso al Parque Nacional y llegada hasta el Punto Panorámico, frente al hotel Das Cataratas y desde allí dar comienzo a una caminata por pasarelas observando gran parte de los 275 saltos de agua y viendo el gran espectáculo que nos ofrece esta maravilla de la naturaleza. Al finalizar la mismo llegaremos a un mirador contemplando los saltos brasileños de Benjamín Constant, Deodoro, Floriano y Unión, este último ya perteneciente al salto Garganta del Diablo. (Ingreso incluido). Posibilidad de realizar opcionalmente el Safari Macuco donde nos internaremos en vehículos especiales en zona interna del parque y posteriormente en gomones realizar el trayecto por el río hasta enfrentarnos con los saltos en un espectáculo realmente indescriptible. Tiempo libre también para realizar opcional la visita al Parque de las Aves. Visita opcional al primer Museo de Cera de Latinoamérica, donde podrán ver a las más grandes estrellas de Hollywood, las Maravillas del Mundo o el Parque de los Dinosaurios. Cena."
         },
         {
           "dia": "Día 04",
@@ -2505,7 +2396,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-05-11T16:17:55.312Z"
+      "updatedAt": "2026-05-18T16:46:10.682Z"
     },
     {
       "id": "cataratas-1409",
@@ -2546,7 +2437,7 @@
         "Tour Cataratas Argentinas con ingreso incluido.",
         "Tour Cataratas Brasileñas con ingreso incluido",
         "Visita de la Represa de Itaipú / Visita con tiempo libre en Ciudad del Este para compras",
-        "Visita al Centro de Foz, Marco de las Tres Fronteras",
+        "Marco de las Tres Fronteras",
         "En Ruta Ruinas de San Ignacio Mini con ingreso incluido, Minas de Wanda y Casa de Horacio Quiroga (ingreso opcional)",
         "Seguro de Asistencia médica de Universal Assistance cobertura especial COVID - 19"
       ],
@@ -2561,7 +2452,7 @@
         },
         {
           "dia": "Día 03",
-          "texto": "Foz de Iguazú. Desayuno. Salida en horas de la mañana para visitar Cataratas Brasileñas. Ingreso al Parque Nacional y llegada hasta el Punto Panorámico, frente al hotel Das Cataratas y desde allí dar comienzo a una caminata por pasarelas observando gran parte de los 275 saltos de agua y viendo el gran espectáculo que nos ofrece esta maravilla de la naturaleza. Al finalizar la mismo llegaremos a un mirador contemplando los saltos brasileños de Benjamín Constant, Deodoro, Floriano y Unión, este último ya perteneciente al salto Garganta del Diablo. (Ingreso incluido). Posibilidad de realizar opcionalmente el Safari Macuco donde nos internaremos en vehículos especiales en zona interna del parque y posteriormente en gomones realizar el trayecto por el río hasta enfrentarnos con los saltos en un espectáculo realmente indescriptible. Tiempo libre también para realizar opcional la visita al Parque de las Aves. Visita opcional al primer Museo de Cera de Latinoamérica, donde podrán ver a las más grandes estrellas de Hollywood, las Maravillas del Mundo o el Parque de los Dinosaurios. Posterior visita al centro de Foz con tiempo para compras. Cena."
+          "texto": "Foz de Iguazú. Desayuno. Salida en horas de la mañana para visitar Cataratas Brasileñas. Ingreso al Parque Nacional y llegada hasta el Punto Panorámico, frente al hotel Das Cataratas y desde allí dar comienzo a una caminata por pasarelas observando gran parte de los 275 saltos de agua y viendo el gran espectáculo que nos ofrece esta maravilla de la naturaleza. Al finalizar la mismo llegaremos a un mirador contemplando los saltos brasileños de Benjamín Constant, Deodoro, Floriano y Unión, este último ya perteneciente al salto Garganta del Diablo. (Ingreso incluido). Posibilidad de realizar opcionalmente el Safari Macuco donde nos internaremos en vehículos especiales en zona interna del parque y posteriormente en gomones realizar el trayecto por el río hasta enfrentarnos con los saltos en un espectáculo realmente indescriptible. Tiempo libre también para realizar opcional la visita al Parque de las Aves. Visita opcional al primer Museo de Cera de Latinoamérica, donde podrán ver a las más grandes estrellas de Hollywood, las Maravillas del Mundo o el Parque de los Dinosaurios. Cena."
         },
         {
           "dia": "Día 04",
@@ -2608,7 +2499,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-05-11T16:17:56.637Z"
+      "updatedAt": "2026-05-18T16:46:11.904Z"
     },
     {
       "id": "cataratas-1401",
@@ -2649,7 +2540,7 @@
         "Tour Cataratas Argentinas con ingreso incluido.",
         "Tour Cataratas Brasileñas con ingreso incluido",
         "Visita de la Represa de Itaipú / Visita con tiempo libre en Ciudad del Este para compras",
-        "Visita al Centro de Foz, Marco de las Tres Fronteras",
+        "Marco de las Tres Fronteras",
         "En Ruta Ruinas de San Ignacio Mini con ingreso incluido, Minas de Wanda y Casa de Horacio Quiroga (ingreso opcional)",
         "Seguro de Asistencia médica de Universal Assistance cobertura especial COVID - 19"
       ],
@@ -2664,7 +2555,7 @@
         },
         {
           "dia": "Día 03",
-          "texto": "Foz de Iguazú. Desayuno. Salida en horas de la mañana para visitar Cataratas Brasileñas. Ingreso al Parque Nacional y llegada hasta el Punto Panorámico, frente al hotel Das Cataratas y desde allí dar comienzo a una caminata por pasarelas observando gran parte de los 275 saltos de agua y viendo el gran espectáculo que nos ofrece esta maravilla de la naturaleza. Al finalizar la mismo llegaremos a un mirador contemplando los saltos brasileños de Benjamín Constant, Deodoro, Floriano y Unión, este último ya perteneciente al salto Garganta del Diablo. (Ingreso incluido). Posibilidad de realizar opcionalmente el Safari Macuco donde nos internaremos en vehículos especiales en zona interna del parque y posteriormente en gomones realizar el trayecto por el río hasta enfrentarnos con los saltos en un espectáculo realmente indescriptible. Tiempo libre también para realizar opcional la visita al Parque de las Aves. Visita opcional al primer Museo de Cera de Latinoamérica, donde podrán ver a las más grandes estrellas de Hollywood, las Maravillas del Mundo o el Parque de los Dinosaurios. Posterior visita al centro de Foz con tiempo para compras. Cena."
+          "texto": "Foz de Iguazú. Desayuno. Salida en horas de la mañana para visitar Cataratas Brasileñas. Ingreso al Parque Nacional y llegada hasta el Punto Panorámico, frente al hotel Das Cataratas y desde allí dar comienzo a una caminata por pasarelas observando gran parte de los 275 saltos de agua y viendo el gran espectáculo que nos ofrece esta maravilla de la naturaleza. Al finalizar la mismo llegaremos a un mirador contemplando los saltos brasileños de Benjamín Constant, Deodoro, Floriano y Unión, este último ya perteneciente al salto Garganta del Diablo. (Ingreso incluido). Posibilidad de realizar opcionalmente el Safari Macuco donde nos internaremos en vehículos especiales en zona interna del parque y posteriormente en gomones realizar el trayecto por el río hasta enfrentarnos con los saltos en un espectáculo realmente indescriptible. Tiempo libre también para realizar opcional la visita al Parque de las Aves. Visita opcional al primer Museo de Cera de Latinoamérica, donde podrán ver a las más grandes estrellas de Hollywood, las Maravillas del Mundo o el Parque de los Dinosaurios. Cena."
         },
         {
           "dia": "Día 04",
@@ -2731,7 +2622,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-05-11T16:17:58.460Z"
+      "updatedAt": "2026-05-18T16:46:13.121Z"
     },
     {
       "id": "cataratas-1393",
@@ -2772,7 +2663,7 @@
         "Tour Cataratas Argentinas con ingreso incluido.",
         "Tour Cataratas Brasileñas con ingreso incluido",
         "Visita de la Represa de Itaipú / Visita con tiempo libre en Ciudad del Este para compras",
-        "Visita al Centro de Foz, Marco de las Tres Fronteras",
+        "Marco de las Tres Fronteras",
         "En Ruta Ruinas de San Ignacio Mini con ingreso incluido, Minas de Wanda y Casa de Horacio Quiroga (ingreso opcional)",
         "Seguro de Asistencia médica de Universal Assistance cobertura especial COVID - 19"
       ],
@@ -2787,7 +2678,7 @@
         },
         {
           "dia": "Día 03",
-          "texto": "Foz de Iguazú. Desayuno. Salida en horas de la mañana para visitar Cataratas Brasileñas. Ingreso al Parque Nacional y llegada hasta el Punto Panorámico, frente al hotel Das Cataratas y desde allí dar comienzo a una caminata por pasarelas observando gran parte de los 275 saltos de agua y viendo el gran espectáculo que nos ofrece esta maravilla de la naturaleza. Al finalizar la mismo llegaremos a un mirador contemplando los saltos brasileños de Benjamín Constant, Deodoro, Floriano y Unión, este último ya perteneciente al salto Garganta del Diablo. (Ingreso incluido). Posibilidad de realizar opcionalmente el Safari Macuco donde nos internaremos en vehículos especiales en zona interna del parque y posteriormente en gomones realizar el trayecto por el río hasta enfrentarnos con los saltos en un espectáculo realmente indescriptible. Tiempo libre también para realizar opcional la visita al Parque de las Aves. Visita opcional al primer Museo de Cera de Latinoamérica, donde podrán ver a las más grandes estrellas de Hollywood, las Maravillas del Mundo o el Parque de los Dinosaurios. Posterior visita al centro de Foz con tiempo para compras. Cena."
+          "texto": "Foz de Iguazú. Desayuno. Salida en horas de la mañana para visitar Cataratas Brasileñas. Ingreso al Parque Nacional y llegada hasta el Punto Panorámico, frente al hotel Das Cataratas y desde allí dar comienzo a una caminata por pasarelas observando gran parte de los 275 saltos de agua y viendo el gran espectáculo que nos ofrece esta maravilla de la naturaleza. Al finalizar la mismo llegaremos a un mirador contemplando los saltos brasileños de Benjamín Constant, Deodoro, Floriano y Unión, este último ya perteneciente al salto Garganta del Diablo. (Ingreso incluido). Posibilidad de realizar opcionalmente el Safari Macuco donde nos internaremos en vehículos especiales en zona interna del parque y posteriormente en gomones realizar el trayecto por el río hasta enfrentarnos con los saltos en un espectáculo realmente indescriptible. Tiempo libre también para realizar opcional la visita al Parque de las Aves. Visita opcional al primer Museo de Cera de Latinoamérica, donde podrán ver a las más grandes estrellas de Hollywood, las Maravillas del Mundo o el Parque de los Dinosaurios. Cena."
         },
         {
           "dia": "Día 04",
@@ -2834,7 +2725,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-05-11T16:17:59.827Z"
+      "updatedAt": "2026-05-18T16:46:14.336Z"
     }
   ]
 }
