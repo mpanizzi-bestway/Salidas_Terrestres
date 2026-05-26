@@ -1,0 +1,931 @@
+<!-- ═══════════════════════════════════════════════════════════════════════
+     PANEL SCRAPPER — insertar en index.html
+     Ubicación sugerida: ENTRE el buscador global y el section-label de operadores
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+<!-- ── CSS: agregar dentro del <style> existente ── -->
+<style id="SCRAPPER_CSS_COPIAR_A_STYLE">
+/* ── SCRAPPER ── */
+.scrapper-wrap {
+  max-width: 1100px;
+  margin: 36px auto 0;
+  padding: 0 40px;
+}
+.scrapper-box {
+  background: var(--white);
+  border-radius: 14px;
+  border: 1.5px solid var(--gray-light);
+  box-shadow: 0 2px 16px rgba(30,39,72,.07);
+  overflow: hidden;
+  transition: border-color .2s, box-shadow .2s;
+}
+.scrapper-box:focus-within {
+  border-color: var(--teal, #0e7a6a);
+  box-shadow: 0 4px 24px rgba(14,122,106,.12);
+}
+.scrapper-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 18px;
+  border-bottom: 1px solid var(--gray-light);
+}
+.scrapper-label-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--navy);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.scrapper-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  background: #eaf4f2;
+  color: #0e5a4a;
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.scrapper-badge::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: #0e7a6a;
+  border-radius: 50%;
+}
+.scrapper-row {
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  gap: 10px;
+}
+.scrapper-icon { color: var(--gray); flex-shrink: 0; transition: color .2s; }
+.scrapper-box:focus-within .scrapper-icon { color: #0e7a6a; }
+#scrapper-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .97rem;
+  color: var(--text);
+  background: transparent;
+  padding: 15px 0;
+  min-width: 0;
+}
+#scrapper-input::placeholder { color: var(--gray); font-weight: 300; }
+.scrapper-op-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--gray);
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: var(--gray-light);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all .2s;
+  min-width: 90px;
+  justify-content: center;
+}
+.scrapper-op-indicator.detected {
+  color: white;
+}
+.scrapper-op-indicator .op-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--gray);
+  flex-shrink: 0;
+  transition: background .2s;
+}
+.scrapper-btn {
+  background: var(--navy);
+  color: white;
+  border: none;
+  padding: 9px 22px;
+  border-radius: 9px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background .2s, transform .1s;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.scrapper-btn:hover:not(:disabled) { background: var(--accent); }
+.scrapper-btn:active:not(:disabled) { transform: scale(.98); }
+.scrapper-btn:disabled { opacity: .5; cursor: not-allowed; }
+.scrapper-meta {
+  padding: 7px 18px 10px;
+  font-size: .76rem;
+  color: var(--gray);
+  border-top: 1px solid var(--gray-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+}
+.scrapper-meta .scrapper-hint { font-style: italic; }
+.scrapper-progress {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  font-size: .76rem;
+  color: var(--navy);
+  font-weight: 500;
+}
+.scrapper-progress.visible { display: flex; }
+.scrapper-spinner {
+  width: 14px; height: 14px;
+  border: 2px solid var(--gray-light);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.scrapper-error {
+  display: none;
+  color: #b00;
+  font-size: .76rem;
+  padding: 7px 18px 10px;
+  border-top: 1px solid #fdd;
+  background: #fff5f5;
+}
+.scrapper-error.visible { display: block; }
+
+@media (max-width: 600px) {
+  .scrapper-wrap { padding: 0 20px; }
+  .scrapper-row { flex-wrap: wrap; gap: 8px; }
+  .scrapper-btn { width: 100%; justify-content: center; }
+  .scrapper-op-indicator { min-width: 70px; }
+}
+</style>
+
+
+<!-- ── HTML: insertar después del bloque .search-results ── -->
+<div class="scrapper-wrap">
+  <div class="scrapper-label-title">
+    Scrapear programa<span style="font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--gray);font-weight:400;"> individual</span>
+  </div>
+  <div class="scrapper-box" id="scrapper-box">
+    <div class="scrapper-row">
+      <!-- ícono enlace -->
+      <svg class="scrapper-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+      </svg>
+
+      <input id="scrapper-input" type="url"
+             placeholder="Pegá la URL de un programa (Sendas, Funtour, Mtur, Rutatur)..."
+             autocomplete="off" spellcheck="false">
+
+      <!-- indicador de operador detectado -->
+      <div class="scrapper-op-indicator" id="scrapper-op-indicator">
+        <span class="op-dot" id="scrapper-op-dot"></span>
+        <span id="scrapper-op-name">Operador</span>
+      </div>
+
+      <button class="scrapper-btn" id="scrapper-btn" disabled>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+        Scrapear
+      </button>
+    </div>
+    <div class="scrapper-meta" id="scrapper-meta">
+      <span class="scrapper-hint" id="scrapper-hint">
+        URLs soportadas: sendasturismo.com · funtour.com.uy · mturviajes.com.uy · rutatur.com
+      </span>
+      <div class="scrapper-progress" id="scrapper-progress">
+        <div class="scrapper-spinner"></div>
+        <span id="scrapper-progress-msg">Cargando página...</span>
+      </div>
+    </div>
+    <div class="scrapper-error" id="scrapper-error"></div>
+  </div>
+</div>
+
+
+<!-- ── JS: agregar al final del <script> existente (o en script separado) ── -->
+<script id="SCRAPPER_JS_COPIAR_A_SCRIPT">
+// ════════════════════════════════════════════════════════════════════════════
+//  SCRAPPER DE PROGRAMAS — On-demand
+//  Flujo: URL → detectar operador → fetch via proxy → parsear HTML →
+//         abrir scrapper-ficha.html con datos encodificados en sessionStorage
+// ════════════════════════════════════════════════════════════════════════════
+
+const OPERADOR_PATTERNS = [
+  {
+    id:    'sendas',
+    label: 'Sendas',
+    color: '#0e5a7a',
+    rx:    /sendasturismo\.com/i,
+  },
+  {
+    id:    'funtour',
+    label: 'Funtour',
+    color: '#e8630a',
+    rx:    /funtour\.com\.uy/i,
+  },
+  {
+    id:    'mtur',
+    label: 'Mtur',
+    color: '#c84800',
+    rx:    /mturviajes\.com\.uy/i,
+  },
+  {
+    id:    'rutatur',
+    label: 'Rutatur',
+    color: '#1a7a3a',
+    rx:    /rutatur\.com/i,
+  },
+];
+
+// Proxies CORS a intentar en orden
+const CORS_PROXIES = [
+  url => `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`,
+  url => `https://corsproxy.io/?${encodeURIComponent(url)}`,
+];
+
+// ── Detectar operador desde URL ──────────────────────────────────────────────
+function detectarOperador(url) {
+  for (const op of OPERADOR_PATTERNS) {
+    if (op.rx.test(url)) return op;
+  }
+  return null;
+}
+
+// ── UI helpers ───────────────────────────────────────────────────────────────
+function setScrapperState(state, msg) {
+  const hint     = document.getElementById('scrapper-hint');
+  const progress = document.getElementById('scrapper-progress');
+  const progMsg  = document.getElementById('scrapper-progress-msg');
+  const error    = document.getElementById('scrapper-error');
+  const btn      = document.getElementById('scrapper-btn');
+
+  hint.closest('.scrapper-meta').style.display = 'flex';
+  error.classList.remove('visible');
+  progress.classList.remove('visible');
+
+  if (state === 'loading') {
+    hint.style.display = 'none';
+    progress.classList.add('visible');
+    progMsg.textContent = msg || 'Procesando...';
+    btn.disabled = true;
+  } else if (state === 'error') {
+    hint.style.display = '';
+    hint.textContent = 'Verificá la URL e intentá de nuevo.';
+    error.textContent = msg;
+    error.classList.add('visible');
+    btn.disabled = false;
+  } else {
+    hint.style.display = '';
+    hint.textContent = 'URLs soportadas: sendasturismo.com · funtour.com.uy · mturviajes.com.uy · rutatur.com';
+    btn.disabled = !detectarOperador(document.getElementById('scrapper-input').value.trim());
+  }
+}
+
+// ── Fetch con proxy fallback ─────────────────────────────────────────────────
+async function fetchConProxy(url) {
+  let lastErr;
+  for (const proxyFn of CORS_PROXIES) {
+    try {
+      const proxyUrl = proxyFn(url);
+      const res = await fetch(proxyUrl, { timeout: 18000 });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      // allorigins devuelve { contents: "..." }
+      if (data && data.contents) return data.contents;
+      // corsproxy devuelve texto directo
+      if (typeof data === 'string') return data;
+      throw new Error('Respuesta inesperada del proxy');
+    } catch (e) {
+      lastErr = e;
+    }
+  }
+  throw lastErr || new Error('Todos los proxies fallaron');
+}
+
+// ══════════════════════════════════════════════════════════════════════════════
+//  PARSERS POR OPERADOR
+//  Cada función recibe el HTML crudo (string) y la URL fuente,
+//  y devuelve un objeto compatible con el schema de renderPrograma()
+//  en scrapper-ficha.html
+// ══════════════════════════════════════════════════════════════════════════════
+
+// ─── UTILIDADES COMUNES ───────────────────────────────────────────────────────
+function parsearDOM(htmlStr) {
+  const parser = new DOMParser();
+  return parser.parseFromString(htmlStr, 'text/html');
+}
+
+function limpio(s) {
+  return (s || '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function normalizarDia(raw) {
+  return raw.trim()
+    .replace(/d[ií]a/gi, 'Día')
+    .replace(/\s+/g, ' ')
+    .replace(/DÍA/g, 'Día');
+}
+
+const DESTINO_MAP_FRONT = [
+  { keys: ['florianopolis','floripa','canasvieiras'],    file: 'florianopolis' },
+  { keys: ['praia do rosa','praia rosa'],                file: 'praiarosa'     },
+  { keys: ['ferrugem'],                                  file: 'ferrugem'      },
+  { keys: ['camboriu','balneario camboriu'],             file: 'camboriu'      },
+  { keys: ['bombinhas'],                                 file: 'bombinhas'     },
+  { keys: ['capao da canoa'],                            file: 'capao'         },
+  { keys: ['torres'],                                    file: 'torres'        },
+  { keys: ['laguna'],                                    file: 'laguna'        },
+  { keys: ['gramado','canela'],                          file: 'gramado'       },
+  { keys: ['cataratas','iguazu','iguacu','iguassu'],     file: 'cataratas'     },
+  { keys: ['bariloche'],                                 file: 'bariloche'     },
+  { keys: ['carlos paz','villa carlos'],                 file: 'carlospaz'     },
+  { keys: ['cordoba','córdoba'],                         file: 'carlospaz'     },
+  { keys: ['humahuaca','jujuy','salta','norte'],         file: 'norte'         },
+  { keys: ['mendoza'],                                   file: 'mendoza'       },
+  { keys: ['buenos aires'],                              file: 'buenosaires'   },
+  { keys: ['santiago','chile'],                          file: 'santiago'      },
+];
+
+function normText(s) {
+  return (s||'').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
+}
+
+function detectarDestinoSlug(titulo) {
+  const t = normText(titulo);
+  for (const e of DESTINO_MAP_FRONT) {
+    for (const k of e.keys) {
+      if (t.includes(normText(k))) return e.file;
+    }
+  }
+  return null;
+}
+
+// ─── PARSER SENDAS ────────────────────────────────────────────────────────────
+function parseSendas(html, sourceUrl) {
+  const doc  = parsearDOM(html);
+  const art  = doc.querySelector('div.item-page') || doc.body;
+
+  // Título
+  const strongs = art.querySelectorAll('[itemprop="articleBody"] strong');
+  let titulo = strongs[0] ? limpio(strongs[0].textContent) : '';
+  if (!titulo) titulo = limpio(art.querySelector('h2')?.textContent || '');
+  titulo = titulo.replace(/\s+/g,' ').toUpperCase().substring(0,100);
+
+  // Días/noches
+  let dias = '', noches = '';
+  if (strongs[1]) {
+    const t = limpio(strongs[1].textContent);
+    const dm = t.match(/(\d+)\s*d[ií]as?/i);
+    const nm = t.match(/(\d+)\s*noches?/i);
+    if (dm) dias   = dm[1];
+    if (nm) noches = nm[1];
+  }
+
+  // Salidas
+  let salidasStr = '';
+  art.querySelectorAll('[itemprop="articleBody"] p').forEach(p => {
+    if (salidasStr) return;
+    const t = limpio(p.textContent);
+    const m = t.match(/^salidas?\s*:?\s*(.{3,120})/i);
+    if (m) salidasStr = m[1].trim();
+  });
+
+  // Incluye
+  const incluye = [];
+  const body    = art.querySelector('[itemprop="articleBody"]');
+  if (body) {
+    let marcador = null;
+    for (const node of body.children) {
+      if (node.tagName === 'P' && /incluye\s*:/i.test(node.textContent)) {
+        marcador = node; break;
+      }
+    }
+    if (marcador) {
+      let node = marcador.nextElementSibling;
+      while (node) {
+        if (node.tagName === 'TABLE') break;
+        if (node.tagName === 'UL') {
+          node.querySelectorAll('li').forEach(li => {
+            const t = limpio(li.textContent).replace(/^[-–•]+/,'').trim();
+            if (t.length > 3) incluye.push(t);
+          });
+        }
+        if (node.tagName === 'P') {
+          const txt = limpio(node.textContent);
+          if (/^d[ií]a\s+\d/i.test(txt)) break;
+          node.innerHTML.split(/<br\s*\/?>/i).forEach(f => {
+            const t = limpio(new DOMParser().parseFromString(f,'text/html').body.textContent);
+            if (t.includes('-')) {
+              const item = t.replace(/^[\s\-–•]+/,'').trim();
+              if (item.length > 3 && !incluye.includes(item)) incluye.push(item);
+            }
+          });
+        }
+        node = node.nextElementSibling;
+      }
+    }
+  }
+
+  // Itinerario
+  const itinerario = [];
+  const DIA_RX = /^(d[ií]a\s+\d{1,2}(?:\s+al\s+(?:d[ií]a\s+)?\d{1,2})?)\s*/i;
+  let capturando = false, tablaVista = false;
+  if (body) {
+    for (const node of body.children) {
+      if (tablaVista) break;
+      if (node.tagName === 'TABLE') { tablaVista = true; break; }
+      if (node.tagName !== 'P') continue;
+      const txt = limpio(node.textContent);
+      if (!txt) continue;
+      if (!capturando && /^d[ií]a\s+0?1\b/i.test(txt)) capturando = true;
+      if (!capturando) continue;
+      if (/fin\s+de\s+nuestros?\s+servicios/i.test(txt)) {
+        const m = DIA_RX.exec(txt);
+        itinerario.push(m
+          ? { dia: normalizarDia(m[1]), texto: txt.slice(m[0].length).replace(/^[-:\s]+/,'').trim() }
+          : { dia: '', texto: txt });
+        break;
+      }
+      const m = DIA_RX.exec(txt);
+      if (m) itinerario.push({ dia: normalizarDia(m[1]), texto: txt.slice(m[0].length).replace(/^[-:\s]+/,'').trim() });
+      else   itinerario.push({ dia: '', texto: txt });
+    }
+  }
+
+  // Tabla de precios (hoteles)
+  const hoteles = [];
+  if (body) {
+    body.querySelectorAll('table').forEach(tbl => {
+      const rows = tbl.querySelectorAll('tr');
+      if (rows.length < 2) return;
+      const headers = Array.from(rows[0].querySelectorAll('td,th'))
+        .map(c => limpio(c.textContent).toLowerCase());
+      if (!headers.some(h => /hotel/.test(h)) && !headers.some(h => /sgl/.test(h))) return;
+      const idx = {
+        hotel: headers.findIndex(h => /hotel/.test(h)),
+        sgl:   headers.findIndex(h => h === 'sgl'),
+        dbl:   headers.findIndex(h => h === 'dbl'),
+        tpl:   headers.findIndex(h => h === 'tpl'),
+        cpl:   headers.findIndex(h => h === 'cpl'),
+        qpl:   headers.findIndex(h => h === 'qpl'),
+        playa: headers.findIndex((h, i) => i > 0 && !/sgl|dbl|tpl|cpl|qpl/.test(h) && h.length > 0 && i !== headers.findIndex(x => /hotel/.test(x))),
+      };
+      const pv = v => { const n = parseInt((v||'').replace(/[^\d]/g,'')); return isNaN(n)||n===0 ? null : n; };
+      const gc = (cells, i) => i>=0 ? limpio(cells[i]?.textContent||'') : '';
+      rows.forEach((row, ri) => {
+        if (!ri) return;
+        const cells = row.querySelectorAll('td');
+        if (cells.length < 3) return;
+        const nombre = gc(cells, Math.max(idx.hotel,0)).replace(/\s+/g,' ').trim();
+        if (!nombre || /^hotel(es)?$/i.test(nombre)) return;
+        hoteles.push({
+          nombre,
+          playa: idx.playa>=0 ? gc(cells, idx.playa) : '—',
+          sgl:   pv(gc(cells, idx.sgl)),
+          dbl:   pv(gc(cells, idx.dbl)),
+          tpl:   pv(gc(cells, idx.tpl)),
+          cpl:   pv(gc(cells, idx.cpl)),
+          qpl:   pv(gc(cells, idx.qpl)),
+        });
+      });
+    });
+  }
+
+  const duracion = dias ? `${dias} DÍAS${noches ? ` — ${noches} NOCHES` : ''}` : 'Consultar';
+  const destinoSlug = detectarDestinoSlug(titulo);
+
+  return {
+    operador: 'sendas',
+    sourceUrl,
+    titulo,
+    subtitulo: duracion,
+    duracion,
+    destinoSlug,
+    fechas: [
+      { label: 'Salidas', value: salidasStr || 'Consultar disponibilidad', gold: true },
+      { label: 'Operador', value: 'Sendas Turismo', gold: false },
+    ],
+    incluye: incluye.length ? incluye : ['Consultar programa completo en agencia'],
+    itinerario,
+    hoteles,
+    notas_precios: [{ titulo: 'Precios', texto: 'Consultar tarifas vigentes al momento de la reserva.' }],
+  };
+}
+
+// ─── PARSER FUNTOUR ───────────────────────────────────────────────────────────
+function parseFuntour(html, sourceUrl) {
+  const doc = parsearDOM(html);
+
+  const titulo = limpio(
+    doc.querySelector('h1.product_title, h1.entry-title, h1.elementor-heading-title')?.textContent || ''
+  ).replace(/\bfuntour\b/gi,'').replace(/\s{2,}/g,' ').trim();
+
+  // Incluye / No incluye
+  const incluye = [];
+  const shortDesc = doc.querySelector('.woocommerce-product-details__short-description');
+  let enNo = false;
+  if (shortDesc) {
+    shortDesc.querySelectorAll('p,li').forEach(el => {
+      const tag = el.tagName.toLowerCase();
+      const txt = limpio(el.textContent);
+      if (!txt) return;
+      if (tag === 'p' && /^no\s+incluye/i.test(txt)) { enNo = true; return; }
+      if (tag === 'p' && /^incluye/i.test(txt)) { enNo = false; return; }
+      if (tag === 'li' && !enNo && !/eximiendo|factores externos/i.test(txt)) incluye.push(txt);
+    });
+  }
+
+  // Hoteles (links en shortDesc)
+  const hotelesLinks = [];
+  shortDesc?.querySelectorAll('a[href]').forEach(el => {
+    const nombre = limpio(el.textContent);
+    const url = el.getAttribute('href') || '';
+    if (nombre && url && !/funtour|condiciones/i.test(url)) {
+      hotelesLinks.push({ nombre, url });
+    }
+  });
+
+  // Itinerario
+  const itinerario = [];
+  doc.querySelectorAll('#tab-description p').forEach(el => {
+    const txt      = limpio(el.textContent);
+    const strongT  = limpio(el.querySelector('strong')?.textContent || '');
+    const m        = strongT.match(/^D[ií]a\s+(\d+(?:-\d+)?)\s*[–\-]\s*(.+)/i);
+    if (m) {
+      const lugar   = limpio(m[2].replace(/[–\-]+$/, '').replace(/\bFuntour\b/gi, ''));
+      const detalle = limpio(txt.replace(strongT, '').replace(/\bFuntour\s+Viajes\b/gi, ''));
+      itinerario.push({ dia: `DÍA ${m[1].padStart(2,'0')}`, texto: `${lugar}${detalle ? ' — '+detalle : ''}` });
+    }
+  });
+
+  // Salidas y bases desde info adicional
+  const salidas = [], bases = [];
+  doc.querySelectorAll('#tab-additional_information tr').forEach(el => {
+    const label = limpio(el.querySelector('th')?.textContent||'').toLowerCase();
+    const val   = limpio(el.querySelector('td')?.textContent||'');
+    if (!val || val === 'Elige una opción') return;
+    if (/salida/.test(label)) val.split(/\n|,/).map(s=>s.trim()).filter(Boolean).forEach(s => { if(!salidas.includes(s)) salidas.push(s); });
+    if (/base/.test(label))   val.split(/,/).map(s=>s.trim()).filter(Boolean).forEach(b => { if(!bases.includes(b)) bases.push(b); });
+  });
+
+  // Precios desde variaciones WooCommerce
+  const hoteles = [];
+  const variForm = doc.querySelector('form.variations_form');
+  if (variForm) {
+    try {
+      const varJson = variForm.getAttribute('data-product_variations');
+      const variaciones = JSON.parse(varJson || '[]');
+      // Agrupar por hotel/alojamiento y base
+      const hotelMap = {};
+      variaciones.forEach(v => {
+        const aloj  = limpio(v.attributes?.attribute_alojamiento || '');
+        const base  = limpio(v.attributes?.attribute_bases || '');
+        const precio = parseInt(v.display_price) || 0;
+        if (!aloj || !precio) return;
+        if (!hotelMap[aloj]) hotelMap[aloj] = {};
+        if (!hotelMap[aloj][base] || precio < hotelMap[aloj][base]) {
+          hotelMap[aloj][base] = precio;
+        }
+      });
+      Object.entries(hotelMap).forEach(([nombre, bases]) => {
+        hoteles.push({
+          nombre,
+          playa: '—',
+          sgl:   bases['Single'] || bases['single'] || null,
+          dbl:   bases['Doble']  || bases['doble']  || null,
+          tpl:   bases['Triple'] || bases['triple'] || null,
+          cpl:   bases['Cuádruple'] || bases['Cuadruple'] || null,
+          qpl:   null,
+        });
+      });
+    } catch(e) {}
+  }
+  // Fallback: usar hoteles de links si no hay variaciones
+  if (!hoteles.length && hotelesLinks.length) {
+    hotelesLinks.forEach(h => hoteles.push({ nombre: h.nombre, playa: '—', sgl:null, dbl:null, tpl:null, cpl:null, qpl:null }));
+  }
+
+  const diasM   = titulo.match(/(\d+)\s*[Dd][ií][aá]s?/);
+  const duracion = diasM ? `${diasM[1]} DÍAS` : (itinerario.length ? `${itinerario.length} DÍAS` : 'Consultar');
+  const destinoSlug = detectarDestinoSlug(titulo);
+
+  const fechas = [];
+  if (salidas.length) fechas.push({ label: 'Salida', value: salidas[0], gold: true });
+  if (salidas.length > 1) fechas.push({ label: 'Otras salidas', value: salidas.slice(1).join(' · ').substring(0,80), gold: false });
+  if (bases.length) fechas.push({ label: 'Habitación', value: bases.join(' / '), gold: false });
+  fechas.push({ label: 'Operador', value: 'Funtour Internacional', gold: false });
+
+  return {
+    operador: 'funtour',
+    sourceUrl,
+    titulo,
+    subtitulo: duracion,
+    duracion,
+    destinoSlug,
+    fechas,
+    incluye: incluye.length ? incluye : ['Consultar programa completo en agencia'],
+    itinerario,
+    hoteles,
+    notas_precios: [{ titulo: 'Precios', texto: 'Consultar tarifas vigentes al momento de la reserva.' }],
+  };
+}
+
+// ─── PARSER MTUR ─────────────────────────────────────────────────────────────
+function parseMtur(html, sourceUrl) {
+  const doc   = parsearDOM(html);
+  const titulo = limpio(doc.querySelector('h1')?.textContent || '');
+  if (!titulo) return null;
+
+  const bodyText = doc.body.textContent || '';
+
+  // Duración
+  const durM = bodyText.match(/Duraci[oó]n\s*(\d+)\s*d[ií]as?\s*\/\s*(\d+)\s*noches?/i);
+  const dias   = durM ? durM[1] : '';
+  const noches = durM ? durM[2] : '';
+
+  // Temporada
+  const tempM = bodyText.match(/Temporada\s*([^\n]{3,60}?)(?:\n|Incluye)/i);
+  const temporada = tempM ? tempM[1].trim().replace(/\s+/g,' ') : '';
+
+  // Incluye (p.btn.btn-light)
+  const incluye = [];
+  let enIncluye = false;
+  doc.querySelectorAll('h5,p').forEach(el => {
+    const tag = el.tagName.toLowerCase();
+    const txt = limpio(el.textContent);
+    if (tag === 'h5' && /incluye\s*:/i.test(txt)) { enIncluye = true; return; }
+    if (enIncluye && tag === 'h5') { enIncluye = false; return; }
+    if (enIncluye && tag === 'p' && (el.className||'').includes('btn-light')) {
+      if (/ver\s+seguro|todos\s+nuestros\s+paquetes/i.test(txt)) return;
+      const clean = txt.replace(/^[-–]\s*/,'').trim();
+      if (clean.length > 3) incluye.push(clean);
+    }
+  });
+
+  // Hoteles y precios
+  const hoteles = [];
+  const CATS = /^(doble|triple|cu[aá]druple|single|child|infante)$/i;
+  let enHoteles = false, hotelAct = null, lastCat = null;
+  doc.querySelectorAll('h5,h4,h3,strong,b,p').forEach(el => {
+    const tag = el.tagName.toLowerCase();
+    const txt = limpio(el.textContent);
+    if ((tag==='h5'||tag==='h4') && /opciones\s+de\s+hoteles/i.test(txt)) { enHoteles=true; return; }
+    if (enHoteles && (tag==='h5'||tag==='h4') && /^observaciones/i.test(txt)) {
+      if (hotelAct) { hoteles.push(hotelAct); hotelAct=null; }
+      enHoteles=false; return;
+    }
+    if (!enHoteles) return;
+    if (tag==='h3') {
+      if (hotelAct) hoteles.push(hotelAct);
+      const nombre = limpio(el.textContent).replace(/[-–\s]+$/,'').trim();
+      hotelAct = { nombre, playa:'—', sgl:null, dbl:null, tpl:null, cpl:null, qpl:null }; lastCat=null; return;
+    }
+    if (hotelAct && (tag==='h5'||tag==='h4') && CATS.test(txt)) {
+      lastCat = normText(txt).replace(/[^a-z]/g,''); return;
+    }
+    if (hotelAct && lastCat && (tag==='strong'||tag==='b')) {
+      const pm = txt.match(/USD\s*([\d.,]+)/i) || txt.match(/^([\d.,]+)$/);
+      if (pm) {
+        const val = parseFloat(pm[1].replace(',','.'));
+        if (lastCat === 'doble')     hotelAct.dbl = val;
+        if (lastCat === 'triple')    hotelAct.tpl = val;
+        if (lastCat === 'cuadruple' || lastCat === 'cuadruple') hotelAct.cpl = val;
+        if (lastCat === 'single')    hotelAct.sgl = val;
+        lastCat = null;
+      }
+    }
+  });
+  if (hotelAct && !hoteles.find(h=>h.nombre===hotelAct.nombre)) hoteles.push(hotelAct);
+
+  // Fechas de salida
+  const fechaRx = /\b(\d{2}\/\d{2}\/\d{4})\b/g;
+  const fechasSalida = [];
+  let fm;
+  while ((fm = fechaRx.exec(bodyText)) !== null) {
+    if (!fechasSalida.includes(fm[1])) fechasSalida.push(fm[1]);
+  }
+
+  const duracion = dias ? `${dias} DÍAS${noches ? ` / ${noches} NOCHES` : ''}` : 'Consultar';
+  const destinoSlug = detectarDestinoSlug(titulo);
+
+  const fechas = [];
+  if (fechasSalida.length) fechas.push({ label:'Salidas', value: fechasSalida.slice(0,5).join(' · '), gold:true });
+  if (temporada) fechas.push({ label:'Temporada', value: temporada, gold:false });
+  fechas.push({ label:'Operador', value:'Mtur Viajes', gold:false });
+
+  return {
+    operador: 'mtur',
+    sourceUrl,
+    titulo,
+    subtitulo: [duracion, temporada].filter(Boolean).join(' · '),
+    duracion,
+    destinoSlug,
+    fechas,
+    incluye: incluye.length ? incluye : ['Consultar programa completo en agencia'],
+    itinerario: [],
+    hoteles,
+    notas_precios: [{ titulo: 'Nota', texto: 'Itinerario disponible como PDF en el sitio del operador.' }],
+  };
+}
+
+// ─── PARSER RUTATUR ───────────────────────────────────────────────────────────
+function parseRutatur(html, sourceUrl) {
+  const doc = parsearDOM(html);
+  // Rutatur es Angular SPA — el HTML del proxy suele tener poca info
+  // Extraemos lo que venga en el HTML estático / SSR
+  doc.querySelectorAll('nav,header,footer,script,style,noscript').forEach(e => e.remove());
+
+  const titulo = limpio(doc.querySelector('h2')?.textContent || doc.querySelector('h1')?.textContent || '');
+  if (!titulo) return null;
+
+  const bodyText = doc.body.textContent || '';
+
+  // Duración
+  const diasM   = titulo.match(/(\d+)\s*D[ií]as?/i) || bodyText.match(/(\d+)\s*D[ií]as?\b/i);
+  const nochesM = titulo.match(/(\d+)\s*Noches?/i)  || bodyText.match(/(\d+)\s*Noches?\b/i);
+  const dias   = diasM   ? diasM[1]   : '';
+  const noches = nochesM ? nochesM[1] : '';
+  const duracion = dias ? `${dias} DÍAS${noches ? ` / ${noches} NOCHES` : ''}` : 'Consultar';
+
+  // Itinerario desde <strong>
+  const itinerario = [];
+  doc.querySelectorAll('strong').forEach(el => {
+    const txt = limpio(el.textContent);
+    const m   = txt.match(/^D[IÍ]A[S]?\s+([\d\-]+)\s*[–\-]\s*(.+)/i);
+    if (!m) return;
+    itinerario.push({ dia: `DÍA ${m[1].padStart(2,'0')}`, texto: limpio(m[2]) });
+  });
+
+  // Precios
+  const precBlk = bodyText.search(/Valor de la excursi[oó]n|COSTO\s+POR\s+PERSONA|PRECIO\s+POR\s+PERSONA/i);
+  const precTxt = precBlk !== -1 ? bodyText.slice(precBlk) : '';
+  const PRECIO_RX = /U\$S\s*([\d]{1,2}[.,\d]{0,4})/gi;
+  const preciosArr = [];
+  let pm;
+  while ((pm = PRECIO_RX.exec(precTxt)) !== null) {
+    const v = parseFloat(pm[1].replace(/\./g,'').replace(',','.'));
+    if (!isNaN(v) && v > 0) preciosArr.push(v);
+  }
+
+  const hoteles = [];
+  if (preciosArr.length) {
+    hoteles.push({
+      nombre: 'Precio por persona',
+      playa: '—',
+      sgl:  preciosArr[1] || null,
+      dbl:  preciosArr[0] || null,
+      tpl:  preciosArr[2] || null,
+      cpl:  null, qpl: null,
+    });
+  }
+
+  // Salidas
+  const salidas = [];
+  doc.querySelectorAll('div.descr').forEach(el => {
+    const txt = limpio(el.textContent);
+    if (/^Salida\s+\d{1,2}/i.test(txt)) salidas.push(txt.replace(/^Salida\s+/i,'').trim());
+  });
+  const salidaM = bodyText.match(/Salidas?:\s*([^\n]+)/i);
+  if (salidaM) salidas.push(limpio(salidaM[1]).replace(/\*+/g,'').trim());
+
+  const destinoSlug = detectarDestinoSlug(titulo);
+  const fechas = [];
+  if (salidas.length) fechas.push({ label:'Salida', value: salidas[0].substring(0,80), gold:true });
+  if (salidas.length > 1) fechas.push({ label:'Otras salidas', value: salidas.slice(1,4).join(' · ').substring(0,80), gold:false });
+  fechas.push({ label:'Operador', value:'Rutatur', gold:false });
+
+  const titulo2 = titulo.replace(/\s*[-–]?\s*\d+\s*[Dd][ií][aá]s?\s*(?:[\/\s]*\d*\s*[Nn]oches?)?/g,'')
+    .replace(/\s*[-–]\s*$/,'').replace(/\s{2,}/g,' ').trim() || titulo;
+
+  return {
+    operador: 'rutatur',
+    sourceUrl,
+    titulo: titulo2 || titulo,
+    subtitulo: duracion,
+    duracion,
+    destinoSlug,
+    fechas,
+    incluye: ['Consultar programa completo en agencia'],
+    itinerario,
+    hoteles,
+    notas_precios: [{ titulo: 'Precios', texto: 'Base doble/triple. Consultar tarifas vigentes.' }],
+  };
+}
+
+// ─── NOTA SOBRE RUTATUR SPA ───────────────────────────────────────────────────
+// Rutatur es Angular — el proxy devuelve el shell HTML vacío (sin datos).
+// En ese caso se muestra un aviso en la ficha y se ofrece abrir la URL directa.
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  SCRAPPER PRINCIPAL
+// ═══════════════════════════════════════════════════════════════════════════════
+
+async function ejecutarScrapper() {
+  const url = document.getElementById('scrapper-input').value.trim();
+  const op  = detectarOperador(url);
+  if (!op) return;
+
+  setScrapperState('loading', 'Conectando al proxy...');
+
+  let html;
+  try {
+    setScrapperState('loading', `Descargando página de ${op.label}...`);
+    html = await fetchConProxy(url);
+  } catch (e) {
+    setScrapperState('error', `No se pudo acceder a la URL. El sitio puede bloquear proxies. (${e.message})`);
+    return;
+  }
+
+  setScrapperState('loading', 'Parseando contenido...');
+  let datos;
+  try {
+    if (op.id === 'sendas')   datos = parseSendas(html, url);
+    if (op.id === 'funtour')  datos = parseFuntour(html, url);
+    if (op.id === 'mtur')     datos = parseMtur(html, url);
+    if (op.id === 'rutatur')  datos = parseRutatur(html, url);
+  } catch (e) {
+    setScrapperState('error', `Error al parsear el HTML: ${e.message}`);
+    return;
+  }
+
+  if (!datos || !datos.titulo) {
+    setScrapperState('error', 'No se encontró información del programa en la página. Verificá que la URL sea de un programa específico.');
+    return;
+  }
+
+  // Guardar en sessionStorage y abrir ficha
+  const key = 'bw_scrapper_' + Date.now();
+  try {
+    sessionStorage.setItem(key, JSON.stringify(datos));
+  } catch (e) {
+    // sessionStorage lleno → fallback a URL params (comprimido)
+    setScrapperState('error', 'No se pudo almacenar los datos temporalmente. Intentá cerrar otras pestañas.');
+    return;
+  }
+
+  setScrapperState('loading', 'Abriendo ficha del programa...');
+
+  // La ruta de scrapper-ficha.html es relativa a index.html (raíz del repo)
+  const fichaUrl = `scrapper-ficha.html?key=${encodeURIComponent(key)}&op=${op.id}`;
+  const win = window.open(fichaUrl, '_blank');
+  if (!win) {
+    setScrapperState('error', 'El navegador bloqueó la ventana emergente. Permitir popups para este sitio.');
+    return;
+  }
+
+  setScrapperState('idle');
+}
+
+// ── Eventos ──────────────────────────────────────────────────────────────────
+(function initScrapper() {
+  const input = document.getElementById('scrapper-input');
+  const btn   = document.getElementById('scrapper-btn');
+  const opInd = document.getElementById('scrapper-op-indicator');
+  const opDot = document.getElementById('scrapper-op-dot');
+  const opNm  = document.getElementById('scrapper-op-name');
+
+  if (!input) return;
+
+  input.addEventListener('input', () => {
+    const url = input.value.trim();
+    const op  = detectarOperador(url);
+    if (op) {
+      opInd.style.background = op.color;
+      opDot.style.background = 'rgba(255,255,255,.7)';
+      opNm.textContent       = op.label;
+      opInd.classList.add('detected');
+      btn.disabled = false;
+    } else {
+      opInd.style.background = '';
+      opDot.style.background = '';
+      opNm.textContent       = 'Operador';
+      opInd.classList.remove('detected');
+      btn.disabled = true;
+    }
+    document.getElementById('scrapper-error').classList.remove('visible');
+  });
+
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && !btn.disabled) ejecutarScrapper();
+  });
+
+  btn.addEventListener('click', ejecutarScrapper);
+})();
+</script>
