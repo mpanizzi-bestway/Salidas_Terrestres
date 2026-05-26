@@ -3,1466 +3,537 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BestWay — Programas Terrestres</title>
+  <title id="page-title">Programa — BestWay</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #2d3a6b;
+      --navy:      #2d3a6b;
       --navy-dark: #1e2748;
-      --navy-mid: #3d4f8a;
-      --accent: #4a5faa;
-      --gold: #c8a84b;
-      --gold-light: #e8c96a;
-      --white: #ffffff;
-      --off-white: #f8f7f4;
-      --gray-light: #eeedf0;
-      --gray: #9a98a8;
-      --text: #1a1a2e;
+      --accent:    #4a5faa;
+      --gold:      #c8a84b;
+      --gold-lt:   #f0d878;
+      --teal:      #0e7a6a;
+      --teal-bg:   #eaf4f2;
+      --text:      #1a1a2e;
+      --mid:       #4a4860;
+      --light:     #f5f5f0;
+      --border:    #d8d6e0;
+      --white:     #ffffff;
     }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'DM Sans',sans-serif; background:#dddbd5; color:var(--text); font-size:9pt; line-height:1.5; }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--off-white);
-      color: var(--text);
-      min-height: 100vh;
+    .print-bar {
+      position:fixed; top:16px; right:16px; z-index:999;
+      display:flex; gap:8px;
     }
-
-    /* HEADER */
-    header {
-      background: var(--navy-dark);
-      padding: 0;
-      position: relative;
-      overflow: hidden;
+    .btn {
+      background:var(--navy); color:white; border:none;
+      padding:9px 20px; border-radius:7px;
+      font-family:'DM Sans',sans-serif; font-size:.8rem; font-weight:600;
+      cursor:pointer; box-shadow:0 3px 14px rgba(0,0,0,.22);
+      display:flex; align-items:center; gap:7px; transition:background .2s;
+      text-decoration:none;
     }
+    .btn:hover { background:var(--accent); }
+    .btn.sec { background:#555; }
+    .btn.sec:hover { background:#333; }
+    .btn.teal { background:var(--teal); }
+    .btn.teal:hover { background:#0a5a4a; }
 
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(74,95,170,0.3) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 60% at 10% 80%, rgba(200,168,75,0.1) 0%, transparent 60%);
-      pointer-events: none;
+    #loading-screen {
+      position:fixed; inset:0; background:var(--navy-dark);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      z-index:9999; color:white; gap:16px;
     }
+    #loading-screen h2 { font-family:'Poppins',sans-serif; font-size:1.1rem; font-weight:600; }
+    #loading-screen p  { font-size:.82rem; color:rgba(255,255,255,.5); }
+    .loader-bar { width:200px; height:3px; background:rgba(255,255,255,.15); border-radius:2px; overflow:hidden; }
+    .loader-fill { height:100%; background:var(--gold); border-radius:2px; animation:loadbar 1.8s ease-in-out infinite; }
+    @keyframes loadbar { 0%{width:0%} 50%{width:70%} 100%{width:100%} }
+    #loading-screen.hidden { display:none; }
 
-    .header-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 36px 40px 32px;
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      position: relative;
-      z-index: 1;
+    #error-screen {
+      display:none; position:fixed; inset:0; background:var(--navy-dark); color:white;
+      flex-direction:column; align-items:center; justify-content:center;
+      gap:16px; z-index:9999; text-align:center; padding:40px;
     }
+    #error-screen.visible { display:flex; }
+    #error-screen h2 { font-family:'Poppins',sans-serif; color:var(--gold); }
+    #error-screen p  { color:rgba(255,255,255,.6); font-size:.9rem; max-width:400px; line-height:1.6; }
+    #error-screen code { background:rgba(255,255,255,.1); padding:2px 8px; border-radius:4px; font-size:.8rem; }
 
-    .logo-wrap img {
-      height: 72px;
-      width: auto;
-      display: block;
-    }
-
-    .header-divider {
-      width: 1px;
-      height: 60px;
-      background: rgba(255,255,255,0.2);
-    }
-
-    .header-title { color: var(--white); }
-
-    .header-title h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-    }
-
-    .header-title p {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.55);
-      margin-top: 5px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 300;
-    }
-
-    /* ── SELECTOR DE AGENTE ── */
-    .agent-selector-wrap {
-      margin-left: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 4px;
-      flex-shrink: 0;
-    }
-    .agent-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      font-weight: 500;
-    }
-    .agent-select {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: white;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 500;
-      padding: 7px 32px 7px 14px;
+    /* ── AVISO RUTATUR SPA ── */
+    .spa-notice {
+      background: #fffbea;
+      border: 1.5px dashed var(--gold);
       border-radius: 8px;
-      cursor: pointer;
-      appearance: none;
-      -webkit-appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.5)' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 10px center;
-      transition: border-color 0.2s, background-color 0.2s;
-      outline: none;
-      min-width: 140px;
-    }
-    .agent-select:hover { border-color: rgba(255,255,255,0.4); }
-    .agent-select:focus { border-color: var(--gold); }
-    .agent-select option { background: var(--navy-dark); color: white; }
-
-    .strip {
-      height: 4px;
-      background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
-    }
-
-    /* SECTION LABEL */
-    .section-label {
-      max-width: 1100px;
-      margin: 52px auto 0;
-      padding: 0 40px;
-    }
-
-    .section-label h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      color: var(--navy);
-      font-weight: 600;
-    }
-
-    .section-label p {
-      color: var(--gray);
-      font-size: 0.9rem;
-      margin-top: 6px;
-    }
-
-    /* OPERATOR GRID */
-    .operators {
-      max-width: 1100px;
-      margin: 32px auto 80px;
-      padding: 0 40px;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
-    .op-card {
-      background: var(--white);
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(30,39,72,0.08);
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      border: 1px solid rgba(30,39,72,0.07);
-      cursor: pointer;
-    }
-
-    .op-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 32px rgba(30,39,72,0.14);
-    }
-
-    .op-card-banner {
-      height: 140px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .op-card-banner.sendas {
-      background: linear-gradient(135deg, #1a3a4a 0%, #0e5a7a 50%, #1a7a5a 100%);
-    }
-    .op-card-banner.funtour {
-      background: linear-gradient(135deg, #b84d08 0%, #e8630a 55%, #ff8c42 100%);
-    }
-    .op-card-banner.mtur {
-      background: linear-gradient(135deg, #7a1a00 0%, #c84800 50%, #e8630a 100%);
-    }
-    .op-card-banner.rutatur {
-      background: linear-gradient(135deg, #0a3a18 0%, #1a7a3a 55%, #2aaa5a 100%);
-    }
-    .op-card-banner.placeholder {
-      background: linear-gradient(135deg, #2d3561 0%, #4a4f8a 100%);
-    }
-
-    .op-card-banner::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='25' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E") repeat;
-    }
-
-    .op-banner-logo {
-      height: 64px;
-      width: auto;
-      max-width: 200px;
-      object-fit: contain;
-      z-index: 1;
-      position: relative;
-      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35));
-    }
-
-    .op-banner-logo.funtour-logo {
-      height: 90px;
-      max-width: 220px;
-      object-fit: cover;
-      border-radius: 8px;
-      filter: drop-shadow(0 2px 12px rgba(0,0,0,0.4));
-      mix-blend-mode: multiply;
-    }
-
-    .op-logo-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: white;
-      z-index: 1;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-
-    /* CARD BODY */
-    .op-card-body {
-      padding: 22px 24px 24px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .op-card-body h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-
-    .op-card-body p {
-      font-size: 0.83rem;
-      color: var(--gray);
-      line-height: 1.5;
-      flex: 1;
-    }
-
-    .op-card-footer {
-      margin-top: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .op-badge {
-      background: var(--gray-light);
-      color: var(--navy);
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 20px;
-      letter-spacing: 0.03em;
-    }
-
-    .op-arrow {
-      width: 32px;
-      height: 32px;
-      background: var(--navy);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s;
-    }
-
-    .op-card:hover .op-arrow { background: var(--gold); }
-
-    .op-arrow svg {
-      width: 14px;
-      height: 14px;
-      fill: none;
-      stroke: white;
-      stroke-width: 2.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .coming-soon {
-      opacity: 0.5;
-      pointer-events: none;
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--navy-dark);
-      padding: 24px 40px;
-      text-align: center;
-    }
-
-    footer p {
-      color: rgba(255,255,255,0.3);
-      font-size: 0.78rem;
-      letter-spacing: 0.05em;
-    }
-
-    footer span { color: var(--gold); }
-
-    /* ── BUSCADOR ── */
-    .search-wrap {
-      max-width: 1100px;
-      margin: 36px auto 0;
-      padding: 0 40px;
-    }
-    .search-label {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: var(--navy);
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-    .search-box {
-      background: var(--white);
-      border-radius: 14px;
-      border: 1.5px solid var(--gray-light);
-      box-shadow: 0 2px 16px rgba(30,39,72,.07);
-      overflow: hidden;
-      transition: border-color .2s, box-shadow .2s;
-    }
-    .search-box:focus-within {
-      border-color: var(--accent);
-      box-shadow: 0 4px 24px rgba(74,95,170,.13);
-    }
-    .search-row {
-      display: flex;
-      align-items: center;
-      padding: 0 18px;
-      gap: 10px;
-    }
-    .search-icon { color: var(--gray); flex-shrink: 0; transition: color .2s; }
-    .search-box:focus-within .search-icon { color: var(--accent); }
-    #search-input {
-      flex: 1;
-      border: none;
-      outline: none;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1rem;
-      color: var(--text);
-      background: transparent;
-      padding: 16px 0;
-      min-width: 0;
-    }
-    #search-input::placeholder { color: var(--gray); font-weight: 300; }
-    .search-clear {
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: var(--gray);
-      padding: 4px;
-      border-radius: 50%;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      transition: color .15s, background .15s;
-      flex-shrink: 0;
-    }
-    .search-clear:hover { color: var(--navy); background: var(--gray-light); }
-    .search-clear.visible { display: flex; }
-    .search-meta {
-      padding: 7px 18px 10px;
-      font-size: .76rem;
-      color: var(--gray);
-      border-top: 1px solid var(--gray-light);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .search-meta .hint { font-style: italic; }
-    .search-count {
-      margin-left: auto;
-      background: var(--navy);
-      color: white;
-      padding: 1px 9px;
-      border-radius: 10px;
-      font-size: .71rem;
-      font-weight: 600;
+      padding: 10px 14px;
+      font-size: 8pt;
+      color: #6a4a00;
+      margin-bottom: 4mm;
       display: none;
     }
-    .search-count.visible { display: inline-block; }
-    .search-results {
-      max-width: 1100px;
-      margin: 16px auto 0;
-      padding: 0 40px;
-      display: none;
-    }
-    .search-results.visible { display: block; }
-    .results-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-      gap: 10px;
-    }
-    .result-card {
-      background: var(--white);
-      border-radius: 10px;
-      border: 1px solid var(--gray-light);
-      padding: 12px 15px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      color: inherit;
-      box-shadow: 0 1px 4px rgba(30,39,72,.04);
-      transition: border-color .18s, box-shadow .18s, transform .14s;
-    }
-    .result-card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 4px 16px rgba(74,95,170,.12);
-      transform: translateY(-2px);
-    }
-    .result-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
-    .result-body { flex: 1; min-width: 0; }
-    .result-titulo {
-      font-size: .86rem;
-      font-weight: 600;
-      color: var(--navy);
-      line-height: 1.3;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .result-titulo mark { background: #fff3cd; color: inherit; border-radius: 2px; padding: 0 1px; }
-    .result-meta { font-size: .71rem; color: var(--gray); margin-top: 3px; display: flex; gap: 8px; }
-    .result-op { font-weight: 600; text-transform: uppercase; letter-spacing: .04em; font-size: .66rem; }
-    .result-arrow {
-      width: 24px; height: 24px;
-      background: var(--gray-light);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; transition: background .18s;
-    }
-    .result-card:hover .result-arrow { background: var(--accent); }
-    .result-arrow svg {
-      width: 10px; height: 10px; fill: none;
-      stroke: var(--navy); stroke-width: 2.5;
-      stroke-linecap: round; stroke-linejoin: round; transition: stroke .18s;
-    }
-    .result-card:hover .result-arrow svg { stroke: white; }
-    .no-results {
-      text-align: center; padding: 28px 20px; color: var(--gray);
-      font-size: .87rem; background: var(--white);
-      border-radius: 10px; border: 1px dashed var(--gray-light);
-    }
-    .no-results strong { color: var(--navy); }
+    .spa-notice.visible { display: block; }
+    .spa-notice strong { font-weight: 600; }
 
-    @media (max-width: 600px) {
-      .header-inner { padding: 24px 20px; flex-wrap: wrap; gap: 16px; }
-      .header-divider { display: none; }
-      .agent-selector-wrap { margin-left: 0; align-items: flex-start; width: 100%; }
-      .agent-select { min-width: 160px; }
-      .section-label, .operators { padding: 0 20px; }
-      .operators { grid-template-columns: 1fr; }
-      .search-wrap, .search-results { padding: 0 20px; }
-      .results-grid { grid-template-columns: 1fr; }
+    /* ── PÁGINA A4 ── */
+    .page {
+      width:210mm; min-height:297mm;
+      margin:24px auto;
+      background:var(--white);
+      box-shadow:0 4px 40px rgba(0,0,0,.2);
+      display:flex; flex-direction:column;
     }
+    .page-content { padding:10mm 13mm 8mm; flex:1; display:flex; flex-direction:column; gap:5.5mm; }
 
-    /* ── SCRAPPER ── */
-    .scrapper-wrap {
-      max-width: 1100px;
-      margin: 36px auto 0;
-      padding: 0 40px;
+    /* ENCABEZADO */
+    .doc-header {
+      display:grid; grid-template-columns:auto 1fr auto;
+      align-items:center; gap:5mm;
+      padding-bottom:4mm; border-bottom:2.5px solid var(--navy);
+      position:relative;
     }
-    .scrapper-box {
-      background: var(--white);
-      border-radius: 14px;
-      border: 1.5px solid var(--gray-light);
-      box-shadow: 0 2px 16px rgba(30,39,72,.07);
-      overflow: hidden;
-      transition: border-color .2s, box-shadow .2s;
+    .doc-header::after {
+      content:''; position:absolute; bottom:-4.5px; left:0; right:0;
+      height:1.5px; background:var(--gold);
     }
-    .scrapper-box:focus-within {
-      border-color: #0e7a6a;
-      box-shadow: 0 4px 24px rgba(14,122,106,.12);
+    .logo-block { display:flex; align-items:center; }
+    .logo-block img { height:22mm; width:auto; display:block; }
+    .logo-block .logo-fallback {
+      height:22mm; width:44mm;
+      background:var(--navy); border-radius:4px;
+      display:flex; align-items:center; justify-content:center;
+      color:white; font-family:'Poppins',sans-serif; font-size:11pt; font-weight:800;
     }
-    .scrapper-label-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: var(--navy);
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-    .scrapper-row {
-      display: flex;
-      align-items: center;
-      padding: 0 18px;
-      gap: 10px;
-    }
-    .scrapper-icon { color: var(--gray); flex-shrink: 0; transition: color .2s; }
-    .scrapper-box:focus-within .scrapper-icon { color: #0e7a6a; }
-    #scrapper-input {
-      flex: 1;
-      border: none;
-      outline: none;
-      font-family: 'DM Sans', sans-serif;
-      font-size: .97rem;
-      color: var(--text);
-      background: transparent;
-      padding: 15px 0;
-      min-width: 0;
-    }
-    #scrapper-input::placeholder { color: var(--gray); font-weight: 300; }
-    .scrapper-op-indicator {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: .75rem;
-      font-weight: 600;
-      color: var(--gray);
-      padding: 5px 10px;
-      border-radius: 8px;
-      background: var(--gray-light);
-      white-space: nowrap;
-      flex-shrink: 0;
-      transition: all .2s;
-      min-width: 90px;
-      justify-content: center;
-    }
-    .scrapper-op-indicator.detected { color: white; }
-    .scrapper-op-indicator .op-dot {
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: var(--gray);
-      flex-shrink: 0;
-      transition: background .2s;
-    }
-    .scrapper-btn {
-      background: var(--navy);
-      color: white;
-      border: none;
-      padding: 9px 22px;
-      border-radius: 9px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: .85rem;
-      font-weight: 600;
-      cursor: pointer;
-      flex-shrink: 0;
-      transition: background .2s, transform .1s;
-      display: flex;
-      align-items: center;
-      gap: 7px;
-    }
-    .scrapper-btn:hover:not(:disabled) { background: var(--accent); }
-    .scrapper-btn:active:not(:disabled) { transform: scale(.98); }
-    .scrapper-btn:disabled { opacity: .5; cursor: not-allowed; }
-    .scrapper-meta {
-      padding: 7px 18px 10px;
-      font-size: .76rem;
-      color: var(--gray);
-      border-top: 1px solid var(--gray-light);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      min-height: 36px;
-    }
-    .scrapper-meta .scrapper-hint { font-style: italic; }
-    .scrapper-progress {
-      display: none;
-      align-items: center;
-      gap: 8px;
-      font-size: .76rem;
-      color: var(--navy);
-      font-weight: 500;
-    }
-    .scrapper-progress.visible { display: flex; }
-    .scrapper-spinner {
-      width: 14px; height: 14px;
-      border: 2px solid var(--gray-light);
-      border-top-color: var(--accent);
-      border-radius: 50%;
-      animation: spin .7s linear infinite;
-      flex-shrink: 0;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .scrapper-error {
-      display: none;
-      color: #b00;
-      font-size: .76rem;
-      padding: 7px 18px 10px;
-      border-top: 1px solid #fdd;
-      background: #fff5f5;
-    }
-    .scrapper-error.visible { display: block; }
+    .header-center { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+    .header-center .eslogan { font-family:'Poppins',sans-serif; font-size:7pt; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--mid); }
+    .contact-block { text-align:right; font-size:7.5pt; color:var(--mid); line-height:1.7; }
+    .contact-block .contact-name { display:block; font-size:9.5pt; color:var(--navy); font-weight:700; font-family:'Poppins',sans-serif; margin-bottom:1mm; }
+    .contact-block .contact-cargo { display:block; font-size:7pt; color:var(--mid); font-weight:400; margin-top:-1mm; margin-bottom:1.5mm; }
+    .contact-block a { color:inherit; text-decoration:none; }
 
-    @media (max-width: 600px) {
-      .scrapper-wrap { padding: 0 20px; }
-      .scrapper-row { flex-wrap: wrap; gap: 8px; }
-      .scrapper-btn { width: 100%; justify-content: center; }
-      .scrapper-op-indicator { min-width: 70px; }
+    /* TÍTULO */
+    .prog-title-block { text-align:center; padding:3mm 0 1mm; }
+    .prog-title-block h1 { font-family:'Poppins',sans-serif; font-size:26pt; font-weight:800; color:var(--navy); line-height:1.05; text-transform:uppercase; }
+    .prog-title-block .duracion-line { font-family:'Poppins',sans-serif; font-size:7.5pt; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-top:1.5mm; }
+
+    /* FECHAS */
+    .fechas-band { background:var(--navy); border-radius:4px; padding:3mm 6mm; display:flex; align-items:center; justify-content:space-between; gap:3mm; }
+    .fecha-item { display:flex; flex-direction:column; gap:.5mm; }
+    .fecha-item .fl { font-family:'Poppins',sans-serif; font-size:6pt; text-transform:uppercase; letter-spacing:.12em; color:rgba(255,255,255,.45); font-weight:600; }
+    .fecha-item .fv { font-size:8.5pt; color:white; font-weight:600; }
+    .fecha-item .fv.gold { color:var(--gold-lt); }
+    .fecha-sep { width:1px; height:8mm; background:rgba(255,255,255,.15); }
+
+    /* SECCIONES */
+    .sec { display:flex; flex-direction:column; gap:2.5mm; }
+    .sec-title { font-family:'Poppins',sans-serif; font-size:6.5pt; font-weight:700; text-transform:uppercase; letter-spacing:.14em; color:var(--navy); padding-bottom:1.5mm; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:2mm; }
+    .sec-title::before { content:''; display:block; width:3mm; height:3mm; background:var(--gold); border-radius:50%; flex-shrink:0; }
+
+    /* DESTINO */
+    .destino-grid { display:grid; grid-template-columns:1fr 50mm; gap:5mm; align-items:start; }
+    .destino-text p { font-size:8.5pt; color:var(--mid); line-height:1.6; font-style:italic; margin-bottom:3mm; }
+    .destino-highlights { display:flex; flex-wrap:wrap; gap:1.5mm; }
+    .hl-tag { background:var(--light); border:.5px solid var(--border); border-radius:20px; padding:1mm 2.5mm; font-size:7pt; color:var(--navy); font-weight:500; }
+    .destino-foto { border-radius:4px; overflow:hidden; background:var(--teal-bg); height:28mm; display:flex; align-items:center; justify-content:center; border:.5px solid var(--border); position:relative; }
+    .destino-foto img { width:100%; height:100%; object-fit:cover; display:none; }
+    .destino-foto .ph { font-size:7.5pt; color:var(--teal); text-align:center; padding:4mm; line-height:1.5; }
+
+    /* INCLUYE */
+    .incluye-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.8mm; }
+    .inc-row { display:flex; align-items:flex-start; gap:2mm; font-size:8pt; color:var(--text); line-height:1.4; }
+    .inc-dot { width:3.5mm; height:3.5mm; background:var(--teal); border-radius:50%; flex-shrink:0; margin-top:1mm; }
+
+    /* ITINERARIO */
+    .itinerary-table { width:100%; border-collapse:collapse; }
+    .itinerary-table tr { border-bottom:.5px solid var(--border); }
+    .itinerary-table tr:last-child { border-bottom:none; }
+    .itinerary-table td { padding:2mm 2mm; vertical-align:top; font-size:7.8pt; }
+    .it-dia { width:14mm; white-space:nowrap; font-family:'Poppins',sans-serif; font-size:6.5pt; font-weight:700; color:var(--navy); padding-top:2.5mm; }
+    .it-texto { color:var(--mid); line-height:1.45; padding-left:2mm; }
+    .it-nota { font-size:7pt; color:var(--mid); font-style:italic; padding:1.5mm 2mm; border-top:.5px solid var(--border); }
+
+    /* PRECIOS */
+    .precios-table { width:100%; border-collapse:collapse; font-size:8pt; }
+    .precios-table thead tr { background:var(--navy); color:white; }
+    .precios-table thead th { padding:2.5mm 3mm; text-align:center; font-family:'Poppins',sans-serif; font-size:6.5pt; font-weight:600; letter-spacing:.06em; text-transform:uppercase; white-space:nowrap; }
+    .precios-table thead th:first-child { text-align:left; }
+    .precios-table tbody tr { border-bottom:.5px solid var(--border); }
+    .precios-table tbody tr:nth-child(even) { background:var(--light); }
+    .precios-table tbody tr:last-child { border-bottom:none; }
+    .precios-table tbody td { padding:2.5mm 3mm; text-align:center; vertical-align:middle; }
+    .precios-table tbody td:first-child { text-align:left; }
+    .hotel-nm { font-weight:600; color:var(--navy); font-size:8pt; }
+    .pval { font-weight:700; color:var(--text); }
+    .pna  { color:var(--border); }
+    .precios-footer { display:grid; grid-template-columns:1fr 1fr; gap:2.5mm; margin-top:2.5mm; }
+    .pnote { background:var(--light); border-left:2px solid var(--gold); border-radius:0 3px 3px 0; padding:2mm 3mm; font-size:7pt; color:var(--mid); line-height:1.5; }
+    .pnote strong { font-family:'Poppins',sans-serif; font-size:6.5pt; color:var(--navy); display:block; margin-bottom:.8mm; text-transform:uppercase; letter-spacing:.06em; }
+
+
+
+    /* PIE */
+    .doc-footer { background:var(--navy); padding:0; margin-top:auto; }
+    .footer-top { display:grid; grid-template-columns:1fr auto; align-items:center; gap:0; padding:4mm 13mm; border-bottom:.5px solid rgba(255,255,255,.1); }
+    .footer-contact { font-size:7.5pt; color:rgba(255,255,255,.65); line-height:1.8; }
+    .footer-contact .footer-name { font-family:'Poppins',sans-serif; font-size:9pt; color:white; font-weight:700; display:block; margin-bottom:.5mm; }
+    .footer-pago { display:flex; flex-direction:column; align-items:flex-end; gap:2.5mm; }
+    .pago-label { font-family:'Poppins',sans-serif; font-size:7pt; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--gold-lt); text-align:right; line-height:1.4; }
+    .pago-logo-img { height:9mm; width:auto; display:block; background:white; border-radius:5px; padding:1.5mm 3mm; }
+    .footer-legal { padding:2.5mm 13mm; font-size:6pt; color:rgba(255,255,255,.3); line-height:1.5; }
+
+    @media print {
+      @page { size:A4; margin:0; }
+      body { background:none; }
+      .print-bar { display:none !important; }
+      #loading-screen, #error-screen { display:none !important; }
+      .page { width:210mm; margin:0; box-shadow:none; }
+      .spa-notice { display:none !important; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="header-inner">
-      <div class="logo-wrap">
-        <img src="images/logo_Bestway_blanco.png" alt="BestWay">
-      </div>
-      <div class="header-divider"></div>
-      <div class="header-title">
-        <h1>Programas Terrestres</h1>
-        <p>Catálogo de operadores &amp; programas</p>
-      </div>
+<div id="loading-screen">
+  <h2>Preparando ficha...</h2>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+  <p id="loading-msg">Leyendo datos scrapeados</p>
+</div>
 
-      <!-- ── SELECTOR DE AGENTE ── -->
-      <div class="agent-selector-wrap">
-        <label class="agent-label" for="agent-select">Agente</label>
-        <select id="agent-select" class="agent-select">
-          <option value="martin">Martin</option>
-          <option value="martin2">Martin2</option>
-        </select>
-      </div>
+<div id="error-screen">
+  <h2>⚠️ Sin datos</h2>
+  <p id="error-msg">No se encontraron datos del programa. Intentá desde el panel de scrapper.</p>
+  <a href="./index.html" style="color:var(--gold);font-size:.9rem;">← Volver al inicio</a>
+</div>
 
+<div class="print-bar">
+  <button class="btn teal" id="btn-fuente" onclick="">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+    Ver fuente
+  </button>
+  <button class="btn" onclick="window.print()">🖨️ Imprimir / PDF</button>
+  <a class="btn sec" href="./index.html">← Volver</a>
+</div>
+
+<div class="page" id="programa-page" style="visibility:hidden">
+  <div class="page-content">
+
+    <div class="spa-notice" id="spa-notice">
+      <strong>⚠️ Datos parciales:</strong> Este operador usa una aplicación Angular (SPA). El scrapper obtuvo información limitada del HTML estático. Para ver el programa completo,
+      <a id="spa-link" href="#" target="_blank" style="color:inherit;font-weight:700;">abrí la URL original</a>.
     </div>
-  </header>
-  <div class="strip"></div>
 
-
-  <!-- BUSCADOR GLOBAL -->
-  <div class="search-wrap">
-    <div class="search-label">Buscar programa<span> en todos los operadores</span></div>
-    <div class="search-box">
-      <div class="search-row">
-        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
-        </svg>
-        <input id="search-input" type="text" placeholder="Buscar por destino, temporada o palabras clave..." autocomplete="off" spellcheck="false">
-        <button class="search-clear" id="search-clear" aria-label="Limpiar">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-        </button>
+    <!-- ENCABEZADO -->
+    <header class="doc-header">
+      <div class="logo-block">
+        <img id="header-logo" src="images/logo_bestway_azul_fondo_blanco.png" alt="BestWay Viajes"
+             onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';">
+        <div class="logo-fallback" id="logo-fallback" style="display:none;">BestWay</div>
       </div>
-      <div class="search-meta">
-        <span class="hint" id="search-hint">Cargando programas...</span>
-        <span class="search-count" id="search-count"></span>
+      <div class="header-center">
+        <div class="eslogan">Tu Mundo de Oportunidades</div>
       </div>
-    </div>
-  </div>
+      <div class="contact-block" id="contact-block"></div>
+    </header>
 
-  <!-- RESULTADOS DEL BUSCADOR -->
-  <div class="search-results" id="search-results">
-    <div class="results-grid" id="results-grid"></div>
-  </div>
+    <!-- TÍTULO -->
+    <div class="prog-title-block" id="prog-titulo"></div>
 
-  <!-- ── SCRAPPER DE PROGRAMAS ── -->
-  <div class="scrapper-wrap">
-    <div class="scrapper-label-title">
-      Scrapear programa<span style="font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--gray);font-weight:400;"> individual</span>
-    </div>
-    <div class="scrapper-box" id="scrapper-box">
-      <div class="scrapper-row">
-        <svg class="scrapper-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-        </svg>
-        <input id="scrapper-input" type="url"
-               placeholder="Pegá la URL de un programa (Sendas, Funtour, Mtur, Rutatur)..."
-               autocomplete="off" spellcheck="false">
-        <div class="scrapper-op-indicator" id="scrapper-op-indicator">
-          <span class="op-dot" id="scrapper-op-dot"></span>
-          <span id="scrapper-op-name">Operador</span>
+    <!-- FECHAS -->
+    <div class="fechas-band" id="prog-fechas"></div>
+
+    <!-- DESTINO -->
+    <div class="sec">
+      <div class="sec-title">El Destino</div>
+      <div class="destino-grid">
+        <div class="destino-text">
+          <p id="prog-descripcion"></p>
+          <div class="destino-highlights" id="prog-highlights"></div>
         </div>
-        <button class="scrapper-btn" id="scrapper-btn" disabled>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-               stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
-          </svg>
-          Scrapear
-        </button>
-      </div>
-      <div class="scrapper-meta" id="scrapper-meta">
-        <span class="scrapper-hint" id="scrapper-hint">
-          URLs soportadas: sendasturismo.com · funtour.com.uy · mturviajes.com.uy · rutatur.com
-        </span>
-        <div class="scrapper-progress" id="scrapper-progress">
-          <div class="scrapper-spinner"></div>
-          <span id="scrapper-progress-msg">Cargando página...</span>
-        </div>
-      </div>
-      <div class="scrapper-error" id="scrapper-error"></div>
-    </div>
-  </div>
-
-  <div class="section-label">
-    <h2>Seleccioná un operador</h2>
-    <p>Accedé a los programas de cada operador y sus destinos disponibles</p>
-  </div>
-
-  <div class="operators">
-
-    <!-- 1. SENDAS TURISMO -->
-    <a href="operadores/sendas/sendas.html" class="op-card">
-      <div class="op-card-banner sendas">
-        <img
-          src="images/logo_sendas.png"
-          alt="Sendas Turismo"
-          class="op-banner-logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <span class="op-logo-text" style="display:none;">Sendas</span>
-      </div>
-      <div class="op-card-body">
-        <h3>Sendas Turismo</h3>
-        <p>Operador regional especializado en destinos de Brasil, Argentina y Cataratas del Iguazú.</p>
-        <div class="op-card-footer">
-          <span class="op-badge" id="sendas-count">— programas</span>
-          <div class="op-arrow">
-            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- 2. FUNTOUR -->
-    <a href="operadores/funtour/funtour.html" class="op-card">
-      <div class="op-card-banner funtour">
-        <img
-          src="images/logo-funtour.jpg"
-          alt="Funtour Internacional"
-          class="op-banner-logo funtour-logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <span class="op-logo-text" style="display:none;">Funtour</span>
-      </div>
-      <div class="op-card-body">
-        <h3>Funtour Internacional</h3>
-        <p>Excursiones terrestres y aéreas. Brasil, Argentina, Chile, Cataratas y más destinos desde Uruguay.</p>
-        <div class="op-card-footer">
-          <span class="op-badge" id="funtour-count">— programas</span>
-          <div class="op-arrow">
-            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- 3. MTUR VIAJES -->
-    <a href="operadores/mtur/mtur.html" class="op-card">
-      <div class="op-card-banner mtur">
-        <img
-          src="images/logo_mtur.svg"
-          alt="Mtur Viajes"
-          class="op-banner-logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <span class="op-logo-text" style="display:none;">Mtur</span>
-      </div>
-      <div class="op-card-body">
-        <h3>Mtur Viajes &amp; Turismo</h3>
-        <p>Operador especializado en destinos terrestres desde Uruguay. Brasil, Argentina, Cataratas y más.</p>
-        <div class="op-card-footer">
-          <span class="op-badge" id="mtur-count">— programas</span>
-          <div class="op-arrow">
-            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- 4. RUTATUR -->
-    <a href="operadores/rutatur/rutatur.html" class="op-card">
-      <div class="op-card-banner rutatur">
-        <img
-          src="images/rutatur-logo.png"
-          alt="Rutatur"
-          class="op-banner-logo"
-          style="mix-blend-mode:screen;"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <span class="op-logo-text" style="display:none;">Rutatur</span>
-      </div>
-      <div class="op-card-body">
-        <h3>Rutatur</h3>
-        <p>Excursiones terrestres con itinerario completo. Brasil, Argentina, Cataratas y más destinos.</p>
-        <div class="op-card-footer">
-          <span class="op-badge" id="rutatur-count">— programas</span>
-          <div class="op-arrow">
-            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- PRÓXIMO OPERADOR -->
-    <div class="op-card coming-soon">
-      <div class="op-card-banner placeholder">
-        <span class="op-logo-text">Próximamente</span>
-      </div>
-      <div class="op-card-body">
-        <h3>Próximamente</h3>
-        <p>Este operador estará disponible en breve.</p>
-        <div class="op-card-footer">
-          <span class="op-badge">Próximamente</span>
-          <div class="op-arrow">
-            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </div>
+        <div class="destino-foto" id="prog-foto">
+          <div class="ph" id="foto-placeholder">🌎</div>
         </div>
       </div>
     </div>
 
-  </div>
+    <!-- INCLUYE -->
+    <div class="sec" id="sec-incluye">
+      <div class="sec-title">Incluye</div>
+      <div class="incluye-grid" id="prog-incluye"></div>
+    </div>
 
-  <footer>
-    <p><span>BestWay</span> · Programas Terrestres · Uso interno</p>
+    <!-- ITINERARIO -->
+    <div class="sec" id="sec-itinerario">
+      <div class="sec-title">Itinerario</div>
+      <table class="itinerary-table">
+        <tbody id="prog-itinerario"></tbody>
+      </table>
+      <div class="it-nota">* El orden de los paseos y excursiones puede variar según las condiciones del operador.</div>
+    </div>
+
+    <!-- PRECIOS -->
+    <div class="sec">
+      <div class="sec-title">Hoteles &amp; Tarifas — Precios en U$S por persona</div>
+      <table class="precios-table">
+        <thead>
+          <tr>
+            <th>Hotel</th>
+            <th>Playa / Cat.</th>
+            <th>Individual</th>
+            <th>Doble</th>
+            <th>Triple</th>
+            <th>Cuádruple</th>
+            <th>Quíntuple</th>
+          </tr>
+        </thead>
+        <tbody id="prog-precios"></tbody>
+      </table>
+      <div class="precios-footer" id="prog-precios-footer"></div>
+    </div>
+
+  </div><!-- /page-content -->
+
+  <footer class="doc-footer">
+    <div class="footer-top">
+      <div class="footer-contact">
+        <span class="footer-name">BestWay Viajes</span>
+        Tel. 2902 2116 &nbsp;·&nbsp; Río Branco 1375, Montevideo<br>
+        info@bestway.com.uy &nbsp;·&nbsp; www.bestway.com.uy<br>
+        <span id="footer-timestamp" style="font-size:5.5pt;color:rgba(255,255,255,.35);font-weight:300;"></span>
+      </div>
+      <div class="footer-pago">
+        <div class="pago-label">Financiá tu viaje en Pesos o Dólares<br>con tarjeta de crédito</div>
+        <img class="pago-logo-img" src="images/Medios-de-pago.png" alt="Medios de pago" onerror="this.style.display='none'">
+      </div>
+    </div>
+    <div class="footer-legal">
+      Todos los precios están sujetos a disponibilidad y variaciones tarifarias sin previo aviso. Es responsabilidad del cliente la documentación necesaria para su viaje. Algunos países exigen documento con al menos 6 meses de vigencia al momento del viaje. Asesorese sobre exigencias migratorias y sanitarias (visa, vacunas, etc.). Los menores pueden requerir documentación adicional. La empresa no se responsabiliza por cambios o cancelaciones de compañías aéreas, hoteles u operadores. Se recomienda contratar seguro de cancelación y asistencia en viaje.
+    </div>
   </footer>
+</div><!-- /page -->
 
-  <script>
-  // ─── Configuracion operadores ────────────────────────────────────────────────
-  const OPERADORES = [
-    {
-      id      : 'sendas',
-      label   : 'Sendas',
-      color   : '#0e5a7a',
-      file    : 'programas-sendas.json',
-      countEl : 'sendas-count',
-      fichaUrl: p => 'operadores/sendas/programa.html?p=' + encodeURIComponent(p.id || ''),
-    },
-    {
-      id      : 'funtour',
-      label   : 'Funtour',
-      color   : '#e8630a',
-      file    : 'programas-funtour.json',
-      countEl : 'funtour-count',
-      fichaUrl: p => 'operadores/funtour/programa-funtour.html?p=' + encodeURIComponent(p.id || ''),
-    },
-    {
-      id      : 'mtur',
-      label   : 'Mtur',
-      color   : '#c84800',
-      file    : 'programas-mtur.json',
-      countEl : 'mtur-count',
-      fichaUrl: p => 'operadores/mtur/programa-mtur.html?p=' + encodeURIComponent(p.id || ''),
-    },
-    {
-      id      : 'rutatur',
-      label   : 'Rutatur',
-      color   : '#1a7a3a',
-      file    : 'programas-rutatur.json',
-      countEl : 'rutatur-count',
-      fichaUrl: p => 'operadores/rutatur/programa-rutatur.html?p=' + encodeURIComponent(p.id || ''),
-    },
-  ];
 
-  // ─── Pool global de programas ────────────────────────────────────────────────
-  let allProgramas = [];
+<script>
+// ── Agentes ──────────────────────────────────────────────────────────────────
+const AGENTES = {
+  martin: {
+    nombre: 'Martin Panizzi', cargo: '',
+    tel: 'Tel. 2902 2116 int. 122', cel: 'Cel/WhatsApp 095 969 909',
+    email: 'mpanizzi@bestway.com.uy',
+  },
+  martin2: {
+    nombre: 'Martin Panizzi', cargo: 'Ejecutivo de Cuentas',
+    tel: 'Tel. 2902 2116 int. 122', cel: 'Cel/WhatsApp 095 969 909',
+    email: 'mpanizzi@bestway.com.uy',
+  },
+};
 
-  async function loadAll() {
-    const hint = document.getElementById('search-hint');
-    hint.textContent = 'Cargando...';
+function renderContactBlock() {
+  const key    = localStorage.getItem('bw_agent') || 'martin';
+  const agente = AGENTES[key] || AGENTES.martin;
+  const cargoHtml = agente.cargo ? `<span class="contact-cargo">${agente.cargo}</span>` : '';
+  document.getElementById('contact-block').innerHTML =
+    `<span class="contact-name">${agente.nombre}</span>${cargoHtml}${agente.tel}<br>${agente.cel}<br><a href="mailto:${agente.email}">${agente.email}</a>`;
+}
 
-    await Promise.all(OPERADORES.map(op =>
-      fetch(op.file + '?_=' + Date.now())
-        .then(r => r.ok ? r.json() : null)
-        .then(data => {
-          const progs = data && data.programas ? data.programas : [];
-          const el = document.getElementById(op.countEl);
-          if (el) el.textContent = (progs.length || '—') + ' programas';
-          progs.forEach(prog => allProgramas.push({ prog, op }));
-        })
-        .catch(() => {})
-    ));
+// ── Foto de destino ───────────────────────────────────────────────────────────
+const BASE_FOTOS    = 'images/destinos/';
+const LOGO_FALLBACK = 'images/logo_bestway_azul_fondo_blanco.png';
 
-    hint.textContent = allProgramas.length + ' programas en ' + OPERADORES.length + ' operadores';
+function loadDestinationPhoto(slug, container) {
+  if (!container || !slug) return;
+  const ph = document.getElementById('foto-placeholder');
+  const mountImg = (src, isLogo) => {
+    const img = document.createElement('img');
+    img.style.cssText = `width:100%;height:100%;object-fit:${isLogo?'contain':'cover'};display:none;padding:${isLogo?'5mm':'0'};`;
+    img.onload  = () => { ph?.remove(); img.style.display='block'; };
+    img.onerror = () => { img.remove(); if (!isLogo) mountImg(LOGO_FALLBACK, true); };
+    container.appendChild(img);
+    img.src = src;
+  };
+  const EXTS = ['jpg','jpeg','png','webp'];
+  function tryExt(i) {
+    if (i >= EXTS.length) { mountImg(LOGO_FALLBACK, true); return; }
+    const img = document.createElement('img');
+    img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:none;';
+    img.onload  = () => { ph?.remove(); img.style.display='block'; };
+    img.onerror = () => { img.remove(); tryExt(i+1); };
+    container.appendChild(img);
+    img.src = `${BASE_FOTOS}${slug}.${EXTS[i]}`;
+  }
+  tryExt(0);
+}
+
+// ── Descripciones por destino ─────────────────────────────────────────────────
+const DESCRIPCIONES = {
+  florianopolis: 'Canasvieiras, en Florianópolis, combina el encanto de las playas brasileñas con aguas cálidas y tranquilas, perfectas para disfrutar todo el día. Con su ambiente alegre y su mezcla de naturaleza y ritmo local, es el destino ideal para vivir el verdadero verano en Brasil.',
+  gramado:       'Gramado y Canela son dos joyas del sur de Brasil que combinan arquitectura alemana, gastronomía de primer nivel y paisajes de montaña únicos. Una experiencia completamente diferente al Brasil típico, llena de historia, chocolate artesanal y naturaleza.',
+  ferrugem:      'Praia da Ferrugem es una de las playas más salvajes y auténticas de Santa Catarina. Rodeada de mata atlántica, con olas ideales para el surf y una atmósfera bohemia que la distingue de los destinos masificados del litoral brasileño.',
+  camboriu:      'Balneário Camboriú es la ciudad más visitada de Santa Catarina, con su famosa rambla, teleférico, playas urbanas y la proximidad a Beto Carrero World, el mayor parque de atracciones de Sudamérica.',
+  cataratas:     'Las Cataratas del Iguazú son una de las Siete Maravillas Naturales del Mundo. El estruendo del agua, la niebla permanente y la selva que las rodea generan una experiencia que no se olvida jamás.',
+  bariloche:     'Bariloche es la joya de la Patagonia argentina. En invierno, el Cerro Catedral y sus pistas de ski la convierten en la capital andina del sur. En cualquier época, los Lagos, los bosques y el chocolate artesanal son imperdibles.',
+  mendoza:       'Mendoza es la capital del vino argentino, al pie de los Andes. Sus bodegas, el Aconcagua, las termas de Cacheuta y sus paisajes de viñedos la convierten en un destino para todos los sentidos.',
+  norte:         'El Norte Argentino despliega los colores mágicos de la Quebrada de Humahuaca, las Salinas Grandes, los cerros de siete colores y los viñedos de altura. Una región de culturas milenarias y naturaleza imponente.',
+  carlospaz:     'Carlos Paz y las Sierras de Córdoba ofrecen un destino familiar por excelencia: teatro, dique, teleférico y la naturaleza serrana a pocos pasos.',
+  buenosaires:   'Buenos Aires combina la pasión del tango con una escena cultural sin igual en América Latina. Parques temáticos, gastronomía porteña, teatros y la calidez del pueblo bonaerense hacen de este destino una experiencia completa.',
+  santiago:      'Chile ofrece una diversidad geográfica incomparable. Santiago como capital cosmopolita combina modernidad, historia y naturaleza salvaje a pocos kilómetros.',
+  praiarosa:     'Praia do Rosa es un refugio de lujo discreto entre dunas y mata atlántica, con ballenas francas que visitan la bahía y una escena gastronómica de primer nivel.',
+  bombinhas:     'Bombinhas es un paraíso de aguas cristalinas en Santa Catarina, con más de 30 playas de arena blanca y una reserva marina que la convierte en uno de los destinos de buceo más importantes de Brasil.',
+  capao:         'Capão da Canoa es una clásica estación balnearia del litoral gaúcho, con playas amplias, aguas tranquilas y una infraestructura turística consolidada ideal para familias.',
+  torres:        'Torres es conocida por sus imponentes rocas basálticas que emergen del mar, sus playas de aguas frescas y su faro histórico en el litoral de Rio Grande do Sul.',
+  laguna:        'Laguna es una ciudad histórica de Santa Catarina, con un centro colonial preservado y famosa por la convivencia entre pescadores y delfines.',
+};
+
+const HIGHLIGHTS_MAP = {
+  florianopolis: ['🏖️ Playas cristalinas','⛵ Paseo en Scuna','🎢 Beto Carrero World','✝️ Cristo Luz','🐬 Golfinhos'],
+  gramado:       ['🌲 Parques naturales','🍫 Chocolate artesanal','⛪ Arquitectura europea','🌊 Cascatas','🚂 Maria Fumaça'],
+  cataratas:     ['🌊 Cataratas Iguazú','🛥️ Bote al pie','🇦🇷 Lado argentino','🇧🇷 Lado brasileño','🌈 Arco iris'],
+  bariloche:     ['⛷️ Ski','🍫 Chocolate','🏔️ Cerro Catedral','🦆 Lagos patagónicos','🌲 Bosques'],
+  mendoza:       ['🍷 Vinos premium','🏔️ Aconcagua','♨️ Termas Cacheuta','🌅 Cordillera','🍇 Vendimia'],
+  carlospaz:     ['⛰️ Sierras','🎠 Teleférico','🎭 Teatro','💧 Dique San Roque','👨‍👩‍👧 Familias'],
+  buenosaires:   ['🎭 Tango','🍖 Asado','⛵ Tigre Delta','🎠 Temaiken','🌊 Mundo Marino'],
+  santiago:      ['🏙️ Santiago moderno','⛰️ Andes','🍷 Vinos','🎨 Valparaíso','🌿 Naturaleza'],
+  norte:         ['🌈 Cerros de colores','🏔️ Quebrada Humahuaca','🧂 Salinas Grandes','🌵 Puna','🦙 Llamas'],
+  camboriu:      ['🏖️ Rambla','🚡 Teleférico','🎢 Beto Carrero','🌅 Puesta de sol','🏊 Playas urbanas'],
+  praiarosa:     ['🐋 Ballenas francas','🌿 Mata atlántica','🏖️ Playa exclusiva','🌅 Atardeceres','🍽️ Gastronomía'],
+};
+
+// ── Render ───────────────────────────────────────────────────────────────────
+function pv(v) {
+  return v != null ? `<span class="pval">U$S ${v}</span>` : `<span class="pna">—</span>`;
+}
+
+function renderPrograma(data) {
+  document.title = `${data.titulo} — BestWay`;
+
+  // Título
+  document.getElementById('prog-titulo').innerHTML = `
+    <h1>${data.titulo}</h1>
+    <div class="duracion-line">${data.subtitulo || data.duracion || ''}</div>
+
+  `;
+
+  // Fechas
+  const fechas = (data.fechas || []).filter(f => !/^operador$/i.test((f.label||'').trim()));
+  document.getElementById('prog-fechas').innerHTML = fechas.map((f, i) => {
+    const sep = i < fechas.length-1 ? '<div class="fecha-sep"></div>' : '';
+    return `<div class="fecha-item"><span class="fl">${f.label}</span><span class="fv${f.gold?' gold':''}">${f.value}</span></div>${sep}`;
+  }).join('') || '<div class="fecha-item"><span class="fl">Temporada</span><span class="fv gold">Consultar</span></div>';
+
+  // Destino
+  const slug = data.destinoSlug || '';
+  document.getElementById('prog-descripcion').textContent = DESCRIPCIONES[slug] || `Programa con ${data.operador || 'el operador'}.`;
+  document.getElementById('prog-highlights').innerHTML = (HIGHLIGHTS_MAP[slug] || [])
+    .map(h => `<span class="hl-tag">${h}</span>`).join('');
+  loadDestinationPhoto(slug, document.getElementById('prog-foto'));
+
+  // Incluye
+  document.getElementById('prog-incluye').innerHTML = (data.incluye||[]).length
+    ? data.incluye.map(i => `<div class="inc-row"><div class="inc-dot"></div>${i}</div>`).join('')
+    : '<div class="inc-row"><div class="inc-dot"></div>Consultar detalles en agencia</div>';
+
+  // Itinerario
+  const itin = data.itinerario || [];
+  if (itin.length === 0) {
+    document.getElementById('sec-itinerario').style.display = 'none';
+  } else {
+    document.getElementById('prog-itinerario').innerHTML = itin.map(row => {
+      const diaLabel  = row.dia   || '';
+      const textoBody = row.texto || '';
+      const fallback  = row.detalle ? (row.lugar ? `<strong>${row.lugar}</strong> — ${row.detalle}` : row.detalle) : '';
+      return `<tr><td class="it-dia">${diaLabel}</td><td class="it-texto">${textoBody || fallback}</td></tr>`;
+    }).join('');
   }
 
-  // ─── Highlight ───────────────────────────────────────────────────────────────
-  function hl(text, q) {
-    if (!q || !text) return text || '';
-    return text.replace(new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'), '<mark>$1</mark>');
+  // Precios — normalizar hoteles de cualquier formato
+  const hoteles = data.hoteles || [];
+  document.getElementById('prog-precios').innerHTML = hoteles.length
+    ? hoteles.map(h => `
+        <tr>
+          <td><span class="hotel-nm">${h.nombre}</span>
+          ${h.url ? `<br><span style="font-size:6.5pt;color:var(--mid)">${h.url.replace(/^https?:\/\/(www\.)?/,'').split('/')[0]}</span>` : ''}
+          </td>
+          <td>${h.playa || '—'}</td>
+          <td>${pv(h.sgl)}</td>
+          <td>${pv(h.dbl || h.precios?.doble || null)}</td>
+          <td>${pv(h.tpl || h.precios?.triple || null)}</td>
+          <td>${pv(h.cpl || h.precios?.cuadruple || null)}</td>
+          <td>${pv(h.qpl || null)}</td>
+        </tr>`).join('')
+    : `<tr><td colspan="7" style="text-align:center;padding:4mm;color:var(--mid);font-style:italic;">Consultar precios vigentes al momento de la reserva.</td></tr>`;
+
+  document.getElementById('prog-precios-footer').innerHTML = (data.notas_precios||[])
+    .map(n => `<div class="pnote"><strong>${n.titulo}</strong>${n.texto}</div>`).join('');
+
+  // Aviso SPA para rutatur si itinerario vacío y hoteles sin precios
+  if (data.operador === 'rutatur' && itin.length === 0 && hoteles.every(h => !h.dbl)) {
+    const notice = document.getElementById('spa-notice');
+    notice.classList.add('visible');
+    const link = document.getElementById('spa-link');
+    if (link) link.href = data.sourceUrl || '#';
+  }
+}
+
+// ── Init ─────────────────────────────────────────────────────────────────────
+function showError(msg) {
+  document.getElementById('loading-screen').classList.add('hidden');
+  document.getElementById('error-screen').classList.add('visible');
+  document.getElementById('error-msg').innerHTML = msg;
+}
+
+async function init() {
+  renderContactBlock();
+
+  const params = new URLSearchParams(window.location.search);
+  const key    = params.get('key');
+  const opId   = params.get('op');
+
+  if (!key) { showError('Accedé a esta página desde el panel de scrapper en el inicio.'); return; }
+
+  // Pequeña pausa para que la animación se vea
+  await new Promise(r => setTimeout(r, 400));
+
+  let datos;
+  try {
+    const raw = sessionStorage.getItem(key);
+    if (!raw) throw new Error('Datos no encontrados o expirados.');
+    datos = JSON.parse(raw);
+    // Limpiar para no acumular en sessionStorage
+    sessionStorage.removeItem(key);
+  } catch(e) {
+    showError(`No se pudieron leer los datos del programa.<br><code>${e.message}</code><br><br>Cerrá esta pestaña y volvé a scrapear.`);
+    return;
   }
 
-  // ─── Buscar ──────────────────────────────────────────────────────────────────
-  function search(query) {
-    const q          = query.trim().toLowerCase();
-    const resultsDiv = document.getElementById('search-results');
-    const grid       = document.getElementById('results-grid');
-    const countEl    = document.getElementById('search-count');
-    const hint       = document.getElementById('search-hint');
-
-    if (!q) {
-      resultsDiv.classList.remove('visible');
-      countEl.classList.remove('visible');
-      hint.textContent = allProgramas.length + ' programas en ' + OPERADORES.length + ' operadores';
-      return;
-    }
-
-    const matches = allProgramas.filter(function(item) {
-      var p = item.prog;
-      var hay = [
-        p.titulo      || '',
-        p.temporada   || '',
-        p.pais        || '',
-        p.destinoSlug || '',
-        p.destino     || '',
-        (p.salidas || []).join(' '),
-      ].join(' ').toLowerCase();
-      return hay.indexOf(q) !== -1;
-    });
-
-    countEl.textContent = matches.length + ' resultado' + (matches.length !== 1 ? 's' : '');
-    countEl.classList.toggle('visible', matches.length > 0);
-    hint.textContent = matches.length > 0
-      ? 'Mostrando resultados para "' + query + '"'
-      : 'Sin resultados para "' + query + '"';
-
-    if (matches.length === 0) {
-      grid.innerHTML = '<div class="no-results" style="grid-column:1/-1">Sin resultados para <strong>"' + query + '"</strong>.<br>Probá con otro destino o temporada.</div>';
-    } else {
-      grid.innerHTML = matches.map(function(item) {
-        var p    = item.prog;
-        var op   = item.op;
-        var titulo = hl(p.titulo || '', query);
-        var salida = (p.salidas && p.salidas[0]) || (p.fechas && p.fechas[0] && p.fechas[0].value) || '';
-        var precio = p.precioDesde
-          ? 'Desde U$S ' + p.precioDesde
-          : (p.precios && p.precios.doble ? 'Desde U$S ' + p.precios.doble : '');
-        var url = op.fichaUrl(p);
-        return '<a class="result-card" href="' + url + '" target="_blank">'
-          + '<span class="result-dot" style="background:' + op.color + '"></span>'
-          + '<div class="result-body">'
-            + '<div class="result-titulo">' + titulo + '</div>'
-            + '<div class="result-meta">'
-              + '<span class="result-op" style="color:' + op.color + '">' + op.label + '</span>'
-              + (salida ? '<span>' + salida + '</span>' : '')
-              + (precio ? '<span>' + precio + '</span>' : '')
-            + '</div>'
-          + '</div>'
-          + '<div class="result-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>'
-          + '</a>';
-      }).join('');
-    }
-
-    resultsDiv.classList.add('visible');
+  if (!datos || !datos.titulo) {
+    showError('Los datos del programa están incompletos. Intentá con otra URL.');
+    return;
   }
 
-  // ─── Eventos buscador ────────────────────────────────────────────────────────
-  var input    = document.getElementById('search-input');
-  var clearBtn = document.getElementById('search-clear');
-  var debTimer;
-
-  input.addEventListener('input', function() {
-    clearTimeout(debTimer);
-    clearBtn.classList.toggle('visible', input.value.length > 0);
-    debTimer = setTimeout(function() { search(input.value); }, 220);
-  });
-
-  clearBtn.addEventListener('click', function() {
-    input.value = '';
-    clearBtn.classList.remove('visible');
-    search('');
-    input.focus();
-  });
-
-  input.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') clearBtn.click();
-  });
-
-  // ─── Selector de agente ──────────────────────────────────────────────────────
-  var agentSelect = document.getElementById('agent-select');
-  var savedAgent  = localStorage.getItem('bw_agent') || 'martin';
-  agentSelect.value = savedAgent;
-
-  agentSelect.addEventListener('change', function () {
-    localStorage.setItem('bw_agent', this.value);
-  });
-
-  // ─── Init ────────────────────────────────────────────────────────────────────
-  loadAll();
-
-  // ════════════════════════════════════════════════════════════════════════════
-  //  SCRAPPER DE PROGRAMAS — On-demand
-  // ════════════════════════════════════════════════════════════════════════════
-
-  const OPERADOR_PATTERNS = [
-    { id: 'sendas',  label: 'Sendas',  color: '#0e5a7a', rx: /sendasturismo\.com/i  },
-    { id: 'funtour', label: 'Funtour', color: '#e8630a', rx: /funtour\.com\.uy/i    },
-    { id: 'mtur',    label: 'Mtur',    color: '#c84800', rx: /mturviajes\.com\.uy/i },
-    { id: 'rutatur', label: 'Rutatur', color: '#1a7a3a', rx: /rutatur\.com/i        },
-  ];
-
-  // Cada proxy tiene su propio formato de respuesta
-  const CORS_PROXIES = [
-    { url: function(u) { return 'https://api.allorigins.win/get?url=' + encodeURIComponent(u); }, type: 'json-contents' },
-    { url: function(u) { return 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u); }, type: 'text' },
-    { url: function(u) { return 'https://corsproxy.io/?' + encodeURIComponent(u); },              type: 'text' },
-  ];
-
-  function detectarOperador(url) {
-    for (var i = 0; i < OPERADOR_PATTERNS.length; i++) {
-      if (OPERADOR_PATTERNS[i].rx.test(url)) return OPERADOR_PATTERNS[i];
-    }
-    return null;
+  // Botón "ver fuente"
+  const btnFuente = document.getElementById('btn-fuente');
+  if (datos.sourceUrl) {
+    btnFuente.onclick = () => window.open(datos.sourceUrl, '_blank');
+  } else {
+    btnFuente.style.display = 'none';
   }
 
-  function setScrapperState(state, msg) {
-    var hint     = document.getElementById('scrapper-hint');
-    var progress = document.getElementById('scrapper-progress');
-    var progMsg  = document.getElementById('scrapper-progress-msg');
-    var error    = document.getElementById('scrapper-error');
-    var btn      = document.getElementById('scrapper-btn');
-    error.classList.remove('visible');
-    progress.classList.remove('visible');
-    if (state === 'loading') {
-      hint.style.display = 'none';
-      progress.classList.add('visible');
-      progMsg.textContent = msg || 'Procesando...';
-      btn.disabled = true;
-    } else if (state === 'error') {
-      hint.style.display = '';
-      hint.textContent = 'Verificá la URL e intentá de nuevo.';
-      error.textContent = msg;
-      error.classList.add('visible');
-      btn.disabled = false;
-    } else {
-      hint.style.display = '';
-      hint.textContent = 'URLs soportadas: sendasturismo.com · funtour.com.uy · mturviajes.com.uy · rutatur.com';
-      btn.disabled = !detectarOperador(document.getElementById('scrapper-input').value.trim());
-    }
+  renderPrograma(datos);
+
+  // Timestamp de scrapeo en el pie
+  var tsEl = document.getElementById('footer-timestamp');
+  if (tsEl) {
+    var now = new Date();
+    tsEl.textContent = 'Scrapeado el ' + now.toLocaleDateString('es-UY', {day:'2-digit',month:'2-digit',year:'numeric'}) + ' a las ' + now.toLocaleTimeString('es-UY', {hour:'2-digit',minute:'2-digit'});
   }
 
-  async function fetchConProxy(url) {
-    var lastErr;
-    for (var i = 0; i < CORS_PROXIES.length; i++) {
-      try {
-        var proxy    = CORS_PROXIES[i];
-        var proxyUrl = proxy.url(url);
-        var res = await fetch(proxyUrl);
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        if (proxy.type === 'json-contents') {
-          var data = await res.json();
-          if (data && data.contents) return data.contents;
-          throw new Error('allorigins no devolvió contents');
-        } else {
-          // text o html directo
-          var text = await res.text();
-          if (text && text.trim().length > 100) return text;
-          throw new Error('Respuesta vacía del proxy');
-        }
-      } catch(e) { lastErr = e; }
-    }
-    throw lastErr || new Error('Todos los proxies fallaron');
-  }
+  document.getElementById('loading-screen').classList.add('hidden');
+  document.getElementById('programa-page').style.visibility = 'visible';
+}
 
-  function parsearDOM(htmlStr) {
-    return new DOMParser().parseFromString(htmlStr, 'text/html');
-  }
-
-  function limpio(s) {
-    return (s || '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
-  }
-
-  function normText(s) {
-    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
-  }
-
-  var DESTINO_MAP_FRONT = [
-    { keys: ['florianopolis','floripa','canasvieiras'], file: 'florianopolis' },
-    { keys: ['praia do rosa','praia rosa'],             file: 'praiarosa'     },
-    { keys: ['ferrugem'],                               file: 'ferrugem'      },
-    { keys: ['camboriu'],                               file: 'camboriu'      },
-    { keys: ['bombinhas'],                              file: 'bombinhas'     },
-    { keys: ['capao da canoa'],                         file: 'capao'         },
-    { keys: ['torres'],                                 file: 'torres'        },
-    { keys: ['laguna'],                                 file: 'laguna'        },
-    { keys: ['gramado','canela'],                       file: 'gramado'       },
-    { keys: ['cataratas','iguazu','iguacu'],            file: 'cataratas'     },
-    { keys: ['bariloche'],                              file: 'bariloche'     },
-    { keys: ['carlos paz'],                             file: 'carlospaz'     },
-    { keys: ['cordoba','córdoba'],                      file: 'carlospaz'     },
-    { keys: ['jujuy','salta','norte'],                  file: 'norte'         },
-    { keys: ['mendoza'],                                file: 'mendoza'       },
-    { keys: ['buenos aires'],                           file: 'buenosaires'   },
-    { keys: ['santiago','chile'],                       file: 'santiago'      },
-  ];
-
-  function detectarDestinoSlug(titulo) {
-    var t = normText(titulo);
-    for (var i = 0; i < DESTINO_MAP_FRONT.length; i++) {
-      for (var j = 0; j < DESTINO_MAP_FRONT[i].keys.length; j++) {
-        if (t.includes(normText(DESTINO_MAP_FRONT[i].keys[j]))) return DESTINO_MAP_FRONT[i].file;
-      }
-    }
-    return null;
-  }
-
-  function normalizarDia(raw) {
-    return raw.trim().replace(/d[ií]a/gi,'Día').replace(/\s+/g,' ');
-  }
-
-  // ── Parser Sendas ──────────────────────────────────────────────────────────
-  function parseSendas(html, sourceUrl) {
-    var doc  = parsearDOM(html);
-    var art  = doc.querySelector('div.item-page') || doc.body;
-    var strongs = art.querySelectorAll('[itemprop="articleBody"] strong');
-    var titulo = strongs[0] ? limpio(strongs[0].textContent) : limpio(art.querySelector('h2')?.textContent||'');
-    titulo = titulo.replace(/\s+/g,' ').toUpperCase().substring(0,100);
-
-    var dias = '', noches = '';
-    if (strongs[1]) {
-      var t2 = limpio(strongs[1].textContent);
-      var dm = t2.match(/(\d+)\s*d[ií]as?/i); var nm = t2.match(/(\d+)\s*noches?/i);
-      if (dm) dias = dm[1]; if (nm) noches = nm[1];
-    }
-
-    var salidasStr = '';
-    art.querySelectorAll('[itemprop="articleBody"] p').forEach(function(p) {
-      if (salidasStr) return;
-      var m = limpio(p.textContent).match(/^salidas?\s*:?\s*(.{3,120})/i);
-      if (m) salidasStr = m[1].trim();
-    });
-
-    var incluye = [];
-    var body = art.querySelector('[itemprop="articleBody"]');
-    if (body) {
-      var marcador = null;
-      Array.from(body.children).forEach(function(node) {
-        if (!marcador && node.tagName === 'P' && /incluye\s*:/i.test(node.textContent)) marcador = node;
-      });
-      if (marcador) {
-        var node = marcador.nextElementSibling;
-        while (node) {
-          if (node.tagName === 'TABLE') break;
-          if (node.tagName === 'UL') {
-            node.querySelectorAll('li').forEach(function(li) {
-              var t = limpio(li.textContent).replace(/^[-–•]+/,'').trim();
-              if (t.length > 3) incluye.push(t);
-            });
-          }
-          if (node.tagName === 'P') {
-            var txt = limpio(node.textContent);
-            if (/^d[ií]a\s+\d/i.test(txt)) break;
-            node.innerHTML.split(/<br\s*\/?>/i).forEach(function(f) {
-              var t = limpio(new DOMParser().parseFromString(f,'text/html').body.textContent);
-              if (t.includes('-')) { var item = t.replace(/^[\s\-–•]+/,'').trim(); if (item.length>3 && !incluye.includes(item)) incluye.push(item); }
-            });
-          }
-          node = node.nextElementSibling;
-        }
-      }
-    }
-
-    var itinerario = [];
-    var DIA_RX = /^(d[ií]a\s+\d{1,2}(?:\s+al\s+(?:d[ií]a\s+)?\d{1,2})?)\s*/i;
-    var capturando = false, tablaVista = false;
-    if (body) {
-      Array.from(body.children).forEach(function(node) {
-        if (tablaVista) return;
-        if (node.tagName === 'TABLE') { tablaVista = true; return; }
-        if (node.tagName !== 'P') return;
-        var txt = limpio(node.textContent); if (!txt) return;
-        if (!capturando && /^d[ií]a\s+0?1\b/i.test(txt)) capturando = true;
-        if (!capturando) return;
-        if (/fin\s+de\s+nuestros?\s+servicios/i.test(txt)) {
-          var m = DIA_RX.exec(txt);
-          itinerario.push(m ? { dia: normalizarDia(m[1]), texto: txt.slice(m[0].length).replace(/^[-:\s]+/,'').trim() } : { dia:'', texto: txt });
-          capturando = false; return;
-        }
-        var m = DIA_RX.exec(txt);
-        if (m) itinerario.push({ dia: normalizarDia(m[1]), texto: txt.slice(m[0].length).replace(/^[-:\s]+/,'').trim() });
-        else   itinerario.push({ dia: '', texto: txt });
-      });
-    }
-
-    var hoteles = [];
-    if (body) {
-      body.querySelectorAll('table').forEach(function(tbl) {
-        var rows = tbl.querySelectorAll('tr'); if (rows.length < 2) return;
-        var headers = Array.from(rows[0].querySelectorAll('td,th')).map(function(c) { return limpio(c.textContent).toLowerCase(); });
-        if (!headers.some(function(h){return /hotel/.test(h);}) && !headers.some(function(h){return /sgl/.test(h);})) return;
-        var idx = {
-          hotel: headers.findIndex(function(h){return /hotel/.test(h);}),
-          sgl:   headers.findIndex(function(h){return h==='sgl';}),
-          dbl:   headers.findIndex(function(h){return h==='dbl';}),
-          tpl:   headers.findIndex(function(h){return h==='tpl';}),
-          cpl:   headers.findIndex(function(h){return h==='cpl';}),
-          qpl:   headers.findIndex(function(h){return h==='qpl';}),
-          playa: headers.findIndex(function(h,i){return i>0&&!/sgl|dbl|tpl|cpl|qpl/.test(h)&&h.length>0&&i!==headers.findIndex(function(x){return /hotel/.test(x);});}),
-        };
-        var pv2 = function(v){ var n=parseInt((v||'').replace(/[^\d]/g,'')); return isNaN(n)||n===0?null:n; };
-        var gc  = function(cells,i){ return i>=0?limpio(cells[i]?.textContent||''):''; };
-        rows.forEach(function(row,ri) {
-          if (!ri) return;
-          var cells = row.querySelectorAll('td'); if (cells.length<3) return;
-          var nombre = gc(cells,Math.max(idx.hotel,0)).replace(/\s+/g,' ').trim();
-          if (!nombre||/^hotel(es)?$/i.test(nombre)) return;
-          hoteles.push({ nombre, playa: idx.playa>=0?gc(cells,idx.playa):'—', sgl:pv2(gc(cells,idx.sgl)), dbl:pv2(gc(cells,idx.dbl)), tpl:pv2(gc(cells,idx.tpl)), cpl:pv2(gc(cells,idx.cpl)), qpl:pv2(gc(cells,idx.qpl)) });
-        });
-      });
-    }
-
-    var duracion = dias ? dias+' DÍAS'+(noches?' — '+noches+' NOCHES':'') : 'Consultar';
-    return { operador:'sendas', sourceUrl, titulo, subtitulo:duracion, duracion, destinoSlug:detectarDestinoSlug(titulo),
-      fechas:[{label:'Salidas',value:salidasStr||'Consultar disponibilidad',gold:true},{label:'Operador',value:'Sendas Turismo',gold:false}],
-      incluye:incluye.length?incluye:['Consultar programa completo en agencia'], itinerario, hoteles,
-      notas_precios:[{titulo:'Precios',texto:'Consultar tarifas vigentes al momento de la reserva.'}] };
-  }
-
-  // ── Parser Funtour ─────────────────────────────────────────────────────────
-  function parseFuntour(html, sourceUrl) {
-    var doc = parsearDOM(html);
-    var titulo = limpio(doc.querySelector('h1.product_title,h1.entry-title,h1.elementor-heading-title')?.textContent||'')
-      .replace(/\bfuntour\b/gi,'').replace(/\s{2,}/g,' ').trim();
-
-    var incluye = []; var enNo = false;
-    var shortDesc = doc.querySelector('.woocommerce-product-details__short-description');
-    if (shortDesc) shortDesc.querySelectorAll('p,li').forEach(function(el) {
-      var tag=el.tagName.toLowerCase(), txt=limpio(el.textContent);
-      if (!txt) return;
-      if (tag==='p'&&/^no\s+incluye/i.test(txt)){enNo=true;return;}
-      if (tag==='p'&&/^incluye/i.test(txt)){enNo=false;return;}
-      if (tag==='li'&&!enNo&&!/eximiendo|factores externos/i.test(txt)) incluye.push(txt);
-    });
-
-    var itinerario = [];
-    doc.querySelectorAll('#tab-description p').forEach(function(el) {
-      var txt=limpio(el.textContent), strongT=limpio(el.querySelector('strong')?.textContent||'');
-      var m=strongT.match(/^D[ií]a\s+(\d+(?:-\d+)?)\s*[–\-]\s*(.+)/i);
-      if (m) {
-        var lugar=limpio(m[2].replace(/[–\-]+$/,'').replace(/\bFuntour\b/gi,''));
-        var detalle=limpio(txt.replace(strongT,'').replace(/\bFuntour\s+Viajes\b/gi,''));
-        itinerario.push({dia:'DÍA '+m[1].padStart(2,'0'),texto:lugar+(detalle?' — '+detalle:'')});
-      }
-    });
-
-    var salidas=[],bases=[];
-    doc.querySelectorAll('#tab-additional_information tr').forEach(function(el){
-      var label=limpio(el.querySelector('th')?.textContent||'').toLowerCase();
-      var val=limpio(el.querySelector('td')?.textContent||'');
-      if(!val||val==='Elige una opción')return;
-      if(/salida/.test(label)) val.split(/\n|,/).map(function(s){return s.trim();}).filter(Boolean).forEach(function(s){if(!salidas.includes(s))salidas.push(s);});
-      if(/base/.test(label))   val.split(/,/).map(function(s){return s.trim();}).filter(Boolean).forEach(function(b){if(!bases.includes(b))bases.push(b);});
-    });
-
-    var hoteles=[];
-    var variForm=doc.querySelector('form.variations_form');
-    if(variForm){try{
-      var variaciones=JSON.parse(variForm.getAttribute('data-product_variations')||'[]');
-      var hotelMap={};
-      variaciones.forEach(function(v){
-        var aloj=limpio(v.attributes?.attribute_alojamiento||'');
-        var base=limpio(v.attributes?.attribute_bases||'');
-        var precio=parseInt(v.display_price)||0;
-        if(!aloj||!precio)return;
-        if(!hotelMap[aloj])hotelMap[aloj]={};
-        if(!hotelMap[aloj][base]||precio<hotelMap[aloj][base])hotelMap[aloj][base]=precio;
-      });
-      Object.entries(hotelMap).forEach(function(e){
-        var b=e[1];
-        hoteles.push({nombre:e[0],playa:'—',sgl:b['Single']||b['single']||null,dbl:b['Doble']||b['doble']||null,tpl:b['Triple']||b['triple']||null,cpl:b['Cuádruple']||b['Cuadruple']||null,qpl:null});
-      });
-    }catch(e){}}
-
-    var diasM=titulo.match(/(\d+)\s*[Dd][ií][aá]s?/);
-    var duracion=diasM?diasM[1]+' DÍAS':(itinerario.length?itinerario.length+' DÍAS':'Consultar');
-    var fechas=[];
-    if(salidas.length)fechas.push({label:'Salida',value:salidas[0],gold:true});
-    if(salidas.length>1)fechas.push({label:'Otras salidas',value:salidas.slice(1).join(' · ').substring(0,80),gold:false});
-    if(bases.length)fechas.push({label:'Habitación',value:bases.join(' / '),gold:false});
-    fechas.push({label:'Operador',value:'Funtour Internacional',gold:false});
-    return { operador:'funtour', sourceUrl, titulo, subtitulo:duracion, duracion, destinoSlug:detectarDestinoSlug(titulo),
-      fechas, incluye:incluye.length?incluye:['Consultar programa completo en agencia'], itinerario, hoteles,
-      notas_precios:[{titulo:'Precios',texto:'Consultar tarifas vigentes al momento de la reserva.'}] };
-  }
-
-  // ── Parser Mtur ────────────────────────────────────────────────────────────
-  function parseMtur(html, sourceUrl) {
-    var doc=parsearDOM(html);
-    var titulo=limpio(doc.querySelector('h1')?.textContent||''); if(!titulo)return null;
-    var bodyText=doc.body.textContent||'';
-    var durM=bodyText.match(/Duraci[oó]n\s*(\d+)\s*d[ií]as?\s*\/\s*(\d+)\s*noches?/i);
-    var dias=durM?durM[1]:'', noches=durM?durM[2]:'';
-    var tempM=bodyText.match(/Temporada\s*([^\n]{3,60}?)(?:\n|Incluye)/i);
-    var temporada=tempM?tempM[1].trim().replace(/\s+/g,' '):'';
-
-    var incluye=[],enIncluye=false;
-    doc.querySelectorAll('h5,p').forEach(function(el){
-      var tag=el.tagName.toLowerCase(),txt=limpio(el.textContent);
-      if(tag==='h5'&&/incluye\s*:/i.test(txt)){enIncluye=true;return;}
-      if(enIncluye&&tag==='h5'){enIncluye=false;return;}
-      if(enIncluye&&tag==='p'&&(el.className||'').includes('btn-light')){
-        if(/ver\s+seguro|todos\s+nuestros\s+paquetes/i.test(txt))return;
-        var c=txt.replace(/^[-–]\s*/,'').trim(); if(c.length>3)incluye.push(c);
-      }
-    });
-
-    var hoteles=[],enHoteles=false,hotelAct=null,lastCat=null;
-    var CATS=/^(doble|triple|cu[aá]druple|single)$/i;
-    doc.querySelectorAll('h5,h4,h3,strong,b,p').forEach(function(el){
-      var tag=el.tagName.toLowerCase(),txt=limpio(el.textContent);
-      if((tag==='h5'||tag==='h4')&&/opciones\s+de\s+hoteles/i.test(txt)){enHoteles=true;return;}
-      if(enHoteles&&(tag==='h5'||tag==='h4')&&/^observaciones/i.test(txt)){if(hotelAct){hoteles.push(hotelAct);hotelAct=null;}enHoteles=false;return;}
-      if(!enHoteles)return;
-      if(tag==='h3'){if(hotelAct)hoteles.push(hotelAct);hotelAct={nombre:limpio(el.textContent).replace(/[-–\s]+$/,'').trim(),playa:'—',sgl:null,dbl:null,tpl:null,cpl:null,qpl:null};lastCat=null;return;}
-      if(hotelAct&&(tag==='h5'||tag==='h4')&&CATS.test(txt)){lastCat=normText(txt).replace(/[^a-z]/g,'');return;}
-      if(hotelAct&&lastCat&&(tag==='strong'||tag==='b')){
-        var pm=txt.match(/USD\s*([\d.,]+)/i)||txt.match(/^([\d.,]+)$/);
-        if(pm){var val=parseFloat(pm[1].replace(',','.'));if(lastCat==='doble')hotelAct.dbl=val;else if(lastCat==='triple')hotelAct.tpl=val;else if(lastCat==='cuadruple')hotelAct.cpl=val;else if(lastCat==='single')hotelAct.sgl=val;lastCat=null;}
-      }
-    });
-    if(hotelAct&&!hoteles.find(function(h){return h.nombre===hotelAct.nombre;}))hoteles.push(hotelAct);
-
-    var fechaRx=/\b(\d{2}\/\d{2}\/\d{4})\b/g,fechasSalida=[],fm2;
-    while((fm2=fechaRx.exec(bodyText))!==null){if(!fechasSalida.includes(fm2[1]))fechasSalida.push(fm2[1]);}
-
-    var duracion=dias?dias+' DÍAS'+(noches?' / '+noches+' NOCHES':''):'Consultar';
-    var fechas=[];
-    if(fechasSalida.length)fechas.push({label:'Salidas',value:fechasSalida.slice(0,5).join(' · '),gold:true});
-    if(temporada)fechas.push({label:'Temporada',value:temporada,gold:false});
-    fechas.push({label:'Operador',value:'Mtur Viajes',gold:false});
-    return { operador:'mtur', sourceUrl, titulo, subtitulo:[duracion,temporada].filter(Boolean).join(' · '), duracion,
-      destinoSlug:detectarDestinoSlug(titulo), fechas, incluye:incluye.length?incluye:['Consultar programa completo en agencia'],
-      itinerario:[], hoteles, notas_precios:[{titulo:'Nota',texto:'Itinerario disponible como PDF en el sitio del operador.'}] };
-  }
-
-  // ── Parser Rutatur ─────────────────────────────────────────────────────────
-  function parseRutatur(html, sourceUrl) {
-    var doc=parsearDOM(html);
-    doc.querySelectorAll('nav,header,footer,script,style,noscript').forEach(function(e){e.remove();});
-    var titulo=limpio(doc.querySelector('h2')?.textContent||doc.querySelector('h1')?.textContent||'');
-    if(!titulo)return null;
-    var bodyText=doc.body.textContent||'';
-    var diasM=titulo.match(/(\d+)\s*D[ií]as?/i)||bodyText.match(/(\d+)\s*D[ií]as?\b/i);
-    var nochesM=titulo.match(/(\d+)\s*Noches?/i)||bodyText.match(/(\d+)\s*Noches?\b/i);
-    var dias=diasM?diasM[1]:'', noches=nochesM?nochesM[1]:'';
-    var duracion=dias?dias+' DÍAS'+(noches?' / '+noches+' NOCHES':''):'Consultar';
-
-    var itinerario=[];
-    doc.querySelectorAll('strong').forEach(function(el){
-      var txt=limpio(el.textContent);
-      var m=txt.match(/^D[IÍ]A[S]?\s+([\d\-]+)\s*[–\-]\s*(.+)/i);
-      if(m)itinerario.push({dia:'DÍA '+m[1].padStart(2,'0'),texto:limpio(m[2])});
-    });
-
-    var precBlk=bodyText.search(/Valor de la excursi[oó]n|COSTO\s+POR\s+PERSONA|PRECIO\s+POR\s+PERSONA/i);
-    var precTxt=precBlk!==-1?bodyText.slice(precBlk):'';
-    var PRECIO_RX2=/U\$S\s*([\d]{1,2}[.,\d]{0,4})/gi, preciosArr=[],pm3;
-    while((pm3=PRECIO_RX2.exec(precTxt))!==null){var v=parseFloat(pm3[1].replace(/\./g,'').replace(',','.'));if(!isNaN(v)&&v>0)preciosArr.push(v);}
-
-    var hoteles=[];
-    if(preciosArr.length)hoteles.push({nombre:'Precio por persona',playa:'—',sgl:preciosArr[1]||null,dbl:preciosArr[0]||null,tpl:preciosArr[2]||null,cpl:null,qpl:null});
-
-    var salidas=[];
-    doc.querySelectorAll('div.descr').forEach(function(el){var txt=limpio(el.textContent);if(/^Salida\s+\d{1,2}/i.test(txt))salidas.push(txt.replace(/^Salida\s+/i,'').trim());});
-    var salidaM=bodyText.match(/Salidas?:\s*([^\n]+)/i);
-    if(salidaM)salidas.push(limpio(salidaM[1]).replace(/\*+/g,'').trim());
-
-    var titulo2=titulo.replace(/\s*[-–]?\s*\d+\s*[Dd][ií][aá]s?\s*(?:[\/\s]*\d*\s*[Nn]oches?)?/g,'').replace(/\s*[-–]\s*$/,'').replace(/\s{2,}/g,' ').trim()||titulo;
-    var fechas=[];
-    if(salidas.length)fechas.push({label:'Salida',value:salidas[0].substring(0,80),gold:true});
-    if(salidas.length>1)fechas.push({label:'Otras salidas',value:salidas.slice(1,4).join(' · ').substring(0,80),gold:false});
-    fechas.push({label:'Operador',value:'Rutatur',gold:false});
-    return { operador:'rutatur', sourceUrl, titulo:titulo2, subtitulo:duracion, duracion,
-      destinoSlug:detectarDestinoSlug(titulo), fechas, incluye:['Consultar programa completo en agencia'],
-      itinerario, hoteles, notas_precios:[{titulo:'Precios',texto:'Base doble/triple. Consultar tarifas vigentes.'}] };
-  }
-
-  // ── Ejecutar scrapper ──────────────────────────────────────────────────────
-  async function ejecutarScrapper() {
-    var url = document.getElementById('scrapper-input').value.trim();
-    var op  = detectarOperador(url);
-    if (!op) return;
-
-    setScrapperState('loading', 'Conectando al proxy...');
-    var html;
-    try {
-      setScrapperState('loading', 'Descargando página de ' + op.label + '...');
-      html = await fetchConProxy(url);
-    } catch(e) {
-      setScrapperState('error', 'No se pudo acceder a la URL. El sitio puede bloquear proxies. (' + e.message + ')');
-      return;
-    }
-
-    setScrapperState('loading', 'Parseando contenido...');
-    var datos;
-    try {
-      if (op.id === 'sendas')   datos = parseSendas(html, url);
-      if (op.id === 'funtour')  datos = parseFuntour(html, url);
-      if (op.id === 'mtur')     datos = parseMtur(html, url);
-      if (op.id === 'rutatur')  datos = parseRutatur(html, url);
-    } catch(e) {
-      setScrapperState('error', 'Error al parsear el HTML: ' + e.message);
-      return;
-    }
-
-    if (!datos || !datos.titulo) {
-      setScrapperState('error', 'No se encontró información del programa. Verificá que la URL sea de un programa específico.');
-      return;
-    }
-
-    var key = 'bw_scrapper_' + Date.now();
-    try {
-      sessionStorage.setItem(key, JSON.stringify(datos));
-    } catch(e) {
-      setScrapperState('error', 'No se pudo almacenar los datos temporalmente.');
-      return;
-    }
-
-    setScrapperState('loading', 'Abriendo ficha del programa...');
-    var fichaUrl = 'scrapper-ficha.html?key=' + encodeURIComponent(key) + '&op=' + op.id;
-    var win = window.open(fichaUrl, '_blank');
-    if (!win) {
-      setScrapperState('error', 'El navegador bloqueó la ventana emergente. Permitir popups para este sitio.');
-      return;
-    }
-    setScrapperState('idle');
-  }
-
-  // ── Eventos scrapper ───────────────────────────────────────────────────────
-  (function initScrapper() {
-    var scInput = document.getElementById('scrapper-input');
-    var scBtn   = document.getElementById('scrapper-btn');
-    var scOpInd = document.getElementById('scrapper-op-indicator');
-    var scOpDot = document.getElementById('scrapper-op-dot');
-    var scOpNm  = document.getElementById('scrapper-op-name');
-    if (!scInput) return;
-
-    scInput.addEventListener('input', function() {
-      var op = detectarOperador(scInput.value.trim());
-      if (op) {
-        scOpInd.style.background = op.color;
-        scOpDot.style.background = 'rgba(255,255,255,.7)';
-        scOpNm.textContent       = op.label;
-        scOpInd.classList.add('detected');
-        scBtn.disabled = false;
-      } else {
-        scOpInd.style.background = '';
-        scOpDot.style.background = '';
-        scOpNm.textContent       = 'Operador';
-        scOpInd.classList.remove('detected');
-        scBtn.disabled = true;
-      }
-      document.getElementById('scrapper-error').classList.remove('visible');
-    });
-
-    scInput.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' && !scBtn.disabled) ejecutarScrapper();
-    });
-
-    scBtn.addEventListener('click', ejecutarScrapper);
-  })();
+init();
 </script>
-
 </body>
 </html>
