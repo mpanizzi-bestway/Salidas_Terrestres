@@ -1002,9 +1002,11 @@
     { id: 'rutatur', label: 'Rutatur', color: '#1a7a3a', rx: /rutatur\.com/i        },
   ];
 
+  // Cada proxy tiene su propio formato de respuesta
   const CORS_PROXIES = [
-    function(url) { return 'https://api.allorigins.win/get?url=' + encodeURIComponent(url); },
-    function(url) { return 'https://corsproxy.io/?' + encodeURIComponent(url); },
+    { url: function(u) { return 'https://api.allorigins.win/get?url=' + encodeURIComponent(u); }, type: 'json-contents' },
+    { url: function(u) { return 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u); }, type: 'text' },
+    { url: function(u) { return 'https://corsproxy.io/?' + encodeURIComponent(u); },              type: 'text' },
   ];
 
   function detectarOperador(url) {
@@ -1044,13 +1046,20 @@
     var lastErr;
     for (var i = 0; i < CORS_PROXIES.length; i++) {
       try {
-        var proxyUrl = CORS_PROXIES[i](url);
+        var proxy    = CORS_PROXIES[i];
+        var proxyUrl = proxy.url(url);
         var res = await fetch(proxyUrl);
         if (!res.ok) throw new Error('HTTP ' + res.status);
-        var data = await res.json();
-        if (data && data.contents) return data.contents;
-        if (typeof data === 'string') return data;
-        throw new Error('Respuesta inesperada del proxy');
+        if (proxy.type === 'json-contents') {
+          var data = await res.json();
+          if (data && data.contents) return data.contents;
+          throw new Error('allorigins no devolvió contents');
+        } else {
+          // text o html directo
+          var text = await res.text();
+          if (text && text.trim().length > 100) return text;
+          throw new Error('Respuesta vacía del proxy');
+        }
       } catch(e) { lastErr = e; }
     }
     throw lastErr || new Error('Todos los proxies fallaron');
