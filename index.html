@@ -481,6 +481,140 @@
       .search-wrap, .search-results { padding: 0 20px; }
       .results-grid { grid-template-columns: 1fr; }
     }
+
+    /* ── SCRAPPER ── */
+    .scrapper-wrap {
+      max-width: 1100px;
+      margin: 36px auto 0;
+      padding: 0 40px;
+    }
+    .scrapper-box {
+      background: var(--white);
+      border-radius: 14px;
+      border: 1.5px solid var(--gray-light);
+      box-shadow: 0 2px 16px rgba(30,39,72,.07);
+      overflow: hidden;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .scrapper-box:focus-within {
+      border-color: #0e7a6a;
+      box-shadow: 0 4px 24px rgba(14,122,106,.12);
+    }
+    .scrapper-label-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--navy);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .scrapper-row {
+      display: flex;
+      align-items: center;
+      padding: 0 18px;
+      gap: 10px;
+    }
+    .scrapper-icon { color: var(--gray); flex-shrink: 0; transition: color .2s; }
+    .scrapper-box:focus-within .scrapper-icon { color: #0e7a6a; }
+    #scrapper-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .97rem;
+      color: var(--text);
+      background: transparent;
+      padding: 15px 0;
+      min-width: 0;
+    }
+    #scrapper-input::placeholder { color: var(--gray); font-weight: 300; }
+    .scrapper-op-indicator {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--gray);
+      padding: 5px 10px;
+      border-radius: 8px;
+      background: var(--gray-light);
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: all .2s;
+      min-width: 90px;
+      justify-content: center;
+    }
+    .scrapper-op-indicator.detected { color: white; }
+    .scrapper-op-indicator .op-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--gray);
+      flex-shrink: 0;
+      transition: background .2s;
+    }
+    .scrapper-btn {
+      background: var(--navy);
+      color: white;
+      border: none;
+      padding: 9px 22px;
+      border-radius: 9px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .85rem;
+      font-weight: 600;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .2s, transform .1s;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .scrapper-btn:hover:not(:disabled) { background: var(--accent); }
+    .scrapper-btn:active:not(:disabled) { transform: scale(.98); }
+    .scrapper-btn:disabled { opacity: .5; cursor: not-allowed; }
+    .scrapper-meta {
+      padding: 7px 18px 10px;
+      font-size: .76rem;
+      color: var(--gray);
+      border-top: 1px solid var(--gray-light);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 36px;
+    }
+    .scrapper-meta .scrapper-hint { font-style: italic; }
+    .scrapper-progress {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      font-size: .76rem;
+      color: var(--navy);
+      font-weight: 500;
+    }
+    .scrapper-progress.visible { display: flex; }
+    .scrapper-spinner {
+      width: 14px; height: 14px;
+      border: 2px solid var(--gray-light);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      flex-shrink: 0;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .scrapper-error {
+      display: none;
+      color: #b00;
+      font-size: .76rem;
+      padding: 7px 18px 10px;
+      border-top: 1px solid #fdd;
+      background: #fff5f5;
+    }
+    .scrapper-error.visible { display: block; }
+
+    @media (max-width: 600px) {
+      .scrapper-wrap { padding: 0 20px; }
+      .scrapper-row { flex-wrap: wrap; gap: 8px; }
+      .scrapper-btn { width: 100%; justify-content: center; }
+      .scrapper-op-indicator { min-width: 70px; }
+    }
   </style>
 </head>
 <body>
@@ -533,6 +667,46 @@
   <!-- RESULTADOS DEL BUSCADOR -->
   <div class="search-results" id="search-results">
     <div class="results-grid" id="results-grid"></div>
+  </div>
+
+  <!-- ── SCRAPPER DE PROGRAMAS ── -->
+  <div class="scrapper-wrap">
+    <div class="scrapper-label-title">
+      Scrapear programa<span style="font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--gray);font-weight:400;"> individual</span>
+    </div>
+    <div class="scrapper-box" id="scrapper-box">
+      <div class="scrapper-row">
+        <svg class="scrapper-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+        </svg>
+        <input id="scrapper-input" type="url"
+               placeholder="Pegá la URL de un programa (Sendas, Funtour, Mtur, Rutatur)..."
+               autocomplete="off" spellcheck="false">
+        <div class="scrapper-op-indicator" id="scrapper-op-indicator">
+          <span class="op-dot" id="scrapper-op-dot"></span>
+          <span id="scrapper-op-name">Operador</span>
+        </div>
+        <button class="scrapper-btn" id="scrapper-btn" disabled>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+          Scrapear
+        </button>
+      </div>
+      <div class="scrapper-meta" id="scrapper-meta">
+        <span class="scrapper-hint" id="scrapper-hint">
+          URLs soportadas: sendasturismo.com · funtour.com.uy · mturviajes.com.uy · rutatur.com
+        </span>
+        <div class="scrapper-progress" id="scrapper-progress">
+          <div class="scrapper-spinner"></div>
+          <span id="scrapper-progress-msg">Cargando página...</span>
+        </div>
+      </div>
+      <div class="scrapper-error" id="scrapper-error"></div>
+    </div>
   </div>
 
   <div class="section-label">
@@ -816,6 +990,469 @@
 
   // ─── Init ────────────────────────────────────────────────────────────────────
   loadAll();
+
+  // ════════════════════════════════════════════════════════════════════════════
+  //  SCRAPPER DE PROGRAMAS — On-demand
+  // ════════════════════════════════════════════════════════════════════════════
+
+  const OPERADOR_PATTERNS = [
+    { id: 'sendas',  label: 'Sendas',  color: '#0e5a7a', rx: /sendasturismo\.com/i  },
+    { id: 'funtour', label: 'Funtour', color: '#e8630a', rx: /funtour\.com\.uy/i    },
+    { id: 'mtur',    label: 'Mtur',    color: '#c84800', rx: /mturviajes\.com\.uy/i },
+    { id: 'rutatur', label: 'Rutatur', color: '#1a7a3a', rx: /rutatur\.com/i        },
+  ];
+
+  const CORS_PROXIES = [
+    function(url) { return 'https://api.allorigins.win/get?url=' + encodeURIComponent(url); },
+    function(url) { return 'https://corsproxy.io/?' + encodeURIComponent(url); },
+  ];
+
+  function detectarOperador(url) {
+    for (var i = 0; i < OPERADOR_PATTERNS.length; i++) {
+      if (OPERADOR_PATTERNS[i].rx.test(url)) return OPERADOR_PATTERNS[i];
+    }
+    return null;
+  }
+
+  function setScrapperState(state, msg) {
+    var hint     = document.getElementById('scrapper-hint');
+    var progress = document.getElementById('scrapper-progress');
+    var progMsg  = document.getElementById('scrapper-progress-msg');
+    var error    = document.getElementById('scrapper-error');
+    var btn      = document.getElementById('scrapper-btn');
+    error.classList.remove('visible');
+    progress.classList.remove('visible');
+    if (state === 'loading') {
+      hint.style.display = 'none';
+      progress.classList.add('visible');
+      progMsg.textContent = msg || 'Procesando...';
+      btn.disabled = true;
+    } else if (state === 'error') {
+      hint.style.display = '';
+      hint.textContent = 'Verificá la URL e intentá de nuevo.';
+      error.textContent = msg;
+      error.classList.add('visible');
+      btn.disabled = false;
+    } else {
+      hint.style.display = '';
+      hint.textContent = 'URLs soportadas: sendasturismo.com · funtour.com.uy · mturviajes.com.uy · rutatur.com';
+      btn.disabled = !detectarOperador(document.getElementById('scrapper-input').value.trim());
+    }
+  }
+
+  async function fetchConProxy(url) {
+    var lastErr;
+    for (var i = 0; i < CORS_PROXIES.length; i++) {
+      try {
+        var proxyUrl = CORS_PROXIES[i](url);
+        var res = await fetch(proxyUrl);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        var data = await res.json();
+        if (data && data.contents) return data.contents;
+        if (typeof data === 'string') return data;
+        throw new Error('Respuesta inesperada del proxy');
+      } catch(e) { lastErr = e; }
+    }
+    throw lastErr || new Error('Todos los proxies fallaron');
+  }
+
+  function parsearDOM(htmlStr) {
+    return new DOMParser().parseFromString(htmlStr, 'text/html');
+  }
+
+  function limpio(s) {
+    return (s || '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+
+  function normText(s) {
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
+  }
+
+  var DESTINO_MAP_FRONT = [
+    { keys: ['florianopolis','floripa','canasvieiras'], file: 'florianopolis' },
+    { keys: ['praia do rosa','praia rosa'],             file: 'praiarosa'     },
+    { keys: ['ferrugem'],                               file: 'ferrugem'      },
+    { keys: ['camboriu'],                               file: 'camboriu'      },
+    { keys: ['bombinhas'],                              file: 'bombinhas'     },
+    { keys: ['capao da canoa'],                         file: 'capao'         },
+    { keys: ['torres'],                                 file: 'torres'        },
+    { keys: ['laguna'],                                 file: 'laguna'        },
+    { keys: ['gramado','canela'],                       file: 'gramado'       },
+    { keys: ['cataratas','iguazu','iguacu'],            file: 'cataratas'     },
+    { keys: ['bariloche'],                              file: 'bariloche'     },
+    { keys: ['carlos paz'],                             file: 'carlospaz'     },
+    { keys: ['cordoba','córdoba'],                      file: 'carlospaz'     },
+    { keys: ['jujuy','salta','norte'],                  file: 'norte'         },
+    { keys: ['mendoza'],                                file: 'mendoza'       },
+    { keys: ['buenos aires'],                           file: 'buenosaires'   },
+    { keys: ['santiago','chile'],                       file: 'santiago'      },
+  ];
+
+  function detectarDestinoSlug(titulo) {
+    var t = normText(titulo);
+    for (var i = 0; i < DESTINO_MAP_FRONT.length; i++) {
+      for (var j = 0; j < DESTINO_MAP_FRONT[i].keys.length; j++) {
+        if (t.includes(normText(DESTINO_MAP_FRONT[i].keys[j]))) return DESTINO_MAP_FRONT[i].file;
+      }
+    }
+    return null;
+  }
+
+  function normalizarDia(raw) {
+    return raw.trim().replace(/d[ií]a/gi,'Día').replace(/\s+/g,' ');
+  }
+
+  // ── Parser Sendas ──────────────────────────────────────────────────────────
+  function parseSendas(html, sourceUrl) {
+    var doc  = parsearDOM(html);
+    var art  = doc.querySelector('div.item-page') || doc.body;
+    var strongs = art.querySelectorAll('[itemprop="articleBody"] strong');
+    var titulo = strongs[0] ? limpio(strongs[0].textContent) : limpio(art.querySelector('h2')?.textContent||'');
+    titulo = titulo.replace(/\s+/g,' ').toUpperCase().substring(0,100);
+
+    var dias = '', noches = '';
+    if (strongs[1]) {
+      var t2 = limpio(strongs[1].textContent);
+      var dm = t2.match(/(\d+)\s*d[ií]as?/i); var nm = t2.match(/(\d+)\s*noches?/i);
+      if (dm) dias = dm[1]; if (nm) noches = nm[1];
+    }
+
+    var salidasStr = '';
+    art.querySelectorAll('[itemprop="articleBody"] p').forEach(function(p) {
+      if (salidasStr) return;
+      var m = limpio(p.textContent).match(/^salidas?\s*:?\s*(.{3,120})/i);
+      if (m) salidasStr = m[1].trim();
+    });
+
+    var incluye = [];
+    var body = art.querySelector('[itemprop="articleBody"]');
+    if (body) {
+      var marcador = null;
+      Array.from(body.children).forEach(function(node) {
+        if (!marcador && node.tagName === 'P' && /incluye\s*:/i.test(node.textContent)) marcador = node;
+      });
+      if (marcador) {
+        var node = marcador.nextElementSibling;
+        while (node) {
+          if (node.tagName === 'TABLE') break;
+          if (node.tagName === 'UL') {
+            node.querySelectorAll('li').forEach(function(li) {
+              var t = limpio(li.textContent).replace(/^[-–•]+/,'').trim();
+              if (t.length > 3) incluye.push(t);
+            });
+          }
+          if (node.tagName === 'P') {
+            var txt = limpio(node.textContent);
+            if (/^d[ií]a\s+\d/i.test(txt)) break;
+            node.innerHTML.split(/<br\s*\/?>/i).forEach(function(f) {
+              var t = limpio(new DOMParser().parseFromString(f,'text/html').body.textContent);
+              if (t.includes('-')) { var item = t.replace(/^[\s\-–•]+/,'').trim(); if (item.length>3 && !incluye.includes(item)) incluye.push(item); }
+            });
+          }
+          node = node.nextElementSibling;
+        }
+      }
+    }
+
+    var itinerario = [];
+    var DIA_RX = /^(d[ií]a\s+\d{1,2}(?:\s+al\s+(?:d[ií]a\s+)?\d{1,2})?)\s*/i;
+    var capturando = false, tablaVista = false;
+    if (body) {
+      Array.from(body.children).forEach(function(node) {
+        if (tablaVista) return;
+        if (node.tagName === 'TABLE') { tablaVista = true; return; }
+        if (node.tagName !== 'P') return;
+        var txt = limpio(node.textContent); if (!txt) return;
+        if (!capturando && /^d[ií]a\s+0?1\b/i.test(txt)) capturando = true;
+        if (!capturando) return;
+        if (/fin\s+de\s+nuestros?\s+servicios/i.test(txt)) {
+          var m = DIA_RX.exec(txt);
+          itinerario.push(m ? { dia: normalizarDia(m[1]), texto: txt.slice(m[0].length).replace(/^[-:\s]+/,'').trim() } : { dia:'', texto: txt });
+          capturando = false; return;
+        }
+        var m = DIA_RX.exec(txt);
+        if (m) itinerario.push({ dia: normalizarDia(m[1]), texto: txt.slice(m[0].length).replace(/^[-:\s]+/,'').trim() });
+        else   itinerario.push({ dia: '', texto: txt });
+      });
+    }
+
+    var hoteles = [];
+    if (body) {
+      body.querySelectorAll('table').forEach(function(tbl) {
+        var rows = tbl.querySelectorAll('tr'); if (rows.length < 2) return;
+        var headers = Array.from(rows[0].querySelectorAll('td,th')).map(function(c) { return limpio(c.textContent).toLowerCase(); });
+        if (!headers.some(function(h){return /hotel/.test(h);}) && !headers.some(function(h){return /sgl/.test(h);})) return;
+        var idx = {
+          hotel: headers.findIndex(function(h){return /hotel/.test(h);}),
+          sgl:   headers.findIndex(function(h){return h==='sgl';}),
+          dbl:   headers.findIndex(function(h){return h==='dbl';}),
+          tpl:   headers.findIndex(function(h){return h==='tpl';}),
+          cpl:   headers.findIndex(function(h){return h==='cpl';}),
+          qpl:   headers.findIndex(function(h){return h==='qpl';}),
+          playa: headers.findIndex(function(h,i){return i>0&&!/sgl|dbl|tpl|cpl|qpl/.test(h)&&h.length>0&&i!==headers.findIndex(function(x){return /hotel/.test(x);});}),
+        };
+        var pv2 = function(v){ var n=parseInt((v||'').replace(/[^\d]/g,'')); return isNaN(n)||n===0?null:n; };
+        var gc  = function(cells,i){ return i>=0?limpio(cells[i]?.textContent||''):''; };
+        rows.forEach(function(row,ri) {
+          if (!ri) return;
+          var cells = row.querySelectorAll('td'); if (cells.length<3) return;
+          var nombre = gc(cells,Math.max(idx.hotel,0)).replace(/\s+/g,' ').trim();
+          if (!nombre||/^hotel(es)?$/i.test(nombre)) return;
+          hoteles.push({ nombre, playa: idx.playa>=0?gc(cells,idx.playa):'—', sgl:pv2(gc(cells,idx.sgl)), dbl:pv2(gc(cells,idx.dbl)), tpl:pv2(gc(cells,idx.tpl)), cpl:pv2(gc(cells,idx.cpl)), qpl:pv2(gc(cells,idx.qpl)) });
+        });
+      });
+    }
+
+    var duracion = dias ? dias+' DÍAS'+(noches?' — '+noches+' NOCHES':'') : 'Consultar';
+    return { operador:'sendas', sourceUrl, titulo, subtitulo:duracion, duracion, destinoSlug:detectarDestinoSlug(titulo),
+      fechas:[{label:'Salidas',value:salidasStr||'Consultar disponibilidad',gold:true},{label:'Operador',value:'Sendas Turismo',gold:false}],
+      incluye:incluye.length?incluye:['Consultar programa completo en agencia'], itinerario, hoteles,
+      notas_precios:[{titulo:'Precios',texto:'Consultar tarifas vigentes al momento de la reserva.'}] };
+  }
+
+  // ── Parser Funtour ─────────────────────────────────────────────────────────
+  function parseFuntour(html, sourceUrl) {
+    var doc = parsearDOM(html);
+    var titulo = limpio(doc.querySelector('h1.product_title,h1.entry-title,h1.elementor-heading-title')?.textContent||'')
+      .replace(/\bfuntour\b/gi,'').replace(/\s{2,}/g,' ').trim();
+
+    var incluye = []; var enNo = false;
+    var shortDesc = doc.querySelector('.woocommerce-product-details__short-description');
+    if (shortDesc) shortDesc.querySelectorAll('p,li').forEach(function(el) {
+      var tag=el.tagName.toLowerCase(), txt=limpio(el.textContent);
+      if (!txt) return;
+      if (tag==='p'&&/^no\s+incluye/i.test(txt)){enNo=true;return;}
+      if (tag==='p'&&/^incluye/i.test(txt)){enNo=false;return;}
+      if (tag==='li'&&!enNo&&!/eximiendo|factores externos/i.test(txt)) incluye.push(txt);
+    });
+
+    var itinerario = [];
+    doc.querySelectorAll('#tab-description p').forEach(function(el) {
+      var txt=limpio(el.textContent), strongT=limpio(el.querySelector('strong')?.textContent||'');
+      var m=strongT.match(/^D[ií]a\s+(\d+(?:-\d+)?)\s*[–\-]\s*(.+)/i);
+      if (m) {
+        var lugar=limpio(m[2].replace(/[–\-]+$/,'').replace(/\bFuntour\b/gi,''));
+        var detalle=limpio(txt.replace(strongT,'').replace(/\bFuntour\s+Viajes\b/gi,''));
+        itinerario.push({dia:'DÍA '+m[1].padStart(2,'0'),texto:lugar+(detalle?' — '+detalle:'')});
+      }
+    });
+
+    var salidas=[],bases=[];
+    doc.querySelectorAll('#tab-additional_information tr').forEach(function(el){
+      var label=limpio(el.querySelector('th')?.textContent||'').toLowerCase();
+      var val=limpio(el.querySelector('td')?.textContent||'');
+      if(!val||val==='Elige una opción')return;
+      if(/salida/.test(label)) val.split(/\n|,/).map(function(s){return s.trim();}).filter(Boolean).forEach(function(s){if(!salidas.includes(s))salidas.push(s);});
+      if(/base/.test(label))   val.split(/,/).map(function(s){return s.trim();}).filter(Boolean).forEach(function(b){if(!bases.includes(b))bases.push(b);});
+    });
+
+    var hoteles=[];
+    var variForm=doc.querySelector('form.variations_form');
+    if(variForm){try{
+      var variaciones=JSON.parse(variForm.getAttribute('data-product_variations')||'[]');
+      var hotelMap={};
+      variaciones.forEach(function(v){
+        var aloj=limpio(v.attributes?.attribute_alojamiento||'');
+        var base=limpio(v.attributes?.attribute_bases||'');
+        var precio=parseInt(v.display_price)||0;
+        if(!aloj||!precio)return;
+        if(!hotelMap[aloj])hotelMap[aloj]={};
+        if(!hotelMap[aloj][base]||precio<hotelMap[aloj][base])hotelMap[aloj][base]=precio;
+      });
+      Object.entries(hotelMap).forEach(function(e){
+        var b=e[1];
+        hoteles.push({nombre:e[0],playa:'—',sgl:b['Single']||b['single']||null,dbl:b['Doble']||b['doble']||null,tpl:b['Triple']||b['triple']||null,cpl:b['Cuádruple']||b['Cuadruple']||null,qpl:null});
+      });
+    }catch(e){}}
+
+    var diasM=titulo.match(/(\d+)\s*[Dd][ií][aá]s?/);
+    var duracion=diasM?diasM[1]+' DÍAS':(itinerario.length?itinerario.length+' DÍAS':'Consultar');
+    var fechas=[];
+    if(salidas.length)fechas.push({label:'Salida',value:salidas[0],gold:true});
+    if(salidas.length>1)fechas.push({label:'Otras salidas',value:salidas.slice(1).join(' · ').substring(0,80),gold:false});
+    if(bases.length)fechas.push({label:'Habitación',value:bases.join(' / '),gold:false});
+    fechas.push({label:'Operador',value:'Funtour Internacional',gold:false});
+    return { operador:'funtour', sourceUrl, titulo, subtitulo:duracion, duracion, destinoSlug:detectarDestinoSlug(titulo),
+      fechas, incluye:incluye.length?incluye:['Consultar programa completo en agencia'], itinerario, hoteles,
+      notas_precios:[{titulo:'Precios',texto:'Consultar tarifas vigentes al momento de la reserva.'}] };
+  }
+
+  // ── Parser Mtur ────────────────────────────────────────────────────────────
+  function parseMtur(html, sourceUrl) {
+    var doc=parsearDOM(html);
+    var titulo=limpio(doc.querySelector('h1')?.textContent||''); if(!titulo)return null;
+    var bodyText=doc.body.textContent||'';
+    var durM=bodyText.match(/Duraci[oó]n\s*(\d+)\s*d[ií]as?\s*\/\s*(\d+)\s*noches?/i);
+    var dias=durM?durM[1]:'', noches=durM?durM[2]:'';
+    var tempM=bodyText.match(/Temporada\s*([^\n]{3,60}?)(?:\n|Incluye)/i);
+    var temporada=tempM?tempM[1].trim().replace(/\s+/g,' '):'';
+
+    var incluye=[],enIncluye=false;
+    doc.querySelectorAll('h5,p').forEach(function(el){
+      var tag=el.tagName.toLowerCase(),txt=limpio(el.textContent);
+      if(tag==='h5'&&/incluye\s*:/i.test(txt)){enIncluye=true;return;}
+      if(enIncluye&&tag==='h5'){enIncluye=false;return;}
+      if(enIncluye&&tag==='p'&&(el.className||'').includes('btn-light')){
+        if(/ver\s+seguro|todos\s+nuestros\s+paquetes/i.test(txt))return;
+        var c=txt.replace(/^[-–]\s*/,'').trim(); if(c.length>3)incluye.push(c);
+      }
+    });
+
+    var hoteles=[],enHoteles=false,hotelAct=null,lastCat=null;
+    var CATS=/^(doble|triple|cu[aá]druple|single)$/i;
+    doc.querySelectorAll('h5,h4,h3,strong,b,p').forEach(function(el){
+      var tag=el.tagName.toLowerCase(),txt=limpio(el.textContent);
+      if((tag==='h5'||tag==='h4')&&/opciones\s+de\s+hoteles/i.test(txt)){enHoteles=true;return;}
+      if(enHoteles&&(tag==='h5'||tag==='h4')&&/^observaciones/i.test(txt)){if(hotelAct){hoteles.push(hotelAct);hotelAct=null;}enHoteles=false;return;}
+      if(!enHoteles)return;
+      if(tag==='h3'){if(hotelAct)hoteles.push(hotelAct);hotelAct={nombre:limpio(el.textContent).replace(/[-–\s]+$/,'').trim(),playa:'—',sgl:null,dbl:null,tpl:null,cpl:null,qpl:null};lastCat=null;return;}
+      if(hotelAct&&(tag==='h5'||tag==='h4')&&CATS.test(txt)){lastCat=normText(txt).replace(/[^a-z]/g,'');return;}
+      if(hotelAct&&lastCat&&(tag==='strong'||tag==='b')){
+        var pm=txt.match(/USD\s*([\d.,]+)/i)||txt.match(/^([\d.,]+)$/);
+        if(pm){var val=parseFloat(pm[1].replace(',','.'));if(lastCat==='doble')hotelAct.dbl=val;else if(lastCat==='triple')hotelAct.tpl=val;else if(lastCat==='cuadruple')hotelAct.cpl=val;else if(lastCat==='single')hotelAct.sgl=val;lastCat=null;}
+      }
+    });
+    if(hotelAct&&!hoteles.find(function(h){return h.nombre===hotelAct.nombre;}))hoteles.push(hotelAct);
+
+    var fechaRx=/\b(\d{2}\/\d{2}\/\d{4})\b/g,fechasSalida=[],fm2;
+    while((fm2=fechaRx.exec(bodyText))!==null){if(!fechasSalida.includes(fm2[1]))fechasSalida.push(fm2[1]);}
+
+    var duracion=dias?dias+' DÍAS'+(noches?' / '+noches+' NOCHES':''):'Consultar';
+    var fechas=[];
+    if(fechasSalida.length)fechas.push({label:'Salidas',value:fechasSalida.slice(0,5).join(' · '),gold:true});
+    if(temporada)fechas.push({label:'Temporada',value:temporada,gold:false});
+    fechas.push({label:'Operador',value:'Mtur Viajes',gold:false});
+    return { operador:'mtur', sourceUrl, titulo, subtitulo:[duracion,temporada].filter(Boolean).join(' · '), duracion,
+      destinoSlug:detectarDestinoSlug(titulo), fechas, incluye:incluye.length?incluye:['Consultar programa completo en agencia'],
+      itinerario:[], hoteles, notas_precios:[{titulo:'Nota',texto:'Itinerario disponible como PDF en el sitio del operador.'}] };
+  }
+
+  // ── Parser Rutatur ─────────────────────────────────────────────────────────
+  function parseRutatur(html, sourceUrl) {
+    var doc=parsearDOM(html);
+    doc.querySelectorAll('nav,header,footer,script,style,noscript').forEach(function(e){e.remove();});
+    var titulo=limpio(doc.querySelector('h2')?.textContent||doc.querySelector('h1')?.textContent||'');
+    if(!titulo)return null;
+    var bodyText=doc.body.textContent||'';
+    var diasM=titulo.match(/(\d+)\s*D[ií]as?/i)||bodyText.match(/(\d+)\s*D[ií]as?\b/i);
+    var nochesM=titulo.match(/(\d+)\s*Noches?/i)||bodyText.match(/(\d+)\s*Noches?\b/i);
+    var dias=diasM?diasM[1]:'', noches=nochesM?nochesM[1]:'';
+    var duracion=dias?dias+' DÍAS'+(noches?' / '+noches+' NOCHES':''):'Consultar';
+
+    var itinerario=[];
+    doc.querySelectorAll('strong').forEach(function(el){
+      var txt=limpio(el.textContent);
+      var m=txt.match(/^D[IÍ]A[S]?\s+([\d\-]+)\s*[–\-]\s*(.+)/i);
+      if(m)itinerario.push({dia:'DÍA '+m[1].padStart(2,'0'),texto:limpio(m[2])});
+    });
+
+    var precBlk=bodyText.search(/Valor de la excursi[oó]n|COSTO\s+POR\s+PERSONA|PRECIO\s+POR\s+PERSONA/i);
+    var precTxt=precBlk!==-1?bodyText.slice(precBlk):'';
+    var PRECIO_RX2=/U\$S\s*([\d]{1,2}[.,\d]{0,4})/gi, preciosArr=[],pm3;
+    while((pm3=PRECIO_RX2.exec(precTxt))!==null){var v=parseFloat(pm3[1].replace(/\./g,'').replace(',','.'));if(!isNaN(v)&&v>0)preciosArr.push(v);}
+
+    var hoteles=[];
+    if(preciosArr.length)hoteles.push({nombre:'Precio por persona',playa:'—',sgl:preciosArr[1]||null,dbl:preciosArr[0]||null,tpl:preciosArr[2]||null,cpl:null,qpl:null});
+
+    var salidas=[];
+    doc.querySelectorAll('div.descr').forEach(function(el){var txt=limpio(el.textContent);if(/^Salida\s+\d{1,2}/i.test(txt))salidas.push(txt.replace(/^Salida\s+/i,'').trim());});
+    var salidaM=bodyText.match(/Salidas?:\s*([^\n]+)/i);
+    if(salidaM)salidas.push(limpio(salidaM[1]).replace(/\*+/g,'').trim());
+
+    var titulo2=titulo.replace(/\s*[-–]?\s*\d+\s*[Dd][ií][aá]s?\s*(?:[\/\s]*\d*\s*[Nn]oches?)?/g,'').replace(/\s*[-–]\s*$/,'').replace(/\s{2,}/g,' ').trim()||titulo;
+    var fechas=[];
+    if(salidas.length)fechas.push({label:'Salida',value:salidas[0].substring(0,80),gold:true});
+    if(salidas.length>1)fechas.push({label:'Otras salidas',value:salidas.slice(1,4).join(' · ').substring(0,80),gold:false});
+    fechas.push({label:'Operador',value:'Rutatur',gold:false});
+    return { operador:'rutatur', sourceUrl, titulo:titulo2, subtitulo:duracion, duracion,
+      destinoSlug:detectarDestinoSlug(titulo), fechas, incluye:['Consultar programa completo en agencia'],
+      itinerario, hoteles, notas_precios:[{titulo:'Precios',texto:'Base doble/triple. Consultar tarifas vigentes.'}] };
+  }
+
+  // ── Ejecutar scrapper ──────────────────────────────────────────────────────
+  async function ejecutarScrapper() {
+    var url = document.getElementById('scrapper-input').value.trim();
+    var op  = detectarOperador(url);
+    if (!op) return;
+
+    setScrapperState('loading', 'Conectando al proxy...');
+    var html;
+    try {
+      setScrapperState('loading', 'Descargando página de ' + op.label + '...');
+      html = await fetchConProxy(url);
+    } catch(e) {
+      setScrapperState('error', 'No se pudo acceder a la URL. El sitio puede bloquear proxies. (' + e.message + ')');
+      return;
+    }
+
+    setScrapperState('loading', 'Parseando contenido...');
+    var datos;
+    try {
+      if (op.id === 'sendas')   datos = parseSendas(html, url);
+      if (op.id === 'funtour')  datos = parseFuntour(html, url);
+      if (op.id === 'mtur')     datos = parseMtur(html, url);
+      if (op.id === 'rutatur')  datos = parseRutatur(html, url);
+    } catch(e) {
+      setScrapperState('error', 'Error al parsear el HTML: ' + e.message);
+      return;
+    }
+
+    if (!datos || !datos.titulo) {
+      setScrapperState('error', 'No se encontró información del programa. Verificá que la URL sea de un programa específico.');
+      return;
+    }
+
+    var key = 'bw_scrapper_' + Date.now();
+    try {
+      sessionStorage.setItem(key, JSON.stringify(datos));
+    } catch(e) {
+      setScrapperState('error', 'No se pudo almacenar los datos temporalmente.');
+      return;
+    }
+
+    setScrapperState('loading', 'Abriendo ficha del programa...');
+    var fichaUrl = 'scrapper-ficha.html?key=' + encodeURIComponent(key) + '&op=' + op.id;
+    var win = window.open(fichaUrl, '_blank');
+    if (!win) {
+      setScrapperState('error', 'El navegador bloqueó la ventana emergente. Permitir popups para este sitio.');
+      return;
+    }
+    setScrapperState('idle');
+  }
+
+  // ── Eventos scrapper ───────────────────────────────────────────────────────
+  (function initScrapper() {
+    var scInput = document.getElementById('scrapper-input');
+    var scBtn   = document.getElementById('scrapper-btn');
+    var scOpInd = document.getElementById('scrapper-op-indicator');
+    var scOpDot = document.getElementById('scrapper-op-dot');
+    var scOpNm  = document.getElementById('scrapper-op-name');
+    if (!scInput) return;
+
+    scInput.addEventListener('input', function() {
+      var op = detectarOperador(scInput.value.trim());
+      if (op) {
+        scOpInd.style.background = op.color;
+        scOpDot.style.background = 'rgba(255,255,255,.7)';
+        scOpNm.textContent       = op.label;
+        scOpInd.classList.add('detected');
+        scBtn.disabled = false;
+      } else {
+        scOpInd.style.background = '';
+        scOpDot.style.background = '';
+        scOpNm.textContent       = 'Operador';
+        scOpInd.classList.remove('detected');
+        scBtn.disabled = true;
+      }
+      document.getElementById('scrapper-error').classList.remove('visible');
+    });
+
+    scInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !scBtn.disabled) ejecutarScrapper();
+    });
+
+    scBtn.addEventListener('click', ejecutarScrapper);
+  })();
 </script>
 
 </body>
