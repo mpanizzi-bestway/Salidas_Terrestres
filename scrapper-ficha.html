@@ -276,8 +276,8 @@
     <!-- PRECIOS -->
     <div class="sec">
       <div class="sec-title">Hoteles &amp; Tarifas — Precios en U$S por persona</div>
-      <table class="precios-table">
-        <thead>
+      <table class="precios-table" id="precios-table">
+        <thead id="precios-thead">
           <tr>
             <th>Hotel</th>
             <th>Playa / Cat.</th>
@@ -415,8 +415,18 @@ function renderPrograma(data) {
 
   `;
 
-  // Fechas
-  const fechas = (data.fechas || []).filter(f => !/^operador$/i.test((f.label||'').trim()));
+  // Fechas — agrupar múltiples salidas en una sola celda
+  const fechasRaw = (data.fechas || []).filter(f => !/^operador$/i.test((f.label||'').trim()));
+  // Si hay varias salidas (Sendas multi-tabla), consolidarlas en una sola entrada
+  const salidasMultiples = fechasRaw.filter(f => /^salida/i.test(f.label));
+  let fechas;
+  if (salidasMultiples.length > 1) {
+    const otrasItems = fechasRaw.filter(f => !/^salida/i.test(f.label));
+    const salidasConcat = { label: 'Salidas', value: salidasMultiples.map(f => f.value).join('  ·  '), gold: true };
+    fechas = [salidasConcat, ...otrasItems];
+  } else {
+    fechas = fechasRaw;
+  }
   document.getElementById('prog-fechas').innerHTML = fechas.map((f, i) => {
     const sep = i < fechas.length-1 ? '<div class="fecha-sep"></div>' : '';
     return `<div class="fecha-item"><span class="fl">${f.label}</span><span class="fv${f.gold?' gold':''}">${f.value}</span></div>${sep}`;
@@ -447,21 +457,41 @@ function renderPrograma(data) {
     }).join('');
   }
 
-  // Precios — normalizar hoteles de cualquier formato
+  // Precios — detectar si hay columna de salida (Sendas multi-tabla)
   const hoteles = data.hoteles || [];
+  const tieneSalidas = hoteles.some(h => h.salida && h.salida.trim().length > 0);
+
+  // Actualizar encabezado si hay salidas
+  if (tieneSalidas) {
+    document.getElementById('precios-thead').innerHTML = `
+      <tr>
+        <th>Hotel</th>
+        <th style="min-width:32mm">Salida</th>
+        <th>Individual</th>
+        <th>Doble</th>
+        <th>Triple</th>
+        <th>Cuádruple</th>
+        <th>Quíntuple</th>
+      </tr>`;
+  }
+
   document.getElementById('prog-precios').innerHTML = hoteles.length
-    ? hoteles.map(h => `
-        <tr>
+    ? hoteles.map(h => {
+        const segundaCol = tieneSalidas
+          ? `<td style="font-size:7pt;color:var(--navy);font-weight:600;">${h.salida || '—'}</td>`
+          : `<td>${h.playa || '—'}</td>`;
+        return `<tr>
           <td><span class="hotel-nm">${h.nombre}</span>
           ${h.url ? `<br><span style="font-size:6.5pt;color:var(--mid)">${h.url.replace(/^https?:\/\/(www\.)?/,'').split('/')[0]}</span>` : ''}
           </td>
-          <td>${h.playa || '—'}</td>
+          ${segundaCol}
           <td>${pv(h.sgl)}</td>
-          <td>${pv(h.dbl || h.precios?.doble || null)}</td>
-          <td>${pv(h.tpl || h.precios?.triple || null)}</td>
-          <td>${pv(h.cpl || h.precios?.cuadruple || null)}</td>
+          <td>${pv(h.dbl || (h.precios && h.precios.doble) || null)}</td>
+          <td>${pv(h.tpl || (h.precios && h.precios.triple) || null)}</td>
+          <td>${pv(h.cpl || (h.precios && h.precios.cuadruple) || null)}</td>
           <td>${pv(h.qpl || null)}</td>
-        </tr>`).join('')
+        </tr>`;
+      }).join('')
     : `<tr><td colspan="7" style="text-align:center;padding:4mm;color:var(--mid);font-style:italic;">Consultar precios vigentes al momento de la reserva.</td></tr>`;
 
   document.getElementById('prog-precios-footer').innerHTML = (data.notas_precios||[])
