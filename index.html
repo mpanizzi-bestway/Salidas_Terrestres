@@ -1002,11 +1002,13 @@
     { id: 'rutatur', label: 'Rutatur', color: '#1a7a3a', rx: /rutatur\.com/i        },
   ];
 
-  // Cada proxy tiene su propio formato de respuesta
+  // Proxies CORS con sus formatos de respuesta
   const CORS_PROXIES = [
-    { url: function(u) { return 'https://api.allorigins.win/get?url=' + encodeURIComponent(u); }, type: 'json-contents' },
-    { url: function(u) { return 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u); }, type: 'text' },
-    { url: function(u) { return 'https://corsproxy.io/?' + encodeURIComponent(u); },              type: 'text' },
+    { url: function(u) { return 'https://corsproxy.io/?' + encodeURIComponent(u); },                                    type: 'text' },
+    { url: function(u) { return 'https://proxy.cors.sh/' + u; },                                                        type: 'text' },
+    { url: function(u) { return 'https://thingproxy.freeboard.io/fetch/' + u; },                                        type: 'text' },
+    { url: function(u) { return 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u); },                       type: 'text' },
+    { url: function(u) { return 'https://api.allorigins.win/get?url=' + encodeURIComponent(u); },                       type: 'json-contents' },
   ];
 
   function detectarOperador(url) {
@@ -1044,25 +1046,33 @@
 
   async function fetchConProxy(url) {
     var lastErr;
+    var errors = [];
     for (var i = 0; i < CORS_PROXIES.length; i++) {
+      var proxy = CORS_PROXIES[i];
       try {
-        var proxy    = CORS_PROXIES[i];
+        setScrapperState('loading', 'Intentando proxy ' + (i+1) + ' de ' + CORS_PROXIES.length + '...');
         var proxyUrl = proxy.url(url);
-        var res = await fetch(proxyUrl);
+        var controller = new AbortController();
+        var timer = setTimeout(function(){ controller.abort(); }, 12000);
+        var res = await fetch(proxyUrl, { signal: controller.signal });
+        clearTimeout(timer);
         if (!res.ok) throw new Error('HTTP ' + res.status);
         if (proxy.type === 'json-contents') {
           var data = await res.json();
-          if (data && data.contents) return data.contents;
-          throw new Error('allorigins no devolvió contents');
+          if (data && data.contents && data.contents.trim().length > 200) return data.contents;
+          throw new Error('Sin contenido útil');
         } else {
-          // text o html directo
           var text = await res.text();
-          if (text && text.trim().length > 100) return text;
-          throw new Error('Respuesta vacía del proxy');
+          // Verificar que sea HTML real de la página destino, no una página de error del proxy
+          if (text && text.trim().length > 500 && (/<html/i.test(text) || /<!doctype/i.test(text))) return text;
+          throw new Error('Respuesta no válida (' + text.trim().length + ' chars)');
         }
-      } catch(e) { lastErr = e; }
+      } catch(e) {
+        errors.push('Proxy ' + (i+1) + ': ' + e.message);
+        lastErr = e;
+      }
     }
-    throw lastErr || new Error('Todos los proxies fallaron');
+    throw new Error('Todos los proxies fallaron. Detalles: ' + errors.join(' | '));
   }
 
   function parsearDOM(htmlStr) {
