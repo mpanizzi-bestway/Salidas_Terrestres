@@ -1125,110 +1125,219 @@
   function parseSendas(html, sourceUrl) {
     var doc  = parsearDOM(html);
     var art  = doc.querySelector('div.item-page') || doc.body;
+    var body = art.querySelector('[itemprop="articleBody"]') || art;
+
+    // ── Título ──────────────────────────────────────────────────────────────
     var strongs = art.querySelectorAll('[itemprop="articleBody"] strong');
-    var titulo = strongs[0] ? limpio(strongs[0].textContent) : limpio(art.querySelector('h2')?.textContent||'');
+    var titulo  = strongs[0] ? limpio(strongs[0].textContent) : limpio(art.querySelector('h2')?.textContent||'');
     titulo = titulo.replace(/\s+/g,' ').toUpperCase().substring(0,100);
 
+    // ── Días / Noches ────────────────────────────────────────────────────────
     var dias = '', noches = '';
     if (strongs[1]) {
       var t2 = limpio(strongs[1].textContent);
       var dm = t2.match(/(\d+)\s*d[ií]as?/i); var nm = t2.match(/(\d+)\s*noches?/i);
       if (dm) dias = dm[1]; if (nm) noches = nm[1];
     }
+    if (!dias) {
+      var rawText = body.textContent || '';
+      var dm2 = rawText.match(/(\d+)\s*d[ií]as?/i); var nm2 = rawText.match(/(\d+)\s*noches?/i);
+      if (dm2) dias = dm2[1]; if (nm2) noches = nm2[1];
+    }
 
-    var salidasStr = '';
-    art.querySelectorAll('[itemprop="articleBody"] p').forEach(function(p) {
-      if (salidasStr) return;
-      var m = limpio(p.textContent).match(/^salidas?\s*:?\s*(.{3,120})/i);
-      if (m) salidasStr = m[1].trim();
-    });
-
+    // ── Incluye ──────────────────────────────────────────────────────────────
     var incluye = [];
-    var body = art.querySelector('[itemprop="articleBody"]');
-    if (body) {
-      var marcador = null;
-      Array.from(body.children).forEach(function(node) {
-        if (!marcador && node.tagName === 'P' && /incluye\s*:/i.test(node.textContent)) marcador = node;
-      });
-      if (marcador) {
-        var node = marcador.nextElementSibling;
-        while (node) {
-          if (node.tagName === 'TABLE') break;
-          if (node.tagName === 'UL') {
-            node.querySelectorAll('li').forEach(function(li) {
-              var t = limpio(li.textContent).replace(/^[-–•]+/,'').trim();
-              if (t.length > 3) incluye.push(t);
-            });
-          }
-          if (node.tagName === 'P') {
-            var txt = limpio(node.textContent);
-            if (/^d[ií]a\s+\d/i.test(txt)) break;
-            node.innerHTML.split(/<br\s*\/?>/i).forEach(function(f) {
-              var t = limpio(new DOMParser().parseFromString(f,'text/html').body.textContent);
-              if (t.includes('-')) { var item = t.replace(/^[\s\-–•]+/,'').trim(); if (item.length>3 && !incluye.includes(item)) incluye.push(item); }
-            });
-          }
-          node = node.nextElementSibling;
+    var marcador = null;
+    Array.from(body.children).forEach(function(node) {
+      if (!marcador && node.tagName === 'P' && /incluye\s*:/i.test(node.textContent)) marcador = node;
+    });
+    if (marcador) {
+      var node = marcador.nextElementSibling;
+      while (node) {
+        if (node.tagName === 'TABLE') break;
+        if (node.tagName === 'UL') {
+          node.querySelectorAll('li').forEach(function(li) {
+            var t = limpio(li.textContent).replace(/^[-–•]+/,'').trim();
+            if (t.length > 3) incluye.push(t);
+          });
         }
+        if (node.tagName === 'P') {
+          var txt = limpio(node.textContent);
+          if (/^d[ií]a\s+\d/i.test(txt)) break;
+          node.innerHTML.split(/<br\s*\/?>/i).forEach(function(f) {
+            var t = limpio(new DOMParser().parseFromString(f,'text/html').body.textContent);
+            if (t.includes('-')) { var item = t.replace(/^[\s\-–•]+/,'').trim(); if (item.length>3 && !incluye.includes(item)) incluye.push(item); }
+          });
+        }
+        node = node.nextElementSibling;
       }
     }
 
+    // ── Itinerario ────────────────────────────────────────────────────────────
     var itinerario = [];
     var DIA_RX = /^(d[ií]a\s+\d{1,2}(?:\s+al\s+(?:d[ií]a\s+)?\d{1,2})?)\s*/i;
-    var capturando = false, tablaVista = false;
-    if (body) {
-      Array.from(body.children).forEach(function(node) {
-        if (tablaVista) return;
-        if (node.tagName === 'TABLE') { tablaVista = true; return; }
-        if (node.tagName !== 'P') return;
-        var txt = limpio(node.textContent); if (!txt) return;
-        if (!capturando && /^d[ií]a\s+0?1\b/i.test(txt)) capturando = true;
-        if (!capturando) return;
-        if (/fin\s+de\s+nuestros?\s+servicios/i.test(txt)) {
-          var m = DIA_RX.exec(txt);
-          itinerario.push(m ? { dia: normalizarDia(m[1]), texto: txt.slice(m[0].length).replace(/^[-:\s]+/,'').trim() } : { dia:'', texto: txt });
-          capturando = false; return;
-        }
+    var capturando = false;
+    Array.from(body.children).forEach(function(node) {
+      if (node.tagName === 'TABLE') { capturando = false; return; }
+      if (node.tagName !== 'P') return;
+      var txt = limpio(node.textContent); if (!txt) return;
+      if (!capturando && /^d[ií]a\s+0?1\b/i.test(txt)) capturando = true;
+      if (!capturando) return;
+      if (/fin\s+de\s+nuestros?\s+servicios/i.test(txt)) {
         var m = DIA_RX.exec(txt);
-        if (m) itinerario.push({ dia: normalizarDia(m[1]), texto: txt.slice(m[0].length).replace(/^[-:\s]+/,'').trim() });
-        else   itinerario.push({ dia: '', texto: txt });
-      });
-    }
+        itinerario.push(m ? { dia: normalizarDia(m[1]), texto: txt.slice(m[0].length).replace(/^[-:\s]+/,'').trim() } : { dia:'', texto: txt });
+        capturando = false; return;
+      }
+      var m = DIA_RX.exec(txt);
+      if (m) itinerario.push({ dia: normalizarDia(m[1]), texto: txt.slice(m[0].length).replace(/^[-:\s]+/,'').trim() });
+      else   itinerario.push({ dia: '', texto: txt });
+    });
 
-    var hoteles = [];
-    if (body) {
-      body.querySelectorAll('table').forEach(function(tbl) {
-        var rows = tbl.querySelectorAll('tr'); if (rows.length < 2) return;
-        var headers = Array.from(rows[0].querySelectorAll('td,th')).map(function(c) { return limpio(c.textContent).toLowerCase(); });
-        if (!headers.some(function(h){return /hotel/.test(h);}) && !headers.some(function(h){return /sgl/.test(h);})) return;
-        var idx = {
-          hotel: headers.findIndex(function(h){return /hotel/.test(h);}),
-          sgl:   headers.findIndex(function(h){return h==='sgl';}),
-          dbl:   headers.findIndex(function(h){return h==='dbl';}),
-          tpl:   headers.findIndex(function(h){return h==='tpl';}),
-          cpl:   headers.findIndex(function(h){return h==='cpl';}),
-          qpl:   headers.findIndex(function(h){return h==='qpl';}),
-          playa: headers.findIndex(function(h,i){return i>0&&!/sgl|dbl|tpl|cpl|qpl/.test(h)&&h.length>0&&i!==headers.findIndex(function(x){return /hotel/.test(x);});}),
-        };
-        var pv2 = function(v){ var n=parseInt((v||'').replace(/[^\d]/g,'')); return isNaN(n)||n===0?null:n; };
-        var gc  = function(cells,i){ return i>=0?limpio(cells[i]?.textContent||''):''; };
-        rows.forEach(function(row,ri) {
-          if (!ri) return;
-          var cells = row.querySelectorAll('td'); if (cells.length<3) return;
-          var nombre = gc(cells,Math.max(idx.hotel,0)).replace(/\s+/g,' ').trim();
-          if (!nombre||/^hotel(es)?$/i.test(nombre)) return;
-          hoteles.push({ nombre, playa: idx.playa>=0?gc(cells,idx.playa):'—', sgl:pv2(gc(cells,idx.sgl)), dbl:pv2(gc(cells,idx.dbl)), tpl:pv2(gc(cells,idx.tpl)), cpl:pv2(gc(cells,idx.cpl)), qpl:pv2(gc(cells,idx.qpl)) });
+    // ── TABLA(S) DE PRECIOS + SALIDAS asociadas ───────────────────────────────
+    // Sendas puede tener UNA tabla con múltiples salidas como secciones,
+    // O múltiples tablas cada una precedida por un <p><strong>SALIDA: fecha</strong></p>
+    // Estrategia: recorrer nodos en orden, detectar "SALIDA" antes de cada tabla
+    var hoteles       = [];  // array plano para la ficha (una fila por hotel×salida)
+    var fechasBanda   = [];  // array para la banda de fechas
+    var salidaActual  = '';
+    var tablasVistas  = 0;
+
+    Array.from(body.children).forEach(function(node) {
+      // Detectar párrafo con SALIDA antes de la tabla
+      if (node.tagName === 'P' || node.tagName === 'STRONG') {
+        var txt = limpio(node.textContent);
+        // Patrón: "SALIDA: 24 DE OCTUBRE" o "SALIDAS: 28 DE OCTUBRE 1° DE NOVIEMBRE"
+        var sm = txt.match(/^salidas?\s*:?\s*(.{3,120})/i);
+        if (sm) salidaActual = sm[1].trim();
+      }
+
+      if (node.tagName !== 'TABLE') return;
+      tablasVistas++;
+
+      // Leer encabezado
+      var rows    = node.querySelectorAll('tr');
+      if (rows.length < 2) return;
+      var headers = Array.from(rows[0].querySelectorAll('td,th'))
+        .map(function(c){ return limpio(c.textContent).toLowerCase(); });
+
+      // Verificar que sea tabla de precios (tiene hotel y columnas sgl/dbl)
+      var hasHotel = headers.some(function(h){ return /hotel/.test(h); });
+      var hasPrice = headers.some(function(h){ return /sgl|dbl/.test(h); });
+      if (!hasHotel && !hasPrice) return;
+
+      var idx = {
+        hotel: headers.findIndex(function(h){ return /hotel/.test(h); }),
+        playa: -1,
+        sgl:   headers.findIndex(function(h){ return h==='sgl'; }),
+        dbl:   headers.findIndex(function(h){ return h==='dbl'; }),
+        tpl:   headers.findIndex(function(h){ return h==='tpl'; }),
+        cpl:   headers.findIndex(function(h){ return h==='cpl'; }),
+        qpl:   headers.findIndex(function(h){ return h==='qpl'; }),
+      };
+      // Columna playa: columna no-precio entre hotel y sgl
+      headers.forEach(function(h,i){
+        if (i > 0 && i !== idx.hotel && !/sgl|dbl|tpl|cpl|qpl/.test(h) && h.length > 0)
+          if (idx.playa === -1) idx.playa = i;
+      });
+
+      var pv2 = function(v){ var n=parseInt((v||'').replace(/[^\d]/g,'')); return isNaN(n)||n===0?null:n; };
+      var gc  = function(cells,i){ return i>=0?(limpio(cells[i]?.textContent||'')):'' ; };
+
+      // Detectar si la tabla MISMA tiene salidas como filas (algunas versiones de Sendas)
+      // Patrón: primera columna dice "SALIDA: fecha" en lugar de nombre de hotel
+      var tieneSalidasInternas = false;
+      rows.forEach(function(row, ri){
+        if (ri === 0) return;
+        var firstCell = limpio(row.querySelectorAll('td')[0]?.textContent||'');
+        if (/^salidas?\s*:/i.test(firstCell)) tieneSalidasInternas = true;
+      });
+
+      if (tieneSalidasInternas) {
+        // La tabla tiene secciones internas con salidas
+        var salidaFila = salidaActual;
+        rows.forEach(function(row, ri){
+          if (ri === 0) return;
+          var cells = row.querySelectorAll('td');
+          var firstCell = limpio(cells[0]?.textContent||'');
+          // Fila de salida
+          var sm2 = firstCell.match(/^salidas?\s*:?\s*(.{3,100})/i);
+          if (sm2) { salidaFila = sm2[1].trim(); return; }
+          // Fila de hotel
+          if (cells.length < 3) return;
+          var nombre = gc(cells, Math.max(idx.hotel,0)).replace(/\s+/g,' ').trim();
+          if (!nombre || /^hotel(es)?$/i.test(nombre)) return;
+          hoteles.push({
+            nombre: nombre,
+            salida: salidaFila,
+            playa:  idx.playa>=0 ? gc(cells, idx.playa) : '—',
+            sgl: pv2(gc(cells, idx.sgl)), dbl: pv2(gc(cells, idx.dbl)),
+            tpl: pv2(gc(cells, idx.tpl)), cpl: pv2(gc(cells, idx.cpl)), qpl: pv2(gc(cells, idx.qpl)),
+          });
         });
+      } else {
+        // Tabla estándar: una salida por tabla
+        rows.forEach(function(row, ri){
+          if (ri === 0) return;
+          var cells = row.querySelectorAll('td');
+          if (cells.length < 3) return;
+          var nombre = gc(cells, Math.max(idx.hotel,0)).replace(/\s+/g,' ').trim();
+          if (!nombre || /^hotel(es)?$/i.test(nombre)) return;
+          hoteles.push({
+            nombre: nombre,
+            salida: salidaActual,
+            playa:  idx.playa>=0 ? gc(cells, idx.playa) : '—',
+            sgl: pv2(gc(cells, idx.sgl)), dbl: pv2(gc(cells, idx.dbl)),
+            tpl: pv2(gc(cells, idx.tpl)), cpl: pv2(gc(cells, idx.cpl)), qpl: pv2(gc(cells, idx.qpl)),
+          });
+        });
+      }
+
+      // Registrar esta salida en fechasBanda si es nueva
+      var salidaLabel = salidaActual || ('Salida ' + tablasVistas);
+      if (!fechasBanda.some(function(f){ return f.value === salidaLabel; })) {
+        fechasBanda.push({ label: 'Salida', value: salidaLabel, gold: true });
+      }
+      salidaActual = ''; // reset para la siguiente tabla
+    });
+
+    // ── Fallback: salida desde primer párrafo con "SALIDAS:" ─────────────────
+    if (!fechasBanda.length) {
+      body.querySelectorAll('p').forEach(function(p){
+        if (fechasBanda.length) return;
+        var m = limpio(p.textContent).match(/^salidas?\s*:?\s*(.{3,120})/i);
+        if (m) fechasBanda.push({ label: 'Salidas', value: m[1].trim(), gold: true });
       });
     }
+    if (!fechasBanda.length) {
+      fechasBanda.push({ label: 'Salidas', value: 'Consultar disponibilidad', gold: true });
+    }
+    fechasBanda.push({ label: 'Operador', value: 'Sendas Turismo', gold: false });
+
+    // ── Notas de precios ──────────────────────────────────────────────────────
+    var notas = [];
+    var pasadaTabla = false;
+    Array.from(body.children).forEach(function(node){
+      if (node.tagName === 'TABLE') { pasadaTabla = true; return; }
+      if (!pasadaTabla || node.tagName !== 'P') return;
+      var txt = limpio(node.textContent);
+      if (txt.length < 10) return;
+      if (/menores|solo\s+asiento|no\s+incluye|solo\s+bus/i.test(txt)) {
+        if (!notas.some(function(n){ return n.texto === txt; }))
+          notas.push({ titulo: 'Nota', texto: txt });
+      }
+    });
+    if (!notas.length) notas.push({ titulo: 'Precios', texto: 'Consultar tarifas vigentes al momento de la reserva.' });
 
     var duracion = dias ? dias+' DÍAS'+(noches?' — '+noches+' NOCHES':'') : 'Consultar';
-    return { operador:'sendas', sourceUrl, titulo, subtitulo:duracion, duracion, destinoSlug:detectarDestinoSlug(titulo),
-      fechas:[{label:'Salidas',value:salidasStr||'Consultar disponibilidad',gold:true},{label:'Operador',value:'Sendas Turismo',gold:false}],
-      incluye:incluye.length?incluye:['Consultar programa completo en agencia'], itinerario, hoteles,
-      notas_precios:[{titulo:'Precios',texto:'Consultar tarifas vigentes al momento de la reserva.'}] };
+    return {
+      operador: 'sendas', sourceUrl, titulo,
+      subtitulo: duracion, duracion,
+      destinoSlug: detectarDestinoSlug(titulo),
+      fechas: fechasBanda,
+      incluye: incluye.length ? incluye : ['Consultar programa completo en agencia'],
+      itinerario, hoteles, notas_precios: notas,
+    };
   }
-
   // ── Parser Funtour ─────────────────────────────────────────────────────────
   function parseFuntour(html, sourceUrl) {
     var doc = parsearDOM(html);
