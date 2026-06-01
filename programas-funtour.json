@@ -1,7 +1,91 @@
 {
   "operador": "Funtour",
-  "updatedAt": "2026-05-25T16:55:04.277Z",
+  "updatedAt": "2026-06-01T15:30:19.912Z",
   "programas": [
+    {
+      "id": "funtour-termas-romanas-en-agosto",
+      "slug": "termas-romanas-en-agosto",
+      "operador": "funtour",
+      "sourceUrl": "https://www.funtour.com.uy/tienda/termas-romanas-en-agosto/",
+      "titulo": "Termas Romanas en Agosto",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "Termas Romanas en Agosto",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2026/05/b1ced0f6-7d55-4d61-8f9a-87f21a8fa354-1024x768.webp",
+      "highlights": [],
+      "incluye": [
+        "Bus semi cama",
+        "Guía acompañante durante todo el viaje.",
+        "Servicio a bordo ida y vuelta.",
+        "03 noches de alojamiento con pension completa en Hotel Resort Recanto Maestro.",
+        "Asistencia médica cobertura 60k."
+      ],
+      "noIncluye": [
+        "Eco tasa hotelera (por cuenta del pasajero).",
+        "Todo lo que no figure en Incluye."
+      ],
+      "hoteles": [
+        {
+          "nombre": "Hotel Resort Recanto Maestro",
+          "url": ""
+        }
+      ],
+      "itinerario": [],
+      "salidas": [
+        "4 de agosto"
+      ],
+      "bases": [
+        "Single",
+        "Doble"
+      ],
+      "precioDesde": "499",
+      "variantesCompletas": [
+        {
+          "variationId": 36050,
+          "salida": "4 de agosto",
+          "alojamiento": "Hotel Resort Recanto Maestro",
+          "base": "Single",
+          "precio": "819",
+          "disponible": true,
+          "sku": "PKG--4-DE-AGOSTO-HOTEL-RESORT-RECANTO-MAESTRO-SINGLE-T5615"
+        },
+        {
+          "variationId": 36051,
+          "salida": "4 de agosto",
+          "alojamiento": "Hotel Resort Recanto Maestro",
+          "base": "Doble",
+          "precio": "499",
+          "disponible": true,
+          "sku": "PKG--4-DE-AGOSTO-HOTEL-RESORT-RECANTO-MAESTRO-DOBLE-T5615"
+        }
+      ],
+      "matrizPrecios": {
+        "4 de agosto": {
+          "Hotel Resort Recanto Maestro": {
+            "Single": 819,
+            "Doble": 499
+          }
+        }
+      },
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "4 de agosto",
+          "gold": true
+        },
+        {
+          "label": "Habitación",
+          "value": "Single / Doble",
+          "gold": false
+        }
+      ],
+      "temporada": "Agosto",
+      "notas": [],
+      "updatedAt": "2026-06-01T15:29:23.527Z"
+    },
     {
       "id": "funtour-fin-de-ano-2026-en-florianopolis-con-media-pension-y-paseos-8-dias",
       "slug": "fin-de-ano-2026-en-florianopolis-con-media-pension-y-paseos-8-dias",
@@ -244,7 +328,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:10.414Z"
+      "updatedAt": "2026-06-01T15:29:25.652Z"
     },
     {
       "id": "funtour-navidad-2026-en-florianopolis-con-media-pension-y-paseos-8-dias",
@@ -508,7 +592,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:12.644Z"
+      "updatedAt": "2026-06-01T15:29:27.883Z"
     },
     {
       "id": "funtour-villa-carlos-paz-setiembre-2026",
@@ -617,7 +701,7 @@
       ],
       "temporada": "Setiembre",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:14.808Z"
+      "updatedAt": "2026-06-01T15:29:29.971Z"
     },
     {
       "id": "funtour-norte-argentino-aereo",
@@ -778,7 +862,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:16.937Z"
+      "updatedAt": "2026-06-01T15:29:32.051Z"
     },
     {
       "id": "funtour-mendoza-aereo-vacaciones-de-setiembre-2026",
@@ -867,7 +951,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:19.109Z"
+      "updatedAt": "2026-06-01T15:29:34.119Z"
     },
     {
       "id": "funtour-cataratas-aereo-vacaciones-de-setiembre-2026",
@@ -1008,7 +1092,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:21.257Z"
+      "updatedAt": "2026-06-01T15:29:36.338Z"
     },
     {
       "id": "funtour-gramado-y-canela-vacaciones-de-setiembre-2026",
@@ -1194,7 +1278,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:23.440Z"
+      "updatedAt": "2026-06-01T15:29:38.493Z"
     },
     {
       "id": "funtour-gramado-con-2-parques-vacaciones-de-setiembre-2026",
@@ -1372,7 +1456,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:25.602Z"
+      "updatedAt": "2026-06-01T15:29:40.631Z"
     },
     {
       "id": "funtour-gramado-y-canela-natal-luz-2026",
@@ -1532,7 +1616,7 @@
       ],
       "temporada": "Natal",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:27.859Z"
+      "updatedAt": "2026-06-01T15:29:43.087Z"
     },
     {
       "id": "funtour-bariloche-aereo-vacaciones-de-setiembre-2026",
@@ -1822,7 +1906,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:30.105Z"
+      "updatedAt": "2026-06-01T15:29:45.263Z"
     },
     {
       "id": "funtour-florianopolis-vacaciones-de-setiembre-bus-y-hotel",
@@ -1993,7 +2077,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:32.281Z"
+      "updatedAt": "2026-06-01T15:29:47.373Z"
     },
     {
       "id": "funtour-florianopolis-vacaciones-de-setiembre-media-pension-y-paseos",
@@ -2164,7 +2248,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:34.470Z"
+      "updatedAt": "2026-06-01T15:29:49.558Z"
     },
     {
       "id": "funtour-florianopolis-baja-agosto-a-diciembre-2026-media-pension-y-paseos",
@@ -2257,7 +2341,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:36.761Z"
+      "updatedAt": "2026-06-01T15:29:51.700Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-agosto-2026",
@@ -2360,7 +2444,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:38.933Z"
+      "updatedAt": "2026-06-01T15:29:53.864Z"
     },
     {
       "id": "funtour-florianopolis-abril-a-junio-8-dias-media-pension-y-paseos",
@@ -2558,7 +2642,7 @@
       ],
       "temporada": "Abril",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:41.116Z"
+      "updatedAt": "2026-06-01T15:29:55.971Z"
     },
     {
       "id": "funtour-gramado-y-canela-temporada-baja-2026",
@@ -2645,7 +2729,7 @@
       ],
       "temporada": "Temporada baja",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:43.292Z"
+      "updatedAt": "2026-06-01T15:29:58.094Z"
     },
     {
       "id": "funtour-bariloche-aereo-vacaciones-de-julio-2026",
@@ -2918,7 +3002,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:45.633Z"
+      "updatedAt": "2026-06-01T15:30:01.472Z"
     },
     {
       "id": "funtour-santiago-de-chile-con-vina-y-valparaiso-vacaciones-de-julio-2026",
@@ -3068,7 +3152,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:47.866Z"
+      "updatedAt": "2026-06-01T15:30:04.544Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-julio-2026",
@@ -3218,7 +3302,7 @@
       ],
       "temporada": "Julio",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:50.018Z"
+      "updatedAt": "2026-06-01T15:30:06.714Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-turismo-2026",
@@ -3321,7 +3405,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:52.238Z"
+      "updatedAt": "2026-06-01T15:30:08.824Z"
     },
     {
       "id": "funtour-wine-tour-chile-2026",
@@ -3419,7 +3503,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:54.378Z"
+      "updatedAt": "2026-06-01T15:30:11.051Z"
     },
     {
       "id": "funtour-cataratas-aereo-vacaciones-de-julio-2026",
@@ -3558,7 +3642,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:56.502Z"
+      "updatedAt": "2026-06-01T15:30:13.485Z"
     },
     {
       "id": "funtour-gramado-y-canela-vacaciones-de-julio-2026-desde-montevideo-y-litoral-norte",
@@ -3734,7 +3818,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-05-25T16:54:58.699Z"
+      "updatedAt": "2026-06-01T15:30:15.628Z"
     },
     {
       "id": "funtour-gramado-con-2-parques-vacaciones-de-julio-2026-desde-montevideo-y-litoral-norte",
@@ -3921,7 +4005,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-05-25T16:55:01.196Z"
+      "updatedAt": "2026-06-01T15:30:17.754Z"
     },
     {
       "id": "funtour-floripa-julio-con-beto-carrero-y-compras-8-dias-media-pension-y-paseos",
@@ -4146,7 +4230,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-05-25T16:55:04.277Z"
+      "updatedAt": "2026-06-01T15:30:19.911Z"
     }
   ]
 }
