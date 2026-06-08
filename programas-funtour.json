@@ -1,6 +1,6 @@
 {
   "operador": "Funtour",
-  "updatedAt": "2026-06-01T15:30:19.912Z",
+  "updatedAt": "2026-06-08T13:12:36.869Z",
   "programas": [
     {
       "id": "funtour-termas-romanas-en-agosto",
@@ -84,7 +84,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:23.527Z"
+      "updatedAt": "2026-06-08T13:11:48.326Z"
     },
     {
       "id": "funtour-fin-de-ano-2026-en-florianopolis-con-media-pension-y-paseos-8-dias",
@@ -154,7 +154,7 @@
         {
           "dia": "DÍA 08",
           "lugar": "URUGUAY",
-          "detalle": "A primeras horas de la mañana llegaremos a Uruguay, Fin de nuestros servicios. *CENAS EN RESTAURANTES,EXCEPTO MAR DE CANASVIEIRAS QUE CENA EN HOTEL* *LA CENA EN PASEO DE CAMBORIU ES EN RESTAURANTE DOM ALBERTO* POLITICA DE MENORES *De 0 a 3 años no paga y ocupa asiento, se acomoda con los adultos en la habitación ( no cuenta con servicio) siempre acompañado de 2 adultos, max 1 por reserva *De 4 en adelante pagan como adultos ( Mar de Canasvieiras cuenta con política de menores con tarifa diferencial de 4 a 12 años 1 por reserva acompañado de dos adultos ) CHECK IN *Pasadas las 14 hs + LINKS HOTELERIA FLORIANOPOLIS + *MAR DE CANASVIEIRAS",
+          "detalle": "A primeras horas de la mañana llegaremos a Uruguay, Fin de nuestros servicios. *CENAS EN RESTAURANTES,EXCEPTO MAR DE CANASVIEIRAS QUE CENA EN HOTEL* *LA CENA EN PASEO DE CAMBORIU ES EN RESTAURANTE DOM ALBERTO* POLITICA DE MENORES *De 0 a 3 años no paga y ocupa asiento, se acomoda con los adultos en la habitación ( no cuenta con servicio) siempre acompañado de 2 adultos, max 1 por reserva *De 4 en adelante pagan como adultos (Mar de Canasvieiras cuenta con política de menores con tarifa diferencial de 4 a 12 años 1 por reserva acompañado de dos adultos, a usd$ 599) CHECK IN *Pasadas las 14 hs + LINKS HOTELERIA FLORIANOPOLIS + *MAR DE CANASVIEIRAS",
           "first": false,
           "last": true
         }
@@ -166,109 +166,28 @@
         "Cuádruple",
         "Doble",
         "Triple",
-        "Cuadruple",
-        "Single"
+        "Single",
+        "Child"
       ],
-      "precioDesde": "679",
+      "precioDesde": "599",
       "variantesCompletas": [
         {
-          "variationId": 36002,
+          "variationId": 36059,
           "salida": "27 de diciembre",
-          "alojamiento": "Hotel Dom Fish",
+          "alojamiento": "Hotel Mar De Canasvieiras",
+          "base": "Child",
+          "precio": "599",
+          "disponible": true,
+          "sku": "PKG-107"
+        },
+        {
+          "variationId": 36014,
+          "salida": "27 de diciembre",
+          "alojamiento": "Hotel Mar De Canasvieiras",
           "base": "Cuádruple",
-          "precio": "749",
+          "precio": "829",
           "disponible": true,
-          "sku": "PKG--27-DE-DICIEMBRE-HOTEL-DOM-FISH-CUáDRUPLE-T5608"
-        },
-        {
-          "variationId": 36003,
-          "salida": "27 de diciembre",
-          "alojamiento": "Hotel Dom Fish",
-          "base": "Doble",
-          "precio": "749",
-          "disponible": true,
-          "sku": "PKG--27-DE-DICIEMBRE-HOTEL-DOM-FISH-DOBLE-T5608"
-        },
-        {
-          "variationId": 36004,
-          "salida": "27 de diciembre",
-          "alojamiento": "Hotel Dom Fish",
-          "base": "Triple",
-          "precio": "749",
-          "disponible": true,
-          "sku": "PKG--27-DE-DICIEMBRE-HOTEL-DOM-FISH-TRIPLE-T5608"
-        },
-        {
-          "variationId": 36005,
-          "salida": "27 de diciembre",
-          "alojamiento": "Flat HS Hotel",
-          "base": "Cuadruple",
-          "precio": "679",
-          "disponible": true,
-          "sku": "PKG--27-DE-DICIEMBRE-FLAT-HS-HOTEL-CUADRUPLE-T5609"
-        },
-        {
-          "variationId": 36006,
-          "salida": "27 de diciembre",
-          "alojamiento": "Flat HS Hotel",
-          "base": "Triple",
-          "precio": "679",
-          "disponible": true,
-          "sku": "PKG--27-DE-DICIEMBRE-FLAT-HS-HOTEL-TRIPLE-T5609"
-        },
-        {
-          "variationId": 36007,
-          "salida": "27 de diciembre",
-          "alojamiento": "Pousada Barbroch",
-          "base": "Doble",
-          "precio": "859",
-          "disponible": true,
-          "sku": "PKG--27-DE-DICIEMBRE-POUSADA-BARBROCH-DOBLE-T5610"
-        },
-        {
-          "variationId": 36008,
-          "salida": "27 de diciembre",
-          "alojamiento": "Pousada Barbroch",
-          "base": "Triple",
-          "precio": "859",
-          "disponible": true,
-          "sku": "PKG--27-DE-DICIEMBRE-POUSADA-BARBROCH-TRIPLE-T5610"
-        },
-        {
-          "variationId": 36009,
-          "salida": "27 de diciembre",
-          "alojamiento": "Pousada Barbroch",
-          "base": "Cuadruple",
-          "precio": "858",
-          "disponible": true,
-          "sku": "PKG--27-DE-DICIEMBRE-POUSADA-BARBROCH-CUADRUPLE-T5610"
-        },
-        {
-          "variationId": 36010,
-          "salida": "27 de diciembre",
-          "alojamiento": "Pousada Barbroch",
-          "base": "Single",
-          "precio": "1259",
-          "disponible": true,
-          "sku": "PKG--27-DE-DICIEMBRE-POUSADA-BARBROCH-SINGLE-T5610"
-        },
-        {
-          "variationId": 36011,
-          "salida": "27 de diciembre",
-          "alojamiento": "Hotel Mar De Canasvieiras",
-          "base": "Single",
-          "precio": "1349",
-          "disponible": true,
-          "sku": "PKG--27-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-SINGLE-T5611"
-        },
-        {
-          "variationId": 36012,
-          "salida": "27 de diciembre",
-          "alojamiento": "Hotel Mar De Canasvieiras",
-          "base": "Doble",
-          "precio": "849",
-          "disponible": true,
-          "sku": "PKG--27-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-DOBLE-T5611"
+          "sku": "PKG--27-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-CUáDRUPLE-T5611"
         },
         {
           "variationId": 36013,
@@ -280,37 +199,128 @@
           "sku": "PKG--27-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-TRIPLE-T5611"
         },
         {
-          "variationId": 36014,
+          "variationId": 36012,
           "salida": "27 de diciembre",
           "alojamiento": "Hotel Mar De Canasvieiras",
-          "base": "Cuádruple",
-          "precio": "829",
+          "base": "Doble",
+          "precio": "849",
           "disponible": true,
-          "sku": "PKG--27-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-CUáDRUPLE-T5611"
+          "sku": "PKG--27-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-DOBLE-T5611"
+        },
+        {
+          "variationId": 36011,
+          "salida": "27 de diciembre",
+          "alojamiento": "Hotel Mar De Canasvieiras",
+          "base": "Single",
+          "precio": "1349",
+          "disponible": true,
+          "sku": "PKG--27-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-SINGLE-T5611"
+        },
+        {
+          "variationId": 36010,
+          "salida": "27 de diciembre",
+          "alojamiento": "Pousada Barbroch",
+          "base": "Single",
+          "precio": "1259",
+          "disponible": true,
+          "sku": "PKG--27-DE-DICIEMBRE-POUSADA-BARBROCH-SINGLE-T5610"
+        },
+        {
+          "variationId": 36009,
+          "salida": "27 de diciembre",
+          "alojamiento": "Pousada Barbroch",
+          "base": "Cuádruple",
+          "precio": "858",
+          "disponible": true,
+          "sku": "PKG--27-DE-DICIEMBRE-POUSADA-BARBROCH-CUADRUPLE-T5610"
+        },
+        {
+          "variationId": 36008,
+          "salida": "27 de diciembre",
+          "alojamiento": "Pousada Barbroch",
+          "base": "Triple",
+          "precio": "859",
+          "disponible": true,
+          "sku": "PKG--27-DE-DICIEMBRE-POUSADA-BARBROCH-TRIPLE-T5610"
+        },
+        {
+          "variationId": 36007,
+          "salida": "27 de diciembre",
+          "alojamiento": "Pousada Barbroch",
+          "base": "Doble",
+          "precio": "859",
+          "disponible": true,
+          "sku": "PKG--27-DE-DICIEMBRE-POUSADA-BARBROCH-DOBLE-T5610"
+        },
+        {
+          "variationId": 36006,
+          "salida": "27 de diciembre",
+          "alojamiento": "Flat HS Hotel",
+          "base": "Triple",
+          "precio": "679",
+          "disponible": true,
+          "sku": "PKG--27-DE-DICIEMBRE-FLAT-HS-HOTEL-TRIPLE-T5609"
+        },
+        {
+          "variationId": 36005,
+          "salida": "27 de diciembre",
+          "alojamiento": "Flat HS Hotel",
+          "base": "Cuádruple",
+          "precio": "679",
+          "disponible": true,
+          "sku": "PKG--27-DE-DICIEMBRE-FLAT-HS-HOTEL-CUADRUPLE-T5609"
+        },
+        {
+          "variationId": 36004,
+          "salida": "27 de diciembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Triple",
+          "precio": "749",
+          "disponible": true,
+          "sku": "PKG--27-DE-DICIEMBRE-HOTEL-DOM-FISH-TRIPLE-T5608"
+        },
+        {
+          "variationId": 36003,
+          "salida": "27 de diciembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Doble",
+          "precio": "749",
+          "disponible": true,
+          "sku": "PKG--27-DE-DICIEMBRE-HOTEL-DOM-FISH-DOBLE-T5608"
+        },
+        {
+          "variationId": 36002,
+          "salida": "27 de diciembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Cuádruple",
+          "precio": "749",
+          "disponible": true,
+          "sku": "PKG--27-DE-DICIEMBRE-HOTEL-DOM-FISH-CUáDRUPLE-T5608"
         }
       ],
       "matrizPrecios": {
         "27 de diciembre": {
-          "Hotel Dom Fish": {
-            "Cuádruple": 749,
-            "Doble": 749,
-            "Triple": 749
-          },
-          "Flat HS Hotel": {
-            "Cuadruple": 679,
-            "Triple": 679
+          "Hotel Mar De Canasvieiras": {
+            "Child": 599,
+            "Cuádruple": 829,
+            "Triple": 839,
+            "Doble": 849,
+            "Single": 1349
           },
           "Pousada Barbroch": {
-            "Doble": 859,
+            "Single": 1259,
+            "Cuádruple": 858,
             "Triple": 859,
-            "Cuadruple": 858,
-            "Single": 1259
+            "Doble": 859
           },
-          "Hotel Mar De Canasvieiras": {
-            "Single": 1349,
-            "Doble": 849,
-            "Triple": 839,
-            "Cuádruple": 829
+          "Flat HS Hotel": {
+            "Triple": 679,
+            "Cuádruple": 679
+          },
+          "Hotel Dom Fish": {
+            "Triple": 749,
+            "Doble": 749,
+            "Cuádruple": 749
           }
         }
       },
@@ -322,13 +332,13 @@
         },
         {
           "label": "Habitación",
-          "value": "Cuádruple / Doble / Triple / Cuadruple / Single",
+          "value": "Cuádruple / Doble / Triple / Single / Child",
           "gold": false
         }
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:25.652Z"
+      "updatedAt": "2026-06-08T13:11:50.478Z"
     },
     {
       "id": "funtour-navidad-2026-en-florianopolis-con-media-pension-y-paseos-8-dias",
@@ -398,7 +408,7 @@
         {
           "dia": "DÍA 08",
           "lugar": "URUGUAY",
-          "detalle": "A primeras horas de la mañana llegaremos a Uruguay, Fin de nuestros servicios. *CENAS EN RESTAURANTES,EXCEPTO MAR DE CANASVIEIRAS QUE CENA EN HOTEL* *LA CENA EN PASEO DE CAMBORIU ES EN RESTAURANTE DOM ALBERTO* POLITICA DE MENORES *De 0 a 3 años no paga y ocupa asiento, se acomoda con los adultos en la habitación ( no cuenta con servicio) siempre acompañado de 2 adultos, max 1 por reserva .*De 4 en adelante pagan como adultos ( Mar de Canasvieiras cuenta con política de menores con tarifa diferencial de 4 a 12 años 1 por reserva acompañado de dos adultos ) CHECK IN *Pasadas las 14 hs + LINKS HOTELERIA FLORIANOPOLIS + *MAR DE CANASVIEIRAS",
+          "detalle": "A primeras horas de la mañana llegaremos a Uruguay, Fin de nuestros servicios. *CENAS EN RESTAURANTES,EXCEPTO MAR DE CANASVIEIRAS QUE CENA EN HOTEL* *LA CENA EN PASEO DE CAMBORIU ES EN RESTAURANTE DOM ALBERTO* POLITICA DE MENORES *De 0 a 3 años no paga y ocupa asiento, se acomoda con los adultos en la habitación ( no cuenta con servicio) siempre acompañado de 2 adultos, max 1 por reserva .*De 4 en adelante pagan como adultos (Mar de Canasvieiras cuenta con política de menores con tarifa diferencial de 4 a 12 años 1 por reserva acompañado de dos adultos, a usd$ 529) CHECK IN *Pasadas las 14 hs + LINKS HOTELERIA FLORIANOPOLIS + *MAR DE CANASVIEIRAS",
           "first": false,
           "last": true
         }
@@ -411,126 +421,18 @@
         "Doble",
         "Triple",
         "Cuádruple",
-        "Cuadruple"
+        "Child"
       ],
-      "precioDesde": "619",
+      "precioDesde": "529",
       "variantesCompletas": [
         {
-          "variationId": 35982,
+          "variationId": 35996,
           "salida": "20 de diciembre",
-          "alojamiento": "Hotel Dom Fish",
-          "base": "Single",
-          "precio": "909",
-          "disponible": true,
-          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-DOM-FISH-SINGLE-T5604"
-        },
-        {
-          "variationId": 35983,
-          "salida": "20 de diciembre",
-          "alojamiento": "Hotel Dom Fish",
-          "base": "Doble",
-          "precio": "619",
-          "disponible": true,
-          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-DOM-FISH-DOBLE-T5604"
-        },
-        {
-          "variationId": 35984,
-          "salida": "20 de diciembre",
-          "alojamiento": "Hotel Dom Fish",
-          "base": "Triple",
-          "precio": "619",
-          "disponible": true,
-          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-DOM-FISH-TRIPLE-T5604"
-        },
-        {
-          "variationId": 35985,
-          "salida": "20 de diciembre",
-          "alojamiento": "Hotel Dom Fish",
+          "alojamiento": "Hotel Montelibano",
           "base": "Cuádruple",
-          "precio": "619",
-          "disponible": true,
-          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-DOM-FISH-CUáDRUPLE-T5604"
-        },
-        {
-          "variationId": 35986,
-          "salida": "20 de diciembre",
-          "alojamiento": "Hotel Mar De Canasvieiras",
-          "base": "Single",
-          "precio": "1019",
-          "disponible": true,
-          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-SINGLE-T5605"
-        },
-        {
-          "variationId": 35987,
-          "salida": "20 de diciembre",
-          "alojamiento": "Hotel Mar De Canasvieiras",
-          "base": "Doble",
-          "precio": "699",
-          "disponible": true,
-          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-DOBLE-T5605"
-        },
-        {
-          "variationId": 35988,
-          "salida": "20 de diciembre",
-          "alojamiento": "Hotel Mar De Canasvieiras",
-          "base": "Triple",
-          "precio": "678",
-          "disponible": true,
-          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-TRIPLE-T5605"
-        },
-        {
-          "variationId": 35989,
-          "salida": "20 de diciembre",
-          "alojamiento": "Hotel Mar De Canasvieiras",
-          "base": "Cuadruple",
-          "precio": "669",
-          "disponible": true,
-          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-CUADRUPLE-T5605"
-        },
-        {
-          "variationId": 35990,
-          "salida": "20 de diciembre",
-          "alojamiento": "Pousada Abaete",
-          "base": "Single",
-          "precio": "969",
-          "disponible": true,
-          "sku": "PKG--20-DE-DICIEMBRE-POUSADA-ABAETE-SINGLE-T5606"
-        },
-        {
-          "variationId": 35991,
-          "salida": "20 de diciembre",
-          "alojamiento": "Pousada Abaete",
-          "base": "Doble",
           "precio": "719",
           "disponible": true,
-          "sku": "PKG--20-DE-DICIEMBRE-POUSADA-ABAETE-DOBLE-T5606"
-        },
-        {
-          "variationId": 35992,
-          "salida": "20 de diciembre",
-          "alojamiento": "Pousada Abaete",
-          "base": "Triple",
-          "precio": "719",
-          "disponible": true,
-          "sku": "PKG--20-DE-DICIEMBRE-POUSADA-ABAETE-TRIPLE-T5606"
-        },
-        {
-          "variationId": 35993,
-          "salida": "20 de diciembre",
-          "alojamiento": "Hotel Montelibano",
-          "base": "Single",
-          "precio": "959",
-          "disponible": true,
-          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MONTELIBANO-SINGLE-T5607"
-        },
-        {
-          "variationId": 35994,
-          "salida": "20 de diciembre",
-          "alojamiento": "Hotel Montelibano",
-          "base": "Doble",
-          "precio": "719",
-          "disponible": true,
-          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MONTELIBANO-DOBLE-T5607"
+          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MONTELIBANO-CUáDRUPLE-T5607"
         },
         {
           "variationId": 35995,
@@ -542,39 +444,157 @@
           "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MONTELIBANO-TRIPLE-T5607"
         },
         {
-          "variationId": 35996,
+          "variationId": 35994,
           "salida": "20 de diciembre",
           "alojamiento": "Hotel Montelibano",
-          "base": "Cuádruple",
+          "base": "Doble",
           "precio": "719",
           "disponible": true,
-          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MONTELIBANO-CUáDRUPLE-T5607"
+          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MONTELIBANO-DOBLE-T5607"
+        },
+        {
+          "variationId": 35993,
+          "salida": "20 de diciembre",
+          "alojamiento": "Hotel Montelibano",
+          "base": "Single",
+          "precio": "959",
+          "disponible": true,
+          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MONTELIBANO-SINGLE-T5607"
+        },
+        {
+          "variationId": 35992,
+          "salida": "20 de diciembre",
+          "alojamiento": "Pousada Abaete",
+          "base": "Triple",
+          "precio": "719",
+          "disponible": true,
+          "sku": "PKG--20-DE-DICIEMBRE-POUSADA-ABAETE-TRIPLE-T5606"
+        },
+        {
+          "variationId": 35991,
+          "salida": "20 de diciembre",
+          "alojamiento": "Pousada Abaete",
+          "base": "Doble",
+          "precio": "719",
+          "disponible": true,
+          "sku": "PKG--20-DE-DICIEMBRE-POUSADA-ABAETE-DOBLE-T5606"
+        },
+        {
+          "variationId": 35990,
+          "salida": "20 de diciembre",
+          "alojamiento": "Pousada Abaete",
+          "base": "Single",
+          "precio": "969",
+          "disponible": true,
+          "sku": "PKG--20-DE-DICIEMBRE-POUSADA-ABAETE-SINGLE-T5606"
+        },
+        {
+          "variationId": 36055,
+          "salida": "20 de diciembre",
+          "alojamiento": "Hotel Mar De Canasvieiras",
+          "base": "Child",
+          "precio": "529",
+          "disponible": true,
+          "sku": "PKG-108"
+        },
+        {
+          "variationId": 35989,
+          "salida": "20 de diciembre",
+          "alojamiento": "Hotel Mar De Canasvieiras",
+          "base": "Cuádruple",
+          "precio": "669",
+          "disponible": true,
+          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-CUADRUPLE-T5605"
+        },
+        {
+          "variationId": 35988,
+          "salida": "20 de diciembre",
+          "alojamiento": "Hotel Mar De Canasvieiras",
+          "base": "Triple",
+          "precio": "678",
+          "disponible": true,
+          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-TRIPLE-T5605"
+        },
+        {
+          "variationId": 35987,
+          "salida": "20 de diciembre",
+          "alojamiento": "Hotel Mar De Canasvieiras",
+          "base": "Doble",
+          "precio": "699",
+          "disponible": true,
+          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-DOBLE-T5605"
+        },
+        {
+          "variationId": 35986,
+          "salida": "20 de diciembre",
+          "alojamiento": "Hotel Mar De Canasvieiras",
+          "base": "Single",
+          "precio": "1019",
+          "disponible": true,
+          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-MAR-DE-CANASVIEIRAS-SINGLE-T5605"
+        },
+        {
+          "variationId": 35985,
+          "salida": "20 de diciembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Cuádruple",
+          "precio": "619",
+          "disponible": true,
+          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-DOM-FISH-CUáDRUPLE-T5604"
+        },
+        {
+          "variationId": 35984,
+          "salida": "20 de diciembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Triple",
+          "precio": "619",
+          "disponible": true,
+          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-DOM-FISH-TRIPLE-T5604"
+        },
+        {
+          "variationId": 35983,
+          "salida": "20 de diciembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Doble",
+          "precio": "619",
+          "disponible": true,
+          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-DOM-FISH-DOBLE-T5604"
+        },
+        {
+          "variationId": 35982,
+          "salida": "20 de diciembre",
+          "alojamiento": "Hotel Dom Fish",
+          "base": "Single",
+          "precio": "909",
+          "disponible": true,
+          "sku": "PKG--20-DE-DICIEMBRE-HOTEL-DOM-FISH-SINGLE-T5604"
         }
       ],
       "matrizPrecios": {
         "20 de diciembre": {
-          "Hotel Dom Fish": {
-            "Single": 909,
-            "Doble": 619,
-            "Triple": 619,
-            "Cuádruple": 619
-          },
-          "Hotel Mar De Canasvieiras": {
-            "Single": 1019,
-            "Doble": 699,
-            "Triple": 678,
-            "Cuadruple": 669
+          "Hotel Montelibano": {
+            "Cuádruple": 719,
+            "Triple": 719,
+            "Doble": 719,
+            "Single": 959
           },
           "Pousada Abaete": {
-            "Single": 969,
-            "Doble": 719,
-            "Triple": 719
-          },
-          "Hotel Montelibano": {
-            "Single": 959,
-            "Doble": 719,
             "Triple": 719,
-            "Cuádruple": 719
+            "Doble": 719,
+            "Single": 969
+          },
+          "Hotel Mar De Canasvieiras": {
+            "Child": 529,
+            "Cuádruple": 669,
+            "Triple": 678,
+            "Doble": 699,
+            "Single": 1019
+          },
+          "Hotel Dom Fish": {
+            "Cuádruple": 619,
+            "Triple": 619,
+            "Doble": 619,
+            "Single": 909
           }
         }
       },
@@ -586,122 +606,13 @@
         },
         {
           "label": "Habitación",
-          "value": "Single / Doble / Triple / Cuádruple / Cuadruple",
+          "value": "Single / Doble / Triple / Cuádruple / Child",
           "gold": false
         }
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:27.883Z"
-    },
-    {
-      "id": "funtour-villa-carlos-paz-setiembre-2026",
-      "slug": "villa-carlos-paz-setiembre-2026",
-      "operador": "funtour",
-      "sourceUrl": "https://www.funtour.com.uy/tienda/villa-carlos-paz-setiembre-2026/",
-      "titulo": "Villa Carlos Paz Setiembre 2026",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "Villa Carlos Paz Setiembre 2026",
-      "destinoSlug": "carlospaz",
-      "pais": "Argentina",
-      "emoji": "⛰️",
-      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2026/04/68b0d7bf-abde-4687-b060-2a02bed2810b-1024x1024.jpg",
-      "highlights": [],
-      "incluye": [
-        "BUS CON SERVICIO A BORDO",
-        "GUÍA COORDINADOR DURATE TODO EL RECORRIDO",
-        "04 NOCHES DE ALOJAMIENTO",
-        "MEDIA PENSIÓN (DESAYUNO Y CENA)",
-        "CITY TOUR VILLA CARLOS PAZ",
-        "CITY TOUR CORDOBA CAPITAL CON TIEMPO LIBRE PARA COMPRAS",
-        "SEGURO DE ASISTENCIA MÉDICA 40 k"
-      ],
-      "noIncluye": [],
-      "hoteles": [
-        {
-          "nombre": "*HOTEL EL CONDADO",
-          "url": "https://hotelelcondado.com.ar/"
-        },
-        {
-          "nombre": "Hotel Nuevo Centro",
-          "url": ""
-        }
-      ],
-      "itinerario": [],
-      "salidas": [
-        "20 de septiembre"
-      ],
-      "bases": [
-        "Single",
-        "Doble",
-        "Triple",
-        "Cuádruple"
-      ],
-      "precioDesde": "479",
-      "variantesCompletas": [
-        {
-          "variationId": 35865,
-          "salida": "20 de septiembre",
-          "alojamiento": "Hotel Nuevo Centro",
-          "base": "Single",
-          "precio": "649",
-          "disponible": true,
-          "sku": "PKG--20-DE-SEPTIEMBRE-HOTEL-NUEVO-CENTRO-SINGLE-T5579"
-        },
-        {
-          "variationId": 35866,
-          "salida": "20 de septiembre",
-          "alojamiento": "Hotel Nuevo Centro",
-          "base": "Doble",
-          "precio": "479",
-          "disponible": true,
-          "sku": "PKG--20-DE-SEPTIEMBRE-HOTEL-NUEVO-CENTRO-DOBLE-T5579"
-        },
-        {
-          "variationId": 35867,
-          "salida": "20 de septiembre",
-          "alojamiento": "Hotel Nuevo Centro",
-          "base": "Triple",
-          "precio": "479",
-          "disponible": true,
-          "sku": "PKG--20-DE-SEPTIEMBRE-HOTEL-NUEVO-CENTRO-TRIPLE-T5579"
-        },
-        {
-          "variationId": 35868,
-          "salida": "20 de septiembre",
-          "alojamiento": "Hotel Nuevo Centro",
-          "base": "Cuádruple",
-          "precio": "479",
-          "disponible": true,
-          "sku": "PKG--20-DE-SEPTIEMBRE-HOTEL-NUEVO-CENTRO-CUáDRUPLE-T5579"
-        }
-      ],
-      "matrizPrecios": {
-        "20 de septiembre": {
-          "Hotel Nuevo Centro": {
-            "Single": 649,
-            "Doble": 479,
-            "Triple": 479,
-            "Cuádruple": 479
-          }
-        }
-      },
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "20 de septiembre",
-          "gold": true
-        },
-        {
-          "label": "Habitación",
-          "value": "Single / Doble / Triple / Cuádruple",
-          "gold": false
-        }
-      ],
-      "temporada": "Setiembre",
-      "notas": [],
-      "updatedAt": "2026-06-01T15:29:29.971Z"
+      "updatedAt": "2026-06-08T13:11:52.618Z"
     },
     {
       "id": "funtour-norte-argentino-aereo",
@@ -862,7 +773,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:32.051Z"
+      "updatedAt": "2026-06-08T13:11:54.734Z"
     },
     {
       "id": "funtour-mendoza-aereo-vacaciones-de-setiembre-2026",
@@ -885,7 +796,7 @@
       ],
       "hoteles": [
         {
-          "nombre": "Hotel Nuevo Centro",
+          "nombre": "Hotel M",
           "url": ""
         }
       ],
@@ -903,25 +814,25 @@
         {
           "variationId": 35884,
           "salida": "20 de septiembre",
-          "alojamiento": "Hotel Nuevo Centro",
+          "alojamiento": "Hotel M",
           "base": "Single",
-          "precio": "959",
+          "precio": "1029",
           "disponible": true,
           "sku": "PKG-104-20-DE-SEPTIEMBRE-HOTEL-NUEVO-CENTRO-SINGLE-T5578"
         },
         {
           "variationId": 35885,
           "salida": "20 de septiembre",
-          "alojamiento": "Hotel Nuevo Centro",
+          "alojamiento": "Hotel M",
           "base": "Doble",
-          "precio": "759",
+          "precio": "789",
           "disponible": true,
           "sku": "PKG-104-20-DE-SEPTIEMBRE-HOTEL-NUEVO-CENTRO-DOBLE-T5578"
         },
         {
           "variationId": 35886,
           "salida": "20 de septiembre",
-          "alojamiento": "Hotel Nuevo Centro",
+          "alojamiento": "Hotel M",
           "base": "Triple",
           "precio": "759",
           "disponible": true,
@@ -930,9 +841,9 @@
       ],
       "matrizPrecios": {
         "20 de septiembre": {
-          "Hotel Nuevo Centro": {
-            "Single": 959,
-            "Doble": 759,
+          "Hotel M": {
+            "Single": 1029,
+            "Doble": 789,
             "Triple": 759
           }
         }
@@ -951,7 +862,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:34.119Z"
+      "updatedAt": "2026-06-08T13:11:56.839Z"
     },
     {
       "id": "funtour-cataratas-aereo-vacaciones-de-setiembre-2026",
@@ -1092,7 +1003,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:36.338Z"
+      "updatedAt": "2026-06-08T13:11:58.963Z"
     },
     {
       "id": "funtour-gramado-y-canela-vacaciones-de-setiembre-2026",
@@ -1278,7 +1189,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:38.493Z"
+      "updatedAt": "2026-06-08T13:12:01.220Z"
     },
     {
       "id": "funtour-gramado-con-2-parques-vacaciones-de-setiembre-2026",
@@ -1456,7 +1367,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:40.631Z"
+      "updatedAt": "2026-06-08T13:12:04.181Z"
     },
     {
       "id": "funtour-gramado-y-canela-natal-luz-2026",
@@ -1616,7 +1527,7 @@
       ],
       "temporada": "Natal",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:43.087Z"
+      "updatedAt": "2026-06-08T13:12:06.329Z"
     },
     {
       "id": "funtour-bariloche-aereo-vacaciones-de-setiembre-2026",
@@ -1906,7 +1817,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:45.263Z"
+      "updatedAt": "2026-06-08T13:12:08.488Z"
     },
     {
       "id": "funtour-florianopolis-vacaciones-de-setiembre-bus-y-hotel",
@@ -2077,7 +1988,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:47.373Z"
+      "updatedAt": "2026-06-08T13:12:10.638Z"
     },
     {
       "id": "funtour-florianopolis-vacaciones-de-setiembre-media-pension-y-paseos",
@@ -2248,7 +2159,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:49.558Z"
+      "updatedAt": "2026-06-08T13:12:12.860Z"
     },
     {
       "id": "funtour-florianopolis-baja-agosto-a-diciembre-2026-media-pension-y-paseos",
@@ -2341,7 +2252,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:51.700Z"
+      "updatedAt": "2026-06-08T13:12:15.111Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-agosto-2026",
@@ -2444,7 +2355,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:53.864Z"
+      "updatedAt": "2026-06-08T13:12:17.241Z"
     },
     {
       "id": "funtour-florianopolis-abril-a-junio-8-dias-media-pension-y-paseos",
@@ -2642,7 +2553,7 @@
       ],
       "temporada": "Abril",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:55.971Z"
+      "updatedAt": "2026-06-08T13:12:19.376Z"
     },
     {
       "id": "funtour-gramado-y-canela-temporada-baja-2026",
@@ -2729,7 +2640,7 @@
       ],
       "temporada": "Temporada baja",
       "notas": [],
-      "updatedAt": "2026-06-01T15:29:58.094Z"
+      "updatedAt": "2026-06-08T13:12:21.511Z"
     },
     {
       "id": "funtour-bariloche-aereo-vacaciones-de-julio-2026",
@@ -3002,7 +2913,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-06-01T15:30:01.472Z"
+      "updatedAt": "2026-06-08T13:12:23.950Z"
     },
     {
       "id": "funtour-santiago-de-chile-con-vina-y-valparaiso-vacaciones-de-julio-2026",
@@ -3152,260 +3063,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-06-01T15:30:04.544Z"
-    },
-    {
-      "id": "funtour-villa-carlos-paz-terrestre-julio-2026",
-      "slug": "villa-carlos-paz-terrestre-julio-2026",
-      "operador": "funtour",
-      "sourceUrl": "https://www.funtour.com.uy/tienda/villa-carlos-paz-terrestre-julio-2026/",
-      "titulo": "Villa Carlos Paz Terrestre Julio 2026",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "Villa Carlos Paz Terrestre Julio 2026",
-      "destinoSlug": "carlospaz",
-      "pais": "Argentina",
-      "emoji": "⛰️",
-      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2023/02/carlos-paz2-1024x1024.jpg",
-      "highlights": [],
-      "incluye": [
-        "🚌 BUS CON SERVICIO A BORDO",
-        "🎤 GUÍA COORDINADOR DURATE TODO EL RECORRIDO",
-        "🏩 04 NOCHES DE ALOJAMIENTO",
-        "🍽️ MEDIA PENSIÓN (DESAYUNO Y CENA)",
-        "🌄CITY TOUR VILLA CARLOS PAZ",
-        "🛍️CITY TOUR CORDOBA CAPITAL CON TIEMPO LIBRE PARA COMPRAS",
-        "🧑‍⚕️SEGURO DE ASISTENCIA MÉDICA 40 k",
-        "No incluye: Tasa hotelera/Todo lo que no especificado anteriormente"
-      ],
-      "noIncluye": [],
-      "hoteles": [
-        {
-          "nombre": "*HOTEL EL CONDADO",
-          "url": "https://hotelelcondado.com.ar/"
-        }
-      ],
-      "itinerario": [],
-      "salidas": [
-        "27 de Junio",
-        "04 de Julio"
-      ],
-      "bases": [
-        "Single",
-        "Doble",
-        "Triple",
-        "Cuádruple"
-      ],
-      "precioDesde": "415",
-      "variantesCompletas": [
-        {
-          "variationId": 34952,
-          "salida": "04 de Julio",
-          "alojamiento": "",
-          "base": "",
-          "precio": "529",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34953,
-          "salida": "04 de Julio",
-          "alojamiento": "",
-          "base": "",
-          "precio": "415",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34954,
-          "salida": "04 de Julio",
-          "alojamiento": "",
-          "base": "",
-          "precio": "415",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34955,
-          "salida": "04 de Julio",
-          "alojamiento": "",
-          "base": "",
-          "precio": "415",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34944,
-          "salida": "27 de Junio",
-          "alojamiento": "",
-          "base": "",
-          "precio": "529",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34945,
-          "salida": "27 de Junio",
-          "alojamiento": "",
-          "base": "",
-          "precio": "415",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34946,
-          "salida": "27 de Junio",
-          "alojamiento": "",
-          "base": "",
-          "precio": "415",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 34947,
-          "salida": "27 de Junio",
-          "alojamiento": "",
-          "base": "",
-          "precio": "415",
-          "disponible": true,
-          "sku": ""
-        }
-      ],
-      "matrizPrecios": {
-        "04 de Julio": {
-          "": {
-            "": 415
-          }
-        },
-        "27 de Junio": {
-          "": {
-            "": 415
-          }
-        }
-      },
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "27 de Junio",
-          "gold": true
-        },
-        {
-          "label": "Otras salidas",
-          "value": "04 de Julio",
-          "gold": false
-        },
-        {
-          "label": "Habitación",
-          "value": "Single / Doble / Triple / Cuádruple",
-          "gold": false
-        }
-      ],
-      "temporada": "Julio",
-      "notas": [],
-      "updatedAt": "2026-06-01T15:30:06.714Z"
-    },
-    {
-      "id": "funtour-villa-carlos-paz-terrestre-turismo-2026",
-      "slug": "villa-carlos-paz-terrestre-turismo-2026",
-      "operador": "funtour",
-      "sourceUrl": "https://www.funtour.com.uy/tienda/villa-carlos-paz-terrestre-turismo-2026/",
-      "titulo": "Villa Carlos Paz Terrestre Turismo 2026",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "Villa Carlos Paz Terrestre Turismo 2026",
-      "destinoSlug": "carlospaz",
-      "pais": "Argentina",
-      "emoji": "⛰️",
-      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2023/08/Villa-Carlos-Paz1-1024x1024.jpg",
-      "highlights": [],
-      "incluye": [
-        "🚌 BUS CON SERVICIO A BORDO",
-        "🎤 GUÍA COORDINADOR DURATE TODO EL RECORRIDO",
-        "🏩 04 NOCHES DE ALOJAMIENTO",
-        "🍽️ MEDIA PENSIÓN (DESAYUNO Y CENA)",
-        "🌄CITY TOUR VILLA CARLOS PAZ",
-        "🛍️CITY TOUR CORDOBA CAPITAL CON TIEMPO LIBRE PARA COMPRAS",
-        "🧑‍⚕️SEGURO DE ASISTENCIA MÉDICA 40 k",
-        "No incluye: Tasa hotelera/Todo lo que no especificado anteriormente"
-      ],
-      "noIncluye": [],
-      "hoteles": [
-        {
-          "nombre": "*HOTEL EL CONDADO",
-          "url": "https://hotelelcondado.com.ar/"
-        }
-      ],
-      "itinerario": [],
-      "salidas": [
-        "28 de Marzo"
-      ],
-      "bases": [
-        "Single",
-        "Doble",
-        "Triple",
-        "Cuádruple"
-      ],
-      "precioDesde": "415",
-      "variantesCompletas": [
-        {
-          "variationId": 28154,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "529",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 28155,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "415",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 28156,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "415",
-          "disponible": true,
-          "sku": ""
-        },
-        {
-          "variationId": 28157,
-          "salida": "28 de Marzo",
-          "alojamiento": "",
-          "base": "",
-          "precio": "415",
-          "disponible": true,
-          "sku": ""
-        }
-      ],
-      "matrizPrecios": {
-        "28 de Marzo": {
-          "": {
-            "": 415
-          }
-        }
-      },
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "28 de Marzo",
-          "gold": true
-        },
-        {
-          "label": "Habitación",
-          "value": "Single / Doble / Triple / Cuádruple",
-          "gold": false
-        }
-      ],
-      "temporada": "",
-      "notas": [],
-      "updatedAt": "2026-06-01T15:30:08.824Z"
+      "updatedAt": "2026-06-08T13:12:26.162Z"
     },
     {
       "id": "funtour-wine-tour-chile-2026",
@@ -3503,7 +3161,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-06-01T15:30:11.051Z"
+      "updatedAt": "2026-06-08T13:12:28.272Z"
     },
     {
       "id": "funtour-cataratas-aereo-vacaciones-de-julio-2026",
@@ -3642,7 +3300,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-06-01T15:30:13.485Z"
+      "updatedAt": "2026-06-08T13:12:30.397Z"
     },
     {
       "id": "funtour-gramado-y-canela-vacaciones-de-julio-2026-desde-montevideo-y-litoral-norte",
@@ -3818,7 +3476,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-06-01T15:30:15.628Z"
+      "updatedAt": "2026-06-08T13:12:32.527Z"
     },
     {
       "id": "funtour-gramado-con-2-parques-vacaciones-de-julio-2026-desde-montevideo-y-litoral-norte",
@@ -4005,7 +3663,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-06-01T15:30:17.754Z"
+      "updatedAt": "2026-06-08T13:12:34.681Z"
     },
     {
       "id": "funtour-floripa-julio-con-beto-carrero-y-compras-8-dias-media-pension-y-paseos",
@@ -4230,7 +3888,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-06-01T15:30:19.911Z"
+      "updatedAt": "2026-06-08T13:12:36.869Z"
     }
   ]
 }
