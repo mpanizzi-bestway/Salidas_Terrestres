@@ -1,6 +1,6 @@
 {
   "operador": "Sendas Turismo",
-  "updatedAt": "2026-06-01T11:15:50.246Z",
+  "updatedAt": "2026-06-08T10:23:47.510Z",
   "programas": [
     {
       "id": "florianopolis-1413",
@@ -222,7 +222,7 @@
           "texto": "Solo bus y hotel descontar: U$S 130.-"
         }
       ],
-      "updatedAt": "2026-06-01T11:16:19.565Z"
+      "updatedAt": "2026-06-08T10:24:16.765Z"
     },
     {
       "id": "florianopolis-1400",
@@ -307,44 +307,14 @@
           "cat": ""
         },
         {
-          "nombre": "Grande htl Canela Calsicc",
+          "nombre": "Sky Ville Canela",
           "playa": "—",
-          "sgl": 610,
-          "dbl": 445,
-          "tpl": null,
-          "cpl": null,
-          "qpl": null,
-          "cat": ""
-        },
-        {
-          "nombre": "Grande htl Canela Chale",
-          "playa": "—",
-          "sgl": 665,
+          "sgl": 670,
           "dbl": 470,
-          "tpl": null,
-          "cpl": null,
+          "tpl": 455,
+          "cpl": 445,
           "qpl": null,
-          "cat": ""
-        },
-        {
-          "nombre": "Grande htl Canela Chale 2 ambientes",
-          "playa": "—",
-          "sgl": null,
-          "dbl": null,
-          "tpl": 485,
-          "cpl": 465,
-          "qpl": null,
-          "cat": ""
-        },
-        {
-          "nombre": "Grande htl Canela Super luxo",
-          "playa": "—",
-          "sgl": 720,
-          "dbl": 495,
-          "tpl": 460,
-          "cpl": null,
-          "qpl": null,
-          "cat": ""
+          "cat": "https://www.skyhoteis.com.br/sky-ville-canela"
         },
         {
           "nombre": "Serra Nevada",
@@ -371,7 +341,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-01T11:16:20.832Z"
+      "updatedAt": "2026-06-08T10:24:17.911Z"
     },
     {
       "id": "florianopolis-1396",
@@ -470,7 +440,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-01T11:16:22.063Z"
+      "updatedAt": "2026-06-08T10:24:19.089Z"
     },
     {
       "id": "gramado-1417",
@@ -569,7 +539,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-01T11:16:23.379Z"
+      "updatedAt": "2026-06-08T10:24:20.291Z"
     },
     {
       "id": "gramado-1416",
@@ -668,7 +638,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-01T11:16:24.540Z"
+      "updatedAt": "2026-06-08T10:24:21.508Z"
     },
     {
       "id": "gramado-1415",
@@ -802,7 +772,7 @@
           "texto": "NO INCLUYE: INGRESOS A LOS PARQUES, MUSEOS y ESPECTACULOS DE NATAL LUZ"
         }
       ],
-      "updatedAt": "2026-06-01T11:16:25.725Z"
+      "updatedAt": "2026-06-08T10:24:22.728Z"
     },
     {
       "id": "gramado-1411",
@@ -901,7 +871,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-01T11:16:26.919Z"
+      "updatedAt": "2026-06-08T10:24:23.933Z"
     },
     {
       "id": "gramado-1400",
@@ -986,44 +956,14 @@
           "cat": ""
         },
         {
-          "nombre": "Grande htl Canela Calsicc",
+          "nombre": "Sky Ville Canela",
           "playa": "—",
-          "sgl": 610,
-          "dbl": 445,
-          "tpl": null,
-          "cpl": null,
-          "qpl": null,
-          "cat": ""
-        },
-        {
-          "nombre": "Grande htl Canela Chale",
-          "playa": "—",
-          "sgl": 665,
+          "sgl": 670,
           "dbl": 470,
-          "tpl": null,
-          "cpl": null,
+          "tpl": 455,
+          "cpl": 445,
           "qpl": null,
-          "cat": ""
-        },
-        {
-          "nombre": "Grande htl Canela Chale 2 ambientes",
-          "playa": "—",
-          "sgl": null,
-          "dbl": null,
-          "tpl": 485,
-          "cpl": 465,
-          "qpl": null,
-          "cat": ""
-        },
-        {
-          "nombre": "Grande htl Canela Super luxo",
-          "playa": "—",
-          "sgl": 720,
-          "dbl": 495,
-          "tpl": 460,
-          "cpl": null,
-          "qpl": null,
-          "cat": ""
+          "cat": "https://www.skyhoteis.com.br/sky-ville-canela"
         },
         {
           "nombre": "Serra Nevada",
@@ -1050,7 +990,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-01T11:16:28.191Z"
+      "updatedAt": "2026-06-08T10:24:25.155Z"
     },
     {
       "id": "gramado-1396",
@@ -1149,7 +1089,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-01T11:16:29.420Z"
+      "updatedAt": "2026-06-08T10:24:27.637Z"
     },
     {
       "id": "buenosaires-1414",
@@ -1267,7 +1207,7 @@
           "texto": "MENORES HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE (UNO POR HABITACION)"
         }
       ],
-      "updatedAt": "2026-06-01T11:16:30.608Z"
+      "updatedAt": "2026-06-08T10:24:28.845Z"
     },
     {
       "id": "mendoza-1412",
@@ -1388,7 +1328,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-06-01T11:16:31.929Z"
+      "updatedAt": "2026-06-08T10:24:30.033Z"
     },
     {
       "id": "mendoza-1407",
@@ -1519,7 +1459,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-06-01T11:16:33.111Z"
+      "updatedAt": "2026-06-08T10:24:31.212Z"
     },
     {
       "id": "mendoza-1358",
@@ -1640,7 +1580,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-06-01T11:16:34.296Z"
+      "updatedAt": "2026-06-08T10:24:32.418Z"
     },
     {
       "id": "norte-1406",
@@ -1746,7 +1686,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-06-01T11:16:35.443Z"
+      "updatedAt": "2026-06-08T10:24:33.572Z"
     },
     {
       "id": "norte-1405",
@@ -1852,7 +1792,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-06-01T11:16:36.618Z"
+      "updatedAt": "2026-06-08T10:24:34.815Z"
     },
     {
       "id": "norte-1395",
@@ -1958,113 +1898,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-06-01T11:16:37.805Z"
-    },
-    {
-      "id": "norte-1394",
-      "joomlaId": "1394",
-      "sourceUrl": "https://www.sendasturismo.com/as/index.php/argentina/1394-norte-argentino-10-dias-tafi-jujuy-salta-abril-a-junio",
-      "titulo": "NORTE ARGENTINO 10 DIAS CON SERRANIAS DEL HORNOCAL",
-      "subtitulo": "10 DÍAS / 01 NOCHES · NORTE ARGENTINO",
-      "duracion": "10 DÍAS — 01 NOCHES",
-      "destino": "Norte Argentino",
-      "destinoSlug": "norte",
-      "pais": "Argentina",
-      "emoji": "🇦🇷",
-      "photoQuery": "Jujuy quebrada Humahuaca Argentina",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "11 DE ABRIL / 9 DE MAYO / 6 DE JUNIO",
-          "gold": true
-        },
-        {
-          "label": "Operador",
-          "value": "Sendas Turismo",
-          "gold": false
-        }
-      ],
-      "descripcion": "El Norte Argentino despliega los colores mágicos de la Quebrada de Humahuaca, las Salinas Grandes, los cerros de siete colores y los viñedos de altura. Una región de culturas milenarias y naturaleza imponente.",
-      "highlights": [
-        "🌈 Cerros de colores",
-        "🏔️ Quebrada Humahuaca",
-        "🧂 Salinas Grandes",
-        "🌵 Puna",
-        "🎨 Arte rupestre",
-        "🦙 Llamas"
-      ],
-      "incluye": [
-        "Bus semi cama, guía acompañante, servicio abordo con merienda, cena y desayuno",
-        "01 noche en Tafi con desayuno",
-        "03 noches en Jujuy con desayuno",
-        "03 noches en Salta con desayuno",
-        "07 comidas más 1 cenas show en Peña en Salta",
-        "Visita Quebrada de los Sosa, el Indio, Tafi del Valle",
-        "Tour Cafayate por Cuesta del Infiernillo, Ruinas de los indios Quilmes y Abra del Infiernillo, Quebrada del Rio Las Conchas y sus formaciones rocosas, Valle de Lerma Tour Quebrada de Humahuaca, Pumamarca, Maimara, Tilcara, Visita Humahuaca, Serranias del Hornocal.",
-        "City tour Jujuy / City tour Salta / Visita del Dique El Cadillar / City tour Tucumán/ Termas de Río Hondo",
-        "Seguro de Asistencia médica de Universal Assistance"
-      ],
-      "itinerario": [
-        {
-          "dia": "Día 01",
-          "texto": "Urugauy: Salida en bus semi cama pasando por Santiago del Estero, La Banda, Termas de Rio Hondo hacia:"
-        },
-        {
-          "dia": "Día 02",
-          "texto": "Tafí del Valle: Ingresamos a la Provincia de Tucumán pasando por Famaillá donde tomamos la Ruta Nacional 38, en Acheral desviamos a través de la ruta provincial 307 conocida como la ruta de los Valles Calchaquíes, donde ascendemos por la Reserva Natural Quebrada de los Sosa acompañados por el río homónimo y por una exuberante vegetación subtropical que conforma la selva tucumano-oranense, paramos en el monumento El Indio con un mirador con vista del inmenso paisaje. Tafí del Valle: llegada a esta hermosa villa veraniega, ubicada a más de 2000 msnm y rodeada de cerros, entre ellos el imponente Aconquija. Aquí conviven los restos de una de las más antiguas culturas precolombinas. Alojamiento. Cena"
-        },
-        {
-          "dia": "Día 03",
-          "texto": "Tafí del Valle – Jujuy: desayuno y salida por Cuesta del Infiernillo y Abra del Infiernillo, donde la Cadena del Aconquija supera los 3000 msnm. Luego comenzamos a descender por el Valle de Yocavil pasando por los Valles Calchaquies, Amaicha del Valle y Ruinas de Quilmes (breve visita, no incluye entrada). Cafayate Llegada a esta localidad famosa por sus viñedos y vinos finos. Visita a una bodega de afamada marca, tiempo libre para almuerzo. Luego continuamos camino hacia salta por Ruta Nacional 68 donde recorremos la majestuosa Quebrada de Cafayate, cuya belleza sorprende por el colorido de sus cerros, como también por las formas caprichosas de las rocas y que despliega toda su hermosura en lugares como Los Colorados, La Yesera, Las Ventanas, El Anfiteatro La Garganta del Diablo y Tres Cruces. Luego se pasa por Coronel Moldes y La Viña, Jujuy: Llegada y Alojamiento. Cena."
-        },
-        {
-          "dia": "Día 04",
-          "texto": "Jujuy - Hornocal (320 Km): Salida por Yala, Reyes donde ingresamos a la imponente Quebrada de Humahuaca, Patrimonio de la Humanidad, pasamos por las localidades de Volcán y Tumbaya (aquí tendremos posibilidad de forma opcional de subir al nuevo Tren Solar de la Quebrada, el cual hace el mismo trayecto que el bus pero disfrutando de la panorámica de este moderno tren eléctrico que funciona a través de energía solar). Luego ingresamos a la pequeña quebrada de Purmamarca, donde se encuentra ubicada la localidad que lleva el mismo nombre rodeada por una cadena montañosa de cerros multicolores con su cerro de 7 colores. Continuamos pasando por Maimará y Huacalera. Llegada a Humahuaca, visita a la Plaza Principal Cabildo, mirador del Gral. Belgrano y monumento a la independencia. Por la tarde nos disponemos a vivir uno de los días más espectaculares de nuestro circuito. Nos dirigimos hacia el este por la ruta provincial 73, que nos introduce en los valles de cultivo de Coctaca. Se realiza una parada para compartir un té especial para la altura y otra en la Apacheta. Luego retomamos el camino en subida hacia los 4200 msnm donde podremos disfrutar de excelentes vistas del Cerro Multicolor de la Serranía del Hornocal, también conocido como cerro de los 14 colores. Tiempo libre para caminatas y tomar fotografías de este deslumbrante show de colores. Regreso Pasando por Tilcara (breve visita). Regreso a Jujuy. Cena."
-        },
-        {
-          "dia": "Día 05",
-          "texto": "Jujuy: Desayuno: Día libre, sugerimos excursión opcional Cuesta del Lipan y Salinas Grandes. Cena."
-        },
-        {
-          "dia": "Día 06",
-          "texto": "Jujuy - Salta (125 km) Desayuno. Visita de la ciudad, Plaza Belgrano, Casa de Gobierno, con el Salón de la Bandera, donde se guarda la Enseña Nacional más antigua que posee el país, La Catedral. Partida con equipajes hacia: Salta. Llegada y alojamiento. Por la tarde recorrido por la ciudad y visita la ciudad conociendo: Villa de San Lorenzo, Mercado Artesanal, monumento al 20 de Febrero, Iglesia de San Francisco, Convento de San Bernardo, Monumento a Güemes, Parque San Martín, Catedral del Señor y la virgen del Milagro, Panteón de las Glorias del Norte y Cabildo. Cena."
-        },
-        {
-          "dia": "Día 07",
-          "texto": "Salta: Desayuno y día libre. En este día sugerimos efectuar en forma opcional la excursión: Tren a las Nubes. Cena."
-        },
-        {
-          "dia": "Día 08",
-          "texto": "Salta: Desayuno. Día libre. En este día sugerimos efectuar en forma opcional la excursión 1-Cachi: Conociendo Quebrada Escoipe, Cuesta del Obispo, Piedra del Molino a 3350 msnm, Recta de Tin Tin y la pintoresca localidad de Cachi. Cena Show en la Peña de Balderrama donde disfrutaremos del verdadero folklore norteño entre cantos y bailes."
-        },
-        {
-          "dia": "Día 09",
-          "texto": "Salta - Uruguay: Desayuno. Partida en viaje de regreso pasando por Güemes, Rosario de la Frontera, Selva. Cena incluida. Prosecución por Rafaela continuación por RN 34, Rosario, hacia:"
-        },
-        {
-          "dia": "Día 10",
-          "texto": "Uruguay. Llegada en horas del mediodía... ¡¡FIN DE NUESTRO SERVICIOS!!"
-        }
-      ],
-      "hoteles": [
-        {
-          "nombre": "Tafi: Colonial 3* Jujuy: H.Johnson 4* Salta: Alejandro I 5*",
-          "playa": "—",
-          "sgl": 1590,
-          "dbl": 1150,
-          "tpl": 1115,
-          "cpl": null,
-          "qpl": null,
-          "cat": ""
-        }
-      ],
-      "notas_precios": [
-        {
-          "titulo": "Nota",
-          "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
-        }
-      ],
-      "updatedAt": "2026-06-01T11:16:38.961Z"
+      "updatedAt": "2026-06-08T10:24:35.943Z"
     },
     {
       "id": "carlospaz-1404",
@@ -2215,7 +2049,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-06-01T11:16:40.131Z"
+      "updatedAt": "2026-06-08T10:24:47.682Z"
     },
     {
       "id": "bariloche-1403",
@@ -2383,7 +2217,7 @@
           "texto": "Solo asiento, seguro de asistencia y servicio abordo: USD 315.-"
         }
       ],
-      "updatedAt": "2026-06-01T11:16:41.337Z"
+      "updatedAt": "2026-06-08T10:24:48.794Z"
     },
     {
       "id": "cataratas-1410",
@@ -2486,7 +2320,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-06-01T11:16:53.085Z"
+      "updatedAt": "2026-06-08T10:25:00.427Z"
     },
     {
       "id": "cataratas-1409",
@@ -2589,7 +2423,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-06-01T11:16:54.199Z"
+      "updatedAt": "2026-06-08T10:25:01.555Z"
     },
     {
       "id": "cataratas-1401",
@@ -2712,7 +2546,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-06-01T11:16:55.389Z"
+      "updatedAt": "2026-06-08T10:25:02.698Z"
     },
     {
       "id": "cataratas-1393",
@@ -2815,7 +2649,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-06-01T11:16:56.523Z"
+      "updatedAt": "2026-06-08T10:25:03.863Z"
     }
   ]
 }
