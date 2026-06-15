@@ -1,6 +1,6 @@
 {
   "operador": "Sendas Turismo",
-  "updatedAt": "2026-06-08T10:23:47.510Z",
+  "updatedAt": "2026-06-15T11:51:28.964Z",
   "programas": [
     {
       "id": "florianopolis-1413",
@@ -222,7 +222,7 @@
           "texto": "Solo bus y hotel descontar: U$S 130.-"
         }
       ],
-      "updatedAt": "2026-06-08T10:24:16.765Z"
+      "updatedAt": "2026-06-15T11:51:58.693Z"
     },
     {
       "id": "florianopolis-1400",
@@ -341,7 +341,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-08T10:24:17.911Z"
+      "updatedAt": "2026-06-15T11:51:59.888Z"
     },
     {
       "id": "florianopolis-1396",
@@ -440,7 +440,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-08T10:24:19.089Z"
+      "updatedAt": "2026-06-15T11:52:01.085Z"
     },
     {
       "id": "gramado-1417",
@@ -539,7 +539,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-08T10:24:20.291Z"
+      "updatedAt": "2026-06-15T11:52:02.259Z"
     },
     {
       "id": "gramado-1416",
@@ -638,7 +638,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-08T10:24:21.508Z"
+      "updatedAt": "2026-06-15T11:52:03.455Z"
     },
     {
       "id": "gramado-1415",
@@ -772,7 +772,7 @@
           "texto": "NO INCLUYE: INGRESOS A LOS PARQUES, MUSEOS y ESPECTACULOS DE NATAL LUZ"
         }
       ],
-      "updatedAt": "2026-06-08T10:24:22.728Z"
+      "updatedAt": "2026-06-15T11:52:04.645Z"
     },
     {
       "id": "gramado-1411",
@@ -871,7 +871,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-08T10:24:23.933Z"
+      "updatedAt": "2026-06-15T11:52:05.844Z"
     },
     {
       "id": "gramado-1400",
@@ -990,7 +990,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-08T10:24:25.155Z"
+      "updatedAt": "2026-06-15T11:52:07.042Z"
     },
     {
       "id": "gramado-1396",
@@ -1089,7 +1089,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-08T10:24:27.637Z"
+      "updatedAt": "2026-06-15T11:52:08.268Z"
     },
     {
       "id": "buenosaires-1414",
@@ -1207,7 +1207,7 @@
           "texto": "MENORES HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE (UNO POR HABITACION)"
         }
       ],
-      "updatedAt": "2026-06-08T10:24:28.845Z"
+      "updatedAt": "2026-06-15T11:52:09.482Z"
     },
     {
       "id": "mendoza-1412",
@@ -1328,7 +1328,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-06-08T10:24:30.033Z"
+      "updatedAt": "2026-06-15T11:52:10.679Z"
     },
     {
       "id": "mendoza-1407",
@@ -1459,128 +1459,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-06-08T10:24:31.212Z"
-    },
-    {
-      "id": "mendoza-1358",
-      "joomlaId": "1358",
-      "sourceUrl": "https://www.sendasturismo.com/as/index.php/argentina/1358-mendoza-8-dias-marzo-a-junio-2",
-      "titulo": "MENDOZA 08 DÍAS",
-      "subtitulo": "8 DÍAS / 05 NOCHES · MENDOZA",
-      "duracion": "8 DÍAS — 05 NOCHES",
-      "destino": "Mendoza",
-      "destinoSlug": "mendoza",
-      "pais": "Argentina",
-      "emoji": "🇦🇷",
-      "photoQuery": "Mendoza viñedos Argentina",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "7 Y 14 DE MARZO / 11 Y 18 DE ABRIL / 9 Y 16 DE MAYO / 6 Y 13 DE JUNIO",
-          "gold": true
-        },
-        {
-          "label": "Operador",
-          "value": "Sendas Turismo",
-          "gold": false
-        }
-      ],
-      "descripcion": "Mendoza es la capital del vino argentino, al pie de los Andes. Sus bodegas, el Aconcagua, las termas de Cacheuta y sus paisajes de viñedos en otoño la convierten en un destino para todos los sentidos.",
-      "highlights": [
-        "🍷 Vinos premium",
-        "🏔️ Aconcagua",
-        "♨️ Termas Cacheuta",
-        "🌅 Cordillera",
-        "🍇 Vendimia",
-        "🚵 Aventura"
-      ],
-      "incluye": [
-        "Bus semi cama",
-        "Guía acompañante, servicio a bordo",
-        "05 noches de alojamiento con desayuno",
-        "07 comidas",
-        "City tour en Mendoza",
-        "Tour Alta Montaña, cordillera y pre cordillera visitando Puente del Inca",
-        "Tour bodegas y viñedos",
-        "Seguro de asistencia de Universal Asistance con cobertura especial COVID - 19"
-      ],
-      "itinerario": [
-        {
-          "dia": "Día 01",
-          "texto": "Uruguay: Salida en horas del mediodia en bus semi cama cena y desayuno a bordo, guía acompañante, servicio abordo pasando Villa Mercedes, San Luis, con destino a:"
-        },
-        {
-          "dia": "Día 02",
-          "texto": "Mendoza: Llegada en horas de la mañana. Alojamiento en el hotel previsto. En horas de la tarde recorrido por la ciudad conociendo la ciudad antigua con el aérea fundacional, Plaza Pedro del Castillo y Ruinas de San Francisco y la Moderna con su micro centro donde lucen plazas, paseos, avenidas. Continuaremos por el centro cívico con sus edificios inmersos en espacios verdes y a través de la residencial avd. Emilio Civil, ingresaremos al Parque San Martín por los Portones. Allí recorreremos sus bosquecillos, el Rosedal, Lago, Clubes, Regreso por la zona pre cordillerana El Challao donde se encuentra el Santuario de la Virgen de Lourdes y el Estadio Mundialista. Cena."
-        },
-        {
-          "dia": "Día 03",
-          "texto": "Mendoza: Desayuno. Salida en horas de la mañana pasando por Luján de Cuyo, para iniciar el cruce pre cordillerano a través de Potrerillos, Cacheuta, termas de Cacheuta, Picheuta, hacia el Valle de Uspallata. Ya divisando la cordillera de los Andes pasaremos por Polvaredas, escala en Puente del Inca para recorrer sus puntos más interesantes, Mirador del Aconcagua con la vista del Coloso de América, Las Cuevas. En las últimas horas de la tarde regreso a Mendoza. Cena."
-        },
-        {
-          "dia": "Día 04",
-          "texto": "Mendoza: Desayuno. Día enteramente libre. Se recomienda paseo opcional a San Rafael y Cañón del Rio Atuel. Salida a través de la ruta 40 y atravesando el Valle de Uco, pasando por la ciudad de Tunuyan, hacia la ciudad de San Rafael. Al llegar a la misma comenzaremos a realizar el tour al increíble Cañón del Rio Atuel. Pasando por Comodoro Venegas, Cuesta de los Terneros, Parque Sierra Pintada, para dirigirnos al el NIHUIL, visitando el Embalse y Dique, Club de pescadores y a su villa de descanso. Tiempo libre para almuerzo. Retomamos el viaje para iniciar el descenso del Cañón del Atuel donde apreciaremos la espectacularidad de la naturaleza descubriendo en cada formación rocosa figuras y formas exóticas. Continuación del viaje visitando la central hidroeléctrica Nihuil 1. Un camino sinuoso nos conduce a Valle Grande, Lago y Represa. De Regreso visitaremos artesanías indígenas que muestran la tradición de los Huarpes que habitaron esta zona. Regreso a Mendoza. Cena."
-        },
-        {
-          "dia": "Día 05",
-          "texto": "Mendoza: Desayuno. Salida en horas de la mañana hacia el sur del Gran Mendoza, ingresando entre viñedos y parrales a la primera zona de productores de vinos finos del país, donde visitaremos bodegas. En ellas podremos además de conocer sus instalaciones comprender los secretos de la elaboración del vino y degustarlo. Regreso al hotel en horas del mediodía. Tarde libre. Cena."
-        },
-        {
-          "dia": "Día 06",
-          "texto": "Mendoza: Desayuno. Día enteramente libre. Sugerimos realizar excursión opcional de medio día a Villavicencio o bien al Valle de Uco. Esta excusión se interna en el pujante Valle de Uco donde el paisaje parece ser de otro sitio cuando lomadas cultivadas con forrajeras y hortalizas aparecen junto al marco del Cordón del Plata y el Imponente Cerro Tupungato. Visitaremos el Cristo Rey donde nos dará una vista panorámica del Valle. Casi al final del recorrido, junto a la Cordillera y a claros arroyos de deshielo está el Manzano Histórico donde el Gral. San Martin se reunió con el Coronel Olazabal a su regreso de Chile. Se podrá realizar un almuerzo en Bodegas Gimenez Rilli. También está la posibilidad de realizar un día de termas en \"Termas de Cacheuta\". Cena."
-        },
-        {
-          "dia": "Día 07",
-          "texto": "Mendoza: Desayuno. Partida con equipajes en horas de la mañana, almuerzo a bordo en viaje de regreso pasando por San Luis, Villa Mercedes, hacia:"
-        },
-        {
-          "dia": "Día 8",
-          "texto": "Uruguay: Arribo en horas de la mañana. - FIN DE NUESTROS SERVICIOS."
-        }
-      ],
-      "hoteles": [
-        {
-          "nombre": "Carollo",
-          "playa": "3*",
-          "sgl": 770,
-          "dbl": 620,
-          "tpl": 590,
-          "cpl": null,
-          "qpl": null,
-          "cat": ""
-        },
-        {
-          "nombre": "Princess",
-          "playa": "3*",
-          "sgl": 815,
-          "dbl": 645,
-          "tpl": 615,
-          "cpl": 590,
-          "qpl": null,
-          "cat": ""
-        },
-        {
-          "nombre": "Royal Princes",
-          "playa": "4*",
-          "sgl": 995,
-          "dbl": 745,
-          "tpl": 665,
-          "cpl": null,
-          "qpl": null,
-          "cat": ""
-        }
-      ],
-      "notas_precios": [
-        {
-          "titulo": "Nota",
-          "texto": "Menores hasta 2 años acompañados de 2 adultos (1 por habitación): free"
-        },
-        {
-          "titulo": "Nota",
-          "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
-        }
-      ],
-      "updatedAt": "2026-06-08T10:24:32.418Z"
+      "updatedAt": "2026-06-15T11:52:11.879Z"
     },
     {
       "id": "norte-1406",
@@ -1686,7 +1565,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-06-08T10:24:33.572Z"
+      "updatedAt": "2026-06-15T11:52:23.808Z"
     },
     {
       "id": "norte-1405",
@@ -1792,113 +1671,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-06-08T10:24:34.815Z"
-    },
-    {
-      "id": "norte-1395",
-      "joomlaId": "1395",
-      "sourceUrl": "https://www.sendasturismo.com/as/index.php/argentina/1395-norte-argentino-10-dias-tafi-salta-jujuy-abril-a-junio",
-      "titulo": "NORTE ARGENTINO 10 DIAS CON SERRIANS DEL HORNOCAL",
-      "subtitulo": "10 DÍAS / 01 NOCHES · NORTE ARGENTINO",
-      "duracion": "10 DÍAS — 01 NOCHES",
-      "destino": "Norte Argentino",
-      "destinoSlug": "norte",
-      "pais": "Argentina",
-      "emoji": "🇦🇷",
-      "photoQuery": "Jujuy quebrada Humahuaca Argentina",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "18 DE ABRIL / 16 DE MAYO / 13 DE JUNIO",
-          "gold": true
-        },
-        {
-          "label": "Operador",
-          "value": "Sendas Turismo",
-          "gold": false
-        }
-      ],
-      "descripcion": "El Norte Argentino despliega los colores mágicos de la Quebrada de Humahuaca, las Salinas Grandes, los cerros de siete colores y los viñedos de altura. Una región de culturas milenarias y naturaleza imponente.",
-      "highlights": [
-        "🌈 Cerros de colores",
-        "🏔️ Quebrada Humahuaca",
-        "🧂 Salinas Grandes",
-        "🌵 Puna",
-        "🎨 Arte rupestre",
-        "🦙 Llamas"
-      ],
-      "incluye": [
-        "Bus semi cama, guia acompañante, servicio abordo con merienda, cena y desayuno",
-        "01 noche en Tafi del Valle con desayuno",
-        "04 noches en Salta con desayuno",
-        "02 noches en Jujuy con desayuno",
-        "Régimen de media pensión 07 comidas más 01 Peña en Salta",
-        "Visita Quebrada de los Sosa, el Indio, Tafi del Valle",
-        "Tour Cafayate por Cuesta del Infiernillo, Ruinas de los indios Quilmes y Abra del Infiernillo, Quebrada del Rio Las Conchas y sus formaciones rocosas, Valle de Lerma Tour Quebrada de Humahuaca, Pumamarca, Maimara, Tilcara, Visita Humahuaca, Serranias del Hornocal.",
-        "City tour Jujuy / City tour Salta / Visita del Dique El Cadillar / City tour Tucumán/ Termas de Río Hondo",
-        "Seguro de Asistencia médica de Universal Assistance"
-      ],
-      "itinerario": [
-        {
-          "dia": "Día 01",
-          "texto": "Uruguay: Salida en bus semi cama pasando por Gualeguaychu, Rafaela, Santiago del Estero, La Banda, Termas de Rio Hondo hacia:"
-        },
-        {
-          "dia": "Día 02",
-          "texto": "Tafí del Valle: Ingresamos a la Provincia de Tucumán pasando por Famaillá donde tomamos la Ruta Nacional 38, en Acheral desviamos a través de la ruta provincial 307 conocida como la ruta de los Valles Calchaquíes, donde ascendemos por la Reserva Natural Quebrada de los Sosa acompañados por el río homónimo y por una exuberante vegetación subtropical que conforma la selva tucumano-oranense, paramos en el monumento El Indio con un mirador con vista del inmenso paisaje. Tafí del Valle: llegada a esta hermosa villa veraniega, ubicada a más de 2000 msnm y rodeada de cerros, entre ellos el imponente Aconquija. Aquí conviven los restos de una de las más antiguas culturas precolombinas. Alojamiento. Cena"
-        },
-        {
-          "dia": "Día 03",
-          "texto": "Tafí del Valle – Salta (320 km): desayuno y salida por Cuesta del Infiernillo y Abra del Infiernillo, donde la Cadena del Aconquija supera los 3000 msnm. Luego comenzamos a descender por el Valle de Yocavil pasando Ampimpa del Valle, Amaicha del Valle y Ruinas de Quilmes (breve visita, no incluye entrada). Cafayate Llegada a esta localidad famosa por sus viñedos y vinos finos. Visita a una bodega de afamada marca, tiempo libre para almuerzo. Luego continuamos camino hacia salta por Ruta Nacional 68 donde recorremos la majestuosa Quebrada de Cafayate, cuya belleza sorprende por el colorido de sus cerros, como también por las formas caprichosas de las rocas y que despliega toda su hermosura en lugares como Los Colorados, La Yesera, Las Ventanas, El Anfiteatro La Garganta del Diablo y Tres Cruces. Luego se pasa por Coronel Moldes y La Viña. Salta: Llegada y Alojamiento. Cena."
-        },
-        {
-          "dia": "Día 04",
-          "texto": "Salta: Desayuno y día libre. En este día sugerimos efectuar en forma opcional la excursión: Tren a las Nubes. Cena."
-        },
-        {
-          "dia": "Día 05",
-          "texto": "Salta: Desayuno. Día libre. En este día sugerimos efectuar en forma opcional la excursión 1-Cachi: Conociendo Quebrada Escoipe, Cuesta del Obispo, Piedra del Molino a 3350 msnm, Recta de Tin Tin y la pintoresca localidad de Cachi. Cena Show en la Peña de Baldrrama donde disfrutaremos del verdadero folklore norteño entre cantos y bailes."
-        },
-        {
-          "dia": "Día 06",
-          "texto": "Salta: Desayuno. Visita de la ciudad conociendo: Villa de San Lorenzo, Mercado Artesanal, monumento al 20 de Febrero, Iglesia de San Francisco, Convento de San Bernardo, Monumento a Güemes, Parque San Martín, Catedral del Señor y la virgen del Milagro, Panteón de las Glorias del Norte y Cabildo. Tarde libre para recorrer esta hermosa Ciudad con sus múltiples monumentos, museos iglesias, y el cerro San Bernardo. Por la tarde, salida hacia San Salvador de Jujuy. Llegada y alojamiento. visita a la ciudad: Plaza Belgrano, Casa de Gobierno, con el Salón de la Bandera, donde se guarda la Enseña Nacional más antigua que posee el país, La Catedral. Cena."
-        },
-        {
-          "dia": "Día 07",
-          "texto": "Salta – Jujuy: Desayuno y salida hacia Jujuy, resto del día libre, sugerimos realizar en forma opcional excursión a Salinas Grandes, trepando por el maravilloso paisaje que nos regala la cuesta del Lipan, alcanzando los 4170 mts sobre el nivel del mar, luego se arriba al impresionante salar para disfrutar de toda su magnitud, sus llamativas piscinas azules. Cena"
-        },
-        {
-          "dia": "Día 08",
-          "texto": "Jujuy – Quebrada de Humahuaca (320km) Salida por Ruta Nacional 9 pasando por Yala, Reyes donde ingresamos a la imponente Quebrada de Humahuaca, Patrimonio de la Humanidad, pasamos por las localidades de Volcán y Tumbaya (aquí tendremos posibilidad de forma opcional de subir al nuevo Tren Solar de la Quebrada, el cual hace el mismo trayecto que el bus, pero disfrutando de la panorámica de este moderno tren eléctrico que funciona a través de energía solar). Luego ingresamos a la pequeña quebrada de Purmamarca, donde se encuentra ubicada la localidad que lleva el mismo nombre rodeada por una cadena montañosa de cerros multicolores con su cerro de 7 colores. Continuamos pasando por Maimará, por Tilcara (breve visita) y Huacalera. Llegada a Humahuaca, visita a la Plaza Principal. Cabildo, mirador del Gral. Belgrano y monumento a la independencia. Por la tarde realizamos la excursión a Serranías del Hornocal: Nos dirigimos hacia el este por la ruta provincial 73, que nos introduce en los valles de cultivo de Coctaca. Se realiza una parada para compartir un té especial para la altura y otra en la Apacheta. Luego retomamos el camino en subida hacia los 4200 msnm donde podremos disfrutar de excelentes vistas del Cerro Multicolor de la Serranía del Hornocal, también conocido como cerro de los 14 colores. Tiempo libre para caminatas y tomar fotografías de este deslumbrante show de colores. Regreso. Alojamiento y Cena"
-        },
-        {
-          "dia": "Día 09",
-          "texto": "Jujuy - Uruguay: Desayuno. Partida con equipajes en viaje de regreso pasando Güemes, Rosario de la Frontera, Tucumán, Termas de Rio Hondo, Selva. Cena incluida. Continuación por Rafaela, Rosario, hacia"
-        },
-        {
-          "dia": "Día 10",
-          "texto": "Uruguay: Llegada en horas del mediodía... ¡¡FIN DE NUESTRO SERVICIOS!!"
-        }
-      ],
-      "hoteles": [
-        {
-          "nombre": "Tafi: Colonial 3* Salta: Alejandro I 5* Jujuy: H.Johnson 4*",
-          "playa": "—",
-          "sgl": 1590,
-          "dbl": 1150,
-          "tpl": 1115,
-          "cpl": null,
-          "qpl": null,
-          "cat": ""
-        }
-      ],
-      "notas_precios": [
-        {
-          "titulo": "Nota",
-          "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
-        }
-      ],
-      "updatedAt": "2026-06-08T10:24:35.943Z"
+      "updatedAt": "2026-06-15T11:52:25.032Z"
     },
     {
       "id": "carlospaz-1404",
@@ -2049,7 +1822,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-06-08T10:24:47.682Z"
+      "updatedAt": "2026-06-15T11:52:47.650Z"
     },
     {
       "id": "bariloche-1403",
@@ -2217,7 +1990,7 @@
           "texto": "Solo asiento, seguro de asistencia y servicio abordo: USD 315.-"
         }
       ],
-      "updatedAt": "2026-06-08T10:24:48.794Z"
+      "updatedAt": "2026-06-15T11:52:48.816Z"
     },
     {
       "id": "cataratas-1410",
@@ -2234,7 +2007,7 @@
       "fechas": [
         {
           "label": "Salidas",
-          "value": "SABADOS DE AGOSTO AL 12 DE DICIEMBRE (EXCEPTO VACACIONES DE PRIMAVERA)",
+          "value": "SABADOS DE AGOSTO AL 12 DE DICIEMBRE (EXCEPTO SABADO 10 DE OCTUBRE QUE SALE EL D",
           "gold": true
         },
         {
@@ -2320,7 +2093,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-06-08T10:25:00.427Z"
+      "updatedAt": "2026-06-15T11:53:00.606Z"
     },
     {
       "id": "cataratas-1409",
@@ -2423,7 +2196,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-06-08T10:25:01.555Z"
+      "updatedAt": "2026-06-15T11:53:01.753Z"
     },
     {
       "id": "cataratas-1401",
@@ -2546,7 +2319,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-06-08T10:25:02.698Z"
+      "updatedAt": "2026-06-15T11:53:02.909Z"
     },
     {
       "id": "cataratas-1393",
@@ -2649,7 +2422,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-06-08T10:25:03.863Z"
+      "updatedAt": "2026-06-15T11:53:04.158Z"
     }
   ]
 }
