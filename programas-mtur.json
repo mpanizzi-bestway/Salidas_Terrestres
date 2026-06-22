@@ -1,6 +1,6 @@
 {
   "operador": "Mtur Viajes",
-  "updatedAt": "2026-06-15T13:15:12.017Z",
+  "updatedAt": "2026-06-22T12:50:35.354Z",
   "programas": [
     {
       "id": "mtur-807",
@@ -78,92 +78,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/8eq6rdczppru8ldnf2yr6/2025_12_17_12_08_09_terma_romanas_bajat5-2.pdf?rlkey=vf7j6stg2abm820ylcowp8ljf&raw=1",
       "observaciones": "",
-      "updatedAt": "2026-06-15T13:15:19.178Z"
-    },
-    {
-      "id": "mtur-781",
-      "mturId": "781",
-      "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/781/2",
-      "titulo": "Cataratas - 6 Dias - Desde Abril Hasta Agosto",
-      "subtitulo": "6 DÍAS / 3 NOCHES · Baja Temporada 2026",
-      "duracion": "6 DÍAS / 3 NOCHES",
-      "destino": "Ciudad Del Este, Foz De Iguazu, Puerto Iguazu",
-      "destinoSlug": "cataratas",
-      "pais": "Cataratas",
-      "emoji": "🌊",
-      "imagen": "https://www.dropbox.com/scl/fi/vjeuh1ezg7moataqahu1x/2025_6_13_13_07_28_86ca5b40-020224pordosol1-1.webp?rlkey=7le4oodrxcea6803mb6sjne0j&raw=1",
-      "visitando": "Ciudad Del Este, Foz De Iguazu, Puerto Iguazu",
-      "highlights": [
-        "📍 Ciudad Del Este",
-        "📍 Foz De Iguazu",
-        "📍 Puerto Iguazu"
-      ],
-      "temporada": "Baja Temporada 2026",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "13/04/2026  ·  20/04/2026  ·  11/05/2026  ·  18/05/2026  ·  25/05/2026",
-          "gold": true
-        },
-        {
-          "label": "Temporada",
-          "value": "Baja Temporada 2026",
-          "gold": false
-        }
-      ],
-      "incluye": [
-        "Bus Semicama Montevideo - Foz De Iguazú - Montevideo",
-        "Coordinador Acompañante",
-        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
-        "Servicio a Bordo durante el viaje",
-        "3 Noches De Alojamiento (Según Selección)",
-        "3 Desayunos Buffet servido en el hotel",
-        "3 Cenas Buffet servidas en el hotel",
-        "Traslado, Ingreso Y Guía Local Cataratas Brasil",
-        "Traslado, Ingreso Y Guía Local Cataratas Argentina",
-        "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
-        "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
-      ],
-      "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
-      "hoteles": [
-        {
-          "nombre": "DOM PERDO I",
-          "url": "https://www.hoteldompedro.com.br/es-ar",
-          "precios": {
-            "doble": 495,
-            "triple": 489,
-            "cuadruple": 485,
-            "single": 595,
-            "child": 250,
-            "infante": 90
-          }
-        }
-      ],
-      "fechasSalida": [
-        "13/04/2026",
-        "20/04/2026",
-        "11/05/2026",
-        "18/05/2026",
-        "25/05/2026",
-        "22/06/2026",
-        "13/07/2026",
-        "20/07/2026",
-        "27/07/2026",
-        "10/08/2026",
-        "16/08/2026"
-      ],
-      "precios": {
-        "doble": 495,
-        "triple": 489,
-        "cuadruple": 485,
-        "single": 595,
-        "child": 250,
-        "infante": 90
-      },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/q8dr7o5qrqi6tvkgrxecl/2026_4_22_14_15_22_cataratas6_baja-1.pdf?rlkey=en6p74vba4zc395dyjv4wdzhv&raw=1",
-      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Actividades Opcionales:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135Se contratan y abonan al coordinador en viaje.",
-      "updatedAt": "2026-06-15T13:15:21.769Z"
+      "updatedAt": "2026-06-22T12:50:41.948Z"
     },
     {
       "id": "mtur-788",
@@ -223,11 +138,23 @@
           "nombre": "PARAISO PALACE II",
           "url": "https://paraisopalacehotel.com.br/home-espanol/",
           "precios": {
-            "doble": 665,
-            "triple": 649,
-            "cuadruple": 649,
-            "single": 1039,
-            "child": 325
+            "doble": 645,
+            "triple": 625,
+            "cuadruple": 618,
+            "single": 975,
+            "child": 315,
+            "infante": 90
+          }
+        },
+        {
+          "nombre": "PALACE I",
+          "url": "https://paraisopalacehotel.com.br/home-espanol/",
+          "precios": {
+            "doble": 755,
+            "triple": 745,
+            "single": 1225,
+            "child": 375,
+            "infante": 90
           }
         }
       ],
@@ -245,9 +172,9 @@
         "child": 279,
         "infante": 90
       },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/hd2ghyj9i2pf2q8mqcos1/2025_7_25_17_51_10_floripa8_solyplaya_verano.pdf?rlkey=opudxgu8xpmp20swaql53pfse&raw=1",
-      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-06-15T13:15:24.216Z"
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/75u6inwyu8tmo1x6giyfu/2026_6_18_19_20_24_floripa8_solyplaya_verano-1.pdf?rlkey=yr3m2vcfhzlcwhli7j8xs4o3u&raw=1",
+      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Opcionales:MAP u$s 90Barco pirata u$s 35Visita Balneario Camboriu u$s 35",
+      "updatedAt": "2026-06-22T12:50:44.408Z"
     },
     {
       "id": "mtur-815",
@@ -293,19 +220,37 @@
       "noIncluye": "Bebidas, Propinas, Comidas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
       "hoteles": [
         {
-          "nombre": "PARAISO PALACE II",
-          "url": "https://paraiso-palace-ii-e-iii.hotelflorianopolis.com/es/",
-          "precios": {}
-        },
-        {
           "nombre": "POSADA SALINES",
           "url": "http://POSADA SALINES",
           "precios": {
-            "doble": 578,
+            "doble": 575,
             "triple": 559,
             "cuadruple": 539,
             "single": 869,
             "child": 289,
+            "infante": 90
+          }
+        },
+        {
+          "nombre": "PARAISO PALACE II",
+          "url": "https://paraiso-palace-ii-e-iii.hotelflorianopolis.com/es/",
+          "precios": {
+            "doble": 665,
+            "triple": 645,
+            "single": 1039,
+            "child": 332,
+            "infante": 90
+          }
+        },
+        {
+          "nombre": "PALACE I",
+          "url": "https://paraisopalacehotel.com.br/home-espanol/",
+          "precios": {
+            "doble": 785,
+            "triple": 765,
+            "cuadruple": 755,
+            "single": 1285,
+            "child": 395,
             "infante": 90
           }
         }
@@ -317,10 +262,112 @@
         "23/01/2027",
         "30/01/2027"
       ],
-      "precios": {},
-      "pdfItinerario": "",
-      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Opcionales:MAP u$s 60Barco pirata u$s 25 Visita Balneario Camboriu u$s 25",
-      "updatedAt": "2026-06-15T13:15:26.639Z"
+      "precios": {
+        "doble": 575,
+        "triple": 559,
+        "cuadruple": 539,
+        "single": 869,
+        "child": 289,
+        "infante": 90
+      },
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/9tho70ei3pawoz5htaqd6/2026_6_18_19_19_44_floripa8_solyplaya_verano-1.pdf?rlkey=2ns655ywrncm6yu5h5sv6a4pz&raw=1",
+      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Opcionales:MAP u$s 90Barco pirata u$s 35 Visita Balneario Camboriu u$s 35",
+      "updatedAt": "2026-06-22T12:50:46.901Z"
+    },
+    {
+      "id": "mtur-791",
+      "mturId": "791",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/791/2",
+      "titulo": "Florianopolis - Sol & Playa - Marzo 2027",
+      "subtitulo": "8 DÍAS / 5 NOCHES · Verano",
+      "duracion": "8 DÍAS / 5 NOCHES",
+      "destino": "Camboriu, Florianopolis",
+      "destinoSlug": "florianopolis",
+      "pais": "Brasil",
+      "emoji": "🏖️",
+      "imagen": "https://www.dropbox.com/scl/fi/fglhbxlx1z2zneqai1te8/2025_6_30_13_20_24_praia-do-pantano-do-sul.jpg?rlkey=0d5o2byxzfofbb039yvpfzj03&raw=1",
+      "visitando": "Camboriu, Florianopolis",
+      "highlights": [
+        "📍 Camboriu",
+        "📍 Florianopolis"
+      ],
+      "temporada": "Verano",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "06/03/2027  ·  13/03/2027  ·  20/03/2027",
+          "gold": true
+        },
+        {
+          "label": "Temporada",
+          "value": "Verano",
+          "gold": false
+        }
+      ],
+      "incluye": [
+        "Bus Semicama Montevideo - Florianópolis - Montevideo",
+        "Servicio en ruta (Merienda, Cena, Desayuno / Merienda, Cena, Desayuno",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "5 Noches De Alojamiento Con Desayuno Buffet",
+        "Paseo De Playa Daniela",
+        "Paseo De Playa Pantano Do Sul",
+        "Tour Centro Histórico (Guía Local)"
+      ],
+      "noIncluye": "Bebidas, Propinas, Comidas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "hoteles": [
+        {
+          "nombre": "POSADA SALINES",
+          "url": "http://.",
+          "precios": {
+            "doble": 585,
+            "triple": 569,
+            "cuadruple": 535,
+            "single": 855,
+            "child": 292,
+            "infante": 90
+          }
+        },
+        {
+          "nombre": "PARAISO PALACE II",
+          "url": "https://paraiso-palace-ii-e-iii.hotelflorianopolis.com/es/",
+          "precios": {
+            "doble": 599,
+            "triple": 585,
+            "single": 915,
+            "child": 299,
+            "infante": 90
+          }
+        },
+        {
+          "nombre": "PALACE I",
+          "url": "https://www.hotelpalace1.com/",
+          "precios": {
+            "doble": 719,
+            "triple": 709,
+            "single": 1149,
+            "child": 359,
+            "infante": 90
+          }
+        }
+      ],
+      "fechasSalida": [
+        "06/03/2027",
+        "13/03/2027",
+        "20/03/2027"
+      ],
+      "precios": {
+        "doble": 585,
+        "triple": 569,
+        "cuadruple": 535,
+        "single": 855,
+        "child": 292,
+        "infante": 90
+      },
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/1qc57pqgtnd19kv5jnhdp/2026_6_18_19_19_21_floripa8_solyplaya_verano-1.pdf?rlkey=bjqtk4y6frvw5ul9td3h4rh77&raw=1",
+      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Opcionales:MAP u$s 90BARCO PIRATA u$s 35 VISITA BALNEARIO CAMBORIU u$s 35",
+      "updatedAt": "2026-06-22T12:50:49.368Z"
     },
     {
       "id": "mtur-816",
@@ -404,7 +451,92 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/2tm7xmwt90peaerfh40sj/2026_4_22_14_15_12_cataratas6_baja-1.pdf?rlkey=r7c0oaj6xokf3iwm4wvhtusz7&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Actividades Opcionales:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135Se contratan y abonan al coordinador en viaje.",
-      "updatedAt": "2026-06-15T13:15:29.287Z"
+      "updatedAt": "2026-06-22T12:50:51.989Z"
+    },
+    {
+      "id": "mtur-781",
+      "mturId": "781",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/781/2",
+      "titulo": "Cataratas - 6 Dias - Desde Abril Hasta Agosto",
+      "subtitulo": "6 DÍAS / 3 NOCHES · Baja Temporada 2026",
+      "duracion": "6 DÍAS / 3 NOCHES",
+      "destino": "Ciudad Del Este, Foz De Iguazu, Puerto Iguazu",
+      "destinoSlug": "cataratas",
+      "pais": "Cataratas",
+      "emoji": "🌊",
+      "imagen": "https://www.dropbox.com/scl/fi/vjeuh1ezg7moataqahu1x/2025_6_13_13_07_28_86ca5b40-020224pordosol1-1.webp?rlkey=7le4oodrxcea6803mb6sjne0j&raw=1",
+      "visitando": "Ciudad Del Este, Foz De Iguazu, Puerto Iguazu",
+      "highlights": [
+        "📍 Ciudad Del Este",
+        "📍 Foz De Iguazu",
+        "📍 Puerto Iguazu"
+      ],
+      "temporada": "Baja Temporada 2026",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "13/04/2026  ·  20/04/2026  ·  11/05/2026  ·  18/05/2026  ·  25/05/2026",
+          "gold": true
+        },
+        {
+          "label": "Temporada",
+          "value": "Baja Temporada 2026",
+          "gold": false
+        }
+      ],
+      "incluye": [
+        "Bus Semicama Montevideo - Foz De Iguazú - Montevideo",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "Servicio a Bordo durante el viaje",
+        "3 Noches De Alojamiento (Según Selección)",
+        "3 Desayunos Buffet servido en el hotel",
+        "3 Cenas Buffet servidas en el hotel",
+        "Traslado, Ingreso Y Guía Local Cataratas Brasil",
+        "Traslado, Ingreso Y Guía Local Cataratas Argentina",
+        "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
+        "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
+      ],
+      "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "hoteles": [
+        {
+          "nombre": "DOM PERDO I",
+          "url": "https://www.hoteldompedro.com.br/es-ar",
+          "precios": {
+            "doble": 525,
+            "triple": 515,
+            "cuadruple": 515,
+            "single": 595,
+            "child": 250,
+            "infante": 90
+          }
+        }
+      ],
+      "fechasSalida": [
+        "13/04/2026",
+        "20/04/2026",
+        "11/05/2026",
+        "18/05/2026",
+        "25/05/2026",
+        "22/06/2026",
+        "13/07/2026",
+        "20/07/2026",
+        "27/07/2026",
+        "10/08/2026",
+        "16/08/2026"
+      ],
+      "precios": {
+        "doble": 525,
+        "triple": 515,
+        "cuadruple": 515,
+        "single": 595,
+        "child": 250,
+        "infante": 90
+      },
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/q8dr7o5qrqi6tvkgrxecl/2026_4_22_14_15_22_cataratas6_baja-1.pdf?rlkey=en6p74vba4zc395dyjv4wdzhv&raw=1",
+      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Actividades Opcionales:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135Se contratan y abonan al coordinador en viaje.",
+      "updatedAt": "2026-06-22T12:50:54.617Z"
     },
     {
       "id": "mtur-809",
@@ -428,7 +560,7 @@
       "fechas": [
         {
           "label": "Salidas",
-          "value": "27/06/2026  ·  06/07/2026",
+          "value": "06/07/2026",
           "gold": true
         },
         {
@@ -464,7 +596,6 @@
         }
       ],
       "fechasSalida": [
-        "27/06/2026",
         "06/07/2026"
       ],
       "precios": {
@@ -477,7 +608,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/7vfnt2m6234r2c2qvfl68/2026_2_9_19_41_56_gramadoycanela7_vac_julio.pdf?rlkey=eihjm7aqcfbntl61hmyayjpx0&raw=1",
       "observaciones": "Los precios de menores corresponden a un menor compartiendo habitación con dos adultos.",
-      "updatedAt": "2026-06-15T13:15:31.610Z"
+      "updatedAt": "2026-06-22T12:50:56.971Z"
     },
     {
       "id": "mtur-808",
@@ -549,7 +680,108 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/de8epvjrwyth08q20idoe/2026_4_10_19_25_43_gramadoycanela7_vac_setiembre-1.pdf?rlkey=lxs83iojbco8cs455f2xkypq9&raw=1",
       "observaciones": "Los precios de menores corresponden a un menor compartiendo habitación con dos adultos.",
-      "updatedAt": "2026-06-15T13:15:33.851Z"
+      "updatedAt": "2026-06-22T12:50:59.339Z"
+    },
+    {
+      "id": "mtur-785",
+      "mturId": "785",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/785/2",
+      "titulo": "Florianopolis - A Toda Diversion - Enero 2027",
+      "subtitulo": "8 DÍAS / 5 NOCHES · Verano",
+      "duracion": "8 DÍAS / 5 NOCHES",
+      "destino": "Camboriu, Florianopolis",
+      "destinoSlug": "florianopolis",
+      "pais": "Brasil",
+      "emoji": "🏖️",
+      "imagen": "https://www.dropbox.com/scl/fi/dygycd6dzj12mez0wfxjh/2025_6_27_13_47_50_Barco-Pirata-1.webp?rlkey=1mbq1nwhfsclm15lydb29zkjd&raw=1",
+      "visitando": "Camboriu, Florianopolis",
+      "highlights": [
+        "📍 Camboriu",
+        "📍 Florianopolis"
+      ],
+      "temporada": "Verano",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "02/01/2027  ·  09/01/2027  ·  16/01/2027  ·  23/01/2027  ·  30/01/2027",
+          "gold": true
+        },
+        {
+          "label": "Temporada",
+          "value": "Verano",
+          "gold": false
+        }
+      ],
+      "incluye": [
+        "Bus Semicama Montevideo - Florianópolis - Montevideo",
+        "Servicio en ruta (Merienda, Cena, Desayuno / Merienda, Cena, Desayuno",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "5 Noches De Alojamiento Con Desayuno Buffet",
+        "5 Cenas Buffet",
+        "Paseo De Playa Daniela",
+        "Paseo De Playa Pantano Do Sul",
+        "Tour Centro Histórico (Guía Local)",
+        "Paseo En Barco Pirata",
+        "Paseo Medio Día Camboriu",
+        "Cristo Luz, Traslado + Ascenso + Ingreso"
+      ],
+      "noIncluye": "Bebidas, Propinas, Comidas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "hoteles": [
+        {
+          "nombre": "POSADA SALINES",
+          "url": "http://.",
+          "precios": {
+            "doble": 705,
+            "triple": 689,
+            "cuadruple": 669,
+            "single": 999,
+            "child": 415,
+            "infante": 90
+          }
+        },
+        {
+          "nombre": "PARAISO PALACE II",
+          "url": "https://paraiso-palace-ii-e-iii.hotelflorianopolis.com/es/",
+          "precios": {
+            "doble": 795,
+            "triple": 775,
+            "single": 1169,
+            "child": 462,
+            "infante": 90
+          }
+        },
+        {
+          "nombre": "PALACE I",
+          "url": "https://www.hotelpalace1.com/",
+          "precios": {
+            "doble": 915,
+            "triple": 895,
+            "single": 1415,
+            "child": 522,
+            "infante": 90
+          }
+        }
+      ],
+      "fechasSalida": [
+        "02/01/2027",
+        "09/01/2027",
+        "16/01/2027",
+        "23/01/2027",
+        "30/01/2027"
+      ],
+      "precios": {
+        "doble": 705,
+        "triple": 689,
+        "cuadruple": 669,
+        "single": 999,
+        "child": 415,
+        "infante": 90
+      },
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/lhvjm63u2ca9f1f33l275/2026_6_18_17_42_25_floripa8_todadiversion_verano-2.pdf?rlkey=kfxd7n7e7kl91gj2os8vedx9s&raw=1",
+      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
+      "updatedAt": "2026-06-22T12:51:01.933Z"
     },
     {
       "id": "mtur-756",
@@ -627,7 +859,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/aiibdhkpinyx0pm0xoldc/2026_4_7_12_36_48_2025_7_25_17_27_12_cataratas7_baja.pdf?rlkey=1jjboxtmiscssdkkxoko8cio8&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-06-15T13:15:36.116Z"
+      "updatedAt": "2026-06-22T12:51:04.425Z"
     },
     {
       "id": "mtur-804",
@@ -701,7 +933,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/a7sjc3a3dr221xvq8zvms/2026_4_23_12_04_46_cataratas6_nostalgia.pdf?rlkey=pwefhx9i2j1wz8jtnamc9trih&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-06-15T13:15:38.387Z"
+      "updatedAt": "2026-06-22T12:51:06.743Z"
     },
     {
       "id": "mtur-811",
@@ -776,7 +1008,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/4e6h26mrlgkfq5em95pqo/2026_2_9_19_38_56_cataratas7_julio.pdf?rlkey=dhaknmtm3hyxcm91w7t2s2w90&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-06-15T13:15:40.647Z"
+      "updatedAt": "2026-06-22T12:51:09.039Z"
     },
     {
       "id": "mtur-810",
@@ -850,7 +1082,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/yakg0mf4lovsvmged2tnf/2026_4_22_17_20_21_cataratas7_setiembre.pdf?rlkey=f8jmvxbm6nwt16hkxr760srmn&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-06-15T13:15:42.906Z"
+      "updatedAt": "2026-06-22T12:51:11.336Z"
     },
     {
       "id": "mtur-735",
@@ -927,7 +1159,108 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/91d66vbhbadqi5dfdtdjl/2026_6_1_13_04_41_camboriu8_magia_verano-2.pdf?rlkey=y3jq0ad1zazayihtbernty7sk&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-06-15T13:15:45.336Z"
+      "updatedAt": "2026-06-22T12:51:13.879Z"
+    },
+    {
+      "id": "mtur-786",
+      "mturId": "786",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/786/2",
+      "titulo": "Florianopolis - A Toda Diversion - Febrero",
+      "subtitulo": "8 DÍAS / 5 NOCHES · Verano",
+      "duracion": "8 DÍAS / 5 NOCHES",
+      "destino": "Camboriu, Florianopolis",
+      "destinoSlug": "florianopolis",
+      "pais": "Brasil",
+      "emoji": "🏖️",
+      "imagen": "https://www.dropbox.com/scl/fi/uf3yodsitnhe8s07urkzx/2025_6_27_14_27_54_9-9.jpg?rlkey=djh27aw1f06mz5ckuuh1ptg3k&raw=1",
+      "visitando": "Camboriu, Florianopolis",
+      "highlights": [
+        "📍 Camboriu",
+        "📍 Florianopolis"
+      ],
+      "temporada": "Verano",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "06/02/2027  ·  13/02/2027  ·  20/02/2027  ·  27/02/2027",
+          "gold": true
+        },
+        {
+          "label": "Temporada",
+          "value": "Verano",
+          "gold": false
+        }
+      ],
+      "incluye": [
+        "Bus Semicama Montevideo - Florianópolis - Montevideo",
+        "Servicio en ruta (Merienda, Cena, Desayuno / Merienda, Cena, Desayuno",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "5 Noches De Alojamiento Con Desayuno Buffet",
+        "5 Cenas Buffet",
+        "Paseo De Playa Daniela",
+        "Paseo De Playa Pantano Do Sul",
+        "Tour Centro Histórico (Guía Local)",
+        "Paseo En Barco Pirata",
+        "Paseo Medio Día Camboriu",
+        "Cristo Luz, Traslado + Ascenso + Ingreso"
+      ],
+      "noIncluye": "Bebidas, Propinas, Comidas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "hoteles": [
+        {
+          "nombre": "POSADA SALINES",
+          "url": "http://.",
+          "precios": {
+            "doble": 689,
+            "triple": 669,
+            "cuadruple": 629,
+            "single": 969,
+            "child": 409,
+            "infante": 90
+          }
+        },
+        {
+          "nombre": "PARAISO PALACE II",
+          "url": "https://paraisopalacehotel.com.br/home-espanol/",
+          "precios": {
+            "doble": 775,
+            "triple": 755,
+            "cuadruple": 759,
+            "single": 1105,
+            "child": 452,
+            "infante": 90
+          }
+        },
+        {
+          "nombre": "PALACE I",
+          "url": "https://www.hotelpalace1.com/",
+          "precios": {
+            "doble": 885,
+            "triple": 875,
+            "single": 1355,
+            "child": 507,
+            "infante": 90
+          }
+        }
+      ],
+      "fechasSalida": [
+        "06/02/2027",
+        "13/02/2027",
+        "20/02/2027",
+        "27/02/2027"
+      ],
+      "precios": {
+        "doble": 689,
+        "triple": 669,
+        "cuadruple": 629,
+        "single": 969,
+        "child": 409,
+        "infante": 90
+      },
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/wr0w0tko08ri8e8qzijzx/2026_6_18_18_38_16_floripa8_todadiversion_verano-2.pdf?rlkey=gp9xx4spflj0sfmkhqqtkcplb&raw=1",
+      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
+      "updatedAt": "2026-06-22T12:51:16.399Z"
     },
     {
       "id": "mtur-783",
@@ -999,9 +1332,9 @@
         "child": 320,
         "infante": 90
       },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/u2vm4n239k4ykn3x56u8w/2025_6_23_19_56_29_octoberfest_8dias-1.pdf?rlkey=thcd6lfsv81osobh3ifi4npnn&raw=1",
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/25df1mlpvqtsw0m5bw9u7/2026_6_18_17_30_49_octoberfest_8dias-2-1.pdf?rlkey=3lywq1d1e6xtocjh0lfdndryf&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-06-15T13:15:47.568Z"
+      "updatedAt": "2026-06-22T12:51:18.723Z"
     },
     {
       "id": "mtur-774",
@@ -1074,7 +1407,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/tm8d3feip7344jb92cuo5/2025_12_11_18_48_30_camboriu8_magia_setiembre.pdf?rlkey=z0ttb0nepne2jd5xbw7gfhxjg&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-06-15T13:15:49.808Z"
+      "updatedAt": "2026-06-22T12:51:21.041Z"
     },
     {
       "id": "mtur-772",
@@ -1147,7 +1480,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/gjvvu40290m9ld6qezp2f/2025_12_11_18_48_08_camboriu8_magia_julio.pdf?rlkey=b15tec44oke8ucd4w6no7r3qd&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-06-15T13:15:52.062Z"
+      "updatedAt": "2026-06-22T12:51:23.347Z"
     },
     {
       "id": "mtur-769",
@@ -1219,7 +1552,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/qlkzau3l9u1phc301inb4/2026_5_6_12_48_53_natal_luz_7-1.pdf?rlkey=iajucszau9uya0prrdk0al0ec&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.- En destino solo se aceptan billetes de dólares nuevos. - Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino",
-      "updatedAt": "2026-06-15T13:15:54.483Z"
+      "updatedAt": "2026-06-22T12:51:25.824Z"
     },
     {
       "id": "mtur-805",
@@ -1291,7 +1624,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/67si635n63hyv7qselp5d/2025_11_28_15_06_24_mendoza_santiago_9dias_setiembre.pdf?rlkey=pfa7siskl2t9vefj3njuiyjhh&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-06-15T13:15:57.315Z"
+      "updatedAt": "2026-06-22T12:51:28.148Z"
     },
     {
       "id": "mtur-812",
@@ -1368,84 +1701,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/8r8dqlf0qszvv0zv66puc/2026_4_22_17_21_09_rio_10dias_verano2026-1.pdf?rlkey=c35pth6ztvt4yoaopk3hqtkiz&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ASCENSO MORRO PAN DE AZUCAR Y MORRO DA URCATRASLADO Y ACENSO PARQUE NACIONAL TIJUCA - INGRESO AL CRISTO REDENTORTRASLADO EN BUS PRIVADO ZONA ANGRA DOS REIS E ILHA GRANDE CON PASEO EN BARCO (4 PLAYAS) - MUSEO DE SAMBAGUIA COORDINADOR + GUIA LOCALPAQUETE COMPLETO APROX U$S 215PAQUETE SIN PASEO ANGRA DOS REIS APROX U$S 150 - precios aproximados susceptibles a modificaciones.-se contratan y abonan directamente al coordinador en viaje- sujetos a disponibilidad de cupo en destino. Dependen directamente del presador de servicio.",
-      "updatedAt": "2026-06-15T13:15:59.749Z"
-    },
-    {
-      "id": "mtur-765",
-      "mturId": "765",
-      "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/765/2",
-      "titulo": "Rio De Janeiro - Vacaciones De Julio",
-      "subtitulo": "10 DÍAS / 5 NOCHES · Vacaciones De Julio",
-      "duracion": "10 DÍAS / 5 NOCHES",
-      "destino": "Camboriu, Curitiba, Rio De Janeiro (Rio)",
-      "destinoSlug": "rio",
-      "pais": "Brasil",
-      "emoji": "🏙️",
-      "imagen": "https://www.dropbox.com/scl/fi/siwdym1qospqiobseux06/2025_4_14_15_46_01_RIO.jpg?rlkey=8edq6qnfo5h5d75v8qqi2ym8w&raw=1",
-      "visitando": "Camboriu, Curitiba, Rio De Janeiro (Rio)",
-      "highlights": [
-        "📍 Camboriu",
-        "📍 Curitiba",
-        "📍 Rio De Janeiro (Rio)"
-      ],
-      "temporada": "Vacaciones De Julio",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "27/06/2026",
-          "gold": true
-        },
-        {
-          "label": "Temporada",
-          "value": "Vacaciones De Julio",
-          "gold": false
-        }
-      ],
-      "incluye": [
-        "Bus Semicama Montevideo / Curitiba / Rio De Janeiro / Camboriu / Montevideo",
-        "Coordinador Acompañante",
-        "Seguro Médico 40 K",
-        "3 comidas en ruta",
-        "1 Noche De Alojamiento En Curitiba Con Desayuno",
-        "1 Cena Buffet en Barrio Santa Felicidad",
-        "3 Noches De Alojamiento En Rio De Janeiro Con Desayuno (Zona Copacabana)",
-        "4 Comidas Buffet Rio de Janeiro",
-        "1 Noches De Alojamiento En Camboriu Con Desayuno.",
-        "1 Cena en Camboriu",
-        "City Tour Curitiba",
-        "City Tour Rio De Janeiro",
-        "Traslado Al Corcovado",
-        "Traslado Al Pan De Azúcar",
-        "Traslado Y Ascenso A Cristo Luz (Camboriu)"
-      ],
-      "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
-      "hoteles": [
-        {
-          "nombre": "SJ EJECUTIVO- COPACABANA MAR-HAMBURGO PALACE",
-          "url": "https://executive.sjhoteiseresort.com.br/",
-          "precios": {
-            "doble": 1095,
-            "triple": 1075,
-            "single": 1355,
-            "child": 545,
-            "infante": 250
-          }
-        }
-      ],
-      "fechasSalida": [
-        "27/06/2026"
-      ],
-      "precios": {
-        "doble": 1095,
-        "triple": 1075,
-        "single": 1355,
-        "child": 545,
-        "infante": 250
-      },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/m41lb5qdsm9535i760ell/2026_2_9_19_28_56_rio_10dias_vac_julio2026-1.pdf?rlkey=zb36ee0hybwxi81f2q9cjmkj5&raw=1",
-      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.____________________________ACTIVIDADES OPCIONALES: ASCENSO MORRO PAN DE AZUCAR Y MORRO DA URCA TRASLADO Y ACENSO EN CAMIONETAS PRIVADAS PARQUE NACIONAL TIJUCA - INGRESO AL CRISTO REDENTOR 1 ALMUERZO BUFFET (SIN BEBIDA) TRASLADO EN BUS PRIVADO ZONA ANGRA DOS REIS E ILHA GRANDE CON PASEO EN BARCO (4 PLAYAS) 1 ALMUERZO BUFFET (SIN BEBIDA) MUSEO DE SAMBA GUIA COORDINADOR + GUIA LOCALPAQUETE COMPLETO APROX U$S 250 PAQUETE SIN PASEO ANGRA DOS REIS APROX U$S 180- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinad",
-      "updatedAt": "2026-06-15T13:16:02.361Z"
+      "updatedAt": "2026-06-22T12:51:30.783Z"
     },
     {
       "id": "mtur-806",
@@ -1519,7 +1775,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/g9cmglxvk3ch0tguu343x/2025_12_12_15_19_07_bariloche_surdechile_julio11dias.pdf?rlkey=9r5xiy1oz18ibsdcoemj4bssp&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-06-15T13:16:04.668Z"
+      "updatedAt": "2026-06-22T12:51:33.129Z"
     },
     {
       "id": "mtur-803",
@@ -1597,7 +1853,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/gttbakni8mqoth9i19mb8/2026_4_24_15_39_27_norte_argentino11_baja-2.pdf?rlkey=mntyj453dd6aerys5uxo494c0&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO. POLITICA DE MENORES: APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE: CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES. ACTIVIDADES OPCIONALESVisita a las Salinas GrandesPaseo al Pueblo de Cachiu$s 105 ( precio aproximado sujeto a modificaciones )Se contratan y abonan directamente con el coordinador en viaje. Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo y plazas en destino y pueden sufrir modificaciones sin previo aviso.Estas condiciones dependen directamente del prestador del servicio correspondiente (atracciones, parques, trenes, paseos en barco, etc.)",
-      "updatedAt": "2026-06-15T13:16:07.085Z"
+      "updatedAt": "2026-06-22T12:51:35.596Z"
     },
     {
       "id": "mtur-814",
@@ -1672,7 +1928,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/9bipm5rai5rlch2zdtuf5/2026_2_19_17_31_17_entre_fatimayandalucia14dias-1.pdf?rlkey=sptil88ntc63yvi5jag8a54pb&raw=1",
       "observaciones": "",
-      "updatedAt": "2026-06-15T13:16:09.319Z"
+      "updatedAt": "2026-06-22T12:51:37.895Z"
     }
   ]
 }
