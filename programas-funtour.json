@@ -1,6 +1,6 @@
 {
   "operador": "Funtour",
-  "updatedAt": "2026-06-10T20:21:44.390Z",
+  "updatedAt": "2026-06-22T14:48:08.333Z",
   "programas": [
     {
       "id": "funtour-termas-romanas-en-agosto",
@@ -84,7 +84,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-06-10T20:20:55.500Z"
+      "updatedAt": "2026-06-22T14:47:18.999Z"
     },
     {
       "id": "funtour-fin-de-ano-2026-en-florianopolis-con-media-pension-y-paseos-8-dias",
@@ -338,7 +338,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-06-10T20:20:57.691Z"
+      "updatedAt": "2026-06-22T14:47:21.518Z"
     },
     {
       "id": "funtour-navidad-2026-en-florianopolis-con-media-pension-y-paseos-8-dias",
@@ -612,7 +612,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-06-10T20:20:59.879Z"
+      "updatedAt": "2026-06-22T14:47:23.722Z"
     },
     {
       "id": "funtour-norte-argentino-aereo",
@@ -773,7 +773,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:02.999Z"
+      "updatedAt": "2026-06-22T14:47:25.892Z"
     },
     {
       "id": "funtour-mendoza-aereo-vacaciones-de-setiembre-2026",
@@ -862,7 +862,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:05.185Z"
+      "updatedAt": "2026-06-22T14:47:28.048Z"
     },
     {
       "id": "funtour-cataratas-aereo-vacaciones-de-setiembre-2026",
@@ -1003,7 +1003,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:07.321Z"
+      "updatedAt": "2026-06-22T14:47:30.282Z"
     },
     {
       "id": "funtour-gramado-y-canela-vacaciones-de-setiembre-2026",
@@ -1189,7 +1189,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:09.490Z"
+      "updatedAt": "2026-06-22T14:47:32.596Z"
     },
     {
       "id": "funtour-gramado-con-2-parques-vacaciones-de-setiembre-2026",
@@ -1367,7 +1367,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:11.653Z"
+      "updatedAt": "2026-06-22T14:47:34.775Z"
     },
     {
       "id": "funtour-gramado-y-canela-natal-luz-2026",
@@ -1527,7 +1527,7 @@
       ],
       "temporada": "Natal",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:13.825Z"
+      "updatedAt": "2026-06-22T14:47:37.000Z"
     },
     {
       "id": "funtour-bariloche-aereo-vacaciones-de-setiembre-2026",
@@ -1817,7 +1817,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:16.017Z"
+      "updatedAt": "2026-06-22T14:47:39.232Z"
     },
     {
       "id": "funtour-florianopolis-vacaciones-de-setiembre-bus-y-hotel",
@@ -1988,7 +1988,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:18.180Z"
+      "updatedAt": "2026-06-22T14:47:41.396Z"
     },
     {
       "id": "funtour-florianopolis-vacaciones-de-setiembre-media-pension-y-paseos",
@@ -2159,7 +2159,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:20.342Z"
+      "updatedAt": "2026-06-22T14:47:43.574Z"
     },
     {
       "id": "funtour-florianopolis-baja-agosto-a-diciembre-2026-media-pension-y-paseos",
@@ -2252,7 +2252,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:22.519Z"
+      "updatedAt": "2026-06-22T14:47:45.843Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-agosto-2026",
@@ -2355,7 +2355,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:24.654Z"
+      "updatedAt": "2026-06-22T14:47:48.002Z"
     },
     {
       "id": "funtour-florianopolis-abril-a-junio-8-dias-media-pension-y-paseos",
@@ -2553,7 +2553,7 @@
       ],
       "temporada": "Abril",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:26.825Z"
+      "updatedAt": "2026-06-22T14:47:50.192Z"
     },
     {
       "id": "funtour-gramado-y-canela-temporada-baja-2026",
@@ -2640,7 +2640,7 @@
       ],
       "temporada": "Temporada baja",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:29.209Z"
+      "updatedAt": "2026-06-22T14:47:52.357Z"
     },
     {
       "id": "funtour-bariloche-aereo-vacaciones-de-julio-2026",
@@ -2913,7 +2913,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:31.414Z"
+      "updatedAt": "2026-06-22T14:47:54.576Z"
     },
     {
       "id": "funtour-santiago-de-chile-con-vina-y-valparaiso-vacaciones-de-julio-2026",
@@ -3063,7 +3063,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:33.566Z"
+      "updatedAt": "2026-06-22T14:47:56.748Z"
     },
     {
       "id": "funtour-wine-tour-chile-2026",
@@ -3161,7 +3161,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:35.720Z"
+      "updatedAt": "2026-06-22T14:47:58.869Z"
     },
     {
       "id": "funtour-cataratas-aereo-vacaciones-de-julio-2026",
@@ -3300,7 +3300,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:37.859Z"
+      "updatedAt": "2026-06-22T14:48:01.154Z"
     },
     {
       "id": "funtour-gramado-y-canela-vacaciones-de-julio-2026-desde-montevideo-y-litoral-norte",
@@ -3476,7 +3476,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:40.026Z"
+      "updatedAt": "2026-06-22T14:48:03.946Z"
     },
     {
       "id": "funtour-gramado-con-2-parques-vacaciones-de-julio-2026-desde-montevideo-y-litoral-norte",
@@ -3663,7 +3663,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:42.236Z"
+      "updatedAt": "2026-06-22T14:48:06.159Z"
     },
     {
       "id": "funtour-floripa-julio-con-beto-carrero-y-compras-8-dias-media-pension-y-paseos",
@@ -3846,7 +3846,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-06-10T20:21:44.390Z"
+      "updatedAt": "2026-06-22T14:48:08.333Z"
     }
   ]
 }
