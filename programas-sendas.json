@@ -1,6 +1,6 @@
 {
   "operador": "Sendas Turismo",
-  "updatedAt": "2026-06-15T11:51:28.964Z",
+  "updatedAt": "2026-06-22T11:40:27.874Z",
   "programas": [
     {
       "id": "florianopolis-1413",
@@ -222,7 +222,7 @@
           "texto": "Solo bus y hotel descontar: U$S 130.-"
         }
       ],
-      "updatedAt": "2026-06-15T11:51:58.693Z"
+      "updatedAt": "2026-06-22T11:40:56.983Z"
     },
     {
       "id": "florianopolis-1400",
@@ -341,106 +341,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-15T11:51:59.888Z"
-    },
-    {
-      "id": "florianopolis-1396",
-      "joomlaId": "1396",
-      "sourceUrl": "https://www.sendasturismo.com/as/index.php/brasil/floripa1/1396-florianopolis-8-dias-abril-a-junio",
-      "titulo": "GRAMADO Y CANELA - 07 DIAS",
-      "subtitulo": "7 DÍAS / 04 NOCHES · FLORIANÓPOLIS",
-      "duracion": "7 DÍAS — 04 NOCHES",
-      "destino": "Florianópolis",
-      "destinoSlug": "florianopolis",
-      "pais": "Brasil",
-      "emoji": "🇧🇷",
-      "photoQuery": "Florianopolis beach Brazil",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "11 y 18 DE ABRIL / 9, 16 Y 23 DE MAYO / 6, 13 Y 20 DE JUNIO",
-          "gold": true
-        },
-        {
-          "label": "Operador",
-          "value": "Sendas Turismo",
-          "gold": false
-        }
-      ],
-      "descripcion": "Canasvieiras, en Florianópolis, combina el encanto de las playas brasileñas con aguas cálidas y tranquilas, perfectas para disfrutar todo el día. Con su ambiente alegre, su costa sin sargazo y su mezcla de naturaleza y ritmo local, es el destino ideal para vivir el verdadero verano en Brasil.",
-      "highlights": [
-        "🏖️ Playas cristalinas",
-        "⛵ Paseo en Scuna",
-        "🎢 Beto Carrero World",
-        "✝️ Cristo Luz",
-        "🐬 Golfinhos",
-        "🌊 Laguna Concepción"
-      ],
-      "incluye": [
-        "Bus semi cama, guía acompañante, servicio abordo (cena y desayuno abordo)",
-        "04 noches de alojamiento en Canela",
-        "Régimen de MEDIA PENSION - total: 05 comidas + 1 abordo",
-        "Tour Gramado y Canela",
-        "Tour Bento Gonzalvez y Garibaldi",
-        "Seguro de Asistencia médica de Universal Assistance"
-      ],
-      "itinerario": [
-        {
-          "dia": "Día 01",
-          "texto": "Uruguay: Salida en horas de la tarde en bus Semi Cama, servicio a bordo, guía acompañante, pasando por Porto Alegre, Canoas, Esteio, Sao Leopoldo, para ascender a las sierras gauchas y a la región de las hortensias: (cena y desayuno abordo)"
-        },
-        {
-          "dia": "Día 02",
-          "texto": "Canela: Llegada en horas de la mañana. Alojamiento en el hotel Serra Nevada, categoría 4 estrellas, ubicado en el centro del Canela, con piscina térmica. Resto del día libre para recorrer la ciudad. Almuerzo incluido."
-        },
-        {
-          "dia": "Día 03",
-          "texto": "Canela: Desayuno. En horas de la mañana salida para visitar los atractivos más importantes de la ciudad de GRAMADO. Recorrido por el Lago Negro con su floresta negra alemana, Minimundo con recorrido en ciudades antiguas observando réplicas de castillos, ferrovial, casas de estilo europeo, etc, Lago Joaquina Beir, Iglesia Matriz San Pedro, Plaza de las Banderas, Valle del Kilombo con el museo Hollywoood Dream Car, con su colección de motos y autos de lujo antiguos. Almuerzo Resto del dia libre,"
-        },
-        {
-          "dia": "Día 04",
-          "texto": "Canela: Desayuno. En horas de la mañana salida para visitar la ciudad de Canela, Iglesia Matriz o de Piedra, Parque de Caracol con su estupenda Cascada de más de 130 metros de altura, su teleférico y su caminata ecológica, Museo del Automóvil, fábrica de chocolates, artesanatos, centros comerciales, etc. Almuerzo incluido."
-        },
-        {
-          "dia": "Día 05",
-          "texto": "Canela: Desayuno. Salida en horas de la mañana rumbo al oeste para visitar la \"región de la uva y el vino\" pasando por la ciudad de Farroupilha, llegaremos hasta la ciudad de Carlos Barboza dónde tendremos la oportunidad de visitar la fábrica Tramontina, desde allí continuamos hacia la ciudad de Garibaldi (capital regional del champagne) donde veremos el lugar donde año a año se realiza la fiesta nacional del champagne, Almuerzo, y continuación en la tarde hacia la localidad de Bento Gonzalvez, donde tendremos oportunidad de visitar una bodega, viendo el proceso de elaboración del vino y además recorrer una vasta zona de valle de los viñedos. Paseo en forma Opcional en el tren -MARIA FUMACA- entre Bento y Carlos Barboza donde disfrutaremos de la hospitalidad italiana con bailes, degustación de vinos, además de presentaciones de cantos y bailes italianos. En horas de la tarde regreso al hotel."
-        },
-        {
-          "dia": "Día 06",
-          "texto": "Canela: Desayuno. Mañana libre. Almuerzo de despedida. Partida con equipajes del hotel, para emprender el viaje de retorno descendiendo la sierra, deteniéndonos en IGREGINHA, visitando una fábrica de calzados. Posterior prosecución en viaje de regreso vía Pelotas hacia:"
-        },
-        {
-          "dia": "Día 07",
-          "texto": "URUGUAY: Llegada en horas de la mañana. Fin de nuestros servicios.-"
-        }
-      ],
-      "hoteles": [
-        {
-          "nombre": "Serra Nevada",
-          "playa": "4****",
-          "sgl": 585,
-          "dbl": 435,
-          "tpl": 420,
-          "cpl": 405,
-          "qpl": null,
-          "cat": ""
-        }
-      ],
-      "notas_precios": [
-        {
-          "titulo": "Nota",
-          "texto": "Menores de 5 años máx. 1 por habitación: Sin Cargo"
-        },
-        {
-          "titulo": "Nota",
-          "texto": "Solo asiento u$s 190.-"
-        },
-        {
-          "titulo": "Nota",
-          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
-        }
-      ],
-      "updatedAt": "2026-06-15T11:52:01.085Z"
+      "updatedAt": "2026-06-22T11:40:58.162Z"
     },
     {
       "id": "gramado-1417",
@@ -539,7 +440,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-15T11:52:02.259Z"
+      "updatedAt": "2026-06-22T11:41:09.982Z"
     },
     {
       "id": "gramado-1416",
@@ -638,7 +539,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-15T11:52:03.455Z"
+      "updatedAt": "2026-06-22T11:41:11.159Z"
     },
     {
       "id": "gramado-1415",
@@ -772,7 +673,7 @@
           "texto": "NO INCLUYE: INGRESOS A LOS PARQUES, MUSEOS y ESPECTACULOS DE NATAL LUZ"
         }
       ],
-      "updatedAt": "2026-06-15T11:52:04.645Z"
+      "updatedAt": "2026-06-22T11:41:12.308Z"
     },
     {
       "id": "gramado-1411",
@@ -871,7 +772,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-15T11:52:05.844Z"
+      "updatedAt": "2026-06-22T11:41:13.502Z"
     },
     {
       "id": "gramado-1400",
@@ -990,106 +891,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-06-15T11:52:07.042Z"
-    },
-    {
-      "id": "gramado-1396",
-      "joomlaId": "1396",
-      "sourceUrl": "https://www.sendasturismo.com/as/index.php/brasil/gramado/1396-gramado-y-canela-7-dias-abril-a-junio-3",
-      "titulo": "GRAMADO Y CANELA - 07 DIAS",
-      "subtitulo": "7 DÍAS / 04 NOCHES · GRAMADO Y CANELA",
-      "duracion": "7 DÍAS — 04 NOCHES",
-      "destino": "Gramado y Canela",
-      "destinoSlug": "gramado",
-      "pais": "Brasil",
-      "emoji": "🇧🇷",
-      "photoQuery": "Gramado Rio Grande do Sul",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "11 y 18 DE ABRIL / 9, 16 Y 23 DE MAYO / 6, 13 Y 20 DE JUNIO",
-          "gold": true
-        },
-        {
-          "label": "Operador",
-          "value": "Sendas Turismo",
-          "gold": false
-        }
-      ],
-      "descripcion": "Gramado y Canela son dos joyas del sur de Brasil que combinan arquitectura alemana, gastronomía de primer nivel y paisajes de montaña únicos. Una experiencia completamente diferente al Brasil típico, llena de historia, chocolate artesanal y naturaleza exuberante.",
-      "highlights": [
-        "🌲 Parques naturales",
-        "🍫 Chocolate artesanal",
-        "⛪ Arquitectura europea",
-        "🎭 Gramado",
-        "🌊 Cascatas",
-        "🚂 Maria Fumaça"
-      ],
-      "incluye": [
-        "Bus semi cama, guía acompañante, servicio abordo (cena y desayuno abordo)",
-        "04 noches de alojamiento en Canela",
-        "Régimen de MEDIA PENSION - total: 05 comidas + 1 abordo",
-        "Tour Gramado y Canela",
-        "Tour Bento Gonzalvez y Garibaldi",
-        "Seguro de Asistencia médica de Universal Assistance"
-      ],
-      "itinerario": [
-        {
-          "dia": "Día 01",
-          "texto": "Uruguay: Salida en horas de la tarde en bus Semi Cama, servicio a bordo, guía acompañante, pasando por Porto Alegre, Canoas, Esteio, Sao Leopoldo, para ascender a las sierras gauchas y a la región de las hortensias: (cena y desayuno abordo)"
-        },
-        {
-          "dia": "Día 02",
-          "texto": "Canela: Llegada en horas de la mañana. Alojamiento en el hotel Serra Nevada, categoría 4 estrellas, ubicado en el centro del Canela, con piscina térmica. Resto del día libre para recorrer la ciudad. Almuerzo incluido."
-        },
-        {
-          "dia": "Día 03",
-          "texto": "Canela: Desayuno. En horas de la mañana salida para visitar los atractivos más importantes de la ciudad de GRAMADO. Recorrido por el Lago Negro con su floresta negra alemana, Minimundo con recorrido en ciudades antiguas observando réplicas de castillos, ferrovial, casas de estilo europeo, etc, Lago Joaquina Beir, Iglesia Matriz San Pedro, Plaza de las Banderas, Valle del Kilombo con el museo Hollywoood Dream Car, con su colección de motos y autos de lujo antiguos. Almuerzo Resto del dia libre,"
-        },
-        {
-          "dia": "Día 04",
-          "texto": "Canela: Desayuno. En horas de la mañana salida para visitar la ciudad de Canela, Iglesia Matriz o de Piedra, Parque de Caracol con su estupenda Cascada de más de 130 metros de altura, su teleférico y su caminata ecológica, Museo del Automóvil, fábrica de chocolates, artesanatos, centros comerciales, etc. Almuerzo incluido."
-        },
-        {
-          "dia": "Día 05",
-          "texto": "Canela: Desayuno. Salida en horas de la mañana rumbo al oeste para visitar la \"región de la uva y el vino\" pasando por la ciudad de Farroupilha, llegaremos hasta la ciudad de Carlos Barboza dónde tendremos la oportunidad de visitar la fábrica Tramontina, desde allí continuamos hacia la ciudad de Garibaldi (capital regional del champagne) donde veremos el lugar donde año a año se realiza la fiesta nacional del champagne, Almuerzo, y continuación en la tarde hacia la localidad de Bento Gonzalvez, donde tendremos oportunidad de visitar una bodega, viendo el proceso de elaboración del vino y además recorrer una vasta zona de valle de los viñedos. Paseo en forma Opcional en el tren -MARIA FUMACA- entre Bento y Carlos Barboza donde disfrutaremos de la hospitalidad italiana con bailes, degustación de vinos, además de presentaciones de cantos y bailes italianos. En horas de la tarde regreso al hotel."
-        },
-        {
-          "dia": "Día 06",
-          "texto": "Canela: Desayuno. Mañana libre. Almuerzo de despedida. Partida con equipajes del hotel, para emprender el viaje de retorno descendiendo la sierra, deteniéndonos en IGREGINHA, visitando una fábrica de calzados. Posterior prosecución en viaje de regreso vía Pelotas hacia:"
-        },
-        {
-          "dia": "Día 07",
-          "texto": "URUGUAY: Llegada en horas de la mañana. Fin de nuestros servicios.-"
-        }
-      ],
-      "hoteles": [
-        {
-          "nombre": "Serra Nevada",
-          "playa": "4****",
-          "sgl": 585,
-          "dbl": 435,
-          "tpl": 420,
-          "cpl": 405,
-          "qpl": null,
-          "cat": ""
-        }
-      ],
-      "notas_precios": [
-        {
-          "titulo": "Nota",
-          "texto": "Menores de 5 años máx. 1 por habitación: Sin Cargo"
-        },
-        {
-          "titulo": "Nota",
-          "texto": "Solo asiento u$s 190.-"
-        },
-        {
-          "titulo": "Nota",
-          "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
-        }
-      ],
-      "updatedAt": "2026-06-15T11:52:08.268Z"
+      "updatedAt": "2026-06-22T11:41:14.682Z"
     },
     {
       "id": "buenosaires-1414",
@@ -1207,7 +1009,7 @@
           "texto": "MENORES HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE (UNO POR HABITACION)"
         }
       ],
-      "updatedAt": "2026-06-15T11:52:09.482Z"
+      "updatedAt": "2026-06-22T11:41:26.479Z"
     },
     {
       "id": "mendoza-1412",
@@ -1328,7 +1130,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-06-15T11:52:10.679Z"
+      "updatedAt": "2026-06-22T11:41:27.661Z"
     },
     {
       "id": "mendoza-1407",
@@ -1459,7 +1261,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-06-15T11:52:11.879Z"
+      "updatedAt": "2026-06-22T11:41:28.874Z"
     },
     {
       "id": "norte-1406",
@@ -1565,7 +1367,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-06-15T11:52:23.808Z"
+      "updatedAt": "2026-06-22T11:41:40.602Z"
     },
     {
       "id": "norte-1405",
@@ -1671,7 +1473,7 @@
           "texto": "MENORES DE HASTA 2 AÑOS ACOMPAÑADOS DE 2 ADULTOS: FREE"
         }
       ],
-      "updatedAt": "2026-06-15T11:52:25.032Z"
+      "updatedAt": "2026-06-22T11:41:41.818Z"
     },
     {
       "id": "carlospaz-1404",
@@ -1822,7 +1624,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-06-15T11:52:47.650Z"
+      "updatedAt": "2026-06-22T11:42:04.339Z"
     },
     {
       "id": "bariloche-1403",
@@ -1990,7 +1792,7 @@
           "texto": "Solo asiento, seguro de asistencia y servicio abordo: USD 315.-"
         }
       ],
-      "updatedAt": "2026-06-15T11:52:48.816Z"
+      "updatedAt": "2026-06-22T11:42:05.494Z"
     },
     {
       "id": "cataratas-1410",
@@ -2093,7 +1895,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-06-15T11:53:00.606Z"
+      "updatedAt": "2026-06-22T11:42:17.201Z"
     },
     {
       "id": "cataratas-1409",
@@ -2196,7 +1998,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-06-15T11:53:01.753Z"
+      "updatedAt": "2026-06-22T11:42:18.325Z"
     },
     {
       "id": "cataratas-1401",
@@ -2319,110 +2121,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-06-15T11:53:02.909Z"
-    },
-    {
-      "id": "cataratas-1393",
-      "joomlaId": "1393",
-      "sourceUrl": "https://www.sendasturismo.com/as/index.php/cataratas/1393-cataratas-7-dias-abril-a-junio",
-      "titulo": "CATARATAS DEL IGUAZÚ",
-      "subtitulo": "7 DÍAS / 4 NOCHES · CATARATAS DEL IGUAZÚ",
-      "duracion": "7 DÍAS — 4 NOCHES",
-      "destino": "Cataratas del Iguazú",
-      "destinoSlug": "cataratas",
-      "pais": "Cataratas",
-      "emoji": "💧",
-      "photoQuery": "Cataratas Iguazu waterfall",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "05 DE ABRIL Y SABADOS DEL 11 DE ABRIL AL 20 DE JUNIO",
-          "gold": true
-        },
-        {
-          "label": "Operador",
-          "value": "Sendas Turismo",
-          "gold": false
-        }
-      ],
-      "descripcion": "Las Cataratas del Iguazú son una de las Siete Maravillas Naturales del Mundo. El estruendo del agua, la niebla permanente y la selva que las rodea generan una experiencia que no se olvida jamás.",
-      "highlights": [
-        "🌊 Cataratas Iguazú",
-        "🛥️ Bote al pie",
-        "🇦🇷 Lado argentino",
-        "🇧🇷 Lado brasileño",
-        "🦋 Selva",
-        "🌈 Arco iris"
-      ],
-      "incluye": [
-        "Bus Semi Cama, servicio a bordo - Cena y desayuno abordo",
-        "04 noches de alojamiento con desayuno / 05 comidas, más 01 abordo",
-        "Tour Cataratas Argentinas con ingreso incluido.",
-        "Tour Cataratas Brasileñas con ingreso incluido",
-        "Visita de la Represa de Itaipú / Visita con tiempo libre en Ciudad del Este para compras",
-        "Marco de las Tres Fronteras",
-        "En Ruta Ruinas de San Ignacio Mini con ingreso incluido, Minas de Wanda y Casa de Horacio Quiroga (ingreso opcional)",
-        "Seguro de Asistencia médica de Universal Assistance cobertura especial COVID - 19"
-      ],
-      "itinerario": [
-        {
-          "dia": "Día 01",
-          "texto": "Uruguay - Salida en bus Semi cama con cena y desayuno abordo, guía acompañante, pasando por Chajarí, San Ignacio, Puerto Iguazú, hacia:"
-        },
-        {
-          "dia": "Día 02",
-          "texto": "Foz de Iguazú - Llegada. Alojamiento. Resto del día libre para disfrutar del hotel y o paseos. Cena."
-        },
-        {
-          "dia": "Día 03",
-          "texto": "Foz de Iguazú. Desayuno. Salida en horas de la mañana para visitar Cataratas Brasileñas. Ingreso al Parque Nacional y llegada hasta el Punto Panorámico, frente al hotel Das Cataratas y desde allí dar comienzo a una caminata por pasarelas observando gran parte de los 275 saltos de agua y viendo el gran espectáculo que nos ofrece esta maravilla de la naturaleza. Al finalizar la mismo llegaremos a un mirador contemplando los saltos brasileños de Benjamín Constant, Deodoro, Floriano y Unión, este último ya perteneciente al salto Garganta del Diablo. (Ingreso incluido). Posibilidad de realizar opcionalmente el Safari Macuco donde nos internaremos en vehículos especiales en zona interna del parque y posteriormente en gomones realizar el trayecto por el río hasta enfrentarnos con los saltos en un espectáculo realmente indescriptible. Tiempo libre también para realizar opcional la visita al Parque de las Aves. Visita opcional al primer Museo de Cera de Latinoamérica, donde podrán ver a las más grandes estrellas de Hollywood, las Maravillas del Mundo o el Parque de los Dinosaurios. Cena."
-        },
-        {
-          "dia": "Día 04",
-          "texto": "Foz de Iguazú - Desayuno. Salida en horas de la mañana cruzando el Puente Internacional de la Amistad a territorio paraguayo y visitar la Represa de Itaipú. Observaremos un audiovisual de la misma para posteriormente visitar la sala de máquinas, Mirador del Vertedero, Lago artificial, presa principal de esta impresionante obra binacional sobre el lecho del Río Paraná, entre Paraguay y Brasil. De regreso visita de Ciudad del Este donde dispondremos de tiempo para compras. Regreso al hotel en la tarde. Cena."
-        },
-        {
-          "dia": "Día 05",
-          "texto": "Foz de Iguazú - Desayuno. Salida en la mañana cruzando el Puente Tancredo Neves a territorio argentino e ingresar al Parque Nacional para visitar las Cataratas Argentinas. Recorrido por los senderos superior, inferior y Garganta del Diablo. Observaremos saltos como el Bossetti, Adán y Eva, los Tres Mosqueteros, San Martín, Rivadavia, Alvar Núñez, (ingreso incluido). Cena"
-        },
-        {
-          "dia": "Día 06",
-          "texto": "Foz de Iguazú - Desayuno. Partida con equipajes en horas de la mañana hacia territorio argentina a través de la provincia de Misiones, entre medio de la exuberante vegetación, aserraderos, viveros forestales, plantaciones de Yerba mate, te, tabaco, visitando las minas de piedras Semi preciosas de Wanda (ingreso no incluido) hasta llegar a San Ignacio. Visita de las Ruinas Jesuíticas de San Ignacio Mini con ingres o incluido y la Casa del Escritor uruguayo Horacio Quiroga (ingreso no incluido) Almuerzo. Continuación en viaje de regreso por Alvear, Chajarí, hacia:"
-        },
-        {
-          "dia": "Día 07",
-          "texto": "Uruguay - Llegada en horas de la mañana. Fin de nuestros servicios"
-        }
-      ],
-      "hoteles": [
-        {
-          "nombre": "Carima",
-          "playa": "4*",
-          "sgl": 790,
-          "dbl": 650,
-          "tpl": 650,
-          "cpl": 650,
-          "qpl": null,
-          "cat": "http://www.hotelcarima.com.br/"
-        },
-        {
-          "nombre": "Vivaz",
-          "playa": "4*",
-          "sgl": 895,
-          "dbl": 685,
-          "tpl": 685,
-          "cpl": 685,
-          "qpl": null,
-          "cat": "http://www.vivazcataratas.com.br/"
-        }
-      ],
-      "notas_precios": [
-        {
-          "titulo": "Precios",
-          "texto": "Consultar tarifas vigentes al momento de la reserva."
-        }
-      ],
-      "updatedAt": "2026-06-15T11:53:04.158Z"
+      "updatedAt": "2026-06-22T11:42:19.474Z"
     }
   ]
 }
