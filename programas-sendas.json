@@ -1,6 +1,6 @@
 {
   "operador": "Sendas Turismo",
-  "updatedAt": "2026-07-06T10:02:28.747Z",
+  "updatedAt": "2026-07-07T18:38:03.696Z",
   "programas": [
     {
       "id": "florianopolis-1413",
@@ -272,7 +272,7 @@
           "texto": "Solo bus y hotel descontar: U$S 130.-"
         }
       ],
-      "updatedAt": "2026-07-06T10:02:59.107Z"
+      "updatedAt": "2026-07-07T18:38:31.196Z"
     },
     {
       "id": "gramado-1417",
@@ -371,7 +371,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-07-06T10:03:23.437Z"
+      "updatedAt": "2026-07-07T18:38:53.029Z"
     },
     {
       "id": "gramado-1416",
@@ -470,7 +470,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-07-06T10:03:24.700Z"
+      "updatedAt": "2026-07-07T18:38:54.105Z"
     },
     {
       "id": "gramado-1415",
@@ -604,7 +604,7 @@
           "texto": "NO INCLUYE: INGRESOS A LOS PARQUES, MUSEOS y ESPECTACULOS DE NATAL LUZ"
         }
       ],
-      "updatedAt": "2026-07-06T10:03:25.943Z"
+      "updatedAt": "2026-07-07T18:38:55.185Z"
     },
     {
       "id": "gramado-1411",
@@ -703,7 +703,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-07-06T10:03:27.155Z"
+      "updatedAt": "2026-07-07T18:38:56.263Z"
     },
     {
       "id": "mendoza-1412",
@@ -824,7 +824,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-07-06T10:04:01.190Z"
+      "updatedAt": "2026-07-07T18:39:28.413Z"
     },
     {
       "id": "cataratas-1410",
@@ -927,7 +927,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-07-06T10:05:39.256Z"
+      "updatedAt": "2026-07-07T18:41:02.854Z"
     },
     {
       "id": "cataratas-1409",
@@ -1030,7 +1030,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-07-06T10:05:40.453Z"
+      "updatedAt": "2026-07-07T18:41:03.990Z"
     }
   ]
 }
