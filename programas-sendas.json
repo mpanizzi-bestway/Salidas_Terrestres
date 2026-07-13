@@ -1,6 +1,6 @@
 {
   "operador": "Sendas Turismo",
-  "updatedAt": "2026-07-07T18:38:03.696Z",
+  "updatedAt": "2026-07-13T08:55:28.015Z",
   "programas": [
     {
       "id": "florianopolis-1413",
@@ -272,7 +272,7 @@
           "texto": "Solo bus y hotel descontar: U$S 130.-"
         }
       ],
-      "updatedAt": "2026-07-07T18:38:31.196Z"
+      "updatedAt": "2026-07-13T08:55:56.207Z"
     },
     {
       "id": "gramado-1417",
@@ -289,7 +289,7 @@
       "fechas": [
         {
           "label": "Salidas",
-          "value": "9 Y 16 DE ENERO",
+          "value": "9 Y 16 DE ENERO / 8 DE FEBRERO",
           "gold": true
         },
         {
@@ -355,6 +355,16 @@
           "cpl": 435,
           "qpl": null,
           "cat": ""
+        },
+        {
+          "nombre": "Serra Nevada",
+          "playa": "4****",
+          "sgl": 595,
+          "dbl": 450,
+          "tpl": 430,
+          "cpl": 405,
+          "qpl": null,
+          "cat": ""
         }
       ],
       "notas_precios": [
@@ -371,7 +381,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-07-07T18:38:53.029Z"
+      "updatedAt": "2026-07-13T08:56:18.142Z"
     },
     {
       "id": "gramado-1416",
@@ -470,7 +480,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-07-07T18:38:54.105Z"
+      "updatedAt": "2026-07-13T08:56:19.255Z"
     },
     {
       "id": "gramado-1415",
@@ -604,7 +614,7 @@
           "texto": "NO INCLUYE: INGRESOS A LOS PARQUES, MUSEOS y ESPECTACULOS DE NATAL LUZ"
         }
       ],
-      "updatedAt": "2026-07-07T18:38:55.185Z"
+      "updatedAt": "2026-07-13T08:56:20.380Z"
     },
     {
       "id": "gramado-1411",
@@ -703,7 +713,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-07-07T18:38:56.263Z"
+      "updatedAt": "2026-07-13T08:56:21.521Z"
     },
     {
       "id": "mendoza-1412",
@@ -824,7 +834,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-07-07T18:39:28.413Z"
+      "updatedAt": "2026-07-13T08:56:54.101Z"
     },
     {
       "id": "cataratas-1410",
@@ -927,7 +937,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-07-07T18:41:02.854Z"
+      "updatedAt": "2026-07-13T08:58:28.923Z"
     },
     {
       "id": "cataratas-1409",
@@ -1030,7 +1040,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-07-07T18:41:03.990Z"
+      "updatedAt": "2026-07-13T08:58:30.034Z"
     }
   ]
 }
