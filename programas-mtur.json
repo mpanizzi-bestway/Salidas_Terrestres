@@ -1,12 +1,12 @@
 {
   "operador": "Mtur Viajes",
-  "updatedAt": "2026-07-13T10:26:57.702Z",
+  "updatedAt": "2026-07-20T10:11:44.651Z",
   "programas": [
     {
       "id": "mtur-807",
       "mturId": "807",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/807/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/807/2",
       "titulo": "Termas Romanas",
       "subtitulo": "5 DÍAS / 3 NOCHES · Baja Temporada 2026",
       "duracion": "5 DÍAS / 3 NOCHES",
@@ -46,11 +46,11 @@
         "1 Almuerzo Buffet en Rivera (al regreso)",
         "Tiempo Libre Para Compras"
       ],
-      "noIncluye": "nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "RECANTO MAESTRO",
-          "url": "https://www.mturviajes.com.uy/paquetes/794/2",
+          "url": "",
           "precios": {
             "doble": 469,
             "triple": 419,
@@ -72,15 +72,15 @@
         "child": 235,
         "infante": 90
       },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/8eq6rdczppru8ldnf2yr6/2025_12_17_12_08_09_terma_romanas_bajat5-2.pdf?rlkey=vf7j6stg2abm820ylcowp8ljf&raw=1",
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/pz4sotp4f9xvs58tnxrc3/2026_7_14_20_09_56_terma_romanas_bajat6.pdf?rlkey=7jbo5lut2a0rypuwk09c6x0ko&raw=1",
       "observaciones": "",
-      "updatedAt": "2026-07-13T10:27:04.402Z"
+      "updatedAt": "2026-07-20T10:11:50.738Z"
     },
     {
       "id": "mtur-817",
       "mturId": "817",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/817/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/817/2",
       "titulo": "Termas Romanas",
       "subtitulo": "6 DÍAS / 4 NOCHES · Baja Temporada 2026",
       "duracion": "6 DÍAS / 4 NOCHES",
@@ -120,11 +120,11 @@
         "1 Almuerzo Buffet en Rivera (al regreso)",
         "Tiempo Libre Para Compras"
       ],
-      "noIncluye": "nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "Hotel Recanto Business Center",
-          "url": "http://d",
+          "url": "",
           "precios": {
             "doble": 495,
             "triple": 465,
@@ -147,15 +147,15 @@
         "child": 247,
         "infante": 90
       },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/ty5brynp9v5wufbxp2oom/2026_7_1_16_49_14_terma_romanas_bajat5.pdf?rlkey=rjeguqmzbh04c6spl9fw40nk2&raw=1",
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/o4fwkzfl628l0uah2wxaq/2026_7_14_20_09_50_terma_romanas_bajat6.pdf?rlkey=prp9eto7z6xub65cmybl40ube&raw=1",
       "observaciones": "",
-      "updatedAt": "2026-07-13T10:27:07.188Z"
+      "updatedAt": "2026-07-20T10:11:53.351Z"
     },
     {
       "id": "mtur-788",
       "mturId": "788",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/788/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/788/2",
       "titulo": "Florianopolis - Sol & Playa - Febrero 2027",
       "subtitulo": "8 DÍAS / 5 NOCHES · Verano",
       "duracion": "8 DÍAS / 5 NOCHES",
@@ -191,11 +191,11 @@
         "Paseo De Playa Pantano Do Sul",
         "Tour Centro Histórico (Guía Local)"
       ],
-      "noIncluye": "Bebidas, Propinas, Comidas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "POSADA SALINES",
-          "url": "https://www.mturviajes.com.uy/inicio",
+          "url": "",
           "precios": {
             "doble": 559,
             "triple": 539,
@@ -207,7 +207,7 @@
         },
         {
           "nombre": "PARAISO PALACE II",
-          "url": "https://paraisopalacehotel.com.br/home-espanol/",
+          "url": "",
           "precios": {
             "doble": 645,
             "triple": 625,
@@ -218,7 +218,7 @@
         },
         {
           "nombre": "PALACE I",
-          "url": "https://paraisopalacehotel.com.br/home-espanol/",
+          "url": "",
           "precios": {
             "doble": 755,
             "triple": 745,
@@ -242,15 +242,15 @@
         "child": 279,
         "infante": 90
       },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/75u6inwyu8tmo1x6giyfu/2026_6_18_19_20_24_floripa8_solyplaya_verano-1.pdf?rlkey=yr3m2vcfhzlcwhli7j8xs4o3u&raw=1",
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/bn8s9tkpere2pw0wmyses/2026_7_15_12_30_22_turismo_2027_itinerario_floripa8_solyplaya.pdf?rlkey=i5i5uxr571lxq995l9w13hd4u&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Opcionales:MAP u$s 90Barco pirata u$s 35Visita Balneario Camboriu u$s 35",
-      "updatedAt": "2026-07-13T10:27:09.672Z"
+      "updatedAt": "2026-07-20T10:11:56.625Z"
     },
     {
       "id": "mtur-815",
       "mturId": "815",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/815/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/815/2",
       "titulo": "Florianopolis - Sol & Playa - Enero 2027",
       "subtitulo": "8 DÍAS / 5 NOCHES · Verano",
       "duracion": "8 DÍAS / 5 NOCHES",
@@ -287,11 +287,11 @@
         "Paseo De Playa Pantano Do Sul",
         "Tour Centro Historico (Guia Local)"
       ],
-      "noIncluye": "Bebidas, Propinas, Comidas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "POSADA SALINES",
-          "url": "http://POSADA SALINES",
+          "url": "",
           "precios": {
             "doble": 575,
             "triple": 559,
@@ -303,7 +303,7 @@
         },
         {
           "nombre": "PARAISO PALACE II",
-          "url": "https://paraiso-palace-ii-e-iii.hotelflorianopolis.com/es/",
+          "url": "",
           "precios": {
             "doble": 665,
             "triple": 645,
@@ -314,7 +314,7 @@
         },
         {
           "nombre": "PALACE I",
-          "url": "https://paraisopalacehotel.com.br/home-espanol/",
+          "url": "",
           "precios": {
             "doble": 785,
             "triple": 765,
@@ -340,15 +340,15 @@
         "child": 289,
         "infante": 90
       },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/9tho70ei3pawoz5htaqd6/2026_6_18_19_19_44_floripa8_solyplaya_verano-1.pdf?rlkey=2ns655ywrncm6yu5h5sv6a4pz&raw=1",
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/nvutbc43vptuz07d7pl5t/2026_7_15_12_29_39_turismo_2027_itinerario_floripa8_solyplaya.pdf?rlkey=2t60h56s4tk8pu49hxolnj1e7&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Opcionales:MAP u$s 90Barco pirata u$s 35 Visita Balneario Camboriu u$s 35",
-      "updatedAt": "2026-07-13T10:27:12.111Z"
+      "updatedAt": "2026-07-20T10:11:59.267Z"
     },
     {
       "id": "mtur-791",
       "mturId": "791",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/791/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/791/2",
       "titulo": "Florianopolis - Sol & Playa - Marzo 2027",
       "subtitulo": "8 DÍAS / 5 NOCHES · Verano",
       "duracion": "8 DÍAS / 5 NOCHES",
@@ -385,11 +385,11 @@
         "Paseo De Playa Pantano Do Sul",
         "Tour Centro Histórico (Guía Local)"
       ],
-      "noIncluye": "Bebidas, Propinas, Comidas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "POSADA SALINES",
-          "url": "http://.",
+          "url": "",
           "precios": {
             "doble": 585,
             "triple": 569,
@@ -401,7 +401,7 @@
         },
         {
           "nombre": "PARAISO PALACE II",
-          "url": "https://paraiso-palace-ii-e-iii.hotelflorianopolis.com/es/",
+          "url": "",
           "precios": {
             "doble": 599,
             "triple": 585,
@@ -412,7 +412,7 @@
         },
         {
           "nombre": "PALACE I",
-          "url": "https://www.hotelpalace1.com/",
+          "url": "",
           "precios": {
             "doble": 719,
             "triple": 709,
@@ -435,15 +435,15 @@
         "child": 292,
         "infante": 90
       },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/1qc57pqgtnd19kv5jnhdp/2026_6_18_19_19_21_floripa8_solyplaya_verano-1.pdf?rlkey=bjqtk4y6frvw5ul9td3h4rh77&raw=1",
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/ezwsieqqv80z6z9scgms7/2026_7_15_12_30_32_turismo_2027_itinerario_floripa8_solyplaya.pdf?rlkey=kh2ofv0rb15c6ah2msdfuokax&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Opcionales:MAP u$s 90BARCO PIRATA u$s 35 VISITA BALNEARIO CAMBORIU u$s 35",
-      "updatedAt": "2026-07-13T10:27:14.568Z"
+      "updatedAt": "2026-07-20T10:12:02.198Z"
     },
     {
       "id": "mtur-816",
       "mturId": "816",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/816/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/816/2",
       "titulo": "Cataratas - 6 Dias - Desde Setiembre A Diciembre",
       "subtitulo": "6 DÍAS / 3 NOCHES · Baja Temporada 2026",
       "duracion": "6 DÍAS / 3 NOCHES",
@@ -483,11 +483,11 @@
         "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
         "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
       ],
-      "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "DOM PEDRO I",
-          "url": "https://www.hoteldompedro.com.br/es-ar",
+          "url": "",
           "precios": {
             "doble": 525,
             "triple": 519,
@@ -521,13 +521,13 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/2tm7xmwt90peaerfh40sj/2026_4_22_14_15_12_cataratas6_baja-1.pdf?rlkey=r7c0oaj6xokf3iwm4wvhtusz7&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Actividades Opcionales:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135Se contratan y abonan al coordinador en viaje.",
-      "updatedAt": "2026-07-13T10:27:17.140Z"
+      "updatedAt": "2026-07-20T10:12:05.063Z"
     },
     {
       "id": "mtur-781",
       "mturId": "781",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/781/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/781/2",
       "titulo": "Cataratas - 6 Dias - Desde Abril Hasta Agosto",
       "subtitulo": "6 DÍAS / 3 NOCHES · Baja Temporada 2026",
       "duracion": "6 DÍAS / 3 NOCHES",
@@ -568,11 +568,11 @@
         "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
         "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
       ],
-      "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "DOM PERDO I",
-          "url": "https://www.hoteldompedro.com.br/es-ar",
+          "url": "",
           "precios": {
             "doble": 525,
             "triple": 515,
@@ -605,13 +605,13 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/q8dr7o5qrqi6tvkgrxecl/2026_4_22_14_15_22_cataratas6_baja-1.pdf?rlkey=en6p74vba4zc395dyjv4wdzhv&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Actividades Opcionales:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135Se contratan y abonan al coordinador en viaje.",
-      "updatedAt": "2026-07-13T10:27:19.712Z"
+      "updatedAt": "2026-07-20T10:12:07.897Z"
     },
     {
       "id": "mtur-792",
       "mturId": "792",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/792/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/792/2",
       "titulo": "Florianopolis - Sol & Playa - Turismo",
       "subtitulo": "8 DÍAS / 5 NOCHES · Semana De Turismo",
       "duracion": "8 DÍAS / 5 NOCHES",
@@ -647,18 +647,11 @@
         "Paseo De Playa Pantano Do Sul",
         "Tour Centro Histórico (Guía Local)"
       ],
-      "noIncluye": "Bebidas, Propinas, Comidas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
-          "nombre": "PALACE I",
-          "url": "https://www.hotelpalace1.com/",
-          "precios": {
-            "infante": 90
-          }
-        },
-        {
           "nombre": "POSADA SALINES",
-          "url": "http://.",
+          "url": "",
           "precios": {
             "doble": 575,
             "triple": 559,
@@ -670,7 +663,7 @@
         },
         {
           "nombre": "PALACE II",
-          "url": "https://paraiso-palace-ii-e-iii.hotelflorianopolis.com/es/",
+          "url": "",
           "precios": {
             "doble": 638,
             "triple": 635,
@@ -679,23 +672,39 @@
             "child": 320,
             "infante": 90
           }
+        },
+        {
+          "nombre": "PALACE I",
+          "url": "",
+          "precios": {
+            "doble": 749,
+            "triple": 739,
+            "single": 1195,
+            "child": 375,
+            "infante": 90
+          }
         }
       ],
       "fechasSalida": [
         "20/03/2027"
       ],
       "precios": {
+        "doble": 575,
+        "triple": 559,
+        "cuadruple": 539,
+        "single": 869,
+        "child": 287,
         "infante": 90
       },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/ur4o1fg4lavql56lxw4ro/2025_7_11_20_11_37_floripa8_solyplaya_turismo.pdf?rlkey=0a6p46eaf38nxhovhuthkr3bx&raw=1",
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/tgs1w9f6xfhvnccte8jbk/2026_7_15_12_40_55_turismo_2027_itinerario_floripa8_solyplaya-1.pdf?rlkey=1jgbxahrmao4kll3xcs5ielna&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Opcionales:MAP u$s 60BARCO PIRATA u$s 25 VISITA BALNEARIO CAMBORIU u$s 25",
-      "updatedAt": "2026-07-13T10:27:22.203Z"
+      "updatedAt": "2026-07-20T10:12:10.816Z"
     },
     {
       "id": "mtur-808",
       "mturId": "808",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/808/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/808/2",
       "titulo": "Gramado & Canela - 7 Dias",
       "subtitulo": "7 DÍAS / 4 NOCHES · Vacaciones De Setiembre",
       "duracion": "7 DÍAS / 4 NOCHES",
@@ -733,11 +742,11 @@
         "1 Almuerzo (Cafe Colonial)",
         "City Tour En Gramado / Canela / Garibaldi"
       ],
-      "noIncluye": "BEBIDAS EN LAS COMIDAS, PROPINAS, INGRESO A PARQUES Y O MUSEOS Y NADA NO ESPECIFICADO EN EL PROGRAMA.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "GRAMADO PALACE",
-          "url": "https://gramadopalace.com.br/",
+          "url": "",
           "precios": {
             "doble": 545,
             "triple": 540,
@@ -761,13 +770,246 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/de8epvjrwyth08q20idoe/2026_4_10_19_25_43_gramadoycanela7_vac_setiembre-1.pdf?rlkey=lxs83iojbco8cs455f2xkypq9&raw=1",
       "observaciones": "Los precios de menores corresponden a un menor compartiendo habitación con dos adultos.",
-      "updatedAt": "2026-07-13T10:27:24.487Z"
+      "updatedAt": "2026-07-20T10:12:13.164Z"
+    },
+    {
+      "id": "mtur-778",
+      "mturId": "778",
+      "operador": "mtur",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/778/2",
+      "titulo": "Cataratas 6 Dias - Carnaval 2027",
+      "subtitulo": "6 DÍAS / 3 NOCHES · Carnaval",
+      "duracion": "6 DÍAS / 3 NOCHES",
+      "destino": "Ciudad Del Este, Foz De Iguazu, Puerto Iguazu",
+      "destinoSlug": "cataratas",
+      "pais": "Cataratas",
+      "emoji": "🌊",
+      "imagen": "https://www.dropbox.com/scl/fi/skoqgb6t2fv6eed725cyo/2025_6_12_18_19_23_Cataratas-Iguazu-773x458-1.webp?rlkey=htqk40kppv3e8r734yp05754i&raw=1",
+      "visitando": "Ciudad Del Este, Foz De Iguazu, Puerto Iguazu",
+      "highlights": [
+        "📍 Ciudad Del Este",
+        "📍 Foz De Iguazu",
+        "📍 Puerto Iguazu"
+      ],
+      "temporada": "Carnaval",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "08/02/2027",
+          "gold": true
+        },
+        {
+          "label": "Temporada",
+          "value": "Carnaval",
+          "gold": false
+        }
+      ],
+      "incluye": [
+        "Bus Semicama Montevideo - Foz De Iguazú - Montevideo",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "Servicio a Bordo durante el viaje",
+        "3Noches De Alojamiento (Según Selección)",
+        "3 Desayunos Buffet servido en el hotel",
+        "3 Cenas Buffet servidas en el hotel",
+        "Traslado, Ingreso Y Guía Local Cataratas Brasil",
+        "Traslado, Ingreso Y Guía Local Cataratas Argentina",
+        "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
+        "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
+      ],
+      "noIncluye": "",
+      "hoteles": [
+        {
+          "nombre": "DOM PEDRO I",
+          "url": "",
+          "precios": {
+            "doble": 575,
+            "triple": 575,
+            "cuadruple": 545,
+            "single": 679,
+            "child": 285
+          }
+        }
+      ],
+      "fechasSalida": [
+        "08/02/2027"
+      ],
+      "precios": {
+        "doble": 575,
+        "triple": 575,
+        "cuadruple": 545,
+        "single": 679,
+        "child": 285
+      },
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/zy4e6thk6zkm2fmydlwnz/2025_11_7_15_22_07_cataratas6_carnaval.pdf?rlkey=kbqqdihrogjkyhaapk1gjmzsq&raw=1",
+      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Actividades Opcionales:Almuerzos Rafaín Buffet U$S 23 - Parque de Aves U$S 17 - Safari Macuco U$S 70Museo de Cera, Bar de Hielo y Motor Show U$S 35 - Show Internacional Rafaín U$S 30Catamarán U$S 35 - Helicóptero U$S 145Se contratan y abonan al coordinador en viaje.",
+      "updatedAt": "2026-07-20T10:12:16.769Z"
+    },
+    {
+      "id": "mtur-777",
+      "mturId": "777",
+      "operador": "mtur",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/777/2",
+      "titulo": "Cataratas - 6 Dias",
+      "subtitulo": "6 DÍAS / 3 NOCHES · Verano",
+      "duracion": "6 DÍAS / 3 NOCHES",
+      "destino": "Ciudad Del Este, Foz De Iguazu, Puerto Iguazu",
+      "destinoSlug": "cataratas",
+      "pais": "Cataratas",
+      "emoji": "🌊",
+      "imagen": "https://www.dropbox.com/scl/fi/xfb5v04aw8s2hmnsefzw5/2025_6_12_17_48_58_images.jpg?rlkey=ou35l5w37hju49n286l4aodvm&raw=1",
+      "visitando": "Ciudad Del Este, Foz De Iguazu, Puerto Iguazu",
+      "highlights": [
+        "📍 Ciudad Del Este",
+        "📍 Foz De Iguazu",
+        "📍 Puerto Iguazu"
+      ],
+      "temporada": "Verano",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "04/01/2027  ·  11/01/2027  ·  18/01/2027  ·  25/01/2027  ·  01/02/2027",
+          "gold": true
+        },
+        {
+          "label": "Temporada",
+          "value": "Verano",
+          "gold": false
+        }
+      ],
+      "incluye": [
+        "Bus Semicama Montevideo - Foz De Iguazú - Montevideo",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "Servicio a Bordo durante el viaje",
+        "3 Noches De Alojamiento (Según Selección)",
+        "3 Desayunos Buffet servido en el hotel",
+        "3 Cenas Buffet servidas en el hotel",
+        "Traslado, Ingreso Y Guía Local Cataratas Brasil",
+        "Traslado, Ingreso Y Guía Local Cataratas Argentina",
+        "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
+        "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
+      ],
+      "noIncluye": "",
+      "hoteles": [
+        {
+          "nombre": "Dom Pedro I",
+          "url": "",
+          "precios": {
+            "doble": 549,
+            "triple": 545,
+            "cuadruple": 545,
+            "single": 629,
+            "child": 275,
+            "infante": 90
+          }
+        }
+      ],
+      "fechasSalida": [
+        "04/01/2027",
+        "11/01/2027",
+        "18/01/2027",
+        "25/01/2027",
+        "01/02/2027",
+        "15/02/2027",
+        "22/02/2027",
+        "01/03/2027",
+        "08/03/2027",
+        "14/03/2027",
+        "29/03/2027"
+      ],
+      "precios": {
+        "doble": 549,
+        "triple": 545,
+        "cuadruple": 545,
+        "single": 629,
+        "child": 275,
+        "infante": 90
+      },
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/hqsgddy74azbsjqxmn89r/2026_7_15_17_58_48_verano_2027_itinerario_cataratas6.pdf?rlkey=6q053z749h2tge7nd2qzy70ap&raw=1",
+      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Actividades Opcionales:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135Se contratan y abonan al coordinador en viaje.",
+      "updatedAt": "2026-07-20T10:12:20.577Z"
+    },
+    {
+      "id": "mtur-607",
+      "mturId": "607",
+      "operador": "mtur",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/607/2",
+      "titulo": "Cataratas Turismo 6 Dias",
+      "subtitulo": "6 DÍAS / 3 NOCHES · Semana De Turismo",
+      "duracion": "6 DÍAS / 3 NOCHES",
+      "destino": "Ciudad Del Este, Foz De Iguazu, Puerto Iguazu",
+      "destinoSlug": "cataratas",
+      "pais": "Cataratas",
+      "emoji": "🌊",
+      "imagen": "https://www.dropbox.com/scl/fi/in4f93kgzmzkh1jisyh8x/2025_6_12_18_40_33_images-1.jpg?rlkey=wt2rx7p2o3ojlbo90pma1dd8q&raw=1",
+      "visitando": "Ciudad Del Este, Foz De Iguazu, Puerto Iguazu",
+      "highlights": [
+        "📍 Ciudad Del Este",
+        "📍 Foz De Iguazu",
+        "📍 Puerto Iguazu"
+      ],
+      "temporada": "Semana De Turismo",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "19/03/2027  ·  24/03/2027",
+          "gold": true
+        },
+        {
+          "label": "Temporada",
+          "value": "Semana De Turismo",
+          "gold": false
+        }
+      ],
+      "incluye": [
+        "Bus Semicama Montevideo / Foz De Iguazu / Montevideo",
+        "Servicio A Bordo O En Ruta De Ida Y Vuelta",
+        "Coordinador Acompañante En Todo El Recorrido",
+        "Seguro Medico 40K (Cobertura Hasta U$S 40.000) Cubre Covid",
+        "3 Noches De Alojamiento Con Desayuno",
+        "3 Cenas Buffet Servidas En El Hotel",
+        "Traslado E Ingreso Con Guía Local Cataratas Brasileras",
+        "Traslado E Ingreso Con Guía Local Cataratas Argentinas",
+        "Traslado E Ingreso Con Guía Local Represa Itaipu - Con Visita Y Tiempo Libre Ciudad Del Este",
+        "Traslado E Ingreso Parque Nacional San Ignacio Mini (Ruinas Jesuitas)"
+      ],
+      "noIncluye": "",
+      "hoteles": [
+        {
+          "nombre": "DOM PEDRO I",
+          "url": "",
+          "precios": {
+            "doble": 579,
+            "triple": 575,
+            "cuadruple": 545,
+            "single": 679,
+            "child": 285,
+            "infante": 90
+          }
+        }
+      ],
+      "fechasSalida": [
+        "19/03/2027",
+        "24/03/2027"
+      ],
+      "precios": {
+        "doble": 579,
+        "triple": 575,
+        "cuadruple": 545,
+        "single": 679,
+        "child": 285,
+        "infante": 90
+      },
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/am863uuv4y60f7bx7w4x9/2026_7_15_17_59_51_turismo_2027_itinerario_cataratas6.pdf?rlkey=ahjoxorqng1osqydimf51jbfx&raw=1",
+      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Actividades Opcionales:Almuerzos Rafaín Buffet U$S 20 - Parque de Aves U$S 17 - Safari Macuco U$S 70Museo de Cera, Bar de Hielo y Motor Show U$S 35 Show Internacional Rafaín U$S 32 - Helicóptero U$S 145Se contratan y abonan al coordinador en viaje.",
+      "updatedAt": "2026-07-20T10:12:23.054Z"
     },
     {
       "id": "mtur-785",
       "mturId": "785",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/785/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/785/2",
       "titulo": "Florianopolis - A Toda Diversion - Enero 2027",
       "subtitulo": "8 DÍAS / 5 NOCHES · Verano",
       "duracion": "8 DÍAS / 5 NOCHES",
@@ -808,11 +1050,11 @@
         "Paseo Medio Día Camboriu",
         "Cristo Luz, Traslado + Ascenso + Ingreso"
       ],
-      "noIncluye": "Bebidas, Propinas, Comidas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "POSADA SALINES",
-          "url": "http://.",
+          "url": "",
           "precios": {
             "doble": 705,
             "triple": 689,
@@ -824,7 +1066,7 @@
         },
         {
           "nombre": "PARAISO PALACE II",
-          "url": "https://paraiso-palace-ii-e-iii.hotelflorianopolis.com/es/",
+          "url": "",
           "precios": {
             "doble": 795,
             "triple": 775,
@@ -835,7 +1077,7 @@
         },
         {
           "nombre": "PALACE I",
-          "url": "https://www.hotelpalace1.com/",
+          "url": "",
           "precios": {
             "doble": 915,
             "triple": 895,
@@ -860,15 +1102,15 @@
         "child": 415,
         "infante": 90
       },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/lhvjm63u2ca9f1f33l275/2026_6_18_17_42_25_floripa8_todadiversion_verano-2.pdf?rlkey=kfxd7n7e7kl91gj2os8vedx9s&raw=1",
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/i383ooemdpshy79nt787d/2026_7_15_12_32_17_verano_2027_itinerario_floripa8_myd.pdf?rlkey=qdjpimqcyod3vmhz6rz2q49vk&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-07-13T10:27:26.962Z"
+      "updatedAt": "2026-07-20T10:12:25.593Z"
     },
     {
       "id": "mtur-756",
       "mturId": "756",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/756/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/756/2",
       "titulo": "Cataratas - 7 Dias",
       "subtitulo": "7 DÍAS / 4 NOCHES · Baja Temporada 2026",
       "duracion": "7 DÍAS / 4 NOCHES",
@@ -907,11 +1149,11 @@
         "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
         "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
       ],
-      "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "DOM PEDRO I",
-          "url": "https://www.hoteldompedro.com.br/es-ar",
+          "url": "",
           "precios": {
             "doble": 575,
             "triple": 569,
@@ -940,13 +1182,13 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/aiibdhkpinyx0pm0xoldc/2026_4_7_12_36_48_2025_7_25_17_27_12_cataratas7_baja.pdf?rlkey=1jjboxtmiscssdkkxoko8cio8&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-07-13T10:27:29.297Z"
+      "updatedAt": "2026-07-20T10:12:27.949Z"
     },
     {
       "id": "mtur-804",
       "mturId": "804",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/804/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/804/2",
       "titulo": "Cataratas 6 Dias- Especial Noche De La Nostalgia",
       "subtitulo": "6 DÍAS / 3 NOCHES · Eventos Y Fiestas",
       "duracion": "6 DÍAS / 3 NOCHES",
@@ -986,11 +1228,11 @@
         "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
         "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
       ],
-      "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "HOTEL DOM PEDRO I",
-          "url": "https://www.hoteldompedro.com.br/es-ar",
+          "url": "",
           "precios": {
             "doble": 595,
             "triple": 589,
@@ -1014,13 +1256,13 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/a7sjc3a3dr221xvq8zvms/2026_4_23_12_04_46_cataratas6_nostalgia.pdf?rlkey=pwefhx9i2j1wz8jtnamc9trih&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-07-13T10:27:31.646Z"
+      "updatedAt": "2026-07-20T10:12:30.287Z"
     },
     {
       "id": "mtur-790",
       "mturId": "790",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/790/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/790/2",
       "titulo": "Florianopolis - A Toda Diversion - Marzo",
       "subtitulo": "8 DÍAS / 5 NOCHES · Verano",
       "duracion": "8 DÍAS / 5 NOCHES",
@@ -1061,11 +1303,11 @@
         "Paseo Medio Día Camboriu",
         "Cristo Luz, Traslado + Ascenso + Ingreso"
       ],
-      "noIncluye": "Bebidas, Propinas, Comidas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "POSADA SALINES",
-          "url": "http://.",
+          "url": "",
           "precios": {
             "doble": 665,
             "triple": 625,
@@ -1077,7 +1319,7 @@
         },
         {
           "nombre": "PARAISO PALACE II",
-          "url": "https://paraiso-palace-ii-e-iii.hotelflorianopolis.com/es/",
+          "url": "",
           "precios": {
             "doble": 729,
             "triple": 715,
@@ -1088,7 +1330,7 @@
         },
         {
           "nombre": "PALACE I",
-          "url": "https://www.hotelpalace1.com/",
+          "url": "",
           "precios": {
             "doble": 849,
             "triple": 839,
@@ -1111,15 +1353,15 @@
         "child": 309,
         "infante": 90
       },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/uyl5lj3cizpqgmzpise1v/2025_7_11_20_13_16_floripa8_todadiversion_verano.pdf?rlkey=tkanjp628ju18bihfyytzmxz7&raw=1",
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/rnjr1ovrktldkpptnji9a/2026_7_15_12_39_30_turismo_2027_itinerario_floripa8_myd.pdf?rlkey=zwt375xl35cj3o433gxvxblrq&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-07-13T10:27:34.100Z"
+      "updatedAt": "2026-07-20T10:12:32.813Z"
     },
     {
       "id": "mtur-811",
       "mturId": "811",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/811/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/811/2",
       "titulo": "Cataratas 7 Dias",
       "subtitulo": "7 DÍAS / 4 NOCHES · Vacaciones De Julio",
       "duracion": "7 DÍAS / 4 NOCHES",
@@ -1134,11 +1376,6 @@
       ],
       "temporada": "Vacaciones De Julio",
       "fechas": [
-        {
-          "label": "Salidas",
-          "value": "27/06/2026  ·  04/07/2026  ·  06/07/2026",
-          "gold": true
-        },
         {
           "label": "Temporada",
           "value": "Vacaciones De Julio",
@@ -1158,43 +1395,19 @@
         "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
         "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
       ],
-      "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
-      "hoteles": [
-        {
-          "nombre": "DOM PEDRO I",
-          "url": "https://www.hoteldompedro.com.br/es-ar",
-          "precios": {
-            "doble": 609,
-            "triple": 605,
-            "cuadruple": 605,
-            "single": 695,
-            "child": 305,
-            "infante": 90
-          }
-        }
-      ],
-      "fechasSalida": [
-        "27/06/2026",
-        "04/07/2026",
-        "06/07/2026"
-      ],
-      "precios": {
-        "doble": 609,
-        "triple": 605,
-        "cuadruple": 605,
-        "single": 695,
-        "child": 305,
-        "infante": 90
-      },
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [],
+      "precios": {},
       "pdfItinerario": "https://www.dropbox.com/scl/fi/4e6h26mrlgkfq5em95pqo/2026_2_9_19_38_56_cataratas7_julio.pdf?rlkey=dhaknmtm3hyxcm91w7t2s2w90&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-07-13T10:27:36.362Z"
+      "updatedAt": "2026-07-20T10:12:35.158Z"
     },
     {
       "id": "mtur-810",
       "mturId": "810",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/810/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/810/2",
       "titulo": "Cataratas 7 Dias",
       "subtitulo": "7 DÍAS / 4 NOCHES · Vacaciones De Setiembre",
       "duracion": "7 DÍAS / 4 NOCHES",
@@ -1234,11 +1447,11 @@
         "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
         "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
       ],
-      "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "DOM PEDRO I",
-          "url": "https://www.hoteldompedro.com.br/es-ar",
+          "url": "",
           "precios": {
             "doble": 609,
             "triple": 605,
@@ -1262,13 +1475,13 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/yakg0mf4lovsvmged2tnf/2026_4_22_17_20_21_cataratas7_setiembre.pdf?rlkey=f8jmvxbm6nwt16hkxr760srmn&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ALMUERZOS RAFAIN BUFFET U$S 24 - PARQUE DE AVES U$S 22 - SAFARI MACUCO U$S 70MUSEO DE CERA, BAR DE HIELO Y MOTOR SHOW U$S 40- SHOW INTERNACIONAL RAFAIN U$S 33 - CATAMARÁN U$S 35 - HELICOPTERO U$S 135- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino.Estas condiciones dependen directamente del prestador del servicio correspondiente.- En destino solo se aceptan billetes de dólares nuev",
-      "updatedAt": "2026-07-13T10:27:38.688Z"
+      "updatedAt": "2026-07-20T10:12:37.845Z"
     },
     {
       "id": "mtur-793",
       "mturId": "793",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/793/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/793/2",
       "titulo": "Florianopolis - A Toda Diversion - Turismo",
       "subtitulo": "8 DÍAS / 5 NOCHES · Semana De Turismo",
       "duracion": "8 DÍAS / 5 NOCHES",
@@ -1309,11 +1522,11 @@
         "Paseo Medio Día Camboriu",
         "Cristo Luz, Traslado + Ascenso + Ingreso"
       ],
-      "noIncluye": "Bebidas, Propinas, Comidas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "POSADA SALINES",
-          "url": "http://.",
+          "url": "",
           "precios": {
             "doble": 685,
             "triple": 669,
@@ -1325,7 +1538,7 @@
         },
         {
           "nombre": "PARAISO PALACE II",
-          "url": "https://paraiso-palace-ii-e-iii.hotelflorianopolis.com/es/",
+          "url": "",
           "precios": {
             "doble": 748,
             "triple": 745,
@@ -1337,12 +1550,12 @@
         },
         {
           "nombre": "PALACE I",
-          "url": "https://www.hotelpalace1.com/",
+          "url": "",
           "precios": {
-            "doble": 819,
-            "triple": 808,
-            "single": 1210,
-            "child": 465,
+            "doble": 879,
+            "triple": 869,
+            "single": 1325,
+            "child": 439,
             "infante": 90
           }
         }
@@ -1358,15 +1571,15 @@
         "child": 395,
         "infante": 90
       },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/ror18a0lfhbae1u33i42f/2025_7_25_17_47_13_floripa8_todadiversion_turismo.pdf?rlkey=bc07aa5p4864akkf936nc9tei&raw=1",
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/wh5ycsmppldo9pfwccxpx/2026_7_15_12_39_46_turismo_2027_itinerario_floripa8_myd.pdf?rlkey=t1pcwyyts3dccyyucrpzyjx8h&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-07-13T10:27:41.116Z"
+      "updatedAt": "2026-07-20T10:12:40.360Z"
     },
     {
       "id": "mtur-786",
       "mturId": "786",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/786/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/786/2",
       "titulo": "Florianopolis - A Toda Diversion - Febrero",
       "subtitulo": "8 DÍAS / 5 NOCHES · Verano",
       "duracion": "8 DÍAS / 5 NOCHES",
@@ -1407,11 +1620,11 @@
         "Paseo Medio Día Camboriu",
         "Cristo Luz, Traslado + Ascenso + Ingreso"
       ],
-      "noIncluye": "Bebidas, Propinas, Comidas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "POSADA SALINES",
-          "url": "http://.",
+          "url": "",
           "precios": {
             "doble": 689,
             "triple": 669,
@@ -1423,7 +1636,7 @@
         },
         {
           "nombre": "PARAISO PALACE II",
-          "url": "https://paraisopalacehotel.com.br/home-espanol/",
+          "url": "",
           "precios": {
             "doble": 775,
             "triple": 755,
@@ -1434,7 +1647,7 @@
         },
         {
           "nombre": "PALACE I",
-          "url": "https://www.hotelpalace1.com/",
+          "url": "",
           "precios": {
             "doble": 885,
             "triple": 875,
@@ -1458,15 +1671,15 @@
         "child": 409,
         "infante": 90
       },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/wr0w0tko08ri8e8qzijzx/2026_6_18_18_38_16_floripa8_todadiversion_verano-2.pdf?rlkey=gp9xx4spflj0sfmkhqqtkcplb&raw=1",
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/e6cj60cub0l04ot2z89hi/2026_7_15_12_32_43_verano_2027_itinerario_floripa8_myd.pdf?rlkey=qy0i7yj2ad69jfalpyzon6gkd&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-07-13T10:27:43.599Z"
+      "updatedAt": "2026-07-20T10:12:43.272Z"
     },
     {
       "id": "mtur-783",
       "mturId": "783",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/783/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/783/2",
       "titulo": "Oktoberfest 2026 !!!",
       "subtitulo": "8 DÍAS / 5 NOCHES · Eventos Y Fiestas",
       "duracion": "8 DÍAS / 5 NOCHES",
@@ -1506,11 +1719,11 @@
         "Paseo Blumenau, Tiempo Para Desfile",
         "Traslado E Ingreso A Proeb"
       ],
-      "noIncluye": "BEBIDAS, COMIDAS EXTRA, PASEOS OPCIONALES DETALLADOS EN EL ITINERARIO, PROPINAS Y NADA NO ESPECIFICADO EN EL PROGRAMA",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "HAMBURGO PALACE",
-          "url": "https://www.hamburgopalace.com.br/es/home",
+          "url": "",
           "precios": {
             "doble": 639,
             "triple": 629,
@@ -1534,13 +1747,13 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/25df1mlpvqtsw0m5bw9u7/2026_6_18_17_30_49_octoberfest_8dias-2-1.pdf?rlkey=3lywq1d1e6xtocjh0lfdndryf&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-07-13T10:27:45.906Z"
+      "updatedAt": "2026-07-20T10:12:45.600Z"
     },
     {
       "id": "mtur-774",
       "mturId": "774",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/774/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/774/2",
       "titulo": "Camboriú - Experiencia Beto Carrero",
       "subtitulo": "8 DÍAS / 5 NOCHES · Vacaciones De Setiembre",
       "duracion": "8 DÍAS / 5 NOCHES",
@@ -1579,11 +1792,11 @@
         "Paseo En Scuna Pirata (Playa Porto Belo)",
         "Beto Carrero World"
       ],
-      "noIncluye": "BEBIDAS EN LAS COMIDAS, PROPINAS, Y NADA NO ESPECIFICADO EN EL PROGRAMA.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "HAMBURGO PALACE",
-          "url": "https://www.hamburgopalace.com.br/es/home",
+          "url": "",
           "precios": {
             "doble": 645,
             "triple": 635,
@@ -1607,13 +1820,13 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/tm8d3feip7344jb92cuo5/2025_12_11_18_48_30_camboriu8_magia_setiembre.pdf?rlkey=z0ttb0nepne2jd5xbw7gfhxjg&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-07-13T10:27:48.207Z"
+      "updatedAt": "2026-07-20T10:12:47.928Z"
     },
     {
       "id": "mtur-769",
       "mturId": "769",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/769/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/769/2",
       "titulo": "Natal Luz - Gramado & Canela",
       "subtitulo": "7 DÍAS / 4 NOCHES · Baja Temporada 2026",
       "duracion": "7 DÍAS / 4 NOCHES",
@@ -1650,11 +1863,11 @@
         "City Tour En Gramado & Canela",
         "Paseo Bento Goncalvez & Garibaldi"
       ],
-      "noIncluye": "BEBIDAS EN LAS COMIDAS, PROPINAS, INGRESO A PARQUES Y O MUSEOS Y NADA NO ESPECIFICADO EN EL PROGRAMA.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "GRAMADO PALACE",
-          "url": "https://gramadopalace.com.br/",
+          "url": "",
           "precios": {
             "doble": 625,
             "triple": 625,
@@ -1679,13 +1892,13 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/qlkzau3l9u1phc301inb4/2026_5_6_12_48_53_natal_luz_7-1.pdf?rlkey=iajucszau9uya0prrdk0al0ec&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.- En destino solo se aceptan billetes de dólares nuevos. - Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo en destino",
-      "updatedAt": "2026-07-13T10:27:50.672Z"
+      "updatedAt": "2026-07-20T10:12:50.604Z"
     },
     {
       "id": "mtur-737",
       "mturId": "737",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/737/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/737/2",
       "titulo": "Camboriu - Magia & Diversión - Marzo - Salidas Por Rivera Y Por Chuy",
       "subtitulo": "8 DÍAS / 5 NOCHES · Verano",
       "duracion": "8 DÍAS / 5 NOCHES",
@@ -1724,11 +1937,11 @@
         "Paseo De Playa Itapema",
         "Paseo En Scuna Pirata (Playa Porto Belo)"
       ],
-      "noIncluye": "BEBIDAS EN LAS COMIDAS, PROPINAS, Y NADA NO ESPECIFICADO EN EL PROGRAMA.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "HAMBURGO PALACE HOTEL",
-          "url": "https://www.hamburgopalace.com.br/",
+          "url": "",
           "precios": {
             "doble": 645,
             "triple": 635,
@@ -1754,13 +1967,163 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/44zoapg375u6omp5f99f3/2026_7_9_17_03_58_verano_2027_itinerario_camboriu8_myd.pdf?rlkey=4rf1tl3lfkgi7fe87dv37bry2&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-07-13T10:27:53.015Z"
+      "updatedAt": "2026-07-20T10:12:52.932Z"
+    },
+    {
+      "id": "mtur-736",
+      "mturId": "736",
+      "operador": "mtur",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/736/2",
+      "titulo": "Camboriu - Magia & Diversión - Febrero - Salidas Por Rivera Y Por Chuy",
+      "subtitulo": "8 DÍAS / 5 NOCHES · Verano",
+      "duracion": "8 DÍAS / 5 NOCHES",
+      "destino": "Camboriu Duració",
+      "destinoSlug": "camboriu",
+      "pais": "Brasil",
+      "emoji": "🎡",
+      "imagen": "https://www.dropbox.com/scl/fi/ebozte8d9nbwdi3400ocd/2024_7_10_18_43_22_CAMBORIU-FEB2025.webp?rlkey=3fswd81i9kt46rvzqb17u8ovw&raw=1",
+      "visitando": "Camboriu Duració",
+      "highlights": [
+        "📍 Camboriu Duració"
+      ],
+      "temporada": "Verano",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "13/02/2027  ·  20/02/2027  ·  27/02/2027",
+          "gold": true
+        },
+        {
+          "label": "Temporada",
+          "value": "Verano",
+          "gold": false
+        }
+      ],
+      "incluye": [
+        "Bus Semi Cama",
+        "SERVICIO A BORDO (2 CENAS + 2 DESAYUNOS + 2 MERIENDAS)",
+        "Coordinador Acompañante",
+        "Seguro Medico 40K - Cubre Hasta U$S 500 De Preexistencia",
+        "05 Noches De Alojamiento Hotel A 150 Mts Del Mar",
+        "05 DESAYUNOS BUFFET SERVIDOS EN HOTEL",
+        "05 CENAS BUFFET SERVIDAS EN HOTEL O RESTAURANTE",
+        "Cristo Luz Traslado + Ingreso",
+        "Telesférico Traslado + Ingreso (Playa Laranjeiras)",
+        "Paseo De Playa Itapema",
+        "Paseo En Scuna Pirata (Playa Porto Belo)"
+      ],
+      "noIncluye": "",
+      "hoteles": [
+        {
+          "nombre": "HAMBURGO PALACE",
+          "url": "",
+          "precios": {
+            "doble": 675,
+            "triple": 665,
+            "cuadruple": 655,
+            "single": 865,
+            "child": 335,
+            "infante": 90
+          }
+        }
+      ],
+      "fechasSalida": [
+        "13/02/2027",
+        "20/02/2027",
+        "27/02/2027"
+      ],
+      "precios": {
+        "doble": 675,
+        "triple": 665,
+        "cuadruple": 655,
+        "single": 865,
+        "child": 335,
+        "infante": 90
+      },
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/32ykvafo0k9h47eebksbi/2026_7_9_17_03_39_verano_2027_itinerario_camboriu8_myd.pdf?rlkey=9xar2ul5hp3o4606tn3zbs1kj&raw=1",
+      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
+      "updatedAt": "2026-07-20T10:12:55.437Z"
+    },
+    {
+      "id": "mtur-818",
+      "mturId": "818",
+      "operador": "mtur",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/818/2",
+      "titulo": "Cataratas Turismo 7 Dias",
+      "subtitulo": "7 DÍAS / 4 NOCHES · Semana De Turismo",
+      "duracion": "7 DÍAS / 4 NOCHES",
+      "destino": "Ciudad Del Este, Foz Do Iguaçu (Igu) / Puerto Iguazú (Igr), Foz Do Iguaçu (Igu) / Puerto Iguazú (Igr)",
+      "destinoSlug": "cataratas",
+      "pais": "Cataratas",
+      "emoji": "🌊",
+      "imagen": "https://www.dropbox.com/scl/fi/u7ek1235luvj1sqgw55gq/2026_7_15_18_08_09_images.jpg?rlkey=nflp5qx4r2kdkhm8x6ls3hsdt&raw=1",
+      "visitando": "Ciudad Del Este, Foz Do Iguaçu (Igu) / Puerto Iguazú (Igr), Foz Do Iguaçu (Igu) / Puerto Iguazú (Igr)",
+      "highlights": [
+        "📍 Ciudad Del Este",
+        "📍 Foz Do Iguaçu (Igu) / Puerto Iguazú (Igr)",
+        "📍 Foz Do Iguaçu (Igu) / Puerto Iguazú (Igr)"
+      ],
+      "temporada": "Semana De Turismo",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "20/03/2027",
+          "gold": true
+        },
+        {
+          "label": "Temporada",
+          "value": "Semana De Turismo",
+          "gold": false
+        }
+      ],
+      "incluye": [
+        "Bus Semicama Montevideo - Foz De Iguazú - Montevideo",
+        "Coordinador Acompañante",
+        "Asistencia Medica En Viaje 40 K",
+        "Servicio a Bordo durante el viaje",
+        "4 Noches De Alojamiento (Según Selección)",
+        "4 Desayunos Buffet servido en el hotel",
+        "4 Cenas Buffet servidas en el hotel",
+        "Traslado, Ingreso Y Guía Local Cataratas Brasil",
+        "Traslado, Ingreso Y Guía Local Cataratas Argentina",
+        "Traslado, Ingreso Represa Itaipu Y Visita Ciudad Del Este",
+        "Traslado, Ingreso Y Guía Local Ruinas Jesuitas"
+      ],
+      "noIncluye": "",
+      "hoteles": [
+        {
+          "nombre": "DOM PEDRO I",
+          "url": "",
+          "precios": {
+            "doble": 649,
+            "triple": 645,
+            "cuadruple": 645,
+            "single": 775,
+            "child": 325,
+            "infante": 90
+          }
+        }
+      ],
+      "fechasSalida": [
+        "20/03/2027"
+      ],
+      "precios": {
+        "doble": 649,
+        "triple": 645,
+        "cuadruple": 645,
+        "single": 775,
+        "child": 325,
+        "infante": 90
+      },
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/swrko8sb46vyhhwrfsdx9/2026_7_15_18_08_11_turismo_2027_itinerario_cataratas7.pdf?rlkey=spwgyx5muc9t96zz87i8rbz2l&raw=1",
+      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.Actividades Opcionales:Almuerzos Rafaín Buffet U$S 20 - Parque de Aves U$S 17 - Safari Macuco U$S 70Museo de Cera + Bar de Hielo + Motor Show U$S 35 - Show Internacional Rafaín U$S 32Catamarán U$S 35 - Helicóptero U$S 145Se contratan y abonan al coordinador en viaje.",
+      "updatedAt": "2026-07-20T10:12:57.885Z"
     },
     {
       "id": "mtur-735",
       "mturId": "735",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/735/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/735/2",
       "titulo": "Camboriu - Magia & Diversión - Enero 2027- Salidas Por Rivera Y Por Chuy",
       "subtitulo": "8 DÍAS / 5 NOCHES · Verano",
       "duracion": "8 DÍAS / 5 NOCHES",
@@ -1799,11 +2162,11 @@
         "Paseo De Playa Itapema",
         "Paseo En Scuna Pirata (Playa Porto Belo)"
       ],
-      "noIncluye": "BEBIDAS EN LAS COMIDAS, PROPINAS, Y NADA NO ESPECIFICADO EN EL PROGRAMA.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "HAMBURGO PALACE",
-          "url": "https://www.hamburgopalace.com.br/es/home",
+          "url": "",
           "precios": {
             "doble": 749,
             "triple": 735,
@@ -1831,13 +2194,13 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/671m5frm8fv5vrwashew0/2026_7_9_17_03_07_verano_2027_itinerario_camboriu8_myd.pdf?rlkey=s0kja2hj883mfr2w3v9p7cdis&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-07-13T10:27:55.466Z"
+      "updatedAt": "2026-07-20T10:13:00.402Z"
     },
     {
       "id": "mtur-690",
       "mturId": "690",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/690/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/690/2",
       "titulo": "Camboriu - Turismo 2027 - Salidas Por Rivera Y Por Chuy",
       "subtitulo": "8 DÍAS / 5 NOCHES · Semana De Turismo",
       "duracion": "8 DÍAS / 5 NOCHES",
@@ -1870,11 +2233,11 @@
         "Servicio en ruta",
         "5 Noches De Alojamiento Con Desayuno E Impuestos Incluidos"
       ],
-      "noIncluye": "Bebidas, comidas extras no detalladas, ingreso a beto carrero, y nada no detallado en el incluye y en el itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "HAMBURGO PALACE",
-          "url": "https://www.hamburgopalace.com.br/es/home",
+          "url": "",
           "precios": {
             "doble": 695,
             "triple": 685,
@@ -1898,13 +2261,13 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/vvjt8fe3x1140yf87rg82/2023_10_13_17_05_35_CAMBORIU-8-DIAS-RELAX-CON-LOGO.pdf?rlkey=jrpgaxku5148ux29i92dce15h&raw=1",
       "observaciones": "NO INCLUYE: Bebidas, comidas extras no detalladas, ingreso a beto carrero, y nada no detallado en el incluye y en el itinerario.PROMOCION MENORES: APLICA PARA UN MENOR CADA DOS ADULTOS PAGOS QUE COMPARTEN HABITACION.",
-      "updatedAt": "2026-07-13T10:27:57.846Z"
+      "updatedAt": "2026-07-20T10:13:03.089Z"
     },
     {
       "id": "mtur-739",
       "mturId": "739",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/739/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/739/2",
       "titulo": "Camboriu - Magia & Diversión - Carnaval - Salidas Por Rivera Y Por Chuy",
       "subtitulo": "8 DÍAS / 5 NOCHES · Carnaval",
       "duracion": "8 DÍAS / 5 NOCHES",
@@ -1943,11 +2306,11 @@
         "Paseo De Playa Itapema",
         "Paseo En Scuna Pirata (Playa Porto Belo)"
       ],
-      "noIncluye": "BEBIDAS EN LAS COMIDAS, PROPINAS, Y NADA NO ESPECIFICADO EN EL PROGRAMA.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "HAMBURGO PALACE HOTEL",
-          "url": "https://www.hamburgopalace.com.br/",
+          "url": "",
           "precios": {
             "doble": 705,
             "triple": 695,
@@ -1971,13 +2334,13 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/taftwlubqjeracd71c6gw/2026_7_9_17_04_59_carnaval_2027_itinerario_camboriu8_myd-1.pdf?rlkey=jolzvn4s7r3273pnmalxt6nx8&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-07-13T10:28:00.222Z"
+      "updatedAt": "2026-07-20T10:13:05.416Z"
     },
     {
       "id": "mtur-805",
       "mturId": "805",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/805/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/805/2",
       "titulo": "Santiago & Mendoza - 9 Dias",
       "subtitulo": "9 DÍAS / 6 NOCHES · Vacaciones De Setiembre",
       "duracion": "9 DÍAS / 6 NOCHES",
@@ -2014,15 +2377,15 @@
         "Tour Ciudad (Guia Local)",
         "Visita X El Dia Viña Del Mar Y Valparaiso",
         "3 Noches De Alojamiento En Mendoza Con Desayuno",
-        "2 CENAS EN MENDOZA (TRES PASOS)",
+        "3 CENAS EN MENDOZA (TRES PASOS)",
         "Tour Ciudad Mendoza (Guia Local)",
         "Visita Bodega"
       ],
-      "noIncluye": "PROPINAS, BEBIDAS EN LAS CENAS, NADA QUE NO ESTE DETALLADO EN EL PROGRAMA",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "hotelstanford-urban class",
-          "url": "https://hotelstanford.cl/es/",
+          "url": "",
           "precios": {
             "doble": 985,
             "triple": 975,
@@ -2044,13 +2407,13 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/67si635n63hyv7qselp5d/2025_11_28_15_06_24_mendoza_santiago_9dias_setiembre.pdf?rlkey=pfa7siskl2t9vefj3njuiyjhh&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.",
-      "updatedAt": "2026-07-13T10:28:02.707Z"
+      "updatedAt": "2026-07-20T10:13:07.745Z"
     },
     {
       "id": "mtur-812",
       "mturId": "812",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/812/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/812/2",
       "titulo": "Rio De Janeiro 10 Dias",
       "subtitulo": "10 DÍAS / 5 NOCHES · Vacaciones De Setiembre",
       "duracion": "10 DÍAS / 5 NOCHES",
@@ -2095,11 +2458,11 @@
         "Traslado Al Pan De Azúcar",
         "Traslado Y Ascenso A Cristo Luz (Camboriu)"
       ],
-      "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "COPACABANA MAR-Â HAMBURGO PALACE-Â SAN JUAN EXECUTIVE",
-          "url": "https://copacabanamar.com.br/language/es/",
+          "url": "",
           "precios": {
             "doble": 1095,
             "triple": 1075,
@@ -2121,13 +2484,13 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/8r8dqlf0qszvv0zv66puc/2026_4_22_17_21_09_rio_10dias_verano2026-1.pdf?rlkey=c35pth6ztvt4yoaopk3hqtkiz&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ASCENSO MORRO PAN DE AZUCAR Y MORRO DA URCATRASLADO Y ACENSO PARQUE NACIONAL TIJUCA - INGRESO AL CRISTO REDENTORTRASLADO EN BUS PRIVADO ZONA ANGRA DOS REIS E ILHA GRANDE CON PASEO EN BARCO (4 PLAYAS) - MUSEO DE SAMBAGUIA COORDINADOR + GUIA LOCALPAQUETE COMPLETO APROX U$S 215PAQUETE SIN PASEO ANGRA DOS REIS APROX U$S 150 - precios aproximados susceptibles a modificaciones.-se contratan y abonan directamente al coordinador en viaje- sujetos a disponibilidad de cupo en destino. Dependen directamente del presador de servicio.",
-      "updatedAt": "2026-07-13T10:28:05.074Z"
+      "updatedAt": "2026-07-20T10:13:10.082Z"
     },
     {
       "id": "mtur-749",
       "mturId": "749",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/749/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/749/2",
       "titulo": "Rio De Janeiro - Semana De Turismo 2026",
       "subtitulo": "10 DÍAS / 5 NOCHES · Semana De Turismo",
       "duracion": "10 DÍAS / 5 NOCHES",
@@ -2167,11 +2530,11 @@
         "Traslado Al Pan De Azúcar",
         "Traslado Y Ascenso A Cristo Luz (Camboriu)"
       ],
-      "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "COPACABANA MAR-HAMBURGO PALACE-SAN JUAN EXECUTIVE",
-          "url": "https://www.hamburgopalace.com.br/ / https://copacabanamar.com.br/language/es/  / https://www.hamburgopalace.com.br/",
+          "url": "",
           "precios": {
             "doble": 1195,
             "triple": 1165,
@@ -2190,14 +2553,14 @@
         "infante": 250
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/uxhdihvasxm98gw2w6qoh/2026_7_10_17_34_19_verano_2027_itinerario_rio10.pdf?rlkey=10hmdrtckef9mcl6l9qm73ulz&raw=1",
-      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ASCENSO MORRO PAN DE AZUCAR Y MORRO DA URCATRASLADO Y ACENSO EN CAMIONETAS PRIVADAS PARQUE NACIONAL TIJUCA - INGRESO AL CRISTO REDENTOR1 ALMUERZO BUFFET (SIN BEBIDA)TRASLADO EN BUS PRIVADO ZONA ANGRA DOS REIS E ILHA GRANDE CON PASEO EN BARCO (4 PLAYAS) 1 ALMUERZO BUFFET (SIN BEBIDA)MUSEO DE SAMBAGUIA COORDINADOR + GUIA LOCALPAQUETE COMPLETO APROX U$S 215PAQUETE SIN PASEO ANGRA DOS REIS APROX U$S 150- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o p",
-      "updatedAt": "2026-07-13T10:28:07.652Z"
+      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:",
+      "updatedAt": "2026-07-20T10:13:12.532Z"
     },
     {
       "id": "mtur-746",
       "mturId": "746",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/746/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/746/2",
       "titulo": "Rio De Janeiro",
       "subtitulo": "10 DÍAS / 5 NOCHES · Verano",
       "duracion": "10 DÍAS / 5 NOCHES",
@@ -2242,11 +2605,11 @@
         "Traslado Al Pan De Azúcar",
         "Traslado Y Ascenso A Cristo Luz (Camboriu)"
       ],
-      "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "SAN JUAN EXECUTIVE-COPACABANA MAR-HAMBURGO PALACE",
-          "url": "https://executive.sjhoteiseresort.com.br/o-hotel",
+          "url": "",
           "precios": {
             "doble": 1195,
             "triple": 1165,
@@ -2268,15 +2631,15 @@
         "child": 595,
         "infante": 250
       },
-      "pdfItinerario": "https://www.dropbox.com/scl/fi/em5qk9hqvo7dg97yborzk/2026_7_10_17_27_36_verano_2027_itinerario_rio10.pdf?rlkey=m7rz8aco3353xxj4mpkvvyvq7&raw=1",
-      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:ASCENSO MORRO PAN DE AZUCAR Y MORRO DA URCATRASLADO Y ACENSO EN CAMIONETAS PRIVADAS PARQUE NACIONAL TIJUCA - INGRESO AL CRISTO REDENTOR1 ALMUERZO BUFFET (SIN BEBIDA)TRASLADO EN BUS PRIVADO ZONA ANGRA DOS REIS E ILHA GRANDE CON PASEO EN BARCO (4 PLAYAS) 1 ALMUERZO BUFFET (SIN BEBIDA)MUSEO DE SAMBAGUIA COORDINADOR + GUIA LOCALPAQUETE COMPLETO APROX U$S 215PAQUETE SIN PASEO ANGRA DOS REIS APROX U$S 150- Precios aproximados susceptibles a modificaciones.- Se contratan y abonan directamente con el coordinador en viaje.- Las actividades y/o p",
-      "updatedAt": "2026-07-13T10:28:10.193Z"
+      "pdfItinerario": "https://www.dropbox.com/scl/fi/xldrvoi04ax0l841vd5ch/2026_7_15_12_26_54_verano_2027_incluye_rio10.pdf?rlkey=wqab095cg874q28o2hi4i0x4x&raw=1",
+      "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO.POLITICA DE MENORES:APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE:CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES.ACTIVIDADES OPCIONALES:",
+      "updatedAt": "2026-07-20T10:13:14.997Z"
     },
     {
       "id": "mtur-803",
       "mturId": "803",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/803/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/803/2",
       "titulo": "Experiencia Norte Argentino 11 Dias !!",
       "subtitulo": "11 DÍAS / 8 NOCHES · Baja Temporada 2026",
       "duracion": "11 DÍAS / 8 NOCHES",
@@ -2319,11 +2682,11 @@
         "2 Peñas Folkloricas",
         "09 Comidas Incluidas"
       ],
-      "noIncluye": "Bebidas, Propinas, Paseos Opcionales y nada no especificado en el Incluye y o Itinerario.",
+      "noIncluye": "",
       "hoteles": [
         {
           "nombre": "TUCUMAN (TUCUMAN CENTER)-CAFAYATE (ASTURIAS)-SALTA (HOTEL PRESIDENTE)PARANA (Howard Johnson)",
-          "url": "https://tucumancenterhotel.com.ar/",
+          "url": "",
           "precios": {
             "doble": 1195,
             "triple": 1195,
@@ -2348,13 +2711,13 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/gttbakni8mqoth9i19mb8/2026_4_24_15_39_27_norte_argentino11_baja-2.pdf?rlkey=mntyj453dd6aerys5uxo494c0&raw=1",
       "observaciones": "IMPORTANTE:ESTE TOUR OPERA DESDE MONTEVIDEO O DESDE EL INTERIOR DEL PAÍS. SOLICITE INFORMACIÓN DE PUNTOS DE LEVANTE EN SU AGENCIA DE CONFIANZA O EN NUESTRA OFICINA.MENU A BORDO:PUEDE SOLICITAR MENU ESPECIAL PARA NIÑOS, DIABÉTICO, VEGETARIANO, CELIACO. POLITICA DE MENORES: APLICA: UN MENOR POR HABITACION ACOMPAÑADO DE AL MENOS DOS ADULTOS.CONDICIONES GENERALES DE VIAJE: CONSULTE EN NUESTRA WEB CONDICIONES GENERALES DE VIAJE TERRESTRES. ACTIVIDADES OPCIONALESVisita a las Salinas GrandesPaseo al Pueblo de Cachiu$s 105 ( precio aproximado sujeto a modificaciones )Se contratan y abonan directamente con el coordinador en viaje. Las actividades y/o paseos opcionales están sujetos a disponibilidad de cupo y plazas en destino y pueden sufrir modificaciones sin previo aviso.Estas condiciones dependen directamente del prestador del servicio correspondiente (atracciones, parques, trenes, paseos en barco, etc.)",
-      "updatedAt": "2026-07-13T10:28:12.623Z"
+      "updatedAt": "2026-07-20T10:13:17.328Z"
     },
     {
       "id": "mtur-814",
       "mturId": "814",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/814/2",
+      "sourceUrl": "http://www.mturviajes.com.uy/paquetes/814/2",
       "titulo": "Entre Fatima Y Andalucia",
       "subtitulo": "14 DÍAS / 13 NOCHES · Aéreos Acompañados",
       "duracion": "14 DÍAS / 13 NOCHES",
@@ -2423,7 +2786,7 @@
       },
       "pdfItinerario": "https://www.dropbox.com/scl/fi/9bipm5rai5rlch2zdtuf5/2026_2_19_17_31_17_entre_fatimayandalucia14dias-1.pdf?rlkey=sptil88ntc63yvi5jag8a54pb&raw=1",
       "observaciones": "",
-      "updatedAt": "2026-07-13T10:28:14.954Z"
+      "updatedAt": "2026-07-20T10:13:19.652Z"
     }
   ]
 }
