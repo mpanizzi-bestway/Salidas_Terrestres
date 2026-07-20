@@ -1,7 +1,819 @@
 {
   "operador": "Funtour",
-  "updatedAt": "2026-07-13T12:12:29.126Z",
+  "updatedAt": "2026-07-20T11:51:57.081Z",
   "programas": [
+    {
+      "id": "funtour-florianopolis-verano-2027-bus-y-hotel-10-dias",
+      "slug": "florianopolis-verano-2027-bus-y-hotel-10-dias",
+      "operador": "funtour",
+      "sourceUrl": "https://www.funtour.com.uy/tienda/florianopolis-verano-2027-bus-y-hotel-10-dias/",
+      "titulo": "Florianópolis Verano 2027 Bus y Hotel 10 Días",
+      "subtitulo": "10 DÍAS",
+      "duracion": "10 DÍAS",
+      "destino": "Florianópolis Verano 2027 Bus y Hotel 10 Días",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2026/07/4187f03f-24eb-423b-8879-a9995fa8404f-7.jpg",
+      "highlights": [
+        "📍 CANASVIEIRAS",
+        "📍 CANASVIEIRAS"
+      ],
+      "incluye": [
+        "BUS CON SERVICIO A BORDO",
+        "GUÍA COORDINADOR DURANTE TODO EL RECORRIDO",
+        "7 NOCHES DE ALOJAMIENTO CON DESAYUNO",
+        "TARJETA DE ASISTENCIA MÉDICA 60K",
+        "No incluye: Todo lo que no está especificado en Incluye"
+      ],
+      "noIncluye": [],
+      "hoteles": [
+        {
+          "nombre": "Hotel Dom Fish, Apart Abaete, Pousada Santa Barbara, Hotel Mar De Canasvieiras",
+          "url": ""
+        }
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "URUGUAY",
+          "detalle": "En horas pasadas el mediodía partiremos hacia nuestro destino, recorriendo rutas nacionales y realizando los trámites migratorios correspondientes antes de continuar con el rumbo establecido. Los pasajeros contarán con servicio a bordo y la asistencia de nuestro guía acompañante de viajes durante el trayecto en ruta. La noche se pasará a bordo en ruta.",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "CANASVIEIRAS",
+          "detalle": "Por la mañana se servirá el desayuno a bordo en ruta. Posteriormente se registrará la llegada a Florianópolis, trasladándonos de forma directa al balneario de Canasvieiras para realizar el ingreso a las habitaciones (check-in) a partir de las 14:00 horas en el hotel asignado, donde nos alojaremos durante las cinco noches de estadía contempladas en el programa. Tras la distribución de las habitaciones, comienza el tiempo libre para disfrutar del destino de forma totalmente independiente. DÍAS 3 al 8 – CANASVIEIRASLos pasajeros dispondrán de jornadas enteras libres para actividades personales, compras o descanso en la playa a su propio ritmo. Al no tener servicios preestablecidos, se ofrece la posibilidad de contratar de forma opcional y con costo extra cualquiera de los paseos del programa ",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 09",
+          "lugar": "CANASVIEIRAS",
+          "detalle": "En horas de la mañana, luego de servirse el desayuno, se procederá al retiro del equipaje y al check-out del hotel para despedirse de la isla y partir con rumbo de regreso hacia Uruguay. El trayecto terrestre se realizará transitando por las ciudades de Sombrío, Torres y Porto Alegre.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 10",
+          "lugar": "URUGUAY",
+          "detalle": "A primeras horas de la mañana se registrará la llegada a Uruguay, arribando al mismo punto de partida establecido para el inicio del circuito, dando por finalizados de manera formal todos nuestros servicios. *POSADA SALINESEl hotel Pousada Salines Florianópolis se sitúa a 100 metros de la playa de Canasvieiras. Las habitaciones de la Pousada Salines Florianópolis ofrecen una televisión de pantalla plana con canales vía satélite a los huéspedes, así como comodidades como aire acondicionado. Están equipadas con un escritorio, y también cuentan con minibar. El alojamiento está provisto de un desayuno buffet a diario Incluido en la diaria desayuno buffet, servicio de mucama cada 2 días con cambio de toallas. Las sábanas se cambian cada 7 días, wifi, piscina. Caja de seguridad no incluída en la",
+          "first": false,
+          "last": true
+        }
+      ],
+      "salidas": [
+        "3 de enero",
+        "10 de enero",
+        "17 de enero",
+        "24 de enero",
+        "31 de enero",
+        "7 de febrero",
+        "14 de febrero",
+        "21 de febrero"
+      ],
+      "bases": [
+        "Triple",
+        "Cuádruple",
+        "Doble",
+        "Single"
+      ],
+      "precioDesde": "",
+      "variantesCompletas": [],
+      "matrizPrecios": {},
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "3 de enero",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "10 de enero · 17 de enero · 24 de enero · 31 de enero · 7 de febrero · 14 de feb",
+          "gold": false
+        },
+        {
+          "label": "Habitación",
+          "value": "Triple / Cuádruple / Doble / Single",
+          "gold": false
+        }
+      ],
+      "temporada": "Verano",
+      "notas": [],
+      "updatedAt": "2026-07-20T11:50:44.329Z"
+    },
+    {
+      "id": "funtour-florianopolis-verano-2027-media-pension-y-paseos-8-dias",
+      "slug": "florianopolis-verano-2027-media-pension-y-paseos-8-dias",
+      "operador": "funtour",
+      "sourceUrl": "https://www.funtour.com.uy/tienda/florianopolis-verano-2027-media-pension-y-paseos-8-dias/",
+      "titulo": "Florianópolis Verano 2027 Media Pension y Paseos 8 Días",
+      "subtitulo": "8 DÍAS",
+      "duracion": "8 DÍAS",
+      "destino": "Florianópolis Verano 2027 Media Pension y Paseos 8 Días",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2026/07/dc837d7b-30e3-47b7-b5db-0fb2ac36c1b2.jpg",
+      "highlights": [
+        "📍 CANASVIEIRAS",
+        "📍 CANASVIEIRAS"
+      ],
+      "incluye": [
+        "BUS CON SERVICIO A BORDO",
+        "GUÍA COORDINADOR DURANTE TODO EL RECORRIDO",
+        "5 NOCHES DE ALOJAMIENTO CON DESAYUNO",
+        "TARJETA DE ASISTENCIA MÉDICA 60K",
+        "05 CENAS BUFFET",
+        "EXCURSIÓN A BLN CAMBORIU CON ASCENSO A CRISTO LUZ + BARCO PIRATA EN PORTO BELO",
+        "MEDIO DÍA EN PARADOR P12 JURERE UNTERNACIONAL",
+        "TRASLADO A PARQUE DE AGUA",
+        "No incluye: Todo lo que no está especificado en Incluye"
+      ],
+      "noIncluye": [],
+      "hoteles": [
+        {
+          "nombre": "Hotel Dom Fish, Hotel Montelibano, Pousada Salines, Hotel Mar De Canasvieiras",
+          "url": ""
+        }
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "URUGUAY",
+          "detalle": "En horas pasadas el mediodía partiremos hacia nuestro destino, recorriendo rutas nacionales y realizando los trámites migratorios correspondientes antes de continuar con el rumbo establecido. Los pasajeros contarán con servicio a bordo y la asistencia de nuestro guía acompañante de viajes .La noche se pasará a bordo en ruta.",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "CANASVIEIRAS",
+          "detalle": "Por la mañana se servirá el desayuno a bordo en ruta. Posteriormente se registrará la llegada a Florianópolis, trasladándonos de forma directa al balneario de Canasvieiras para realizar el ingreso a las habitaciones (check-in) a partir de las 14:00 horas en el hotel asignado, donde nos alojaremos durante las cinco noches de estadía contempladas en el programa. Tras la distribución de las habitaciones, se dispondrá de tiempo libre para descansar, recorrer el centro comercial o disfrutar de la playa hasta la hora de la cena. DÍAS 3 y 4 – EXCURSIONES Y PASEOS INCLUIDOS Durante estas dos jornadas se realizarán las actividades principales del programa, bajo la premisa de que el orden exacto de los paseos se coordinará en destino según las condiciones climáticas y operativas. Excursión de día co",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "CANASVIEIRAS",
+          "detalle": "En horas de la mañana, luego de servirse el desayuno, nos despediremos de esta hermosa isla realizando el check-out del hotel y partiendo con rumbo de regreso hacia Uruguay. El trayecto terrestre se realizará transitando por las ciudades de Sombrío, Torres y Porto Alegre, y durante el camino se efectuará una parada para disfrutar de la cena de regreso incluida en un parador seleccionado. La noche se pasará a bordo en ruta.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 08",
+          "lugar": "URUGUAY",
+          "detalle": "A primeras horas de la mañana se registrará la llegada a Uruguay, arribando al mismo punto de partida establecido para el inicio del circuito, dando por finalizados de manera formal todos nuestros servicios. ⚠️ Notas Operativas Importantes Modificaciones del itinerario: El orden de realización de las excursiones y paseos incluidos podrá ser modificado en destino por el guía acompañante para optimizar los tiempos de viaje o resguardar la seguridad de los pasajeros frente a factores climáticos. Parque Água Show: El programa incluye únicamente el traslado hacia el establecimiento; el costo de la entrada al parque de agua no está incluido y debe ser abonado por el pasajero. Parque Beto Carrero World: Al tratarse de una actividad opcional, no se encuentra incluida en la tarifa del viaje, por lo",
+          "first": false,
+          "last": true
+        }
+      ],
+      "salidas": [
+        "3 de enero",
+        "10 de enero",
+        "17 de enero",
+        "24 de enero",
+        "31 de enero",
+        "7 de febrero",
+        "14 de febrero",
+        "21 de febrero"
+      ],
+      "bases": [
+        "Triple",
+        "Cuádruple",
+        "Single",
+        "Doble"
+      ],
+      "precioDesde": "",
+      "variantesCompletas": [],
+      "matrizPrecios": {},
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "3 de enero",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "10 de enero · 17 de enero · 24 de enero · 31 de enero · 7 de febrero · 14 de feb",
+          "gold": false
+        },
+        {
+          "label": "Habitación",
+          "value": "Triple / Cuádruple / Single / Doble",
+          "gold": false
+        }
+      ],
+      "temporada": "Verano",
+      "notas": [],
+      "updatedAt": "2026-07-20T11:50:46.741Z"
+    },
+    {
+      "id": "funtour-florianopolis-verano-2027-media-pension-y-paseos-10-dias",
+      "slug": "florianopolis-verano-2027-media-pension-y-paseos-10-dias",
+      "operador": "funtour",
+      "sourceUrl": "https://www.funtour.com.uy/tienda/florianopolis-verano-2027-media-pension-y-paseos-10-dias/",
+      "titulo": "Florianópolis Verano 2027 Media Pensión y Paseos 10 Días",
+      "subtitulo": "10 DÍAS",
+      "duracion": "10 DÍAS",
+      "destino": "Florianópolis Verano 2027 Media Pensión y Paseos 10 Días",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2026/07/f41d7837-4f79-44b7-8a28-669a5fb50839-1024x1024.jpg",
+      "highlights": [
+        "📍 CANASVIEIRAS",
+        "📍 CANASVIEIRAS"
+      ],
+      "incluye": [
+        "BUS CON SERVICIO A BORDO",
+        "GUÍA COORDINADOR DURANTE TODO EL RECORRIDO",
+        "07 NOCHES DE ALOJAMIENTO CON DESAYUNO",
+        "TARJETA DE ASISTENCIA MÉDICA 60K",
+        "07 CENAS BUFFET",
+        "EXCURSIÓN A BLN CAMBORIU CON ASCENSO A CRISTO LUZ + BARCO PIRATA EN PORTO BELO",
+        "MEDIO DÍA EN PARADOR P12",
+        "TRASLADO A PARQUE DE AGUA",
+        "No incluye: Todo lo que no está especificado en Incluye"
+      ],
+      "noIncluye": [],
+      "hoteles": [
+        {
+          "nombre": "Hotel Dom Fish, Apart Abaete, Pousada Santa Barbara, Hotel Mar De Canasvieiras",
+          "url": ""
+        }
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "URUGUAY",
+          "detalle": "En horas pasadas el mediodía partiremos hacia nuestro destino, recorriendo rutas nacionales y realizando los trámites migratorios correspondientes antes de continuar con el rumbo establecido. Los pasajeros contarán con servicio a bordo y la asistencia de nuestro guía acompañante de viajes .La noche se pasará a bordo en ruta.",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "CANASVIEIRAS",
+          "detalle": "Por la mañana se servirá el desayuno a bordo en ruta. Posteriormente se registrará la llegada a Florianópolis, trasladándonos de forma directa al balneario de Canasvieiras para realizar el ingreso a las habitaciones (check-in) a partir de las 14:00 horas en el hotel asignado, donde nos alojaremos durante las cinco noches de estadía contempladas en el programa. Tras la distribución de las habitaciones, se dispondrá de tiempo libre para descansar, recorrer el centro comercial o disfrutar de la playa hasta la hora de la cena. DÍAS 3 y 4 – EXCURSIONES Y PASEOS INCLUIDOS Durante estas dos jornadas se realizarán las actividades principales del programa, bajo la premisa de que el orden exacto de los paseos se coordinará en destino según las condiciones climáticas y operativas. Excursión de día co",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 09",
+          "lugar": "CANASVIEIRAS",
+          "detalle": "En horas de la mañana, luego de servirse el desayuno, nos despediremos de esta hermosa isla realizando el check-out del hotel y partiendo con rumbo de regreso hacia Uruguay. El trayecto terrestre se realizará transitando por las ciudades de Sombrío, Torres y Porto Alegre, y durante el camino se efectuará una parada para disfrutar de la cena de regreso incluida en un parador seleccionado. La noche se pasará a bordo en ruta.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 10",
+          "lugar": "URUGUAY",
+          "detalle": "A primeras horas de la mañana se registrará la llegada a Uruguay, arribando al mismo punto de partida establecido para el inicio del circuito, dando por finalizados de manera formal todos nuestros servicios. ⚠️ Notas Operativas Importantes Modificaciones del itinerario: El orden de realización de las excursiones y paseos incluidos podrá ser modificado en destino por el guía acompañante para optimizar los tiempos de viaje o resguardar la seguridad de los pasajeros frente a factores climáticos. Parque Água Show: El programa incluye únicamente el traslado hacia el establecimiento; el costo de la entrada al parque de agua no está incluido y debe ser abonado por el pasajero. Parque Beto Carrero World: Al tratarse de una actividad opcional, no se encuentra incluida en la tarifa del viaje, por lo",
+          "first": false,
+          "last": true
+        }
+      ],
+      "salidas": [
+        "3 de enero",
+        "10 de enero",
+        "17 de enero",
+        "24 de enero",
+        "31 de enero",
+        "7 de febrero",
+        "14 de febrero",
+        "21 de febrero"
+      ],
+      "bases": [
+        "Triple",
+        "Cuádruple",
+        "Doble",
+        "Single"
+      ],
+      "precioDesde": "",
+      "variantesCompletas": [],
+      "matrizPrecios": {},
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "3 de enero",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "10 de enero · 17 de enero · 24 de enero · 31 de enero · 7 de febrero · 14 de feb",
+          "gold": false
+        },
+        {
+          "label": "Habitación",
+          "value": "Triple / Cuádruple / Doble / Single",
+          "gold": false
+        }
+      ],
+      "temporada": "Verano",
+      "notas": [],
+      "updatedAt": "2026-07-20T11:50:49.174Z"
+    },
+    {
+      "id": "funtour-bombinhas-verano-2027-10-dias",
+      "slug": "bombinhas-verano-2027-10-dias",
+      "operador": "funtour",
+      "sourceUrl": "https://www.funtour.com.uy/tienda/bombinhas-verano-2027-10-dias/",
+      "titulo": "Bombinhas Verano 2027 10 Días",
+      "subtitulo": "10 DÍAS",
+      "duracion": "10 DÍAS",
+      "destino": "Bombinhas Verano 2027 10 Días",
+      "destinoSlug": "florianopolis",
+      "pais": "Brasil",
+      "emoji": "🏖️",
+      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2026/07/f8c313660e750be9589e-2-1024x1024.jpg",
+      "highlights": [
+        "📍 BOMBINHAS:",
+        "📍 BOMBINHAS:"
+      ],
+      "incluye": [
+        "BUS CON SERVICIO A BORDO IDA y VUELTA",
+        "GUÍA COORDINADOR DURANTE TODO EL RECORRIDO EN BUS.",
+        "TRASLADO DE INGRESO A BOMBINHAS",
+        "7 NOCHES DE ALOJAMIENTO CON DESAYUNO",
+        "1 COMIDA EN PARADOR DE REGRESO",
+        "TARJETA DE ASISTENCIA MÉDICA 60K"
+      ],
+      "noIncluye": [],
+      "hoteles": [
+        {
+          "nombre": "Estalagem Dom Pablo, Pousada Mar de Bombinhas, Pousada Nari Nari",
+          "url": ""
+        }
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "MONTEVIDEO:",
+          "detalle": "En horas pasadas el mediodía partiremos hacia nuestro destino, recorriendo rutas nacionales, realizamos trámites migratorios y continuaremos rumbo a nuestro destino. Contamos con servicio a bordo acompañado de un coordinador durante el recorrido de ida y vuelta.",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "BOMBINHAS:",
+          "detalle": "Desayuno a bordo por la mañana. Sobre el medio día estaremos llegando al estado de Santa Catarina, en la Br-101 traslado rumbo a tu posada en Bombinhas pasadas las 15 hs. DIA 3 AL DIA 8 BOMBINHAS: Días enteramente libres para disfrutar de las playas de este fantástico balneario y tu posada, como también de las múltiples actividades que nos brinda esta playa de Santa catarina.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 09",
+          "lugar": "BOMBINHAS:",
+          "detalle": "En horas de la mañana luego del desayuno partida con equipajes en traslado rumbo a BR-101 para luego abordar nuestro bus con destino a.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 10",
+          "lugar": "URUGUAY:",
+          "detalle": "A primeras horas de la mañana llegaremos a Uruguay, Fin de nuestros servicios. ESTALAGEM DON PABLOLa Pousada Estalagem Don Pablo (ubicada en Bombinhas) se encuentra a cerca de 1 km a pie de la playa más cercana, lo que equivale a un agradable paseo de unos 12 a 15 minutos. Las distancias específicas desde el alojamiento varían levemente según la playa que prefieras visitar:– Playa de Quatro Ilhas: A aproximadamente 1 km (12-14 minutos a pie).– Playa de Bombinhas (Centro): A unos 1,2 km (16 minutos a pie).– Playa de la Sepultura: A poco más de 25 minutos a pie.La posada está situada en una zona rodeada de naturaleza y jardines. Y está retirada del bullicio del centro, destacándose por ser un entorno muy tranquilo.Instalaciones:– Piscinas al aire libre: Cuenta con dos piscinas independientes",
+          "first": false,
+          "last": true
+        }
+      ],
+      "salidas": [
+        "3 de enero",
+        "10 de enero",
+        "17 de enero",
+        "24 de enero",
+        "31 de enero",
+        "7 de febrero",
+        "14 de febrero",
+        "21 de febrero",
+        "7 de julio",
+        "14 de enero"
+      ],
+      "bases": [
+        "Doble",
+        "Triple",
+        "Cuádruple",
+        "Single"
+      ],
+      "precioDesde": "",
+      "variantesCompletas": [],
+      "matrizPrecios": {},
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "3 de enero",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "10 de enero · 17 de enero · 24 de enero · 31 de enero · 7 de febrero · 14 de feb",
+          "gold": false
+        },
+        {
+          "label": "Habitación",
+          "value": "Doble / Triple / Cuádruple / Single",
+          "gold": false
+        }
+      ],
+      "temporada": "Verano",
+      "notas": [],
+      "updatedAt": "2026-07-20T11:50:51.567Z"
+    },
+    {
+      "id": "funtour-florianopolis-verano-2027-bus-y-hotel-8-dias",
+      "slug": "florianopolis-verano-2027-bus-y-hotel-8-dias",
+      "operador": "funtour",
+      "sourceUrl": "https://www.funtour.com.uy/tienda/florianopolis-verano-2027-bus-y-hotel-8-dias/",
+      "titulo": "Florianópolis Verano 2027 Bus y Hotel 8 Días",
+      "subtitulo": "8 DÍAS",
+      "duracion": "8 DÍAS",
+      "destino": "Florianópolis Verano 2027 Bus y Hotel 8 Días",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2026/07/13f632e8-d3db-4014-896e-35c7190b92e7-1.jpg",
+      "highlights": [
+        "📍 CANASVIEIRAS",
+        "📍 CANASVIEIRAS"
+      ],
+      "incluye": [
+        "BUS CON SERVICIO A BORDO",
+        "GUÍA COORDINADOR DURANTE TODO EL RECORRIDO",
+        "5 NOCHES DE ALOJAMIENTO CON DESAYUNO",
+        "TARJETA DE ASISTENCIA MÉDICA 60K",
+        "No incluye: Todo lo que no está especificado en Incluye"
+      ],
+      "noIncluye": [],
+      "hoteles": [
+        {
+          "nombre": "Hotel Dom Fish, Hotel Montelibano, Pousada Salines, Hotel Mar De Canasvieiras",
+          "url": ""
+        }
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "URUGUAY",
+          "detalle": "En horas pasadas el mediodía partiremos hacia nuestro destino, recorriendo rutas nacionales y realizando los trámites migratorios correspondientes antes de continuar con el rumbo establecido. Los pasajeros contarán con servicio a bordo y la asistencia de nuestro guía acompañante de viajes durante el trayecto en ruta. La noche se pasará a bordo en ruta.",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "CANASVIEIRAS",
+          "detalle": "Por la mañana se servirá el desayuno a bordo en ruta. Posteriormente se registrará la llegada a Florianópolis, trasladándonos de forma directa al balneario de Canasvieiras para realizar el ingreso a las habitaciones (check-in) a partir de las 14:00 horas en el hotel asignado, donde nos alojaremos durante las cinco noches de estadía contempladas en el programa. Tras la distribución de las habitaciones, comienza el tiempo libre para disfrutar del destino de forma totalmente independiente. DÍAS 3 al 6 – CANASVIEIRASLos pasajeros dispondrán de jornadas enteras libres para actividades personales, compras o descanso en la playa a su propio ritmo. Al no tener servicios preestablecidos, se ofrece la posibilidad de contratar de forma opcional y con costo extra cualquiera de los paseos del programa ",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "CANASVIEIRAS",
+          "detalle": "En horas de la mañana, luego de servirse el desayuno, se procederá al retiro del equipaje y al check-out del hotel para despedirse de la isla y partir con rumbo de regreso hacia Uruguay. El trayecto terrestre se realizará transitando por las ciudades de Sombrío, Torres y Porto Alegre.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 08",
+          "lugar": "URUGUAY",
+          "detalle": "A primeras horas de la mañana se registrará la llegada a Uruguay, arribando al mismo punto de partida establecido para el inicio del circuito, dando por finalizados de manera formal todos nuestros servicios. *POSADA SALINESEl hotel Pousada Salines Florianópolis se sitúa a 100 metros de la playa de Canasvieiras. Las habitaciones de la Pousada Salines Florianópolis ofrecen una televisión de pantalla plana con canales vía satélite a los huéspedes, así como comodidades como aire acondicionado. Están equipadas con un escritorio, y también cuentan con minibar. El alojamiento está provisto de un desayuno buffet a diario Incluido en la diaria desayuno buffet, servicio de mucama cada 2 días con cambio de toallas. Las sábanas se cambian cada 7 días, wifi, piscina. Caja de seguridad no incluída en la",
+          "first": false,
+          "last": true
+        }
+      ],
+      "salidas": [
+        "3 de enero",
+        "10 de enero",
+        "17 de enero",
+        "24 de enero",
+        "31 de enero",
+        "7 de febrero",
+        "14 de febrero",
+        "21 de febrero"
+      ],
+      "bases": [
+        "Triple",
+        "Cuádruple",
+        "Single",
+        "Doble"
+      ],
+      "precioDesde": "",
+      "variantesCompletas": [],
+      "matrizPrecios": {},
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "3 de enero",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "10 de enero · 17 de enero · 24 de enero · 31 de enero · 7 de febrero · 14 de feb",
+          "gold": false
+        },
+        {
+          "label": "Habitación",
+          "value": "Triple / Cuádruple / Single / Doble",
+          "gold": false
+        }
+      ],
+      "temporada": "Verano",
+      "notas": [],
+      "updatedAt": "2026-07-20T11:50:54.008Z"
+    },
+    {
+      "id": "funtour-fin-de-ano-en-gramado-y-canela-2026",
+      "slug": "fin-de-ano-en-gramado-y-canela-2026",
+      "operador": "funtour",
+      "sourceUrl": "https://www.funtour.com.uy/tienda/fin-de-ano-en-gramado-y-canela-2026/",
+      "titulo": "Fin de Año en Gramado y Canela 2026",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "Fin de Año en Gramado y Canela 2026",
+      "destinoSlug": "gramado",
+      "pais": "Brasil",
+      "emoji": "🌲",
+      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2026/07/d9013a1a58591ee8ab8c-1024x1024.jpg",
+      "highlights": [],
+      "incluye": [
+        "BUS CON SERVICIO A BORDO",
+        "GUÍA COORDINADOR DURANTE TODO EL RECORRIDO",
+        "04 NOCHES DE ALOJAMIENTO CON DESAYUNO",
+        "🛣️TOUR GRAMADO",
+        "🛣️TOUR CANELA",
+        "CENA SHOW DE FIN DE AÑO",
+        "TARJETA DE ASISTENCIA MÉDICA 40 k",
+        "No incluye: Todo lo que no especificado anteriormente, Tax de sustentabilidad (hotel) de R$ 3.13 por pax por día"
+      ],
+      "noIncluye": [],
+      "hoteles": [
+        {
+          "nombre": "SKY VILLE CANELA",
+          "url": "https://www.skyhoteis.com.br/sky-ville-canela"
+        }
+      ],
+      "itinerario": [],
+      "salidas": [
+        "28 de diciembre"
+      ],
+      "bases": [
+        "Single",
+        "Doble",
+        "Triple"
+      ],
+      "precioDesde": "615",
+      "variantesCompletas": [
+        {
+          "variationId": 36107,
+          "salida": "28 de diciembre",
+          "alojamiento": "Sky Ville Canela",
+          "base": "Single",
+          "precio": "909",
+          "disponible": true,
+          "sku": "PKG--28-DE-DICIEMBRE-SKY-VILLE-CANELA-SINGLE-T5750"
+        },
+        {
+          "variationId": 36108,
+          "salida": "28 de diciembre",
+          "alojamiento": "Sky Ville Canela",
+          "base": "Doble",
+          "precio": "615",
+          "disponible": true,
+          "sku": "PKG--28-DE-DICIEMBRE-SKY-VILLE-CANELA-DOBLE-T5750"
+        },
+        {
+          "variationId": 36109,
+          "salida": "28 de diciembre",
+          "alojamiento": "Sky Ville Canela",
+          "base": "Triple",
+          "precio": "615",
+          "disponible": true,
+          "sku": "PKG--28-DE-DICIEMBRE-SKY-VILLE-CANELA-TRIPLE-T5750"
+        }
+      ],
+      "matrizPrecios": {
+        "28 de diciembre": {
+          "Sky Ville Canela": {
+            "Single": 909,
+            "Doble": 615,
+            "Triple": 615
+          }
+        }
+      },
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "28 de diciembre",
+          "gold": true
+        },
+        {
+          "label": "Habitación",
+          "value": "Single / Doble / Triple",
+          "gold": false
+        }
+      ],
+      "temporada": "",
+      "notas": [],
+      "updatedAt": "2026-07-20T11:50:56.643Z"
+    },
+    {
+      "id": "funtour-bombinhas-oktoberfest-2026-barco-pirata-portobelo",
+      "slug": "bombinhas-oktoberfest-2026-barco-pirata-portobelo",
+      "operador": "funtour",
+      "sourceUrl": "https://www.funtour.com.uy/tienda/bombinhas-oktoberfest-2026-barco-pirata-portobelo/",
+      "titulo": "Bombinhas + Oktoberfest 2026 +Barco Pirata Portobelo",
+      "subtitulo": "4 DÍAS",
+      "duracion": "4 DÍAS",
+      "destino": "Bombinhas + Oktoberfest 2026 +Barco Pirata Portobelo",
+      "destinoSlug": "florianopolis",
+      "pais": "Brasil",
+      "emoji": "🏖️",
+      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2026/07/2cc897c3-93b9-479b-a728-650e5a033581-1024x389.jpg",
+      "highlights": [
+        "📍 BOMBINHAS",
+        "📍 BOMBINHAS"
+      ],
+      "incluye": [],
+      "noIncluye": [],
+      "hoteles": [
+        {
+          "nombre": "Hotel Bombinhas Palace",
+          "url": ""
+        }
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "URUGUAY",
+          "detalle": "En horas pasadas el mediodía partiremos hacia nuestro destino, recorriendo rutas nacionales, realizamos trámites migratorios y continuaremos rumbo a nuestro destino. Contamos con servicio a bordo acompañado de un guía coordinador de viajes.",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "BOMBINHAS",
+          "detalle": "Desayuno a bordo por la mañana. Sobre el medio día estaremos llegando a Bombinhas, donde nos alojaremos durante 5 noches. Tiempo libre hasta la cena. DIAS 3 al 6 SE RELIZARAN LOS SIGUIENTES PASEOS: BARCO PIRATA – En la mañana salida con destino a Porto Belo, donde disfrutaremos del paseo en Barco Pirata que ya es característico de las costas Brasileras. Es un paseo de 2 horas en un Barco temático donde disfrutaremos de una fiesta sobre el mar con mucha musica y baile, además de una parada técnica donde podrán tirarse al agua para refrescarse. Al finalizar el paseo tendremos un tiempo para hacer playa o almorzar en el parador del Porto dos Piratas. OKTOBERFEST – Luego del medio día partimos rumbo a Blumenau, la colonia alemana más importante del sur de Brasil, y donde se celebra la fiesta d",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "BOMBINHAS",
+          "detalle": "En horas de la mañana luego del desayuno nos despediremos de esta hermosa isla partiendo hacia Uruguay, pasando por las ciudades de Sombrío, Torres, Porto Alegre.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 08",
+          "lugar": "URUGUAY",
+          "detalle": "A primeras horas de la mañana llegaremos a Uruguay, Fin de nuestros servicios. POLITICA DE MENORES*De 0 a 3 años no paga y ocupa asiento, se acomoda con los adultos en la habitación (no cuenta con servicio) siempre acompañado de 2 adultos, max 1 por reserva CHECK IN*Pasadas las 14 hs",
+          "first": false,
+          "last": true
+        }
+      ],
+      "salidas": [
+        "10 de octubre"
+      ],
+      "bases": [
+        "Single",
+        "Doble",
+        "Triple",
+        "Cuádruple"
+      ],
+      "precioDesde": "619",
+      "variantesCompletas": [
+        {
+          "variationId": 36092,
+          "salida": "10 de octubre",
+          "alojamiento": "Hotel Bombinhas Palace",
+          "base": "Single",
+          "precio": "919",
+          "disponible": true,
+          "sku": "PKG--10-DE-OCTUBRE-HOTEL-BOMBINHAS-PALACE-SINGLE-T5749"
+        },
+        {
+          "variationId": 36093,
+          "salida": "10 de octubre",
+          "alojamiento": "Hotel Bombinhas Palace",
+          "base": "Doble",
+          "precio": "619",
+          "disponible": true,
+          "sku": "PKG--10-DE-OCTUBRE-HOTEL-BOMBINHAS-PALACE-DOBLE-T5749"
+        },
+        {
+          "variationId": 36094,
+          "salida": "10 de octubre",
+          "alojamiento": "Hotel Bombinhas Palace",
+          "base": "Triple",
+          "precio": "619",
+          "disponible": true,
+          "sku": "PKG--10-DE-OCTUBRE-HOTEL-BOMBINHAS-PALACE-TRIPLE-T5749"
+        },
+        {
+          "variationId": 36095,
+          "salida": "10 de octubre",
+          "alojamiento": "Hotel Bombinhas Palace",
+          "base": "Cuádruple",
+          "precio": "619",
+          "disponible": true,
+          "sku": "PKG--10-DE-OCTUBRE-HOTEL-BOMBINHAS-PALACE-CUáDRUPLE-T5749"
+        }
+      ],
+      "matrizPrecios": {
+        "10 de octubre": {
+          "Hotel Bombinhas Palace": {
+            "Single": 919,
+            "Doble": 619,
+            "Triple": 619,
+            "Cuádruple": 619
+          }
+        }
+      },
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "10 de octubre",
+          "gold": true
+        },
+        {
+          "label": "Habitación",
+          "value": "Single / Doble / Triple / Cuádruple",
+          "gold": false
+        }
+      ],
+      "temporada": "",
+      "notas": [],
+      "updatedAt": "2026-07-20T11:50:59.001Z"
+    },
+    {
+      "id": "funtour-winte-tour-bodega-pablo-fallabrino",
+      "slug": "winte-tour-bodega-pablo-fallabrino",
+      "operador": "funtour",
+      "sourceUrl": "https://www.funtour.com.uy/tienda/winte-tour-bodega-pablo-fallabrino/",
+      "titulo": "WINTE TOUR – BODEGA PABLO FALLABRINO",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "WINTE TOUR – BODEGA PABLO FALLABRINO",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "https://www.funtour.com.uy/wp-content/uploads/2026/01/BODEGA-FALLABRINO-2-819x1024.jpeg",
+      "highlights": [],
+      "incluye": [],
+      "noIncluye": [],
+      "hoteles": [],
+      "itinerario": [],
+      "salidas": [
+        "MONTEVIDEO",
+        "PUNTA del ESTE"
+      ],
+      "bases": [],
+      "precioDesde": "125",
+      "variantesCompletas": [
+        {
+          "variationId": 34843,
+          "salida": "MONTEVIDEO",
+          "alojamiento": "",
+          "base": "",
+          "precio": "125",
+          "disponible": true,
+          "sku": ""
+        },
+        {
+          "variationId": 34844,
+          "salida": "PUNTA del ESTE",
+          "alojamiento": "",
+          "base": "",
+          "precio": "135",
+          "disponible": true,
+          "sku": ""
+        }
+      ],
+      "matrizPrecios": {
+        "MONTEVIDEO": {
+          "": {
+            "": 125
+          }
+        },
+        "PUNTA del ESTE": {
+          "": {
+            "": 135
+          }
+        }
+      },
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "MONTEVIDEO",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "PUNTA del ESTE",
+          "gold": false
+        }
+      ],
+      "temporada": "",
+      "notas": [],
+      "updatedAt": "2026-07-20T11:51:01.737Z"
+    },
     {
       "id": "funtour-termas-romanas-en-agosto",
       "slug": "termas-romanas-en-agosto",
@@ -84,7 +896,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-07-13T12:11:42.168Z"
+      "updatedAt": "2026-07-20T11:51:04.093Z"
     },
     {
       "id": "funtour-fin-de-ano-2026-en-florianopolis-con-media-pension-y-paseos-8-dias",
@@ -338,7 +1150,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-07-13T12:11:44.289Z"
+      "updatedAt": "2026-07-20T11:51:06.490Z"
     },
     {
       "id": "funtour-navidad-2026-en-florianopolis-con-media-pension-y-paseos-8-dias",
@@ -612,7 +1424,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-07-13T12:11:46.420Z"
+      "updatedAt": "2026-07-20T11:51:08.885Z"
     },
     {
       "id": "funtour-norte-argentino-aereo",
@@ -773,7 +1585,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-07-13T12:11:48.588Z"
+      "updatedAt": "2026-07-20T11:51:11.236Z"
     },
     {
       "id": "funtour-mendoza-aereo-vacaciones-de-setiembre-2026",
@@ -862,7 +1674,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-07-13T12:11:50.663Z"
+      "updatedAt": "2026-07-20T11:51:13.629Z"
     },
     {
       "id": "funtour-cataratas-aereo-vacaciones-de-setiembre-2026",
@@ -1003,7 +1815,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-07-13T12:11:52.772Z"
+      "updatedAt": "2026-07-20T11:51:16.056Z"
     },
     {
       "id": "funtour-gramado-y-canela-vacaciones-de-setiembre-2026",
@@ -1189,7 +2001,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-07-13T12:11:54.859Z"
+      "updatedAt": "2026-07-20T11:51:18.449Z"
     },
     {
       "id": "funtour-gramado-con-2-parques-vacaciones-de-setiembre-2026",
@@ -1367,7 +2179,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-07-13T12:11:56.966Z"
+      "updatedAt": "2026-07-20T11:51:20.867Z"
     },
     {
       "id": "funtour-gramado-y-canela-natal-luz-2026",
@@ -1527,7 +2339,7 @@
       ],
       "temporada": "Natal",
       "notas": [],
-      "updatedAt": "2026-07-13T12:11:59.059Z"
+      "updatedAt": "2026-07-20T11:51:23.319Z"
     },
     {
       "id": "funtour-bariloche-aereo-vacaciones-de-setiembre-2026",
@@ -1817,7 +2629,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-07-13T12:12:01.380Z"
+      "updatedAt": "2026-07-20T11:51:25.700Z"
     },
     {
       "id": "funtour-florianopolis-vacaciones-de-setiembre-bus-y-hotel",
@@ -1988,7 +2800,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-07-13T12:12:03.871Z"
+      "updatedAt": "2026-07-20T11:51:28.086Z"
     },
     {
       "id": "funtour-florianopolis-vacaciones-de-setiembre-media-pension-y-paseos",
@@ -2159,7 +2971,7 @@
       ],
       "temporada": "Vacaciones de setiembre",
       "notas": [],
-      "updatedAt": "2026-07-13T12:12:05.969Z"
+      "updatedAt": "2026-07-20T11:51:30.584Z"
     },
     {
       "id": "funtour-florianopolis-baja-agosto-a-diciembre-2026-media-pension-y-paseos",
@@ -2252,7 +3064,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-07-13T12:12:08.091Z"
+      "updatedAt": "2026-07-20T11:51:32.960Z"
     },
     {
       "id": "funtour-villa-carlos-paz-terrestre-agosto-2026",
@@ -2355,7 +3167,7 @@
       ],
       "temporada": "Agosto",
       "notas": [],
-      "updatedAt": "2026-07-13T12:12:10.173Z"
+      "updatedAt": "2026-07-20T11:51:35.314Z"
     },
     {
       "id": "funtour-florianopolis-abril-a-junio-8-dias-media-pension-y-paseos",
@@ -2553,7 +3365,7 @@
       ],
       "temporada": "Abril",
       "notas": [],
-      "updatedAt": "2026-07-13T12:12:12.264Z"
+      "updatedAt": "2026-07-20T11:51:37.669Z"
     },
     {
       "id": "funtour-gramado-y-canela-temporada-baja-2026",
@@ -2640,7 +3452,7 @@
       ],
       "temporada": "Temporada baja",
       "notas": [],
-      "updatedAt": "2026-07-13T12:12:14.366Z"
+      "updatedAt": "2026-07-20T11:51:40.025Z"
     },
     {
       "id": "funtour-bariloche-aereo-vacaciones-de-julio-2026",
@@ -2913,7 +3725,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-07-13T12:12:16.486Z"
+      "updatedAt": "2026-07-20T11:51:42.503Z"
     },
     {
       "id": "funtour-santiago-de-chile-con-vina-y-valparaiso-vacaciones-de-julio-2026",
@@ -3063,7 +3875,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-07-13T12:12:18.650Z"
+      "updatedAt": "2026-07-20T11:51:44.878Z"
     },
     {
       "id": "funtour-wine-tour-chile-2026",
@@ -3161,7 +3973,7 @@
       ],
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-07-13T12:12:20.705Z"
+      "updatedAt": "2026-07-20T11:51:47.201Z"
     },
     {
       "id": "funtour-cataratas-aereo-vacaciones-de-julio-2026",
@@ -3300,7 +4112,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-07-13T12:12:22.791Z"
+      "updatedAt": "2026-07-20T11:51:49.615Z"
     },
     {
       "id": "funtour-gramado-y-canela-vacaciones-de-julio-2026-desde-montevideo-y-litoral-norte",
@@ -3476,7 +4288,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-07-13T12:12:24.905Z"
+      "updatedAt": "2026-07-20T11:51:51.977Z"
     },
     {
       "id": "funtour-gramado-con-2-parques-vacaciones-de-julio-2026-desde-montevideo-y-litoral-norte",
@@ -3663,7 +4475,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-07-13T12:12:27.032Z"
+      "updatedAt": "2026-07-20T11:51:54.691Z"
     },
     {
       "id": "funtour-floripa-julio-con-beto-carrero-y-compras-8-dias-media-pension-y-paseos",
@@ -3846,7 +4658,7 @@
       ],
       "temporada": "Vacaciones de julio",
       "notas": [],
-      "updatedAt": "2026-07-13T12:12:29.126Z"
+      "updatedAt": "2026-07-20T11:51:57.081Z"
     }
   ]
 }
