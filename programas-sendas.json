@@ -1,6 +1,6 @@
 {
   "operador": "Sendas Turismo",
-  "updatedAt": "2026-07-13T08:55:28.015Z",
+  "updatedAt": "2026-07-20T08:45:56.525Z",
   "programas": [
     {
       "id": "florianopolis-1413",
@@ -272,7 +272,7 @@
           "texto": "Solo bus y hotel descontar: U$S 130.-"
         }
       ],
-      "updatedAt": "2026-07-13T08:55:56.207Z"
+      "updatedAt": "2026-07-20T08:46:25.742Z"
     },
     {
       "id": "gramado-1417",
@@ -381,7 +381,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-07-13T08:56:18.142Z"
+      "updatedAt": "2026-07-20T08:46:48.106Z"
     },
     {
       "id": "gramado-1416",
@@ -480,7 +480,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-07-13T08:56:19.255Z"
+      "updatedAt": "2026-07-20T08:46:49.316Z"
     },
     {
       "id": "gramado-1415",
@@ -614,7 +614,7 @@
           "texto": "NO INCLUYE: INGRESOS A LOS PARQUES, MUSEOS y ESPECTACULOS DE NATAL LUZ"
         }
       ],
-      "updatedAt": "2026-07-13T08:56:20.380Z"
+      "updatedAt": "2026-07-20T08:46:50.516Z"
     },
     {
       "id": "gramado-1411",
@@ -713,7 +713,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-07-13T08:56:21.521Z"
+      "updatedAt": "2026-07-20T08:46:51.712Z"
     },
     {
       "id": "mendoza-1412",
@@ -834,7 +834,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-07-13T08:56:54.101Z"
+      "updatedAt": "2026-07-20T08:47:24.713Z"
     },
     {
       "id": "cataratas-1410",
@@ -937,110 +937,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-07-13T08:58:28.923Z"
-    },
-    {
-      "id": "cataratas-1409",
-      "joomlaId": "1409",
-      "sourceUrl": "https://www.sendasturismo.com/as/index.php/cataratas/1409-cataratas-7-dias-4-11-y-18-de-julio",
-      "titulo": "CATARATAS DEL IGUAZÚ",
-      "subtitulo": "7 DÍAS / 4 NOCHES · CATARATAS DEL IGUAZÚ",
-      "duracion": "7 DÍAS — 4 NOCHES",
-      "destino": "Cataratas del Iguazú",
-      "destinoSlug": "cataratas",
-      "pais": "Cataratas",
-      "emoji": "💧",
-      "photoQuery": "Cataratas Iguazu waterfall",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "11 Y 18 DE JULIO",
-          "gold": true
-        },
-        {
-          "label": "Operador",
-          "value": "Sendas Turismo",
-          "gold": false
-        }
-      ],
-      "descripcion": "Las Cataratas del Iguazú son una de las Siete Maravillas Naturales del Mundo. El estruendo del agua, la niebla permanente y la selva que las rodea generan una experiencia que no se olvida jamás.",
-      "highlights": [
-        "🌊 Cataratas Iguazú",
-        "🛥️ Bote al pie",
-        "🇦🇷 Lado argentino",
-        "🇧🇷 Lado brasileño",
-        "🦋 Selva",
-        "🌈 Arco iris"
-      ],
-      "incluye": [
-        "Bus Semi Cama, servicio a bordo - Cena y desayuno abordo",
-        "04 noches de alojamiento con desayuno / 05 comidas, más 01 abordo",
-        "Tour Cataratas Argentinas con ingreso incluido.",
-        "Tour Cataratas Brasileñas con ingreso incluido",
-        "Visita de la Represa de Itaipú / Visita con tiempo libre en Ciudad del Este para compras",
-        "Marco de las Tres Fronteras",
-        "En Ruta Ruinas de San Ignacio Mini con ingreso incluido, Minas de Wanda y Casa de Horacio Quiroga (ingreso opcional)",
-        "Seguro de Asistencia médica de Universal Assistance cobertura especial COVID - 19"
-      ],
-      "itinerario": [
-        {
-          "dia": "Día 01",
-          "texto": "Uruguay - Salida en bus Semi cama con cena y desayuno abordo, guía acompañante, pasando por Chajarí, San Ignacio, Puerto Iguazú, hacia:"
-        },
-        {
-          "dia": "Día 02",
-          "texto": "Foz de Iguazú - Llegada. Alojamiento. Resto del día libre para disfrutar del hotel y o paseos. Cena."
-        },
-        {
-          "dia": "Día 03",
-          "texto": "Foz de Iguazú. Desayuno. Salida en horas de la mañana para visitar Cataratas Brasileñas. Ingreso al Parque Nacional y llegada hasta el Punto Panorámico, frente al hotel Das Cataratas y desde allí dar comienzo a una caminata por pasarelas observando gran parte de los 275 saltos de agua y viendo el gran espectáculo que nos ofrece esta maravilla de la naturaleza. Al finalizar la mismo llegaremos a un mirador contemplando los saltos brasileños de Benjamín Constant, Deodoro, Floriano y Unión, este último ya perteneciente al salto Garganta del Diablo. (Ingreso incluido). Posibilidad de realizar opcionalmente el Safari Macuco donde nos internaremos en vehículos especiales en zona interna del parque y posteriormente en gomones realizar el trayecto por el río hasta enfrentarnos con los saltos en un espectáculo realmente indescriptible. Tiempo libre también para realizar opcional la visita al Parque de las Aves. Visita opcional al primer Museo de Cera de Latinoamérica, donde podrán ver a las más grandes estrellas de Hollywood, las Maravillas del Mundo o el Parque de los Dinosaurios. Cena."
-        },
-        {
-          "dia": "Día 04",
-          "texto": "Foz de Iguazú - Desayuno. Salida en horas de la mañana cruzando el Puente Internacional de la Amistad a territorio paraguayo y visitar la Represa de Itaipú. Observaremos un audiovisual de la misma para posteriormente visitar la sala de máquinas, Mirador del Vertedero, Lago artificial, presa principal de esta impresionante obra binacional sobre el lecho del Río Paraná, entre Paraguay y Brasil. De regreso visita de Ciudad del Este donde dispondremos de tiempo para compras. Regreso al hotel en la tarde. Cena."
-        },
-        {
-          "dia": "Día 05",
-          "texto": "Foz de Iguazú - Desayuno. Salida en la mañana cruzando el Puente Tancredo Neves a territorio argentino e ingresar al Parque Nacional para visitar las Cataratas Argentinas. Recorrido por los senderos superior, inferior y Garganta del Diablo. Observaremos saltos como el Bossetti, Adán y Eva, los Tres Mosqueteros, San Martín, Rivadavia, Alvar Núñez, (ingreso incluido). Cena"
-        },
-        {
-          "dia": "Día 06",
-          "texto": "Foz de Iguazú - Desayuno. Partida con equipajes en horas de la mañana hacia territorio argentina a través de la provincia de Misiones, entre medio de la exuberante vegetación, aserraderos, viveros forestales, plantaciones de Yerba mate, te, tabaco, visitando las minas de piedras Semi preciosas de Wanda (ingreso no incluido) hasta llegar a San Ignacio. Visita de las Ruinas Jesuíticas de San Ignacio Mini con ingres o incluido y la Casa del Escritor uruguayo Horacio Quiroga (ingreso no incluido) Almuerzo. Continuación en viaje de regreso por Alvear, Chajarí, hacia:"
-        },
-        {
-          "dia": "Día 07",
-          "texto": "Uruguay - Llegada en horas de la mañana. Fin de nuestros servicios"
-        }
-      ],
-      "hoteles": [
-        {
-          "nombre": "Carima",
-          "playa": "4*",
-          "sgl": 840,
-          "dbl": 690,
-          "tpl": 690,
-          "cpl": 690,
-          "qpl": null,
-          "cat": "http://www.hotelcarima.com.br/"
-        },
-        {
-          "nombre": "Vivaz",
-          "playa": "4*",
-          "sgl": 1015,
-          "dbl": 735,
-          "tpl": 735,
-          "cpl": 735,
-          "qpl": null,
-          "cat": "http://www.vivazcataratas.com.br/"
-        }
-      ],
-      "notas_precios": [
-        {
-          "titulo": "Precios",
-          "texto": "Consultar tarifas vigentes al momento de la reserva."
-        }
-      ],
-      "updatedAt": "2026-07-13T08:58:30.034Z"
+      "updatedAt": "2026-07-20T08:49:02.702Z"
     }
   ]
 }
