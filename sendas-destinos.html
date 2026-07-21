@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinos Sendas Turismo — Referencia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #2d3a6b;
+      --gold: #c8a84b;
+      --teal: #0e7a6a;
+      --text: #1a1a2e;
+      --light: #f5f5f0;
+      --border: #e0e0e0;
+      --success: #28a745;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1rem;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* SEARCH & FILTERS */
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'DM Sans', sans-serif;
+      transition: border-color 0.2s;
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--navy);
+    }
+
+    .filter-region {
+      position: relative;
+    }
+
+    .filter-region select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'DM Sans', sans-serif;
+      background: white;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .filter-region select:focus {
+      outline: none;
+      border-color: var(--navy);
+    }
+
+    /* GRID DE DESTINOS */
+    .destinos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .destino-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      border: 1px solid var(--border);
+    }
+
+    .destino-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .destino-foto {
+      height: 180px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .destino-body {
+      padding: 20px;
+    }
+
+    .destino-header {
+      display: flex;
+      align-items: start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .destino-emoji {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+
+    .destino-title {
+      flex: 1;
+    }
+
+    .destino-title h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .destino-region {
+      font-size: 0.85rem;
+      color: #999;
+      font-weight: 500;
+    }
+
+    .destino-desc {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .destino-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .highlight-tag {
+      background: var(--light);
+      border: 0.5px solid var(--border);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+
+    .destino-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .destino-dias {
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .destino-pais {
+      display: inline-block;
+      background: var(--gold);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-weight: 500;
+      font-size: 0.75rem;
+    }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 1000;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .modal.visible { display: flex; align-items: center; justify-content: center; }
+
+    .modal-content {
+      background: white;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .modal-header {
+      background: var(--navy);
+      color: white;
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-body {
+      padding: 24px;
+    }
+
+    .modal-section {
+      margin-bottom: 20px;
+    }
+
+    .modal-section h4 {
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .modal-section p {
+      line-height: 1.6;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .aliases-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .alias-badge {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      font-family: 'Courier New', monospace;
+      color: #666;
+    }
+
+    .copy-btn {
+      background: var(--teal);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .copy-btn:hover { background: #0a5a4a; }
+
+    /* STATS */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .stat-box {
+      background: white;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--navy);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 4px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .controls { grid-template-columns: 1fr; }
+      .destinos-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.6rem; }
+    }
+
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 40px 20px;
+      color: #999;
+    }
+
+    .no-results p { font-size: 1.1rem; }
+    .no-results small { display: block; margin-top: 8px; }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌍 Destinos Sendas Turismo</h1>
+    <p>Referencia completa para identificación de destinos en scraping</p>
+  </header>
+
+  <div class="container">
+
+    <div class="stats" id="stats"></div>
+
+    <div class="controls">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Buscar destino, región, alias...">
+      </div>
+      <div class="filter-region">
+        <select id="regionFilter">
+          <option value="">Todas las regiones</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="destinos-grid" id="destinosGrid"></div>
+
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle"></h2>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script>
+    let destinos = [];
+
+    async function loadDestinos() {
+      try {
+        const response = await fetch('sendas-destinos.json');
+        const data = await response.json();
+        destinos = data.destinos;
+        render();
+        setupFilters();
+        updateStats();
+      } catch(e) {
+        console.error('Error cargando destinos:', e);
+        document.getElementById('destinosGrid').innerHTML = 
+          '<div class="no-results"><p>Error al cargar destinos</p><small>Verificá que sendas-destinos.json esté en el mismo directorio</small></div>';
+      }
+    }
+
+    function setupFilters() {
+      const regions = [...new Set(destinos.map(d => d.region))].sort();
+      const select = document.getElementById('regionFilter');
+      regions.forEach(r => {
+        const opt = document.createElement('option');
+        opt.value = r;
+        opt.textContent = r;
+        select.appendChild(opt);
+      });
+
+      select.addEventListener('change', filterDestinos);
+      document.getElementById('searchInput').addEventListener('input', filterDestinos);
+    }
+
+    function updateStats() {
+      const html = `
+        <div class="stat-box">
+          <div class="stat-number">${destinos.length}</div>
+          <div class="stat-label">Destinos</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">${[...new Set(destinos.map(d => d.region))].length}</div>
+          <div class="stat-label">Regiones</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">${destinos.reduce((s, d) => s + d.aliases.length, 0)}</div>
+          <div class="stat-label">Alias totales</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">${destinos.reduce((s, d) => s + d.highlights.length, 0)}</div>
+          <div class="stat-label">Highlights</div>
+        </div>
+      `;
+      document.getElementById('stats').innerHTML = html;
+    }
+
+    function filterDestinos() {
+      const search = document.getElementById('searchInput').value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+      const region = document.getElementById('regionFilter').value;
+
+      const filtered = destinos.filter(d => {
+        const matchesRegion = !region || d.region === region;
+        const matchesSearch = !search || 
+          d.nombre.toLowerCase().includes(search) ||
+          d.region.toLowerCase().includes(search) ||
+          d.aliases.some(a => a.toLowerCase().includes(search));
+        return matchesRegion && matchesSearch;
+      });
+
+      renderDestinos(filtered);
+    }
+
+    function render() {
+      renderDestinos(destinos);
+    }
+
+    function renderDestinos(lista) {
+      const grid = document.getElementById('destinosGrid');
+      if (lista.length === 0) {
+        grid.innerHTML = '<div class="no-results" style="grid-column: 1/-1"><p>No se encontraron destinos</p><small>Intenta con otra búsqueda o filtro</small></div>';
+        return;
+      }
+
+      grid.innerHTML = lista.map(d => `
+        <div class="destino-card" onclick="openModal('${d.id}')">
+          <div class="destino-foto">${d.emoji}</div>
+          <div class="destino-body">
+            <div class="destino-header">
+              <div class="destino-title">
+                <h3>${d.nombre}</h3>
+                <div class="destino-region">${d.region}</div>
+              </div>
+            </div>
+            <div class="destino-desc">${d.descripcion}</div>
+            <div class="destino-highlights">
+              ${d.highlights.slice(0, 3).map(h => `<span class="highlight-tag">${h}</span>`).join('')}
+            </div>
+            <div class="destino-meta">
+              <span class="destino-dias">~${d.diasPromedio} días</span>
+              <span class="destino-pais">${d.pais}</span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openModal(id) {
+      const d = destinos.find(x => x.id === id);
+      if (!d) return;
+
+      document.getElementById('modalTitle').textContent = d.emoji + ' ' + d.nombre;
+
+      const body = `
+        <div class="modal-section">
+          <h4>Descripción</h4>
+          <p>${d.descripcion}</p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Información</h4>
+          <p><strong>Región:</strong> ${d.region}</p>
+          <p><strong>País:</strong> ${d.pais}</p>
+          <p><strong>Categoría:</strong> ${d.categoria}</p>
+          <p><strong>Duración promedio:</strong> ${d.diasPromedio} días</p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Highlights</h4>
+          <div class="destino-highlights">
+            ${d.highlights.map(h => `<span class="highlight-tag">${h}</span>`).join('')}
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4>Alias para detección (${d.aliases.length})</h4>
+          <p style="font-size: 0.85rem; color: #999; margin-bottom: 10px;">Palabras clave utilizadas para identificar automáticamente este destino en títulos de programas</p>
+          <div class="aliases-list">
+            ${d.aliases.map(a => `<span class="alias-badge">"${a}"</span>`).join('')}
+          </div>
+          <button class="copy-btn" onclick="copyAliases('${d.id}')">📋 Copiar alias</button>
+        </div>
+
+        <div class="modal-section">
+          <h4>Identificador</h4>
+          <p><code>${d.id}</code> <button class="copy-btn" onclick="copyText('${d.id}')">Copiar</button></p>
+        </div>
+      `;
+
+      document.getElementById('modalBody').innerHTML = body;
+      document.getElementById('modal').classList.add('visible');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.remove('visible');
+    }
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => alert('Copiado: ' + text));
+    }
+
+    function copyAliases(id) {
+      const d = destinos.find(x => x.id === id);
+      if (d) {
+        const text = d.aliases.join('", "');
+        navigator.clipboard.writeText(`["${text}"]`).then(() => alert('Alias copiados'));
+      }
+    }
+
+    document.getElementById('modal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    loadDestinos();
+  </script>
+
+</body>
+</html>
