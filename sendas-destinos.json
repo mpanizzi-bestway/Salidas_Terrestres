@@ -1,0 +1,361 @@
+{
+  "destinos": [
+    {
+      "id": "florianopolis",
+      "nombre": "Florianópolis",
+      "region": "Brasil",
+      "categoria": "playas",
+      "slug": "florianopolis",
+      "aliases": ["floripa", "canasvieiras", "florianopolis", "floripa"],
+      "descripcion": "Canasvieiras, en Florianópolis, combina el encanto de las playas brasileñas con aguas cálidas y tranquilas, perfectas para disfrutar todo el día. Con su ambiente alegre, su costa sin sargazo y su mezcla de naturaleza y ritmo local, es el destino ideal para vivir el verdadero verano en Brasil.",
+      "highlights": [
+        "🏖️ Playas cristalinas",
+        "⛵ Paseo en Scuna",
+        "🎢 Beto Carrero World",
+        "✝️ Cristo Luz",
+        "🐬 Golfinhos",
+        "🌊 Laguna Concepción"
+      ],
+      "emoji": "🇧🇷",
+      "fotoUrl": "florianopolis",
+      "diasPromedio": 8,
+      "pais": "Brasil"
+    },
+    {
+      "id": "gramado",
+      "nombre": "Gramado y Canela",
+      "region": "Brasil",
+      "categoria": "sierra",
+      "slug": "gramado",
+      "aliases": ["gramado", "canela", "gramado y canela", "hortensias"],
+      "descripcion": "Gramado y Canela son dos joyas del sur de Brasil que combinan arquitectura alemana, gastronomía de primer nivel y paisajes de montaña únicos. Una experiencia completamente diferente al Brasil típico, llena de historia, chocolate artesanal y naturaleza exuberante.",
+      "highlights": [
+        "🌲 Parques naturales",
+        "🍫 Chocolate artesanal",
+        "⛪ Arquitectura europea",
+        "🎭 Gramado",
+        "🌊 Cascatas",
+        "🚂 Maria Fumaça"
+      ],
+      "emoji": "🇧🇷",
+      "fotoUrl": "gramado",
+      "diasPromedio": 7,
+      "pais": "Brasil"
+    },
+    {
+      "id": "ferrugem",
+      "nombre": "Praia da Ferrugem",
+      "region": "Brasil",
+      "categoria": "playas",
+      "slug": "ferrugem",
+      "aliases": ["ferrugem", "praia da ferrugem", "praia ferrugem"],
+      "descripcion": "Praia da Ferrugem es una de las playas más salvajes y auténticas de Santa Catarina. Rodeada de mata atlántica, con olas ideales para el surf y una atmósfera bohemia que la distingue de los destinos masificados del litoral brasileño.",
+      "highlights": [
+        "🏄 Surf",
+        "🌿 Mata atlántica",
+        "🎭 Atmósfera bohemia",
+        "🏖️ Playas salvajes",
+        "🌅 Atardeceres únicos",
+        "🍺 Bares y restaurantes"
+      ],
+      "emoji": "🇧🇷",
+      "fotoUrl": "ferrugem",
+      "diasPromedio": 6,
+      "pais": "Brasil"
+    },
+    {
+      "id": "camboriu",
+      "nombre": "Balneário Camboriú",
+      "region": "Brasil",
+      "categoria": "playas",
+      "slug": "camboriu",
+      "aliases": ["camboriu", "balneario camboriu", "beto carrero"],
+      "descripcion": "Balneário Camboriú es la ciudad más visitada de Santa Catarina, con su famosa rambla, teleférico, playas urbanas y la proximidad a Beto Carrero World, el mayor parque de atracciones de Sudamérica.",
+      "highlights": [
+        "🏖️ Rambla famosa",
+        "🚡 Teleférico",
+        "🎢 Beto Carrero World",
+        "🌅 Puesta de sol",
+        "🏊 Playas urbanas",
+        "🌊 Aguas cálidas"
+      ],
+      "emoji": "🇧🇷",
+      "fotoUrl": "camboriu",
+      "diasPromedio": 5,
+      "pais": "Brasil"
+    },
+    {
+      "id": "bombinhas",
+      "nombre": "Bombinhas",
+      "region": "Brasil",
+      "categoria": "playas",
+      "slug": "bombinhas",
+      "aliases": ["bombinhas", "bombinhas santa catarina"],
+      "descripcion": "Bombinhas es un paraíso de aguas cristalinas en Santa Catarina, con más de 30 playas de arena blanca y una reserva marina que la convierte en uno de los destinos de buceo más importantes de Brasil.",
+      "highlights": [
+        "🏖️ 30+ playas",
+        "🤿 Buceo",
+        "🐠 Reserva marina",
+        "💎 Aguas cristalinas",
+        "🏄 Surf",
+        "🌴 Naturaleza"
+      ],
+      "emoji": "🇧🇷",
+      "fotoUrl": "bombinhas",
+      "diasPromedio": 6,
+      "pais": "Brasil"
+    },
+    {
+      "id": "capao",
+      "nombre": "Capão da Canoa",
+      "region": "Brasil",
+      "categoria": "playas",
+      "slug": "capao",
+      "aliases": ["capao da canoa", "capao", "capão da canoa"],
+      "descripcion": "Capão da Canoa es una clásica estación balnearia del litoral gaúcho, con playas amplias, aguas tranquilas y una infraestructura turística consolidada ideal para familias.",
+      "highlights": [
+        "👨‍👩‍👧‍👦 Familias",
+        "🏖️ Playas amplias",
+        "🌊 Aguas tranquilas",
+        "🏨 Infraestructura",
+        "🍽️ Gastronomía",
+        "🎢 Entretenimiento"
+      ],
+      "emoji": "🇧🇷",
+      "fotoUrl": "capao",
+      "diasPromedio": 5,
+      "pais": "Brasil"
+    },
+    {
+      "id": "torres",
+      "nombre": "Torres",
+      "region": "Brasil",
+      "categoria": "playas",
+      "slug": "torres",
+      "aliases": ["torres", "torres rio grande do sul"],
+      "descripcion": "Torres es conocida por sus imponentes rocas basálticas que emergen del mar, sus playas de aguas frescas y su faro histórico en el litoral de Rio Grande do Sul.",
+      "highlights": [
+        "🪨 Rocas basálticas",
+        "⛩️ Faro histórico",
+        "🏖️ Playas vírgenes",
+        "🌊 Aguas frescas",
+        "🚶 Caminatas",
+        "📸 Fotografía"
+      ],
+      "emoji": "🇧🇷",
+      "fotoUrl": "torres",
+      "diasPromedio": 5,
+      "pais": "Brasil"
+    },
+    {
+      "id": "laguna",
+      "nombre": "Laguna",
+      "region": "Brasil",
+      "categoria": "colonial",
+      "slug": "laguna",
+      "aliases": ["laguna", "laguna santa catarina"],
+      "descripcion": "Laguna es una ciudad histórica de Santa Catarina, con un centro colonial preservado y famosa por la convivencia entre pescadores y delfines.",
+      "highlights": [
+        "🏛️ Centro colonial",
+        "🐬 Delfines",
+        "⛵ Pescadores",
+        "🏛️ Historia",
+        "🌊 Bahía",
+        "🎭 Cultura"
+      ],
+      "emoji": "🇧🇷",
+      "fotoUrl": "laguna",
+      "diasPromedio": 4,
+      "pais": "Brasil"
+    },
+    {
+      "id": "praiarosa",
+      "nombre": "Praia do Rosa",
+      "region": "Brasil",
+      "categoria": "playas",
+      "slug": "praiarosa",
+      "aliases": ["praia do rosa", "praia rosa", "praia da rosa"],
+      "descripcion": "Praia do Rosa es un refugio de lujo discreto entre dunas y mata atlántica, con ballenas francas que visitan la bahía en invierno y una escena gastronómica de primer nivel.",
+      "highlights": [
+        "🐋 Ballenas francas",
+        "🌿 Mata atlántica",
+        "🏖️ Playa exclusiva",
+        "🌅 Atardeceres",
+        "🍽️ Gastronomía premium",
+        "🏡 Lujo discreto"
+      ],
+      "emoji": "🇧🇷",
+      "fotoUrl": "praiarosa",
+      "diasPromedio": 5,
+      "pais": "Brasil"
+    },
+    {
+      "id": "riodejaneiro",
+      "nombre": "Río de Janeiro",
+      "region": "Brasil",
+      "categoria": "ciudad",
+      "slug": "rio",
+      "aliases": ["rio", "rio de janeiro", "rio de janeiro brasil"],
+      "descripcion": "Río de Janeiro es una de las ciudades más bellas del mundo, con el Cristo Redentor, el Pan de Azúcar y las playas de Copacabana e Ipanema como íconos universales.",
+      "highlights": [
+        "✝️ Cristo Redentor",
+        "🏔️ Pan de Azúcar",
+        "🏖️ Copacabana",
+        "🏖️ Ipanema",
+        "🎭 Cultura",
+        "🎉 Vida nocturna"
+      ],
+      "emoji": "🇧🇷",
+      "fotoUrl": "rio",
+      "diasPromedio": 6,
+      "pais": "Brasil"
+    },
+    {
+      "id": "cataratas",
+      "nombre": "Cataratas del Iguazú",
+      "region": "Misiones",
+      "categoria": "naturaleza",
+      "slug": "cataratas",
+      "aliases": ["cataratas", "iguazu", "iguacu", "cataratas iguazu", "cataratas iguacu"],
+      "descripcion": "Las Cataratas del Iguazú son una de las Siete Maravillas Naturales del Mundo. El estruendo del agua, la niebla permanente y la selva que las rodea generan una experiencia que no se olvida jamás.",
+      "highlights": [
+        "🌊 Cataratas Iguazú",
+        "🛥️ Bote al pie",
+        "🇦🇷 Lado argentino",
+        "🇧🇷 Lado brasileño",
+        "🦋 Selva",
+        "🌈 Arco iris"
+      ],
+      "emoji": "💧",
+      "fotoUrl": "cataratas",
+      "diasPromedio": 7,
+      "pais": "Argentina/Brasil"
+    },
+    {
+      "id": "mendoza",
+      "nombre": "Mendoza",
+      "region": "Cuyo",
+      "categoria": "vinos",
+      "slug": "mendoza",
+      "aliases": ["mendoza", "mendoza argentina", "vinos mendoza"],
+      "descripcion": "Mendoza es la capital del vino argentino, al pie de los Andes. Sus bodegas, el Aconcagua, las termas de Cacheuta y sus paisajes de viñedos en otoño la convierten en un destino para todos los sentidos.",
+      "highlights": [
+        "🍷 Vinos premium",
+        "🏔️ Aconcagua",
+        "♨️ Termas Cacheuta",
+        "🌅 Cordillera",
+        "🍇 Vendimia",
+        "🚵 Aventura"
+      ],
+      "emoji": "🇦🇷",
+      "fotoUrl": "mendoza",
+      "diasPromedio": 8,
+      "pais": "Argentina"
+    },
+    {
+      "id": "bariloche",
+      "nombre": "Bariloche",
+      "region": "Patagonia",
+      "categoria": "montaña",
+      "slug": "bariloche",
+      "aliases": ["bariloche", "bariloche argentina", "san carlos de bariloche"],
+      "descripcion": "Bariloche es la joya de la Patagonia argentina. Lagos, bosques y el Cerro Catedral la convierten en un destino imperdible en cualquier época del año.",
+      "highlights": [
+        "⛷️ Ski (en invierno)",
+        "🍫 Chocolate",
+        "🏔️ Cerro Catedral",
+        "🦆 Lagos patagónicos",
+        "🌲 Bosques",
+        "❄️ Nieve"
+      ],
+      "emoji": "🇦🇷",
+      "fotoUrl": "bariloche",
+      "diasPromedio": 8,
+      "pais": "Argentina"
+    },
+    {
+      "id": "carlospaz",
+      "nombre": "Villa Carlos Paz",
+      "region": "Córdoba",
+      "categoria": "sierra",
+      "slug": "carlospaz",
+      "aliases": ["carlos paz", "villa carlos paz", "cordoba"],
+      "descripcion": "Villa Carlos Paz es el principal centro turístico de la provincia de Córdoba, con su lago, sus espectáculos nocturnos y la calidez de la sierra argentina.",
+      "highlights": [
+        "⛰️ Sierras",
+        "🎠 Teleférico",
+        "🎭 Teatro",
+        "💧 Dique San Roque",
+        "👨‍👩‍👧 Familias",
+        "🎪 Entretenimiento"
+      ],
+      "emoji": "🇦🇷",
+      "fotoUrl": "carlospaz",
+      "diasPromedio": 5,
+      "pais": "Argentina"
+    },
+    {
+      "id": "buenosaires",
+      "nombre": "Buenos Aires",
+      "region": "Buenos Aires",
+      "categoria": "ciudad",
+      "slug": "buenosaires",
+      "aliases": ["buenos aires", "buenos aires argentina", "baires"],
+      "descripcion": "Buenos Aires combina la pasión del tango con una escena cultural sin igual en América Latina. Gastronomía porteña, teatros y la calidez de su gente hacen de esta ciudad una experiencia completa.",
+      "highlights": [
+        "🎭 Tango",
+        "🍖 Asado",
+        "⛵ Tigre Delta",
+        "🎠 Temaiken",
+        "🌊 Mundo Marino",
+        "🎪 Cultura"
+      ],
+      "emoji": "🇦🇷",
+      "fotoUrl": "buenosaires",
+      "diasPromedio": 6,
+      "pais": "Argentina"
+    },
+    {
+      "id": "norte",
+      "nombre": "Norte Argentino",
+      "region": "Noroeste",
+      "categoria": "cultural",
+      "slug": "norte",
+      "aliases": ["norte", "norte argentino", "jujuy", "salta", "quebrada humahuaca"],
+      "descripcion": "El Norte Argentino despliega los colores mágicos de la Quebrada de Humahuaca, las Salinas Grandes, los cerros de siete colores y los viñedos de altura. Una región de culturas milenarias y naturaleza imponente.",
+      "highlights": [
+        "🌈 Cerros de colores",
+        "🏔️ Quebrada Humahuaca",
+        "🧂 Salinas Grandes",
+        "🌵 Puna",
+        "🦙 Llamas",
+        "🎭 Cultura ancestral"
+      ],
+      "emoji": "🇦🇷",
+      "fotoUrl": "norte",
+      "diasPromedio": 8,
+      "pais": "Argentina"
+    },
+    {
+      "id": "santiago",
+      "nombre": "Santiago de Chile",
+      "region": "Región Metropolitana",
+      "categoria": "ciudad",
+      "slug": "santiago",
+      "aliases": ["santiago", "chile", "santiago chile"],
+      "descripcion": "Santiago de Chile combina la modernidad de una gran capital con la cercanía de Viña del Mar y Valparaíso. Una escapada perfecta que mezcla cultura, gastronomía y paisajes únicos.",
+      "highlights": [
+        "🏙️ Santiago moderno",
+        "⛰️ Andes",
+        "🍷 Vinos",
+        "🎨 Valparaíso",
+        "🌊 Viña del Mar",
+        "🌿 Naturaleza"
+      ],
+      "emoji": "🇨🇱",
+      "fotoUrl": "santiago",
+      "diasPromedio": 7,
+      "pais": "Chile"
+    }
+  ]
+}
