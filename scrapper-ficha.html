@@ -471,7 +471,7 @@ function renderPrograma(data) {
 
   // Destino
   const slug = data.destinoSlug || '';
-  document.getElementById('prog-descripcion').textContent = DESCRIPCIONES[slug] || `Programa con ${data.operador || 'el operador'}.`;
+  document.getElementById('prog-descripcion').textContent = DESCRIPCIONES[slug] || ``;
   document.getElementById('prog-highlights').innerHTML = (HIGHLIGHTS_MAP[slug] || [])
     .map(h => `<span class="hl-tag">${h}</span>`).join('');
   loadDestinationPhoto(slug, document.getElementById('prog-foto'));
