@@ -20,16 +20,13 @@
       --gray: #9a98a8;
       --text: #1a1a2e;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--off-white);
       color: var(--text);
       min-height: 100vh;
     }
-
     /* HEADER */
     header {
       background: var(--navy-dark);
@@ -37,7 +34,6 @@
       position: relative;
       overflow: hidden;
     }
-
     header::before {
       content: '';
       position: absolute;
@@ -47,7 +43,6 @@
         radial-gradient(ellipse 40% 60% at 10% 80%, rgba(200,168,75,0.1) 0%, transparent 60%);
       pointer-events: none;
     }
-
     .header-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -58,21 +53,17 @@
       position: relative;
       z-index: 1;
     }
-
     .logo-wrap img {
       height: 72px;
       width: auto;
       display: block;
     }
-
     .header-divider {
       width: 1px;
       height: 60px;
       background: rgba(255,255,255,0.2);
     }
-
     .header-title { color: var(--white); }
-
     .header-title h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
@@ -80,7 +71,6 @@
       letter-spacing: -0.02em;
       line-height: 1.1;
     }
-
     .header-title p {
       font-size: 0.85rem;
       color: rgba(255,255,255,0.55);
@@ -89,7 +79,6 @@
       text-transform: uppercase;
       font-weight: 300;
     }
-
     /* ── SELECTOR DE AGENTE ── */
     .agent-selector-wrap {
       margin-left: auto;
@@ -128,32 +117,27 @@
     .agent-select:hover { border-color: rgba(255,255,255,0.4); }
     .agent-select:focus { border-color: var(--gold); }
     .agent-select option { background: var(--navy-dark); color: white; }
-
     .strip {
       height: 4px;
       background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
     }
-
     /* SECTION LABEL */
     .section-label {
       max-width: 1100px;
       margin: 52px auto 0;
       padding: 0 40px;
     }
-
     .section-label h2 {
       font-family: 'Playfair Display', serif;
       font-size: 1.5rem;
       color: var(--navy);
       font-weight: 600;
     }
-
     .section-label p {
       color: var(--gray);
       font-size: 0.9rem;
       margin-top: 6px;
     }
-
     /* OPERATOR GRID */
     .operators {
       max-width: 1100px;
@@ -163,7 +147,6 @@
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 24px;
     }
-
     .op-card {
       background: var(--white);
       border-radius: 14px;
@@ -177,12 +160,10 @@
       border: 1px solid rgba(30,39,72,0.07);
       cursor: pointer;
     }
-
     .op-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 32px rgba(30,39,72,0.14);
     }
-
     .op-card-banner {
       height: 140px;
       display: flex;
@@ -191,7 +172,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .op-card-banner.sendas {
       background: linear-gradient(135deg, #1a3a4a 0%, #0e5a7a 50%, #1a7a5a 100%);
     }
@@ -207,14 +187,12 @@
     .op-card-banner.placeholder {
       background: linear-gradient(135deg, #2d3561 0%, #4a4f8a 100%);
     }
-
     .op-card-banner::after {
       content: '';
       position: absolute;
       inset: 0;
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='25' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E") repeat;
     }
-
     .op-banner-logo {
       height: 64px;
       width: auto;
@@ -224,7 +202,6 @@
       position: relative;
       filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35));
     }
-
     .op-banner-logo.funtour-logo {
       height: 90px;
       max-width: 220px;
@@ -233,7 +210,6 @@
       filter: drop-shadow(0 2px 12px rgba(0,0,0,0.4));
       mix-blend-mode: multiply;
     }
-
     .op-logo-text {
       font-family: 'Playfair Display', serif;
       font-size: 1.6rem;
@@ -242,7 +218,6 @@
       z-index: 1;
       text-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
-
     /* CARD BODY */
     .op-card-body {
       padding: 22px 24px 24px;
@@ -250,28 +225,24 @@
       display: flex;
       flex-direction: column;
     }
-
     .op-card-body h3 {
       font-size: 1rem;
       font-weight: 600;
       color: var(--navy);
       margin-bottom: 6px;
     }
-
     .op-card-body p {
       font-size: 0.83rem;
       color: var(--gray);
       line-height: 1.5;
       flex: 1;
     }
-
     .op-card-footer {
       margin-top: 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-
     .op-badge {
       background: var(--gray-light);
       color: var(--navy);
@@ -281,7 +252,6 @@
       border-radius: 20px;
       letter-spacing: 0.03em;
     }
-
     .op-arrow {
       width: 32px;
       height: 32px;
@@ -292,9 +262,7 @@
       justify-content: center;
       transition: background 0.2s;
     }
-
     .op-card:hover .op-arrow { background: var(--gold); }
-
     .op-arrow svg {
       width: 14px;
       height: 14px;
@@ -304,27 +272,22 @@
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-
     .coming-soon {
       opacity: 0.5;
       pointer-events: none;
     }
-
     /* FOOTER */
     footer {
       background: var(--navy-dark);
       padding: 24px 40px;
       text-align: center;
     }
-
     footer p {
       color: rgba(255,255,255,0.3);
       font-size: 0.78rem;
       letter-spacing: 0.05em;
     }
-
     footer span { color: var(--gold); }
-
     /* ── BUSCADOR ── */
     .search-wrap {
       max-width: 1100px;
@@ -470,7 +433,6 @@
       border-radius: 10px; border: 1px dashed var(--gray-light);
     }
     .no-results strong { color: var(--navy); }
-
     @media (max-width: 600px) {
       .header-inner { padding: 24px 20px; flex-wrap: wrap; gap: 16px; }
       .header-divider { display: none; }
@@ -481,7 +443,6 @@
       .search-wrap, .search-results { padding: 0 20px; }
       .results-grid { grid-template-columns: 1fr; }
     }
-
     /* ── SCRAPPER ── */
     .scrapper-wrap {
       max-width: 1100px;
@@ -608,7 +569,6 @@
       background: #fff5f5;
     }
     .scrapper-error.visible { display: block; }
-
     @media (max-width: 600px) {
       .scrapper-wrap { padding: 0 20px; }
       .scrapper-row { flex-wrap: wrap; gap: 8px; }
@@ -618,7 +578,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <div class="header-inner">
       <div class="logo-wrap">
@@ -629,7 +588,6 @@
         <h1>Programas Terrestres</h1>
         <p>Catálogo de operadores &amp; programas</p>
       </div>
-
       <!-- ── SELECTOR DE AGENTE ── -->
       <div class="agent-selector-wrap">
         <label class="agent-label" for="agent-select">Agente</label>
@@ -643,12 +601,9 @@
           <option value="lucia">Lucia</option>
         </select>
       </div>
-
     </div>
   </header>
   <div class="strip"></div>
-
-
   <!-- BUSCADOR GLOBAL -->
   <div class="search-wrap">
     <div class="search-label">Buscar programa<span> en todos los operadores</span></div>
@@ -668,12 +623,10 @@
       </div>
     </div>
   </div>
-
   <!-- RESULTADOS DEL BUSCADOR -->
   <div class="search-results" id="search-results">
     <div class="results-grid" id="results-grid"></div>
   </div>
-
   <!-- ── SCRAPPER DE PROGRAMAS ── -->
   <div class="scrapper-wrap">
     <div class="scrapper-label-title">
@@ -713,14 +666,11 @@
       <div class="scrapper-error" id="scrapper-error"></div>
     </div>
   </div>
-
   <div class="section-label">
     <h2>Seleccioná un operador</h2>
     <p>Accedé a los programas de cada operador y sus destinos disponibles</p>
   </div>
-
   <div class="operators">
-
     <!-- 1. SENDAS TURISMO -->
     <a href="operadores/sendas/sendas.html" class="op-card">
       <div class="op-card-banner sendas">
@@ -742,7 +692,6 @@
         </div>
       </div>
     </a>
-
     <!-- 2. FUNTOUR -->
     <a href="operadores/funtour/funtour.html" class="op-card">
       <div class="op-card-banner funtour">
@@ -764,7 +713,6 @@
         </div>
       </div>
     </a>
-
     <!-- 3. MTUR VIAJES -->
     <a href="operadores/mtur/mtur.html" class="op-card">
       <div class="op-card-banner mtur">
@@ -786,7 +734,6 @@
         </div>
       </div>
     </a>
-
     <!-- 4. RUTATUR -->
     <a href="operadores/rutatur/rutatur.html" class="op-card">
       <div class="op-card-banner rutatur">
@@ -809,7 +756,6 @@
         </div>
       </div>
     </a>
-
     <!-- PRÓXIMO OPERADOR -->
     <div class="op-card coming-soon">
       <div class="op-card-banner placeholder">
@@ -826,15 +772,111 @@
         </div>
       </div>
     </div>
-
   </div>
-
   <footer>
     <p><span>BestWay</span> · Programas Terrestres · Uso interno</p>
   </footer>
-
   <script>
-  // ─── Configuracion operadores ────────────────────────────────────────────────
+  // ════════════════════════════════════════════════════════════════════════════════
+  //  SISTEMA DE DESTINOS MEJORADO (NUEVO)
+  // ════════════════════════════════════════════════════════════════════════════════
+  
+  let DESTINOS_SENDAS = null;  // Cache para la referencia de destinos
+
+  /** Cargar referencia centralizada de destinos desde JSON */
+  async function loadDestinosReference() {
+    if (DESTINOS_SENDAS) return; // Ya cargado
+    
+    try {
+      const res = await fetch('sendas-destinos.json?_=' + Date.now());
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      DESTINOS_SENDAS = data.destinos;
+      console.log('✓ Destinos Sendas cargados:', DESTINOS_SENDAS.length);
+    } catch(e) {
+      console.warn('⚠️ No se pudo cargar sendas-destinos.json:', e.message);
+      DESTINOS_SENDAS = null; // Usar fallback
+    }
+  }
+
+  /** Normalizar texto para búsqueda */
+  function normText(text) {
+    if (!text) return '';
+    return text
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  /** Detectar destino desde título usando referencia centralizada */
+  function detectarDestinoSlug(titulo) {
+    if (!titulo) return null;
+    
+    // Si la referencia no se cargó, usar fallback
+    if (!DESTINOS_SENDAS) {
+      return detectarDestinoSlugFallback(titulo);
+    }
+    
+    var t = normText(titulo);
+    
+    // Búsqueda: iteramos destinos y sus alias
+    for (var i = 0; i < DESTINOS_SENDAS.length; i++) {
+      var destino = DESTINOS_SENDAS[i];
+      
+      // Revisar cada alias del destino
+      for (var j = 0; j < destino.aliases.length; j++) {
+        var alias = destino.aliases[j];
+        if (t.includes(normText(alias))) {
+          console.log('✓ Destino detectado:', destino.nombre, '(alias: "' + alias + '")');
+          return destino.slug;
+        }
+      }
+    }
+    
+    console.warn('⚠️ No se detectó destino en:', titulo);
+    return null;
+  }
+
+  /** Fallback: usar mapa hardcodeado si sendas-destinos.json no está disponible */
+  function detectarDestinoSlugFallback(titulo) {
+    var DESTINO_MAP_FALLBACK = [
+      { keys: ['florianopolis','floripa','canasvieiras'], file: 'florianopolis' },
+      { keys: ['praia do rosa','praia rosa'],             file: 'praiarosa'     },
+      { keys: ['ferrugem'],                               file: 'ferrugem'      },
+      { keys: ['camboriu'],                               file: 'camboriu'      },
+      { keys: ['bombinhas'],                              file: 'bombinhas'     },
+      { keys: ['capao da canoa'],                         file: 'capao'         },
+      { keys: ['torres'],                                 file: 'torres'        },
+      { keys: ['laguna'],                                 file: 'laguna'        },
+      { keys: ['gramado','canela'],                       file: 'gramado'       },
+      { keys: ['cataratas','iguazu','iguacu'],            file: 'cataratas'     },
+      { keys: ['bariloche'],                              file: 'bariloche'     },
+      { keys: ['carlos paz'],                             file: 'carlospaz'     },
+      { keys: ['cordoba','córdoba'],                      file: 'carlospaz'     },
+      { keys: ['jujuy','salta','norte'],                  file: 'norte'         },
+      { keys: ['mendoza'],                                file: 'mendoza'       },
+      { keys: ['buenos aires'],                           file: 'buenosaires'   },
+      { keys: ['santiago','chile'],                       file: 'santiago'      },
+    ];
+    
+    var t = normText(titulo);
+    for (var i = 0; i < DESTINO_MAP_FALLBACK.length; i++) {
+      for (var j = 0; j < DESTINO_MAP_FALLBACK[i].keys.length; j++) {
+        if (t.includes(normText(DESTINO_MAP_FALLBACK[i].keys[j]))) {
+          console.log('✓ Destino detectado (fallback):', DESTINO_MAP_FALLBACK[i].file);
+          return DESTINO_MAP_FALLBACK[i].file;
+        }
+      }
+    }
+    return null;
+  }
+
+  // ════════════════════════════════════════════════════════════════════════════════
+  //  OPERADORES Y BÚSQUEDA GLOBAL
+  // ════════════════════════════════════════════════════════════════════════════════
+
   const OPERADORES = [
     {
       id      : 'sendas',
@@ -870,13 +912,15 @@
     },
   ];
 
-  // ─── Pool global de programas ────────────────────────────────────────────────
   let allProgramas = [];
 
   async function loadAll() {
     const hint = document.getElementById('search-hint');
     hint.textContent = 'Cargando...';
-
+    
+    // Precargar destinos para Sendas
+    await loadDestinosReference();
+    
     await Promise.all(OPERADORES.map(op =>
       fetch(op.file + '?_=' + Date.now())
         .then(r => r.ok ? r.json() : null)
@@ -888,31 +932,26 @@
         })
         .catch(() => {})
     ));
-
     hint.textContent = allProgramas.length + ' programas en ' + OPERADORES.length + ' operadores';
   }
 
-  // ─── Highlight ───────────────────────────────────────────────────────────────
   function hl(text, q) {
     if (!q || !text) return text || '';
     return text.replace(new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'), '<mark>$1</mark>');
   }
 
-  // ─── Buscar ──────────────────────────────────────────────────────────────────
   function search(query) {
     const q          = query.trim().toLowerCase();
     const resultsDiv = document.getElementById('search-results');
     const grid       = document.getElementById('results-grid');
     const countEl    = document.getElementById('search-count');
     const hint       = document.getElementById('search-hint');
-
     if (!q) {
       resultsDiv.classList.remove('visible');
       countEl.classList.remove('visible');
       hint.textContent = allProgramas.length + ' programas en ' + OPERADORES.length + ' operadores';
       return;
     }
-
     const matches = allProgramas.filter(function(item) {
       var p = item.prog;
       var hay = [
@@ -925,13 +964,11 @@
       ].join(' ').toLowerCase();
       return hay.indexOf(q) !== -1;
     });
-
     countEl.textContent = matches.length + ' resultado' + (matches.length !== 1 ? 's' : '');
     countEl.classList.toggle('visible', matches.length > 0);
     hint.textContent = matches.length > 0
       ? 'Mostrando resultados para "' + query + '"'
       : 'Sin resultados para "' + query + '"';
-
     if (matches.length === 0) {
       grid.innerHTML = '<div class="no-results" style="grid-column:1/-1">Sin resultados para <strong>"' + query + '"</strong>.<br>Probá con otro destino o temporada.</div>';
     } else {
@@ -958,47 +995,37 @@
           + '</a>';
       }).join('');
     }
-
     resultsDiv.classList.add('visible');
   }
 
-  // ─── Eventos buscador ────────────────────────────────────────────────────────
   var input    = document.getElementById('search-input');
   var clearBtn = document.getElementById('search-clear');
   var debTimer;
-
   input.addEventListener('input', function() {
     clearTimeout(debTimer);
     clearBtn.classList.toggle('visible', input.value.length > 0);
     debTimer = setTimeout(function() { search(input.value); }, 220);
   });
-
   clearBtn.addEventListener('click', function() {
     input.value = '';
     clearBtn.classList.remove('visible');
     search('');
     input.focus();
   });
-
   input.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') clearBtn.click();
   });
 
-  // ─── Selector de agente ──────────────────────────────────────────────────────
   var agentSelect = document.getElementById('agent-select');
   var savedAgent  = localStorage.getItem('bw_agent') || 'martin';
   agentSelect.value = savedAgent;
-
   agentSelect.addEventListener('change', function () {
     localStorage.setItem('bw_agent', this.value);
   });
 
-  // ─── Init ────────────────────────────────────────────────────────────────────
-  loadAll();
-
-  // ════════════════════════════════════════════════════════════════════════════
-  //  SCRAPPER DE PROGRAMAS — On-demand
-  // ════════════════════════════════════════════════════════════════════════════
+  // ════════════════════════════════════════════════════════════════════════════════
+  //  SCRAPPER DE PROGRAMAS — On-demand (MEJORADO)
+  // ════════════════════════════════════════════════════════════════════════════════
 
   const OPERADOR_PATTERNS = [
     { id: 'sendas',  label: 'Sendas',  color: '#0e5a7a', rx: /sendasturismo\.com/i  },
@@ -1007,7 +1034,6 @@
     { id: 'rutatur', label: 'Rutatur', color: '#1a7a3a', rx: /rutatur\.com/i        },
   ];
 
-  // Proxies CORS con sus formatos de respuesta
   const CORS_PROXIES = [
     { url: function(u) { return 'https://corsproxy.io/?' + encodeURIComponent(u); },                                    type: 'text' },
     { url: function(u) { return 'https://proxy.cors.sh/' + u; },                                                        type: 'text' },
@@ -1068,7 +1094,6 @@
           throw new Error('Sin contenido útil');
         } else {
           var text = await res.text();
-          // Verificar que sea HTML real de la página destino, no una página de error del proxy
           if (text && text.trim().length > 500 && (/<html/i.test(text) || /<!doctype/i.test(text))) return text;
           throw new Error('Respuesta no válida (' + text.trim().length + ' chars)');
         }
@@ -1088,56 +1113,23 @@
     return (s || '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
   }
 
-  function normText(s) {
-    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
-  }
-
-  var DESTINO_MAP_FRONT = [
-    { keys: ['florianopolis','floripa','canasvieiras'], file: 'florianopolis' },
-    { keys: ['praia do rosa','praia rosa'],             file: 'praiarosa'     },
-    { keys: ['ferrugem'],                               file: 'ferrugem'      },
-    { keys: ['camboriu'],                               file: 'camboriu'      },
-    { keys: ['bombinhas'],                              file: 'bombinhas'     },
-    { keys: ['capao da canoa'],                         file: 'capao'         },
-    { keys: ['torres'],                                 file: 'torres'        },
-    { keys: ['laguna'],                                 file: 'laguna'        },
-    { keys: ['gramado','canela'],                       file: 'gramado'       },
-    { keys: ['cataratas','iguazu','iguacu'],            file: 'cataratas'     },
-    { keys: ['bariloche'],                              file: 'bariloche'     },
-    { keys: ['carlos paz'],                             file: 'carlospaz'     },
-    { keys: ['cordoba','córdoba'],                      file: 'carlospaz'     },
-    { keys: ['jujuy','salta','norte'],                  file: 'norte'         },
-    { keys: ['mendoza'],                                file: 'mendoza'       },
-    { keys: ['buenos aires'],                           file: 'buenosaires'   },
-    { keys: ['santiago','chile'],                       file: 'santiago'      },
-  ];
-
-  function detectarDestinoSlug(titulo) {
-    var t = normText(titulo);
-    for (var i = 0; i < DESTINO_MAP_FRONT.length; i++) {
-      for (var j = 0; j < DESTINO_MAP_FRONT[i].keys.length; j++) {
-        if (t.includes(normText(DESTINO_MAP_FRONT[i].keys[j]))) return DESTINO_MAP_FRONT[i].file;
-      }
-    }
-    return null;
-  }
-
   function normalizarDia(raw) {
     return raw.trim().replace(/d[ií]a/gi,'Día').replace(/\s+/g,' ');
   }
 
-  // ── Parser Sendas ──────────────────────────────────────────────────────────
-  function parseSendas(html, sourceUrl) {
+  // ── Parser Sendas (MEJORADO) ───────────────────────────────────────────────
+  async function parseSendas(html, sourceUrl) {
+    // Cargar referencia de destinos
+    await loadDestinosReference();
+    
     var doc  = parsearDOM(html);
     var art  = doc.querySelector('div.item-page') || doc.body;
     var body = art.querySelector('[itemprop="articleBody"]') || art;
-
-    // ── Título ──────────────────────────────────────────────────────────────
+    
     var strongs = art.querySelectorAll('[itemprop="articleBody"] strong');
     var titulo  = strongs[0] ? limpio(strongs[0].textContent) : limpio(art.querySelector('h2')?.textContent||'');
     titulo = titulo.replace(/\s+/g,' ').toUpperCase().substring(0,100);
-
-    // ── Días / Noches ────────────────────────────────────────────────────────
+    
     var dias = '', noches = '';
     if (strongs[1]) {
       var t2 = limpio(strongs[1].textContent);
@@ -1149,8 +1141,7 @@
       var dm2 = rawText.match(/(\d+)\s*d[ií]as?/i); var nm2 = rawText.match(/(\d+)\s*noches?/i);
       if (dm2) dias = dm2[1]; if (nm2) noches = nm2[1];
     }
-
-    // ── Incluye ──────────────────────────────────────────────────────────────
+    
     var incluye = [];
     var marcador = null;
     Array.from(body.children).forEach(function(node) {
@@ -1177,8 +1168,7 @@
         node = node.nextElementSibling;
       }
     }
-
-    // ── Itinerario ────────────────────────────────────────────────────────────
+    
     var itinerario = [];
     var DIA_RX = /^(d[ií]a\s+\d{1,2}(?:\s+al\s+(?:d[ií]a\s+)?\d{1,2})?)\s*/i;
     var capturando = false;
@@ -1197,39 +1187,29 @@
       if (m) itinerario.push({ dia: normalizarDia(m[1]), texto: txt.slice(m[0].length).replace(/^[-:\s]+/,'').trim() });
       else   itinerario.push({ dia: '', texto: txt });
     });
-
-    // ── TABLA(S) DE PRECIOS + SALIDAS asociadas ───────────────────────────────
-    // Sendas puede tener UNA tabla con múltiples salidas como secciones,
-    // O múltiples tablas cada una precedida por un <p><strong>SALIDA: fecha</strong></p>
-    // Estrategia: recorrer nodos en orden, detectar "SALIDA" antes de cada tabla
-    var hoteles       = [];  // array plano para la ficha (una fila por hotel×salida)
-    var fechasBanda   = [];  // array para la banda de fechas
+    
+    var hoteles       = [];
+    var fechasBanda   = [];
     var salidaActual  = '';
     var tablasVistas  = 0;
-
     Array.from(body.children).forEach(function(node) {
-      // Detectar párrafo con SALIDA antes de la tabla
       if (node.tagName === 'P' || node.tagName === 'STRONG') {
         var txt = limpio(node.textContent);
-        // Patrón: "SALIDA: 24 DE OCTUBRE" o "SALIDAS: 28 DE OCTUBRE 1° DE NOVIEMBRE"
         var sm = txt.match(/^salidas?\s*:?\s*(.{3,120})/i);
         if (sm) salidaActual = sm[1].trim();
       }
-
       if (node.tagName !== 'TABLE') return;
       tablasVistas++;
-
-      // Leer encabezado
+      
       var rows    = node.querySelectorAll('tr');
       if (rows.length < 2) return;
       var headers = Array.from(rows[0].querySelectorAll('td,th'))
         .map(function(c){ return limpio(c.textContent).toLowerCase(); });
-
-      // Verificar que sea tabla de precios (tiene hotel y columnas sgl/dbl)
+      
       var hasHotel = headers.some(function(h){ return /hotel/.test(h); });
       var hasPrice = headers.some(function(h){ return /sgl|dbl/.test(h); });
       if (!hasHotel && !hasPrice) return;
-
+      
       var idx = {
         hotel: headers.findIndex(function(h){ return /hotel/.test(h); }),
         playa: -1,
@@ -1239,35 +1219,30 @@
         cpl:   headers.findIndex(function(h){ return h==='cpl'; }),
         qpl:   headers.findIndex(function(h){ return h==='qpl'; }),
       };
-      // Columna playa: columna no-precio entre hotel y sgl
+      
       headers.forEach(function(h,i){
         if (i > 0 && i !== idx.hotel && !/sgl|dbl|tpl|cpl|qpl/.test(h) && h.length > 0)
           if (idx.playa === -1) idx.playa = i;
       });
-
+      
       var pv2 = function(v){ var n=parseInt((v||'').replace(/[^\d]/g,'')); return isNaN(n)||n===0?null:n; };
       var gc  = function(cells,i){ return i>=0?(limpio(cells[i]?.textContent||'')):'' ; };
-
-      // Detectar si la tabla MISMA tiene salidas como filas (algunas versiones de Sendas)
-      // Patrón: primera columna dice "SALIDA: fecha" en lugar de nombre de hotel
+      
       var tieneSalidasInternas = false;
       rows.forEach(function(row, ri){
         if (ri === 0) return;
         var firstCell = limpio(row.querySelectorAll('td')[0]?.textContent||'');
         if (/^salidas?\s*:/i.test(firstCell)) tieneSalidasInternas = true;
       });
-
+      
       if (tieneSalidasInternas) {
-        // La tabla tiene secciones internas con salidas
         var salidaFila = salidaActual;
         rows.forEach(function(row, ri){
           if (ri === 0) return;
           var cells = row.querySelectorAll('td');
           var firstCell = limpio(cells[0]?.textContent||'');
-          // Fila de salida
           var sm2 = firstCell.match(/^salidas?\s*:?\s*(.{3,100})/i);
           if (sm2) { salidaFila = sm2[1].trim(); return; }
-          // Fila de hotel
           if (cells.length < 3) return;
           var nombre = gc(cells, Math.max(idx.hotel,0)).replace(/\s+/g,' ').trim();
           if (!nombre || /^hotel(es)?$/i.test(nombre)) return;
@@ -1280,7 +1255,6 @@
           });
         });
       } else {
-        // Tabla estándar: una salida por tabla
         rows.forEach(function(row, ri){
           if (ri === 0) return;
           var cells = row.querySelectorAll('td');
@@ -1296,16 +1270,14 @@
           });
         });
       }
-
-      // Registrar esta salida en fechasBanda si es nueva
+      
       var salidaLabel = salidaActual || ('Salida ' + tablasVistas);
       if (!fechasBanda.some(function(f){ return f.value === salidaLabel; })) {
         fechasBanda.push({ label: 'Salida', value: salidaLabel, gold: true });
       }
-      salidaActual = ''; // reset para la siguiente tabla
+      salidaActual = '';
     });
-
-    // ── Fallback: salida desde primer párrafo con "SALIDAS:" ─────────────────
+    
     if (!fechasBanda.length) {
       body.querySelectorAll('p').forEach(function(p){
         if (fechasBanda.length) return;
@@ -1317,8 +1289,7 @@
       fechasBanda.push({ label: 'Salidas', value: 'Consultar disponibilidad', gold: true });
     }
     fechasBanda.push({ label: 'Operador', value: 'Sendas Turismo', gold: false });
-
-    // ── Notas de precios ──────────────────────────────────────────────────────
+    
     var notas = [];
     var pasadaTabla = false;
     Array.from(body.children).forEach(function(node){
@@ -1332,23 +1303,23 @@
       }
     });
     if (!notas.length) notas.push({ titulo: 'Precios', texto: 'Consultar tarifas vigentes al momento de la reserva.' });
-
+    
     var duracion = dias ? dias+' DÍAS'+(noches?' — '+noches+' NOCHES':'') : 'Consultar';
     return {
       operador: 'sendas', sourceUrl, titulo,
       subtitulo: duracion, duracion,
-      destinoSlug: detectarDestinoSlug(titulo),
+      destinoSlug: detectarDestinoSlug(titulo),  // ← USANDO SISTEMA MEJORADO
       fechas: fechasBanda,
       incluye: incluye.length ? incluye : ['Consultar programa completo en agencia'],
       itinerario, hoteles, notas_precios: notas,
     };
   }
+
   // ── Parser Funtour ─────────────────────────────────────────────────────────
   function parseFuntour(html, sourceUrl) {
     var doc = parsearDOM(html);
     var titulo = limpio(doc.querySelector('h1.product_title,h1.entry-title,h1.elementor-heading-title')?.textContent||'')
       .replace(/\bfuntour\b/gi,'').replace(/\s{2,}/g,' ').trim();
-
     var incluye = []; var enNo = false;
     var shortDesc = doc.querySelector('.woocommerce-product-details__short-description');
     if (shortDesc) shortDesc.querySelectorAll('p,li').forEach(function(el) {
@@ -1358,7 +1329,6 @@
       if (tag==='p'&&/^incluye/i.test(txt)){enNo=false;return;}
       if (tag==='li'&&!enNo&&!/eximiendo|factores externos/i.test(txt)) incluye.push(txt);
     });
-
     var itinerario = [];
     doc.querySelectorAll('#tab-description p').forEach(function(el) {
       var txt=limpio(el.textContent), strongT=limpio(el.querySelector('strong')?.textContent||'');
@@ -1369,7 +1339,6 @@
         itinerario.push({dia:'DÍA '+m[1].padStart(2,'0'),texto:lugar+(detalle?' — '+detalle:'')});
       }
     });
-
     var salidas=[],bases=[];
     doc.querySelectorAll('#tab-additional_information tr').forEach(function(el){
       var label=limpio(el.querySelector('th')?.textContent||'').toLowerCase();
@@ -1378,7 +1347,6 @@
       if(/salida/.test(label)) val.split(/\n|,/).map(function(s){return s.trim();}).filter(Boolean).forEach(function(s){if(!salidas.includes(s))salidas.push(s);});
       if(/base/.test(label))   val.split(/,/).map(function(s){return s.trim();}).filter(Boolean).forEach(function(b){if(!bases.includes(b))bases.push(b);});
     });
-
     var hoteles=[];
     var variForm=doc.querySelector('form.variations_form');
     if(variForm){try{
@@ -1397,7 +1365,6 @@
         hoteles.push({nombre:e[0],playa:'—',sgl:b['Single']||b['single']||null,dbl:b['Doble']||b['doble']||null,tpl:b['Triple']||b['triple']||null,cpl:b['Cuádruple']||b['Cuadruple']||null,qpl:null});
       });
     }catch(e){}}
-
     var diasM=titulo.match(/(\d+)\s*[Dd][ií][aá]s?/);
     var duracion=diasM?diasM[1]+' DÍAS':(itinerario.length?itinerario.length+' DÍAS':'Consultar');
     var fechas=[];
@@ -1419,7 +1386,6 @@
     var dias=durM?durM[1]:'', noches=durM?durM[2]:'';
     var tempM=bodyText.match(/Temporada\s*([^\n]{3,60}?)(?:\n|Incluye)/i);
     var temporada=tempM?tempM[1].trim().replace(/\s+/g,' '):'';
-
     var incluye=[],enIncluye=false;
     doc.querySelectorAll('h5,p').forEach(function(el){
       var tag=el.tagName.toLowerCase(),txt=limpio(el.textContent);
@@ -1430,7 +1396,6 @@
         var c=txt.replace(/^[-–]\s*/,'').trim(); if(c.length>3)incluye.push(c);
       }
     });
-
     var hoteles=[],enHoteles=false,hotelAct=null,lastCat=null;
     var CATS=/^(doble|triple|cu[aá]druple|single)$/i;
     doc.querySelectorAll('h5,h4,h3,strong,b,p').forEach(function(el){
@@ -1446,10 +1411,8 @@
       }
     });
     if(hotelAct&&!hoteles.find(function(h){return h.nombre===hotelAct.nombre;}))hoteles.push(hotelAct);
-
     var fechaRx=/\b(\d{2}\/\d{2}\/\d{4})\b/g,fechasSalida=[],fm2;
     while((fm2=fechaRx.exec(bodyText))!==null){if(!fechasSalida.includes(fm2[1]))fechasSalida.push(fm2[1]);}
-
     var duracion=dias?dias+' DÍAS'+(noches?' / '+noches+' NOCHES':''):'Consultar';
     var fechas=[];
     if(fechasSalida.length)fechas.push({label:'Salidas',value:fechasSalida.slice(0,5).join(' · '),gold:true});
@@ -1471,27 +1434,22 @@
     var nochesM=titulo.match(/(\d+)\s*Noches?/i)||bodyText.match(/(\d+)\s*Noches?\b/i);
     var dias=diasM?diasM[1]:'', noches=nochesM?nochesM[1]:'';
     var duracion=dias?dias+' DÍAS'+(noches?' / '+noches+' NOCHES':''):'Consultar';
-
     var itinerario=[];
     doc.querySelectorAll('strong').forEach(function(el){
       var txt=limpio(el.textContent);
       var m=txt.match(/^D[IÍ]A[S]?\s+([\d\-]+)\s*[–\-]\s*(.+)/i);
       if(m)itinerario.push({dia:'DÍA '+m[1].padStart(2,'0'),texto:limpio(m[2])});
     });
-
     var precBlk=bodyText.search(/Valor de la excursi[oó]n|COSTO\s+POR\s+PERSONA|PRECIO\s+POR\s+PERSONA/i);
     var precTxt=precBlk!==-1?bodyText.slice(precBlk):'';
     var PRECIO_RX2=/U\$S\s*([\d]{1,2}[.,\d]{0,4})/gi, preciosArr=[],pm3;
     while((pm3=PRECIO_RX2.exec(precTxt))!==null){var v=parseFloat(pm3[1].replace(/\./g,'').replace(',','.'));if(!isNaN(v)&&v>0)preciosArr.push(v);}
-
     var hoteles=[];
     if(preciosArr.length)hoteles.push({nombre:'Precio por persona',playa:'—',sgl:preciosArr[1]||null,dbl:preciosArr[0]||null,tpl:preciosArr[2]||null,cpl:null,qpl:null});
-
     var salidas=[];
     doc.querySelectorAll('div.descr').forEach(function(el){var txt=limpio(el.textContent);if(/^Salida\s+\d{1,2}/i.test(txt))salidas.push(txt.replace(/^Salida\s+/i,'').trim());});
     var salidaM=bodyText.match(/Salidas?:\s*([^\n]+)/i);
     if(salidaM)salidas.push(limpio(salidaM[1]).replace(/\*+/g,'').trim());
-
     var titulo2=titulo.replace(/\s*[-–]?\s*\d+\s*[Dd][ií][aá]s?\s*(?:[\/\s]*\d*\s*[Nn]oches?)?/g,'').replace(/\s*[-–]\s*$/,'').replace(/\s{2,}/g,' ').trim()||titulo;
     var fechas=[];
     if(salidas.length)fechas.push({label:'Salida',value:salidas[0].substring(0,80),gold:true});
@@ -1507,7 +1465,6 @@
     var url = document.getElementById('scrapper-input').value.trim();
     var op  = detectarOperador(url);
     if (!op) return;
-
     setScrapperState('loading', 'Conectando al proxy...');
     var html;
     try {
@@ -1517,11 +1474,10 @@
       setScrapperState('error', 'No se pudo acceder a la URL. El sitio puede bloquear proxies. (' + e.message + ')');
       return;
     }
-
     setScrapperState('loading', 'Parseando contenido...');
     var datos;
     try {
-      if (op.id === 'sendas')   datos = parseSendas(html, url);
+      if (op.id === 'sendas')   datos = await parseSendas(html, url);  // ← AHORA ES ASYNC
       if (op.id === 'funtour')  datos = parseFuntour(html, url);
       if (op.id === 'mtur')     datos = parseMtur(html, url);
       if (op.id === 'rutatur')  datos = parseRutatur(html, url);
@@ -1529,12 +1485,10 @@
       setScrapperState('error', 'Error al parsear el HTML: ' + e.message);
       return;
     }
-
     if (!datos || !datos.titulo) {
       setScrapperState('error', 'No se encontró información del programa. Verificá que la URL sea de un programa específico.');
       return;
     }
-
     var key = 'bw_scrapper_' + Date.now();
     try {
       sessionStorage.setItem(key, JSON.stringify(datos));
@@ -1542,7 +1496,6 @@
       setScrapperState('error', 'No se pudo almacenar los datos temporalmente.');
       return;
     }
-
     setScrapperState('loading', 'Abriendo ficha del programa...');
     var fichaUrl = 'scrapper-ficha.html?key=' + encodeURIComponent(key) + '&op=' + op.id;
     var win = window.open(fichaUrl, '_blank');
@@ -1561,7 +1514,6 @@
     var scOpDot = document.getElementById('scrapper-op-dot');
     var scOpNm  = document.getElementById('scrapper-op-name');
     if (!scInput) return;
-
     scInput.addEventListener('input', function() {
       var op = detectarOperador(scInput.value.trim());
       if (op) {
@@ -1579,14 +1531,15 @@
       }
       document.getElementById('scrapper-error').classList.remove('visible');
     });
-
     scInput.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' && !scBtn.disabled) ejecutarScrapper();
     });
-
     scBtn.addEventListener('click', ejecutarScrapper);
   })();
-</script>
 
+  // ── Inicializar ────────────────────────────────────────────────────────────
+  loadAll();
+
+  </script>
 </body>
 </html>
