@@ -1,6 +1,6 @@
 {
   "operador": "Sendas Turismo",
-  "updatedAt": "2026-08-03T09:29:54.273Z",
+  "updatedAt": "2026-08-10T07:17:03.790Z",
   "programas": [
     {
       "id": "florianopolis-1413",
@@ -272,7 +272,7 @@
           "texto": "Solo bus y hotel descontar: U$S 130.-"
         }
       ],
-      "updatedAt": "2026-08-03T09:30:22.242Z"
+      "updatedAt": "2026-08-10T07:17:32.240Z"
     },
     {
       "id": "gramado-1417",
@@ -365,6 +365,16 @@
           "cpl": 405,
           "qpl": null,
           "cat": ""
+        },
+        {
+          "nombre": "Tri Canela",
+          "playa": "4****",
+          "sgl": 715,
+          "dbl": 510,
+          "tpl": 480,
+          "cpl": 460,
+          "qpl": null,
+          "cat": ""
         }
       ],
       "notas_precios": [
@@ -381,7 +391,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-08-03T09:30:44.451Z"
+      "updatedAt": "2026-08-10T07:17:54.308Z"
     },
     {
       "id": "gramado-1416",
@@ -480,7 +490,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-08-03T09:30:45.547Z"
+      "updatedAt": "2026-08-10T07:17:55.404Z"
     },
     {
       "id": "gramado-1415",
@@ -614,7 +624,7 @@
           "texto": "NO INCLUYE: INGRESOS A LOS PARQUES, MUSEOS y ESPECTACULOS DE NATAL LUZ"
         }
       ],
-      "updatedAt": "2026-08-03T09:30:46.628Z"
+      "updatedAt": "2026-08-10T07:17:56.549Z"
     },
     {
       "id": "gramado-1411",
@@ -713,7 +723,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-08-03T09:30:47.692Z"
+      "updatedAt": "2026-08-10T07:17:57.731Z"
     },
     {
       "id": "mendoza-1412",
@@ -834,7 +844,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-08-03T09:31:19.948Z"
+      "updatedAt": "2026-08-10T07:18:30.301Z"
     },
     {
       "id": "cataratas-1410",
@@ -937,7 +947,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-08-03T09:32:54.657Z"
+      "updatedAt": "2026-08-10T07:20:05.199Z"
     }
   ]
 }
