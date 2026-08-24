@@ -1,6 +1,6 @@
 {
   "operador": "Sendas Turismo",
-  "updatedAt": "2026-08-17T06:38:48.636Z",
+  "updatedAt": "2026-08-24T06:41:24.470Z",
   "programas": [
     {
       "id": "florianopolis-1413",
@@ -272,7 +272,7 @@
           "texto": "Solo bus y hotel descontar: U$S 130.-"
         }
       ],
-      "updatedAt": "2026-08-17T06:39:15.876Z"
+      "updatedAt": "2026-08-24T06:41:52.118Z"
     },
     {
       "id": "gramado-1417",
@@ -391,7 +391,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-08-17T06:39:37.585Z"
+      "updatedAt": "2026-08-24T06:42:14.138Z"
     },
     {
       "id": "gramado-1416",
@@ -490,7 +490,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-08-17T06:39:38.640Z"
+      "updatedAt": "2026-08-24T06:42:15.306Z"
     },
     {
       "id": "gramado-1415",
@@ -624,7 +624,7 @@
           "texto": "NO INCLUYE: INGRESOS A LOS PARQUES, MUSEOS y ESPECTACULOS DE NATAL LUZ"
         }
       ],
-      "updatedAt": "2026-08-17T06:39:39.712Z"
+      "updatedAt": "2026-08-24T06:42:16.481Z"
     },
     {
       "id": "gramado-1411",
@@ -723,7 +723,7 @@
           "texto": "NO INCLUYE: INGRESOS A PARQUES NI MUSEOS."
         }
       ],
-      "updatedAt": "2026-08-17T06:39:40.786Z"
+      "updatedAt": "2026-08-24T06:42:17.597Z"
     },
     {
       "id": "mendoza-1412",
@@ -844,7 +844,7 @@
           "texto": "Solo asiento, servicio abordo y seguro de asistencia: u$s 250.-"
         }
       ],
-      "updatedAt": "2026-08-17T06:40:12.704Z"
+      "updatedAt": "2026-08-24T06:42:49.905Z"
     },
     {
       "id": "cataratas-1410",
@@ -947,7 +947,7 @@
           "texto": "Consultar tarifas vigentes al momento de la reserva."
         }
       ],
-      "updatedAt": "2026-08-17T06:41:46.817Z"
+      "updatedAt": "2026-08-24T06:44:24.691Z"
     }
   ]
 }
