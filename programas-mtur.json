@@ -1,12 +1,12 @@
 {
   "operador": "Mtur Viajes",
-  "updatedAt": "2026-08-31T14:53:11.513Z",
+  "updatedAt": "2026-09-07T13:19:16.315Z",
   "programas": [
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/817/termas-romanas",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/817/termas-romanas",
       "titulo": "TERMAS ROMANAS",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -37,13 +37,47 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:17.646Z"
+      "updatedAt": "2026-09-07T13:19:21.548Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/756/cataratas-7-dias",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/820/gramado-canela-fin-de-ano",
+      "titulo": "GRAMADO & CANELA - FIN DE AÑO",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "GRAMADO & CANELA - FIN DE AÑO",
+      "destinoSlug": "gramado",
+      "pais": "Brasil",
+      "emoji": "🌲",
+      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
+      "visitando": "",
+      "highlights": [],
+      "temporada": "",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "28/12/2026",
+          "gold": true
+        }
+      ],
+      "incluye": [],
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [
+        "28/12/2026"
+      ],
+      "precios": {},
+      "pdfItinerario": "",
+      "observaciones": "",
+      "updatedAt": "2026-09-07T13:19:23.519Z"
+    },
+    {
+      "id": "mtur-2",
+      "mturId": "2",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/756/cataratas-7-dias",
       "titulo": "CATARATAS - 7 DIAS",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -58,7 +92,7 @@
       "fechas": [
         {
           "label": "Salidas",
-          "value": "31/08/2026  ·  31/10/2026  ·  07/12/2026",
+          "value": "31/10/2026  ·  07/12/2026",
           "gold": true
         }
       ],
@@ -66,20 +100,19 @@
       "noIncluye": "",
       "hoteles": [],
       "fechasSalida": [
-        "31/08/2026",
         "31/10/2026",
         "07/12/2026"
       ],
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:19.190Z"
+      "updatedAt": "2026-09-07T13:19:25.496Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/769/natal-luz-gramado-canela",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/769/natal-luz-gramado-canela",
       "titulo": "NATAL LUZ - GRAMADO & CANELA",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -108,13 +141,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:21.134Z"
+      "updatedAt": "2026-09-07T13:19:27.473Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/803/experiencia-norte-argentino-11-dias",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/803/experiencia-norte-argentino-11-dias",
       "titulo": "EXPERIENCIA NORTE ARGENTINO 11 DIAS !!",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -142,13 +175,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:23.087Z"
+      "updatedAt": "2026-09-07T13:19:29.448Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/816/cataratas-6-dias-desde-setiembre-a-diciembre",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/816/cataratas-6-dias-desde-setiembre-a-diciembre",
       "titulo": "CATARATAS - 6 DIAS - desde setiembre a diciembre",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -185,47 +218,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:25.181Z"
+      "updatedAt": "2026-09-07T13:19:31.753Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/820/gramado-canela-fin-de-ano",
-      "titulo": "GRAMADO & CANELA - FIN DE AÑO",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "GRAMADO & CANELA - FIN DE AÑO",
-      "destinoSlug": "gramado",
-      "pais": "Brasil",
-      "emoji": "🌲",
-      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
-      "visitando": "",
-      "highlights": [],
-      "temporada": "",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "28/12/2026",
-          "gold": true
-        }
-      ],
-      "incluye": [],
-      "noIncluye": "",
-      "hoteles": [],
-      "fechasSalida": [
-        "28/12/2026"
-      ],
-      "precios": {},
-      "pdfItinerario": "",
-      "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:26.731Z"
-    },
-    {
-      "id": "mtur-2",
-      "mturId": "2",
-      "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/774/camboriu-experiencia-beto-carrero",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/774/camboriu-experiencia-beto-carrero",
       "titulo": "CAMBORIÚ - EXPERIENCIA BETO CARRERO",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -253,13 +252,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:28.683Z"
+      "updatedAt": "2026-09-07T13:19:33.334Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/805/santiago-mendoza-9-dias",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/805/santiago-mendoza-9-dias",
       "titulo": "SANTIAGO & MENDOZA - 9 DIAS",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -287,13 +286,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:30.619Z"
+      "updatedAt": "2026-09-07T13:19:35.305Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/808/gramado-canela-7-dias",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/808/gramado-canela-7-dias",
       "titulo": "GRAMADO & CANELA - 7 DIAS",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -321,13 +320,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:32.566Z"
+      "updatedAt": "2026-09-07T13:19:37.268Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/810/cataratas-7-dias",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/810/cataratas-7-dias",
       "titulo": "CATARATAS 7 DIAS",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -355,13 +354,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:34.609Z"
+      "updatedAt": "2026-09-07T13:19:39.372Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/812/rio-de-janeiro-10-dias",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/812/rio-de-janeiro-10-dias",
       "titulo": "RIO DE JANEIRO 10 DIAS",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -389,13 +388,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:36.157Z"
+      "updatedAt": "2026-09-07T13:19:41.638Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/783/oktoberfest-2026",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/783/oktoberfest-2026",
       "titulo": "OKTOBERFEST 2026 !!!",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -423,13 +422,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:38.092Z"
+      "updatedAt": "2026-09-07T13:19:43.604Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/819/gramado-canela-fin-de-ano",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/819/gramado-canela-fin-de-ano",
       "titulo": "GRAMADO & CANELA - FIN DE AÑO",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -457,13 +456,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:40.013Z"
+      "updatedAt": "2026-09-07T13:19:45.587Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/735/camboriu-magia-diversion-enero-2027-salidas-por-rivera-y-por-chuy",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/735/camboriu-magia-diversion-enero-2027-salidas-por-rivera-y-por-chuy",
       "titulo": "CAMBORIU - MAGIA & DIVERSIÓN - ENERO 2027- SALIDAS POR RIVERA Y POR CHUY",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -495,13 +494,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:42.134Z"
+      "updatedAt": "2026-09-07T13:19:47.730Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/777/cataratas-6-dias",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/777/cataratas-6-dias",
       "titulo": "CATARATAS - 6 DIAS",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -539,13 +538,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:44.200Z"
+      "updatedAt": "2026-09-07T13:19:49.822Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/737/camboriu-magia-diversion-marzo-salidas-por-rivera-y-por-chuy",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/737/camboriu-magia-diversion-marzo-salidas-por-rivera-y-por-chuy",
       "titulo": "CAMBORIU - MAGIA & DIVERSIÓN - MARZO - SALIDAS POR RIVERA Y POR CHUY",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -575,13 +574,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:46.125Z"
+      "updatedAt": "2026-09-07T13:19:51.772Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/736/camboriu-magia-diversion-febrero-salidas-por-rivera-y-por-chuy",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/736/camboriu-magia-diversion-febrero-salidas-por-rivera-y-por-chuy",
       "titulo": "CAMBORIU - MAGIA & DIVERSIÓN - FEBRERO - SALIDAS POR RIVERA Y POR CHUY",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -611,13 +610,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:48.072Z"
+      "updatedAt": "2026-09-07T13:19:53.732Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/746/rio-de-janeiro",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/746/rio-de-janeiro",
       "titulo": "RIO DE JANEIRO",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -647,13 +646,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:50.293Z"
+      "updatedAt": "2026-09-07T13:19:55.989Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/785/florianopolis-a-toda-diversion-enero-2027",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/785/florianopolis-a-toda-diversion-enero-2027",
       "titulo": "FLORIANOPOLIS - A TODA DIVERSION - ENERO 2027",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -685,13 +684,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:52.451Z"
+      "updatedAt": "2026-09-07T13:19:57.745Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/786/florianopolis-a-toda-diversion-febrero",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/786/florianopolis-a-toda-diversion-febrero",
       "titulo": "FLORIANOPOLIS - A TODA DIVERSION - FEBRERO",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -722,13 +721,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:54.583Z"
+      "updatedAt": "2026-09-07T13:19:59.891Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/788/florianopolis-sol-playa-febrero-2027",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/788/florianopolis-sol-playa-febrero-2027",
       "titulo": "FLORIANOPOLIS - SOL & PLAYA - FEBRERO 2027",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -759,13 +758,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:56.823Z"
+      "updatedAt": "2026-09-07T13:20:02.270Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/739/camboriu-magia-diversion-carnaval-salidas-por-rivera-y-por-chuy",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/739/camboriu-magia-diversion-carnaval-salidas-por-rivera-y-por-chuy",
       "titulo": "CAMBORIU - MAGIA & DIVERSIÓN - CARNAVAL - SALIDAS POR RIVERA Y POR CHUY",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -793,13 +792,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:53:58.754Z"
+      "updatedAt": "2026-09-07T13:20:04.304Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/787/florianopolis-a-toda-diversion-carnarval",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/787/florianopolis-a-toda-diversion-carnarval",
       "titulo": "FLORIANOPOLIS - A TODA DIVERSION - CARNARVAL",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -819,13 +818,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:54:00.772Z"
+      "updatedAt": "2026-09-07T13:20:06.285Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/778/cataratas-6-dias-carnaval-2027",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/778/cataratas-6-dias-carnaval-2027",
       "titulo": "CATARATAS 6 DIAS - CARNAVAL 2027",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -853,13 +852,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:54:03.006Z"
+      "updatedAt": "2026-09-07T13:20:08.380Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/797/florianopolis-sol-playa-carnaval",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/797/florianopolis-sol-playa-carnaval",
       "titulo": "FLORIANOPOLIS - SOL & PLAYA - CARNAVAL",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -887,13 +886,47 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:54:05.118Z"
+      "updatedAt": "2026-09-07T13:20:10.535Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/749/rio-de-janeiro-semana-de-turismo",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/818/cataratas-turismo-7-dias",
+      "titulo": "CATARATAS TURISMO 7 DIAS",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "CATARATAS TURISMO 7 DIAS",
+      "destinoSlug": "cataratas",
+      "pais": "Cataratas",
+      "emoji": "🌊",
+      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
+      "visitando": "",
+      "highlights": [],
+      "temporada": "",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "20/03/2027",
+          "gold": true
+        }
+      ],
+      "incluye": [],
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [
+        "20/03/2027"
+      ],
+      "precios": {},
+      "pdfItinerario": "",
+      "observaciones": "",
+      "updatedAt": "2026-09-07T13:20:12.622Z"
+    },
+    {
+      "id": "mtur-2",
+      "mturId": "2",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/749/rio-de-janeiro-semana-de-turismo",
       "titulo": "RIO DE JANEIRO - SEMANA DE TURISMO",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -921,13 +954,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:54:07.342Z"
+      "updatedAt": "2026-09-07T13:20:14.877Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/607/cataratas-turismo-6-dias",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/607/cataratas-turismo-6-dias",
       "titulo": "CATARATAS TURISMO 6 DIAS",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -956,13 +989,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:54:09.399Z"
+      "updatedAt": "2026-09-07T13:20:16.962Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/748/camboriu-magia-diversion-semana-de-turismo",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/748/camboriu-magia-diversion-semana-de-turismo",
       "titulo": "CAMBORIU - MAGIA & DIVERSIÓN - SEMANA DE TURISMO",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -990,13 +1023,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:54:11.334Z"
+      "updatedAt": "2026-09-07T13:20:18.927Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/792/florianopolis-sol-playa-turismo",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/792/florianopolis-sol-playa-turismo",
       "titulo": "FLORIANOPOLIS - SOL & PLAYA - TURISMO",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -1024,13 +1057,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:54:13.442Z"
+      "updatedAt": "2026-09-07T13:20:21.085Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/793/florianopolis-a-toda-diversion-turismo",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/793/florianopolis-a-toda-diversion-turismo",
       "titulo": "FLORIANOPOLIS - A TODA DIVERSION - TURISMO",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -1058,47 +1091,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:54:15.531Z"
-    },
-    {
-      "id": "mtur-2",
-      "mturId": "2",
-      "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/2/818/cataratas-turismo-7-dias",
-      "titulo": "CATARATAS TURISMO 7 DIAS",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "CATARATAS TURISMO 7 DIAS",
-      "destinoSlug": "cataratas",
-      "pais": "Cataratas",
-      "emoji": "🌊",
-      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
-      "visitando": "",
-      "highlights": [],
-      "temporada": "",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "20/03/2027",
-          "gold": true
-        }
-      ],
-      "incluye": [],
-      "noIncluye": "",
-      "hoteles": [],
-      "fechasSalida": [
-        "20/03/2027"
-      ],
-      "precios": {},
-      "pdfItinerario": "",
-      "observaciones": "",
-      "updatedAt": "2026-08-31T14:54:17.589Z"
+      "updatedAt": "2026-09-07T13:20:23.224Z"
     },
     {
       "id": "mtur-10",
       "mturId": "10",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/10/3302/bombinhas-con-sky-cupo-verano-2027-salida-3-de-enero",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/10/3302/bombinhas-con-sky-cupo-verano-2027-salida-3-de-enero",
       "titulo": "Bombinhas con Sky - CUPO Verano 2027 - Salida 3 de Enero",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -1118,13 +1117,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:54:19.531Z"
+      "updatedAt": "2026-09-07T13:20:25.199Z"
     },
     {
       "id": "mtur-10",
       "mturId": "10",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/10/3301/ferrugem-con-sky-cupo-verano-2027-salida-3-de-enero",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/10/3301/ferrugem-con-sky-cupo-verano-2027-salida-3-de-enero",
       "titulo": "Ferrugem con Sky - CUPO Verano 2027 - Salida 3 de Enero",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -1144,13 +1143,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:54:21.496Z"
+      "updatedAt": "2026-09-07T13:20:27.180Z"
     },
     {
       "id": "mtur-10",
       "mturId": "10",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/10/3300/camboriu-con-sky-cupo-verano-2027-salida-3-de-enero",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/10/3300/camboriu-con-sky-cupo-verano-2027-salida-3-de-enero",
       "titulo": "Camboriu con Sky - CUPO Verano 2027 - Salida 3 de Enero",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -1170,13 +1169,13 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:54:23.438Z"
+      "updatedAt": "2026-09-07T13:20:29.146Z"
     },
     {
       "id": "mtur-10",
       "mturId": "10",
       "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/10/3299/florianopolis-con-sky-cupo-verano-2027-salida-3-de-enero",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/10/3299/florianopolis-con-sky-cupo-verano-2027-salida-3-de-enero",
       "titulo": "Florianopolis con Sky - CUPO Verano 2027 - Salida 3 de Enero",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
@@ -1196,33 +1195,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-08-31T14:54:25.562Z"
-    },
-    {
-      "id": "mtur-10",
-      "mturId": "10",
-      "operador": "mtur",
-      "sourceUrl": "https://mturviajes.com.uy/paquetes/10/3281/costa-do-sauipe-cupo-vacaciones-de-setiembre-2026-salida-19-setiembre",
-      "titulo": "Costa Do Sauipe - CUPO Vacaciones de Setiembre 2026 - Salida 19 Setiembre",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "Costa Do Sauipe - CUPO Vacaciones de Setiembre 2026 - Salida 19 Setiembre",
-      "destinoSlug": "otro",
-      "pais": "Otros",
-      "emoji": "📍",
-      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
-      "visitando": "",
-      "highlights": [],
-      "temporada": "",
-      "fechas": [],
-      "incluye": [],
-      "noIncluye": "",
-      "hoteles": [],
-      "fechasSalida": [],
-      "precios": {},
-      "pdfItinerario": "",
-      "observaciones": "",
-      "updatedAt": "2026-08-31T14:54:27.508Z"
+      "updatedAt": "2026-09-07T13:20:31.308Z"
     }
   ]
 }
