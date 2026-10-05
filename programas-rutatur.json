@@ -1,6 +1,6 @@
 {
   "operador": "Rutatur",
-  "updatedAt": "2026-09-28T16:07:15.591Z",
+  "updatedAt": "2026-10-05T16:27:27.485Z",
   "programas": [
     {
       "id": "rutatur-698",
@@ -111,7 +111,7 @@
         "Día 01 - MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, Merienda, Cena y Desayuno a bordo.Servicio de Open Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
         "PRECIO PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 15 DE SETIEMBRE 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)"
       ],
-      "updatedAt": "2026-09-28T16:06:36.062Z"
+      "updatedAt": "2026-10-05T16:26:38.540Z"
     },
     {
       "id": "rutatur-711",
@@ -183,7 +183,7 @@
         "VALOR DE PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 15 DE AGOSTO 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)",
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-09-28T16:06:37.440Z"
+      "updatedAt": "2026-10-05T16:26:39.917Z"
     },
     {
       "id": "rutatur-713",
@@ -254,7 +254,7 @@
         "VALOR DE PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 15 DE SETIEMBRE (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)",
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo) Av. Brasil 3129 - 2709 8345 - 2902 4142 – Montevideo – Uruguay"
       ],
-      "updatedAt": "2026-09-28T16:06:38.799Z"
+      "updatedAt": "2026-10-05T16:26:41.288Z"
     },
     {
       "id": "rutatur-769",
@@ -293,7 +293,7 @@
       "itinerario": [
         {
           "dia": "DÍA 01",
-          "lugar": "MONTEVIDEOPartida en modernas unidades “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre para dirigirnos hacia... DIA 02 - CANELALlegada atravesando sierras a esta ciudad de ensueño, alojamiento. (impuesto personal no incluido). Por la tarde partida para conocer la bellísima Cascada de Caracol (ingreso incluido) que vuelca sus aguas en un cañón de 131 mts. de altura, tomaremos las mejores fotos de este regalo de la naturaleza. Almuerzo incluido. Por la tarde conoceremos Catedral de Piedra y dispondremos de tiempo libre en su centro comercial. Almuerzo o Cena Buffet incluida DIA 03 - CANELA - GRAMADODesayuno Buffet. Hoy recorreremos GRAMADO y conoceremos sus principales atractivos turísticos entre los cuales destacan Mirador del Valle del Quilombo, Lago Negro, principales puntos turisticos de su centro comercial. Almuerzo Buffet incluído. DIA 04 – IGREJINHA - OKTOBERFESTDesayuno Buffet. Mañana libre, Almuerzo Incluido, En horario oportuno partimos hacia la ciudad de Igrejinha, municipio encantador ubicado en la región del Vale do Paranhana, colonizado por Alemanes, donde disfrutaremos de su mayor evento popular, la fiesta OKTOBERFEST mas grande del estado de Rio Grande del Sur (Ingreso Incluido), donde la actividad gira en torno a la cultura germánica, la gastronomía, la música y el entretenimiento familiar. Dentro del predio (Parque do Imigrante).",
+          "lugar": "MONTEVIDEOPartida en modernas unidades “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre para dirigirnos hacia... DIA 02 - CANELALlegada atravesando sierras a esta ciudad de ensueño, alojamiento. (impuesto personal no incluido). Por la tarde partida para conocer la bellísima Cascada de Caracol (ingreso incluido) que vuelca sus aguas en un cañón de 131 mts. de altura, tomaremos las mejores fotos de este regalo de la naturaleza. Por la tarde conoceremos Catedral de Piedra y dispondremos de tiempo libre en su centro comercial. Almuerzo o Cena Buffet incluida. DIA 03 - CANELA - GRAMADODesayuno Buffet. Hoy recorreremos GRAMADO y conoceremos sus principales atractivos turísticos entre los cuales destacan Mirador del Valle del Quilombo, Lago Negro, principales puntos turisticos de su centro comercial. Almuerzo Buffet incluído. DIA 04 – IGREJINHA - OKTOBERFESTDesayuno Buffet. Mañana libre, Almuerzo Incluido, En horario oportuno partimos hacia la ciudad de Igrejinha, municipio encantador ubicado en la región del Vale do Paranhana, colonizado por Alemanes, donde disfrutaremos de su mayor evento popular, la fiesta OKTOBERFEST mas grande del estado de Rio Grande del Sur (Ingreso Incluido), donde la actividad gira en torno a la cultura germánica, la gastronomía, la música y el entretenimiento familiar. Dentro del predio (Parque do Imigrante).",
           "detalle": "",
           "first": true,
           "last": false
@@ -319,7 +319,83 @@
       "notas": [
         "butaca, servicio abordo y seguro de asistencia. SEGURO DE ASISTENCIA  INCLUIDO"
       ],
-      "updatedAt": "2026-09-28T16:06:40.172Z"
+      "updatedAt": "2026-10-05T16:26:42.658Z"
+    },
+    {
+      "id": "rutatur-778",
+      "rutaId": "778",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/termas-romanas-5-dias-excursion-778",
+      "titulo": "Termas Romanas 5 Días",
+      "subtitulo": "5 DÍAS / 3 NOCHES",
+      "duracion": "5 DÍAS / 3 NOCHES",
+      "destino": "Termas Romanas",
+      "destinoSlug": "termasromanas",
+      "pais": "Argentina",
+      "emoji": "♨️",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-09-30_87606427.png",
+      "highlights": [
+        "📍 TERMAS ROMANAS"
+      ],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "por Ruta 5, vía Rivera, rumbo a un inolvidable destino.",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "Programada: 19 de OCTUBRE 2026 – 19:30Hs. · 19 de Octubre 2026 - 19:30Hs",
+          "gold": false
+        }
+      ],
+      "salidas": [
+        "por Ruta 5, vía Rivera, rumbo a un inolvidable destino.",
+        "Programada: 19 de OCTUBRE 2026 – 19:30Hs.",
+        "19 de Octubre 2026 - 19:30Hs"
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "MONTEVIDEOPartida en horas de la noche desde Montevideo - Terminal Tres Cruces, en modernas unidades semicama equipadas con servicio a bordo, bebidas open bar y guía acompañante durante todo el recorrido. Salida por Ruta 5, vía Rivera, rumbo a un inolvidable destino.",
+          "detalle": "",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "TERMAS ROMANASLlegada en horas de la mañana al Hotel Recanto Business, donde disfrutaremos de un desayuno en el restaurante del hotel y la presentación de sus instalaciones. Al mediodía, almuerzo con una bebida incluida. Luego realizaremos el Check In. n horario oportuno visitaremos el Distrito Turístico Vale Veneto. Este pintoresco distrito, con fuerte influencia de la cultura italiana, ofrece un ambiente ideal para un paseo tranquilo y conocer la historia local. Durante el recorrido, visitaremos el Emporio das Olivas, un lugar donde podrás aprender sobre la elaboración del aceite de oliva y degustar productos relacionados, disfrutando de una experiencia auténtica y llena de sabor. Retorno al hotel para seguir disfrutando con Pensión completa más una bebida incluida.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03 y 04 – TERMAS ROMANASDías completamente libre para disfrutar de las instalaciones del complejo termal, relajarse y aprovechar las actividades del hotel a su propio ritmo. Régimen de pensión completa más bebida por comida, para que vivan una experiencia cómoda y sin preocupaciones.",
+          "lugar": "DÍA 03 y 04 – TERMAS ROMANASDías completamente libre para disfrutar de las instalaciones del complejo termal, relajarse y aprovechar las actividades del hotel a su propio ritmo. Régimen de pensión completa más bebida por comida, para que vivan una experiencia cómoda y sin preocupaciones.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "TERMAS ROMANAS – MONTEVIDEODesayuno Buffet, en horario oportuno realizaremos check out. despidiéndonos de este encantador lugar. Aún tendremos tiempo libre para disfrutar antes del almuerzo incluido con una bebida por persona. En horario oportuno emprendemos nuestro viaje de retorno vía Rivera, disfrutando del paisaje y los recuerdos compartidos, para arribar en horas de la noche a Montevideo. ¡",
+          "detalle": "",
+          "first": false,
+          "last": true
+        }
+      ],
+      "hoteles": [],
+      "precios": {
+        "doble": 429,
+        "promo": 399,
+        "singleLabel": "Habitación Single: +35% adicional",
+        "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 399*** Single: 35 % MAS RUTATUR INTERNACIONAL: ☎ 2902 4142 - 098 486 487* Pocitos: Av. Brasil, 3129☎ 2709 8345 - 097 000 063 Salida 19 de Octubre 2026 - 19:30Hs BRASIL Nuestros Servicios Contacto Av. Brasil 3129 2902 4142 / 2709 8345 Por Excursiones: pocitos@"
+      },
+      "temporada": "",
+      "notas": [
+        "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 429 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 399"
+      ],
+      "updatedAt": "2026-10-05T16:26:44.025Z"
     },
     {
       "id": "rutatur-812",
@@ -340,51 +416,45 @@
       "fechas": [
         {
           "label": "Salida",
-          "value": "24 de Octubre 2026 - HORA 14:00hs",
+          "value": "24 de Octubre de 2026 – Hora: 14:00 hs",
           "gold": true
         },
         {
           "label": "Otras salidas",
-          "value": "24 de Octubre 2026 - 14:00hs",
+          "value": "Y TARIFAS · 24 de Octubre 2026 - 14:00hs",
           "gold": false
         }
       ],
       "salidas": [
-        "24 de Octubre 2026 - HORA 14:00hs",
+        "24 de Octubre de 2026 – Hora: 14:00 hs",
+        "Y TARIFAS",
         "24 de Octubre 2026 - 14:00hs"
       ],
       "itinerario": [
         {
           "dia": "DÍA 01",
-          "lugar": "MONTEVIDEO Partida en modernas unidades de última generación equipadas con asientos “Semi Cama”, servicio a bordo, Merienda, Cena y Desayuno, Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
+          "lugar": "MONTEVIDEOPartida en modernas unidades de última generación equipadas con asientos \"Semi Cama\". Contaremos con servicio a bordo (merienda, cena y desayuno), Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
           "detalle": "",
           "first": true,
           "last": false
         },
         {
           "dia": "DÍA 02",
-          "lugar": "TERMAS DE MACHADINHO PARK HOTEL Llegada y alojamiento en habitaciones con impuestos incluidos. Check inn hora 15. Resto del día libre para disfrutar del complejo. Nuestro hotel cuenta con piscinas abiertas y cubiertas y todas las comodidades que harán de nuestra estadía un recuerdo inolvidable. Conoceremos y disfrutaremos de las dependencias del Parque Termal. El agua que abastece al complejo termal tiene su absorción de 980 metros de profundidad con una temperatura de 45 º centígrados. Sus aguas son apropiadas y se indican para el mantenimiento de nuestra salud, indicado para enfermedades de la piel, en las afecciones reumáticas y actúa como un estimulante de las funciones gastrointestinales entre otras. Por la noche Cena Buffet.",
-          "detalle": "",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 03-04-05",
-          "lugar": "TERMAS DE MACHADINHODesayuno Buffet. Días enteramente libre para disfrutar del complejo. Alojamiento con pensión completa + bebidas durante las comidas",
-          "detalle": "",
+          "lugar": "TERMAS DE MACHADINHO PARK HOTELLlegada y alojamiento (impuestos incluidos). Check-in a las 15:00 hs. Resto del día libre para comenzar a disfrutar del complejo. El hotel cuenta con piscinas abiertas y cubiertas, y todas las comodidades para hacer de nuestra estadía un recuerdo inolvidable. Conoceremos y disfrutaremos de las instalaciones del Parque Termal, cuya agua surge a 980 metros de profundidad a 45 °C; sus propiedades estimulan la salud, las afecciones reumáticas, la piel y el sistema digestivo. Por la noche, Cena Buffet.",
+          "detalle": "DÍAS 03, 04 y 05 – TERMAS DE MACHADINHODesayuno Buffet. Días enteramente libres para descansar y disfrutar de las instalaciones del complejo. Alojamiento con Pensión Completa + bebidas incluidas durante las comidas.",
           "first": false,
           "last": false
         },
         {
           "dia": "DÍA 06",
-          "lugar": "TERMAS DE MACHADINHODesayuno Buffet. Mañana libre. Almuerzo Buffet Luego de haber pasado unos días inolvidables, en horario oportuno emprenderemos nuestro viaje retorno, con Merienda y Desayuno abordo, vía Porto Alegre, Pelotas para arribar a…",
+          "lugar": "TERMAS DE MACHADINHODesayuno Buffet y mañana libre. Almuerzo Buffet. Luego de haber pasado unos días inolvidables, en horario oportuno emprenderemos nuestro viaje de retorno con merienda y desayuno a bordo, vía Porto Alegre y Pelotas para arribar a...",
           "detalle": "",
           "first": false,
           "last": false
         },
         {
           "dia": "DÍA 07",
-          "lugar": "MONTEVIDEO ¡Llegada en horas de la mañana y",
+          "lugar": "MONTEVIDEO¡Llegada en horas de la mañana y",
           "detalle": "",
           "first": false,
           "last": true
@@ -392,8 +462,8 @@
       ],
       "hoteles": [
         {
-          "nombre": "MACHADINHO PARK HOTEL",
-          "url": "www.parkhoteltermasmachadinho.com.br"
+          "nombre": "Machadinho Thermas Resort Spa",
+          "ciudad": "ALOJAMIENTO"
         }
       ],
       "precios": {
@@ -401,17 +471,18 @@
         "promoDoble": 699,
         "triple": 759,
         "promoTriple": 679,
-        "single": 1029,
-        "promoTexto": "PROMO PAGO CONTADO U$S 699 *** - COSTO POR PERSONA EN BASE TRIPLE U$S 759 *** PROMO PAGO CONTADO U$S 679 *** - COSTO HABITACION SINGLE: U$S 1029 *** PROMO PAGO CONTADO U$S 959 *** - 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO*** ABONA SOLO COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia) ¡A disfrutar!"
+        "single": 1.029,
+        "butaca": 299,
+        "promoTexto": "PROMO PAGO CONTADO: U$S 699 Base Triple: U$S 759 → PROMO PAGO CONTADO: U$S 679 Habitación Single: U$S 1.029 → PROMO PAGO CONTADO: U$S 959 * Menores (hasta 12 años): ¡Es nuestro invitado! (Acompañado por un mínimo de 2 adultos en la misma habitación). Solo abona la butaca de U$S 299 (incluye asiento, servicio a bordo y seguro de asistencia). ALOJAMIENTO:Machadinho Thermas Resort Spa**** www.machadinhothermas.com.br INFORMACIÓN Y RESERVAS: Rutatur: Av. Brasil 3129 – Tel: 2709 8345 WhatsApp: 098 486 487 Web: www."
       },
       "temporada": "Octubre 2026",
       "notas": [
-        "COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)",
-        "Dia 01 – MONTEVIDEO Partida en modernas unidades de última generación equipadas con asientos “Semi Cama”, servicio a bordo, Merienda, Cena y Desayuno, Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
-        "- COSTO HABITACION SINGLE: U$S 1029  PROMO PAGO CONTADO U$S 959",
-        "- 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO ABONA SOLO COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)"
+        "butaca de U$S 299 (incluye asiento, servicio a bordo y seguro de asistencia).",
+        "DÍA 01 – MONTEVIDEOPartida en modernas unidades de última generación equipadas con asientos \"Semi Cama\". Contaremos con servicio a bordo (merienda, cena y desayuno), Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
+        "Habitación Single: U$S 1.029 → PROMO PAGO CONTADO: U$S 959",
+        "Menores (hasta 12 años): ¡Es nuestro invitado! (Acompañado por un mínimo de 2 adultos en la misma habitación). Solo abona la butaca de U$S 299 (incluye asiento, servicio a bordo y seguro de asistencia)."
       ],
-      "updatedAt": "2026-09-28T16:06:41.550Z"
+      "updatedAt": "2026-10-05T16:26:45.398Z"
     },
     {
       "id": "rutatur-823",
@@ -487,7 +558,7 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 489 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 469"
       ],
-      "updatedAt": "2026-09-28T16:06:42.926Z"
+      "updatedAt": "2026-10-05T16:26:46.788Z"
     },
     {
       "id": "rutatur-829",
@@ -593,7 +664,7 @@
         "butaca, servicio abordo y seguro de asistencia.",
         "- Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-09-28T16:06:44.288Z"
+      "updatedAt": "2026-10-05T16:26:48.184Z"
     },
     {
       "id": "rutatur-716",
@@ -700,7 +771,7 @@
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca U$S 299 (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-09-28T16:06:45.655Z"
+      "updatedAt": "2026-10-05T16:26:49.540Z"
     },
     {
       "id": "rutatur-725",
@@ -752,7 +823,7 @@
         "Día 01: MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, Merienda, Cena y Desayuno a bordo.Servicio de Open Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
         "PRECIO PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 30 DE SEPTIEMBRE 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)"
       ],
-      "updatedAt": "2026-09-28T16:06:47.014Z"
+      "updatedAt": "2026-10-05T16:26:50.918Z"
     },
     {
       "id": "rutatur-678",
@@ -771,18 +842,18 @@
       "fechas": [
         {
           "label": "Salida",
-          "value": "07 y 21 DE NOVIEMBRE 2026 - Hora de salida: 12.00",
+          "value": "07 DE NOVIEMBRE 2026 - Hora de salida: 12.00",
           "gold": true
         },
         {
           "label": "Otras salidas",
-          "value": "07 y 21 DE NOVIEMBRE 2026 HORA 12:00",
+          "value": "07 DE NOVIEMBRE 2026 HORA 12:00",
           "gold": false
         }
       ],
       "salidas": [
-        "07 y 21 DE NOVIEMBRE 2026 - Hora de salida: 12.00",
-        "07 y 21 DE NOVIEMBRE 2026 HORA 12:00"
+        "07 DE NOVIEMBRE 2026 - Hora de salida: 12.00",
+        "07 DE NOVIEMBRE 2026 HORA 12:00"
       ],
       "itinerario": [],
       "hoteles": [
@@ -792,11 +863,11 @@
         }
       ],
       "precios": {
-        "doble": 679,
+        "doble": 639,
         "singleLabel": "Habitación Single: +35% adicional",
         "butaca": 299,
         "menorGratis": "Menores hasta 4 años: invitado",
-        "promoTexto": "PROMO U$S 619. Single: 35 % MAS * Hotel: Foz Plaza:www.fozplaza.com.br * Seguro de Asistencia incluido. * Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)* Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia RUTATUR INTERNACIONAL: Pocitos: Av. Brasil, 3129 (entre Rambla y Juan Benito Blanco)☎️2709 8345 - 097 000 063 ☎️ 2902 4142 - 098 486 487 www."
+        "promoTexto": "PROMO U$S 599. Single: 35 % MAS * Hotel: Foz Plaza:www.fozplaza.com.br * Seguro de Asistencia incluido. * Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)* Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia RUTATUR INTERNACIONAL: Pocitos: Av. Brasil, 3129 (entre Rambla y Juan Benito Blanco)☎️2709 8345 - 097 000 063 ☎️ 2902 4142 - 098 486 487 www."
       },
       "temporada": "Noviembre 2026",
       "notas": [
@@ -807,7 +878,152 @@
         "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:",
         "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia) Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-09-28T16:06:48.383Z"
+      "updatedAt": "2026-10-05T16:26:52.285Z"
+    },
+    {
+      "id": "rutatur-807",
+      "rutaId": "807",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/termas-de-machadinho-7-dias-excursion-807",
+      "titulo": "TERMAS DE MACHADINHO 7 Días",
+      "subtitulo": "7 DÍAS",
+      "duracion": "7 DÍAS",
+      "destino": "TERMAS DE MACHADINHO",
+      "destinoSlug": "machadinho",
+      "pais": "Brasil",
+      "emoji": "♨️",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-07-02_02358486.png",
+      "highlights": [
+        "📍 TERMAS DE MACHADINHO PARK HOTEL"
+      ],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "SABADO 07 DE NOVIEMBRE 2026 - HORA 14:00hs",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "07 de Noviembre 2026 - 14:00 Hs",
+          "gold": false
+        }
+      ],
+      "salidas": [
+        "SABADO 07 DE NOVIEMBRE 2026 - HORA 14:00hs",
+        "07 de Noviembre 2026 - 14:00 Hs"
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "MONTEVIDEO Partida en modernas unidades de última generación equipadas con asientos “Semi Cama”, servicio a bordo, Merienda, Cena y Desayuno, Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
+          "detalle": "",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "TERMAS DE MACHADINHO PARK HOTEL Llegada y alojamiento en habitaciones con impuestos incluidos. Check inn hora 15. Resto del día libre para disfrutar del complejo. Nuestro hotel cuenta con piscinas abiertas y cubiertas y todas las comodidades que harán de nuestra estadía un recuerdo inolvidable. Conoceremos y disfrutaremos de las dependencias del Parque Termal. El agua que abastece al complejo termal tiene su absorción de 980 metros de profundidad con una temperatura de 45 º centígrados. Sus aguas son apropiadas y se indican para el mantenimiento de nuestra salud, indicado para enfermedades de la piel, en las afecciones reumáticas y actúa como un estimulante de las funciones gastrointestinales entre otras. Por la noche Cena Buffet.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03-04-05",
+          "lugar": "TERMAS DE MACHADINHODesayuno Buffet. Días enteramente libre para disfrutar del complejo. Alojamiento con pensión completa + bebidas durante las comidas",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "TERMAS DE MACHADINHODesayuno Buffet. Mañana libre. Almuerzo Buffet Luego de haber pasado unos días inolvidables, en horario oportuno emprenderemos nuestro viaje retorno, con Merienda y Desayuno abordo, vía Porto Alegre, Pelotas para arribar a…",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "MONTEVIDEO ¡Llegada en horas de la mañana y",
+          "detalle": "",
+          "first": false,
+          "last": true
+        }
+      ],
+      "hoteles": [
+        {
+          "nombre": "MACHADINHO PARK HOTEL",
+          "url": "www.parkhoteltermasmachadinho.com.br"
+        },
+        {
+          "nombre": "- 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO"
+        }
+      ],
+      "precios": {
+        "doble": 799,
+        "promoDoble": 769,
+        "triple": 779,
+        "promoTriple": 749,
+        "promoTexto": "PROMO PAGO CONTADO U$S 769 *** - COSTO POR PERSONA EN BASE TRIPLE U$S 779 *** PROMO PAGO CONTADO U$S 749*** Single +35% - 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO*** -COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia) ¡A disfrutar! Pocitos: Av. Brasil 3129 - 2709 8345 - 097 000 063 Montevideo – Uruguay www."
+      },
+      "temporada": "Noviembre 2026",
+      "notas": [
+        "COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)",
+        "Dia 01 – MONTEVIDEO Partida en modernas unidades de última generación equipadas con asientos “Semi Cama”, servicio a bordo, Merienda, Cena y Desayuno, Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
+        "- 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO",
+        "-COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)"
+      ],
+      "updatedAt": "2026-10-05T16:26:53.642Z"
+    },
+    {
+      "id": "rutatur-814",
+      "rutaId": "814",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/termas-de-gravatal-8-dias5-noches-excursion-814",
+      "titulo": "TERMAS DE GRAVATAL - 8 DIAS/5 NOCHES",
+      "subtitulo": "8 DÍAS / 5 NOCHES",
+      "duracion": "8 DÍAS / 5 NOCHES",
+      "destino": "TERMAS DE GRAVATAL - 8 DIAS/5 NOCHES",
+      "destinoSlug": "gravatal",
+      "pais": "Brasil",
+      "emoji": "♨️",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-06-11_87044175.jpg",
+      "highlights": [],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "14 de Noviembre de 2026 – 13:30 hs",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "14 Noviembre 2026 - 13:30",
+          "gold": false
+        }
+      ],
+      "salidas": [
+        "14 de Noviembre de 2026 – 13:30 hs",
+        "14 Noviembre 2026 - 13:30"
+      ],
+      "itinerario": [],
+      "hoteles": [
+        {
+          "nombre": "Internacional Termas de Gravatal ()",
+          "ciudad": "Alojamiento",
+          "url": "www.hotelinternacionalgravatal.com.br"
+        }
+      ],
+      "precios": {
+        "promoTexto": "PROMO PAGO CONTADO: US$ 889 Habitación Triple: US$ 949 | PROMO PAGO CONTADO: US$ 839 Habitación Single: US$ 1.308 | PROMO PAGO CONTADO: US$ 1.199 Menores (5 a 12 años): US$ 479 | PROMO PAGO CONTADO: US$ 419 (acompañados por 2 adultos en la habitación) Condición de la Promoción: Válida señando con el 30% contado hasta el 28 de Octubre de 2026. Cupos limitados. (No acumulable con otras promociones). INFORMACIÓN Y RESERVASDirección: Av. Brasil 3129 - Montevideo Teléfono: 2709 8345 WhatsApp: 098 486 487 Web: www."
+      },
+      "temporada": "Noviembre 2026",
+      "notas": [
+        "TARIFAS POR PERSONA:Habitación Doble: US$ 969 | PROMO PAGO CONTADO: US$ 889",
+        "Habitación Triple: US$ 949 | PROMO PAGO CONTADO: US$ 839",
+        "Habitación Single: US$ 1.308 | PROMO PAGO CONTADO: US$ 1.199",
+        "Menores (5 a 12 años): US$ 479 | PROMO PAGO CONTADO: US$ 419 (acompañados por 2 adultos en la habitación)",
+        "Condición de la Promoción: Válida señando con el 30% contado hasta el 28 de Octubre de 2026. Cupos limitados. (No acumulable con otras promociones)."
+      ],
+      "updatedAt": "2026-10-05T16:26:55.004Z"
     },
     {
       "id": "rutatur-836",
@@ -892,7 +1108,7 @@
         "Menores hasta 3 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
         "Solo asiento: U$S 299- Incluye, butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-09-28T16:06:49.741Z"
+      "updatedAt": "2026-10-05T16:26:56.363Z"
     },
     {
       "id": "rutatur-699",
@@ -991,7 +1207,7 @@
         "COSTO DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 20 DE SETIEMBRE 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)",
         "-Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-09-28T16:06:51.105Z"
+      "updatedAt": "2026-10-05T16:26:57.719Z"
     },
     {
       "id": "rutatur-824",
@@ -1067,7 +1283,7 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 489 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 469"
       ],
-      "updatedAt": "2026-09-28T16:06:52.469Z"
+      "updatedAt": "2026-10-05T16:26:59.069Z"
     },
     {
       "id": "rutatur-718",
@@ -1169,7 +1385,7 @@
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-09-28T16:06:53.853Z"
+      "updatedAt": "2026-10-05T16:27:00.420Z"
     },
     {
       "id": "rutatur-675",
@@ -1227,7 +1443,7 @@
         "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
         "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-09-28T16:06:55.207Z"
+      "updatedAt": "2026-10-05T16:27:01.800Z"
     },
     {
       "id": "rutatur-726",
@@ -1278,7 +1494,7 @@
         "Día 01: MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, Merienda, Cena y Desayuno a bordo.Servicio de Open Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
         "PRECIO PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 30 DE SEPTIEMBRE 2025 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)"
       ],
-      "updatedAt": "2026-09-28T16:06:56.565Z"
+      "updatedAt": "2026-10-05T16:27:03.151Z"
     },
     {
       "id": "rutatur-830",
@@ -1384,7 +1600,7 @@
         "butaca, servicio abordo y seguro de asistencia.",
         "- Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-09-28T16:06:57.927Z"
+      "updatedAt": "2026-10-05T16:27:04.498Z"
     },
     {
       "id": "rutatur-727",
@@ -1440,7 +1656,7 @@
         "-MENORES HASTA 5 AÑOS FREE - Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-09-28T16:06:59.283Z"
+      "updatedAt": "2026-10-05T16:27:05.849Z"
     },
     {
       "id": "rutatur-833",
@@ -1520,7 +1736,7 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 619 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 579"
       ],
-      "updatedAt": "2026-09-28T16:07:00.637Z"
+      "updatedAt": "2026-10-05T16:27:07.195Z"
     },
     {
       "id": "rutatur-728",
@@ -1575,7 +1791,7 @@
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-09-28T16:07:02.006Z"
+      "updatedAt": "2026-10-05T16:27:08.548Z"
     },
     {
       "id": "rutatur-729",
@@ -1625,7 +1841,7 @@
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-09-28T16:07:03.382Z"
+      "updatedAt": "2026-10-05T16:27:09.898Z"
     },
     {
       "id": "rutatur-744",
@@ -1669,7 +1885,7 @@
       "notas": [
         "Media Pensión = desayuno + 01 comida. PROMO VALIDA SEÑANDO CON 30% CONTADO HASTA EL 30 DE NOVIEMBRE 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)."
       ],
-      "updatedAt": "2026-09-28T16:07:04.752Z"
+      "updatedAt": "2026-10-05T16:27:11.244Z"
     },
     {
       "id": "rutatur-755",
@@ -1774,7 +1990,7 @@
         "-Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia).-Seguro obligatorio costo 30 U$S",
         "-Solo asiento: U$S 259 - Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-09-28T16:07:06.110Z"
+      "updatedAt": "2026-10-05T16:27:12.597Z"
     },
     {
       "id": "rutatur-837",
@@ -1866,7 +2082,181 @@
       "notas": [
         "DÍA 01 — MONTEVIDEOSalida en horas de la tarde desde TRES CRUCES, en modernas unidades equipadas con asientos “Semi Cama” con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y..."
       ],
-      "updatedAt": "2026-09-28T16:07:07.465Z"
+      "updatedAt": "2026-10-05T16:27:13.941Z"
+    },
+    {
+      "id": "rutatur-799",
+      "rutaId": "799",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/canela-y-gramado-6-dias-excursion-799",
+      "titulo": "CANELA Y GRAMADO 6 Días",
+      "subtitulo": "6 DÍAS / 3 NOCHES",
+      "duracion": "6 DÍAS / 3 NOCHES",
+      "destino": "CANELA Y GRAMADO",
+      "destinoSlug": "gramado",
+      "pais": "Brasil",
+      "emoji": "🌲",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-05_14153172.png",
+      "highlights": [
+        "📍 CANELA"
+      ],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "18:00",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "Programada 13 de ENERO 2027 - HORA DE SALIDA: 18:00 · 13 de ENERO 2027 - 18:00hs",
+          "gold": false
+        }
+      ],
+      "salidas": [
+        "18:00",
+        "Programada 13 de ENERO 2027 - HORA DE SALIDA: 18:00",
+        "13 de ENERO 2027 - 18:00hs"
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "MONTEVIDEOPartida en modernas unidades “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre para dirigirnos hacia...",
+          "detalle": "",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "CANELALlegada atravesando las pintorescas sierras a esta ciudad de ensueño, alojamiento. (Impuesto personal no incluido). En la tarde, tendrán tiempo libre para comenzar a descubrir los encantos de esta hermosa ciudad a su ritmo. Almuerzo o Cena Buffet incluida.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "CANELA - GRAMADODesayuno Buffet. En horario oportuno nos dirigimos hacia el espectacular Sky Glass, una plataforma de vidrio que ofrece vistas impresionantes y únicas de Gramado.Luego, disfrutaremos de un maravilloso recorrido por la ciudad, descubriendo sus joyas más emblemáticas. Visitando el Mirador del Valle del Quilombo, el pintoresco Lago Negro, el fascinante Museo de Cera y Harley Motor Show, con todos los ingresos incluidos. Para completar esta experiencia, almuerzo o cena buffet incluida.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "CANELA – NOVA PETROPOLISDesayuno Buffet. Por la mañana partiremos rumbo a Nova Petrópolis, nuestro primer destino será el emocionante Parque Pedra do Silêncio (ingreso incluido), un lugar lleno de historia, naturaleza y esculturas que nos cuentan la valiente historia de los inmigrantes alemanes. Luego, nos espera un delicioso almuerzo tradicional de la región (incluido), ¡para recargar pilas con los sabores auténticos del sur de Brasil! Posteriormente visitaremos la colorida Plaza de las Flores, donde nos divertiremos recorriendo su famoso Laberinto Verde. Además, tendremos tiempo libre para descubrir su encantador centro comercial. Regreso a nuestro hotel, Noche Libre.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "CANELA",
+          "detalle": "Desayuno Buffet. En horario oportuno partida atravesando la deslumbrante sierra haciendo un alto en Igrejinha, para visitar una de las típicas zapaterías, continuamos con nuestro viaje de retorno con Copetín a bordo y Almuerzo o Cena en Restaurante, vía Porto Alegre, Pelotas, Chuy para arribar a...",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "MONTEVIDEOLlegada en horas de la mañana y... ¡¡¡",
+          "detalle": "",
+          "first": false,
+          "last": true
+        }
+      ],
+      "hoteles": [
+        {
+          "nombre": "CANELA - SERRA NEVADA",
+          "url": "www.hotelserranevada.com.br"
+        }
+      ],
+      "precios": {
+        "doble": 509,
+        "promoDoble": 478,
+        "triple": 499,
+        "promoTriple": 468,
+        "singleLabel": "Habitación Single: +35% adicional",
+        "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 478 Valor por persona en Base Triple U$S 499 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 468 Valor por persona en Base Cuadruple U$S 489 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 458 Single 35 % MAS -Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia. ****SEGURO DE ASISTENCIA **** INCLUIDO Av. Brasil 3129 - 2902 4142 – 2709 8345 098 486 487 - 097 000 063 Montevideo, Uruguay - www."
+      },
+      "temporada": "",
+      "notas": [
+        "butaca, servicio abordo y seguro de asistencia.",
+        "-Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
+      ],
+      "updatedAt": "2026-10-05T16:27:15.295Z"
+    },
+    {
+      "id": "rutatur-772",
+      "rutaId": "772",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/termas-romanas-6-dias-excursion-772",
+      "titulo": "TERMAS ROMANAS 6 Días",
+      "subtitulo": "6 DÍAS",
+      "duracion": "6 DÍAS",
+      "destino": "TERMAS ROMANAS",
+      "destinoSlug": "termasromanas",
+      "pais": "Argentina",
+      "emoji": "♨️",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-01-21_20493404.png",
+      "highlights": [
+        "📍 TERMAS ROMANAS"
+      ],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "por Ruta 5, vía Rivera, rumbo a un inolvidable destino.",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "Programada: 19 de Enero 2027 – 19:30 Hs. · 19 de Enero 2027 - 19:30",
+          "gold": false
+        }
+      ],
+      "salidas": [
+        "por Ruta 5, vía Rivera, rumbo a un inolvidable destino.",
+        "Programada: 19 de Enero 2027 – 19:30 Hs.",
+        "19 de Enero 2027 - 19:30"
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "MONTEVIDEOPartida en horas de la noche desde Montevideo - Terminal Tres Cruces, en modernas unidades semicama equipadas con servicio a bordo, bebidas open bar y guía acompañante durante todo el recorrido. Salida por Ruta 5, vía Rivera, rumbo a un inolvidable destino.",
+          "detalle": "",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "TERMAS ROMANASLlegada en horas de la mañana al Hotel Recanto Business, donde disfrutaremos de un desayuno en el restaurante del hotel y la presentación de sus instalaciones. Al mediodía, almuerzo con una bebida incluida. Luego realizaremos el Check In. Tarde libre para relajarse y aprovechar Termas Romanas, sus propiedades medicinales y curativas ÚNICAS que nos ofrecen sus aguas saladas o de las actividades que ofrece el complejo. Por la noche, cena incluida con una bebida y actividad.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "TERMAS ROMANAS - VALE VENETO",
+          "detalle": "Desayuno buffet, mañana libre, Almuerzo Buffet incluido más una bebida, en horario oportuno visitaremos el Distrito Turístico Vale Veneto. Este pintoresco distrito, con fuerte influencia de la cultura italiana, ofrece un ambiente ideal para un paseo tranquilo y conocer la historia local. Durante el recorrido, visitaremos el Emporio das Olivas, un lugar donde podrás aprender sobre la elaboración del aceite de oliva y degustar productos relacionados, disfrutando de una experiencia auténtica y llena de sabor. Retorno al hotel para seguir disfrutando con Pensión completa más una bebida incluida. DÍAS 04 y 05 – TERMAS ROMANASDías completamente libre para disfrutar de las instalaciones del complejo termal, relajarse y aprovechar las actividades del hotel a su propio ritmo. Régimen de pensión completa más bebida por comida, para que vivan una experiencia cómoda y sin preocupaciones.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "TERMAS ROMANAS – MONTEVIDEODesayuno Buffet, en horario oportuno realizaremos check out. despidiéndonos de este encantador lugar. Aún tendremos tiempo libre para disfrutar antes del almuerzo incluido con una bebida por persona. En horario oportuno emprendemos nuestro viaje de retorno vía Rivera, disfrutando del paisaje y los recuerdos compartidos, para arribar en horas de la noche a Montevideo. ¡",
+          "detalle": "",
+          "first": false,
+          "last": true
+        }
+      ],
+      "hoteles": [],
+      "precios": {
+        "doble": 519,
+        "promo": 489,
+        "singleLabel": "Habitación Single: +35% adicional",
+        "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 489*** Single: 35 % MAS RUTATUR INTERNACIONAL: * Pocitos: Av. Brasil, 3129☎ 2709 8345 - 097 000 063 Salida 19 de Enero 2027 - 19:30 BRASIL Nuestros Servicios Contacto Av. Brasil 3129 2902 4142 / 2709 8345 Por Excursiones: pocitos@"
+      },
+      "temporada": "",
+      "notas": [
+        "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 519 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 489"
+      ],
+      "updatedAt": "2026-10-05T16:27:16.644Z"
     },
     {
       "id": "rutatur-834",
@@ -1925,7 +2315,86 @@
         "Día 01: MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, Merienda, Cena y Desayunoa bordo. Servicio de Open Bar y guía acompañante durante todo el recorrido por Rocha, Chuy,Pelotas, Porto Alegre y...",
         "- MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro) - Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-09-28T16:07:08.820Z"
+      "updatedAt": "2026-10-05T16:27:17.996Z"
+    },
+    {
+      "id": "rutatur-767",
+      "rutaId": "767",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/termas-romanas-6-dias-carnaval-2027-excursion-767",
+      "titulo": "TERMAS ROMANAS 6 Días - CARNAVAL 2027",
+      "subtitulo": "6 DÍAS",
+      "duracion": "6 DÍAS",
+      "destino": "TERMAS ROMANAS- CARNAVAL 2027",
+      "destinoSlug": "termasromanas",
+      "pais": "Argentina",
+      "emoji": "♨️",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2025-11-07_47929283.png",
+      "highlights": [
+        "📍 MONTEVIDEOPartida en horas de la noche desde Montevideo - Terminal Tres Cruces, en modernas unidades semicama equipadas con servicio a bordo, bebidas open bar y guía acompañante durante todo el recorrido. Salida por Ruta 5, vía Rivera, rumbo a un inolvidable destino.",
+        "📍 TERMAS ROMANASLlegada en horas de la mañana al Hotel Recanto Business, donde disfrutaremos de un desayuno en el restaurante del hotel y la presentación de sus instalaciones. Al mediodía, almuerzo con una bebida incluida. Luego realizaremos el Check In. Tarde libre para relajarse y aprovechar Termas Romanas, sus propiedades medicinales y curativas ÚNICAS que nos ofrecen sus aguas saladas o de las actividades que ofrece el complejo. Por la noche, cena incluida con una bebida y actividad.",
+        "📍 TERMAS ROMANAS - VALE VENETO",
+        "📍 TERMAS ROMANAS – MONTEVIDEO"
+      ],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "por Ruta 5, vía Rivera, rumbo a un inolvidable destino.",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "Programada: 06 de FEBRERO 2027 – 19:30 Hs. · 06 de FEBRERO 2027 - 19:30",
+          "gold": false
+        }
+      ],
+      "salidas": [
+        "por Ruta 5, vía Rivera, rumbo a un inolvidable destino.",
+        "Programada: 06 de FEBRERO 2027 – 19:30 Hs.",
+        "06 de FEBRERO 2027 - 19:30"
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "MONTEVIDEOPartida en horas de la noche desde Montevideo - Terminal Tres Cruces, en modernas unidades semicama equipadas con servicio a bordo, bebidas open bar y guía acompañante durante todo el recorrido. Salida por Ruta 5, vía Rivera, rumbo a un inolvidable destino.",
+          "detalle": "",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "TERMAS ROMANASLlegada en horas de la mañana al Hotel Recanto Business, donde disfrutaremos de un desayuno en el restaurante del hotel y la presentación de sus instalaciones. Al mediodía, almuerzo con una bebida incluida. Luego realizaremos el Check In. Tarde libre para relajarse y aprovechar Termas Romanas, sus propiedades medicinales y curativas ÚNICAS que nos ofrecen sus aguas saladas o de las actividades que ofrece el complejo. Por la noche, cena incluida con una bebida y actividad.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "TERMAS ROMANAS - VALE VENETO",
+          "detalle": "Desayuno buffet, mañana libre, Almuerzo Buffet incluido más una bebida, en horario oportuno visitaremos el Distrito Turístico Vale Veneto. Este pintoresco distrito, con fuerte influencia de la cultura italiana, ofrece un ambiente ideal para un paseo tranquilo y conocer la historia local. Durante el recorrido, visitaremos el Emporio das Olivas, un lugar donde podrás aprender sobre la elaboración del aceite de oliva y degustar productos relacionados, disfrutando de una experiencia auténtica y llena de sabor. Retorno al hotel para seguir disfrutando con Pensión completa más una bebida incluida. DÍAS 04 y 05 – TERMAS ROMANASDías completamente libre para disfrutar de las instalaciones del complejo termal, relajarse y aprovechar las actividades del hotel a su propio ritmo. Régimen de pensión completa más bebida por comida, para que vivan una experiencia cómoda y sin preocupaciones.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "TERMAS ROMANAS – MONTEVIDEO",
+          "detalle": "Desayuno Buffet, en horario oportuno realizaremos check out. despidiéndonos de este encantador lugar. Aún tendremos tiempo libre para disfrutar antes del almuerzo incluido con una bebida por persona. En horario oportuno emprendemos nuestro viaje de retorno vía Rivera, disfrutando del paisaje y los recuerdos compartidos, para arribar en horas de la noche a Montevideo. ¡",
+          "first": false,
+          "last": true
+        }
+      ],
+      "hoteles": [],
+      "precios": {
+        "doble": 519,
+        "promo": 489,
+        "singleLabel": "Habitación Single: +35% adicional",
+        "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 489*** Single: 35 % MAS RUTATUR INTERNACIONAL: * Pocitos: Av. Brasil, 3129☎ 2709 8345 - 097 000 063 Salida 06 de FEBRERO 2027 - 19:30 BRASIL Nuestros Servicios Contacto Av. Brasil 3129 2902 4142 / 2709 8345 Por Excursiones: pocitos@"
+      },
+      "temporada": "",
+      "notas": [
+        "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 519 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 489"
+      ],
+      "updatedAt": "2026-10-05T16:27:19.347Z"
     },
     {
       "id": "rutatur-732",
@@ -2025,7 +2494,7 @@
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-09-28T16:07:10.177Z"
+      "updatedAt": "2026-10-05T16:27:20.701Z"
     },
     {
       "id": "rutatur-745",
@@ -2070,7 +2539,7 @@
         "Día 01: MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, Merienda, Cena y Desayuno a bordo.Servicio de Open Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
         "PROMO VALIDA SEÑANDO CON 30% CONTADO HASTA EL 30 DE NOVIEMBRE 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)"
       ],
-      "updatedAt": "2026-09-28T16:07:11.530Z"
+      "updatedAt": "2026-10-05T16:27:22.058Z"
     },
     {
       "id": "rutatur-756",
@@ -2175,7 +2644,7 @@
         "-Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia).-Seguro obligatorio costo 30 U$S",
         "-Solo asiento: U$S 259 - Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-09-28T16:07:12.884Z"
+      "updatedAt": "2026-10-05T16:27:23.407Z"
     },
     {
       "id": "rutatur-723",
@@ -2267,7 +2736,7 @@
         "Día 01 – MONTEVIDEO - SABADO 20/03Partida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
         "VALOR DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 15 DE NOVIEMBRE 2026. (CUPOS LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)"
       ],
-      "updatedAt": "2026-09-28T16:07:14.237Z"
+      "updatedAt": "2026-10-05T16:27:24.762Z"
     },
     {
       "id": "rutatur-735",
@@ -2344,7 +2813,93 @@
         "Valor de promo valido señando con 30 % contado hasta el 30 de Noviembre 2026(cupos de promo limitados, no acumulables con otras promociones)",
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-09-28T16:07:15.591Z"
+      "updatedAt": "2026-10-05T16:27:26.133Z"
+    },
+    {
+      "id": "rutatur-757",
+      "rutaId": "757",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/aguas-de-palmas-8-dias5-noches-pension-completa-excursion-757",
+      "titulo": "AGUAS DE PALMAS 8 Días / 5 Noches - PENSIÓN COMPLETA",
+      "subtitulo": "8 DÍAS / 5 NOCHES",
+      "duracion": "8 DÍAS / 5 NOCHES",
+      "destino": "AGUAS DE PALMAS - PENSIÓN COMPLETA",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2025-08-22_90664196.png",
+      "highlights": [
+        "📍 AGUAS DE PALMAS"
+      ],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "PROGRAMADA 04 JULIO 2026 - HORA 13.30 Hs",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "27 Marzo 2027 - 13:30hs",
+          "gold": false
+        }
+      ],
+      "salidas": [
+        "PROGRAMADA 04 JULIO 2026 - HORA 13.30 Hs",
+        "27 Marzo 2027 - 13:30hs"
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con servicio abordo Merienda, Cena y Desayuno. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
+          "detalle": "",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "AGUAS DE PALMASArribo a la paradisiaca playa de Palmas, con aguas cristalinas y calmas, localizada a 45 km al norte de Florianópolis. Almuerzo incluido. Alojamiento en hotel Aguas de Palmas Resort **** (Check Inn hora 15.00. Resto del día libre. Por la noche Cena Buffet Incluida.",
+          "detalle": "Días 03 - 04 - 05 - 06 AGUAS DE PALMAS RESORTDesayuno Buffet. Días libres para relajarse y aprovechar al máximo las instalaciones del hotel. ¡La Pensión Completa está incluida para que no nos falte nada!",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "AGUAS DE PALMAS RESORTDesayuno Buffet. Luego de este broche de oro, ya con nuestros equipajes emprenderemos nuestro viaje de retorno con Almuerzo o Cena, Desayuno abordo, vía Porto Alegre, Pelotas, Chuy para arribar a...",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 08",
+          "lugar": "MONTEVIDEO",
+          "detalle": "¡Llegada a nuestra ciudad y",
+          "first": false,
+          "last": true
+        }
+      ],
+      "hoteles": [
+        {
+          "nombre": "www.",
+          "url": "aguasdepalmas.com.br"
+        }
+      ],
+      "precios": {
+        "doble": 919,
+        "promoDoble": 859,
+        "triple": 899,
+        "promoTriple": 839,
+        "singleLabel": "Habitación Single: +35% adicional",
+        "promoTexto": "PROMO CONTADO HASTA EL 30 DE OCTUBRE 2025 VALOR POR PERSONA BASE DOBLE U$S 919 // PROMO PAGO CONTADO O EFECTIVO U$S 859 VALOR POR PERSONA BASE TRIPLE U$S 899 // PROMO PAGO CONTADO O EFECTIVO U$S 839 SINGLE 35% MÁS -- Menores hasta 7 años, máximo 1 por habitación acompañado de 2 adultos: VALOR U$S 299 ** (INCLUYE servicio a bordo, butaca y seguro de asistencia) ** www.aguasdepalmas.com.br REGIMEN DE PENSION COMPLETA INCLUYE:*** Desayuno, Almuerzo y Cena - Bebidas incluidas durante Almuerzos y Cenas: agua, jugo y refrescos.*** Av. Brasil 3129 esq. Benito Blanco 2709 8345 - 097 000 063 - 098 486 487 www."
+      },
+      "temporada": "Julio 2026",
+      "notas": [
+        "butaca y seguro de asistencia)",
+        "Día 01 – MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con servicio abordo Merienda, Cena y Desayuno. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
+        "PROMO CONTADO HASTA EL 30 DE OCTUBRE 2025",
+        "-- Menores hasta 7 años, máximo 1 por habitación acompañado de 2 adultos: VALOR U$S 299",
+        "(INCLUYE servicio a bordo, butaca y seguro de asistencia)"
+      ],
+      "updatedAt": "2026-10-05T16:27:27.485Z"
     }
   ]
 }
