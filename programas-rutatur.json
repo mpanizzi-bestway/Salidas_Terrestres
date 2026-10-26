@@ -1,313 +1,7 @@
 {
   "operador": "Rutatur",
-  "updatedAt": "2026-10-19T15:02:10.959Z",
+  "updatedAt": "2026-10-26T14:36:37.353Z",
   "programas": [
-    {
-      "id": "rutatur-711",
-      "rutaId": "711",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/fazzenda-parkcamboriu-oktoberfest-excursion-711",
-      "titulo": "FAZZENDA PARK + CAMBORIÚ - OKTOBERFEST",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "FAZZENDA PARK + CAMBORIÚ - OKTOBERFEST",
-      "destinoSlug": "fazzenda",
-      "pais": "Brasil",
-      "emoji": "🌿",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2025-06-11_74428487.png",
-      "highlights": [
-        "📍 FAZZENDA PARK",
-        "📍 CAMBORIU - BLUMENAU",
-        "📍 CAMBORIU – PLAYA DE LARANJEIRAS"
-      ],
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "programada SABADO 10 DE OCTUBRE 2026 - HORA- 13:30",
-          "gold": true
-        },
-        {
-          "label": "Otras salidas",
-          "value": "10 de OCTUBRE - 13:30hs",
-          "gold": false
-        }
-      ],
-      "salidas": [
-        "programada SABADO 10 DE OCTUBRE 2026 - HORA- 13:30",
-        "10 de OCTUBRE - 13:30hs"
-      ],
-      "itinerario": [
-        {
-          "dia": "DÍA 01",
-          "lugar": "MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y... Día 02 – FAZZENDA PARKArribo a la localidad de Gaspar donde nos alojaremos en la paradisíaca Fazzenda Park Resort 5**** Check Inn hora 15.00. Resto del día libre para disfrutar de sus múltiples opciones de placer. Para recorrerlo a pie, a caballo, en carreta, en pedalinhos, disfrutar de sus piscinas, pescar en sus lagos, realizar deportes o la actividad que más nos guste. Por la tarde tendremos un exquisito Café Colonial y por la noche nos espera una deliciosa Cena Buffet con la riqueza de un menú regional y casero que nos hará experimentar el placer de un buen plato. Días 03 – FAZZENDA PARKDesayuno Buffet. Día libre para disfrutar del MARAVILLOSO RESORT ALL INCLUSIVE. Pension Completa. Día 04 - FAZZENDA PARK-BRUSQUE-CAMBORIUDesayuno Buffet. Mañana libre. Almuerzo Buffet. En horario oportuno partida con equipaje para visitar la ciudad de BRUSQUE principal centro de venta de artículos de lana y algodón del estado, donde dispondremos de tiempo libre para recorrer su principal centro comercial. Proseguimos nuestro viaje hacia Camboriu, llegada y alojamiento en hotel Miramar 4 **** resto del día libre.",
-          "detalle": "",
-          "first": true,
-          "last": false
-        },
-        {
-          "dia": "DÍA 05",
-          "lugar": "CAMBORIU - BLUMENAUDesayuno Buffet. Mañana libre. Almuerzo Buffet. En horas de la tarde emprenderemos viaje hacia BLUMENAU ciudad de colonización alemana. Vista panoramica de sus principales puntos de atracción, la Prefectura, El Puente de Hierro, el Molino del Valle, Avda. 7 de Setiembre, su Catedral para culminar nuestro recorrido en la espectacular FIESTA de OKTOBERFEST, el mayor evento popular del Brasil, luego del Carnaval de Rio. En horario oportuno emprenderemos el regreso a nuestro hotel. Dia 06– CAMBORIU – PLAYA DE LARANJEIRASDesayuno Buffet. Traslado a la Terminal del Parque Unipraias. Desde allí nos trasladaremos a la hermosa Playa de Laranjeiras donde disfrutaremos de tiempo libre para disfrutar de sus cristalinas aguas. Podrá viajar en Teleférico a través de sus estaciones nos permitirá recorrer la Mata Atlántica y tener las vistas más bonitas de la región. Almuerzo o Cena Buffet Incluida. Día 07 – CAMBORIUDesayuno Buffet. En horario oportuno ya con nuestros equipajes emprenderemos nuestro viaje de retorno con Almuerzo en Restaurante, Merienda y Desayuno abordo, vía Porto Alegre, Pelotas, Chuy para arribar a... Día 08 - MONTEVIDEO¡Llegada a nuestra ciudad y",
-          "detalle": "",
-          "first": false,
-          "last": true
-        }
-      ],
-      "hoteles": [
-        {
-          "nombre": "RESORT FAZZENDA PARK 5",
-          "url": "www.fazzenda.com.br"
-        }
-      ],
-      "precios": {
-        "doble": 1099,
-        "promo": 999,
-        "singleLabel": "Habitación Single: +35% adicional",
-        "menorGratis": "Menores hasta 5 años: invitado",
-        "promoTexto": "PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 15 DE AGOSTO 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES) Valor por persona en basa doble o triple U$S 1099 // PROMO U$S 999 HABITACION SINGLE 35 % MAS HOTELES:MIRAMAR 4**** www.hotelmiramar.com.br RESORT FAZZENDA PARK 5***** www.fazzenda.com.br -MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo) RUTATUR INTERNACIONAL: Pocitos: Av. Brasil, 3129 (entre Rambla y Juan Benito Blanco)☎️2709 8345 - 097 000 063 ☎️2902 4142 - 098 486 487 www."
-      },
-      "temporada": "Octubre 2026",
-      "notas": [
-        "butaca, servicio abordo, ni seguro)-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)",
-        "MENORES HASTA 5 AÑOS FREE",
-        "VALOR DE PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 15 DE AGOSTO 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)",
-        "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
-      ],
-      "updatedAt": "2026-10-19T15:01:12.007Z"
-    },
-    {
-      "id": "rutatur-713",
-      "rutaId": "713",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/camboriu-8-dias-5-noches-oktoberfest2026-excursion-713",
-      "titulo": "CAMBORIU 8 DIAS (5 Noches) OKTOBERFEST 2026",
-      "subtitulo": "8 DÍAS / 5 NOCHES",
-      "duracion": "8 DÍAS / 5 NOCHES",
-      "destino": "CAMBORIU 8 DIAS (5 Noches) OKTOBERFEST 2026",
-      "destinoSlug": "camboriu",
-      "pais": "Brasil",
-      "emoji": "🎡",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2025-06-11_7413795.png",
-      "highlights": [
-        "📍 CAMBORIU"
-      ],
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "10 y 17 DE OCTUBRE 2026 HORA 13.30",
-          "gold": true
-        }
-      ],
-      "salidas": [
-        "10 y 17 DE OCTUBRE 2026 HORA 13.30"
-      ],
-      "itinerario": [
-        {
-          "dia": "DÍA 01",
-          "lugar": "MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y Día 02 – CAMBORIUArribo al principal balneario del Estado de Santa Catarina. Alojamiento en hotel de categoría 4 ****. Almuerzo o Cena Buffet incluida. Dias 03 – 04 CAMBORIU Desayuno Buffet. Días libres para actividades personales y comenzar a descubrir los encantos del Balneario más importante de Santa Catarina. Almuerzo o Cena Buffet Incluida.",
-          "detalle": "",
-          "first": true,
-          "last": false
-        },
-        {
-          "dia": "DÍA 05",
-          "lugar": "CAMBORIU - BLUMENAUDesayuno Buffet. Mañana libre. Almuerzo Buffet. En horas de la tarde emprenderemos viaje hacia BLUMENAU ciudad de colonización alemana. Vista panorámica de sus principales puntos de atracción, la Prefectura, El Puente de Hierro, el Molino del Valle, Avda. 7 de Setiembre, su Catedral para culminar nuestra visita en los pabellones donde se realiza la OKTOBERFEST, (ingreso incluido) Regreso a nuestro hotel. Noche libre.",
-          "detalle": "",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 06",
-          "lugar": "CAMBORIU – PLAYA DE LARANJEIRASDesayuno Buffet. Traslado a la Terminal del Parque Unipraias. Desde allí nos trasladaremos a la hermosa Playa de Laranjeiras donde disfrutaremos de tiempo libre para disfrutar de sus cristalinas aguas. Podrá viajar en Teleférico a través de sus estaciones nos permitirá recorrer la Mata Atlántica y tener las vistas más bonitas de la región. Almuerzo o Cena Buffet Incluida. Día 07 – CAMBORIUDesayuno Buffet. En horario oportuno ya con nuestros equipajes emprenderemos nuestro viaje de retorno con Almuerzo en Restaurante, Merienda y Desayuno abordo, vía Porto Alegre, Pelotas, Chuy para arribar a... Día 08 - MONTEVIDEO¡Llegada a nuestra ciudad y",
-          "detalle": "",
-          "first": false,
-          "last": true
-        }
-      ],
-      "hoteles": [
-        {
-          "nombre": "MIRAMAR 4",
-          "url": "www.hotelmiramar.com.br"
-        }
-      ],
-      "precios": {
-        "doble": 699,
-        "promo": 629,
-        "singleLabel": "Habitación Single: +35% adicional",
-        "menorGratis": "Menores hasta 5 años: invitado",
-        "promoTexto": "PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 15 DE SETIEMBRE (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES) HOTEL MIRAMAR 4****www.hotelmiramar.com.br Valor por persona en basa doble o triple U$S 699 // PROMO U$S 629 HABITACION SINGLE 35 % MAS -MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo) Av. Brasil 3129 - 2709 8345 - 2902 4142 – Montevideo – Uruguay www."
-      },
-      "temporada": "Octubre 2026",
-      "notas": [
-        "butaca, servicio abordo, ni seguro)-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo) Av. Brasil 3129 - 2709 8345",
-        "MENORES HASTA 5 AÑOS FREE",
-        "VALOR DE PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 15 DE SETIEMBRE (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)",
-        "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo) Av. Brasil 3129 - 2709 8345 - 2902 4142 – Montevideo – Uruguay"
-      ],
-      "updatedAt": "2026-10-19T15:01:13.397Z"
-    },
-    {
-      "id": "rutatur-778",
-      "rutaId": "778",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/termas-romanas-5-dias-excursion-778",
-      "titulo": "Termas Romanas 5 Días",
-      "subtitulo": "5 DÍAS / 3 NOCHES",
-      "duracion": "5 DÍAS / 3 NOCHES",
-      "destino": "Termas Romanas",
-      "destinoSlug": "termasromanas",
-      "pais": "Argentina",
-      "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-09-30_87606427.png",
-      "highlights": [
-        "📍 TERMAS ROMANAS"
-      ],
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "por Ruta 5, vía Rivera, rumbo a un inolvidable destino.",
-          "gold": true
-        },
-        {
-          "label": "Otras salidas",
-          "value": "Programada: 19 de OCTUBRE 2026 – 19:30Hs. · 19 de Octubre 2026 - 19:30Hs",
-          "gold": false
-        }
-      ],
-      "salidas": [
-        "por Ruta 5, vía Rivera, rumbo a un inolvidable destino.",
-        "Programada: 19 de OCTUBRE 2026 – 19:30Hs.",
-        "19 de Octubre 2026 - 19:30Hs"
-      ],
-      "itinerario": [
-        {
-          "dia": "DÍA 01",
-          "lugar": "MONTEVIDEOPartida en horas de la noche desde Montevideo - Terminal Tres Cruces, en modernas unidades semicama equipadas con servicio a bordo, bebidas open bar y guía acompañante durante todo el recorrido. Salida por Ruta 5, vía Rivera, rumbo a un inolvidable destino.",
-          "detalle": "",
-          "first": true,
-          "last": false
-        },
-        {
-          "dia": "DÍA 02",
-          "lugar": "TERMAS ROMANASLlegada en horas de la mañana al Hotel Recanto Business, donde disfrutaremos de un desayuno en el restaurante del hotel y la presentación de sus instalaciones. Al mediodía, almuerzo con una bebida incluida. Luego realizaremos el Check In. n horario oportuno visitaremos el Distrito Turístico Vale Veneto. Este pintoresco distrito, con fuerte influencia de la cultura italiana, ofrece un ambiente ideal para un paseo tranquilo y conocer la historia local. Durante el recorrido, visitaremos el Emporio das Olivas, un lugar donde podrás aprender sobre la elaboración del aceite de oliva y degustar productos relacionados, disfrutando de una experiencia auténtica y llena de sabor. Retorno al hotel para seguir disfrutando con Pensión completa más una bebida incluida.",
-          "detalle": "",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 03 y 04 – TERMAS ROMANASDías completamente libre para disfrutar de las instalaciones del complejo termal, relajarse y aprovechar las actividades del hotel a su propio ritmo. Régimen de pensión completa más bebida por comida, para que vivan una experiencia cómoda y sin preocupaciones.",
-          "lugar": "DÍA 03 y 04 – TERMAS ROMANASDías completamente libre para disfrutar de las instalaciones del complejo termal, relajarse y aprovechar las actividades del hotel a su propio ritmo. Régimen de pensión completa más bebida por comida, para que vivan una experiencia cómoda y sin preocupaciones.",
-          "detalle": "",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 05",
-          "lugar": "TERMAS ROMANAS – MONTEVIDEODesayuno Buffet, en horario oportuno realizaremos check out. despidiéndonos de este encantador lugar. Aún tendremos tiempo libre para disfrutar antes del almuerzo incluido con una bebida por persona. En horario oportuno emprendemos nuestro viaje de retorno vía Rivera, disfrutando del paisaje y los recuerdos compartidos, para arribar en horas de la noche a Montevideo. ¡",
-          "detalle": "",
-          "first": false,
-          "last": true
-        }
-      ],
-      "hoteles": [],
-      "precios": {
-        "doble": 429,
-        "promo": 399,
-        "singleLabel": "Habitación Single: +35% adicional",
-        "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 399*** Single: 35 % MAS RUTATUR INTERNACIONAL: ☎ 2902 4142 - 098 486 487* Pocitos: Av. Brasil, 3129☎ 2709 8345 - 097 000 063 Salida 19 de Octubre 2026 - 19:30Hs BRASIL Nuestros Servicios Contacto Av. Brasil 3129 2902 4142 / 2709 8345 Por Excursiones: pocitos@"
-      },
-      "temporada": "",
-      "notas": [
-        "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 429 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 399"
-      ],
-      "updatedAt": "2026-10-19T15:01:14.766Z"
-    },
-    {
-      "id": "rutatur-812",
-      "rutaId": "812",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/termas-de-machadinho-7-dias4-noches-excursion-812",
-      "titulo": "TERMAS DE MACHADINHO 7 Días / 4 Noches",
-      "subtitulo": "7 DÍAS / 4 NOCHES",
-      "duracion": "7 DÍAS / 4 NOCHES",
-      "destino": "TERMAS DE MACHADINHO",
-      "destinoSlug": "machadinho",
-      "pais": "Brasil",
-      "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-09_54719485.png",
-      "highlights": [
-        "📍 TERMAS DE MACHADINHO PARK HOTEL"
-      ],
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "24 de Octubre de 2026 – Hora: 14:00 hs",
-          "gold": true
-        },
-        {
-          "label": "Otras salidas",
-          "value": "Y TARIFAS · 24 de Octubre 2026 - 14:00hs",
-          "gold": false
-        }
-      ],
-      "salidas": [
-        "24 de Octubre de 2026 – Hora: 14:00 hs",
-        "Y TARIFAS",
-        "24 de Octubre 2026 - 14:00hs"
-      ],
-      "itinerario": [
-        {
-          "dia": "DÍA 01",
-          "lugar": "MONTEVIDEOPartida en modernas unidades de última generación equipadas con asientos \"Semi Cama\". Contaremos con servicio a bordo (merienda, cena y desayuno), Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
-          "detalle": "",
-          "first": true,
-          "last": false
-        },
-        {
-          "dia": "DÍA 02",
-          "lugar": "TERMAS DE MACHADINHO PARK HOTELLlegada y alojamiento (impuestos incluidos). Check-in a las 15:00 hs. Resto del día libre para comenzar a disfrutar del complejo. El hotel cuenta con piscinas abiertas y cubiertas, y todas las comodidades para hacer de nuestra estadía un recuerdo inolvidable. Conoceremos y disfrutaremos de las instalaciones del Parque Termal, cuya agua surge a 980 metros de profundidad a 45 °C; sus propiedades estimulan la salud, las afecciones reumáticas, la piel y el sistema digestivo. Por la noche, Cena Buffet.",
-          "detalle": "DÍAS 03, 04 y 05 – TERMAS DE MACHADINHODesayuno Buffet. Días enteramente libres para descansar y disfrutar de las instalaciones del complejo. Alojamiento con Pensión Completa + bebidas incluidas durante las comidas.",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 06",
-          "lugar": "TERMAS DE MACHADINHODesayuno Buffet y mañana libre. Almuerzo Buffet. Luego de haber pasado unos días inolvidables, en horario oportuno emprenderemos nuestro viaje de retorno con merienda y desayuno a bordo, vía Porto Alegre y Pelotas para arribar a...",
-          "detalle": "",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 07",
-          "lugar": "MONTEVIDEO¡Llegada en horas de la mañana y",
-          "detalle": "",
-          "first": false,
-          "last": true
-        }
-      ],
-      "hoteles": [
-        {
-          "nombre": "Machadinho Thermas Resort Spa",
-          "ciudad": "ALOJAMIENTO"
-        }
-      ],
-      "precios": {
-        "doble": 779,
-        "promoDoble": 699,
-        "triple": 759,
-        "promoTriple": 679,
-        "single": 1.029,
-        "butaca": 299,
-        "promoTexto": "PROMO PAGO CONTADO: U$S 699 Base Triple: U$S 759 → PROMO PAGO CONTADO: U$S 679 Habitación Single: U$S 1.029 → PROMO PAGO CONTADO: U$S 959 * Menores (hasta 12 años): ¡Es nuestro invitado! (Acompañado por un mínimo de 2 adultos en la misma habitación). Solo abona la butaca de U$S 299 (incluye asiento, servicio a bordo y seguro de asistencia). ALOJAMIENTO:Machadinho Thermas Resort Spa**** www.machadinhothermas.com.br INFORMACIÓN Y RESERVAS: Rutatur: Av. Brasil 3129 – Tel: 2709 8345 WhatsApp: 098 486 487 Web: www."
-      },
-      "temporada": "Octubre 2026",
-      "notas": [
-        "butaca de U$S 299 (incluye asiento, servicio a bordo y seguro de asistencia).",
-        "DÍA 01 – MONTEVIDEOPartida en modernas unidades de última generación equipadas con asientos \"Semi Cama\". Contaremos con servicio a bordo (merienda, cena y desayuno), Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
-        "Habitación Single: U$S 1.029 → PROMO PAGO CONTADO: U$S 959",
-        "Menores (hasta 12 años): ¡Es nuestro invitado! (Acompañado por un mínimo de 2 adultos en la misma habitación). Solo abona la butaca de U$S 299 (incluye asiento, servicio a bordo y seguro de asistencia)."
-      ],
-      "updatedAt": "2026-10-19T15:01:16.163Z"
-    },
     {
       "id": "rutatur-823",
       "rutaId": "823",
@@ -320,7 +14,7 @@
       "destinoSlug": "termasromanas",
       "pais": "Argentina",
       "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-04-27_99909301.png",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-22_97760242.png",
       "highlights": [
         "📍 TERMAS ROMANAS"
       ],
@@ -382,7 +76,7 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 469 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 439"
       ],
-      "updatedAt": "2026-10-19T15:01:17.563Z"
+      "updatedAt": "2026-10-26T14:35:37.532Z"
     },
     {
       "id": "rutatur-829",
@@ -396,7 +90,7 @@
       "destinoSlug": "gramado",
       "pais": "Brasil",
       "emoji": "🌲",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-06-10_17545325.png",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-22_99471206.png",
       "highlights": [
         "📍 CANELA",
         "📍 PARQUE NOVA PETROPOLIS"
@@ -488,7 +182,7 @@
         "butaca, servicio abordo y seguro de asistencia.",
         "- Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-10-19T15:01:18.934Z"
+      "updatedAt": "2026-10-26T14:35:38.917Z"
     },
     {
       "id": "rutatur-839",
@@ -502,7 +196,7 @@
       "destinoSlug": "rio",
       "pais": "Brasil",
       "emoji": "🏙️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-16_68814312.png",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-22_99892234.png",
       "highlights": [
         "📍 BLN. CAMBORIÚ",
         "📍 CAMBORIÚ - RIO DE JANEIRO",
@@ -620,7 +314,7 @@
       "notas": [
         "Día 01 – MONTEVIDEO Partida en modernas unidades equipadas con asientos “Semi Cama”, con Desayuno, Merienda, Almuerzo y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre, Florianópolis y..."
       ],
-      "updatedAt": "2026-10-19T15:01:20.302Z"
+      "updatedAt": "2026-10-26T14:35:40.268Z"
     },
     {
       "id": "rutatur-716",
@@ -727,207 +421,59 @@
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca U$S 299 (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-10-19T15:01:21.680Z"
+      "updatedAt": "2026-10-26T14:35:41.619Z"
     },
     {
-      "id": "rutatur-678",
-      "rutaId": "678",
+      "id": "rutatur-725",
+      "rutaId": "725",
       "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/cataratas7-dias4-noches-excursion-678",
-      "titulo": "CATARATAS 7 Días / 4 Noches",
-      "subtitulo": "7 DÍAS / 4 NOCHES",
-      "duracion": "7 DÍAS / 4 NOCHES",
-      "destino": "CATARATAS",
-      "destinoSlug": "cataratas",
-      "pais": "Cataratas",
-      "emoji": "🌊",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2025-06-03_76964173.jpg",
-      "highlights": [],
+      "sourceUrl": "https://www.rutatur.com/florianopolis-de-lujo-8-dias-excursion-725",
+      "titulo": "FLORIANOPOLIS DE LUJO 8 Días",
+      "subtitulo": "8 DÍAS / 5 NOCHES",
+      "duracion": "8 DÍAS / 5 NOCHES",
+      "destino": "FLORIANOPOLIS DE LUJO",
+      "destinoSlug": "florianopolis",
+      "pais": "Brasil",
+      "emoji": "🏖️",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-22_00217285.png",
+      "highlights": [
+        "📍 FLORIANOPOLIS"
+      ],
       "fechas": [
         {
           "label": "Salida",
-          "value": "07 DE NOVIEMBRE 2026 - Hora de salida: 12.00",
+          "value": "14 y 21 de Noviembre 2026 - 13:30hs",
           "gold": true
         },
         {
           "label": "Otras salidas",
-          "value": "07 DE NOVIEMBRE 2026 HORA 12:00",
+          "value": "para conocer el centro de la isla donde recorreremos el Mercado Municipal de Flo",
           "gold": false
         }
       ],
       "salidas": [
-        "07 DE NOVIEMBRE 2026 - Hora de salida: 12.00",
-        "07 DE NOVIEMBRE 2026 HORA 12:00"
+        "14 y 21 de Noviembre 2026 - 13:30hs",
+        "para conocer el centro de la isla donde recorreremos el Mercado Municipal de Flo"
       ],
       "itinerario": [],
       "hoteles": [
         {
-          "nombre": "Foz Plaza:",
-          "url": "www.fozplaza.com.br"
-        }
-      ],
-      "precios": {
-        "doble": 639,
-        "singleLabel": "Habitación Single: +35% adicional",
-        "butaca": 299,
-        "menorGratis": "Menores hasta 4 años: invitado",
-        "promoTexto": "PROMO U$S 599. Single: 35 % MAS * Hotel: Foz Plaza:www.fozplaza.com.br * Seguro de Asistencia incluido. * Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)* Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia RUTATUR INTERNACIONAL: Pocitos: Av. Brasil, 3129 (entre Rambla y Juan Benito Blanco)☎️2709 8345 - 097 000 063 ☎️ 2902 4142 - 098 486 487 www."
-      },
-      "temporada": "Noviembre 2026",
-      "notas": [
-        "butaca ni seguro de asistencia) Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia",
-        "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:\nSIN CARGO",
-        "Día 01: MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con servicio a bordo, Merienda, Cena. Servicio de Open-Bar y guía acompañante durante todo el recorrido. Ingreso a territorio argentino y continuación hacia...",
-        "PRECIO DE PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 31 DE AGOSTO 2026, (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)",
-        "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:",
-        "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia) Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
-      ],
-      "updatedAt": "2026-10-19T15:01:23.068Z"
-    },
-    {
-      "id": "rutatur-807",
-      "rutaId": "807",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/termas-de-machadinho-7-dias-excursion-807",
-      "titulo": "TERMAS DE MACHADINHO 7 Días",
-      "subtitulo": "7 DÍAS",
-      "duracion": "7 DÍAS",
-      "destino": "TERMAS DE MACHADINHO",
-      "destinoSlug": "machadinho",
-      "pais": "Brasil",
-      "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-07-02_02358486.png",
-      "highlights": [
-        "📍 TERMAS DE MACHADINHO PARK HOTEL"
-      ],
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "SABADO 07 DE NOVIEMBRE 2026 - HORA 14:00hs",
-          "gold": true
-        },
-        {
-          "label": "Otras salidas",
-          "value": "07 de Noviembre 2026 - 14:00 Hs",
-          "gold": false
-        }
-      ],
-      "salidas": [
-        "SABADO 07 DE NOVIEMBRE 2026 - HORA 14:00hs",
-        "07 de Noviembre 2026 - 14:00 Hs"
-      ],
-      "itinerario": [
-        {
-          "dia": "DÍA 01",
-          "lugar": "MONTEVIDEO Partida en modernas unidades de última generación equipadas con asientos “Semi Cama”, servicio a bordo, Merienda, Cena y Desayuno, Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
-          "detalle": "",
-          "first": true,
-          "last": false
-        },
-        {
-          "dia": "DÍA 02",
-          "lugar": "TERMAS DE MACHADINHO PARK HOTEL Llegada y alojamiento en habitaciones con impuestos incluidos. Check inn hora 15. Resto del día libre para disfrutar del complejo. Nuestro hotel cuenta con piscinas abiertas y cubiertas y todas las comodidades que harán de nuestra estadía un recuerdo inolvidable. Conoceremos y disfrutaremos de las dependencias del Parque Termal. El agua que abastece al complejo termal tiene su absorción de 980 metros de profundidad con una temperatura de 45 º centígrados. Sus aguas son apropiadas y se indican para el mantenimiento de nuestra salud, indicado para enfermedades de la piel, en las afecciones reumáticas y actúa como un estimulante de las funciones gastrointestinales entre otras. Por la noche Cena Buffet.",
-          "detalle": "",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 03-04-05",
-          "lugar": "TERMAS DE MACHADINHODesayuno Buffet. Días enteramente libre para disfrutar del complejo. Alojamiento con pensión completa + bebidas durante las comidas",
-          "detalle": "",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 06",
-          "lugar": "TERMAS DE MACHADINHODesayuno Buffet. Mañana libre. Almuerzo Buffet Luego de haber pasado unos días inolvidables, en horario oportuno emprenderemos nuestro viaje retorno, con Merienda y Desayuno abordo, vía Porto Alegre, Pelotas para arribar a…",
-          "detalle": "",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 07",
-          "lugar": "MONTEVIDEO ¡Llegada en horas de la mañana y",
-          "detalle": "",
-          "first": false,
-          "last": true
-        }
-      ],
-      "hoteles": [
-        {
-          "nombre": "MACHADINHO PARK HOTEL",
-          "url": "www.parkhoteltermasmachadinho.com.br"
-        },
-        {
-          "nombre": "- 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO"
+          "nombre": "JURERE BEACH VILLAGE 4 (FLORIANOPOLIS)",
+          "url": "www.jurerebeachvillage.com.br"
         }
       ],
       "precios": {
         "doble": 799,
-        "promoDoble": 769,
-        "triple": 779,
-        "promoTriple": 749,
-        "promoTexto": "PROMO PAGO CONTADO U$S 769 *** - COSTO POR PERSONA EN BASE TRIPLE U$S 779 *** PROMO PAGO CONTADO U$S 749*** Single +35% - 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO*** -COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia) ¡A disfrutar! Pocitos: Av. Brasil 3129 - 2709 8345 - 097 000 063 Montevideo – Uruguay www."
+        "promo": 699,
+        "singleLabel": "Habitación Single: +35% adicional",
+        "promoTexto": "PROMO U$S 699 Single: 35 % MAS * Seguro de Asistencia incluido* RUTATUR INTERNACIONAL: Pocitos: Av. Brasil, 3129 (entre Rambla y Juan Benito Blanco)☎️2709 8345 - 097 000 063 ☎️2902 4142 - 098 486 487 Salidas: 14 y 21 de Noviembre 2026 - 13:30hs BRASIL Nuestros Servicios Contacto Av. Brasil 3129 2902 4142 / 2709 8345 Por Excursiones: pocitos@"
       },
       "temporada": "Noviembre 2026",
       "notas": [
-        "COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)",
-        "Dia 01 – MONTEVIDEO Partida en modernas unidades de última generación equipadas con asientos “Semi Cama”, servicio a bordo, Merienda, Cena y Desayuno, Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y…",
-        "- 1 MENOR HASTA 12 AÑOS ACOMPAÑADO MINIMO POR 2 ADULTOS EN LA MISMA HABITACION ES NUESTO INVITADO",
-        "-COSTO DE LA BUTACA: 299 U$S (Incluye: asiento, servicio a bordo, seguro de asistencia)"
+        "Día 01: MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, Merienda, Cena y Desayuno a bordo.Servicio de Open Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
+        "PRECIO PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 30 DE SEPTIEMBRE 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)"
       ],
-      "updatedAt": "2026-10-19T15:01:24.468Z"
-    },
-    {
-      "id": "rutatur-814",
-      "rutaId": "814",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/termas-de-gravatal-8-dias5-noches-excursion-814",
-      "titulo": "TERMAS DE GRAVATAL - 8 DIAS/5 NOCHES",
-      "subtitulo": "8 DÍAS / 5 NOCHES",
-      "duracion": "8 DÍAS / 5 NOCHES",
-      "destino": "TERMAS DE GRAVATAL - 8 DIAS/5 NOCHES",
-      "destinoSlug": "gravatal",
-      "pais": "Brasil",
-      "emoji": "♨️",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-06-11_87044175.jpg",
-      "highlights": [],
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "14 de Noviembre de 2026 – 13:30 hs",
-          "gold": true
-        },
-        {
-          "label": "Otras salidas",
-          "value": "14 Noviembre 2026 - 13:30",
-          "gold": false
-        }
-      ],
-      "salidas": [
-        "14 de Noviembre de 2026 – 13:30 hs",
-        "14 Noviembre 2026 - 13:30"
-      ],
-      "itinerario": [],
-      "hoteles": [
-        {
-          "nombre": "Internacional Termas de Gravatal ()",
-          "ciudad": "Alojamiento",
-          "url": "www.hotelinternacionalgravatal.com.br"
-        }
-      ],
-      "precios": {
-        "promoTexto": "PROMO PAGO CONTADO: US$ 889 Habitación Triple: US$ 949 | PROMO PAGO CONTADO: US$ 839 Habitación Single: US$ 1.308 | PROMO PAGO CONTADO: US$ 1.199 Menores (5 a 12 años): US$ 479 | PROMO PAGO CONTADO: US$ 419 (acompañados por 2 adultos en la habitación) Condición de la Promoción: Válida señando con el 30% contado hasta el 28 de Octubre de 2026. Cupos limitados. (No acumulable con otras promociones). INFORMACIÓN Y RESERVASDirección: Av. Brasil 3129 - Montevideo Teléfono: 2709 8345 WhatsApp: 098 486 487 Web: www."
-      },
-      "temporada": "Noviembre 2026",
-      "notas": [
-        "TARIFAS POR PERSONA:Habitación Doble: US$ 969 | PROMO PAGO CONTADO: US$ 889",
-        "Habitación Triple: US$ 949 | PROMO PAGO CONTADO: US$ 839",
-        "Habitación Single: US$ 1.308 | PROMO PAGO CONTADO: US$ 1.199",
-        "Menores (5 a 12 años): US$ 479 | PROMO PAGO CONTADO: US$ 419 (acompañados por 2 adultos en la habitación)",
-        "Condición de la Promoción: Válida señando con el 30% contado hasta el 28 de Octubre de 2026. Cupos limitados. (No acumulable con otras promociones)."
-      ],
-      "updatedAt": "2026-10-19T15:01:25.874Z"
+      "updatedAt": "2026-10-26T14:35:43.304Z"
     },
     {
       "id": "rutatur-836",
@@ -1012,7 +558,7 @@
         "Menores hasta 3 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
         "Solo asiento: U$S 299- Incluye, butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-10-19T15:01:27.241Z"
+      "updatedAt": "2026-10-26T14:35:44.660Z"
     },
     {
       "id": "rutatur-699",
@@ -1026,7 +572,7 @@
       "destinoSlug": "gramado",
       "pais": "Brasil",
       "emoji": "🌲",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2025-06-09_90608484.jpg",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-22_98540321.png",
       "highlights": [
         "📍 CANELA"
       ],
@@ -1111,7 +657,7 @@
         "COSTO DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 20 DE SETIEMBRE 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)",
         "-Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-10-19T15:01:28.614Z"
+      "updatedAt": "2026-10-26T14:35:46.008Z"
     },
     {
       "id": "rutatur-824",
@@ -1187,7 +733,7 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 489 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 469"
       ],
-      "updatedAt": "2026-10-19T15:01:29.971Z"
+      "updatedAt": "2026-10-26T14:35:47.356Z"
     },
     {
       "id": "rutatur-718",
@@ -1231,7 +777,7 @@
         },
         {
           "dia": "DÍA 04",
-          "lugar": "CAMBORIUDesayuno Buffet. Día libre para disfrutar de las playas o en forma opcional conocer la más nueva atracción del Balneario, la Súper Rueda Gigante, de 82 metros de altura, permitirá ver en 360 grados la mata atlántica, el mar y el borde de una de las playas más famosas de Brasil. Cena Buffet. Por la noche traslado al Cristo Luz con ingreso incluido donde disfrutaremos de una hermosa vista nocturna con Camboriu a nuestros pies.",
+          "lugar": "CAMBORIUDesayuno Buffet. En horario oportuno conoceremos la Súper Rueda Gigante (INGRESO INCLUIDO), de 82 metros de altura, permitirá ver en 360 grados la mata atlántica, el mar y el borde de una de las playas más famosas de Brasil. Cena Buffet. Por la noche traslado al Cristo Luz (INGRESO INCLUIDO) con ingreso incluido donde disfrutaremos de una hermosa vista nocturna con Camboriu a nuestros pies.",
           "detalle": "",
           "first": false,
           "last": false
@@ -1289,7 +835,7 @@
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-10-19T15:01:31.350Z"
+      "updatedAt": "2026-10-26T14:35:48.708Z"
     },
     {
       "id": "rutatur-675",
@@ -1303,7 +849,7 @@
       "destinoSlug": "cataratas",
       "pais": "Cataratas",
       "emoji": "🌊",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2025-06-03_76536217.jpg",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-22_00434443.png",
       "highlights": [
         "📍 FOZ DE IGUAZU"
       ],
@@ -1347,7 +893,58 @@
         "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
         "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-10-19T15:01:32.723Z"
+      "updatedAt": "2026-10-26T14:35:50.087Z"
+    },
+    {
+      "id": "rutatur-726",
+      "rutaId": "726",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/jurere-8-dias-5-noches-excursion-726",
+      "titulo": "JURERE 8 DIAS (5 NOCHES)",
+      "subtitulo": "8 DÍAS / 5 NOCHES",
+      "duracion": "8 DÍAS / 5 NOCHES",
+      "destino": "JURERE 8 DIAS (5 NOCHES)",
+      "destinoSlug": "jurere",
+      "pais": "Brasil",
+      "emoji": "🏖️",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-22_0020244.png",
+      "highlights": [],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "para conocer el centro de la isla donde recorreremos el Mercado Municipal de Flo",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "05 DE DICIEMBRE 2026 - Hora: 13.30. · 05 DE DICIEMBRE 2026 HORA 13:30",
+          "gold": false
+        }
+      ],
+      "salidas": [
+        "para conocer el centro de la isla donde recorreremos el Mercado Municipal de Flo",
+        "05 DE DICIEMBRE 2026 - Hora: 13.30.",
+        "05 DE DICIEMBRE 2026 HORA 13:30"
+      ],
+      "itinerario": [],
+      "hoteles": [
+        {
+          "nombre": "JURERE BEACH VILLAGE 4 (FLORIANOPOLIS)",
+          "url": "www.jurerebeachvillage.com.br"
+        }
+      ],
+      "precios": {
+        "doble": 799,
+        "promo": 739,
+        "singleLabel": "Habitación Single: +35% adicional",
+        "promoTexto": "PROMO U$S 739 Single: 35 % MAS * Seguro de Asistencia incluido* RUTATUR INTERNACIONAL: Pocitos: Av. Brasil, 3129 (entre Rambla y Juan Benito Blanco)☎️2709 8345 - 097 000 063 ☎️2902 4142 - 098 486 487 SALIDA 05 DE DICIEMBRE 2026 HORA 13:30 BRASIL Nuestros Servicios Contacto Av. Brasil 3129 2902 4142 / 2709 8345 Por Excursiones: pocitos@"
+      },
+      "temporada": "",
+      "notas": [
+        "Día 01: MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, Merienda, Cena y Desayuno a bordo.Servicio de Open Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
+        "PRECIO PROMO VALIDO SEÑANDO CON 30% CONTADO HASTA EL 30 DE SEPTIEMBRE 2025 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)"
+      ],
+      "updatedAt": "2026-10-26T14:35:51.465Z"
     },
     {
       "id": "rutatur-811",
@@ -1399,7 +996,7 @@
         },
         {
           "dia": "DÍA 03",
-          "lugar": "CAMBORIU, RUEDA GIGANTE, CRISTO LUZDesayuno Buffet. Comenzamos el día rumbo a la imponente Súper Rueda Gigante (¡Ingreso Incluido!). Prepárate para alucinar con una vista en 360 grados que combina la majestuosidad de la Mata Atlántica, el mar y el borde de una de las playas más famosas de Brasil. Almuerzo o Cena Buffet incluida. Por la noche traslado al Cristo Luz con (ingreso Incluido) donde disfrutaremos de una hermosa vista nocturna con Camboriu a nuestros pies.",
+          "lugar": "CAMBORIU, RUEDA GIGANTE, CRISTO LUZDesayuno Buffet. Comenzamos el día rumbo a la imponente Súper Rueda Gigante (Ingreso Incluido). Prepárate para alucinar con una vista en 360 grados que combina la majestuosidad de la Mata Atlántica, el mar y el borde de una de las playas más famosas de Brasil. Almuerzo o Cena Buffet incluida. Por la noche traslado al Cristo Luz con (ingreso Incluido) donde disfrutaremos de una hermosa vista nocturna con Camboriu a nuestros pies.",
           "detalle": "",
           "first": false,
           "last": false
@@ -1465,7 +1062,7 @@
         "-Menores hasta 5 años inclusive free (máximo 1 por habitación, acompañado mínimo con 2 adultos pagantes en la misma habitación, no les corresponde butaca, servicio abordo ni seguro de asistencia)",
         "-Menores de 6 a 12 años inclusive, Costo U$S 699 // Promo U$S 639 (acompañado mínimo con 2 adultos pagantes por habitación).-Costo de la butaca para menores hasta 5 años 345 U$S//PROMO U$S 299, incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-10-19T15:01:34.107Z"
+      "updatedAt": "2026-10-26T14:35:52.820Z"
     },
     {
       "id": "rutatur-830",
@@ -1479,7 +1076,7 @@
       "destinoSlug": "gramado",
       "pais": "Brasil",
       "emoji": "🌲",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-06-10_17855260.png",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-22_99015207.png",
       "highlights": [
         "📍 CANELA",
         "📍 PARQUE NOVA PETROPOLIS"
@@ -1571,7 +1168,7 @@
         "butaca, servicio abordo y seguro de asistencia.",
         "- Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-10-19T15:01:35.496Z"
+      "updatedAt": "2026-10-26T14:35:54.170Z"
     },
     {
       "id": "rutatur-727",
@@ -1627,7 +1224,7 @@
         "-MENORES HASTA 5 AÑOS FREE - Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-10-19T15:01:36.872Z"
+      "updatedAt": "2026-10-26T14:35:55.527Z"
     },
     {
       "id": "rutatur-833",
@@ -1707,7 +1304,7 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 619 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 579"
       ],
-      "updatedAt": "2026-10-19T15:01:38.232Z"
+      "updatedAt": "2026-10-26T14:35:56.867Z"
     },
     {
       "id": "rutatur-728",
@@ -1721,25 +1318,25 @@
       "destinoSlug": "camboriu",
       "pais": "Brasil",
       "emoji": "🎡",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-06-22_40181173.png",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-24_45804264.png",
       "highlights": [
         "📍 CAMBORIU"
       ],
       "fechas": [
         {
           "label": "Salida",
-          "value": "Programada Sábado 26 DE DICIEMBRE 2026 - 13:30hs",
+          "value": "CONFIRMADA Sábado 27 DE DICIEMBRE 2026 - 13:30hs",
           "gold": true
         },
         {
           "label": "Otras salidas",
-          "value": "26 DE DICIEMBRE 2026 - Hora 13:30",
+          "value": "27 de DICIEMBRE 2026 - Hora 13:30",
           "gold": false
         }
       ],
       "salidas": [
-        "Programada Sábado 26 DE DICIEMBRE 2026 - 13:30hs",
-        "26 DE DICIEMBRE 2026 - Hora 13:30"
+        "CONFIRMADA Sábado 27 DE DICIEMBRE 2026 - 13:30hs",
+        "27 de DICIEMBRE 2026 - Hora 13:30"
       ],
       "itinerario": [],
       "hoteles": [
@@ -1753,7 +1350,7 @@
         "promo": 889,
         "singleLabel": "Habitación Single: +35% adicional",
         "menorGratis": "Menores hasta 5 años: invitado",
-        "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 889 HABITACION SINGLE 35 % MAS -MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro) -Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo) RUTATUR INTERNACIONAL: Pocitos: Av. Brasil, 3129 (entre Rambla y Juan Benito Blanco)☎️2709 8345 - 097 000 063 ☎️2902 4142 - 098 486 487 SALIDA 26 DE DICIEMBRE 2026 - Hora 13:30 BRASIL Nuestros Servicios Contacto Av. Brasil 3129 2902 4142 / 2709 8345 Por Excursiones: pocitos@"
+        "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 889 HABITACION SINGLE 35 % MAS -MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro) -Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo) RUTATUR INTERNACIONAL: Pocitos: Av. Brasil, 3129 (entre Rambla y Juan Benito Blanco)☎️2709 8345 - 097 000 063 ☎️2902 4142 - 098 486 487 SALIDA 27 de DICIEMBRE 2026 - Hora 13:30 BRASIL Nuestros Servicios Contacto Av. Brasil 3129 2902 4142 / 2709 8345 Por Excursiones: pocitos@"
       },
       "temporada": "Diciembre 2026",
       "notas": [
@@ -1762,7 +1359,7 @@
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-10-19T15:01:39.592Z"
+      "updatedAt": "2026-10-26T14:35:58.236Z"
     },
     {
       "id": "rutatur-729",
@@ -1812,7 +1409,7 @@
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-10-19T15:01:40.974Z"
+      "updatedAt": "2026-10-26T14:35:59.579Z"
     },
     {
       "id": "rutatur-744",
@@ -1854,7 +1451,7 @@
       },
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-10-19T15:01:42.334Z"
+      "updatedAt": "2026-10-26T14:36:00.925Z"
     },
     {
       "id": "rutatur-755",
@@ -1959,7 +1556,7 @@
         "-Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia).-Seguro obligatorio costo 30 U$S",
         "-Solo asiento: U$S 259 - Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-10-19T15:01:43.706Z"
+      "updatedAt": "2026-10-26T14:36:02.340Z"
     },
     {
       "id": "rutatur-827",
@@ -2093,99 +1690,7 @@
         "Día 01 – MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, con Desayuno, Merienda, Almuerzo y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre, Florianópolis y...",
         "Precio Por Persona hab. Doble o Triple U$S 1269 - PROMO PAGO CONTADO O TRANSFERENCIA U$S 1189"
       ],
-      "updatedAt": "2026-10-19T15:01:45.068Z"
-    },
-    {
-      "id": "rutatur-837",
-      "rutaId": "837",
-      "operador": "rutatur",
-      "sourceUrl": "https://www.rutatur.com/capao-da-canoa-7-dias4-noches-excursion-837",
-      "titulo": "CAPAO DA CANOA 7 Días / 4 Noches",
-      "subtitulo": "7 DÍAS / 4 NOCHES",
-      "duracion": "7 DÍAS / 4 NOCHES",
-      "destino": "CAPAO DA CANOA",
-      "destinoSlug": "otro",
-      "pais": "Otros",
-      "emoji": "📍",
-      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-09-23_9482614.png",
-      "highlights": [
-        "📍 DÍA 01 — MONTEVIDEOSalida en horas de la tarde desde TRES CRUCES, en modernas unidades equipadas con asientos “Semi Cama” con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
-        "📍 DÍA 02 — CAPAO DA CANOA - LLEGADA Y CHECK-INLlegada por la mañana a Capão da Canoa. Mañana libre para acomodarse. Ingreso al hotel (Check-In a partir de las 14:00 hs). Resto del día libre para comenzar a disfrutar de la playa, la peatonal o la Plaza Faro.",
-        "📍 DÍA 03 Y 04 — CAPAO DA CANOA - DÍAS DE PLAYA Y DESCANSODesayuno BUFFET en el hotel. Día libre para disfrutar del mar, caminar por el Beira-Mar o visitar los centros comerciales y gastronómicos de la Avenida Paraguassú. Alojamiento. Sugerencia opcional: Disfrutar de las piscinas y atracciones del parque acuático Marina Park o visitar las playas de la zona.",
-        "📍 DÍA 05 — CAPAO DA CANOADesayuno BUFFET en el hotel. Hoy podrán disfrutar de la playa, recorrer el centro comercial, hacer compras artesanales en las ferias locales o relajarse junto al mar.",
-        "📍 DÍA 06 — CAPAO DA CANOA - CHECK-OUT, REGRESODesayuno BUFFET en el hotel. Check-Out por la mañana en horario oportuno ya con nuestros equipajes emprenderemos nuestro viaje de retorno con Merienda y Desayuno abordo, vía Porto Alegre, Pelotas, Chuy para arribar a...",
-        "📍 DÍA 07 — MONTEVIDEOLlegada a destino en horas de la mañana. Fin de nuestros servicios. ¡HASTA LA PROXIMA EXCURSION!"
-      ],
-      "fechas": [
-        {
-          "label": "Salida",
-          "value": "en horas de la tarde desde TRES CRUCES, en modernas unidades equipadas con asien",
-          "gold": true
-        },
-        {
-          "label": "Otras salidas",
-          "value": "Domingos 10 y 17 de ENERO 2027 - 17:30",
-          "gold": false
-        }
-      ],
-      "salidas": [
-        "en horas de la tarde desde TRES CRUCES, en modernas unidades equipadas con asien",
-        "Domingos 10 y 17 de ENERO 2027 - 17:30"
-      ],
-      "itinerario": [
-        {
-          "dia": "DÍA 01 — MONTEVIDEOSalida en horas de la tarde desde TRES CRUCES, en modernas unidades equipadas con asientos “Semi Cama” con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
-          "lugar": "DÍA 01 — MONTEVIDEOSalida en horas de la tarde desde TRES CRUCES, en modernas unidades equipadas con asientos “Semi Cama” con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
-          "detalle": "",
-          "first": true,
-          "last": false
-        },
-        {
-          "dia": "DÍA 02 — CAPAO DA CANOA - LLEGADA Y CHECK-INLlegada por la mañana a Capão da Canoa. Mañana libre para acomodarse. Ingreso al hotel (Check-In a partir de las 14:00 hs). Resto del día libre para comenzar a disfrutar de la playa, la peatonal o la Plaza Faro.",
-          "lugar": "DÍA 02 — CAPAO DA CANOA - LLEGADA Y CHECK-INLlegada por la mañana a Capão da Canoa. Mañana libre para acomodarse. Ingreso al hotel (Check-In a partir de las 14:00 hs). Resto del día libre para comenzar a disfrutar de la playa, la peatonal o la Plaza Faro.",
-          "detalle": "",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 03 Y 04 — CAPAO DA CANOA - DÍAS DE PLAYA Y DESCANSODesayuno BUFFET en el hotel. Día libre para disfrutar del mar, caminar por el Beira-Mar o visitar los centros comerciales y gastronómicos de la Avenida Paraguassú. Alojamiento. Sugerencia opcional: Disfrutar de las piscinas y atracciones del parque acuático Marina Park o visitar las playas de la zona.",
-          "lugar": "DÍA 03 Y 04 — CAPAO DA CANOA - DÍAS DE PLAYA Y DESCANSODesayuno BUFFET en el hotel. Día libre para disfrutar del mar, caminar por el Beira-Mar o visitar los centros comerciales y gastronómicos de la Avenida Paraguassú. Alojamiento. Sugerencia opcional: Disfrutar de las piscinas y atracciones del parque acuático Marina Park o visitar las playas de la zona.",
-          "detalle": "",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 05 — CAPAO DA CANOADesayuno BUFFET en el hotel. Hoy podrán disfrutar de la playa, recorrer el centro comercial, hacer compras artesanales en las ferias locales o relajarse junto al mar.",
-          "lugar": "DÍA 05 — CAPAO DA CANOADesayuno BUFFET en el hotel. Hoy podrán disfrutar de la playa, recorrer el centro comercial, hacer compras artesanales en las ferias locales o relajarse junto al mar.",
-          "detalle": "",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 06 — CAPAO DA CANOA - CHECK-OUT, REGRESODesayuno BUFFET en el hotel. Check-Out por la mañana en horario oportuno ya con nuestros equipajes emprenderemos nuestro viaje de retorno con Merienda y Desayuno abordo, vía Porto Alegre, Pelotas, Chuy para arribar a...",
-          "lugar": "DÍA 06 — CAPAO DA CANOA - CHECK-OUT, REGRESODesayuno BUFFET en el hotel. Check-Out por la mañana en horario oportuno ya con nuestros equipajes emprenderemos nuestro viaje de retorno con Merienda y Desayuno abordo, vía Porto Alegre, Pelotas, Chuy para arribar a...",
-          "detalle": "",
-          "first": false,
-          "last": false
-        },
-        {
-          "dia": "DÍA 07 — MONTEVIDEOLlegada a destino en horas de la mañana. Fin de nuestros servicios. ¡HASTA LA PROXIMA EXCURSION!",
-          "lugar": "DÍA 07 — MONTEVIDEOLlegada a destino en horas de la mañana. Fin de nuestros servicios. ¡HASTA LA PROXIMA EXCURSION!",
-          "detalle": "",
-          "first": false,
-          "last": true
-        }
-      ],
-      "hoteles": [],
-      "precios": {
-        "doble": 579,
-        "promoDoble": 529
-      },
-      "temporada": "",
-      "notas": [
-        "DÍA 01 — MONTEVIDEOSalida en horas de la tarde desde TRES CRUCES, en modernas unidades equipadas con asientos “Semi Cama” con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y..."
-      ],
-      "updatedAt": "2026-10-19T15:01:46.425Z"
+      "updatedAt": "2026-10-26T14:36:03.690Z"
     },
     {
       "id": "rutatur-799",
@@ -2283,7 +1788,7 @@
         "butaca, servicio abordo y seguro de asistencia.",
         "-Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-10-19T15:01:47.779Z"
+      "updatedAt": "2026-10-26T14:36:05.028Z"
     },
     {
       "id": "rutatur-772",
@@ -2359,7 +1864,88 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 519 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 489"
       ],
-      "updatedAt": "2026-10-19T15:01:49.133Z"
+      "updatedAt": "2026-10-26T14:36:06.380Z"
+    },
+    {
+      "id": "rutatur-841",
+      "rutaId": "841",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/torres-8-dias5-noches-excursion-841",
+      "titulo": "TORRES 8 Días / 5 Noches",
+      "subtitulo": "8 DÍAS / 5 NOCHES",
+      "duracion": "8 DÍAS / 5 NOCHES",
+      "destino": "TORRES",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-22_97351263.png",
+      "highlights": [
+        "📍 Día 01 | Montevideo - Torres:",
+        "📍 Día 02 | Llegada a Torres:",
+        "📍 Día 07 | Torres - Retorno:",
+        "📍 Día 08 | Montevideo:"
+      ],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "30 de Enero de 2027 – 13:30 hs",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "30 ENERO 2027 - 13:30hs",
+          "gold": false
+        }
+      ],
+      "salidas": [
+        "30 de Enero de 2027 – 13:30 hs",
+        "30 ENERO 2027 - 13:30hs"
+      ],
+      "itinerario": [
+        {
+          "dia": "Día 01 | Montevideo - Torres:",
+          "lugar": "Día 01 | Montevideo - Torres:",
+          "detalle": "Partida en modernas unidades Semi Cama con servicio a bordo completo. Recorrido por Rocha, Chuy, Pelotas y Porto Alegre...",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "Día 02 | Llegada a Torres:",
+          "lugar": "Día 02 | Llegada a Torres:",
+          "detalle": "Llegada y check-in en el Hotel A Furninha. Resto del día libre para conocer esta maravillosa ciudad. Cena buffet por la noche. Días 03 al 06 | Días Libres en Torres: Desayuno buffet y régimen de Media Pensión. El viaje combina la flexibilidad perfecta: días libres para recorrer Torres a tu propio ritmo, con la posibilidad de sumar excursiones opcionales a playas paradisíacas y al divertido parque acuático de Capao da Canoa, entre otros maravillosos rincones de la costa.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "Día 07 | Torres - Retorno:",
+          "lugar": "Día 07 | Torres - Retorno:",
+          "detalle": "Desayuno buffet y mañana libre. Almuerzo buffet. En horario oportuno, emprendemos el viaje de regreso a Uruguay con servicio a bordo, vía Porto Alegre y Pelotas...",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "Día 08 | Montevideo:",
+          "lugar": "Día 08 | Montevideo:",
+          "detalle": "Arribo en horas de la mañana. ¡Fin de nuestros servicios y",
+          "first": false,
+          "last": true
+        }
+      ],
+      "hoteles": [
+        {
+          "nombre": "5 Noches en Hotel A Furninha - (TORRES)",
+          "ciudad": "Alojamiento",
+          "url": "www.afurninhahotel.com.br/"
+        }
+      ],
+      "precios": {
+        "promoTexto": "PROMO PAGO CONTADO: US$ 529Habitación Single: + 35% INFORMACIÓN Y RESERVASDirección: Av. Brasil 3129 - MontevideoTeléfono: 2709 8345 WhatsApp: 098 486 487 // 097 000 063 Web: www."
+      },
+      "temporada": "Enero 2027",
+      "notas": [
+        "Habitación Doble / Triple : US$ 569 | PROMO PAGO CONTADO: US$ 529Habitación Single: + 35%"
+      ],
+      "updatedAt": "2026-10-26T14:36:07.723Z"
     },
     {
       "id": "rutatur-767",
@@ -2438,7 +2024,7 @@
       "notas": [
         "Valor de la Excursión por persona en habitación Doble o Triple Luxo: U$S 519 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 489"
       ],
-      "updatedAt": "2026-10-19T15:01:50.568Z"
+      "updatedAt": "2026-10-26T14:36:09.081Z"
     },
     {
       "id": "rutatur-765",
@@ -2537,7 +2123,7 @@
         "Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos:",
         "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia) Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-10-19T15:01:51.932Z"
+      "updatedAt": "2026-10-26T14:36:10.435Z"
     },
     {
       "id": "rutatur-732",
@@ -2581,7 +2167,7 @@
         },
         {
           "dia": "DÍA 04",
-          "lugar": "CAMBORIUDesayuno Buffet. Día libre para disfrutar de las playas o en forma opcional conocer la más nueva atracción del Balneario, la Súper Rueda Gigante, de 82 metros de altura, permitirá ver en 360 grados la mata atlántica, el mar y el borde de una de las playas más famosas de Brasil. Por la noche traslado al Cristo Luz con ingreso y cena buffet incluida donde disfrutaremos de una hermosa vista nocturna con Camboriu a nuestros pies.",
+          "lugar": "CAMBORIUDesayuno Buffet. En horario oportuno conoceremos la Súper Rueda Gigante (INGRESO INCLUIDO), de 82 metros de altura, permitirá ver en 360 grados la mata atlántica, el mar y el borde de una de las playas más famosas de Brasil. Cena Buffet. Por la noche traslado al Cristo Luz (INGRESO INCLUIDO) con ingreso incluido donde disfrutaremos de una hermosa vista nocturna con Camboriu a nuestros pies.",
           "detalle": "",
           "first": false,
           "last": false
@@ -2637,7 +2223,7 @@
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)",
         "-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-10-19T15:01:53.298Z"
+      "updatedAt": "2026-10-26T14:36:11.780Z"
     },
     {
       "id": "rutatur-743",
@@ -2707,7 +2293,7 @@
         "butaca, servicio abordo y seguro de asistencia. SEGURO DE ASISTENCIA  INCLUIDOAv. Brasil 3129 – 2709 8345 - 2902 4142",
         "-Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia. SEGURO DE ASISTENCIA  INCLUIDOAv. Brasil 3129 – 2709 8345 - 2902 4142"
       ],
-      "updatedAt": "2026-10-19T15:01:54.657Z"
+      "updatedAt": "2026-10-26T14:36:13.129Z"
     },
     {
       "id": "rutatur-745",
@@ -2752,7 +2338,7 @@
         "Día 01: MONTEVIDEOPartida en modernas unidades equipadas con asientos “Semi Cama”, Merienda, Cena y Desayuno a bordo.Servicio de Open Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
         "PROMO VALIDA SEÑANDO CON 30% CONTADO HASTA EL 30 DE NOVIEMBRE 2026 (CUPOS DE PROMO LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)"
       ],
-      "updatedAt": "2026-10-19T15:01:56.010Z"
+      "updatedAt": "2026-10-26T14:36:14.477Z"
     },
     {
       "id": "rutatur-756",
@@ -2857,7 +2443,185 @@
         "-Menores hasta 4 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia).-Seguro obligatorio costo 30 U$S",
         "-Solo asiento: U$S 259 - Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-10-19T15:01:57.366Z"
+      "updatedAt": "2026-10-26T14:36:15.830Z"
+    },
+    {
+      "id": "rutatur-813",
+      "rutaId": "813",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/ita-all-inclusive-7-dias-excursion-813",
+      "titulo": "ITÁ - ALL INCLUSIVE 7 Días",
+      "subtitulo": "7 DÍAS",
+      "duracion": "7 DÍAS",
+      "destino": "ITÁ - ALL INCLUSIVE",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-07-02_99913232.jpg",
+      "highlights": [
+        "📍 ITA"
+      ],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "20 DE FEBRERO 2027 - 14:00hs",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "20 FEBRERO 2027 - 14:00 Hs",
+          "gold": false
+        }
+      ],
+      "salidas": [
+        "20 DE FEBRERO 2027 - 14:00hs",
+        "20 FEBRERO 2027 - 14:00 Hs"
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "MONTEVIDEOPartida en modernas unidades Semi Cama con merienda, cena y desayuno a bordo. Servicio de bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre para dirigirnos hacia...",
+          "detalle": "",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "ITALlegada a ITA, alojamiento en Grand Suites –Family Resort-impuestos incluidos. Nuestro hotel cuenta con piscinas abiertas y cubiertas, y todas las comodidades que harán de nuestra estadía un recuerdo inolvidable. A tarde disfrutaremos de una exquisita merienda. Por la noche Cena Buffet.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "ITADesayuno Buffet. La antigua ciudad de ITA fue totalmente sumergida por las aguas del lago de Hidroeléctrica de Ita. En forma opcional podremos navegar en el lago, donde podremos apreciar los vestigios que esta antigua ciudad, como las torres de la antigua Iglesia Matriz. (paseo no incluido). Pensión Completa.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "ITADesayuno Buffet. Hoy realizaremos un paseo a Vinícola, Familia Cuadros, donde podremos recorrerla y conocer el proceso de elaboración de la cachacá. (incluido). Pensión Completa.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "ITADesayuno Buffet. Día libre para seguir disfrutando de nuestro hotel, seguir descubriendo los encantos de esta hermosa ciudad. En forma opcional (no incluido) podrán disfrutar, Aqua Parque, Ita Eco, con su tirolesa, bike aérea, funicular, Eco Parque, arvorismo, entre otras atracciones. Pensión Completa.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "ITADesayuno Buffet. Mañana libre. Almuerzo Buffet luego de este broche de oro nos despendimos de este paraíso de la felicidad para emprender nuestro viaje de retorno transitando la ruta de las Sierras que nos llevara a hacia",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "MONTEVIDEO",
+          "detalle": "Llegada a nuestra ciudad y",
+          "first": false,
+          "last": true
+        }
+      ],
+      "hoteles": [
+        {
+          "nombre": "Valor Por Persona hab. Doble o Triple U$S 749 - U$S 699 PROMO PAGO CONTADO O TRANSFERENCIA"
+        }
+      ],
+      "precios": {
+        "doble": 749,
+        "promo": 699,
+        "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA** ****SEGURO DE ASISTENCIA INCLUIDO**** HOTEL: GRAND SUITES FAMILY RESORT/ALL INCLUSIVE* - ITÁ: - www.grandsuites.com.br - Con nuestro servicio ALL INCLUSIVE* podrás relajarte, descansar y aprovechar al máximo cada momento de tu estancia. Estamos dedicados a brindar una experiencia verdaderamente innovadora, donde cada detalle se planifica cuidadosamente para su comodidad y satisfacción. El sistema All Inclusive* del Grand Suites Family Resort ITÁ, incluye los siguientes servicios y ventajas: Alojamiento: La excelencia de nuestras habitaciones es uno de los pilares fundamentales de nuestra hospitalidad. Nuestra prioridad es brindar el máximo confort y bienestar a nuestros huéspedes, y nuestras suites han sido meticulosamente diseñadas para satisfacer sus necesidades. (INCLUIDO) Comidas :Incluye desayuno brasileño tipo buffet, copetín en la piscina, almuerzo, café colonial y cena. (INCLUIDAS) Bebidas no alcohólicas: (INCLUIDAS)Agua con/sin gas;Tés;Coca-Cola, Fanta y Sprite;Café;Capuchino;Jugos de piña, maracuyá, naranja y limón;Cerveza sin alcohol. Bebidas alcohólicas: (INCLUIDAS)Cerveza de barril pilsen premium;Cerveza Stella, Budweiser y Malzebier. Bebidas con/sin alcohol: (INCLUIDAS)Caipirinha con vodka, cachaça o steinhaeger;Vino tinto (servido por copa);Vino blanco (servido por copa). Actividades: (INCLUIDAS) Piscinas climatizadas en un ambiente relajante para que te relajes al atardecer. 5 piscinas climatizadas, una cubierta, piscina para niños y un bar adentro de la piscina, para el máximo descanso de tus familiares y amigos. Sala de juegos y games:¡Para que nadie pueda quedarse quieto!Salas de juegos para todas las edades. ¡Piscina, gripe, ping-pong, cartas y bolos! Kids Club Grand Suites: (INCLUIDO)¡Diversión todo el tiempo para los niños!El Grand Suites Family Resort cuenta con un equipo de recreación preparado para divertir y deleitar a tus hijos. Recreación: (INCLUIDO)Grand Suites cuentan con recreación especializada por grupos de edades a partir de 3 años, de 9 a 23 horas.Contamos con espacios y actividades para que los niños aprendan y se diviertan al mismo tiempo, y los adultos se relajen y disfruten de su estadía en nuestro resort.La recreación está especializada por grupos de edades, dividida en las siguientes categorías: 03 a 06 años, 07 a 12 años, 13 a 17 años y adultos. De esta forma las actividades son apropiadas para las edades de cada grupo. ¡A disfrutar! 2902 4142 - 098 486 487 Pocitos: Av. Brasil 3129 - 2709 8345 - 097 000 063 Montevideo – Uruguay www."
+      },
+      "temporada": "Febrero 2027",
+      "notas": [],
+      "updatedAt": "2026-10-26T14:36:17.179Z"
+    },
+    {
+      "id": "rutatur-842",
+      "rutaId": "842",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/torres-8-dias5-noches-excursion-842",
+      "titulo": "TORRES 8 Días / 5 Noches",
+      "subtitulo": "8 DÍAS / 5 NOCHES",
+      "duracion": "8 DÍAS / 5 NOCHES",
+      "destino": "TORRES",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "",
+      "highlights": [
+        "📍 Día 01 | Montevideo - Torres:",
+        "📍 Día 02 | Llegada a Torres:",
+        "📍 Día 07 | Torres - Retorno:",
+        "📍 Día 08 | Montevideo:"
+      ],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "07 de Marzo de 2027 – 13:30 hs",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "07 Marzo 2027 - 13:30 hs",
+          "gold": false
+        }
+      ],
+      "salidas": [
+        "07 de Marzo de 2027 – 13:30 hs",
+        "07 Marzo 2027 - 13:30 hs"
+      ],
+      "itinerario": [
+        {
+          "dia": "Día 01 | Montevideo - Torres:",
+          "lugar": "Día 01 | Montevideo - Torres:",
+          "detalle": "Partida en modernas unidades Semi Cama con servicio a bordo completo. Recorrido por Rocha, Chuy, Pelotas y Porto Alegre...",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "Día 02 | Llegada a Torres:",
+          "lugar": "Día 02 | Llegada a Torres:",
+          "detalle": "Llegada y check-in en el Hotel A Furninha. Resto del día libre para conocer esta maravillosa ciudad. Cena buffet por la noche. Días 03 al 06 | Días Libres en Torres: Desayuno buffet y régimen de Media Pensión. El viaje combina la flexibilidad perfecta: días libres para recorrer Torres a tu propio ritmo, con la posibilidad de sumar excursiones opcionales a playas paradisíacas y al divertido parque acuático de Capao da Canoa, entre otros maravillosos rincones de la costa.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "Día 07 | Torres - Retorno:",
+          "lugar": "Día 07 | Torres - Retorno:",
+          "detalle": "Desayuno buffet y mañana libre. Almuerzo buffet. En horario oportuno, emprendemos el viaje de regreso a Uruguay con servicio a bordo, vía Porto Alegre y Pelotas...",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "Día 08 | Montevideo:",
+          "lugar": "Día 08 | Montevideo:",
+          "detalle": "Arribo en horas de la mañana. ¡Fin de nuestros servicios y",
+          "first": false,
+          "last": true
+        }
+      ],
+      "hoteles": [
+        {
+          "nombre": "5 Noches en Hotel A Furninha - (TORRES)",
+          "ciudad": "Alojamiento",
+          "url": "www.afurninhahotel.com.br/"
+        }
+      ],
+      "precios": {
+        "promoTexto": "PROMO PAGO CONTADO: US$ 529Habitación Single: + 35% INFORMACIÓN Y RESERVASDirección: Av. Brasil 3129 - MontevideoTeléfono: 2709 8345 WhatsApp: 098 486 487 // 097 000 063 Web: www."
+      },
+      "temporada": "Marzo 2027",
+      "notas": [
+        "Habitación Doble / Triple : US$ 569 | PROMO PAGO CONTADO: US$ 529Habitación Single: + 35%"
+      ],
+      "updatedAt": "2026-10-26T14:36:18.524Z"
     },
     {
       "id": "rutatur-723",
@@ -2949,7 +2713,7 @@
         "Día 01 – MONTEVIDEO - SABADO 20/03Partida en modernas unidades equipadas con asientos “Semi Cama”, con Merienda, Cena y Desayuno a bordo. Servicio de Open-Bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre y...",
         "VALOR DE PROMO VALIDO SEÑANDO CON 30 % CONTADO HASTA EL 15 DE NOVIEMBRE 2026. (CUPOS LIMITADOS, NO ACUMULABLES CON OTRAS PROMOCIONES)"
       ],
-      "updatedAt": "2026-10-19T15:01:58.723Z"
+      "updatedAt": "2026-10-26T14:36:19.874Z"
     },
     {
       "id": "rutatur-742",
@@ -2963,7 +2727,7 @@
       "destinoSlug": "gramado",
       "pais": "Brasil",
       "emoji": "🌲",
-      "imagen": "",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-20_15883375.png",
       "highlights": [
         "📍 CANELA - DOMINGO 21/03",
         "📍 CANELA - GRAMADO - LUNES 22/03",
@@ -3055,7 +2819,7 @@
         "butaca, servicio abordo y seguro de asistencia.",
         "-Solo asiento, (menores hasta 4 años): U$S 259- Incluye, butaca, servicio abordo y seguro de asistencia."
       ],
-      "updatedAt": "2026-10-19T15:02:00.077Z"
+      "updatedAt": "2026-10-26T14:36:21.214Z"
     },
     {
       "id": "rutatur-739",
@@ -3069,7 +2833,7 @@
       "destinoSlug": "cataratas",
       "pais": "Cataratas",
       "emoji": "🌊",
-      "imagen": "",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-20_16629397.png",
       "highlights": [
         "📍 FOZ DE IGUAZU"
       ],
@@ -3113,7 +2877,7 @@
         "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
         "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-10-19T15:02:01.448Z"
+      "updatedAt": "2026-10-26T14:36:22.557Z"
     },
     {
       "id": "rutatur-760",
@@ -3200,7 +2964,7 @@
         "Menores hasta 3 años, máx 1 por habitación acompañado de 2 adultos: SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
         "Solo asiento: U$S 299 - Incluye, butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-10-19T15:02:02.805Z"
+      "updatedAt": "2026-10-26T14:36:23.897Z"
     },
     {
       "id": "rutatur-746",
@@ -3214,7 +2978,7 @@
       "destinoSlug": "florianopolis",
       "pais": "Brasil",
       "emoji": "🏖️",
-      "imagen": "",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-20_1796070.png",
       "highlights": [
         "📍 FLORIANOPOLIS"
       ],
@@ -3253,7 +3017,103 @@
         "Valor de la Excursión por persona, con Media Pensión y paseos, para alojamiento en habitación Doble o Triple Luxo: U$S 849 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 799Single: 35 % MAS",
         "Valor por persona, con Media Pensión y SIN PASEOS, para alojamiento en habitación Doble o Triple Luxo: U$S 809 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 759Single: 35 % MAS"
       ],
-      "updatedAt": "2026-10-19T15:02:04.163Z"
+      "updatedAt": "2026-10-26T14:36:25.249Z"
+    },
+    {
+      "id": "rutatur-783",
+      "rutaId": "783",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/ita-all-inclusive-7-dias-turismo-2027-excursion-783",
+      "titulo": "ITÁ - ALL INCLUSIVE 7 Días - TURISMO 2027",
+      "subtitulo": "7 DÍAS",
+      "duracion": "7 DÍAS",
+      "destino": "ITÁ - ALL INCLUSIVE- TURISMO 2027",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-02-07_71205260.png",
+      "highlights": [
+        "📍 ITA"
+      ],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "20 de MARZO 2027 - 13:00hs",
+          "gold": true
+        }
+      ],
+      "salidas": [
+        "20 de MARZO 2027 - 13:00hs"
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "MONTEVIDEOPartida en modernas unidades Semi Cama con merienda, cena y desayuno a bordo. Servicio de bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre para dirigirnos hacia...",
+          "detalle": "",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "ITALlegada a ITA, alojamiento en Grand Suites –Family Resort-impuestos incluidos. Nuestro hotel cuenta con piscinas abiertas y cubiertas, y todas las comodidades que harán de nuestra estadía un recuerdo inolvidable. A tarde disfrutaremos de una exquisita merienda. Por la noche Cena Buffet.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "ITADesayuno Buffet. La antigua ciudad de ITA fue totalmente sumergida por las aguas del lago de Hidroeléctrica de Ita. En forma opcional podremos navegar en el lago, donde podremos apreciar los vestigios que esta antigua ciudad, como las torres de la antigua Iglesia Matriz. (paseo no incluido). Pensión Completa.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "ITADesayuno Buffet. Hoy realizaremos un paseo a Vinícola, Familia Cuadros, donde podremos recorrerla y conocer el proceso de elaboración de la cachacá. (incluido). Pensión Completa.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "ITADesayuno Buffet. Día libre para seguir disfrutando de nuestro hotel, seguir descubriendo los encantos de esta hermosa ciudad. En forma opcional (no incluido) podrán disfrutar, Aqua Parque, Ita Eco, con su tirolesa, bike aérea, funicular, Eco Parque, arvorismo, entre otras atracciones. Pensión Completa.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "ITADesayuno Buffet. Mañana libre. Almuerzo Buffet luego de este broche de oro nos despendimos de este paraíso de la felicidad para emprender nuestro viaje de retorno transitando la ruta de las Sierras que nos llevara a hacia",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "MONTEVIDEO",
+          "detalle": "Llegada a nuestra ciudad y",
+          "first": false,
+          "last": true
+        }
+      ],
+      "hoteles": [
+        {
+          "nombre": "Valor Por Persona hab. Doble o Triple U$S 749 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 699"
+        },
+        {
+          "nombre": "CONSULTA PROMO PAGO CONTADO"
+        }
+      ],
+      "precios": {
+        "doble": 749,
+        "promo": 699,
+        "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 699*** *** CONSULTA PROMO PAGO CONTADO*** ****SEGURO DE ASISTENCIA INCLUIDO**** HOTEL: GRAND SUITES FAMILY RESORT/ALL INCLUSIVE* - ITÁ: - www.grandsuites.com.br - Con nuestro servicio ALL INCLUSIVE* podrás relajarte, descansar y aprovechar al máximo cada momento de tu estancia. Estamos dedicados a brindar una experiencia verdaderamente innovadora, donde cada detalle se planifica cuidadosamente para su comodidad y satisfacción. El sistema All Inclusive* del Grand Suites Family Resort ITÁ, incluye los siguientes servicios y ventajas: Alojamiento: La excelencia de nuestras habitaciones es uno de los pilares fundamentales de nuestra hospitalidad. Nuestra prioridad es brindar el máximo confort y bienestar a nuestros huéspedes, y nuestras suites han sido meticulosamente diseñadas para satisfacer sus necesidades. (INCLUIDO) Comidas :Incluye desayuno brasileño tipo buffet, copetín en la piscina, almuerzo, café colonial y cena. (INCLUIDAS) Bebidas no alcohólicas: (INCLUIDAS)Agua con/sin gas;Tés;Coca-Cola, Fanta y Sprite;Café;Capuchino;Jugos de piña, maracuyá, naranja y limón;Cerveza sin alcohol. Bebidas alcohólicas: (INCLUIDAS)Cerveza de barril pilsen premium;Cerveza Stella, Budweiser y Malzebier. Bebidas con/sin alcohol: (INCLUIDAS)Caipirinha con vodka, cachaça o steinhaeger;Vino tinto (servido por copa);Vino blanco (servido por copa). Actividades: (INCLUIDAS) Piscinas climatizadas en un ambiente relajante para que te relajes al atardecer. 5 piscinas climatizadas, una cubierta, piscina para niños y un bar adentro de la piscina, para el máximo descanso de tus familiares y amigos. Sala de juegos y games:¡Para que nadie pueda quedarse quieto!Salas de juegos para todas las edades. ¡Piscina, gripe, ping-pong, cartas y bolos! Kids Club Grand Suites: (INCLUIDO)¡Diversión todo el tiempo para los niños!El Grand Suites Family Resort cuenta con un equipo de recreación preparado para divertir y deleitar a tus hijos. Recreación: (INCLUIDO)Grand Suites cuentan con recreación especializada por grupos de edades a partir de 3 años, de 9 a 23 horas.Contamos con espacios y actividades para que los niños aprendan y se diviertan al mismo tiempo, y los adultos se relajen y disfruten de su estadía en nuestro resort.La recreación está especializada por grupos de edades, dividida en las siguientes categorías: 03 a 06 años, 07 a 12 años, 13 a 17 años y adultos. De esta forma las actividades son apropiadas para las edades de cada grupo. ¡A disfrutar!"
+      },
+      "temporada": "Marzo 2027",
+      "notas": [
+        "CONSULTA PROMO PAGO CONTADO"
+      ],
+      "updatedAt": "2026-10-26T14:36:26.593Z"
     },
     {
       "id": "rutatur-735",
@@ -3330,7 +3190,7 @@
         "Valor de promo valido señando con 30 % contado hasta el 30 de Noviembre 2026(cupos de promo limitados, no acumulables con otras promociones)",
         "-MENORES HASTA 5 AÑOS FREE -Acompañados mínimo por 2 adultos en la misma habitación. (No le corresponde, butaca, servicio abordo, ni seguro)-Costo de la butaca 299 U$S (Incluye seguro y servicio a bordo)"
       ],
-      "updatedAt": "2026-10-19T15:02:05.529Z"
+      "updatedAt": "2026-10-26T14:36:27.928Z"
     },
     {
       "id": "rutatur-838",
@@ -3344,7 +3204,7 @@
       "destinoSlug": "termasromanas",
       "pais": "Argentina",
       "emoji": "♨️",
-      "imagen": "",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2026-10-20_19971118.png",
       "highlights": [
         "📍 TERMAS ROMANAS"
       ],
@@ -3402,7 +3262,7 @@
       },
       "temporada": "",
       "notas": [],
-      "updatedAt": "2026-10-19T15:02:06.883Z"
+      "updatedAt": "2026-10-26T14:36:29.283Z"
     },
     {
       "id": "rutatur-840",
@@ -3513,7 +3373,88 @@
       "notas": [
         "Habitación Doble / Triple: US$ 899 | PROMO PAGO CONTADO: US$ 839"
       ],
-      "updatedAt": "2026-10-19T15:02:08.240Z"
+      "updatedAt": "2026-10-26T14:36:30.626Z"
+    },
+    {
+      "id": "rutatur-843",
+      "rutaId": "843",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/torres-8-dias5-noches-turismo-2027-excursion-843",
+      "titulo": "TORRES 8 Días / 5 Noches - TURISMO 2027",
+      "subtitulo": "8 DÍAS / 5 NOCHES",
+      "duracion": "8 DÍAS / 5 NOCHES",
+      "destino": "TORRES - TURISMO 2027",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "",
+      "highlights": [
+        "📍 Día 01 | Montevideo - Torres:",
+        "📍 Día 02 | Llegada a Torres:",
+        "📍 Día 07 | Torres - Retorno:",
+        "📍 Día 08 | Montevideo:"
+      ],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "20 de Marzo de 2027 – 13:30 hs",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "20 MARZO 2027 - 13:30hs",
+          "gold": false
+        }
+      ],
+      "salidas": [
+        "20 de Marzo de 2027 – 13:30 hs",
+        "20 MARZO 2027 - 13:30hs"
+      ],
+      "itinerario": [
+        {
+          "dia": "Día 01 | Montevideo - Torres:",
+          "lugar": "Día 01 | Montevideo - Torres:",
+          "detalle": "Partida en modernas unidades Semi Cama con servicio a bordo completo. Recorrido por Rocha, Chuy, Pelotas y Porto Alegre...",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "Día 02 | Llegada a Torres:",
+          "lugar": "Día 02 | Llegada a Torres:",
+          "detalle": "Llegada y check-in en el Hotel A Furninha. Resto del día libre para conocer esta maravillosa ciudad. Cena buffet por la noche. Días 03 al 06 | Días Libres en Torres: Desayuno buffet y régimen de Media Pensión. El viaje combina la flexibilidad perfecta: días libres para recorrer Torres a tu propio ritmo, con la posibilidad de sumar excursiones opcionales a playas paradisíacas y al divertido parque acuático de Capao da Canoa, entre otros maravillosos rincones de la costa.",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "Día 07 | Torres - Retorno:",
+          "lugar": "Día 07 | Torres - Retorno:",
+          "detalle": "Desayuno buffet y mañana libre. Almuerzo buffet. En horario oportuno, emprendemos el viaje de regreso a Uruguay con servicio a bordo, vía Porto Alegre y Pelotas...",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "Día 08 | Montevideo:",
+          "lugar": "Día 08 | Montevideo:",
+          "detalle": "Arribo en horas de la mañana. ¡Fin de nuestros servicios y",
+          "first": false,
+          "last": true
+        }
+      ],
+      "hoteles": [
+        {
+          "nombre": "5 Noches en Hotel A Furninha - (TORRES)",
+          "ciudad": "Alojamiento",
+          "url": "www.afurninhahotel.com.br/"
+        }
+      ],
+      "precios": {
+        "promoTexto": "PROMO PAGO CONTADO: US$ 529Habitación Single: + 35% INFORMACIÓN Y RESERVASDirección: Av. Brasil 3129 - MontevideoTeléfono: 2709 8345 WhatsApp: 098 486 487 // 097 000 063 Web: www."
+      },
+      "temporada": "Marzo 2027",
+      "notas": [
+        "Habitación Doble / Triple : US$ 569 | PROMO PAGO CONTADO: US$ 529Habitación Single: + 35%"
+      ],
+      "updatedAt": "2026-10-26T14:36:31.967Z"
     },
     {
       "id": "rutatur-757",
@@ -3599,7 +3540,7 @@
         "-- Menores hasta 7 años, máximo 1 por habitación acompañado de 2 adultos: VALOR U$S 299",
         "(INCLUYE servicio a bordo, butaca y seguro de asistencia)"
       ],
-      "updatedAt": "2026-10-19T15:02:09.592Z"
+      "updatedAt": "2026-10-26T14:36:33.321Z"
     },
     {
       "id": "rutatur-815",
@@ -3656,7 +3597,200 @@
         "SIN CARGO (No le corresponde, servicio abordo, butaca ni seguro de asistencia)",
         "Solo asiento: U$S 299, Incluye: butaca, servicio abordo y seguro de asistencia"
       ],
-      "updatedAt": "2026-10-19T15:02:10.959Z"
+      "updatedAt": "2026-10-26T14:36:34.665Z"
+    },
+    {
+      "id": "rutatur-749",
+      "rutaId": "749",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/ita-all-inclusive-7-dias4-noches-excursion-749",
+      "titulo": "ITÁ ALL INCLUSIVE - 7 Días / 4 Noches",
+      "subtitulo": "7 DÍAS / 4 NOCHES",
+      "duracion": "7 DÍAS / 4 NOCHES",
+      "destino": "ITÁ ALL INCLUSIVE",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "https://www.rutatur.com/usr/data/excursiones/image/source/2025-07-22_11574219.png",
+      "highlights": [
+        "📍 ITA"
+      ],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "Programada 17 ABRIL 2027 - 14:00hs",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "14:00Hs · 17 de Abril 2027 - 14:00hs",
+          "gold": false
+        }
+      ],
+      "salidas": [
+        "Programada 17 ABRIL 2027 - 14:00hs",
+        "14:00Hs",
+        "17 de Abril 2027 - 14:00hs"
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "MONTEVIDEOPartida en modernas unidades Semi Cama con merienda, cena y desayuno a bordo. Servicio de bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre para dirigirnos hacia...",
+          "detalle": "",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "ITALlegada a ITA, alojamiento en Grand Suites –Family Resort-impuestos incluidos. Nuestro hotel cuenta con piscinas abiertas y cubiertas, y todas las comodidades que harán de nuestra estadía un recuerdo inolvidable. A tarde disfrutaremos de una exquisita merienda. Por la noche Cena Buffet.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "ITADesayuno Buffet. La antigua ciudad de ITA fue totalmente sumergida por las aguas del lago de Hidroeléctrica de Ita. En forma opcional podremos navegar en el lago, donde podremos apreciar los vestigios que esta antigua ciudad, como las torres de la antigua Iglesia Matriz. (paseo no incluido). Pensión Completa.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "ITADesayuno Buffet. Hoy realizaremos un paseo a Vinícola, Familia Cuadros, donde podremos recorrerla y conocer el proceso de elaboración de la cachacá. (incluido). En horario oportuno visitaremos el Mirante do Caracol (incluido). Pensión Completa.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "ITADesayuno Buffet. Día libre para seguir disfrutando de nuestro hotel, seguir descubriendo los encantos de esta hermosa ciudad. En forma opcional (no incluido) podrán disfrutar, Aqua Parque, Ita Eco, con su tirolesa, bike aérea, funicular, Eco Parque, arvorismo, entre otras atracciones. Pensión Completa.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "ITADesayuno Buffet. Mañana libre. Almuerzo Buffet luego de este broche de oro nos despendimos de este paraíso de la felicidad para emprender nuestro viaje de retorno transitando la ruta de las Sierras que nos llevara a hacia",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "MONTEVIDEO",
+          "detalle": "Llegada a nuestra ciudad y",
+          "first": false,
+          "last": true
+        }
+      ],
+      "hoteles": [],
+      "precios": {
+        "doble": 749,
+        "promo": 699,
+        "singleLabel": "Habitación Single: +35% adicional",
+        "promoTexto": "PROMO PAGO CONTADO O TRANSFERENCIA U$S 699 Single 35 % MAS ****SEGURO DE ASISTENCIA INCLUIDO**** HOTEL: GRAND SUITES FAMILY RESORT/ALL INCLUSIVE* - ITÁ: - www.grandsuites.com.br - Con nuestro servicio ALL INCLUSIVE* podrás relajarte, descansar y aprovechar al máximo cada momento de tu estancia. Estamos dedicados a brindar una experiencia verdaderamente innovadora, donde cada detalle se planifica cuidadosamente para su comodidad y satisfacción. El sistema All Inclusive* del Grand Suites Family Resort ITÁ, incluye los siguientes servicios y ventajas: Alojamiento: La excelencia de nuestras habitaciones es uno de los pilares fundamentales de nuestra hospitalidad. Nuestra prioridad es brindar el máximo confort y bienestar a nuestros huéspedes, y nuestras suites han sido meticulosamente diseñadas para satisfacer sus necesidades. (INCLUIDO) Comidas :Incluye desayuno brasileño tipo buffet, copetín en la piscina, almuerzo, café colonial y cena. (INCLUIDAS) Bebidas no alcohólicas: (INCLUIDAS)Agua con/sin gas;Tés;Coca-Cola, Fanta y Sprite;Café;Capuchino;Jugos de piña, maracuyá, naranja y limón;Cerveza sin alcohol. Bebidas alcohólicas: (INCLUIDAS)Cerveza de barril pilsen premium;Cerveza Stella, Budweiser y Malzebier. Bebidas con/sin alcohol: (INCLUIDAS)Caipirinha con vodka, cachaça o steinhaeger;Vino tinto (servido por copa);Vino blanco (servido por copa). Actividades: (INCLUIDAS) Piscinas climatizadas en un ambiente relajante para que te relajes al atardecer. 5 piscinas climatizadas, una cubierta, piscina para niños y un bar adentro de la piscina, para el máximo descanso de tus familiares y amigos. Sala de juegos y games:¡Para que nadie pueda quedarse quieto!Salas de juegos para todas las edades. ¡Piscina, gripe, ping-pong, cartas y bolos! Kids Club Grand Suites: (INCLUIDO)¡Diversión todo el tiempo para los niños!El Grand Suites Family Resort cuenta con un equipo de recreación preparado para divertir y deleitar a tus hijos. Recreación: (INCLUIDO)Grand Suites cuentan con recreación especializada por grupos de edades a partir de 3 años, de 9 a 23 horas.Contamos con espacios y actividades para que los niños aprendan y se diviertan al mismo tiempo, y los adultos se relajen y disfruten de su estadía en nuestro resort.La recreación está especializada por grupos de edades, dividida en las siguientes categorías: 03 a 06 años, 07 a 12 años, 13 a 17 años y adultos. De esta forma las actividades son apropiadas para las edades de cada grupo. ¡A disfrutar! Pocitos: Av. Brasil 3129 - 2709 8345 - 097 000 063 Montevideo – Uruguay www."
+      },
+      "temporada": "Abril 2027",
+      "notas": [
+        "Precio Por Persona hab. Doble o Triple - U$S 749 // PROMO PAGO CONTADO O TRANSFERENCIA U$S 699"
+      ],
+      "updatedAt": "2026-10-26T14:36:36.008Z"
+    },
+    {
+      "id": "rutatur-750",
+      "rutaId": "750",
+      "operador": "rutatur",
+      "sourceUrl": "https://www.rutatur.com/ita-all-inclusive-7-dias-excursion-750",
+      "titulo": "ITÁ ALL INCLUSIVE 7 Días",
+      "subtitulo": "7 DÍAS / 04 NOCHES",
+      "duracion": "7 DÍAS / 04 NOCHES",
+      "destino": "ITÁ ALL INCLUSIVE",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "",
+      "highlights": [
+        "📍 ITA"
+      ],
+      "fechas": [
+        {
+          "label": "Salida",
+          "value": "22 de MAYO 2027 - Hora de Salida 14:00 hs",
+          "gold": true
+        },
+        {
+          "label": "Otras salidas",
+          "value": "28 MAYO 2027 - 14:00hs",
+          "gold": false
+        }
+      ],
+      "salidas": [
+        "22 de MAYO 2027 - Hora de Salida 14:00 hs",
+        "28 MAYO 2027 - 14:00hs"
+      ],
+      "itinerario": [
+        {
+          "dia": "DÍA 01",
+          "lugar": "MONTEVIDEO Partida en modernas unidades Semi Cama con merienda, cena y desayuno a bordo. Servicio de bar y guía acompañante durante todo el recorrido por Rocha, Chuy, Pelotas, Porto Alegre para dirigirnos hacia...",
+          "detalle": "",
+          "first": true,
+          "last": false
+        },
+        {
+          "dia": "DÍA 02",
+          "lugar": "ITA Llegada a ITA, alojamiento en Grand Suites –Family Resort-impuestos incluidos. Nuestro hotel cuenta con piscinas abiertas y cubiertas, y todas las comodidades que harán de nuestra estadía un recuerdo inolvidable. A tarde disfrutaremos de una exquisita merienda. Por la noche Cena Buffet.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 03",
+          "lugar": "ITA Desayuno Buffet. La antigua ciudad de ITA fue totalmente sumergida por las aguas del lago de Hidroeléctrica de Ita. En forma opcional podremos navegar en el lago, donde podremos apreciar los vestigios que esta antigua ciudad, como las torres de la antigua Iglesia Matriz. (paseo no incluido). Pensión Completa.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 04",
+          "lugar": "ITA Desayuno Buffet. Hoy realizaremos un paseo a Vinícola, Familia Cuadros, donde podremos recorrerla y conocer el proceso de elaboración de la cachacá. (incluido). Retornamos a nuestro hotel para seguir disfrutando de una exquisita Pensión Completa.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 05",
+          "lugar": "ITADesayuno Buffet. Día libre para seguir disfrutando de nuestro hotel, seguir descubriendo los encantos de esta hermosa ciudad. En forma opcional (no incluido) podrán disfrutar, Aqua Parque, Ita Eco, con su tirolesa, bike aérea, funicular, Eco Parque, arvorismo, entre otras atracciones. Pensión Completa.",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 06",
+          "lugar": "ITA Desayuno Buffet. Mañana libre. Almuerzo Buffet luego de este broche de oro nos despendimos de este paraíso de la felicidad para emprender nuestro viaje de retorno transitando la ruta de las Sierras que nos llevara a hacia",
+          "detalle": "",
+          "first": false,
+          "last": false
+        },
+        {
+          "dia": "DÍA 07",
+          "lugar": "MONTEVIDEO",
+          "detalle": "Llegada a nuestra ciudad y",
+          "first": false,
+          "last": true
+        }
+      ],
+      "hoteles": [],
+      "precios": {
+        "doble": 749,
+        "promo": 699,
+        "singleLabel": "Habitación Single: +35% adicional",
+        "promoTexto": "PROMO PAGO CONTADO O TRANSFERENENCIA U$S 699 Single 35 % MAS ****SEGURO DE ASISTENCIA INCLUIDO**** HOTEL: GRAND SUITES FAMILY RESORT/ALL INCLUSIVE* - ITÁ: - www.grandsuites.com.br - Con nuestro servicio ALL INCLUSIVE* podrás relajarte, descansar y aprovechar al máximo cada momento de tu estancia. Estamos dedicados a brindar una experiencia verdaderamente innovadora, donde cada detalle se planifica cuidadosamente para su comodidad y satisfacción. El sistema All Inclusive* del Grand Suites Family Resort ITÁ, incluye los siguientes servicios y ventajas: Alojamiento: La excelencia de nuestras habitaciones es uno de los pilares fundamentales de nuestra hospitalidad. Nuestra prioridad es brindar el máximo confort y bienestar a nuestros huéspedes, y nuestras suites han sido meticulosamente diseñadas para satisfacer sus necesidades. (INCLUIDO) Comidas :Incluye desayuno brasileño tipo buffet, copetín en la piscina, almuerzo, café colonial y cena. (INCLUIDAS) Bebidas no alcohólicas: (INCLUIDAS)Agua con/sin gas;Tés;Coca-Cola, Fanta y Sprite;Café;Capuchino;Jugos de piña, maracuyá, naranja y limón;Cerveza sin alcohol. Bebidas alcohólicas: (INCLUIDAS)Cerveza de barril pilsen premium;Cerveza Stella, Budweiser y Malzebier. Bebidas con/sin alcohol: (INCLUIDAS)Caipirinha con vodka, cachaça o steinhaeger;Vino tinto (servido por copa);Vino blanco (servido por copa). Actividades: (INCLUIDAS) Piscinas climatizadas en un ambiente relajante para que te relajes al atardecer. 5 piscinas climatizadas, una cubierta, piscina para niños y un bar adentro de la piscina, para el máximo descanso de tus familiares y amigos. Sala de juegos y games:¡Para que nadie pueda quedarse quieto!Salas de juegos para todas las edades. ¡Piscina, gripe, ping-pong, cartas y bolos! Kids Club Grand Suites: (INCLUIDO)¡Diversión todo el tiempo para los niños!El Grand Suites Family Resort cuenta con un equipo de recreación preparado para divertir y deleitar a tus hijos. Recreación: (INCLUIDO)Grand Suites cuentan con recreación especializada por grupos de edades a partir de 3 años, de 9 a 23 horas.Contamos con espacios y actividades para que los niños aprendan y se diviertan al mismo tiempo, y los adultos se relajen y disfruten de su estadía en nuestro resort.La recreación está especializada por grupos de edades, dividida en las siguientes categorías: 03 a 06 años, 07 a 12 años, 13 a 17 años y adultos. De esta forma las actividades son apropiadas para las edades de cada grupo. ¡A disfrutar!"
+      },
+      "temporada": "Mayo 2027",
+      "notas": [
+        "Precio Por Persona hab. Doble o Triple U$S 749 // PROMO PAGO CONTADO O TRANSFERENENCIA U$S 699"
+      ],
+      "updatedAt": "2026-10-26T14:36:37.353Z"
     }
   ]
 }
