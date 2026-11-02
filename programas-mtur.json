@@ -1,19 +1,19 @@
 {
   "operador": "Mtur Viajes",
-  "updatedAt": "2026-10-26T13:56:25.286Z",
+  "updatedAt": "2026-11-02T16:51:28.566Z",
   "programas": [
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/722/florianopolis",
-      "titulo": "FLORIANOPOLIS",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/816/cataratas-6-dias-desde-setiembre-a-diciembre",
+      "titulo": "CATARATAS - 6 DIAS - desde setiembre a diciembre",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
-      "destino": "FLORIANOPOLIS",
-      "destinoSlug": "florianopolis",
-      "pais": "Brasil",
-      "emoji": "🏖️",
+      "destino": "CATARATAS - 6 DIAS - desde setiembre a diciembre",
+      "destinoSlug": "cataratas",
+      "pais": "Cataratas",
+      "emoji": "🌊",
       "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
       "visitando": "",
       "highlights": [],
@@ -21,7 +21,7 @@
       "fechas": [
         {
           "label": "Salidas",
-          "value": "21/11/2026",
+          "value": "09/11/2026  ·  16/11/2026  ·  07/12/2026  ·  14/12/2026",
           "gold": true
         }
       ],
@@ -29,12 +29,49 @@
       "noIncluye": "",
       "hoteles": [],
       "fechasSalida": [
-        "21/11/2026"
+        "09/11/2026",
+        "16/11/2026",
+        "07/12/2026",
+        "14/12/2026"
       ],
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:31.340Z"
+      "updatedAt": "2026-11-02T16:51:33.584Z"
+    },
+    {
+      "id": "mtur-2",
+      "mturId": "2",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/820/gramado-canela-fin-de-ano",
+      "titulo": "GRAMADO & CANELA - FIN DE AÑO",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "GRAMADO & CANELA - FIN DE AÑO",
+      "destinoSlug": "gramado",
+      "pais": "Brasil",
+      "emoji": "🌲",
+      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
+      "visitando": "",
+      "highlights": [],
+      "temporada": "",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "28/12/2026",
+          "gold": true
+        }
+      ],
+      "incluye": [],
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [
+        "28/12/2026"
+      ],
+      "precios": {},
+      "pdfItinerario": "",
+      "observaciones": "",
+      "updatedAt": "2026-11-02T16:51:35.566Z"
     },
     {
       "id": "mtur-2",
@@ -52,23 +89,15 @@
       "visitando": "",
       "highlights": [],
       "temporada": "",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "31/10/2026",
-          "gold": true
-        }
-      ],
+      "fechas": [],
       "incluye": [],
       "noIncluye": "",
       "hoteles": [],
-      "fechasSalida": [
-        "31/10/2026"
-      ],
+      "fechasSalida": [],
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:33.224Z"
+      "updatedAt": "2026-11-02T16:51:37.548Z"
     },
     {
       "id": "mtur-2",
@@ -103,45 +132,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:35.116Z"
-    },
-    {
-      "id": "mtur-2",
-      "mturId": "2",
-      "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/816/cataratas-6-dias-desde-setiembre-a-diciembre",
-      "titulo": "CATARATAS - 6 DIAS - desde setiembre a diciembre",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "CATARATAS - 6 DIAS - desde setiembre a diciembre",
-      "destinoSlug": "cataratas",
-      "pais": "Cataratas",
-      "emoji": "🌊",
-      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
-      "visitando": "",
-      "highlights": [],
-      "temporada": "",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "26/10/2026  ·  09/11/2026  ·  16/11/2026  ·  07/12/2026  ·  14/12/2026",
-          "gold": true
-        }
-      ],
-      "incluye": [],
-      "noIncluye": "",
-      "hoteles": [],
-      "fechasSalida": [
-        "26/10/2026",
-        "09/11/2026",
-        "16/11/2026",
-        "07/12/2026",
-        "14/12/2026"
-      ],
-      "precios": {},
-      "pdfItinerario": "",
-      "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:37.126Z"
+      "updatedAt": "2026-11-02T16:51:39.529Z"
     },
     {
       "id": "mtur-2",
@@ -176,41 +167,33 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:39.418Z"
+      "updatedAt": "2026-11-02T16:51:41.990Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/820/gramado-canela-fin-de-ano",
-      "titulo": "GRAMADO & CANELA - FIN DE AÑO",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/824/termas-romanas-navidad-2026",
+      "titulo": "TERMAS ROMANAS - NAVIDAD 2026",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
-      "destino": "GRAMADO & CANELA - FIN DE AÑO",
-      "destinoSlug": "gramado",
+      "destino": "TERMAS ROMANAS - NAVIDAD 2026",
+      "destinoSlug": "termas",
       "pais": "Brasil",
-      "emoji": "🌲",
+      "emoji": "♨️",
       "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
       "visitando": "",
       "highlights": [],
       "temporada": "",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "28/12/2026",
-          "gold": true
-        }
-      ],
+      "fechas": [],
       "incluye": [],
       "noIncluye": "",
       "hoteles": [],
-      "fechasSalida": [
-        "28/12/2026"
-      ],
+      "fechasSalida": [],
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:41.305Z"
+      "updatedAt": "2026-11-02T16:51:44.444Z"
     },
     {
       "id": "mtur-2",
@@ -244,7 +227,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:43.247Z"
+      "updatedAt": "2026-11-02T16:51:46.463Z"
     },
     {
       "id": "mtur-2",
@@ -282,7 +265,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:44.912Z"
+      "updatedAt": "2026-11-02T16:51:48.630Z"
     },
     {
       "id": "mtur-2",
@@ -326,7 +309,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:46.960Z"
+      "updatedAt": "2026-11-02T16:51:50.757Z"
     },
     {
       "id": "mtur-2",
@@ -362,7 +345,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:48.451Z"
+      "updatedAt": "2026-11-02T16:51:52.740Z"
     },
     {
       "id": "mtur-2",
@@ -398,7 +381,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:50.363Z"
+      "updatedAt": "2026-11-02T16:51:54.722Z"
     },
     {
       "id": "mtur-2",
@@ -434,7 +417,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:52.545Z"
+      "updatedAt": "2026-11-02T16:51:56.482Z"
     },
     {
       "id": "mtur-2",
@@ -472,7 +455,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:54.592Z"
+      "updatedAt": "2026-11-02T16:51:58.655Z"
     },
     {
       "id": "mtur-2",
@@ -508,7 +491,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:56.659Z"
+      "updatedAt": "2026-11-02T16:52:00.875Z"
     },
     {
       "id": "mtur-2",
@@ -544,7 +527,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:56:58.824Z"
+      "updatedAt": "2026-11-02T16:52:03.424Z"
     },
     {
       "id": "mtur-2",
@@ -578,7 +561,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:00.745Z"
+      "updatedAt": "2026-11-02T16:52:05.414Z"
     },
     {
       "id": "mtur-2",
@@ -604,7 +587,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:03.225Z"
+      "updatedAt": "2026-11-02T16:52:07.577Z"
     },
     {
       "id": "mtur-2",
@@ -638,7 +621,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:05.251Z"
+      "updatedAt": "2026-11-02T16:52:09.673Z"
     },
     {
       "id": "mtur-2",
@@ -672,7 +655,109 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:07.278Z"
+      "updatedAt": "2026-11-02T16:52:11.829Z"
+    },
+    {
+      "id": "mtur-2",
+      "mturId": "2",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/818/cataratas-turismo-7-dias",
+      "titulo": "CATARATAS TURISMO 7 DIAS",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "CATARATAS TURISMO 7 DIAS",
+      "destinoSlug": "cataratas",
+      "pais": "Cataratas",
+      "emoji": "🌊",
+      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
+      "visitando": "",
+      "highlights": [],
+      "temporada": "",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "20/03/2027",
+          "gold": true
+        }
+      ],
+      "incluye": [],
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [
+        "20/03/2027"
+      ],
+      "precios": {},
+      "pdfItinerario": "",
+      "observaciones": "",
+      "updatedAt": "2026-11-02T16:52:13.924Z"
+    },
+    {
+      "id": "mtur-2",
+      "mturId": "2",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/748/camboriu-magia-diversion-semana-de-turismo",
+      "titulo": "CAMBORIU - MAGIA & DIVERSIÓN - SEMANA DE TURISMO",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "CAMBORIU - MAGIA & DIVERSIÓN - SEMANA DE TURISMO",
+      "destinoSlug": "camboriu",
+      "pais": "Brasil",
+      "emoji": "🎡",
+      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
+      "visitando": "",
+      "highlights": [],
+      "temporada": "",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "21/03/2027",
+          "gold": true
+        }
+      ],
+      "incluye": [],
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [
+        "21/03/2027"
+      ],
+      "precios": {},
+      "pdfItinerario": "",
+      "observaciones": "",
+      "updatedAt": "2026-11-02T16:52:15.939Z"
+    },
+    {
+      "id": "mtur-2",
+      "mturId": "2",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/749/rio-de-janeiro-semana-de-turismo",
+      "titulo": "RIO DE JANEIRO - SEMANA DE TURISMO",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "RIO DE JANEIRO - SEMANA DE TURISMO",
+      "destinoSlug": "rio",
+      "pais": "Brasil",
+      "emoji": "🏙️",
+      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
+      "visitando": "",
+      "highlights": [],
+      "temporada": "",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "20/03/2027",
+          "gold": true
+        }
+      ],
+      "incluye": [],
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [
+        "20/03/2027"
+      ],
+      "precios": {},
+      "pdfItinerario": "",
+      "observaciones": "",
+      "updatedAt": "2026-11-02T16:52:18.258Z"
     },
     {
       "id": "mtur-2",
@@ -707,7 +792,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:09.332Z"
+      "updatedAt": "2026-11-02T16:52:20.367Z"
     },
     {
       "id": "mtur-2",
@@ -741,75 +826,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:11.209Z"
-    },
-    {
-      "id": "mtur-2",
-      "mturId": "2",
-      "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/748/camboriu-magia-diversion-semana-de-turismo",
-      "titulo": "CAMBORIU - MAGIA & DIVERSIÓN - SEMANA DE TURISMO",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "CAMBORIU - MAGIA & DIVERSIÓN - SEMANA DE TURISMO",
-      "destinoSlug": "camboriu",
-      "pais": "Brasil",
-      "emoji": "🎡",
-      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
-      "visitando": "",
-      "highlights": [],
-      "temporada": "",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "21/03/2027",
-          "gold": true
-        }
-      ],
-      "incluye": [],
-      "noIncluye": "",
-      "hoteles": [],
-      "fechasSalida": [
-        "21/03/2027"
-      ],
-      "precios": {},
-      "pdfItinerario": "",
-      "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:13.095Z"
-    },
-    {
-      "id": "mtur-2",
-      "mturId": "2",
-      "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/749/rio-de-janeiro-semana-de-turismo",
-      "titulo": "RIO DE JANEIRO - SEMANA DE TURISMO",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "RIO DE JANEIRO - SEMANA DE TURISMO",
-      "destinoSlug": "rio",
-      "pais": "Brasil",
-      "emoji": "🏙️",
-      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
-      "visitando": "",
-      "highlights": [],
-      "temporada": "",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "20/03/2027",
-          "gold": true
-        }
-      ],
-      "incluye": [],
-      "noIncluye": "",
-      "hoteles": [],
-      "fechasSalida": [
-        "20/03/2027"
-      ],
-      "precios": {},
-      "pdfItinerario": "",
-      "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:15.242Z"
+      "updatedAt": "2026-11-02T16:52:22.337Z"
     },
     {
       "id": "mtur-2",
@@ -843,7 +860,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:17.306Z"
+      "updatedAt": "2026-11-02T16:52:24.505Z"
     },
     {
       "id": "mtur-2",
@@ -877,20 +894,66 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:19.366Z"
+      "updatedAt": "2026-11-02T16:52:26.666Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/818/cataratas-turismo-7-dias",
-      "titulo": "CATARATAS TURISMO 7 DIAS",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/807/termas-romanas-temporada-baja",
+      "titulo": "TERMAS ROMANAS - TEMPORADA BAJA",
+      "subtitulo": "Consultar · BAJA",
+      "duracion": "Consultar",
+      "destino": "TERMAS ROMANAS - TEMPORADA BAJA",
+      "destinoSlug": "termas",
+      "pais": "Brasil",
+      "emoji": "♨️",
+      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
+      "visitando": "",
+      "highlights": [],
+      "temporada": "BAJA",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "20/04/2027  ·  25/05/2027  ·  15/06/2027  ·  10/08/2027  ·  06/09/2027",
+          "gold": true
+        },
+        {
+          "label": "Temporada",
+          "value": "BAJA",
+          "gold": false
+        }
+      ],
+      "incluye": [],
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [
+        "20/04/2027",
+        "25/05/2027",
+        "15/06/2027",
+        "10/08/2027",
+        "06/09/2027",
+        "19/10/2027",
+        "23/11/2027",
+        "14/12/2027"
+      ],
+      "precios": {},
+      "pdfItinerario": "",
+      "observaciones": "",
+      "updatedAt": "2026-11-02T16:52:29.071Z"
+    },
+    {
+      "id": "mtur-2",
+      "mturId": "2",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/823/termas-romanas-vacaciones-de-julio",
+      "titulo": "TERMAS ROMANAS - VACACIONES DE JULIO",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
-      "destino": "CATARATAS TURISMO 7 DIAS",
-      "destinoSlug": "cataratas",
-      "pais": "Cataratas",
-      "emoji": "🌊",
+      "destino": "TERMAS ROMANAS - VACACIONES DE JULIO",
+      "destinoSlug": "termas",
+      "pais": "Brasil",
+      "emoji": "♨️",
       "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
       "visitando": "",
       "highlights": [],
@@ -898,7 +961,7 @@
       "fechas": [
         {
           "label": "Salidas",
-          "value": "20/03/2027",
+          "value": "06/07/2027",
           "gold": true
         }
       ],
@@ -906,12 +969,12 @@
       "noIncluye": "",
       "hoteles": [],
       "fechasSalida": [
-        "20/03/2027"
+        "06/07/2027"
       ],
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:21.400Z"
+      "updatedAt": "2026-11-02T16:52:31.488Z"
     },
     {
       "id": "mtur-10",
@@ -937,7 +1000,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:23.309Z"
+      "updatedAt": "2026-11-02T16:52:33.474Z"
     },
     {
       "id": "mtur-10",
@@ -963,7 +1026,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:25.212Z"
+      "updatedAt": "2026-11-02T16:52:35.458Z"
     },
     {
       "id": "mtur-10",
@@ -989,59 +1052,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:27.277Z"
-    },
-    {
-      "id": "mtur-10",
-      "mturId": "10",
-      "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/10/3301/ferrugem-con-sky-cupo-verano-2027-salida-3-de-enero",
-      "titulo": "Ferrugem con Sky - CUPO Verano 2027 - Salida 3 de Enero",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "Ferrugem con Sky - CUPO Verano 2027 - Salida 3 de Enero",
-      "destinoSlug": "otro",
-      "pais": "Otros",
-      "emoji": "📍",
-      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
-      "visitando": "",
-      "highlights": [],
-      "temporada": "",
-      "fechas": [],
-      "incluye": [],
-      "noIncluye": "",
-      "hoteles": [],
-      "fechasSalida": [],
-      "precios": {},
-      "pdfItinerario": "",
-      "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:29.169Z"
-    },
-    {
-      "id": "mtur-10",
-      "mturId": "10",
-      "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/10/3300/camboriu-con-sky-cupo-verano-2027-salida-3-de-enero",
-      "titulo": "Camboriu con Sky - CUPO Verano 2027 - Salida 3 de Enero",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "Camboriu con Sky - CUPO Verano 2027 - Salida 3 de Enero",
-      "destinoSlug": "camboriu",
-      "pais": "Brasil",
-      "emoji": "🎡",
-      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
-      "visitando": "",
-      "highlights": [],
-      "temporada": "",
-      "fechas": [],
-      "incluye": [],
-      "noIncluye": "",
-      "hoteles": [],
-      "fechasSalida": [],
-      "precios": {},
-      "pdfItinerario": "",
-      "observaciones": "",
-      "updatedAt": "2026-10-26T13:57:31.149Z"
+      "updatedAt": "2026-11-02T16:52:37.631Z"
     }
   ]
 }
