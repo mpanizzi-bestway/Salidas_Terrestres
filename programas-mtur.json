@@ -1,6 +1,6 @@
 {
   "operador": "Mtur Viajes",
-  "updatedAt": "2026-11-02T16:51:28.566Z",
+  "updatedAt": "2026-11-09T17:12:34.092Z",
   "programas": [
     {
       "id": "mtur-2",
@@ -37,7 +37,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:51:33.584Z"
+      "updatedAt": "2026-11-09T17:12:39.548Z"
     },
     {
       "id": "mtur-2",
@@ -71,7 +71,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:51:35.566Z"
+      "updatedAt": "2026-11-09T17:12:41.445Z"
     },
     {
       "id": "mtur-2",
@@ -97,7 +97,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:51:37.548Z"
+      "updatedAt": "2026-11-09T17:12:43.320Z"
     },
     {
       "id": "mtur-2",
@@ -132,7 +132,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:51:39.529Z"
+      "updatedAt": "2026-11-09T17:12:45.226Z"
     },
     {
       "id": "mtur-2",
@@ -167,33 +167,41 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:51:41.990Z"
+      "updatedAt": "2026-11-09T17:12:47.528Z"
     },
     {
       "id": "mtur-2",
       "mturId": "2",
       "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/824/termas-romanas-navidad-2026",
-      "titulo": "TERMAS ROMANAS - NAVIDAD 2026",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/809/gramado-canela-7-dias",
+      "titulo": "GRAMADO & CANELA - 7 DIAS",
       "subtitulo": "Consultar",
       "duracion": "Consultar",
-      "destino": "TERMAS ROMANAS - NAVIDAD 2026",
-      "destinoSlug": "termas",
+      "destino": "GRAMADO & CANELA - 7 DIAS",
+      "destinoSlug": "gramado",
       "pais": "Brasil",
-      "emoji": "♨️",
+      "emoji": "🌲",
       "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
       "visitando": "",
       "highlights": [],
       "temporada": "",
-      "fechas": [],
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "19/09/2027",
+          "gold": true
+        }
+      ],
       "incluye": [],
       "noIncluye": "",
       "hoteles": [],
-      "fechasSalida": [],
+      "fechasSalida": [
+        "19/09/2027"
+      ],
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:51:44.444Z"
+      "updatedAt": "2026-11-09T17:12:49.423Z"
     },
     {
       "id": "mtur-2",
@@ -227,7 +235,41 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:51:46.463Z"
+      "updatedAt": "2026-11-09T17:12:51.307Z"
+    },
+    {
+      "id": "mtur-2",
+      "mturId": "2",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/824/termas-romanas-navidad-2026",
+      "titulo": "TERMAS ROMANAS - NAVIDAD 2026",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "TERMAS ROMANAS - NAVIDAD 2026",
+      "destinoSlug": "termas",
+      "pais": "Brasil",
+      "emoji": "♨️",
+      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
+      "visitando": "",
+      "highlights": [],
+      "temporada": "",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "22/12/2026",
+          "gold": true
+        }
+      ],
+      "incluye": [],
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [
+        "22/12/2026"
+      ],
+      "precios": {},
+      "pdfItinerario": "",
+      "observaciones": "",
+      "updatedAt": "2026-11-09T17:12:53.597Z"
     },
     {
       "id": "mtur-2",
@@ -265,7 +307,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:51:48.630Z"
+      "updatedAt": "2026-11-09T17:12:55.632Z"
     },
     {
       "id": "mtur-2",
@@ -309,7 +351,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:51:50.757Z"
+      "updatedAt": "2026-11-09T17:12:57.640Z"
     },
     {
       "id": "mtur-2",
@@ -345,7 +387,33 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:51:52.740Z"
+      "updatedAt": "2026-11-09T17:12:59.517Z"
+    },
+    {
+      "id": "mtur-2",
+      "mturId": "2",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/825/gramado-canela-7-dias-verano-2027",
+      "titulo": "GRAMADO & CANELA - 7 DIAS VERANO 2027",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "GRAMADO & CANELA - 7 DIAS VERANO 2027",
+      "destinoSlug": "gramado",
+      "pais": "Brasil",
+      "emoji": "🌲",
+      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
+      "visitando": "",
+      "highlights": [],
+      "temporada": "",
+      "fechas": [],
+      "incluye": [],
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [],
+      "precios": {},
+      "pdfItinerario": "",
+      "observaciones": "",
+      "updatedAt": "2026-11-09T17:13:01.549Z"
     },
     {
       "id": "mtur-2",
@@ -381,7 +449,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:51:54.722Z"
+      "updatedAt": "2026-11-09T17:13:03.842Z"
     },
     {
       "id": "mtur-2",
@@ -417,7 +485,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:51:56.482Z"
+      "updatedAt": "2026-11-09T17:13:06.021Z"
     },
     {
       "id": "mtur-2",
@@ -455,7 +523,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:51:58.655Z"
+      "updatedAt": "2026-11-09T17:13:08.072Z"
     },
     {
       "id": "mtur-2",
@@ -491,43 +559,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:00.875Z"
-    },
-    {
-      "id": "mtur-2",
-      "mturId": "2",
-      "operador": "mtur",
-      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/788/florianopolis-sol-playa-febrero-2027",
-      "titulo": "FLORIANOPOLIS - SOL & PLAYA - FEBRERO 2027",
-      "subtitulo": "Consultar",
-      "duracion": "Consultar",
-      "destino": "FLORIANOPOLIS - SOL & PLAYA - FEBRERO 2027",
-      "destinoSlug": "florianopolis",
-      "pais": "Brasil",
-      "emoji": "🏖️",
-      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
-      "visitando": "",
-      "highlights": [],
-      "temporada": "",
-      "fechas": [
-        {
-          "label": "Salidas",
-          "value": "13/02/2027  ·  20/02/2027  ·  27/02/2027",
-          "gold": true
-        }
-      ],
-      "incluye": [],
-      "noIncluye": "",
-      "hoteles": [],
-      "fechasSalida": [
-        "13/02/2027",
-        "20/02/2027",
-        "27/02/2027"
-      ],
-      "precios": {},
-      "pdfItinerario": "",
-      "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:03.424Z"
+      "updatedAt": "2026-11-09T17:13:10.121Z"
     },
     {
       "id": "mtur-2",
@@ -561,7 +593,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:05.414Z"
+      "updatedAt": "2026-11-09T17:13:12.007Z"
     },
     {
       "id": "mtur-2",
@@ -587,7 +619,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:07.577Z"
+      "updatedAt": "2026-11-09T17:13:14.042Z"
     },
     {
       "id": "mtur-2",
@@ -621,7 +653,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:09.673Z"
+      "updatedAt": "2026-11-09T17:13:16.052Z"
     },
     {
       "id": "mtur-2",
@@ -655,7 +687,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:11.829Z"
+      "updatedAt": "2026-11-09T17:13:18.087Z"
     },
     {
       "id": "mtur-2",
@@ -689,7 +721,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:13.924Z"
+      "updatedAt": "2026-11-09T17:13:20.117Z"
     },
     {
       "id": "mtur-2",
@@ -723,7 +755,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:15.939Z"
+      "updatedAt": "2026-11-09T17:13:21.993Z"
     },
     {
       "id": "mtur-2",
@@ -757,7 +789,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:18.258Z"
+      "updatedAt": "2026-11-09T17:13:24.138Z"
     },
     {
       "id": "mtur-2",
@@ -792,7 +824,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:20.367Z"
+      "updatedAt": "2026-11-09T17:13:26.140Z"
     },
     {
       "id": "mtur-2",
@@ -826,7 +858,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:22.337Z"
+      "updatedAt": "2026-11-09T17:13:28.014Z"
     },
     {
       "id": "mtur-2",
@@ -860,7 +892,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:24.505Z"
+      "updatedAt": "2026-11-09T17:13:30.039Z"
     },
     {
       "id": "mtur-2",
@@ -894,7 +926,80 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:26.666Z"
+      "updatedAt": "2026-11-09T17:13:32.058Z"
+    },
+    {
+      "id": "mtur-2",
+      "mturId": "2",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/827/gramado-canela-7-dias",
+      "titulo": "GRAMADO & CANELA - 7 DIAS",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "GRAMADO & CANELA - 7 DIAS",
+      "destinoSlug": "gramado",
+      "pais": "Brasil",
+      "emoji": "🌲",
+      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
+      "visitando": "",
+      "highlights": [],
+      "temporada": "",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "06/06/2027  ·  11/06/2027",
+          "gold": true
+        }
+      ],
+      "incluye": [],
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [
+        "06/06/2027",
+        "11/06/2027"
+      ],
+      "precios": {},
+      "pdfItinerario": "",
+      "observaciones": "",
+      "updatedAt": "2026-11-09T17:13:33.942Z"
+    },
+    {
+      "id": "mtur-2",
+      "mturId": "2",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/826/gramado-canela-7-dias",
+      "titulo": "GRAMADO & CANELA - 7 DIAS",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "GRAMADO & CANELA - 7 DIAS",
+      "destinoSlug": "gramado",
+      "pais": "Brasil",
+      "emoji": "🌲",
+      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
+      "visitando": "",
+      "highlights": [],
+      "temporada": "",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "11/04/2027  ·  01/08/2027  ·  10/10/2027  ·  13/11/2027  ·  04/12/2027",
+          "gold": true
+        }
+      ],
+      "incluye": [],
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [
+        "11/04/2027",
+        "01/08/2027",
+        "10/10/2027",
+        "13/11/2027",
+        "04/12/2027"
+      ],
+      "precios": {},
+      "pdfItinerario": "",
+      "observaciones": "",
+      "updatedAt": "2026-11-09T17:13:35.832Z"
     },
     {
       "id": "mtur-2",
@@ -940,7 +1045,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:29.071Z"
+      "updatedAt": "2026-11-09T17:13:38.235Z"
     },
     {
       "id": "mtur-2",
@@ -974,7 +1079,42 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:31.488Z"
+      "updatedAt": "2026-11-09T17:13:40.667Z"
+    },
+    {
+      "id": "mtur-2",
+      "mturId": "2",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/2/711/gramado-canela-7-dias",
+      "titulo": "GRAMADO & CANELA - 7 DIAS",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "GRAMADO & CANELA - 7 DIAS",
+      "destinoSlug": "gramado",
+      "pais": "Brasil",
+      "emoji": "🌲",
+      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
+      "visitando": "",
+      "highlights": [],
+      "temporada": "",
+      "fechas": [
+        {
+          "label": "Salidas",
+          "value": "26/06/2027  ·  05/07/2027",
+          "gold": true
+        }
+      ],
+      "incluye": [],
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [
+        "26/06/2027",
+        "05/07/2027"
+      ],
+      "precios": {},
+      "pdfItinerario": "",
+      "observaciones": "",
+      "updatedAt": "2026-11-09T17:13:42.531Z"
     },
     {
       "id": "mtur-10",
@@ -1000,7 +1140,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:33.474Z"
+      "updatedAt": "2026-11-09T17:13:44.414Z"
     },
     {
       "id": "mtur-10",
@@ -1026,7 +1166,7 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:35.458Z"
+      "updatedAt": "2026-11-09T17:13:46.295Z"
     },
     {
       "id": "mtur-10",
@@ -1052,7 +1192,59 @@
       "precios": {},
       "pdfItinerario": "",
       "observaciones": "",
-      "updatedAt": "2026-11-02T16:52:37.631Z"
+      "updatedAt": "2026-11-09T17:13:48.308Z"
+    },
+    {
+      "id": "mtur-10",
+      "mturId": "10",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/10/3324/maragogi-cupo-semana-de-turismo-2027-salida-21-de-marzo",
+      "titulo": "Maragogi - CUPO Semana de Turismo 2027 - Salida 21 de Marzo",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "Maragogi - CUPO Semana de Turismo 2027 - Salida 21 de Marzo",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
+      "visitando": "",
+      "highlights": [],
+      "temporada": "",
+      "fechas": [],
+      "incluye": [],
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [],
+      "precios": {},
+      "pdfItinerario": "",
+      "observaciones": "",
+      "updatedAt": "2026-11-09T17:13:50.303Z"
+    },
+    {
+      "id": "mtur-10",
+      "mturId": "10",
+      "operador": "mtur",
+      "sourceUrl": "https://www.mturviajes.com.uy/paquetes/10/3312/recife-y-porto-de-galinhas-cupo-semana-de-turismo-2027-salida-21-de-marzo",
+      "titulo": "Recife y Porto de Galinhas - CUPO Semana de Turismo 2027 - Salida 21 de Marzo",
+      "subtitulo": "Consultar",
+      "duracion": "Consultar",
+      "destino": "Recife y Porto de Galinhas - CUPO Semana de Turismo 2027 - Salida 21 de Marzo",
+      "destinoSlug": "otro",
+      "pais": "Otros",
+      "emoji": "📍",
+      "imagen": "https://mturviajes.nyc3.cdn.digitaloceanspaces.com/Imagenes/Logos/logo.svg",
+      "visitando": "",
+      "highlights": [],
+      "temporada": "",
+      "fechas": [],
+      "incluye": [],
+      "noIncluye": "",
+      "hoteles": [],
+      "fechasSalida": [],
+      "precios": {},
+      "pdfItinerario": "",
+      "observaciones": "",
+      "updatedAt": "2026-11-09T17:13:52.448Z"
     }
   ]
 }
